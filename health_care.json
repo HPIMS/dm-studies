@@ -34,7 +34,22 @@
         {
           "key": "missed_work_symptoms",
           "question": "Can you briely desctibe your symptoms",
-          "type": "TEXTAREA"
+          "type": "TEXTAREA",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "healthcare",
+                  "question": "missed_work",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ]
         },
         {
           "key": "received_medical_care",
@@ -60,22 +75,82 @@
         {
           "key": "medication_changed",
           "question": "Did your doctor/proivder change or add to any medicines that you've been taking in the last two weeks?",
-          "type": "YESNO_CHOICE"
+          "type": "YESNO_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "healthcare",
+                  "question": "received_medical_care",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ]
         },
         {
           "key": "emergency_room",
           "question": "Did you visit the emergency room?",
-          "type": "YESNO_CHOICE"
+          "type": "YESNO_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "healthcare",
+                  "question": "received_medical_care",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ]
         },
         {
           "key": "symptoms",
           "question": "Were you admitted to the hospital for any symptoms?",
-          "type": "YESNO_CHOICE"
+          "type": "YESNO_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "healthcare",
+                  "question": "received_medical_care",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ]
         },
         {
           "key": "reason",
           "question": "Can you briefly explain the reason for your doctor's appointment?",
-          "type": "YESNO_CHOICE"
+          "type": "YESNO_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "healthcare",
+                  "question": "received_medical_care",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

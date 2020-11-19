@@ -139,7 +139,21 @@
         {
           "key": "number_of_people",
           "question": "Number of people supported by this income, including you:",
-          "type": "NUMERIC"
+          "type": "NUMERIC",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "about_you",
+                  "question": "income",
+                  "operator": "IS_SET"
+                }
+              ]
+            }
+          ]
         },
         {
           "key": "language",
@@ -247,6 +261,21 @@
           "key": "last_grade",
           "question": "What was the last grade you completed?",
           "type": "SINGLE_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "about_you",
+                  "question": "education",
+                  "operator": "=",
+                  "value": "no_diploma"
+                }
+              ]
+            }
+          ],
           "options": [
             {
               "value": "first_grade",
@@ -357,6 +386,21 @@
           "key": "household_members",
           "question": "If one or more people, describe the individual(s) with whom you live",
           "type": "MULTIPLE_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "sdh_family_home",
+                  "question": "household",
+                  "operator": ">=",
+                  "value": 2
+                }
+              ]
+            }
+          ],
           "options": [
             {
               "value": "husbane_wife",

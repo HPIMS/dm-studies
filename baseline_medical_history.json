@@ -499,6 +499,21 @@
           "question": "During the last 12 months, how often did you usually have any kind of drink containing alcohol? By a drink we mean half an ounce of absolute alcohol (e.g. a 12 ounce can or glass of beer or cooler, a 5 ounce glass of wine, or a drink containing 1 shot of liquor). Choose only one.",
           "description": "",
           "type": "SINGLE_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "medical_history_3",
+                  "question": "alcohol",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ],
           "options": [
             {
               "value": "everyday",
@@ -570,6 +585,21 @@
           "question": "How much did/do you smoke?",
           "description": "",
           "type": "SINGLE_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "medical_history_3",
+                  "question": "history",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ],
           "options": [
             {
               "value": "everyday",
@@ -609,6 +639,21 @@
           "question": "How much did/do you use?",
           "description": "",
           "type": "SINGLE_CHOICE",
+          "triggers": [
+            {
+              "action": {
+                "type": "SHOW"
+              },
+              "condition": [
+                {
+                  "section": "medical_history_3",
+                  "question": "drug",
+                  "operator": "=",
+                  "value": "yes"
+                }
+              ]
+            }
+          ],
           "options": [
             {
               "value": "everyday",
