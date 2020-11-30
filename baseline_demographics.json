@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "key": "baseline_demographics",
   "title": "About you",
   "description": "This data about you will only be viewed by the study team once you consent to a research study. This is helpful to gather now, in order to send you the studies that you are eligible for through this platform. You can take this survey now or save it for later.",
@@ -74,7 +74,11 @@
             },
             {
               "value": "asian",
-              "text": "Asian, Black or African-American"
+              "text": "Asian"
+            },
+            {
+              "value": "black",
+              "text": "Black or African-American"
             },
             {
               "value": "hawaiian",
