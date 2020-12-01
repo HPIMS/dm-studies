@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "key": "baseline",
   "name": "Baseline Study",
   "description": "",
@@ -9,7 +9,7 @@
       "version": 3,
       "key": "baseline_demographics",
       "period": "ONCE",
-      "name": "About You",
+      "name": "About You Questionnaire",
       "short": "Information about you",
       "repeat": 1
     },
@@ -17,7 +17,7 @@
       "version": 2,
       "key": "baseline_medical_history",
       "period": "ONCE",
-      "name": "Medical History",
+      "name": "Medical History Questionnaire",
       "short": "Your Medical History",
       "repeat": 1
     },
