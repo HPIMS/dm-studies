@@ -46,7 +46,7 @@ async function diff(type) {
       // and update the file.
       diffs.get(type).set(name, [nextHash, nextVersion]);
       data.version = nextVersion;
-      await fs.writeFile(path, JSON.stringify(data, null, 2));
+      await fs.writeFile(path, `${JSON.stringify(data, null, 2)}\n`);
     }
   });
 
@@ -91,7 +91,7 @@ async function updateStudySurveys() {
     // Update the study file with the new survey version number.
     // We'll handle updating the study version flag in diff step.
     if (updated) {
-      await fs.writeFile(path, JSON.stringify(data, null, 2));
+      await fs.writeFile(path, `${JSON.stringify(data, null, 2)}\n`);
     }
   });
 
@@ -110,7 +110,7 @@ async function syncVersionFile() {
       ...Object.fromEntries(diffs.get("surveys")),
     },
   };
-  await fs.writeFile("./versions.json", JSON.stringify(nextVersions));
+  await fs.writeFile("./versions.json", `${JSON.stringify(nextVersions)}\n`);
 }
 
 async function run() {
