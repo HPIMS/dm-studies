@@ -6,28 +6,25 @@
   "about": "",
   "surveys": [
     {
-      "version": 3,
+      "version": 4,
       "key": "baseline_demographics",
       "period": "ONCE",
       "name": "About You Questionnaire",
-      "short": "Information about you",
-      "repeat": 1
+      "short": "Information about you"
     },
     {
-      "version": 2,
+      "version": 3,
       "key": "baseline_medical_history",
       "period": "ONCE",
       "name": "Medical History Questionnaire",
-      "short": "Your Medical History",
-      "repeat": 1
+      "short": "Your Medical History"
     },
     {
       "version": 2,
       "key": "baseline_cd_risc_survey",
       "period": "ONCE",
       "name": "Resilience & Coping Survey",
-      "short": "How you cope",
-      "repeat": 1
+      "short": "How you cope"
     }
   ]
 }
