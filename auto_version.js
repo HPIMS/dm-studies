@@ -99,23 +99,14 @@ async function syncVersionFile() {
       ...Object.fromEntries(diffs.get("surveys")),
     },
   };
-  console.log("SYNC", nextVersions);
   await fs.writeFile("./versions.json", JSON.stringify(nextVersions));
 }
 
-// updateStudySurveys();
-// diff("studies")
-
 async function run() {
   await diff("surveys");
-  console.log("here1");
   await updateStudySurveys();
-  console.log("here2");
   await diff("studies");
-  console.log("here3");
-
   await syncVersionFile();
-  console.log("here4");
 }
 run();
 
