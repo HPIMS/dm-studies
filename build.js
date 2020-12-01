@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 
 async function minifyFile(path) {
   const data = await fs.readFile(path, { encoding: "utf-8" });
-  return JSON.stringify(data);
+  return JSON.stringify(JSON.parse(data));
 }
 
 async function processDirectory(type) {

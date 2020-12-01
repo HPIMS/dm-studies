@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "node build"
+    "build": "node build",
+    "update": "node auto_sync"
   }
 }
