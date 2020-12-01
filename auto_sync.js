@@ -19,7 +19,6 @@ async function diff(type) {
   const dir = `${__dirname}/${type}`;
 
   const files = await fs.readdir(dir);
-
   const promises = files.map(async (file) => {
     // ignore index files
     if (file === "index.json") {
@@ -41,57 +40,8 @@ async function diff(type) {
       // existing version in the json, or 1.
       diffs.get(type).set(name, [nextHash, data.version || 1]);
     } else if (lastHash !== nextHash) {
-      const nextVersion = lastVersion + 1;
       // If we've seen this file, but it has changed, increment the version
-      // and update the file.
-      diffs.get(type).set(name, [nextHash, nextVersion]);
-      data.version = nextVersion;
-      await fs.writeFile(path, `${JSON.stringify(data, null, 2)}\n`);
-    }
-  });
-
-  return Promise.all(promises);
-}
-
-async function updateStudySurveys() {
-  const dir = `${__dirname}/studies`;
-  const files = await fs.readdir(dir);
-
-  const promises = files.map(async (file) => {
-    let updated = false;
-    // Ignore the index file
-    if (file === "index.json") {
-      return;
-    }
-    const path = `${dir}/${file}`;
-    // Update the version flags for the surveys
-    // in the study's schedule
-    const { data } = await getFile(path);
-    const surveyPromises = data.surveys.map(async (survey) => {
-      const { key } = survey;
-      if (diffs.get("surveys").has(key)) {
-        const { data: surveyData } = await getFile(
-          `${__dirname}/surveys/${key}.json`
-        );
-        const [, version] = diffs.get("surveys").get(key);
-        survey.version = version;
-
-        // Apply additional fields from the survey definition
-        const { period, name, short } = surveyData;
-        survey.period = period;
-        survey.name = name;
-        survey.short = short;
-
-        updated = true;
-      }
-    });
-
-    await Promise.all(surveyPromises);
-
-    // Update the study file with the new survey version number.
-    // We'll handle updating the study version flag in diff step.
-    if (updated) {
-      await fs.writeFile(path, `${JSON.stringify(data, null, 2)}\n`);
+      diffs.get(type).set(name, [nextHash, lastVersion + 1]);
     }
   });
 
@@ -115,7 +65,6 @@ async function syncVersionFile() {
 
 async function run() {
   await diff("surveys");
-  await updateStudySurveys();
   await diff("studies");
   await syncVersionFile();
 }
