@@ -1,5 +1,4 @@
 {
-  "version": 3,
   "key": "pilot",
   "name": "DigiMe: Pain, Stress, Sleep Survey",
   "description": "The Digital Discovery Program at the Hasso Plattner Institute for Digital Health at Mount Sinai is focused on understanding how digital technology can be used to increase our understanding of complex disease. In this study, we aim to use wearable devices to learn about underlying symptoms related to pain, stress, and sleep, which affect us all every day. By providing lifestyle data, you can gain insight into your own health and behaviors, lead a healthier life, all while contributing to important scientific research.",
@@ -9,69 +8,15 @@
     "baseline_cd_risc_survey"
   ],
   "surveys": [
-    {
-      "version": 2,
-      "key": "sleep_stress_pain",
-      "period": "DAILY",
-      "name": "Sleep, Stress, and Pain Survey",
-      "short": "Your daily check-in"
-    },
-    {
-      "version": 2,
-      "key": "pss4",
-      "period": "MONTHLY",
-      "name": "Stress Survey",
-      "short": "Share information about your stress"
-    },
-    {
-      "version": 2,
-      "key": "sleep",
-      "period": "WEEKLY",
-      "name": "Sleep Survey",
-      "short": "Rate your current sleep"
-    },
-    {
-      "version": 2,
-      "key": "pain",
-      "period": "WEEKLY",
-      "name": "Pain Survey",
-      "short": "Rate your current pain"
-    },
-    {
-      "version": 2,
-      "key": "health_care",
-      "period": "BI_WEEKLY",
-      "name": "Healthcare Survey",
-      "short": "About your healthcare utilization"
-    },
-    {
-      "version": 1,
-      "key": "mood_survey",
-      "period": "BI_WEEKLY",
-      "name": "Mood Survey",
-      "short": "About your mood"
-    },
-    {
-      "version": 2,
-      "key": "qol_survey",
-      "period": "MONTHLY",
-      "name": "General Health and Quality of Life Survey",
-      "short": "Your opinion on your life"
-    },
-    {
-      "version": 2,
-      "key": "satisfaction_survey_monthly",
-      "period": "MONTHLY",
-      "name": "Monthly study check-in Survey",
-      "short": ""
-    },
-    {
-      "version": 2,
-      "key": "satisfaction_survey_final",
-      "period": "FINAL",
-      "name": "Final Check-in Survey",
-      "short": "Final study satisfaction"
-    }
+    "sleep_stress_pain",
+    "pss4",
+    "sleep",
+    "pain",
+    "health_care",
+    "mood_survey",
+    "qol_survey",
+    "satisfaction_survey_monthly",
+    "satisfaction_survey_final"
   ],
   "requiredHealthRecords": {
     "AllergyRecord": "HKClinicalTypeIdentifier",
