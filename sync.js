@@ -20,11 +20,6 @@ async function diff(type) {
 
   const files = await fs.promises.readdir(dir);
   const promises = files.map(async (file) => {
-    // ignore index files
-    if (file === "index.json") {
-      return;
-    }
-
     const path = `${dir}/${file}`;
     const [name] = file.split(".json");
     const { data, hash: nextHash } = await getFile(path);
@@ -42,6 +37,14 @@ async function diff(type) {
     } else if (lastHash !== nextHash) {
       // If we've seen this file, but it has changed, increment the version
       diffs.get(type).set(name, [nextHash, lastVersion + 1]);
+    } else if (type === "studies") {
+      // If it is a study, and we didn't change the file itself,
+      // check to see if any of the study's surveys have changed.
+      data.surveys.forEach((s) => {
+        if (diffs.get("surveys").has(s)) {
+          diffs.get(type).set(name, [nextHash, lastVersion + 1]);
+        }
+      });
     }
   });
 
