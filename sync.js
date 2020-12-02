@@ -1,4 +1,4 @@
-const fs = require("fs/promises");
+const fs = require("fs");
 const crypto = require("crypto");
 
 const versions = require("./versions.json");
@@ -8,7 +8,7 @@ diffs.set("studies", new Map());
 diffs.set("surveys", new Map());
 
 async function getFile(path) {
-  const data = await fs.readFile(path, { encoding: "utf-8" });
+  const data = await fs.promises.readFile(path, { encoding: "utf-8" });
   return {
     data: JSON.parse(data),
     hash: crypto.createHash("md5").update(data).digest("hex"),
@@ -18,7 +18,7 @@ async function getFile(path) {
 async function diff(type) {
   const dir = `${__dirname}/${type}`;
 
-  const files = await fs.readdir(dir);
+  const files = await fs.promises.readdir(dir);
   const promises = files.map(async (file) => {
     // ignore index files
     if (file === "index.json") {
@@ -48,7 +48,7 @@ async function diff(type) {
   return Promise.all(promises);
 }
 
-async function syncVersionFile() {
+async function updateVersionFile() {
   const nextVersions = {
     ...versions,
     studies: {
@@ -60,12 +60,15 @@ async function syncVersionFile() {
       ...Object.fromEntries(diffs.get("surveys")),
     },
   };
-  await fs.writeFile("./versions.json", `${JSON.stringify(nextVersions)}\n`);
+  await fs.promises.writeFile(
+    "./versions.json",
+    `${JSON.stringify(nextVersions)}\n`
+  );
 }
 
-async function run() {
+async function sync() {
   await diff("surveys");
   await diff("studies");
-  await syncVersionFile();
+  await updateVersionFile();
 }
-run();
+sync();

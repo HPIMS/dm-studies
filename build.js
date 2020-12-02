@@ -1,28 +1,15 @@
 const fs = require("fs");
 
+const versions = require("./versions.json");
+
+const surveyCfgMap = {};
+
 async function mkdir(path) {
   try {
     await fs.promises.stat(path);
   } catch (err) {
     await fs.promises.mkdir(path, { recursive: true });
   }
-}
-
-async function minifyFile(path) {
-  const data = await fs.promises.readFile(path, { encoding: "utf-8" });
-  return JSON.stringify(JSON.parse(data));
-}
-
-async function minifyDirectory(type) {
-  const dir = `${__dirname}/${type}`;
-  const files = await fs.promises.readdir(dir);
-
-  const promises = files.map(async (file) => {
-    const path = `${dir}/${file}`;
-    const json = await minifyFile(path);
-    await fs.promises.writeFile(`${__dirname}/dist/${type}/${file}`, json);
-  });
-  return Promise.all(promises);
 }
 
 async function copyDirectory(type) {
@@ -37,16 +24,82 @@ async function copyDirectory(type) {
   return Promise.all(promises);
 }
 
+async function processStudies() {
+  const index = [];
+
+  const files = await fs.promises.readdir(`${__dirname}/studies`);
+  const promises = files.map(async (file) => {
+    const path = `${__dirname}/studies/${file}`;
+    const [key] = file.split(".json");
+    const [, version] = versions.studies[key];
+
+    const data = JSON.parse(
+      await fs.promises.readFile(path, { encoding: "utf-8" })
+    );
+    data.version = version;
+
+    data.surveys = data.surveys.map((s) => ({
+      key: s,
+      ...surveyCfgMap[s],
+    }));
+
+    index.push({
+      key: key,
+      name: data.name,
+      description: data.description,
+    });
+
+    await fs.promises.writeFile(
+      `${__dirname}/dist/studies/${file}`,
+      JSON.stringify(data)
+    );
+  });
+
+  await Promise.all(promises);
+  await fs.promises.writeFile(
+    `${__dirname}/dist/studies/index.json`,
+    JSON.stringify(index)
+  );
+}
+
+async function processSurveys() {
+  const index = [];
+
+  const files = await fs.promises.readdir(`${__dirname}/surveys`);
+  const promises = files.map(async (file) => {
+    const path = `${__dirname}/surveys/${file}`;
+    const [key] = file.split(".json");
+    const [, version] = versions.surveys[key];
+
+    const { period, name, short, ...data } = JSON.parse(
+      await fs.promises.readFile(path, { encoding: "utf-8" })
+    );
+    data.version = version;
+
+    surveyCfgMap[key] = { version, period, name, short };
+    index.push({ key, name, description: short });
+
+    await fs.promises.writeFile(
+      `${__dirname}/dist/surveys/${file}`,
+      JSON.stringify(data)
+    );
+  });
+
+  await Promise.all(promises);
+  await fs.promises.writeFile(
+    `${__dirname}/dist/surveys/index.json`,
+    JSON.stringify(index)
+  );
+}
+
 async function build() {
   await Promise.all([
     mkdir(`${__dirname}/dist/images`),
     mkdir(`${__dirname}/dist/studies`),
     mkdir(`${__dirname}/dist/surveys`),
   ]);
-  return Promise.all([
-    minifyDirectory("studies"),
-    minifyDirectory("surveys"),
-    copyDirectory("images"),
-  ]);
+  await processSurveys();
+  await processStudies();
+  await copyDirectory("images");
 }
 build();
