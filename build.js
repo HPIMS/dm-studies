@@ -71,12 +71,16 @@ async function processSurveys() {
     const [key] = file.split(".json");
     const [, version] = versions.surveys[key];
 
-    const { period, name, short, ...data } = JSON.parse(
+    const { period, name, short, repeat, ...data } = JSON.parse(
       await fs.promises.readFile(path, { encoding: "utf-8" })
     );
     data.version = version;
 
-    surveyCfgMap[key] = { version, period, name, short };
+    const surveyCfg = { version, period, name, short };
+    if (repeat !== undefined) {
+      surveyCfg.repeat = repeat;
+    }
+    surveyCfgMap[key] = surveyCfg;
     index.push({ key, name, description: short });
 
     await fs.promises.writeFile(
