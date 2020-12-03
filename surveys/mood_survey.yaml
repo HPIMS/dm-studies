@@ -1,0 +1,150 @@
+key: mood_survey
+period: BI_WEEKLY
+repeat: 3
+name: Mood Survey
+short: About your mood
+title: Mood Survey
+description: We want to know how you have been feeling the past two weeks.
+  Please fill out this survey and let us know. You may skip any questions that
+  you are not comfortable answering.
+completed:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: question
+    title: Mood Survey
+    description: "Over the past two weeks, how much have you been bothered by the
+      following problems:"
+    questions:
+      - key: motivation
+        question: " Little interest or pleasure in doing things"
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: depression
+        question: Feeling down, depressed, or hopeless
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: sleeping
+        question: Trouble falling or staying asleep, or sleeping too much
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: tiredness
+        question: Feeling tired or having little energy
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: eating
+        question: Poor appetite or overeating
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: self_esteem
+        question: Feeling bad about yourself – or that you are a failure or have let
+          yourself or your family down
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: concentration
+        question: Trouble concentrating on things, such as reading the newspaper or
+          watching television
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: activity
+        question: Moving or speaking slowly that other people could have noticed? Or the
+          opposite – being so fidgety or restless that you have been moving
+          around a lot more than usual
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_day
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3

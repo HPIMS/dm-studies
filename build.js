@@ -1,6 +1,9 @@
 const fs = require("fs");
+const YAML = require("yaml");
 
-const versions = require("./versions.json");
+const versions = YAML.parse(
+  fs.readFileSync("./version.lock", { encoding: "utf-8" })
+);
 
 const surveyCfgMap = {};
 
@@ -30,10 +33,10 @@ async function processStudies() {
   const files = await fs.promises.readdir(`${__dirname}/studies`);
   const promises = files.map(async (file) => {
     const path = `${__dirname}/studies/${file}`;
-    const [key] = file.split(".json");
+    const [key] = file.split(".yaml");
     const [, version] = versions.studies[key];
 
-    const data = JSON.parse(
+    const data = YAML.parse(
       await fs.promises.readFile(path, { encoding: "utf-8" })
     );
     data.version = version;
@@ -51,7 +54,7 @@ async function processStudies() {
     });
 
     await fs.promises.writeFile(
-      `${__dirname}/dist/studies/${file}`,
+      `${__dirname}/dist/studies/${key}.json`,
       JSON.stringify(data)
     );
   });
@@ -69,10 +72,10 @@ async function processSurveys() {
   const files = await fs.promises.readdir(`${__dirname}/surveys`);
   const promises = files.map(async (file) => {
     const path = `${__dirname}/surveys/${file}`;
-    const [key] = file.split(".json");
+    const [key] = file.split(".yaml");
     const [, version] = versions.surveys[key];
 
-    const { period, name, short, repeat, ...data } = JSON.parse(
+    const { period, name, short, repeat, ...data } = YAML.parse(
       await fs.promises.readFile(path, { encoding: "utf-8" })
     );
     data.version = version;
@@ -85,7 +88,7 @@ async function processSurveys() {
     index.push({ key, name, description: short });
 
     await fs.promises.writeFile(
-      `${__dirname}/dist/surveys/${file}`,
+      `${__dirname}/dist/surveys/${key}.json`,
       JSON.stringify(data)
     );
   });
