@@ -1,0 +1,49 @@
+key: pilot
+name: "DigiMe: Pain, Stress, Sleep Survey"
+description: The Digital Discovery Program at the Hasso Plattner Institute for
+  Digital Health at Mount Sinai is focused on understanding how digital
+  technology can be used to increase our understanding of complex disease. In
+  this study, we aim to use wearable devices to learn about underlying symptoms
+  related to pain, stress, and sleep, which affect us all every day. By
+  providing lifestyle data, you can gain insight into your own health and
+  behaviors, lead a healthier life, all while contributing to important
+  scientific research.
+consentId: hpims-dhcs-consent-en
+baseline:
+  - baseline_demographics
+  - baseline_medical_history
+  - baseline_cd_risc_survey
+surveys:
+  - sleep_stress_pain
+  - pss4
+  - sleep
+  - pain
+  - health_care
+  - mood_survey
+  - qol_survey
+  - satisfaction_survey_monthly
+  - satisfaction_survey_final
+requiredHealthRecords:
+  AllergyRecord: HKClinicalTypeIdentifier
+  ConditionRecord: HKClinicalTypeIdentifier
+  ImmunizationRecord: HKClinicalTypeIdentifier
+  LabResultRecord: HKClinicalTypeIdentifier
+  MedicationRecord: HKClinicalTypeIdentifier
+  ProcedureRecord: HKClinicalTypeIdentifier
+  VitalSignRecord: HKClinicalTypeIdentifier
+requiredData:
+  ActiveEnergyBurned: HKQuantityTypeIdentifier
+  AppleExerciseTime: HKQuantityTypeIdentifier
+  HeartRate: HKQuantityTypeIdentifier
+  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
+  RestingHeartRate: HKQuantityTypeIdentifier
+  WalkingHeartRateAverage: HKQuantityTypeIdentifier
+  OxygenSaturation: HKQuantityTypeIdentifier
+  StepCount: HKQuantityTypeIdentifier
+  AppleStandTime: HKQuantityTypeIdentifier
+  EnvironmentalAudioExposure: HKQuantityTypeIdentifier
+  SleepAnalysis: HKQuantityTypeIdentifier
+  DietaryEnergyConsumed: HKQuantityTypeIdentifier
+  BloodPressureDiastolic: HKQuantityTypeIdentifier
+  BloodPressureSystolic: HKQuantityTypeIdentifier
+  BloodGlucose: HKQuantityTypeIdentifier

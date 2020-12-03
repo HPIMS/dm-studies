@@ -3,5 +3,8 @@
   "scripts": {
     "build": "node build",
     "sync": "node sync"
+  },
+  "devDependencies": {
+    "yaml": "^1.10.0"
   }
 }
