@@ -2,6 +2,12 @@
   publish = "dist/"
   command = "npm run-script build"
 
+[context.production]
+  publish = "production/"
+
+[context.staging]
+  publish = "staging/"
+
 [[redirects]]
   from = "/index.json"
   to = "/studies/index.json"
