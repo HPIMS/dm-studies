@@ -2,7 +2,9 @@ const fs = require("fs");
 const crypto = require("crypto");
 const YAML = require("yaml");
 
-const versions = require("./versions.json");
+const versions = YAML.parse(
+  fs.readFileSync("./version.lock", { encoding: "utf-8" })
+);
 
 const diffs = new Map();
 diffs.set("studies", new Map());
@@ -65,8 +67,8 @@ async function updateVersionFile() {
     },
   };
   await fs.promises.writeFile(
-    "./versions.json",
-    `${JSON.stringify(nextVersions)}\n`
+    "./version.lock",
+    `${YAML.stringify(nextVersions)}\n`
   );
 }
 

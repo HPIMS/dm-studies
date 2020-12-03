@@ -1,7 +1,9 @@
 const fs = require("fs");
 const YAML = require("yaml");
 
-const versions = require("./versions.json");
+const versions = YAML.parse(
+  fs.readFileSync("./version.lock", { encoding: "utf-8" })
+);
 
 const surveyCfgMap = {};
 
