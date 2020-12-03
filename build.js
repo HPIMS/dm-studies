@@ -47,6 +47,7 @@ async function processStudies() {
       key: key,
       name: data.name,
       description: data.description,
+      consentId: data.consentId,
     });
 
     await fs.promises.writeFile(
