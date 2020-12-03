@@ -4,9 +4,15 @@
 
 [context.production]
   publish = "production/"
+  API_ENDPOINT = "https://studies.digime.healthmetrix.com/production"
 
 [context.staging]
   publish = "staging/"
+  API_ENDPOINT = "https://studies.digime.healthmetrix.com/staging"
+
+[context.deploy-preview]
+  publish = "preview/"
+  API_ENDPOINT = "https://studies.digime.healthmetrix.com/preview"
 
 [[redirects]]
   from = "/index.json"
