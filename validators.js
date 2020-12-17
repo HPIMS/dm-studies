@@ -62,7 +62,6 @@ const SurveySchema = {
       minItems: 1,
     },
   },
-  additionalProperties: false,
 };
 
 const SurveySectionSchema = {
@@ -168,10 +167,8 @@ const ChoiceQuestionSchema = {
                 required: true,
               },
             },
-            additionalProperties: false,
           },
         },
-        additionalProperties: false,
       },
       minItems: 2,
       required: true,
@@ -210,7 +207,6 @@ const HeightQuestionSchema = {
       enum: ["in", "cm"],
     },
   },
-  additionalProperties: false,
 };
 
 const NumericQuestionSchema = {
@@ -249,7 +245,6 @@ const NumericQuestionSchema = {
       type: "number",
     },
   },
-  additionalProperties: false,
 };
 
 const PredefinedQuestionSchema = {
@@ -279,7 +274,6 @@ const PredefinedQuestionSchema = {
       type: "string",
     },
   },
-  additionalProperties: false,
 };
 
 const SliderQuestionSchema = {
@@ -327,7 +321,6 @@ const SliderQuestionSchema = {
       type: "string",
     },
   },
-  additionalProperties: false,
 };
 
 const TextAreaQuestionSchema = {
@@ -360,7 +353,6 @@ const TextAreaQuestionSchema = {
       type: "string",
     },
   },
-  additionalProperties: false,
 };
 
 const WeightQuestionSchema = {
@@ -394,7 +386,6 @@ const WeightQuestionSchema = {
       enum: ["lb", "kg"],
     },
   },
-  additionalProperties: false,
 };
 
 // --------------------------------------------------------------------
@@ -414,7 +405,6 @@ const TriggerSchema = {
         },
       },
       required: true,
-      additionalProperties: false,
     },
     condition: {
       type: "array",
@@ -425,7 +415,6 @@ const TriggerSchema = {
       required: true,
     },
   },
-  additionalProperties: false,
 };
 
 const TriggerConditionSchema = {
@@ -466,7 +455,6 @@ const TriggerConditionSchema = {
       },
     },
   },
-  additionalProperties: false,
 };
 
 // --------------------------------------------------------------------
