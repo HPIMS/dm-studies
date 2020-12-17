@@ -12,7 +12,7 @@ const diffs = new Map();
 diffs.set("studies", new Map());
 diffs.set("surveys", new Map());
 
-async function getFile(path, type) {
+async function getFile(path) {
   const data = await fs.promises.readFile(path, { encoding: "utf-8" });
   return {
     data: YAML.parse(data),
@@ -28,7 +28,7 @@ async function diff(type) {
   const promises = files.map(async (file) => {
     const path = `${dir}/${file}`;
     const [name] = file.split(".yaml");
-    const { data, hash: nextHash } = await getFile(path, type);
+    const { data, hash: nextHash } = await getFile(path);
 
     // Do some validation.
     if (name !== data.key) {
@@ -39,9 +39,9 @@ async function diff(type) {
     }
 
     if (type === "surveys") {
-      validateSurveySchema(json);
+      validateSurveySchema(data);
     } else {
-      validateStudySchema(json);
+      validateStudySchema(data);
     }
 
     seen.add(name);
