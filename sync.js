@@ -2,6 +2,8 @@ const fs = require("fs");
 const crypto = require("crypto");
 const YAML = require("yaml");
 
+const { validateSurvey } = require("./validators");
+
 const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
 );
@@ -10,8 +12,11 @@ const diffs = new Map();
 diffs.set("studies", new Map());
 diffs.set("surveys", new Map());
 
-async function getFile(path) {
+async function getFile(path, type) {
   const data = await fs.promises.readFile(path, { encoding: "utf-8" });
+  if (type === "surveys") {
+    validateSurvey(YAML.parse(data));
+  }
   return {
     data: YAML.parse(data),
     hash: crypto.createHash("md5").update(data).digest("hex"),
@@ -25,7 +30,7 @@ async function diff(type) {
   const promises = files.map(async (file) => {
     const path = `${dir}/${file}`;
     const [name] = file.split(".yaml");
-    const { data, hash: nextHash } = await getFile(path);
+    const { data, hash: nextHash } = await getFile(path, type);
 
     // Do some minimal validation.
     if (name !== data.key) {
