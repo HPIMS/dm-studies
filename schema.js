@@ -422,6 +422,32 @@ const TriggerSchema = {
 const TriggerConditionSchema = {
   id: "/TriggerCondition",
   type: "object",
+  oneOf: [
+    {
+      type: "object",
+      properties: {
+        operator: {
+          type: "string",
+          enum: ["=", "<>", "<", "<=", ">", ">=", "INCLUDES"],
+          required: true,
+        },
+        value: {
+          type: "any",
+          required: true,
+        },
+      },
+    },
+    {
+      type: "object",
+      properties: {
+        operator: {
+          type: "string",
+          enum: ["IS_SET"],
+          required: true,
+        },
+      },
+    },
+  ],
   properties: {
     section: {
       type: "string",
@@ -431,25 +457,6 @@ const TriggerConditionSchema = {
       type: "string",
       required: true,
     },
-    value: {
-      type: "any",
-      required: false, // TODO: FIX THIS!!
-    },
-    operator: {
-      type: "string",
-      enum: [
-        "=",
-        "<>",
-        "<",
-        "<=",
-        ">",
-        ">=",
-        "INCLUDES",
-        "NOT_INCLUDES",
-        "IS_SET",
-      ],
-      required: true,
-    },
     AND: {
       type: "array",
       items: {
@@ -457,6 +464,7 @@ const TriggerConditionSchema = {
       },
     },
   },
+  // additionalProperties: false,
 };
 
 // --------------------------------------------------------------------
