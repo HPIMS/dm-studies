@@ -2,7 +2,7 @@ const fs = require("fs");
 const crypto = require("crypto");
 const YAML = require("yaml");
 
-const { validateSurvey } = require("./validators");
+const { validateSurveySchema, validateStudySchema } = require("./schema");
 
 const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
@@ -14,9 +14,6 @@ diffs.set("surveys", new Map());
 
 async function getFile(path, type) {
   const data = await fs.promises.readFile(path, { encoding: "utf-8" });
-  if (type === "surveys") {
-    validateSurvey(YAML.parse(data));
-  }
   return {
     data: YAML.parse(data),
     hash: crypto.createHash("md5").update(data).digest("hex"),
@@ -25,6 +22,7 @@ async function getFile(path, type) {
 
 async function diff(type) {
   const dir = `${__dirname}/${type}`;
+  const seen = new Set();
 
   const files = await fs.promises.readdir(dir);
   const promises = files.map(async (file) => {
@@ -32,10 +30,21 @@ async function diff(type) {
     const [name] = file.split(".yaml");
     const { data, hash: nextHash } = await getFile(path, type);
 
-    // Do some minimal validation.
+    // Do some validation.
     if (name !== data.key) {
       throw new Error(`Key and Filename mismatch: ${type}/${file}`);
     }
+    if (seen.has(name)) {
+      throw new Error(`Dupicate key: ${name}`);
+    }
+
+    if (type === "surveys") {
+      validateSurveySchema(json);
+    } else {
+      validateStudySchema(json);
+    }
+
+    seen.add(name);
 
     const [lastHash, lastVersion] = versions[type][name] || [null, null];
     if (!lastHash || !lastVersion) {

@@ -1,6 +1,8 @@
 const Validator = require("jsonschema").Validator;
-// https://github.com/tdegrunt/jsonschema
-// https://github.com/tdegrunt/jsonschema/blob/026dbbbac52268dd971c6dc7fe65e0f85590277b/examples/all.js
+
+// TODO: refactor into separate files?
+// TODO: property titles
+// TODO: disallow additional properties
 
 // --------------------------------------------------------------------
 // Surveys
@@ -473,7 +475,10 @@ surveyValidator.addSchema(WeightQuestionSchema, "/WeightQuestion");
 surveyValidator.addSchema(SurveySectionSchema, "/SurveySection");
 
 module.exports = {
-  validateSurvey: (survey) => {
+  validateSurveySchema: (survey) => {
     surveyValidator.validate(survey, SurveySchema, { throwAll: true });
+  },
+  validateStudySchema: (study) => {
+    // TODO: complete this
   },
 };
