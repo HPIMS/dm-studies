@@ -2,7 +2,10 @@ const fs = require("fs");
 const crypto = require("crypto");
 const YAML = require("yaml");
 
-const { validateSurveySchema, validateStudySchema } = require("./schema");
+const {
+  validateSurveySchema,
+  validateStudySchema,
+} = require("./validate_schema");
 
 const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
