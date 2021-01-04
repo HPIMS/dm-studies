@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#survey_section",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#survey_question"
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["key", "questions"]
+}

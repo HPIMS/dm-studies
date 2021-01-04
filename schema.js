@@ -1,4 +1,4 @@
-const Validator = require("jsonschema").Validator;
+// const Validator = require("jsonschema").Validator;
 
 // TODO: refactor into separate files?
 // TODO: property titles
@@ -470,6 +470,7 @@ const TriggerConditionSchema = {
 // --------------------------------------------------------------------
 // Create the validators
 // --------------------------------------------------------------------
+/*
 const surveyValidator = new Validator();
 surveyValidator.addSchema(TriggerConditionSchema, "/TriggerCondition");
 surveyValidator.addSchema(TriggerSchema, "/Trigger");
@@ -481,10 +482,21 @@ surveyValidator.addSchema(SliderQuestionSchema, "/SliderQuestion");
 surveyValidator.addSchema(TextAreaQuestionSchema, "/TextAreaQuestion");
 surveyValidator.addSchema(WeightQuestionSchema, "/WeightQuestion");
 surveyValidator.addSchema(SurveySectionSchema, "/SurveySection");
+*/
+
+const Ajv = require("ajv").default;
+
+const surveySchema = require("./schemas/survey.json");
+const surveySectionSchema = require("./schemas/survey_section.json");
+const surveyQuestionSchema = require("./schemas/survey_question.json");
+
+const ajv = new Ajv();
+ajv.addSchema([surveySchema, surveySectionSchema, surveyQuestionSchema]);
 
 module.exports = {
   validateSurveySchema: (survey) => {
-    surveyValidator.validate(survey, SurveySchema, { throwAll: true });
+    const valid = ajv.validate(surveySchema, survey);
+    if (!valid) console.log(validate.errors);
   },
   validateStudySchema: (study) => {
     // TODO: complete this
