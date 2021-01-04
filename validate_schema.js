@@ -18,14 +18,20 @@ module.exports = {
     const validate = ajv.compile(SurveySchema);
     return (survey) => {
       const valid = validate(survey);
-      if (!valid) console.log(validate.errors);
+      if (!valid) {
+        return validate.errors;
+      }
+      return [];
     };
   })(),
   validateStudySchema: (() => {
     const validate = ajv.compile(StudySchema);
     return (survey) => {
       const valid = validate(survey);
-      if (!valid) console.log(validate.errors);
+      if (!valid) {
+        return validate.errors;
+      }
+      return [];
     };
   })(),
 };

@@ -41,10 +41,16 @@ async function diff(type) {
       throw new Error(`Dupicate key: ${name}`);
     }
 
+    let errors;
     if (type === "surveys") {
-      validateSurveySchema(data);
+      errors = validateSurveySchema(data);
     } else {
-      validateStudySchema(data);
+      errors = validateStudySchema(data);
+    }
+
+    if (errors.length) {
+      console.error(errors);
+      throw new Error(`Schema validation failed for ${name}`);
     }
 
     seen.add(name);
