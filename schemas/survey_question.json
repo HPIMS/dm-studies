@@ -2,8 +2,84 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#survey_question",
   "type": "object",
-  "properties": {
 
+  "definitions": {
+    "trigger": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["SHOW", "HIDE"]
+            }
+          },
+          "required": ["type"]
+        },
+        "condition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/trigger_condition"
+          },
+          "minItems": 1
+        }
+      },
+      "required": ["action", "condition"]
+    },
+    "trigger_condition": {
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "operator": {
+              "type": "string",
+              "enum": ["=", "<>", "<", "<=", ">", ">=", "INCLUDES"]
+            },
+            "value": {}
+          },
+          "required": ["operator", "value"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operator": {
+              "type": "string",
+              "enum": ["IS_SET"]
+            }
+          },
+          "required": ["operator"]
+        }
+      ],
+      "properties": {
+        "section": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "AND": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/trigger_condition"
+          }
+        }
+      },
+      "required": ["section", "question"]
+    }
   },
-  "required": []
+
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/trigger"
+      }
+    }
+  },
+  "required": ["key"]
 }

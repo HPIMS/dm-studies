@@ -2,20 +2,14 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "#survey",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "key": {
       "type": "string"
     },
     "period": {
       "type": "string",
-      "enum": [
-        "ONCE",
-        "DAILY",
-        "WEEKLY",
-        "BI_WEEKLY",
-        "MONTHLY",
-        "FINAL"
-      ]
+      "enum": ["ONCE", "DAILY", "WEEKLY", "BI_WEEKLY", "MONTHLY", "FINAL"]
     },
     "repeat": {
       "type": "integer"
@@ -37,6 +31,7 @@
     },
     "completed": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "title": {
           "type": "string"
@@ -55,5 +50,13 @@
       "minItems": 1
     }
   },
-  "required": ["key", "period", "repeat", "name", "short", "title", "description"]
+  "required": [
+    "key",
+    "period",
+    "repeat",
+    "name",
+    "short",
+    "title",
+    "description"
+  ]
 }

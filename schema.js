@@ -492,10 +492,11 @@ const surveyQuestionSchema = require("./schemas/survey_question.json");
 
 const ajv = new Ajv();
 ajv.addSchema([surveySchema, surveySectionSchema, surveyQuestionSchema]);
+const validate = ajv.compile(surveySchema);
 
 module.exports = {
   validateSurveySchema: (survey) => {
-    const valid = ajv.validate(surveySchema, survey);
+    const valid = validate(survey);
     if (!valid) console.log(validate.errors);
   },
   validateStudySchema: (study) => {
