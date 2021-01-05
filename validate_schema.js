@@ -13,25 +13,20 @@ ajv.addSchema([
   SurveyQuestionSchema,
 ]);
 
-module.exports = {
-  validateSurveySchema: (() => {
-    const validate = ajv.compile(SurveySchema);
-    return (survey) => {
-      const valid = validate(survey);
-      if (!valid) {
-        return validate.errors;
-      }
-      return [];
-    };
-  })(),
-  validateStudySchema: (() => {
-    const validate = ajv.compile(StudySchema);
-    return (survey) => {
-      const valid = validate(survey);
-      if (!valid) {
-        return validate.errors;
-      }
-      return [];
-    };
-  })(),
+const validators = {
+  survey: ajv.compile(SurveySchema),
+  study: ajv.compile(StudySchema),
+};
+
+module.exports = (type, data) => {
+  const validate = validators[type];
+  let errors = [];
+
+  if (validate) {
+    const valid = validate(data);
+    if (!valid) {
+      errors = validate.errors;
+    }
+  }
+  return errors;
 };

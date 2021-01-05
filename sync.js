@@ -2,10 +2,7 @@ const fs = require("fs");
 const crypto = require("crypto");
 const YAML = require("yaml");
 
-const {
-  validateSurveySchema,
-  validateStudySchema,
-} = require("./validate_schema");
+const validateSchema = require("./validate_schema");
 
 const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
@@ -41,15 +38,12 @@ async function diff(type) {
       throw new Error(`Dupicate key: ${name}`);
     }
 
-    let errors;
-    if (type === "surveys") {
-      errors = validateSurveySchema(data);
-    } else {
-      errors = validateStudySchema(data);
-    }
-
-    if (errors.length) {
-      console.error(errors);
+    const schemaErrors = validateSchema(
+      type === "surveys" ? "survey" : "study",
+      data
+    );
+    if (schemaErrors.length) {
+      console.error(schemaErrors);
       throw new Error(`Schema validation failed for ${name}`);
     }
 
