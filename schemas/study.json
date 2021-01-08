@@ -16,6 +16,13 @@
     "consentId": {
       "type": "string"
     },
+    "wearables": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["fitbit", "oura"]
+      }
+    },
     "baseline": {
       "type": "array",
       "items": {

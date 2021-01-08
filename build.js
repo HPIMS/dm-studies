@@ -51,6 +51,7 @@ async function processStudies() {
       name: data.name,
       description: data.description,
       consentId: data.consentId,
+      wearables: data.wearables,
     });
 
     await fs.promises.writeFile(
@@ -80,10 +81,14 @@ async function processSurveys() {
     );
     data.version = version;
 
-    const surveyCfg = { version, period, timeEstimate, name, short };
-    if (repeat !== undefined) {
-      surveyCfg.repeat = repeat;
-    }
+    const surveyCfg = {
+      version,
+      period,
+      timeEstimate,
+      name,
+      short,
+      repeat,
+    };
     surveyCfgMap[key] = surveyCfg;
     index.push({ key, name, description: short });
 
