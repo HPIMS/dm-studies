@@ -17,7 +17,7 @@ sections:
     description: ""
     questions:
       - key: overall
-        question: How would you rate your DigiMe experience, overall?
+        question: How would you rate your eHive experience, overall?
         type: SLIDER
         min: 1
         minDescription: Worst
@@ -25,7 +25,7 @@ sections:
         maxDescription: Best
         step: 1
       - key: recommend
-        question: Would you recommend the DigiMe platform to a friend?
+        question: Would you recommend the eHive platform to a friend?
         type: SINGLE_CHOICE
         options:
           - value: yes

@@ -28,7 +28,7 @@ sections:
           - value: maybe
             text: Maybe
       - key: recommend
-        question: Would you recommend the DigiMe platform to a friend?
+        question: Would you recommend the eHive platform to a friend?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -38,7 +38,7 @@ sections:
           - value: maybe
             text: Maybe
       - key: expierience
-        question: How would you rate your DigiMe experience, overall?
+        question: How would you rate your eHive experience, overall?
         type: SLIDER
         min: 1
         max: 10
