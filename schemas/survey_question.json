@@ -1,0 +1,231 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "#survey_question",
+  "type": "object",
+  "definitions": {
+    "trigger": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["SHOW", "HIDE"]
+            }
+          },
+          "required": ["type"]
+        },
+        "condition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/trigger_condition"
+          },
+          "minItems": 1
+        }
+      },
+      "required": ["action", "condition"]
+    },
+    "trigger_condition": {
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "operator": {
+              "type": "string",
+              "enum": ["=", "<>", "<", "<=", ">", ">=", "INCLUDES"]
+            },
+            "value": {}
+          },
+          "required": ["operator", "value"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "operator": {
+              "type": "string",
+              "enum": ["IS_SET"]
+            }
+          },
+          "required": ["operator"]
+        }
+      ],
+      "properties": {
+        "section": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "AND": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/trigger_condition"
+          }
+        }
+      },
+      "required": ["section", "question"]
+    }
+  },
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/trigger"
+      }
+    },
+    "question": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["SINGLE_CHOICE", "MULTIPLE_CHOICE"]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "score": {
+                "type": "integer"
+              },
+              "inlineQuestion": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": ["TEXTAREA"]
+                  },
+                  "key": {
+                    "type": "string"
+                  },
+                  "question": {
+                    "type": "string"
+                  }
+                },
+                "required": ["type", "key", "question"]
+              }
+            },
+            "required": ["value", "text"]
+          },
+          "minItems": 2
+        }
+      },
+      "required": ["type", "options"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["YESNO_CHOICE"]
+        }
+      },
+      "required": ["type"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["HEIGHT"]
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["in", "cm"]
+        }
+      },
+      "required": ["type"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["NUMERIC"]
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "minValue": {
+          "type": "number"
+        },
+        "maxValue": {
+          "type": "number"
+        }
+      },
+      "required": ["type"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["SLIDER"]
+        },
+        "min": {
+          "type": "integer"
+        },
+        "max": {
+          "type": "integer"
+        },
+        "step": {
+          "type": "number"
+        },
+        "minDescription": {
+          "type": "string"
+        },
+        "maxDescription": {
+          "type": "string"
+        }
+      },
+      "required": ["type", "min", "max", "step"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["TEXTAREA", "YEAR", "BIRTH_YEAR"]
+        },
+        "placeholder": {
+          "type": "string"
+        }
+      },
+      "required": ["type"]
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["WEIGHT"]
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["lb", "kg"]
+        }
+      },
+      "required": ["type"]
+    }
+  ],
+  "required": ["key", "question"]
+}

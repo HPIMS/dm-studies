@@ -1,6 +1,7 @@
 key: baseline_demographics
 period: ONCE
 repeat: 1
+timeEstimate: 5
 name: About You Questionnaire
 short: Information about you
 title: About you Questionnaire
@@ -266,7 +267,7 @@ sections:
           - value: person_care_attendant
             text: Personal care attendant
           - value: other_non_relative
-            text: Other non-relativ
+            text: Other non-relative
           - value: homeless
             text: N/A – Homeless
           - value: alone

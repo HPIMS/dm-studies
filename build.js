@@ -51,6 +51,7 @@ async function processStudies() {
       name: data.name,
       description: data.description,
       consentId: data.consentId,
+      wearables: data.wearables,
     });
 
     await fs.promises.writeFile(
@@ -75,15 +76,19 @@ async function processSurveys() {
     const [key] = file.split(".yaml");
     const [, version] = versions.surveys[key];
 
-    const { period, name, short, repeat, ...data } = YAML.parse(
+    const { period, name, short, repeat, timeEstimate, ...data } = YAML.parse(
       await fs.promises.readFile(path, { encoding: "utf-8" })
     );
     data.version = version;
 
-    const surveyCfg = { version, period, name, short };
-    if (repeat !== undefined) {
-      surveyCfg.repeat = repeat;
-    }
+    const surveyCfg = {
+      version,
+      period,
+      timeEstimate,
+      name,
+      short,
+      repeat,
+    };
     surveyCfgMap[key] = surveyCfg;
     index.push({ key, name, description: short });
 

@@ -2,6 +2,8 @@ const fs = require("fs");
 const crypto = require("crypto");
 const YAML = require("yaml");
 
+const validateSchema = require("./validate_schema");
+
 const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
 );
@@ -20,6 +22,7 @@ async function getFile(path) {
 
 async function diff(type) {
   const dir = `${__dirname}/${type}`;
+  const seen = new Set();
 
   const files = await fs.promises.readdir(dir);
   const promises = files.map(async (file) => {
@@ -27,10 +30,24 @@ async function diff(type) {
     const [name] = file.split(".yaml");
     const { data, hash: nextHash } = await getFile(path);
 
-    // Do some minimal validation.
+    // Do some validation.
     if (name !== data.key) {
       throw new Error(`Key and Filename mismatch: ${type}/${file}`);
     }
+    if (seen.has(name)) {
+      throw new Error(`Dupicate key: ${name}`);
+    }
+
+    const schemaErrors = validateSchema(
+      type === "surveys" ? "survey" : "study",
+      data
+    );
+    if (schemaErrors.length) {
+      console.error(schemaErrors);
+      throw new Error(`Schema validation failed for ${name}`);
+    }
+
+    seen.add(name);
 
     const [lastHash, lastVersion] = versions[type][name] || [null, null];
     if (!lastHash || !lastVersion) {
