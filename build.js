@@ -114,5 +114,9 @@ async function build() {
   await processSurveys();
   await processStudies();
   await copyDirectory("images");
+  await fs.promises.writeFile(
+    `${__dirname}/dist/versions.json`,
+    JSON.stringify(versions)
+  );
 }
 build();
