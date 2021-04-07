@@ -8,6 +8,8 @@ const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
 );
 
+const surveyLibrary = new Set();
+
 const diffs = new Map();
 diffs.set("studies", new Map());
 diffs.set("surveys", new Map());
@@ -32,10 +34,10 @@ async function diff(type) {
 
     // Do some validation.
     if (name !== data.key) {
-      throw new Error(`Key and Filename mismatch: ${type}/${file}`);
+      throw new Error(`Key and Filename mismatch: "${type}/${file}"`);
     }
     if (seen.has(name)) {
-      throw new Error(`Dupicate key: ${name}`);
+      throw new Error(`Dupicate key: "${name}"`);
     }
 
     const schemaErrors = validateSchema(
@@ -44,10 +46,15 @@ async function diff(type) {
     );
     if (schemaErrors.length) {
       console.error(schemaErrors);
-      throw new Error(`Schema validation failed for ${name}`);
+      throw new Error(`Schema validation failed for "${name}"`);
     }
 
     seen.add(name);
+    // if it's a survey add the key to the survey library so that we can check later
+    // when processing the studies to see if their defined surveys actually exist.
+    if (type === "surveys") {
+      surveyLibrary.add(name);
+    }
 
     const [lastHash, lastVersion] = versions[type][name] || [null, null];
     if (!lastHash || !lastVersion) {
@@ -61,6 +68,13 @@ async function diff(type) {
       // If it is a study, and we didn't change the file itself,
       // check to see if any of the study's surveys have changed.
       data.surveys.forEach((s) => {
+        // make sure that the defined survey is available
+        if (!surveyLibrary.has(s)) {
+          throw new Error(
+            `Study: "${name}" includes Survey: "${s}" which does not exist in the survey library`
+          );
+        }
+        //
         if (diffs.get("surveys").has(s)) {
           diffs.get(type).set(name, [nextHash, lastVersion + 1]);
         }
