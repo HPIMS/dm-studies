@@ -5,22 +5,6 @@ const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
 );
 
-async function mkdir(path) {
-  try {
-    await fs.promises.stat(path);
-  } catch (err) {
-    await fs.promises.mkdir(path, { recursive: true });
-  }
-}
-
-async function processStudies() {
-  const studies = await fs.promises.readdir(`${__dirname}/studies`);
-
-  //
-}
-
-/*
-
 const surveyCfgMap = {};
 
 async function mkdir(path) {
@@ -144,5 +128,3 @@ async function build() {
   );
 }
 build();
-
-*/

@@ -12,11 +12,10 @@ consentId: ehive-pss
 wearables:
   - fitbit
   - oura
-baseline:
+surveys:
   - baseline_demographics
   - baseline_medical_history
   - baseline_cd_risc_survey
-surveys:
   - sleep_stress_pain
   - pss4
   - sleep
