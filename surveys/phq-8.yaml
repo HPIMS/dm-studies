@@ -1,4 +1,4 @@
-key: mood_survey
+key: phq-8
 period: BI_WEEKLY
 repeat: 3
 timeEstimate: 3
@@ -13,7 +13,7 @@ outro:
   title: Thank you!
   description: We appreciate your participation.
 sections:
-  - key: question
+  - key: "0"
     title: Mood Survey
     description: "Over the past two weeks, how much have you been bothered by the
       following problems:"
@@ -25,7 +25,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days
@@ -41,7 +41,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days
@@ -57,7 +57,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days
@@ -73,7 +73,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days
@@ -89,7 +89,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days
@@ -106,7 +106,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days
@@ -123,7 +123,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days
@@ -141,7 +141,7 @@ sections:
           - value: not_at_all
             text: Not at all
             score: 0
-          - value: several_day
+          - value: several_days
             text: Several days
             score: 1
           - value: more_than_half_days

@@ -26,13 +26,20 @@
     "short": {
       "type": "string"
     },
-    "title": {
-      "type": "string"
+    "intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": ["title", "description"]
     },
-    "description": {
-      "type": "string"
-    },
-    "completed": {
+    "outro": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -53,14 +60,5 @@
       "minItems": 1
     }
   },
-  "required": [
-    "key",
-    "period",
-    "repeat",
-    "name",
-    "short",
-    "title",
-    "description",
-    "sections"
-  ]
+  "required": ["key", "period", "repeat", "name", "short", "intro", "sections"]
 }

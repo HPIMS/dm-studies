@@ -4,11 +4,12 @@ repeat: 3
 timeEstimate: 1
 name: General Health and Quality of Life Survey
 short: Your opinion on your life
-title: General Health and Quality of Life Survey
-description: We want to understand more about your quality of life. Please fill
-  out this survey and let us know. You may skip any questions that you are not
-  comfortable answering.
-completed:
+intro:
+  title: General Health and Quality of Life Survey
+  description: We want to understand more about your quality of life. Please fill
+    out this survey and let us know. You may skip any questions that you are not
+    comfortable answering.
+outro:
   title: Thank you!
   description: We appreciate your participation.
 sections:

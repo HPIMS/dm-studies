@@ -4,10 +4,11 @@ repeat: 3
 timeEstimate: 1
 name: Monthly Study Check-in Survey
 short: Monthly study satisfaction
-title: Monthly Check-in Survey
-description: We want to know how your experience has been participating in our
-  study. Please fill out this survey to let us know how you're doing.
-completed:
+intro:
+  title: Monthly Check-in Survey
+  description: We want to know how your experience has been participating in our
+    study. Please fill out this survey to let us know how you're doing.
+outro:
   title: Thank you!
   description: We review your comments and think of how to make improvements to
     our study on a regular basis

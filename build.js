@@ -76,9 +76,16 @@ async function processSurveys() {
     const [key] = file.split(".yaml");
     const [, version] = versions.surveys[key];
 
-    const { period, name, short, repeat, timeEstimate, ...data } = YAML.parse(
-      await fs.promises.readFile(path, { encoding: "utf-8" })
-    );
+    const {
+      period,
+      name,
+      short,
+      repeat,
+      timeEstimate,
+      intro,
+      outro,
+      ...data
+    } = YAML.parse(await fs.promises.readFile(path, { encoding: "utf-8" }));
     data.version = version;
 
     const surveyCfg = {
@@ -94,7 +101,8 @@ async function processSurveys() {
 
     await fs.promises.writeFile(
       `${__dirname}/dist/surveys/${key}.json`,
-      JSON.stringify(data)
+      // restructure for backwards compatibility
+      JSON.stringify({ ...data, ...intro, completed: outro })
     );
   });
 

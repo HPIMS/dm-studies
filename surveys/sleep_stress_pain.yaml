@@ -4,11 +4,12 @@ repeat: 0
 timeEstimate: 1
 name: Sleep, Stress, and Pain Survey
 short: Your daily check-in
-title: Your Daily Scales
-description: |-
-  How are you doing today?
-  You can take this any time in the day or night as many times as you want.
-completed:
+intro:
+  title: Your Daily Scales
+  description: |-
+    How are you doing today?
+    You can take this any time in the day or night as many times as you want.
+outro:
   title: About You
   description: Thank you! You completed the survey sucessfully.
 sections:

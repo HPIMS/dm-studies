@@ -1,0 +1,956 @@
+key: poqa-r4
+period: MONTHLY
+repeat: 3
+timeEstimate: 2
+name: ""
+short: ""
+intro:
+  title: ""
+  description: ""
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: "The following is a list of words that describe feelings people sometimes have. Please SELECT THE RESPONSE that reflects how frequently you have felt the following during the LAST MONTH:"
+    questions:
+      - key: resentful
+        question: Resentful
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: fatigue
+        question: Fatigued
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: annoyed
+        question: Annoyed
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: sad
+        question: Sad
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: bodyache
+        question: Body aches
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: headache
+        question: Headaches
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all    
+      - key: heartbeat
+        question: Rapid heartbeats
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: depressed
+        question: Depressed
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: exhausted
+        question: Exhausted
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: blue
+        question: Blue
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all  
+      - key: appreciative
+        question: Appreciative
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all                                          
+      - key: relaxed
+        question: Relaxed
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: anxious
+        question: Anxious
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: tired
+        question: Tired
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: sleep
+        question: My sleep is inadequate
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: thankful
+        question: Thankful
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: indigestion
+        question: Indigestion, heartburn, or stomach upset
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: calm
+        question: Calm
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: cynical
+        question: Cynical
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: muscle
+        question: Muscle Tension
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: grateful
+        question: Grateful
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: worried
+        question: Worried
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: unhappy
+        question: Unhappy
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: uneasy
+        question: Uneasy
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: angry
+        question: Angry
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: peaceful
+        question: Peaceful
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+  - key: "1"
+    title: ""
+    description: ""
+    questions:
+      - key: health
+        question: "Over the last month, my health has been:"
+        type: SINGLE_CHOICE
+        options:
+          - value: Poor
+            text: Poor
+          - value: fair
+            text: Fair
+          - value: average
+            text: Average
+          - value: good
+            text: Good      
+          - value: excellent
+            text: Excellent
+  - key: "2"
+    title: ""
+    description: ""
+    questions:
+      - key: stress
+        question: Indicate how stressed you've been in the past month.
+        type: SLIDER
+        min: 1
+        minDescription: Most calm I've ever been
+        max: 10
+        maxDescription: Most stressed I've ever been
+        step: 1
+  - key: "3"
+    title: ""
+    description: "Following is a list of statements that describe the way people sometimes feel or think about themselves. Please SELECT THE RESPONSE which reflects how freqently you have felt or thought the following during the LAST MONTH."
+    questions:
+      - key: fulfill
+        question: My life is deeply fulfilling
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: dynamic
+        question: Dynamic
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: upset
+        question: I get upset easily
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: calmdown
+        question: I find it difficult to calm down after I've been upset
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: spouse
+        question: I feel loved by my spouse/partner
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: optimistic
+        question: I feel optimistic about the future 
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: lookforward
+        question: I wake up and look forward to each day
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: motivated 
+        question: Motivated 
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: pleased 
+        question: I am pleased with my life 
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: urges 
+        question: I sometimes have urges to break, throw or smash things
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: fuse 
+        question: I sometimes have a short fuse
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+      - key: enthusiastic 
+        question: Enthusiastic
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+          - value: very_often
+            text: Very Often
+          - value: often
+            text: Often
+          - value: fairly_often
+            text: Fairly Often
+          - value: sometimes
+            text: Sometimes      
+          - value: once_in_a_while
+            text: Once in a while   
+          - value: Not_at_all
+            text: Not at all
+  - key: "4"
+    title: ""
+    description: "We are asking about your feelings and experiences over the LAST MONTH. Please SELECT THE RESPONSE which reflects how much you AGREE or DISAGREE with the following statements as they apply to you, your job and place of employment during the LAST MONTH."
+    questions:
+      - key: lifesatisfaction
+        question: I am satisfied with my life
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: jobsatisfaction
+        question: I am satisfied with my job
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: tension
+        question: There is tension between management and staff
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: time
+        question: I feel there is never enough time
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: pressed
+        question: I feel pressed for time
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: pace
+        question: The pace of life is too fast and I can't keep up
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: leave
+        question: I feel like leaving this organization
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: conflict
+        question: I feel conflict between work and personal priorities
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: effort
+        question: It takes a lot of effort to sustain my performance level
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: quit
+        question: I feel like quitting my job
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: getalong
+        question: I work with people who don't get along with each other
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+      - key: powerstruggle
+        question: I'm aware of power struggles between co-workers that damage morale
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree
+          - value: agree
+            text: Agree
+          - value: slightly_agree
+            text: Slightly Agree
+          - value: neutral
+            text: Neutral
+          - value: slightly_disagree 
+            text: Slightly Disagree      
+          - value: disagree
+            text: Disagree   
+          - value: strongly_disagree
+            text: Strongly Disagree
+
