@@ -88,6 +88,7 @@ async function processSurveys() {
       name,
       short,
       repeat,
+      editable: data.editable,
     };
     surveyCfgMap[key] = surveyCfg;
     index.push({ key, name, description: short });
