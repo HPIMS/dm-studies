@@ -7,6 +7,31 @@
     "key": {
       "type": "string"
     },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "instrument": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "standardized": {
+          "type": "boolean"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+
     "period": {
       "type": "string",
       "enum": [
