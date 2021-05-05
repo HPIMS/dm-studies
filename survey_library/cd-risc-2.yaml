@@ -1,16 +1,17 @@
 key: cd-risc-2
+
 metadata: 
-  author: PROMIS
-  instrument: Pain Interference - Short Form 6b
-  version: 1.0
-  references: 
-    - "Vaishnavi, S., Connor, K., & Davidson, J. R. (2007). An abbreviated version of the Connor-Davidson Resilience Scale (CD-RISC), the CD-RISC2: Psychometric properties and applications in psychopharmacological trials. Psychiatry research, 152(2-3), 293-297."
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
 
 period: ONCE
 repeat: 1
 timeEstimate: 1
 name: Resilience & Coping Survey
 short: How you cope
+
 intro:
   title: Resilience & Coping Survey
   description: We want to learn about how you cope. Please fill out this survey
@@ -19,6 +20,7 @@ intro:
 outro:
   title: Thank you!
   description: We appreciate your participation.
+
 sections:
   - key: "0"
     title: Resilience & Coping Survey

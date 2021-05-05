@@ -1,9 +1,17 @@
 key: phq-8
+
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+
 period: BI_WEEKLY
 repeat: 3
 timeEstimate: 3
 name: Mood Survey
 short: About your mood
+
 intro:
   title: Mood Survey
   description: We want to know how you have been feeling the past two weeks.
@@ -12,6 +20,7 @@ intro:
 outro:
   title: Thank you!
   description: We appreciate your participation.
+
 sections:
   - key: "0"
     title: Mood Survey

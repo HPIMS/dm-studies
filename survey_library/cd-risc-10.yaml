@@ -1,9 +1,18 @@
 key: cd-risc-10
+
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+
+
 period: ONCE
 repeat: 1
 timeEstimate: 1
 name: Resilience & Coping Survey
 short: How you cope
+
 intro:
   title: Resilience & Coping Survey
   description: We want to learn about how you cope. Please fill out this survey
@@ -12,6 +21,7 @@ intro:
 outro:
   title: Thank you!
   description: We appreciate your participation.
+
 sections:
   - key: "0"
     title: Resilience & Coping Survey
