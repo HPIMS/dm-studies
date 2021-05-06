@@ -13,6 +13,7 @@ baseline:
   - baseline_medical_history
 surveys:
   - mood_survey
+  - pss-10
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier

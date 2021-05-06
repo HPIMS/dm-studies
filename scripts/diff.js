@@ -48,7 +48,6 @@ async function processSurveys() {
   log.info("*****************************************");
 
   const dir = path.join(__dirname, "../cfg/surveys");
-  const seen = new Set();
 
   const surveyGroups = await fs.promises.readdir(dir);
 
@@ -57,12 +56,13 @@ async function processSurveys() {
     const surveys = await fs.promises.readdir(groupDir);
 
     let surveyPrefix = "";
-    if (surveyGroup !== "library" && surveyGroup !== "legacy") {
+    if (surveyGroup !== "legacy") {
       surveyPrefix = surveyGroup;
     }
 
     const surveyPromises = surveys.map(async (file) => {
       const rootName = file.replace(/\.yaml$|\.yml$/, "");
+      const extension = file.split(".").pop();
       const name = `${surveyPrefix ? `${surveyPrefix}::` : ""}${rootName}`;
 
       const { data, hash: nextHash } = await getFile(`${groupDir}/${file}`);
@@ -85,19 +85,28 @@ async function processSurveys() {
         return;
       }
 
-      log.info(`[${name}] Active. Continuing.`);
-
       if (rootName !== data.key) {
-        log.error(`[${name}] Survey key and Filename mismatch`);
+        log.error(`[${name}] Survey key and Filename mismatch.`);
         return;
       }
 
-      if (seen.has(name)) {
-        // since we allow .yaml and .yml, it's possible that a file could be duplicated
-        log.error(
-          `[${name}] Duplicate key. ${name} has already been processed.`
-        );
-        return;
+      // If we are using .yml, automatically move to .yaml.
+      if (extension === "yml") {
+        try {
+          // see if the .yaml file that we want to move it to already exists
+          await fs.promises.stat(`${groupDir}/${rootName}.yaml`);
+          log.error(
+            `[${name}] Uses a .yml extension and another file with a .yaml extension already exists. Could not automatically rename.`
+          );
+          return;
+        } catch (err) {
+          log.warning(`[${name}] Renaming to ${name}.yaml.`);
+          // if we get here it means we can rename
+          await fs.promises.rename(
+            `${groupDir}/${rootName}.yml`,
+            `${groupDir}/${rootName}.yaml`
+          );
+        }
       }
 
       // add this survey to the survey library
@@ -133,12 +142,11 @@ async function processStudies() {
   log.info("*****************************************");
 
   const dir = path.join(__dirname, "../cfg/studies");
-  const seen = new Set();
-
   const files = await fs.promises.readdir(dir);
 
   const promises = files.map(async (file) => {
     const name = file.replace(/\.yaml$|\.yml$/, "");
+    const extension = file.split(".").pop();
     const { data, hash: nextHash } = await getFile(`${dir}/${file}`);
     const [lastHash, lastVersion] = versions.active?.studies[name] ||
       versions.inactive?.studies[name] || [null, null];
@@ -159,17 +167,30 @@ async function processStudies() {
       return;
     }
 
-    log.info(`[${name}] Active. Continuing.`);
-
     if (name !== data.key) {
-      log.error(`[${name}] Study key and Filename mismatch`);
+      log.error(`[${name}] Study key and Filename mismatch.`);
       return;
     }
 
-    if (seen.has(name)) {
-      // since we allow .yaml and .yml, it's possible that a file could be duplicated
-      log.error(`[${name}] Duplicate key. ${name} has already been processed.`);
+    if (name === "library" || name === "legacy") {
+      log.error(`[${name}] Reserved study name.`);
       return;
+    }
+
+    // If we are using .yml, automatically move to .yaml.
+    if (extension === "yml") {
+      try {
+        // see if the .yaml file that we want to move it to already exists
+        await fs.promises.stat(`${dir}/${name}.yaml`);
+        log.error(
+          `[${name}] Uses a .yml extension and another file with a .yaml extension already exists. Could not automatically rename.`
+        );
+        return;
+      } catch (err) {
+        log.warning(`[${name}] Renaming to ${name}.yaml.`);
+        // if we get here it means we can rename
+        await fs.promises.rename(`${dir}/${name}.yml`, `${dir}/${name}.yaml`);
+      }
     }
 
     const schemaErrors = validateSchema("study", data);
@@ -187,8 +208,6 @@ async function processStudies() {
         );
       }
     });
-
-    seen.add(name);
 
     if (!lastHash || !lastVersion) {
       nextVersion = 1;
