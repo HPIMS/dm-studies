@@ -57,6 +57,8 @@ async function diff(type) {
     }
 
     const [lastHash, lastVersion] = versions[type][name] || [null, null];
+    let nextVersion = lastVersion;
+
     if (!lastHash || !lastVersion) {
       // If this is the first time seeing this file set the version to the
       // existing version in the yaml, or 1.
