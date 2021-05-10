@@ -34,8 +34,6 @@ async function copyDirectory(srcDir, destDir) {
 
 const dftSurveyCfg = {};
 
-// TODO: LOGGING STATEMENTS
-// TODO: DONT OVERWRitE SURVEY NAME
 async function processSurveys() {
   log.info("*****************************************");
   log.info("****        Building Surveys         ****");
@@ -50,7 +48,6 @@ async function processSurveys() {
   const promises = surveys.map(async (surveyKey) => {
     let study;
     [, study, survey] = surveyKey.match(/^(.*?)::(.*)/) || [, null, surveyKey];
-
     let cfg;
     if (study) {
       cfg = await fs.promises.readFile(`${surveyDir}/${study}/${survey}.yaml`, {
@@ -63,6 +60,8 @@ async function processSurveys() {
       });
     }
 
+    const version = versions.active.surveys[surveyKey][1];
+
     const {
       period,
       name,
@@ -74,10 +73,11 @@ async function processSurveys() {
       ...data
     } = YAML.parse(cfg);
 
-    // TODO: SET VERSION
+    // Remove configs we don't need
+    delete data.active;
 
     const surveyCfg = {
-      // version,
+      version,
       period,
       timeEstimate,
       name,
@@ -85,7 +85,7 @@ async function processSurveys() {
       repeat,
     };
     dftSurveyCfg[surveyKey] = surveyCfg;
-    index.push({ key: surveyKey, name, description: short });
+    index.push({ key: surveyKey, version, name, description: short });
 
     await fs.promises.writeFile(
       `${distDir}/surveys/${surveyKey}.json`,
@@ -118,33 +118,54 @@ async function processStudies() {
     });
     const data = YAML.parse(cfg);
 
-    // TODO: SET VERSION
+    const version = versions.active.studies[study][1];
+
+    // Remove configs we don't need
+    delete data.active;
+
+    // set additional configs
+    data.version = version;
 
     log.info(`[${study}] Processing`);
 
     log.info(`[${study}] Setting survey configs.`);
     // Pull in the real config object for the study's survey definitions
-    data.surveys = data.surveys.map((survey) => {
-      //  TODO: WE NEED TO USE PREFIX!!!!
+    data.surveys = data.surveys
+      .map((survey) => {
+        const reqSurveyKey = typeof survey === "string" ? survey : survey.key;
 
-      // If we've defined the survey in the study config as a string
-      // it means we just want to take all defaults.
-      if (typeof survey === "string") {
+        let actualSurveyKey;
+        if (versions.active.surveys[`${study}::${reqSurveyKey}`]) {
+          actualSurveyKey = `${study}::${reqSurveyKey}`;
+        } else if (versions.active.surveys[`library::${reqSurveyKey}`]) {
+          actualSurveyKey = `library::${reqSurveyKey}`;
+        } else if (versions.active.surveys[reqSurveyKey]) {
+          actualSurveyKey = reqSurveyKey;
+        } else {
+          return undefined;
+        }
+
+        // If we've defined the survey in the study config as a string
+        // it means we just want to take all defaults.
+        if (typeof survey === "string") {
+          return {
+            key: actualSurveyKey,
+            ...dftSurveyCfg[actualSurveyKey],
+          };
+        }
+        // Otherwise, we'll override the default with our custom configs
         return {
-          key: survey,
-          ...dftSurveyCfg[survey],
+          ...dftSurveyCfg[actualSurveyKey],
+          ...survey,
+          key: actualSurveyKey,
         };
-      }
-      // Otherwise, we'll override the default with our custom configs
-      return {
-        ...dftSurveyCfg[survey.key],
-        ...survey,
-      };
-    });
+      })
+      .filter((o) => o !== undefined);
 
     log.info(`[${study}] Adding to study index.`);
     index.push({
       key: data.key,
+      version: version,
       name: data.name,
       description: data.description,
       consentId: data.consentId,

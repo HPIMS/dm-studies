@@ -202,7 +202,11 @@ async function processStudies() {
 
     // warn if requested survey is not available
     data.surveys.forEach((s) => {
-      if (!surveyLibrary.has(s) && !surveyLibrary.has(`${name}::${s}`)) {
+      if (
+        !surveyLibrary.has(`${name}::${s}`) &&
+        !surveyLibrary.has(`library::${s}`) &&
+        !surveyLibrary.has(s)
+      ) {
         log.warning(
           `[${name}] Includes Survey "${s}" which does not exist in the survey library.`
         );

@@ -1,59 +1,59 @@
 active:
   studies:
-    ms-resilience:
-      - 4495d366021f8542242ed33ae15be1c3
-      - 4
     baseline:
       - 09a5a2da84e7aa72b83a7088b783aa58
       - 12
+    ms-resilience:
+      - 4495d366021f8542242ed33ae15be1c3
+      - 4
     pss:
       - 4c72cc408ed08d8ebb2cb4a6f05abbca
       - 11
     warrior-shield:
-      - 75fbbd61df532fbbf5b7db5dccc90867
-      - 3
+      - dfc4cfa52ac34fdf1d9192c51026971a
+      - 4
   surveys:
+    warrior-shield::test:
+      - c29cd8f1afab36aa285c5b0b48915387
+      - 1
+    baseline_demographics:
+      - cfa38afbab3962a0a770b14b979e18df
+      - 12
     baseline_cd_risc_survey:
       - 3eb310b9cef6c849e18a7f86bcdd4800
       - 7
     health_care:
       - e82d98ecf30e1a7e15e80199fbe69424
       - 7
-    baseline_demographics:
-      - cfa38afbab3962a0a770b14b979e18df
-      - 12
+    mood_survey:
+      - 04cb35fcf4a59c2fc4e89f33ac07de3a
+      - 6
     baseline_medical_history:
       - 7aa3e4b8990aa15a1e99d6a852344497
       - 10
     pss4:
       - 34b245a3afc19f4b19399d60e9b4156f
       - 8
-    mood_survey:
-      - 04cb35fcf4a59c2fc4e89f33ac07de3a
-      - 6
+    pain:
+      - 3f47c0047c2f9195bf0941a27ba9ffbc
+      - 8
+    qol_survey:
+      - 0877560281a3e602012d7c77256e98f7
+      - 7
     satisfaction_survey_final:
       - 74d5528b1dc3e65de7eac47632c3cf53
       - 8
     satisfaction_survey_monthly:
       - 0982a9e0d5ac85a8db10140f4537fa26
       - 10
-    sleep:
-      - ce2969075385f118be8a3b21a490bd13
-      - 8
     sleep_stress_pain:
       - 79e38ae27eb5be846cbb0ff218c35585
       - 7
-    qol_survey:
-      - 0877560281a3e602012d7c77256e98f7
-      - 7
-    pain:
-      - 3f47c0047c2f9195bf0941a27ba9ffbc
+    sleep:
+      - ce2969075385f118be8a3b21a490bd13
       - 8
-    warrior-shield::test:
-      - c29cd8f1afab36aa285c5b0b48915387
-      - 1
-    library::phq-4:
-      - f91e5649cf4ff730154dc00156248ab6
+    library::cd-risc-10:
+      - 000a83eb3855a4ed43e5b73e177cca49
       - 1
     library::cd-risc-2:
       - 1122144eff21c672a8db51acc260bf7c
@@ -61,8 +61,14 @@ active:
     library::phq-8:
       - 5aa71d22bd2adb73909ca696ebd575b3
       - 1
+    library::phq-4:
+      - f91e5649cf4ff730154dc00156248ab6
+      - 1
     library::poqa-r4:
       - 28e3d8d4f9bd2b8a64e209eb2a3282bf
+      - 1
+    library::promis-pain-interference-6b-v1.0:
+      - eac3cfdeed033f874dd259dd3d8fedac
       - 1
     library::promis-qol:
       - 88bac848f77e044ea71dc7ab472acd9a
@@ -70,20 +76,14 @@ active:
     library::promis-sleep-disturbance-8a-v1.0:
       - 15a62d94b54c29793896567ae49ae1da
       - 1
-    library::promis-pain-interference-6b-v1.0:
-      - eac3cfdeed033f874dd259dd3d8fedac
-      - 1
     library::pss-10:
       - 76456064e49849440b37057899a65bd5
       - 1
-    library::cd-risc-10:
-      - 000a83eb3855a4ed43e5b73e177cca49
+    library::pss-4:
+      - 0ec4ed00fa21fc9d90bfd6f9d9c347c5
       - 1
     library::promis-social-support:
       - 384e4d60fa9a0671c0af3299a72840f6
-      - 1
-    library::pss-4:
-      - 0ec4ed00fa21fc9d90bfd6f9d9c347c5
       - 1
 inactive:
   studies:
