@@ -1,0 +1,57 @@
+key: report-new-information
+active: true
+
+period: ALWAYS
+
+timeEstimate: 1
+name: Report New Information
+short: ""
+
+intro:
+  title: ""
+  description: ""
+outro:
+  title: ""
+  description: ""
+
+sections:
+  - key: "covid_test"
+    title: ""
+    description: ""
+    questions:
+      - key: nasal_swab
+        question: "Report a new COVID-19 nasal swab test: What was the date of your recent COVID-19 test?"
+        type: DATE
+      - key: nasal_swab_results
+        question: What was the result of the nasal swab test?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: covid_test
+                question: nasal_swab
+                operator: IS_SET
+        options:
+          - value: positive
+            text: Positive
+          - value: negative
+            text: Negative
+      - key: antibody
+        question: "Report a new COVID-19 blood antibody test: What was the date of your recent blood antibody test?"
+        type: DATE
+      - key: antibody_results
+        question: What was the result of the antibody test?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: covid_test
+                question: antibody
+                operator: IS_SET
+        options:
+          - value: positive
+            text: Positive
+          - value: negative
+            text: Negative

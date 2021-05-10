@@ -1,0 +1,42 @@
+key: start-intervention
+active: true
+
+period: ALWAYS
+condition: ['start-intervention', '!=', 2] 
+
+timeEstimate: 1
+name: Start Intervention
+short: ""
+
+intro:
+  title: ""
+  description: ""
+outro:
+  title: ""
+  description: ""
+
+sections:
+  - key: "0"
+    title: Start Intervention
+    description: "Answer these questions to begin the intervention."
+    questions:
+      - key: devices
+        question: Do you have both the Apple Watch and the HeartMath App/ear sensor?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: devices
+        question: Have you worn the Apple Watch for 7 days?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0

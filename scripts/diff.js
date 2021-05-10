@@ -4,6 +4,9 @@ const path = require("path");
 const YAML = require("yaml");
 const chalk = require("chalk");
 
+// TODO: Use lowercase, dash no underscore
+// TODO: Only allow override of library surveys
+
 const log = {
   error: (t) => console.log(chalk.red(t)),
   warning: (t) => console.log(chalk.yellow(t)),
@@ -37,7 +40,7 @@ diffs.set("surveys", new Set());
 async function getFile(path) {
   const data = await fs.promises.readFile(path, { encoding: "utf-8" });
   return {
-    data: YAML.parse(data),
+    data: YAML.parse(data) || {},
     hash: crypto.createHash("md5").update(data).digest("hex"),
   };
 }
