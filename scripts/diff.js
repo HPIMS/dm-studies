@@ -196,7 +196,7 @@ async function processStudies() {
     const schemaErrors = validateSchema("study", data);
     if (schemaErrors.length) {
       log.error(`[${name}] Schema errors.`);
-      log.error(schemaErrors);
+      log.error(JSON.stringify(schemaErrors));
       return;
     }
 
