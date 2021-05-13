@@ -62,16 +62,10 @@ async function processSurveys() {
 
     const version = versions.active.surveys[surveyKey][1];
 
-    const {
-      period,
-      name,
-      short,
-      repeat,
-      timeEstimate,
-      intro,
-      outro,
-      ...data
-    } = YAML.parse(cfg);
+    log.info(`[${surveyKey}] Processing`);
+
+    const { period, name, short, repeat, timeEstimate, intro, outro, ...data } =
+      YAML.parse(cfg);
 
     // Remove configs we don't need
     delete data.active;
@@ -85,8 +79,13 @@ async function processSurveys() {
       repeat,
     };
     dftSurveyCfg[surveyKey] = surveyCfg;
+
+    log.info(`[${surveyKey}] Adding to survey index.`);
     index.push({ key: surveyKey, version, name, description: short });
 
+    log.important(
+      `[${surveyKey}] Finished processing. Writing ${surveyKey}.json`
+    );
     await fs.promises.writeFile(
       `${distDir}/surveys/${surveyKey}.json`,
       // restructure for backwards compatibility
