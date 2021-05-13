@@ -155,7 +155,7 @@ sections:
         type: YESNO_CHOICE
       - key: full_name
         question: What is your full name?
-        type: TEXTFIELD
+        type: TEXT
       - key: email
         question: What is your email?
         type: EMAIL
