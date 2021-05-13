@@ -7,12 +7,8 @@ description: The main goal of the Warrior Shield study is to understand
   This study is collecting data from your iphone and Apple Watch to look at
   the impact this intervention has on stress, mental health and your physical well being. 
 consentId: ehive-warrior-shield
-baseline:
-  - baseline_demographics
-  - baseline_cd_risc_survey
-  - baseline_medical_history
-surveys:
-  - pss-10
+baseline: []
+surveys: []
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier
