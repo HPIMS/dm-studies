@@ -2,7 +2,7 @@ key: start-intervention
 active: true
 
 period: ALWAYS
-condition: ['start-intervention', '!=', 2] 
+startCondition: ['start-intervention', '!=', 2] 
 
 timeEstimate: 1
 name: Start Intervention

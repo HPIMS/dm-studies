@@ -1,20 +1,16 @@
 key: pss-4
 active: true
-
 metadata: 
   author: ""
-  instrument: ""
+  instrument: "PSS-4"
   version: ""
   references: []
-
-
 period: MONTHLY
-repeat: 3
 timeEstimate: 2
-name: Stress Survey
+name: Stress
 short: Share information about your stress
 intro:
-  title: Stress Survey
+  title: Stress
   description: The questions in this scale ask you about your feelings and
     thoughts during the last month.
     
@@ -25,15 +21,11 @@ outro:
   description: You are a valued member of our study!
 sections:
   - key: stress_survey
-    title: Stress Survey
-    description: The questions in this scale ask you about your feelings and
-      thoughts during the last month.
-      
-      In each case, please select your response by choosing the answer that
-      represents how often you felt or thought a certain way.
+    title: ""
+    description: "In the last month:"
     questions:
       - key: control
-        question: In the last month, how often have you felt that you were unable to
+        question: How often have you felt that you were unable to
           control the important things in your life?
         type: SINGLE_CHOICE
         options:
@@ -53,7 +45,7 @@ sections:
             text: Very Often
             score: 4
       - key: confident
-        question: In the last month, how often have you felt confident about your
+        question: How often have you felt confident about your
           ability to handle your personal problems?
         type: SINGLE_CHOICE
         options:
@@ -73,7 +65,7 @@ sections:
             text: Very Often
             score: 0
       - key: your_way
-        question: In the last month, how often have you felt that things were going your
+        question: How often have you felt that things were going your
           way?
         type: SINGLE_CHOICE
         options:
@@ -93,7 +85,7 @@ sections:
             text: Very Often
             score: 0
       - key: piling
-        question: In the last month, how often have you felt difficulties were piling up
+        question: How often have you felt difficulties were piling up
           so high that you could not overcome them?
         type: SINGLE_CHOICE
         options:

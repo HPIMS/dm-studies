@@ -1,20 +1,16 @@
-key: promis-qol
+key: promis-gh-qol-2-item
 active: true
-
 metadata: 
   author: ""
   instrument: ""
   version: ""
   references: []
-
-  
 period: MONTHLY
-repeat: 3
 timeEstimate: 1
-name: General Health and Quality of Life Survey
+name: General Health and Quality of Life
 short: Your opinion on your life
 intro:
-  title: General Health and Quality of Life Survey
+  title: General Health and Quality of Life
   description: We want to understand more about your quality of life. Please fill
     out this survey and let us know. You may skip any questions that you are not
     comfortable answering.
@@ -27,7 +23,7 @@ outro:
   description: We appreciate your participation.
 sections:
   - key: "0"
-    title: General Health and Quality of Life Survey
+    title: ""
     description: ""
     questions:
       - key: health

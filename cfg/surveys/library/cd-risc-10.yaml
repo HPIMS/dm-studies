@@ -1,31 +1,25 @@
 key: cd-risc-10
 active: true
-
 metadata: 
   author: ""
-  instrument: ""
+  instrument: "CD-RISC10"
   version: ""
   references: []
-
-
 period: ONCE
-repeat: 1
 timeEstimate: 1
-name: Resilience & Coping Survey
+name: Resilience & Coping
 short: How you cope
-
 intro:
-  title: Resilience & Coping Survey
+  title: Resilience & Coping
   description: We want to learn about how you cope. Please fill out this survey
     and let us know. You may skip any questions that you are not comfortable
     answering.
 outro:
   title: Thank you!
   description: We appreciate your participation.
-
 sections:
   - key: "0"
-    title: Resilience & Coping Survey
+    title: ""
     description: ""
     questions:
       - key: adaptation
@@ -47,7 +41,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: myway
         question: I can deal with whatever comes my way.
         type: SINGLE_CHOICE
         options:
@@ -66,7 +60,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: humor
         question: I try to see the humorous side of things when faced with problems.
         type: SINGLE_CHOICE
         options:
@@ -85,7 +79,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: cope
         question: Having to cope with stress can make me stronger.
         type: SINGLE_CHOICE
         options:
@@ -104,7 +98,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: bounce
         question: I tend to bounce back after illness, injury, or other hardships.
         type: SINGLE_CHOICE
         options:
@@ -123,7 +117,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: achieve
         question: I believe I can achieve my goals, even if there are obstacles.
         type: SINGLE_CHOICE
         options:
@@ -142,7 +136,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: focus
         question: Under pressure, I stay focused and think clearly.
         type: SINGLE_CHOICE
         options:
@@ -161,7 +155,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: failure
         question: I am not easily discouraged by failure.
         type: SINGLE_CHOICE
         options:
@@ -180,7 +174,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
+      - key: strong
         question: I think of myself as a strong person when dealing with life’s challenges and difficulties.
         type: SINGLE_CHOICE
         options:
@@ -199,26 +193,7 @@ sections:
           - value: true_nearly_all_the_time
             text: True nearly all the time
             score: 4
-      - key: "????"
-        question: I think of myself as a strong person when dealing with life’s challenges and difficulties.
-        type: SINGLE_CHOICE
-        options:
-          - value: not_at_all
-            text: Not at all true
-            score: 0
-          - value: rarely_true
-            text: Rarely true
-            score: 1
-          - value: sometimes_true
-            text: Sometimes true
-            score: 2
-          - value: often_true
-            text: Often true
-            score: 3
-          - value: true_nearly_all_the_time
-            text: True nearly all the time
-            score: 4
-      - key: "????"
+      - key: unpleasant
         question: I am able to handle unpleasant or painful feelings like sadness, fear, and anger.
         type: SINGLE_CHOICE
         options:
