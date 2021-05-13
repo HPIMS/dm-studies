@@ -33,15 +33,19 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "minItems": 1
+      }
     },
     "surveys": {
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "minItems": 1
+      }
+    },
+    "multimedia": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "requiredHealthRecords": {
       "type": "object",

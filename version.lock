@@ -10,23 +10,23 @@ active:
       - 4c72cc408ed08d8ebb2cb4a6f05abbca
       - 11
     warrior-shield:
-      - 8574637a566d4578e722055f09e81c0a
-      - 1
+      - 9c84c7013f44d071b3871f4a04c138bd
+      - 4
   surveys:
     warrior-shield::daily-check-in:
       - 1f2523fbe20289397c0e8905b11e5c16
       - 6
+    warrior-shield::demographics:
+      - e09894e283222f45466ad6988df67cf6
+      - 4
+    warrior-shield::devices:
+      - a90a7a4b80c116a458355de33ef509ad
+      - 2
     warrior-shield::heartmath-satisfaction:
       - c59acbfece49356c375bf2c69a5a9c16
       - 3
-    warrior-shield::demographics:
-      - e136548480bbc2ce179719c9870fb387
-      - 3
     warrior-shield::report-new-information:
       - 38042e5b2095ca943fda40b40644bbf3
-      - 2
-    warrior-shield::devices:
-      - a90a7a4b80c116a458355de33ef509ad
       - 2
     warrior-shield::start-intervention:
       - 6b067b8e9bfc26903c0b9417a4c020ad
@@ -46,64 +46,69 @@ active:
     library::phq-8:
       - 521cb4a8bcadb949cae2c1315a647415
       - 2
+    library::promis-gh-qol-2-item:
+      - 65c669df4f1bbeb187a88bf85ac63899
+      - 1
+    library::promis-pain-interference-6b-v1.0:
+      - 043ec39497eb5b57cd9383839ebe8da6
+      - 2
     library::promis-sleep-disturbance-8a-v1.0:
       - ef43a1b26071318b3bf98611d096178a
+      - 2
+    library::pss-10:
+      - 754af524d4f55664652611a6ab6ce417
       - 2
     library::pss-4:
       - b886844cab6bfdf4264252dc71af5208
       - 2
-    library::promis-pain-interference-6b-v1.0:
-      - 043ec39497eb5b57cd9383839ebe8da6
-      - 2
     library::promis-social-support-2-item:
       - 5aa475a1b335bb4f1a02a8c52e05f3c6
       - 1
-    library::promis-gh-qol-2-item:
-      - 65c669df4f1bbeb187a88bf85ac63899
-      - 1
-    library::pss-10:
-      - 754af524d4f55664652611a6ab6ce417
-      - 2
+    baseline_medical_history:
+      - 7aa3e4b8990aa15a1e99d6a852344497
+      - 10
     baseline_cd_risc_survey:
       - 3eb310b9cef6c849e18a7f86bcdd4800
       - 7
     baseline_demographics:
       - cfa38afbab3962a0a770b14b979e18df
       - 12
-    health_care:
-      - e82d98ecf30e1a7e15e80199fbe69424
-      - 7
-    baseline_medical_history:
-      - 7aa3e4b8990aa15a1e99d6a852344497
-      - 10
     mood_survey:
       - 04cb35fcf4a59c2fc4e89f33ac07de3a
       - 6
-    pss4:
-      - 34b245a3afc19f4b19399d60e9b4156f
-      - 8
-    satisfaction_survey_final:
-      - 74d5528b1dc3e65de7eac47632c3cf53
-      - 8
-    pain:
-      - 3f47c0047c2f9195bf0941a27ba9ffbc
-      - 8
+    health_care:
+      - e82d98ecf30e1a7e15e80199fbe69424
+      - 7
     qol_survey:
       - 0877560281a3e602012d7c77256e98f7
       - 7
-    satisfaction_survey_monthly:
-      - 0982a9e0d5ac85a8db10140f4537fa26
-      - 10
+    satisfaction_survey_final:
+      - 74d5528b1dc3e65de7eac47632c3cf53
+      - 8
     sleep:
       - ce2969075385f118be8a3b21a490bd13
       - 8
+    pss4:
+      - 34b245a3afc19f4b19399d60e9b4156f
+      - 8
+    satisfaction_survey_monthly:
+      - 0982a9e0d5ac85a8db10140f4537fa26
+      - 10
     sleep_stress_pain:
       - 79e38ae27eb5be846cbb0ff218c35585
       - 7
+    pain:
+      - 3f47c0047c2f9195bf0941a27ba9ffbc
+      - 8
+  multimedia:
+    warrior-shield::test-video:
+      - ce74f14511d62c0b1dad21c568a7b7b7
+      - 1
 inactive:
   studies:
     kyle:
       - d83cc1be731d71177f503fbc326a213f
       - 3
   surveys: {}
+  multimedia: {}
 

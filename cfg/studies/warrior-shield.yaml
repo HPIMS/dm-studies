@@ -8,7 +8,10 @@ description: The main goal of the Warrior Shield study is to understand
   the impact this intervention has on stress, mental health and your physical well being. 
 consentId: ehive-warrior-shield
 baseline: []
-surveys: []
+surveys: 
+  - pss-10
+multimedia: 
+  - test-video
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier
