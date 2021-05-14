@@ -11,7 +11,7 @@ async function calculateScore(event, context) {
       statusCode: 405,
       body: JSON.stringify({
         type: "body",
-        value: event.body,
+        value: event,
       }),
     };
   }
