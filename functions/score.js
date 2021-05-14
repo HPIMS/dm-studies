@@ -2,18 +2,8 @@ const fetch = require("node-fetch");
 
 async function calculateScore(event, context) {
   // Only allow POST
-  //if (event.httpMethod !== "POST") {
-  //  return { statusCode: 405, body: "Method Not Allowed" };
-  // }
-
   if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({
-        type: "body",
-        value: event,
-      }),
-    };
+    return { statusCode: 405, body: "Method Not Allowed" };
   }
 
   let fhirData;
