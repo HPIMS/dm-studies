@@ -6,6 +6,14 @@ exports.handler = async function (event, context) {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
+
+  const fhirData = querystring.parse(event.body);
+  const { questionnaire, item } = fhirData;
+
+  if (!questionnaire) {
+    return { statusCode: 400, body: "Missing Questionnaire" };
+  }
+
   return {
     statusCode: 200,
     body: JSON.stringify({ message: "Hello World" }),
