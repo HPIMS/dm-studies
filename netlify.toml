@@ -6,10 +6,5 @@ publish = "dist/"
 directory = "functions"
 
 [[redirects]]
-from = "/api/v1/score"
-status = 302
-to = "/.netlify/functions/score"
-
-[[redirects]]
 from = "/index.json"
 to = "/studies/index.json"
