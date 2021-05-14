@@ -12,6 +12,10 @@ async function calculateScore(event, context) {
   }
 
   const fhirData = querystring.parse(event.body);
+  // TODO: debugging
+  if (fhirData) {
+    return { statusCode: 200, body: event.body };
+  }
   const { questionnaire, item } = fhirData;
 
   if (!questionnaire) {
