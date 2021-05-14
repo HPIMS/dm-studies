@@ -7,15 +7,13 @@ exports.handler = async function (event, context) {
   //  return { statusCode: 405, body: "Method Not Allowed" };
   // }
 
-  return event.body;
-  //const fhirData = querystring.parse(event.body);
-  /*
+  // return event.body;
+  const fhirData = querystring.parse(event.body);
   const { questionnaire, item } = fhirData;
 
   if (!questionnaire) {
     return { statusCode: 400, body: "Missing Questionnaire" };
   }
-  */
   /*
  AWS_LAMBDA_JS_RUNTIME
  */
