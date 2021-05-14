@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 // https://dev.to/dgavey/zip-your-own-netlify-functions-for-better-dependency-control-24bn
 //
 //
-exports.handler = async function calculateScore(event, context) {
+async function calculateScore(event, context) {
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -72,20 +72,15 @@ exports.handler = async function calculateScore(event, context) {
 
   // Extract the fhir data and map as { [section]: { [question]: answer } }
   const surveyData = fromFHIRQuestionnaire(fhirData, surveySpec);
-  // Assume that all scorable surveys are composed of n sections with m SINGLE_CHOICE questions
   const optionScoreMap = mapOptionToScore(surveySpec);
+
   // calculate the score
   const score = scoringFn(surveyData, optionScoreMap);
-
-  // TODO: error for bad score?!
-  //
-  //const blah = optionScoreMap?.[section]?.[question]?.[option];
-
   return {
     statusCode: 200,
     body: { score },
   };
-};
+}
 
 const scoringFns = {
   pss4: sumScore,
@@ -101,10 +96,12 @@ function sumScore(surveyData, optionScoreMap) {
       score +
       questions.reduce((sectionScore, question) => {
         const option = sectionData[question];
-        return (
-          // TODO: REMOVE OPTIONAL CHAINING
-          sectionScore + (optionScoreMap[section]?.[question]?.[option] || 0)
-        );
+        const questionScore =
+          (optionScoreMap[section] &&
+            optionScoreMap[section][question] &&
+            optionScoreMap[section][question][option]) ||
+          0;
+        return sectionScore + questionScore;
       }, 0)
     );
   }, 0);
@@ -113,6 +110,7 @@ function sumScore(surveyData, optionScoreMap) {
 /**
  * Builds map in the form { [section]: { [question]: { [option]: score } } }
  * to allow us to efficiently calculate the score of a survey from its data
+ * Assumes all scorable surveys are composed of n sections with m SINGLE_CHOICE questions
  * @param surveySpec - The survey spec json document from the studies service.
  * @returns The option map ({ [section]: { [question]: { [option]: score } } }).
  */
@@ -236,7 +234,8 @@ function processAnswer(answer) {
   return ret;
 }
 
-/*
+exports.handler = calculateScore;
+
 const test = async () => {
   console.log(
     await calculateScore({
@@ -270,4 +269,3 @@ const test = async () => {
   );
 };
 test();
-*/
