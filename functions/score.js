@@ -76,7 +76,7 @@ async function calculateScore(event, context) {
   const score = scoringFn(surveyData, optionScoreMap);
   return {
     statusCode: 200,
-    body: { score },
+    body: JSON.stringify({ score }),
   };
 }
 
