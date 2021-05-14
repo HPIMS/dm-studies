@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 
 async function calculateScore(event, context) {
+  const start = Date.now();
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -78,7 +79,7 @@ async function calculateScore(event, context) {
   const score = scoringFn(surveyData, optionScoreMap);
   return {
     statusCode: 200,
-    body: JSON.stringify({ score }),
+    body: JSON.stringify({ score, time: Date.now() - start }),
   };
 }
 
