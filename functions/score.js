@@ -2,8 +2,18 @@ const fetch = require("node-fetch");
 
 async function calculateScore(event, context) {
   // Only allow POST
+  //if (event.httpMethod !== "POST") {
+  //  return { statusCode: 405, body: "Method Not Allowed" };
+  // }
+
   if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
+    return {
+      statusCode: 405,
+      body: JSON.stringify({
+        type: "body",
+        value: event.body,
+      }),
+    };
   }
 
   let fhirData;
@@ -12,7 +22,11 @@ async function calculateScore(event, context) {
   } catch (err) {
     return { statusCode: 400, body: "Invalid request body format" };
   }
-  const { questionnaire, item } = fhirData;
+  const { resourceType, questionnaire, item } = fhirData;
+
+  if (!resourceType || resourceType !== "QuestionnaireResponse") {
+    return { statusCode: 400, body: "Invalid FHIR resource type" };
+  }
 
   if (!questionnaire) {
     return { statusCode: 400, body: "Missing Questionnaire" };
@@ -24,8 +38,6 @@ async function calculateScore(event, context) {
 
   // Get the survey spec from the studies service
   let surveySpec;
-
-  console.log("URL", questionnaire.replace(/\|\d*/, ""));
   try {
     const response = await fetch(questionnaire.replace(/\|\d*/, ""), {
       headers: { Accept: "application/json" },
@@ -147,15 +159,19 @@ function mapOptionToScore(surveySpec) {
   );
 }
 
-// TODO: RENAME THESE FUNCTIONS
-
+/**
+ * Converts the FHIR data into a usable format
+ * @param fhirData - A FHIR QuestionnaireResponse object
+ * @param surveySpec - The survey spec json document from the studies service.
+ * @returns The survey data in  { [section]: { [question]: answer } }
+ */
 function fromFHIRQuestionnaire(fhirData, surveySpec) {
   const { item: sections = [] } = fhirData;
 
   return sections.reduce((surveyData, section) => {
     const { linkId, item: items = [] } = section;
     const sectionSpec = surveySpec.sections.find((s) => s.key === linkId);
-    const sectionData = sectionSpec && processSection(items, sectionSpec);
+    const sectionData = sectionSpec && processFHIRSection(items, sectionSpec);
     if (sectionData) {
       return {
         ...surveyData,
@@ -166,7 +182,7 @@ function fromFHIRQuestionnaire(fhirData, surveySpec) {
   }, {});
 }
 
-function processSection(sectionData, sectionSpec) {
+function processFHIRSection(sectionData, sectionSpec) {
   return sectionData.reduce((surveySectionData, question) => {
     const { linkId, answer: answers = [] } = question;
     let questionSpec = sectionSpec.questions.find((q) => q.key === linkId);
@@ -193,7 +209,8 @@ function processSection(sectionData, sectionSpec) {
         }
       });
     }
-    const questionData = questionSpec && processQuestion(answers, questionSpec);
+    const questionData =
+      questionSpec && processFHIRQuestion(answers, questionSpec);
     if (questionData) {
       return {
         ...surveySectionData,
@@ -204,21 +221,23 @@ function processSection(sectionData, sectionSpec) {
   }, {});
 }
 
-function processQuestion(answers, questionSpec) {
+function processFHIRQuestion(answers, questionSpec) {
   const { type: questionType } = questionSpec;
   let ret;
   // If we're dealing with a multiple choice question, we leave the answers in an array.
   if (questionType === "MULTIPLE_CHOICE") {
-    ret = answers.map((a) => processAnswer(a)).filter((o) => o !== undefined);
+    ret = answers
+      .map((a) => processFHIRAnswer(a))
+      .filter((o) => o !== undefined);
   } else {
     const [answer] = answers;
     // otherwise we just need the first value
-    ret = answer && processAnswer(answer);
+    ret = answer && processFHIRAnswer(answer);
   }
   return ret;
 }
 
-function processAnswer(answer) {
+function processFHIRAnswer(answer) {
   let ret;
   if ("valueString" in answer) {
     ret = answer.valueString;
