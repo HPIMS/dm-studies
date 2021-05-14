@@ -83,38 +83,38 @@ sections:
         options:
           - value: never
             text: Never
-            score: 0
+            score: 4
           - value: almost_never
             text: Almost never
-            score: 1
+            score: 3
           - value: sometimes
             text: Sometimes
             score: 2
           - value: fairly_often
             text: Fairly Often
-            score: 3
+            score: 1
           - value: very_often
             text: Very Often
-            score: 4
+            score: 0
       - key: positive
         question: How often have you felt that things were going your way? 
         type: SINGLE_CHOICE
         options:
           - value: never
             text: Never
-            score: 0
+            score: 4
           - value: almost_never
             text: Almost never
-            score: 1
+            score: 3
           - value: sometimes
             text: Sometimes
             score: 2
           - value: fairly_often
             text: Fairly Often
-            score: 3
+            score: 1
           - value: very_often
             text: Very Often
-            score: 4
+            score: 0
       - key: cope
         question: How often have you found that you could not cope with all the things that you had to do? 
         type: SINGLE_CHOICE
@@ -140,38 +140,38 @@ sections:
         options:
           - value: never
             text: Never
-            score: 0
+            score: 4
           - value: almost_never
             text: Almost never
-            score: 1
+            score: 3
           - value: sometimes
             text: Sometimes
             score: 2
           - value: fairly_often
             text: Fairly Often
-            score: 3
+            score: 1
           - value: very_often
             text: Very Often
-            score: 4
+            score: 0
       - key: ontop
         question: How often have you felt that you were on top of things
         type: SINGLE_CHOICE
         options:
           - value: never
             text: Never
-            score: 0
+            score: 4
           - value: almost_never
             text: Almost never
-            score: 1
+            score: 3
           - value: sometimes
             text: Sometimes
             score: 2
           - value: fairly_often
             text: Fairly Often
-            score: 3
+            score: 1
           - value: very_often
             text: Very Often
-            score: 4
+            score: 0
       - key: anger
         question: How often have you been angered because of things that were outside of your control?
         type: SINGLE_CHOICE

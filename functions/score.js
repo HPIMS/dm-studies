@@ -1,5 +1,39 @@
 const fetch = require("node-fetch");
 
+const scoringFns = {
+  "library::cd-risc-2": sumScore,
+  "library::cd-risc-10": sumScore,
+  "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": () => 0,
+  "library::phq-4": sumScore, // TODO: DO WE NEED BREAKDOWN BY first 2, and second 2
+  "library::phq-8": sumScore,
+  "library::promis-pain-interference-6b-v1.0": () => 0,
+  "library::promis-sleep-disturbance-8a-v1.0": () => 0,
+  "library::promis-gh-qol-2-item": () => 0,
+  "library::promis-social-support-2-item": () => 0,
+  "library::pss-4": sumScore,
+  "library::pss-10": sumScore,
+};
+
+function sumScore(surveyData, optionScoreMap) {
+  const sections = Object.keys(surveyData);
+  return sections.reduce((score, section) => {
+    const sectionData = surveyData[section];
+    const questions = Object.keys(surveyData[section]);
+    return (
+      score +
+      questions.reduce((sectionScore, question) => {
+        const option = sectionData[question];
+        const questionScore =
+          (optionScoreMap[section] &&
+            optionScoreMap[section][question] &&
+            optionScoreMap[section][question][option]) ||
+          0;
+        return sectionScore + questionScore;
+      }, 0)
+    );
+  }, 0);
+}
+
 async function calculateScore(event, context) {
   // Only allow POST
   if (event.httpMethod !== "POST") {
@@ -80,31 +114,6 @@ async function calculateScore(event, context) {
     statusCode: 200,
     body: JSON.stringify({ score }),
   };
-}
-
-const scoringFns = {
-  pss4: sumScore,
-  sleep: sumScore,
-};
-
-function sumScore(surveyData, optionScoreMap) {
-  const sections = Object.keys(surveyData);
-  return sections.reduce((score, section) => {
-    const sectionData = surveyData[section];
-    const questions = Object.keys(surveyData[section]);
-    return (
-      score +
-      questions.reduce((sectionScore, question) => {
-        const option = sectionData[question];
-        const questionScore =
-          (optionScoreMap[section] &&
-            optionScoreMap[section][question] &&
-            optionScoreMap[section][question][option]) ||
-          0;
-        return sectionScore + questionScore;
-      }, 0)
-    );
-  }, 0);
 }
 
 /**
