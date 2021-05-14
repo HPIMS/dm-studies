@@ -41,7 +41,14 @@ async function calculateScore(event, context) {
           body: "Invalid Questionnaire",
         };
       }
-      throw new Error("Error fetching survey spec");
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          msg: "HERE An error occurred fetching the survey spec",
+          err: JSON.stringify(response),
+        }),
+      };
+      // throw new Error("Error fetching survey spec");
     }
   } catch (err) {
     return {
