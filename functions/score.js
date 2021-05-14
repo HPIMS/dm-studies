@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 // https://dev.to/dgavey/zip-your-own-netlify-functions-for-better-dependency-control-24bn
 //
 //
-async function calculateScore(event, context) {
+exports.handler = async function calculateScore(event, context) {
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -85,7 +85,7 @@ async function calculateScore(event, context) {
     statusCode: 200,
     body: { score },
   };
-}
+};
 
 const scoringFns = {
   pss4: sumScore,
@@ -234,8 +234,6 @@ function processAnswer(answer) {
   }
   return ret;
 }
-
-exports.handler = calculateScore;
 
 /*
 const test = async () => {
