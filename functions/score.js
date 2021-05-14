@@ -102,6 +102,7 @@ function sumScore(surveyData, optionScoreMap) {
       questions.reduce((sectionScore, question) => {
         const option = sectionData[question];
         return (
+          // TODO: REMOVE OPTIONAL CHAINING
           sectionScore + (optionScoreMap[section]?.[question]?.[option] || 0)
         );
       }, 0)

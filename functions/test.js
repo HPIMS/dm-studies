@@ -3,11 +3,12 @@ const fetch = require("node-fetch");
 
 exports.handler = async function (event, context) {
   // Only allow POST
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
-  }
+  //if (event.httpMethod !== "POST") {
+  //  return { statusCode: 405, body: "Method Not Allowed" };
+  // }
 
-  const fhirData = querystring.parse(event.body);
+  return event.body;
+  //const fhirData = querystring.parse(event.body);
   /*
   const { questionnaire, item } = fhirData;
 
@@ -15,6 +16,9 @@ exports.handler = async function (event, context) {
     return { statusCode: 400, body: "Missing Questionnaire" };
   }
   */
+  /*
+ AWS_LAMBDA_JS_RUNTIME
+ */
 
   return {
     statusCode: 200,
