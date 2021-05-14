@@ -235,6 +235,9 @@ function processAnswer(answer) {
   return ret;
 }
 
+exports.handler = calculateScore;
+
+/*
 const test = async () => {
   console.log(
     await calculateScore({
@@ -268,3 +271,4 @@ const test = async () => {
   );
 };
 test();
+*/
