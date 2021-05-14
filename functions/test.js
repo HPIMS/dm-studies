@@ -8,11 +8,13 @@ exports.handler = async function (event, context) {
   }
 
   const fhirData = querystring.parse(event.body);
+  /*
   const { questionnaire, item } = fhirData;
 
   if (!questionnaire) {
     return { statusCode: 400, body: "Missing Questionnaire" };
   }
+  */
 
   return {
     statusCode: 200,
