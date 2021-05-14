@@ -1,20 +1,16 @@
-const querystring = require("querystring");
 const fetch = require("node-fetch");
-//
-// https://www.netlify.com/blog/2018/09/14/forms-and-functions/
-// https://dev.to/dgavey/zip-your-own-netlify-functions-for-better-dependency-control-24bn
-//
-//
+
 async function calculateScore(event, context) {
   // Only allow POST
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  const fhirData = querystring.parse(event.body);
-  // TODO: debugging
-  if (fhirData) {
-    return { statusCode: 200, body: event.body };
+  let fhirData;
+  try {
+    fhirData = JSON.parse(event.body);
+  } catch (err) {
+    return { statusCode: 400, body: "Invalid request body format" };
   }
   const { questionnaire, item } = fhirData;
 
@@ -23,9 +19,7 @@ async function calculateScore(event, context) {
   }
 
   if (!item || !Array.isArray(item)) {
-    //
-    // TODO: 400 error
-    //
+    return { statusCode: 400, body: "Missing Item array" };
   }
 
   // Get the survey spec from the studies service
@@ -239,39 +233,3 @@ function processAnswer(answer) {
 }
 
 exports.handler = calculateScore;
-
-/*
-const test = async () => {
-  console.log(
-    await calculateScore({
-      resourceType: "QuestionnaireResponse",
-      questionnaire:
-        "https://studies.ehive-services-sandbox.mssm.edu/surveys/sleep.json|6",
-      status: "completed",
-      source: { reference: "Patient/d32ce03a-dceb-410c-916f-4116e1c63d7a" },
-      subject: { reference: "Patient/d32ce03a-dceb-410c-916f-4116e1c63d7a" },
-      authored: "2021-05-14T17:23:52.286Z",
-      item: [
-        {
-          linkId: "sleep",
-          text: "sleep",
-          item: [
-            { linkId: "sleep_restless", answer: [{ valueString: "little" }] },
-            {
-              linkId: "sleep_satisfied",
-              answer: [{ valueString: "somewhat" }],
-            },
-            { linkId: "sleep_refreshing", answer: [{ valueString: "quite" }] },
-            { linkId: "falling_asleep", answer: [{ valueString: "somewhat" }] },
-            { linkId: "staying_asleep", answer: [{ valueString: "rarely" }] },
-            { linkId: "trouble_sleeping", answer: [{ valueString: "rarely" }] },
-            { linkId: "enough_sleep", answer: [{ valueString: "sometimes" }] },
-            { linkId: "sleep_quality", answer: [{ valueString: "good" }] },
-          ],
-        },
-      ],
-    })
-  );
-};
-test();
-*/
