@@ -46,6 +46,7 @@ async function calculateScore(event, context) {
         body: JSON.stringify({
           msg: "HERE An error occurred fetching the survey spec",
           err: JSON.stringify(response),
+          code: response.statusCode,
         }),
       };
       // throw new Error("Error fetching survey spec");
