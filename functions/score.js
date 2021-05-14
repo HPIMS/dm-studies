@@ -46,7 +46,10 @@ async function calculateScore(event, context) {
   } catch (err) {
     return {
       statusCode: 500,
-      body: "An error occurred fetching the survey spec",
+      body: JSON.stringify({
+        msg: "An error occurred fetching the survey spec",
+        err: err,
+      }),
     };
   }
 
