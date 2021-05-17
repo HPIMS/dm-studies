@@ -1,0 +1,62 @@
+key: promis-social-support-2-item
+active: true
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: MONTHLY
+timeEstimate: 1
+name: Social Support
+short: ""
+intro:
+  title: ""
+  description: ""
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: listen
+        question: I have someone who will listen to me when I need to talk.
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 5
+          - value: rarely
+            text: Rarely
+            score: 4
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 2
+          - value: always
+            text: Always
+            score: 1
+      - key: feelings
+        question: I have someone I trust to talk with about my feelings.
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 5
+          - value: rarely
+            text: Rarely
+            score: 4
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 2
+          - value: always
+            text: Always
+            score: 1

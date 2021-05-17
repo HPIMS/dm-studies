@@ -1,0 +1,41 @@
+key: ms-resilience
+active: true
+name: "Mount Sinai Resilience Study"
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Maecenas eros enim, malesuada sit amet ex vitae, blandit vestibulum ipsum.
+  Integer finibus a leo id hendrerit. Vestibulum mollis ligula eget odio dignissim maximus.
+  Cras sapien felis, mollis eget accumsan in, pretium ut mauris. Vivamus id lorem pretium,
+  egestas risus sed, vestibulum lacus. Curabitur eget enim eget purus pretium varius.
+consentId: ehive-ms-resilience
+baseline:
+  - baseline_demographics
+  - baseline_cd_risc_survey
+surveys:
+  - mood_survey
+  - qol_survey
+  - pss4
+  - sleep
+requiredHealthRecords:
+  AllergyRecord: HKClinicalTypeIdentifier
+  ConditionRecord: HKClinicalTypeIdentifier
+  ImmunizationRecord: HKClinicalTypeIdentifier
+  LabResultRecord: HKClinicalTypeIdentifier
+  MedicationRecord: HKClinicalTypeIdentifier
+  ProcedureRecord: HKClinicalTypeIdentifier
+  VitalSignRecord: HKClinicalTypeIdentifier
+requiredData:
+  ActiveEnergyBurned: HKQuantityTypeIdentifier
+  AppleExerciseTime: HKQuantityTypeIdentifier
+  HeartRate: HKQuantityTypeIdentifier
+  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
+  RestingHeartRate: HKQuantityTypeIdentifier
+  WalkingHeartRateAverage: HKQuantityTypeIdentifier
+  OxygenSaturation: HKQuantityTypeIdentifier
+  StepCount: HKQuantityTypeIdentifier
+  AppleStandTime: HKQuantityTypeIdentifier
+  EnvironmentalAudioExposure: HKQuantityTypeIdentifier
+  SleepAnalysis: HKQuantityTypeIdentifier
+  DietaryEnergyConsumed: HKQuantityTypeIdentifier
+  BloodPressureDiastolic: HKQuantityTypeIdentifier
+  BloodPressureSystolic: HKQuantityTypeIdentifier
+  BloodGlucose: HKQuantityTypeIdentifier

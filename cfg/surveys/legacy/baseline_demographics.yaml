@@ -1,0 +1,360 @@
+key: baseline_demographics
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+editable: true
+repeat: 1
+timeEstimate: 5
+name: About You Questionnaire
+short: Information about you
+intro:
+  title: About you Questionnaire
+  description: This data about you will only be viewed by the study team once you
+    consent to a research study. This is helpful to gather now, in order to send
+    you the studies that you are eligible for through this platform. You can take
+    this survey now or save it for later.
+outro:
+  title: About You
+  description: Congratulations! You completed the survey.
+sections:
+  - key: about_you
+    title: About You
+    description: ""
+    questions:
+      - key: biological_sex
+        question: Biological sex
+        type: SINGLE_CHOICE
+        options:
+          - value: female
+            text: Female
+          - value: male
+            text: Male
+      - key: weight_in_pounds
+        question: Weight in pounds
+        type: WEIGHT
+      - key: height_in_inch
+        question: Height in inches
+        type: HEIGHT
+      - key: age
+        question: Year of birth
+        type: BIRTH_YEAR
+        placeHolder: Year of Birth
+      - key: ethnicity
+        question: Ethnicity
+        type: SINGLE_CHOICE
+        options:
+          - value: hispanic_or_latino
+            text: Hispanic or Latino
+          - value: not_hispanic_or_latino
+            text: Not Hispanic or Latino
+          - value: unknown
+            text: Unknown
+      - key: race
+        question: Race
+        type: MULTIPLE_CHOICE
+        options:
+          - value: american
+            text: American Indian or Alaska Native
+          - value: asian
+            text: Asian
+          - value: black
+            text: Black or African-American
+          - value: hawaiian
+            text: Native Hawaiian or Other Pacific Islander
+          - value: white
+            text: White
+          - value: unknown
+            text: Unknown
+      - key: income
+        question: Which of the following best describes the total annual income of all
+          members of your household?
+        type: SINGLE_CHOICE
+        followUpQuestion:
+          - number_of_people
+        options:
+          - value: under_15000
+            text: Under $15,000
+          - value: 15000_24000
+            text: $15,000 to $24,999
+          - value: 25000_34999
+            text: $25,000 to $34,999
+          - value: 35000_49999
+            text: $35,000 to $49,999
+          - value: 50000_74999
+            text: $50,000 to $74,999
+          - value: 750000_999999
+            text: $75,000 to $99,999
+          - value: 100000_over
+            text: $100,000 and over
+          - value: unknown
+            text: Unknown
+          - value: not_answer
+            text: I choose not to answer this question
+      - key: number_of_people
+        question: "Number of people supported by this income, including you:"
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: about_you
+                question: income
+                operator: IS_SET
+      - key: language
+        question: What languages do you speak?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: eng
+            text: English (eng)
+          - value: spa
+            text: Spanish (spa)
+          - value: sgn
+            text: American Sign Language (sgn)
+          - value: chinese
+            text: Chinese languages (Chi)
+          - value: cpf
+            text: French/Creole (cpf)
+          - value: ger
+            text: German (ger)
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: language_other_language
+              question: "Please specify:"
+              type: TEXTAREA
+      - key: education
+        question: What is the highest level of education you have completed?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never attended/Kindergarten only
+          - value: no_diploma
+            text: No high school diploma
+            followUpQuestion:
+              - last_grade
+          - value: high_school
+            text: High school graduate
+          - value: ged
+            text: GED or equivalent
+          - value: some_college
+            text: Some college/No degree
+          - value: associate_degree
+            text: Associate degree
+          - value: occupational
+            text: Occupational, technical, or vocational program
+          - value: academic_program
+            text: "Associate degree: academic program"
+          - value: bachelor
+            text: Bachelor's degree (e.g., BA, AB, BS, BBA)
+          - value: master
+            text: Master's degree (e.g., MA, MS, MEng, MEd, MBA)
+          - value: professional_school
+            text: Professional school degree (e.g., MD, DDS, DVM, JD)
+          - value: doctoral
+            text: Doctoral degree (e.g., PhD, EdD)
+          - value: unknown
+            text: Unknown
+      - key: last_grade
+        question: What was the last grade you completed?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: about_you
+                question: education
+                operator: =
+                value: no_diploma
+        options:
+          - value: first_grade
+            text: 1st Grade
+          - value: second_grade
+            text: 2nd Grade
+          - value: third_grade
+            text: " 3rd Grade"
+          - value: forth_grade
+            text: 4th Grade
+          - value: fifth_grade
+            text: 5th Grade
+          - value: sixth_grade
+            text: 6th Grade
+          - value: seven_grade
+            text: 7th Grade
+          - value: eight_grade
+            text: 8th Grade
+          - value: ninth_grade
+            text: 9th Grade
+          - value: tenth_grade
+            text: 10th Grade
+          - value: eleventh_grade
+            text: 11th Grade
+          - value: tweleveth_grade
+            text: 12th Grade
+      - key: health_insurance
+        question: Do you have health insurance?
+        type: SINGLE_CHOICE
+        options:
+          - value: uninsured
+            text: None/uninsured
+          - value: chip
+            text: CHIP
+          - value: other_public
+            text: Other public insurance (not CHIP)
+          - value: private
+            text: Private Insurance (bought by you or your employer)
+          - value: public
+            text: Medicaid
+          - value: medicare
+            text: Medicare
+          - value: no_answer
+            text: Prefer not to answer
+  - key: sdh_family_home
+    title: ""
+    description: ""
+    questions:
+      - key: household
+        question: How many family members, including yourself, do you currently live
+          with?
+        type: NUMERIC
+        minValue: 1
+        maxValue: 20
+        followUpQuestionWithCondition:
+          expression: household >= 2
+          questions:
+            - household_members
+      - key: household_members
+        question: If one or more people, describe the individual(s) with whom you live
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: sdh_family_home
+                question: household
+                operator: ">="
+                value: 2
+        options:
+          - value: husbane_wife
+            text: Husband or wife
+          - value: biological_son_daughter
+            text: Biological son or daughter
+          - value: adopted_son_daughter
+            text: Adopted son or daughter
+          - value: stepson_stepdaughter
+            text: Stepson or stepdaughter
+          - value: brother_sister
+            text: Brother or sister
+          - value: father_mother
+            text: Father or mother
+          - value: step_father_stepmother
+            text: Stepfather or stepmother
+          - value: grandchild
+            text: Grandchild
+          - value: grandparent
+            text: Grandparent
+          - value: parent_in_law
+            text: Parent-in-law
+          - value: son_daughter_in_law
+            text: Son-in-law or daughter-in-law
+          - value: other_relative
+            text: Other relative
+          - value: roomer_broader
+            text: Roomer or boarder
+          - value: houasemate_roomate
+            text: Housemate or roommate
+          - value: unmarried_partner
+            text: Unmarried partner
+          - value: foster_child
+            text: Foster child
+          - value: patient_care_facility
+            text: Other patient/resident in care facility
+          - value: person_care_attendant
+            text: Personal care attendant
+          - value: other_non_relative
+            text: Other non-relative
+          - value: homeless
+            text: N/A – Homeless
+          - value: alone
+            text: N/A – Alone
+      - key: housing
+        question: What is your housing situation today?
+        type: SINGLE_CHOICE
+        options:
+          - value: have_housing
+            text: I have housing
+          - value: no_housing
+            text: I do not have housing (staying with others, in a hotel, in a shelter,
+              living outside on the street, on a beach, in a car, or in a park)
+          - value: no_answer
+            text: I choose not to answer this question.
+      - key: housing_insecurity
+        question: Are you worried about losing your housing?
+        type: YESNO_CHOICE
+  - key: sdh_money_resources
+    title: ""
+    description: ""
+    questions:
+      - key: work_covid
+        question: Has your work status changed due to covid-19?
+        type: YESNO_CHOICE
+      - key: employment
+        question: What is your current work situation?
+        type: SINGLE_CHOICE
+        options:
+          - value: full_time
+            text: Full-time (35 hours or more per week)
+          - value: part_time
+            text: Part-time or Full-time temporary work (part time = less than 35 hours per
+              week)
+          - value: unemployed
+            text: Unemployed
+          - value: unemployed_passive
+            text: "Unemployed but not seeking work (ex: student, retired, disabled, unpaid
+              primary caregiver)"
+          - value: partially_unemployed
+            text: "Partially unemployed (ex: furloughed)"
+          - value: specify
+            text: "Other (please specify): "
+            inlineQuestion:
+              key: employment_specify_description
+              question: "specify:"
+              type: TEXTAREA
+          - value: unknown
+            text: Unknown
+          - value: not_answer
+            text: Prefer not to answer
+      - key: wfh
+        question: Does your current/former job allow you to work from home?
+        type: YESNO_CHOICE
+      - key: transportation
+        question: Has lack of transportation kept you from medical appointments,
+          meetings, work, or from getting things needed for daily living?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes_medical_appointments
+            text: Yes, it has kept me from medical appointments or from getting my
+              medications
+          - value: yes_non_medical_appointments
+            text: Yes, it has kept me from non-medical meetings, appointments, work, or from
+              getting things that I need
+          - value: no
+            text: No
+  - key: sdh_social_emotional_health
+    title: ""
+    description: ""
+    questions:
+      - key: social_support
+        question: "How often do you see or talk to people who you care about and feel
+          close to? (For example: talking to friends on the phone, visiting
+          friends or family, going to church or club meetings)"
+        type: SINGLE_CHOICE
+        options:
+          - value: week_less
+            text: Less than once a week
+          - value: one_two_week
+            text: 1 or 2 times a week
+          - value: three_five_week
+            text: 3 to 5 times a week
+          - value: more_five_week
+            text: More than 5 times a week

@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "build": "node build",
-    "sync": "node sync"
+    "build": "node scripts/build && node scripts/build_v2",
+    "diff": "node scripts/diff"
   },
   "devDependencies": {
     "ajv": "^7.0.3",
+    "chalk": "^4.1.1",
     "yaml": "^1.10.0"
   },
   "dependencies": {

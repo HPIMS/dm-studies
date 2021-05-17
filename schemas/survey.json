@@ -7,9 +7,41 @@
     "key": {
       "type": "string"
     },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "instrument": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "standardized": {
+          "type": "boolean"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "period": {
       "type": "string",
-      "enum": ["ONCE", "DAILY", "WEEKLY", "BI_WEEKLY", "MONTHLY", "FINAL"]
+      "enum": [
+        "ALWAYS",
+        "ONCE",
+        "DAILY",
+        "WEEKLY",
+        "BI_WEEKLY",
+        "MONTHLY",
+        "FINAL"
+      ]
     },
     "editable": {
       "type": "boolean"
@@ -26,13 +58,20 @@
     "short": {
       "type": "string"
     },
-    "title": {
-      "type": "string"
+    "intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": ["title", "description"]
     },
-    "description": {
-      "type": "string"
-    },
-    "completed": {
+    "outro": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -53,14 +92,5 @@
       "minItems": 1
     }
   },
-  "required": [
-    "key",
-    "period",
-    "repeat",
-    "name",
-    "short",
-    "title",
-    "description",
-    "sections"
-  ]
+  "required": ["key", "period", "repeat", "name", "short", "intro", "sections"]
 }
