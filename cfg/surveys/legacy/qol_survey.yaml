@@ -1,6 +1,8 @@
 key: qol_survey
 active: true
-period: MONTHLY
+schedule:
+  type: PERIOD
+  period: MONTHLY
 repeat: 3
 timeEstimate: 1
 name: General Health and Quality of Life Survey

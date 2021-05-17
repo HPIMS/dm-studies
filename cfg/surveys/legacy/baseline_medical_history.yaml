@@ -1,6 +1,8 @@
 key: baseline_medical_history
 active: true
-period: ONCE
+schedule:
+  type: PERIOD
+  period: ONCE
 editable: true
 repeat: 1
 timeEstimate: 5

@@ -5,7 +5,9 @@ metadata:
   instrument: ""
   version: ""
   references: []
-period: MONTHLY
+schedule:
+  type: PERIOD
+  period: MONTHLY
 timeEstimate: 1
 name: Social Support
 short: ""

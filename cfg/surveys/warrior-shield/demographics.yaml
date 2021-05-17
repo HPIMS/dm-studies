@@ -1,6 +1,8 @@
 key: demographics
 active: true
-period: ONCE
+schedule:
+  type: PERIOD
+  period: ONCE
 timeEstimate: 5
 name: Demographics
 short: ""

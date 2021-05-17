@@ -9,9 +9,49 @@ description: The main goal of the Warrior Shield study is to understand
 consentId: ehive-warrior-shield
 baseline: []
 surveys: 
-  - pss-10
-multimedia: 
-  - test-video
+  - daily-check-in
+  - demographics
+  - devices
+  - heartmath-satisfaction
+  - report-new-information
+  - start-intervention
+  - key: pss-10
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 5, 7, 17]
+      timetableUnits: WEEKS
+      graceDays: 7
+  - key: promis-gh-qol-2-item
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 5, 7, 17]
+      timetableUnits: WEEKS
+      graceDays: 7
+  - key: promis-social-support-2-item
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 5, 7, 17]
+      timetableUnits: WEEKS
+      graceDays: 7
+  - key: cd-risc-10
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 5, 7, 17]
+      timetableUnits: WEEKS
+      graceDays: 7
+  - key: phq-4
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 5, 7, 17]
+      timetableUnits: WEEKS
+      graceDays: 7
+  - key: neuro-qol-positive-affect-and-well-being-item-bank-v1.0
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 5, 7, 17]
+      timetableUnits: WEEKS
+      graceDays: 7
+multimedia: []
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier

@@ -64,8 +64,16 @@ async function processSurveys() {
 
     log.info(`[${surveyKey}] Processing`);
 
-    const { period, name, short, repeat, timeEstimate, intro, outro, ...data } =
-      YAML.parse(cfg);
+    const {
+      name,
+      short,
+      schedule,
+      repeat,
+      timeEstimate,
+      intro,
+      outro,
+      ...data
+    } = YAML.parse(cfg);
 
     // Remove configs we don't need
     delete data.active;
@@ -75,7 +83,7 @@ async function processSurveys() {
 
     const surveyCfg = {
       version,
-      period,
+      period: schedule.period || "ALWAYS", // always is really the only sensible fallback
       timeEstimate,
       name,
       short,

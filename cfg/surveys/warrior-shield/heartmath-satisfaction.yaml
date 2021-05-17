@@ -1,6 +1,10 @@
 key: heartmath-satisfaction
 active: true
-# TODO: SCHEDULE!
+schedule:
+  type: PERIOD
+  period: ONCE
+  delay: 5
+  delayUnits: WEEKS
 timeEstimate: 1
 name: Start Intervention
 short: ""

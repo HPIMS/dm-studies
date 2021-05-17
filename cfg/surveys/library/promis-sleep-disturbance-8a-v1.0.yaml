@@ -6,7 +6,9 @@ metadata:
   version: "1.0"
   references: 
     - Yu L, Buysse DJ, Germain A, et al. Development of short forms from the PROMIS™ sleep disturbance and Sleep-Related Impairment item banks. Behav Sleep Med. 2011;10(1):6-24. doi:10.1080/15402002.2012.636266
-period: WEEKLY
+schedule:
+  type: PERIOD
+  period: WEEKLY
 timeEstimate: 3
 name: Sleep
 short: Rate your sleep in the last week

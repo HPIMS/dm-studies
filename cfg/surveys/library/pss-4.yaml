@@ -5,7 +5,9 @@ metadata:
   instrument: "PSS-4"
   version: ""
   references: []
-period: MONTHLY
+schedule:
+  type: PERIOD
+  period: MONTHLY
 timeEstimate: 2
 name: Stress
 short: Share information about your stress

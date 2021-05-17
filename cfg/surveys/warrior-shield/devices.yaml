@@ -1,6 +1,8 @@
 key: devices
 active: true
-period: ONCE
+schedule:
+  type: PERIOD
+  period: ONCE
 timeEstimate: 5
 name: Devices
 short: ""

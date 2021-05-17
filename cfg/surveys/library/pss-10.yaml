@@ -5,7 +5,9 @@ metadata:
   instrument: "PSS-10"
   version: ""
   references: []
-period: "MONTHLY"
+schedule:
+  type: PERIOD
+  period: MONTHLY
 timeEstimate: 2
 name: "Stress"
 short: ""

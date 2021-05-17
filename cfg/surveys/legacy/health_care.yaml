@@ -1,6 +1,8 @@
 key: health_care
 active: true
-period: BI_WEEKLY
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
 repeat: 3
 timeEstimate: 1
 name: Healthcare Survey

@@ -6,7 +6,9 @@ metadata:
   version: ""
   references: 
     - "Vaishnavi, S., Connor, K., & Davidson, J. R. (2007). An abbreviated version of the Connor-Davidson Resilience Scale (CD-RISC), the CD-RISC2: Psychometric properties and applications in psychopharmacological trials. Psychiatry research, 152(2-3), 293-297."
-period: ONCE
+schedule:
+  type: PERIOD
+  period: ONCE
 timeEstimate: 1
 name: Resilience & Coping
 short: How you cope

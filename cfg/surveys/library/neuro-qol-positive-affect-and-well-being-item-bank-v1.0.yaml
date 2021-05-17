@@ -5,7 +5,9 @@ metadata:
   instrument: "Positive Affect and Well-Being - Item Bank"
   version: "1.0"
   references: []
-period: MONTHLY
+schedule:
+  type: PERIOD
+  period: MONTHLY
 timeEstimate: 2
 name: "Positive Affect & Well-being"
 short: ""

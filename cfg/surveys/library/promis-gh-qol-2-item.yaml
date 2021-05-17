@@ -5,7 +5,9 @@ metadata:
   instrument: ""
   version: ""
   references: []
-period: MONTHLY
+schedule:
+  type: PERIOD
+  period: MONTHLY
 timeEstimate: 1
 name: General Health and Quality of Life
 short: Your opinion on your life

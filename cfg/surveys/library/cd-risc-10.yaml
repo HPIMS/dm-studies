@@ -5,7 +5,9 @@ metadata:
   instrument: "CD-RISC10"
   version: ""
   references: []
-period: ONCE
+schedule:
+  type: PERIOD
+  period: ONCE
 timeEstimate: 1
 name: Resilience & Coping
 short: How you cope

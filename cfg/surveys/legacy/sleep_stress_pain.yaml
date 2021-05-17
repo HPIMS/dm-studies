@@ -1,6 +1,8 @@
 key: sleep_stress_pain
 active: true
-period: DAILY
+schedule:
+  type: PERIOD
+  period: DAILY
 repeat: 0
 timeEstimate: 1
 name: Sleep, Stress, and Pain Survey

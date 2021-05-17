@@ -1,6 +1,8 @@
 key: mood_survey
 active: true
-period: BI_WEEKLY
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
 repeat: 3
 timeEstimate: 3
 name: Mood Survey

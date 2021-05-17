@@ -5,7 +5,9 @@ metadata:
   instrument: "PHQ-4"
   version: ""
   references: []
-period: BI_WEEKLY
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
 timeEstimate: 2
 name: Mood
 short: About your mood

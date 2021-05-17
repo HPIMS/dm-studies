@@ -1,6 +1,8 @@
 key: report-new-information
 active: true
-period: ALWAYS
+schedule:
+  type: PERIOD
+  period: ALWAYS
 timeEstimate: 1
 name: Report New Information
 short: ""

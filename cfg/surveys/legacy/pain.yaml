@@ -1,6 +1,8 @@
 key: pain
 active: true
-period: WEEKLY
+schedule:
+  type: PERIOD
+  period: WEEKLY
 repeat: 12
 timeEstimate: 3
 name: Pain Survey

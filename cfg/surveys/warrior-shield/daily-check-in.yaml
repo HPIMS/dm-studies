@@ -1,6 +1,8 @@
 key: daily-check-in
 active: true
-period: DAILY
+schedule:
+  type: PERIOD
+  period: DAILY
 timeEstimate: 1
 name: Daily Check-in
 short: ""

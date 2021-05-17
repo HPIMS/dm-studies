@@ -1,6 +1,8 @@
 key: baseline_cd_risc_survey
 active: true
-period: ONCE
+schedule:
+  type: PERIOD
+  period: ONCE
 repeat: 1
 timeEstimate: 1
 name: Resilience & Coping Survey

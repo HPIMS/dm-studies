@@ -1,6 +1,8 @@
 key: sleep
 active: true
-period: WEEKLY
+schedule:
+  type: PERIOD
+  period: WEEKLY
 repeat: 10
 timeEstimate: 3
 name: Sleep Survey

@@ -1,6 +1,8 @@
 key: start-intervention
 active: true
-period: ALWAYS
+schedule:
+  type: PERIOD
+  period: ALWAYS
 # TODO: stopCondition: ['start-intervention', '!=', 2] 
 timeEstimate: 1
 name: Start Intervention

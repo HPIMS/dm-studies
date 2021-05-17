@@ -1,6 +1,8 @@
 key: satisfaction_survey_final
 active: true
-period: FINAL
+schedule:
+  type: PERIOD
+  period: FINAL
 repeat: 1
 timeEstimate: 5
 name: Final Check-in Survey

@@ -65,8 +65,7 @@ async function processSurveys() {
 
     log.info(`[${surveyKey}] Processing`);
 
-    const { period, name, short, repeat, timeEstimate, ...data } =
-      YAML.parse(cfg);
+    const { name, short, schedule, timeEstimate, ...data } = YAML.parse(cfg);
 
     // Remove configs we don't need
     delete data.active;
@@ -76,11 +75,10 @@ async function processSurveys() {
 
     const surveyCfg = {
       version,
-      period,
+      schedule,
       timeEstimate,
       name,
       short,
-      repeat,
     };
     dftSurveyCfg[surveyKey] = surveyCfg;
 
@@ -132,7 +130,7 @@ async function processMultimedia() {
 
     log.info(`[${multimediaKey}] Processing`);
 
-    const { period, name, short, timeEstimate, type, ...data } =
+    const { name, short, schedule, timeEstimate, type, ...data } =
       YAML.parse(cfg);
 
     // Remove configs we don't need
@@ -144,7 +142,7 @@ async function processMultimedia() {
     const multimediaCfg = {
       version,
       type,
-      period,
+      schedule,
       timeEstimate,
       name,
       short,
