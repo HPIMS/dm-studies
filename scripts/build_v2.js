@@ -231,35 +231,34 @@ async function processStudies() {
       }
     );
 
-    const multimediaTasks =
-      data.multimedia?.map((multimedia) => {
-        const reqMultimediaKey =
-          typeof multimedia === "string" ? multimedia : multimedia.key;
+    const multimediaTasks = (data.multimedia || []).map((multimedia) => {
+      const reqMultimediaKey =
+        typeof multimedia === "string" ? multimedia : multimedia.key;
 
-        let actualMultimediaKey;
-        if (versions.active.multimedia[`${study}::${reqMultimediaKey}`]) {
-          actualMultimediaKey = `${study}::${reqMultimediaKey}`;
-        } else if (versions.active.multimedia[`library::${reqMultimediaKey}`]) {
-          actualMultimediaKey = `library::${reqMultimediaKey}`;
-        } else {
-          return undefined;
-        }
+      let actualMultimediaKey;
+      if (versions.active.multimedia[`${study}::${reqMultimediaKey}`]) {
+        actualMultimediaKey = `${study}::${reqMultimediaKey}`;
+      } else if (versions.active.multimedia[`library::${reqMultimediaKey}`]) {
+        actualMultimediaKey = `library::${reqMultimediaKey}`;
+      } else {
+        return undefined;
+      }
 
-        // If we've defined the survey in the study config as a string
-        // it means we just want to take all defaults.
-        if (typeof multimedia === "string") {
-          return {
-            key: actualMultimediaKey,
-            ...dftMultimediaCfg[actualMultimediaKey],
-          };
-        }
-        // Otherwise, we'll override the default with our custom configs
+      // If we've defined the survey in the study config as a string
+      // it means we just want to take all defaults.
+      if (typeof multimedia === "string") {
         return {
-          ...dftMultimediaCfg[actualMultimediaKey],
-          ...multimedia,
           key: actualMultimediaKey,
+          ...dftMultimediaCfg[actualMultimediaKey],
         };
-      }) || [];
+      }
+      // Otherwise, we'll override the default with our custom configs
+      return {
+        ...dftMultimediaCfg[actualMultimediaKey],
+        ...multimedia,
+        key: actualMultimediaKey,
+      };
+    });
 
     delete data.baseline;
     delete data.surveys;

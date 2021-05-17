@@ -75,8 +75,8 @@ async function processSurveys() {
       const name = `${surveyPrefix ? `${surveyPrefix}::` : ""}${rootName}`;
 
       const { data, hash: nextHash } = await getFile(`${groupDir}/${file}`);
-      const [lastHash, lastVersion] = versions.active?.surveys[name] ||
-        versions.inactive?.surveys[name] || [null, null];
+      const [lastHash, lastVersion] = versions.active.surveys[name] ||
+        versions.inactive.surveys[name] || [null, null];
       let nextVersion = lastVersion;
 
       log.info(`[${name}] Processing`);
@@ -163,8 +163,8 @@ async function processMultimedia() {
       const name = `${multimediaPrefix}::${rootName}`;
 
       const { data, hash: nextHash } = await getFile(`${groupDir}/${file}`);
-      const [lastHash, lastVersion] = versions.active?.multimedia[name] ||
-        versions.inactive?.multimedia[name] || [null, null];
+      const [lastHash, lastVersion] = versions.active.multimedia[name] ||
+        versions.inactive.multimedia[name] || [null, null];
       let nextVersion = lastVersion;
 
       log.info(`[${name}] Processing`);
@@ -244,8 +244,8 @@ async function processStudies() {
     const name = file.replace(/\.yaml$|\.yml$/, "");
     const extension = file.split(".").pop();
     const { data, hash: nextHash } = await getFile(`${dir}/${file}`);
-    const [lastHash, lastVersion] = versions.active?.studies[name] ||
-      versions.inactive?.studies[name] || [null, null];
+    const [lastHash, lastVersion] = versions.active.studies[name] ||
+      versions.inactive.studies[name] || [null, null];
     let nextVersion = lastVersion;
 
     log.info(`[${name}] Processing`);
@@ -299,7 +299,7 @@ async function processStudies() {
     }
 
     // warn if requested survey is not available
-    data.surveys?.forEach((s) => {
+    (data.surveys || []).forEach((s) => {
       const reqSurveyKey = typeof s === "string" ? s : s.key;
       if (
         !surveyLibrary.has(`${name}::${reqSurveyKey}`) &&
@@ -313,7 +313,7 @@ async function processStudies() {
     });
 
     // warn if requested multimedia is not available
-    data.multimedia?.forEach((m) => {
+    (data.multimedia || []).forEach((m) => {
       const reqMultimediaKey = typeof m === "string" ? m : m.key;
       if (
         !multimediaLibrary.has(`${name}::${reqMultimediaKey}`) &&
@@ -339,7 +339,7 @@ async function processStudies() {
       let surveyModified = false;
       // If it is a study, and we didn't change the file itself,
       // check to see if any of the study's surveys have changed.
-      data.surveys?.forEach((s) => {
+      (data.surveys || []).forEach((s) => {
         if (
           (surveyLibrary.has(`${name}::${s}`) &&
             diffs.get("surveys").has(`${name}::${s}`)) ||
@@ -357,7 +357,7 @@ async function processStudies() {
       let multimediaModified = false;
       // If it is a study, and we didn't change the file itself,
       // check to see if any of the study's multimedia tasks have changed.
-      data.multimedia?.forEach((m) => {
+      (data.multimedia || []).forEach((m) => {
         if (
           (multimediaLibrary.has(`${name}::${m}`) &&
             diffs.get("multimedia").has(`${name}::${m}`)) ||
