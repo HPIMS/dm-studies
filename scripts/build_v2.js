@@ -71,6 +71,9 @@ async function processSurveys() {
     // Remove configs we don't need
     delete data.active;
 
+    // set additional configs
+    data.version = version;
+
     const surveyCfg = {
       version,
       period,
@@ -89,7 +92,7 @@ async function processSurveys() {
     );
     await fs.promises.writeFile(
       `${distDir}/surveys/${surveyKey}.json`,
-      JSON.stringify(data)
+      JSON.stringify({ ...data, key: surveyKey })
     );
   });
 
@@ -135,6 +138,9 @@ async function processMultimedia() {
     // Remove configs we don't need
     delete data.active;
 
+    // set additional configs
+    data.version = version;
+
     const multimediaCfg = {
       version,
       type,
@@ -153,7 +159,7 @@ async function processMultimedia() {
     );
     await fs.promises.writeFile(
       `${distDir}/multimedia/${multimediaKey}.json`,
-      JSON.stringify(data)
+      JSON.stringify({ ...data, key: multimediaKey })
     );
   });
 

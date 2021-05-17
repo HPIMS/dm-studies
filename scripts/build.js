@@ -70,6 +70,9 @@ async function processSurveys() {
     // Remove configs we don't need
     delete data.active;
 
+    // set additional configs
+    data.version = version;
+
     const surveyCfg = {
       version,
       period,
@@ -89,7 +92,7 @@ async function processSurveys() {
     await fs.promises.writeFile(
       `${distDir}/surveys/${surveyKey}.json`,
       // restructure for backwards compatibility
-      JSON.stringify({ ...data, ...intro, completed: outro })
+      JSON.stringify({ ...data, ...intro, completed: outro, key: surveyKey })
     );
   });
 

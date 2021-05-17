@@ -3,11 +3,14 @@ const fetch = require("node-fetch");
 const scoringFns = {
   "library::cd-risc-2": sumScore,
   "library::cd-risc-10": sumScore,
-  "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": () => 0,
+  "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": (
+    surveyData,
+    optionScoreMap
+  ) => prorateSum(surveyData, optionScoreMap, 0.5),
   "library::phq-4": sumScore, // TODO: DO WE NEED BREAKDOWN BY first 2, and second 2
   "library::phq-8": sumScore,
-  "library::promis-pain-interference-6b-v1.0": () => 0,
-  "library::promis-sleep-disturbance-8a-v1.0": () => 0,
+  "library::promis-pain-interference-6b-v1.0": () => null,
+  "library::promis-sleep-disturbance-8a-v1.0": () => null,
   "library::promis-gh-qol-2-item": () => 0,
   "library::promis-social-support-2-item": () => 0,
   "library::pss-4": sumScore,
@@ -32,6 +35,26 @@ function sumScore(surveyData, optionScoreMap) {
       }, 0)
     );
   }, 0);
+}
+
+function prorateSum(surveyData, optionScoreMap, minThreshold = 1) {
+  const totalQuestions = Object.keys(optionScoreMap).reduce(
+    (count, section) => count + Object.keys(optionScoreMap[section]).length,
+    0
+  );
+  const answeredQuestions = Object.keys(surveyData).reduce(
+    (count, section) => count + Object.keys(surveyData[section]).length,
+    0
+  );
+
+  // Only score if enough questions have been answered
+  if (answeredQuestions / totalQuestions < minThreshold) {
+    return null;
+  }
+
+  return (
+    (sumScore(surveyData, optionScoreMap) * totalQuestions) / answeredQuestions
+  );
 }
 
 async function calculateScore(event, context) {
@@ -69,7 +92,7 @@ async function calculateScore(event, context) {
     if (response.ok) {
       surveySpec = await response.json();
     } else {
-      if (response.statusCode === 404) {
+      if (response.status === 404) {
         return {
           statusCode: 400,
           body: "Invalid Questionnaire",
