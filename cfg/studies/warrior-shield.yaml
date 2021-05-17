@@ -14,43 +14,78 @@ surveys:
   - devices
   - heartmath-satisfaction
   - report-new-information
-  - start-intervention
+  - key: start-intervention
+    trigger:
+      - action: HIDE
+        resource: warrior-shield::start-intervention
+        operator: =
+        score: 2
   - key: pss-10
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
+    trigger:
+      - action: SHOW
+        resource: warrior-shield::start-intervention
+        operator: =
+        score: 2
   - key: promis-gh-qol-2-item
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
+    trigger:
+      - action: SHOW
+        resource: warrior-shield::start-intervention
+        operator: =
+        score: 2
   - key: promis-social-support-2-item
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
+    trigger:
+      - action: SHOW
+        resource: warrior-shield::start-intervention
+        operator: =
+        score: 2
   - key: cd-risc-10
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
+    trigger:
+    - action: SHOW
+      resource: warrior-shield::start-intervention
+      operator: =
+      score: 2
   - key: phq-4
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
+    trigger:
+      - action: SHOW
+        resource: warrior-shield::start-intervention
+        operator: =
+        score: 2
   - key: neuro-qol-positive-affect-and-well-being-item-bank-v1.0
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
+    trigger:
+      - action: SHOW
+        resource: warrior-shield::start-intervention
+        operator: =
+        score: 2
 multimedia: []
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
