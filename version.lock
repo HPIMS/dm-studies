@@ -1,18 +1,33 @@
 active:
   studies:
-    baseline:
-      - 09a5a2da84e7aa72b83a7088b783aa58
-      - 13
-    warrior-shield:
-      - ef9e403a07433bfdd9c4f3a839cc6e84
-      - 2
-    ms-resilience:
-      - 4495d366021f8542242ed33ae15be1c3
-      - 5
     pss:
       - 4c72cc408ed08d8ebb2cb4a6f05abbca
       - 12
+    warrior-shield:
+      - 00e1c82d2de22fb3f00baff1aecf8c71
+      - 3
+    baseline:
+      - 09a5a2da84e7aa72b83a7088b783aa58
+      - 13
+    ms-resilience:
+      - 4495d366021f8542242ed33ae15be1c3
+      - 5
   surveys:
+    warrior-shield::heartmath-satisfaction:
+      - c0f9e6e81b7ce38eae803790f444e88f
+      - 4
+    warrior-shield::daily-check-in:
+      - bda1472187d4e1124ff672455cd15920
+      - 7
+    warrior-shield::devices:
+      - f6d62ea726f261d7d43ab702c90248bb
+      - 3
+    warrior-shield::start-intervention:
+      - 01737ae58da11e76b35cf0becb2a518f
+      - 3
+    warrior-shield::report-new-information:
+      - 7527f3721876b2616a8a6465c6b9a30d
+      - 3
     baseline_cd_risc_survey:
       - 3e0ce003ae98fa7d1ee9de77955a8fcf
       - 8
@@ -25,14 +40,17 @@ active:
     health_care:
       - ae6c60af5a84883f244c2681758391ad
       - 8
-    pain:
-      - 3f408f06d636683e99edf88263b6eeac
-      - 9
     mood_survey:
       - d73bb33157a78c3611bd1c6be0268aaf
       - 7
-    pss4:
-      - 500fa7502f9a4e2ed3d912a0fddd6d39
+    warrior-shield::demographics:
+      - 0fab29692e8170f27f6fb5db401261e6
+      - 5
+    pain:
+      - 3f408f06d636683e99edf88263b6eeac
+      - 9
+    satisfaction_survey_final:
+      - d77acc408c8ee3ec11072c4d9c1d9f2e
       - 9
     qol_survey:
       - b971826901b7a505bb19adfa4fe6b92a
@@ -40,33 +58,15 @@ active:
     satisfaction_survey_monthly:
       - c4bc9c2848550c34a9f700986619020a
       - 11
-    satisfaction_survey_final:
-      - d77acc408c8ee3ec11072c4d9c1d9f2e
-      - 9
-    sleep:
-      - 8dd034c69f2aa5a26e604633c81a3df4
+    pss4:
+      - 500fa7502f9a4e2ed3d912a0fddd6d39
       - 9
     sleep_stress_pain:
       - 08bd2781c1180c59c267ac132f3277b1
       - 8
-    warrior-shield::demographics:
-      - 0fab29692e8170f27f6fb5db401261e6
-      - 5
-    warrior-shield::daily-check-in:
-      - bda1472187d4e1124ff672455cd15920
-      - 7
-    warrior-shield::devices:
-      - f6d62ea726f261d7d43ab702c90248bb
-      - 3
-    warrior-shield::report-new-information:
-      - 7527f3721876b2616a8a6465c6b9a30d
-      - 3
-    warrior-shield::start-intervention:
-      - 01737ae58da11e76b35cf0becb2a518f
-      - 3
-    warrior-shield::heartmath-satisfaction:
-      - c0f9e6e81b7ce38eae803790f444e88f
-      - 4
+    sleep:
+      - 8dd034c69f2aa5a26e604633c81a3df4
+      - 9
     library::cd-risc-2:
       - e37e55ca5f9e6d22f75eb8e6489dfa1a
       - 3
@@ -76,14 +76,17 @@ active:
     library::phq-4:
       - bb142eac0885ef320df3ab907a87ce9f
       - 3
-    library::promis-gh-qol-2-item:
-      - 3566f118cfd6267a96e645076d7d64c7
-      - 2
+    library::phq-8:
+      - c2fb29f8a9adffa61d6a85f1125e3b22
+      - 3
     library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
       - 6bec290d612a3e23e6e99f83984441ca
       - 2
-    library::phq-8:
-      - c2fb29f8a9adffa61d6a85f1125e3b22
+    library::promis-gh-qol-2-item:
+      - 3566f118cfd6267a96e645076d7d64c7
+      - 2
+    library::promis-pain-interference-6b-v1.0:
+      - 547d6c5353b76caf53a54d1f7bca303c
       - 3
     library::promis-sleep-disturbance-8a-v1.0:
       - 244fe53060b550c274c473585f25bff1
@@ -91,14 +94,11 @@ active:
     library::promis-social-support-2-item:
       - 2433d86d18226f721e43741bdb98998e
       - 2
-    library::promis-pain-interference-6b-v1.0:
-      - 547d6c5353b76caf53a54d1f7bca303c
+    library::pss-10:
+      - 44dba608021739cabb84ac37a22b1c2c
       - 3
     library::pss-4:
       - 10b93325be78340e01cba3deeed2d945
-      - 3
-    library::pss-10:
-      - 44dba608021739cabb84ac37a22b1c2c
       - 3
   multimedia:
     warrior-shield::test-video:
