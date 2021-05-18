@@ -180,6 +180,9 @@ async function processStudies() {
   const studies = Object.keys(versions.active.studies);
 
   const promises = studies.map(async (study) => {
+    if (study === "baseline") {
+      return;
+    }
     let cfg = await fs.promises.readFile(`${studyDir}/${study}.yaml`, {
       encoding: "utf-8",
     });
