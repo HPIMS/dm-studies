@@ -15,78 +15,99 @@ surveys:
   - heartmath-satisfaction
   - report-new-information
   - key: start-intervention
-    trigger:
+    triggers:
+      - action: SHOW
+        condition:
+          - type: VIDEO
+            resource: warrior-shield::wearable-info
+            operator: =
+            score: 100
       - action: HIDE
-        resource: warrior-shield::start-intervention
-        operator: =
-        score: 2
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - key: pss-10
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
-    trigger:
+    triggers:
       - action: SHOW
-        resource: warrior-shield::start-intervention
-        operator: =
-        score: 2
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - key: promis-gh-qol-2-item
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
-    trigger:
+    triggers:
       - action: SHOW
-        resource: warrior-shield::start-intervention
-        operator: =
-        score: 2
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - key: promis-social-support-2-item
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
-    trigger:
+    triggers:
       - action: SHOW
-        resource: warrior-shield::start-intervention
-        operator: =
-        score: 2
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - key: cd-risc-10
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
-    trigger:
-    - action: SHOW
-      resource: warrior-shield::start-intervention
-      operator: =
-      score: 2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - key: phq-4
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
-    trigger:
+    triggers:
       - action: SHOW
-        resource: warrior-shield::start-intervention
-        operator: =
-        score: 2
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - key: neuro-qol-positive-affect-and-well-being-item-bank-v1.0
     schedule:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
       graceDays: 7
-    trigger:
+    triggers:
       - action: SHOW
-        resource: warrior-shield::start-intervention
-        operator: =
-        score: 2
-multimedia: []
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+multimedia: 
+  - wearable-info
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier

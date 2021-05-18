@@ -1,6 +1,8 @@
-key: test-video
+key: wearable-info
 active: true
-period: ONCE
+schedule:
+  type: "PERIOD"
+  period: "ONCE" 
 type: video
 timeEstimate: 1
 name: Video Name
