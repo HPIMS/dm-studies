@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 
 const scoringFns = {
+  // library surveys
   "library::cd-risc-2": sumScore,
   "library::cd-risc-10": sumScore,
   "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": (
@@ -15,6 +16,10 @@ const scoringFns = {
   "library::promis-social-support-2-item": () => 0,
   "library::pss-4": sumScore,
   "library::pss-10": sumScore,
+  // legacy surveys
+  baseline_cd_risc_survey: sumScore,
+  mood_survey: sumScore,
+  pss4: sumScore,
 };
 
 function sumScore(surveyData, optionScoreMap) {
