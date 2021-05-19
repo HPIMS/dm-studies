@@ -20,8 +20,6 @@ const scoringFns = {
   baseline_cd_risc_survey: sumScore,
   mood_survey: sumScore,
   pss4: sumScore,
-
-  sleep_stress_pain: sumScore,
 };
 
 function sumScore(surveyData, optionScoreMap) {
