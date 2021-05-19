@@ -143,6 +143,9 @@ async function calculateScore(event, context) {
   return {
     statusCode: 200,
     body: JSON.stringify({ score }),
+    headers: {
+      "Content-Type": "application/json",
+    },
   };
 }
 
