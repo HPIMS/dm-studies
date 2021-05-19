@@ -1,5 +1,7 @@
 const fetch = require("node-fetch");
 
+const scoringFns = {};
+
 async function calculateScore(event, context) {
   // Only allow POST
   if (event.httpMethod !== "POST") {
@@ -79,32 +81,10 @@ async function calculateScore(event, context) {
   return {
     statusCode: 200,
     body: JSON.stringify({ score }),
+    headers: {
+      "Content-Type": "application/json",
+    },
   };
-}
-
-const scoringFns = {
-  pss4: sumScore,
-  sleep: sumScore,
-};
-
-function sumScore(surveyData, optionScoreMap) {
-  const sections = Object.keys(surveyData);
-  return sections.reduce((score, section) => {
-    const sectionData = surveyData[section];
-    const questions = Object.keys(surveyData[section]);
-    return (
-      score +
-      questions.reduce((sectionScore, question) => {
-        const option = sectionData[question];
-        const questionScore =
-          (optionScoreMap[section] &&
-            optionScoreMap[section][question] &&
-            optionScoreMap[section][question][option]) ||
-          0;
-        return sectionScore + questionScore;
-      }, 0)
-    );
-  }, 0);
 }
 
 /**
