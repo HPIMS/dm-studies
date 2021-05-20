@@ -86,7 +86,7 @@ sections:
                 value: yes
       - key: reason
         question: Can you briefly explain the reason for your doctor's appointment?
-        type: YESNO_CHOICE
+        type: TEXTAREA
         triggers:
           - action:
               type: SHOW
