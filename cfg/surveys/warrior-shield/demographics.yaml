@@ -180,7 +180,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: 0
+              - section: "0"
                 question: covid19_vaccine
                 operator: =
                 value: yes
@@ -206,7 +206,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: 0
+              - section: "0"
                 question: covid19_vaccine
                 operator: =
                 value: yes
@@ -217,7 +217,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: 0
+              - section: "0"
                 question: covid19_vaccine
                 operator: =
                 value: yes
