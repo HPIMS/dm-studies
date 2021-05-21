@@ -12,14 +12,17 @@ const scoringFns = {
   "library::phq-8": sumScore,
   // "library::promis-pain-interference-6b-v1.0": () => null,
   // "library::promis-sleep-disturbance-8a-v1.0": () => null,
-  "library::promis-gh-qol-2-item": () => 0,
+  "library::promis-gh-qol-2-item": sumScore,
   "library::promis-social-support-2-item": () => 0,
   "library::pss-4": sumScore,
   "library::pss-10": sumScore,
   // legacy surveys
-  baseline_cd_risc_survey: sumScore,
-  mood_survey: sumScore,
-  pss4: sumScore,
+  baseline_cd_risc_survey: sumScore, // library::cd-risc-2
+  mood_survey: sumScore, // library::phq-8
+  pss4: sumScore, // library::pss-4
+  // pain: () => null, // library::promis-pain-interference-6b-v1.0
+  // sleep: () => null, // library::promis-sleep-disturbance-8a-v1.0
+  qol_survey: sumScore, // library::promis-gh-qol-2-item
 };
 
 function sumScore(surveyData, optionScoreMap) {
