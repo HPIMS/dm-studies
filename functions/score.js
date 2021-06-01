@@ -8,12 +8,12 @@ const scoringFns = {
     surveyData,
     optionScoreMap
   ) => prorateSum(surveyData, optionScoreMap, 0.5),
-  "library::phq-4": sumScore, // TODO: DO WE NEED BREAKDOWN BY first 2, and second 2
+  "library::phq-4": sumScore,
   "library::phq-8": sumScore,
   // "library::promis-pain-interference-6b-v1.0": () => null,
   // "library::promis-sleep-disturbance-8a-v1.0": () => null,
   "library::promis-gh-qol-2-item": sumScore,
-  "library::promis-social-support-2-item": () => 0,
+  "library::promis-social-support-2-item": sumScore,
   "library::pss-4": sumScore,
   "library::pss-10": sumScore,
   // legacy surveys
