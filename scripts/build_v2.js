@@ -35,6 +35,15 @@ async function copyDirectory(srcDir, destDir) {
 const dftSurveyCfg = {};
 const dftMultimediaCfg = {};
 
+const defaultGraceDays = {
+  ALWAYS: 0,
+  ONCE: 0,
+  DAILY: 0,
+  WEEKLY: 1,
+  BI_WEEKLY: 2,
+  MONTHLY: 4,
+};
+
 async function processSurveys() {
   log.info("*****************************************");
   log.info("****        Building Surveys         ****");
@@ -73,12 +82,18 @@ async function processSurveys() {
     // set additional configs
     data.version = version;
 
+    // add default grace days to the schedule for "PERIOD" schedules
+    if (schedule.type === "PERIOD" && !schedule.graceDays) {
+      schedule.graceDays = defaultGraceDays[schedule.period];
+    }
+
     const surveyCfg = {
       version,
       schedule,
       timeEstimate,
       name,
       short,
+      editable: data.editable,
     };
     dftSurveyCfg[surveyKey] = surveyCfg;
 
@@ -139,6 +154,11 @@ async function processMultimedia() {
     // set additional configs
     data.version = version;
 
+    // add default grace days to the schedule for "PERIOD" schedules
+    if (schedule.type === "PERIOD" && !schedule.graceDays) {
+      schedule.graceDays = defaultGraceDays[schedule.period];
+    }
+
     const multimediaCfg = {
       version,
       type,
@@ -146,6 +166,7 @@ async function processMultimedia() {
       timeEstimate,
       name,
       short,
+      editable: data.editable,
     };
     dftMultimediaCfg[multimediaKey] = multimediaCfg;
 
