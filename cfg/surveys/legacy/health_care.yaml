@@ -1,12 +1,16 @@
 key: health_care
-period: BI_WEEKLY
+active: true
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
 repeat: 3
 timeEstimate: 1
 name: Healthcare Survey
 short: About your healthcare utilization
-title: Healthcare Survey
-description: We want to know if you've gotten medical care in the last two weeks.
-completed:
+intro:
+  title: Healthcare Survey
+  description: We want to know if you've gotten medical care in the last two weeks.
+outro:
   title: Thank you!
   description: We appreciate your participation.
 sections:
@@ -86,7 +90,7 @@ sections:
                 value: yes
       - key: reason
         question: Can you briefly explain the reason for your doctor's appointment?
-        type: YESNO_CHOICE
+        type: TEXTAREA
         triggers:
           - action:
               type: SHOW

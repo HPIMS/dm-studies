@@ -7,6 +7,9 @@
     "key": {
       "type": "string"
     },
+    "active": {
+      "type": "boolean"
+    },
     "name": {
       "type": "string"
     },
@@ -30,15 +33,19 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "minItems": 1
+      }
     },
     "surveys": {
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "minItems": 1
+      }
+    },
+    "multimedia": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "requiredHealthRecords": {
       "type": "object",
@@ -59,5 +66,5 @@
       }
     }
   },
-  "required": ["key", "name"]
+  "required": ["key", "active", "name"]
 }

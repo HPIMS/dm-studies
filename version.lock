@@ -1,45 +1,84 @@
-studies:
-  baseline:
-    - cd79c138eca2e17a0c846caa47973b46
-    - 9
-  pss:
-    - 4f20cb9827d2f4c996b1aa41c5b7c047
-    - 5
-surveys:
-  baseline_cd_risc_survey:
-    - 261526076f6bf5b835c1ccfc46d938fd
-    - 5
-  pain:
-    - ae1b58db4feff48d32c0b4af158ec6ff
-    - 6
-  pss4:
-    - 224c85cb4233d17482d5f3da8c23bb38
-    - 6
-  health_care:
-    - cddb25dfabde43cc137c2d00dbb02960
-    - 5
-  mood_survey:
-    - 05fcd7ab20d6ef2cf89aacad3afa3099
-    - 4
-  qol_survey:
-    - c38ae4f9ed266d9f5cc059ca56216ca9
-    - 5
-  satisfaction_survey_final:
-    - 0c8401669b4630911fa564707b1d59aa
-    - 6
-  satisfaction_survey_monthly:
-    - 560255b0dfaec3119dfb2ea37ffd9678
-    - 8
-  sleep:
-    - b38c131ca6ec2579d63de220186bfd96
-    - 6
-  baseline_demographics:
-    - 780c15e084a5c1d413f03199fcfbc1e7
-    - 9
-  baseline_medical_history:
-    - a1658aa60376624f2ea17b764f2230f5
-    - 8
-  sleep_stress_pain:
-    - 73ab7d6a09fd88530859c288c811491b
-    - 5
+active:
+  studies:
+    pss:
+      - 4c72cc408ed08d8ebb2cb4a6f05abbca
+      - 18
+    baseline:
+      - 09a5a2da84e7aa72b83a7088b783aa58
+      - 15
+  surveys:
+    baseline_cd_risc_survey:
+      - c7ebe8d919288a6caa8f85b916164245
+      - 9
+    baseline_demographics:
+      - 3da11760b0cd0f3890d8a43d9dae9eeb
+      - 13
+    health_care:
+      - 68e8cbf3405497fe9b40300f29a7fbe2
+      - 9
+    mood_survey:
+      - 5ebf3b1c67af7b731c5a1466136cf2e5
+      - 8
+    baseline_medical_history:
+      - cb22035ca2bbec087f1ead0b2f5cd6cb
+      - 11
+    qol_survey:
+      - 64e65407ed5e8185711dc4ae66973d47
+      - 9
+    pain:
+      - 3f408f06d636683e99edf88263b6eeac
+      - 9
+    pss4:
+      - 0c62b91d0f6773c9773abb0812a23f0e
+      - 10
+    satisfaction_survey_final:
+      - d77acc408c8ee3ec11072c4d9c1d9f2e
+      - 9
+    sleep:
+      - 8dd034c69f2aa5a26e604633c81a3df4
+      - 9
+    satisfaction_survey_monthly:
+      - c4bc9c2848550c34a9f700986619020a
+      - 11
+    library::cd-risc-2:
+      - d89948889bd4ca16edc956c3f3a4cbe6
+      - 1
+    sleep_stress_pain:
+      - 08bd2781c1180c59c267ac132f3277b1
+      - 11
+    library::phq-4:
+      - 55aa5374164d9d656cf7101bfd69703d
+      - 1
+    library::cd-risc-10:
+      - 18f6ba4eca68f78358e7f67e7a8b3290
+      - 1
+    library::phq-8:
+      - 93f2957fca5cfa1a3bb983051d83882d
+      - 1
+    library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
+      - 956e224fd4da3d4c5b08a0040cba643d
+      - 1
+    library::promis-social-support-2-item:
+      - 54feb6f044ba096facb77f2ddae89d6a
+      - 1
+    library::promis-pain-interference-6b-v1.0:
+      - 547d6c5353b76caf53a54d1f7bca303c
+      - 1
+    library::pss-4:
+      - af5d3af60ca5da4ea3af82aa71130d0e
+      - 1
+    library::promis-sleep-disturbance-8a-v1.0:
+      - 244fe53060b550c274c473585f25bff1
+      - 1
+    library::pss-10:
+      - 83a57887918721982751202a0f750121
+      - 1
+    library::promis-gh-qol-2-item:
+      - ca0c06b2308830bfe709406f152dff8f
+      - 1
+  multimedia: {}
+inactive:
+  studies: {}
+  surveys: {}
+  multimedia: {}
 

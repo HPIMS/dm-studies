@@ -204,7 +204,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["TEXTAREA", "YEAR", "BIRTH_YEAR"]
+          "enum": ["TEXT", "TEXTAREA", "EMAIL", "YEAR", "BIRTH_YEAR", "DATE"]
         },
         "placeholder": {
           "type": "string"

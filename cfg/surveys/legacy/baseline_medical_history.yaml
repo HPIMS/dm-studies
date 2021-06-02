@@ -1,15 +1,19 @@
 key: baseline_medical_history
-period: ONCE
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
 editable: true
 repeat: 1
 timeEstimate: 5
 name: Medical History Questionnaire
 short: Your Medical History
-title: Your Medical History Questionnaire
-description: |-
-  Please answer these questions about your medical history.
-  You may always choose to skip any questions that make you feel uncomfortable.
-completed:
+intro:
+  title: Your Medical History Questionnaire
+  description: |-
+    Please answer these questions about your medical history.
+    You may always choose to skip any questions that make you feel uncomfortable.
+outro:
   title: "Thank you for completing your medical history! "
   description: The more we learn about you, the more we can discover.
 sections:

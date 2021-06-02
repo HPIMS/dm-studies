@@ -1,14 +1,19 @@
 key: mood_survey
-period: BI_WEEKLY
+active: true
+scorable: true
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
 repeat: 3
 timeEstimate: 3
 name: Mood Survey
 short: About your mood
-title: Mood Survey
-description: We want to know how you have been feeling the past two weeks.
-  Please fill out this survey and let us know. You may skip any questions that
-  you are not comfortable answering.
-completed:
+intro:
+  title: Mood Survey
+  description: We want to know how you have been feeling the past two weeks.
+    Please fill out this survey and let us know. You may skip any questions that
+    you are not comfortable answering.
+outro:
   title: Thank you!
   description: We appreciate your participation.
 sections:
