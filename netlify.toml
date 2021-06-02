@@ -2,62 +2,9 @@
 command = "npm run-script build"
 publish = "dist/"
 
+[functions]
+directory = "functions"
+
 [[redirects]]
 from = "/index.json"
 to = "/studies/index.json"
-
-[[redirects]]
-from = "/baseline.json"
-to = "/studies/baseline.json"
-
-[[redirects]]
-from = "/pss.json"
-to = "/studies/pss.json"
-
-[[redirects]]
-from = "/baseline_cd_risc_survey.json"
-to = "/surveys/baseline_cd_risc_survey.json"
-
-[[redirects]]
-from = "/baseline_demographics.json"
-to = "/surveys/baseline_demographics.json"
-
-[[redirects]]
-from = "/baseline_medical_history.json"
-to = "/surveys/baseline_medical_history.json"
-
-[[redirects]]
-from = "/health_care.json"
-to = "/surveys/health_care.json"
-
-[[redirects]]
-from = "/mood_survey.json"
-to = "/surveys/mood_survey.json"
-
-[[redirects]]
-from = "/pain.json"
-to = "/surveys/pain.json"
-
-[[redirects]]
-from = "/pss4.json"
-to = "/surveys/pss4.json"
-
-[[redirects]]
-from = "/qol_survey.json"
-to = "/surveys/qol_survey.json"
-
-[[redirects]]
-from = "/satisfaction_survey_final.json"
-to = "/surveys/satisfaction_survey_final.json"
-
-[[redirects]]
-from = "/satisfaction_survey_monthly.json"
-to = "/surveys/satisfaction_survey_monthly.json"
-
-[[redirects]]
-from = "/sleep_stress_pain.json"
-to = "/surveys/sleep_stress_pain.json"
-
-[[redirects]]
-from = "/sleep.json"
-to = "/surveys/sleep.json"

@@ -1,0 +1,109 @@
+key: pss-4
+scorable: true
+active: true
+metadata: 
+  author: ""
+  instrument: "PSS-4"
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: MONTHLY
+timeEstimate: 2
+name: Stress
+short: Share information about your stress
+intro:
+  title: Stress
+  description: The questions in this scale ask you about your feelings and
+    thoughts during the last month.
+    
+    In each case, please select your response by choosing the answer that
+    represents how often you felt or thought a certain way.
+outro:
+  title: Thank you for your continued participation
+  description: You are a valued member of our study!
+sections:
+  - key: stress_survey
+    title: ""
+    description: "In the last month:"
+    questions:
+      - key: control
+        question: How often have you felt that you were unable to
+          control the important things in your life?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: almost_never
+            text: Almost never
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: fairly_often
+            text: Fairly Often
+            score: 3
+          - value: very_often
+            text: Very Often
+            score: 4
+      - key: confident
+        question: How often have you felt confident about your
+          ability to handle your personal problems?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 4
+          - value: almost_never
+            text: Almost never
+            score: 3
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: fairly_often
+            text: Fairly Often
+            score: 1
+          - value: very_often
+            text: Very Often
+            score: 0
+      - key: your_way
+        question: How often have you felt that things were going your
+          way?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 4
+          - value: almost_never
+            text: Almost never
+            score: 3
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: fairly_often
+            text: Fairly Often
+            score: 1
+          - value: very_often
+            text: Very Often
+            score: 0
+      - key: piling
+        question: How often have you felt difficulties were piling up
+          so high that you could not overcome them?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: almost_never
+            text: Almost never
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: fairly_often
+            text: Fairly Often
+            score: 3
+          - value: very_often
+            text: Very Often
+            score: 4

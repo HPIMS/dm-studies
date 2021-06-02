@@ -1,16 +1,20 @@
 key: baseline_demographics
-period: ONCE
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
 editable: true
 repeat: 1
 timeEstimate: 5
 name: About You Questionnaire
 short: Information about you
-title: About you Questionnaire
-description: This data about you will only be viewed by the study team once you
-  consent to a research study. This is helpful to gather now, in order to send
-  you the studies that you are eligible for through this platform. You can take
-  this survey now or save it for later.
-completed:
+intro:
+  title: About you Questionnaire
+  description: This data about you will only be viewed by the study team once you
+    consent to a research study. This is helpful to gather now, in order to send
+    you the studies that you are eligible for through this platform. You can take
+    this survey now or save it for later.
+outro:
   title: About You
   description: Congratulations! You completed the survey.
 sections:

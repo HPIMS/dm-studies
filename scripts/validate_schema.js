@@ -1,9 +1,9 @@
 const Ajv = require("ajv").default;
 
-const StudySchema = require("./schemas/study.json");
-const SurveySchema = require("./schemas/survey.json");
-const SurveySectionSchema = require("./schemas/survey_section.json");
-const SurveyQuestionSchema = require("./schemas/survey_question.json");
+const StudySchema = require("../schemas/study.json");
+const SurveySchema = require("../schemas/survey.json");
+const SurveySectionSchema = require("../schemas/survey_section.json");
+const SurveyQuestionSchema = require("../schemas/survey_question.json");
 
 const ajv = new Ajv();
 ajv.addSchema([

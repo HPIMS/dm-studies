@@ -1,0 +1,329 @@
+key: neuro-qol-positive-affect-and-well-being-item-bank-v1.0
+active: true
+scorable: true
+metadata: 
+  author: "Neuro-QOL"
+  instrument: "Positive Affect and Well-Being - Item Bank"
+  version: "1.0"
+  references: []
+schedule:
+  type: PERIOD
+  period: MONTHLY
+timeEstimate: 2
+name: "Positive Affect & Well-being"
+short: ""
+intro:
+  title: ""
+  description: ""
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: "Please respond to each question or statement by marking one answer per statement."
+    questions:
+      - key: wellbeing
+        question: I had a sense of well-being
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: hopeful
+        question: I felt hopeful
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: satisfying
+        question: My life was satisfying
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: purpose
+        question: My life had purpose 
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: meaning
+        question: My life had meaning
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: cheerful
+        question: I felt cheerful
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: worthwhile
+        question: My life was worth living
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: balance
+        question: I had a sense of balance in my life
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: interest
+        question: Many areas of my life were interesting to me
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: enjoy
+        question: I was able to enjoy life
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: sense
+        question: I felt a sense of purpose in my life
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: laugh
+        question: I could laugh and see the humor in situations
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: relax
+        question: I was able to be at ease and feel relaxed
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: lookforward
+        question: I looked forward with enjoyment to upcoming events
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: stable
+        question: I felt emotionally stable
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: lovable
+        question: I felt lovable
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
