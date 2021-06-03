@@ -16,12 +16,6 @@ surveys:
   - report-new-information
   - key: start-intervention
     triggers:
-      - action: SHOW
-        condition:
-          - type: VIDEO
-            resource: warrior-shield::wearable-info
-            operator: =
-            score: 100
       - action: HIDE
         condition:
           - type: SCORE
@@ -107,7 +101,14 @@ surveys:
             operator: =
             score: 2
 multimedia: 
-  - wearable-info
+  - key: wearable-info
+    triggers:
+      - action: HIDE
+        condition:
+          - type: VIDEO
+            resource: warrior-shield::wearable-info
+            operator: =
+            score: 100
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier

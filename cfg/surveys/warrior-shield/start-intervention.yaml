@@ -3,7 +3,6 @@ active: true
 schedule:
   type: PERIOD
   period: ALWAYS
-# TODO: stopCondition: ['start-intervention', '!=', 2] 
 timeEstimate: 1
 name: Start Intervention
 short: ""

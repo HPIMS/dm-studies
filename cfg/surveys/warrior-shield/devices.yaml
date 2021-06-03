@@ -24,7 +24,7 @@ sections:
         question: Do you have an Apple Watch Series 4, 5, or 6?
         type: YESNO_CHOICE
       - key: apple_watch_pickup
-        question: Would you prefer to pick up your watch in person at the main Mount Sinai Hospital campus, or have it sent to you to the address provided above?
+        question: Would you prefer to pick up your watch in person at the main Mount Sinai Hospital campus, or have it sent to the address provided above?
         description: If you select in person pick up we will reach out to you via email to set up a pick up time.
         type: SINGLE_CHOICE
         triggers:
