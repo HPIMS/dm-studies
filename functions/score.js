@@ -16,6 +16,8 @@ const scoringFns = {
   "library::promis-social-support-2-item": sumScore,
   "library::pss-4": sumScore,
   "library::pss-10": sumScore,
+  // Study Specific Surveys
+  "warrior-shield::start-intervention": sumScore,
   // legacy surveys
   baseline_cd_risc_survey: sumScore, // library::cd-risc-2
   mood_survey: sumScore, // library::phq-8

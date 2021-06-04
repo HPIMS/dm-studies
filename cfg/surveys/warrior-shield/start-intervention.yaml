@@ -27,9 +27,17 @@ sections:
           - value: no
             text: No
             score: 0
-      - key: devices
+      - key: apple_watch
         question: Have you worn the Apple Watch for 7 days?
         type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: devices
+                operator: "="
+                value: yes
         options:
           - value: yes
             text: Yes
