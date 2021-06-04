@@ -22,6 +22,7 @@ surveys:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
+    rank: 0
   - key: pss-10
     schedule:
       type: TIMETABLE
@@ -35,6 +36,7 @@ surveys:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
+    rank: 1
   - key: promis-gh-qol-2-item
     schedule:
       type: TIMETABLE
