@@ -12,7 +12,14 @@ surveys:
   - daily-check-in
   - demographics
   - devices
-  - heartmath-satisfaction
+  - key: heartmath-satisfaction
+    triggers:
+    - action: SHOW
+      condition:
+        - type: SCORE
+          resource: warrior-shield::start-intervention
+          operator: =
+          score: 2
   - report-new-information
   - key: start-intervention
     triggers:
