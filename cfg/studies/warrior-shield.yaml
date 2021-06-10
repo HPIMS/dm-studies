@@ -9,9 +9,16 @@ description: The main goal of the Warrior Shield study is to understand
 consentId: ehive-warrior-shield
 baseline: []
 surveys: 
-  - daily-check-in
   - demographics
   - devices
+  - key: daily-check-in
+    triggers:
+    - action: SHOW
+      condition:
+        - type: SCORE
+          resource: warrior-shield::start-intervention
+          operator: =
+          score: 2
   - key: heartmath-satisfaction
     triggers:
     - action: SHOW
