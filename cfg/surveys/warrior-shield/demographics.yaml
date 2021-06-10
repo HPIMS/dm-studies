@@ -211,7 +211,7 @@ sections:
                 operator: =
                 value: yes
       - key: vaccine_date_2
-        question: When did you receive the first dose of the vaccine (if applicable)?
+        question: When did you receive the second dose of the vaccine (if applicable)?
         type: DATE
         triggers:
           - action:
