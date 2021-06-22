@@ -125,14 +125,6 @@ multimedia:
             resource: warrior-shield::wearable-info
             operator: =
             score: 100
-requiredHealthRecords:
-  AllergyRecord: HKClinicalTypeIdentifier
-  ConditionRecord: HKClinicalTypeIdentifier
-  ImmunizationRecord: HKClinicalTypeIdentifier
-  LabResultRecord: HKClinicalTypeIdentifier
-  MedicationRecord: HKClinicalTypeIdentifier
-  ProcedureRecord: HKClinicalTypeIdentifier
-  VitalSignRecord: HKClinicalTypeIdentifier
 requiredData:
   ActiveEnergyBurned: HKQuantityTypeIdentifier
   AppleExerciseTime: HKQuantityTypeIdentifier
