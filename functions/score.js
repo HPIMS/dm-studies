@@ -18,6 +18,7 @@ const scoringFns = {
   "library::pss-10": sumScore,
   // Study Specific Surveys
   "warrior-shield::start-intervention": sumScore,
+  "warrior-shield::devices": () => 1,
   // legacy surveys
   baseline_cd_risc_survey: sumScore, // library::cd-risc-2
   mood_survey: sumScore, // library::phq-8

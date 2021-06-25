@@ -2,34 +2,40 @@ key: warrior-shield
 active: true
 name: "Warrior Shield"
 description: The main goal of the Warrior Shield study is to understand
-  how a breathing intervention based on the HeartMath system improves 
+  how a breathing intervention based on the HeartMath system improves
   the psychological well being of health care workers impacted by COVID-19.
   This study is collecting data from your iphone and Apple Watch to look at
-  the impact this intervention has on stress, mental health and your physical well being. 
+  the impact this intervention has on stress, mental health and your physical well being.
 consentId: ehive-warrior-shield
 baseline: []
-surveys: 
+surveys:
   - demographics
   - devices
   - key: daily-check-in
     triggers:
-    - action: SHOW
-      condition:
-        - type: SCORE
-          resource: warrior-shield::start-intervention
-          operator: =
-          score: 2
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - key: heartmath-satisfaction
     triggers:
-    - action: SHOW
-      condition:
-        - type: SCORE
-          resource: warrior-shield::start-intervention
-          operator: =
-          score: 2
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
   - report-new-information
   - key: start-intervention
     triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::devices
+            operator: =
+            score: 1
       - action: HIDE
         condition:
           - type: SCORE
@@ -116,7 +122,7 @@ surveys:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
-multimedia: 
+multimedia:
   - key: wearable-info
     triggers:
       - action: HIDE

@@ -29,7 +29,7 @@ sections:
             text: No
             score: 0
       - key: apple_watch
-        question: Have you worn the Apple Watch for 7 days?
+        question: Have you connected the Apple Watch to the eHive app and worn it for 7 days?
         type: SINGLE_CHOICE
         triggers:
           - action:

@@ -1,5 +1,6 @@
 key: devices
 active: true
+scorable: true
 schedule:
   type: PERIOD
   period: ONCE
@@ -11,7 +12,7 @@ intro:
   description: ""
 outro:
   title: "Thank you!"
-  description: "Once you have your devices, you must wear your Apple Watch for at least 7 days before starting the HeartMath intervention. We will remind you over the course of the next few weeks. Once you have worn the watch for at least 7 days, you will press the \"start intervention\" button in this App to start the study."
+  description: 'Once you have your devices, you must connect your Apple Watch to the eHive app and wear it for at least 7 days before starting the HeartMath intervention. We will remind you over the course of the next few weeks. Once you have worn the watch for at least 7 days, you will press the "start intervention" button in this App to start the study.'
 sections:
   - key: "0"
     title: ""
