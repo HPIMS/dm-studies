@@ -8,14 +8,22 @@ timeEstimate: 1
 name: Start Intervention
 short: Answer these questions to begin the intervention.
 intro:
-  title: ""
-  description: ""
+  title: "Start Intervention"
+  description: |-
+    In order to start the intervention, you must:
+
+    1. Have the HeartMath sensor and the Apple Watch
+    2. Download the HeartMath app via our instructions
+    3. Sync the Apple Watch to the eHive app
+    4. Wear the Apple Watch for 7 days of baseline measurements
+
+    Please continue with this survey once you have completed the steps above.
 outro:
   title: ""
   description: ""
 sections:
   - key: "0"
-    title: Start Intervention
+    title: ""
     description: "Answer these questions to begin the intervention."
     questions:
       - key: devices
