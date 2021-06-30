@@ -123,14 +123,60 @@ surveys:
             operator: =
             score: 2
 multimedia:
-  - key: wearable-info
+  - key: hm-1
     triggers:
-      - action: HIDE
+      - action: SHOW
         condition:
-          - type: VIDEO
-            resource: warrior-shield::wearable-info
+          - type: SCORE
+            resource: warrior-shield::start-intervention
             operator: =
-            score: 100
+            score: 2
+    rank: 101
+  - key: hm-2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 102
+  - key: hm-3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 103
+  - key: hm-4
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 104
+  - key: hm-5
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 105
+  - key: hm-6
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 106
 requiredData:
   ActiveEnergyBurned: HKQuantityTypeIdentifier
   AppleExerciseTime: HKQuantityTypeIdentifier
