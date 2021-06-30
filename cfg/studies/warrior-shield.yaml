@@ -123,6 +123,16 @@ surveys:
             operator: =
             score: 2
 multimedia:
+## REMOVE ME
+  - key: wearable-info
+    triggers:
+      - action: HIDE
+        condition:
+          - type: VIDEO
+            resource: warrior-shield::wearable-info
+            operator: =
+            score: 100
+## END REMOVE
   - key: hm-1
     triggers:
       - action: SHOW
