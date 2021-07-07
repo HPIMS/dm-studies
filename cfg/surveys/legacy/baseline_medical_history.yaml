@@ -35,7 +35,7 @@ sections:
               key: general_yes_description
               question: Please specify
               type: TEXTAREA
-      - key: hear_disease
+      - key: heart_disease
         question: Heart disease (heart attack, congestive heart failure, angina,
           irregular heartbeat/arrhythmia)
         description: If yes, please specify
@@ -46,10 +46,10 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: hear_disease_yes_description
+              key: heart_disease_yes_description
               question: Please specify
               type: TEXTAREA
-      - key: blood_presure
+      - key: blood_pressure
         question: High blood pressure or low blood pressure
         description: If yes, please specify
         type: SINGLE_CHOICE
@@ -59,7 +59,7 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: blood_presure_yes_description
+              key: blood_pressure_yes_description
               question: Please specify
               type: TEXTAREA
       - key: lung_disease
@@ -72,7 +72,7 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: lung_dispease_yes_description
+              key: lung_disease_yes_description
               question: Please specify
               type: TEXTAREA
       - key: blood_disorder
@@ -102,7 +102,7 @@ sections:
               key: diabetes_yes_description
               question: Please specify
               type: TEXTAREA
-      - key: thyroid
+      - key: thyroid_disease
         question: Thyroid disease
         description: If yes, please specify
         type: SINGLE_CHOICE
@@ -112,10 +112,10 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: thyroid_yes_description
+              key: thyroid_disease_yes_description
               question: Please specify
               type: TEXTAREA
-      - key: stoke
+      - key: stroke
         question: Stroke
         description: If yes, please specify
         type: SINGLE_CHOICE
@@ -125,7 +125,7 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: stoke_yes_description
+              key: stroke_yes_description
               question: Please specify
               type: TEXTAREA
       - key: neurologic_disorder
@@ -146,7 +146,7 @@ sections:
     title: Your Medical History
     description: Please answer these questions about your medical history
     questions:
-      - key: psychological_disporder
+      - key: psychological_disorder
         question: Psychological/psychiatric disorder
         description: If yes, please specify
         type: SINGLE_CHOICE
@@ -156,10 +156,10 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: psychological_disporder_yes_description
+              key: psychological_disorder_yes_description
               question: Please specify
               type: TEXTAREA
-      - key: gastro_promblem
+      - key: gastro_problems
         question: Gastrointestinal problems (including ulcer, diverticulitis, spastic
           colon , bleeding from rectum)
         description: If yes, please specify
@@ -170,7 +170,7 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: gastro_promblem_yes_description
+              key: gastro_problems_yes_description
               question: Please specify
               type: TEXTAREA
       - key: liver_disease
@@ -196,7 +196,7 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: lung_dispease_yes_description
+              key: kidney_disease_yes_description
               question: Please specify
               type: TEXTAREA
       - key: frequent_infection
@@ -213,7 +213,7 @@ sections:
               key: frequent_infection_yes_description
               question: Please specify
               type: TEXTAREA
-      - key: eye_problem
+      - key: eye_problems
         question: Eye problems or diseases (e.g. glaucoma, cataract)
         description: If yes, please specify
         type: SINGLE_CHOICE
@@ -223,7 +223,7 @@ sections:
           - value: yes
             text: Yes
             inlineQuestion:
-              key: eye_problem_yes_description
+              key: eye_problems_yes_description
               question: Please specify
               type: TEXTAREA
       - key: arthritis_disease
@@ -321,8 +321,6 @@ sections:
             text: No
           - value: yes
             text: Yes
-            followUpQuestion:
-              - alcohol_amount
       - key: alcohol_amount
         question: During the last 12 months, how often did you usually have any kind of
           drink containing alcohol? By a drink we mean half an ounce of absolute
@@ -371,8 +369,6 @@ sections:
             text: No
           - value: yes
             text: Yes
-            followUpQuestion:
-              - history_amount
       - key: history_amount
         question: How much did/do you smoke?
         description: ""
@@ -401,8 +397,6 @@ sections:
             text: No
           - value: yes
             text: Yes
-            followUpQuestion:
-              - drug_amount
       - key: drug_amount
         question: How much did/do you use?
         description: ""
