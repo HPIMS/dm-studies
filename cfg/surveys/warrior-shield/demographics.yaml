@@ -144,14 +144,14 @@ sections:
         question: Are you currently taking any steroids or medications that affect your immune system?
         type: SINGLE_CHOICE
         options:
-          - value: no
-            text: No
           - value: yes
             text: Yes
             inlineQuestion:
               key: steroids_yes_description
               question: Please specify
               type: TEXTAREA
+          - value: no
+            text: No
       - key: care_sinai
         question: Have you ever received care at Mount Sinai?
         type: YESNO_CHOICE
@@ -174,7 +174,7 @@ sections:
         question: Have you received a vaccine against COVID-19?
         type: YESNO_CHOICE
       - key: which_vaccine
-        question: Which vaccine did you receive??
+        question: Which vaccine did you receive?
         type: SINGLE_CHOICE
         triggers:
           - action:

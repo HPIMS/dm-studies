@@ -1,4 +1,4 @@
-# Digi*Me* Studies
+# eHive Studies
 
 Study and Survey configurations for Digi*Me*.
 
