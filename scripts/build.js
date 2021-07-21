@@ -132,6 +132,7 @@ async function processStudies() {
 
     // Remove configs we don't need
     delete data.active;
+    delete data.platform;
 
     // set additional configs
     data.version = version;
