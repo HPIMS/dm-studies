@@ -300,6 +300,7 @@ async function processStudies() {
       description: data.description,
       consentId: data.consentId,
       wearables: data.wearables,
+      platform: data.platform,
     });
 
     log.important(`[${study}] Finished processing. Writing ${study}.json`);

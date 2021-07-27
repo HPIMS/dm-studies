@@ -5,7 +5,6 @@ const YAML = require("yaml");
 const chalk = require("chalk");
 
 // TODO: Use lowercase, dash no underscore
-// TODO: Only allow override of library surveys
 // TODO: Not schema validating surveys
 // TODO: Add schema validation for multimedia
 
@@ -317,8 +316,7 @@ async function processStudies() {
       const reqMultimediaKey = typeof m === "string" ? m : m.key;
       if (
         !multimediaLibrary.has(`${name}::${reqMultimediaKey}`) &&
-        !multimediaLibrary.has(`library::${reqMultimediaKey}`) &&
-        !multimediaLibrary.has(reqMultimediaKey)
+        !multimediaLibrary.has(`library::${reqMultimediaKey}`)
       ) {
         log.warning(
           `[${name}] Includes multimedia "${reqMultimediaKey}" which does not exist in the multimedia library.`
@@ -340,15 +338,20 @@ async function processStudies() {
       // If it is a study, and we didn't change the file itself,
       // check to see if any of the study's surveys have changed.
       (data.surveys || []).forEach((s) => {
+        const sKey = s.key || s;
         if (
-          (surveyLibrary.has(`${name}::${s}`) &&
-            diffs.get("surveys").has(`${name}::${s}`)) ||
-          (!surveyLibrary.has(`${name}::${s}`) &&
-            surveyLibrary.has(s) &&
-            diffs.get("surveys").has(s))
+          // study specific
+          (surveyLibrary.has(`${name}::${sKey}`) &&
+            diffs.get("surveys").has(`${name}::${sKey}`)) ||
+          (!surveyLibrary.has(`${name}::${sKey}`) &&
+            // library
+            ((surveyLibrary.has(`library::${sKey}`) &&
+              diffs.get("surveys").has(`library::${sKey}`)) ||
+              // legacy
+              (surveyLibrary.has(sKey) && diffs.get("surveys").has(sKey))))
         ) {
           log.info(
-            `[${name}] Contains modified survey ${s}. The study version will be bumped.`
+            `[${name}] Contains modified survey ${sKey}. The study version will be bumped.`
           );
           surveyModified = true;
         }
@@ -358,15 +361,17 @@ async function processStudies() {
       // If it is a study, and we didn't change the file itself,
       // check to see if any of the study's multimedia tasks have changed.
       (data.multimedia || []).forEach((m) => {
+        const mKey = m.key || m;
         if (
-          (multimediaLibrary.has(`${name}::${m}`) &&
-            diffs.get("multimedia").has(`${name}::${m}`)) ||
-          (!multimediaLibrary.has(`${name}::${m}`) &&
-            multimediaLibrary.has(m) &&
-            diffs.get("multimedia").has(m))
+          (multimediaLibrary.has(`${name}::${mKey}`) &&
+            diffs.get("multimedia").has(`${name}::${mKey}`)) ||
+          (!multimediaLibrary.has(`${name}::${mKey}`) &&
+            // library
+            multimediaLibrary.has(`library::${mKey}`) &&
+            diffs.get("multimedia").has(`library::${mKey}`))
         ) {
           log.info(
-            `[${name}] Contains modified multimedia ${m}. The study version will be bumped.`
+            `[${name}] Contains modified multimedia ${mKey}. The study version will be bumped.`
           );
           multimediaModified = true;
         }
