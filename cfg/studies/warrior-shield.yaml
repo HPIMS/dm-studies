@@ -1,0 +1,218 @@
+key: warrior-shield
+active: true
+platform:
+  - ios
+name: "Warrior Shield"
+description: The main goal of the Warrior Shield study is to understand
+  how a breathing intervention based on the HeartMath system improves
+  the psychological well being of health care workers impacted by COVID-19.
+  This study is collecting data from your iPhone and Apple Watch to look at
+  the impact this intervention has on stress, mental health and your physical well being.
+consentId: ehive-warrior-shield
+baseline: []
+surveys:
+  - key: demographics
+    rank: 1
+  - key: devices
+    rank: 2
+  - key: start-intervention
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::devices
+            operator: =
+            score: 1
+      - action: HIDE
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 3
+  - key: daily-check-in
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 4
+  - key: report-new-information
+    rank: 5
+  - key: heartmath-satisfaction
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 6
+  - key: pss-10
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 6, 8, 18]
+      timetableUnits: WEEKS
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 6
+  - key: promis-gh-qol-2-item
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 6, 8, 18]
+      timetableUnits: WEEKS
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 6
+  - key: promis-social-support-2-item
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 6, 8, 18]
+      timetableUnits: WEEKS
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 6
+  - key: cd-risc-10
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 6, 8, 18]
+      timetableUnits: WEEKS
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 6
+  - key: phq-4
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 6, 8, 18]
+      timetableUnits: WEEKS
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 6
+  - key: neuro-qol-positive-affect-and-well-being-item-bank-v1.0
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 6, 8, 18]
+      timetableUnits: WEEKS
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 6
+multimedia:
+  - key: intro
+    rank: 0
+  - key: intro-always
+    rank: 999
+    triggers:
+      - action: SHOW
+        condition:
+          - type: VIDEO
+            resource: warrior-shield::intro
+            operator: =
+            score: 100
+  - key: hm-1
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 101
+  - key: hm-2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 102
+  - key: hm-3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 103
+  - key: hm-4
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 104
+  - key: hm-5
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 105
+  - key: hm-6
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: warrior-shield::start-intervention
+            operator: =
+            score: 2
+    rank: 106
+requiredData:
+  ActiveEnergyBurned: HKQuantityTypeIdentifier
+  AppleExerciseTime: HKQuantityTypeIdentifier
+  HeartRate: HKQuantityTypeIdentifier
+  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
+  RestingHeartRate: HKQuantityTypeIdentifier
+  WalkingHeartRateAverage: HKQuantityTypeIdentifier
+  OxygenSaturation: HKQuantityTypeIdentifier
+  StepCount: HKQuantityTypeIdentifier
+  AppleStandTime: HKQuantityTypeIdentifier
+  EnvironmentalAudioExposure: HKQuantityTypeIdentifier
+  SleepAnalysis: HKQuantityTypeIdentifier
+  DietaryEnergyConsumed: HKQuantityTypeIdentifier
+  BloodPressureDiastolic: HKQuantityTypeIdentifier
+  BloodPressureSystolic: HKQuantityTypeIdentifier
+  BloodGlucose: HKQuantityTypeIdentifier
