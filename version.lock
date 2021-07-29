@@ -1,17 +1,17 @@
 active:
   studies:
-    baseline:
-      - 09a5a2da84e7aa72b83a7088b783aa58
-      - 16
     ms-resilience:
       - 0c12e9309aec371e0a2cb5d71be2e06f
       - 9
+    warrior-shield:
+      - fa45aa2c481060666596aee13861292c
+      - 55
+    baseline:
+      - 09a5a2da84e7aa72b83a7088b783aa58
+      - 16
     pss:
       - 8762ac325abbbdb7a238ae6ae2330f5b
       - 19
-    warrior-shield:
-      - 12337f77247949cb6ef63d6618d16394
-      - 54
   surveys:
     baseline_cd_risc_survey:
       - c7ebe8d919288a6caa8f85b916164245
@@ -19,48 +19,60 @@ active:
     baseline_demographics:
       - 3da11760b0cd0f3890d8a43d9dae9eeb
       - 13
-    health_care:
-      - 68e8cbf3405497fe9b40300f29a7fbe2
-      - 9
-    mood_survey:
-      - 5ebf3b1c67af7b731c5a1466136cf2e5
-      - 8
     pain:
       - 3f408f06d636683e99edf88263b6eeac
       - 9
-    pss4:
-      - 0c62b91d0f6773c9773abb0812a23f0e
-      - 10
     baseline_medical_history:
       - 248a37a089465cd066f199307b16249c
       - 12
-    qol_survey:
-      - 64e65407ed5e8185711dc4ae66973d47
-      - 9
+    mood_survey:
+      - 5ebf3b1c67af7b731c5a1466136cf2e5
+      - 8
+    pss4:
+      - 0c62b91d0f6773c9773abb0812a23f0e
+      - 10
     satisfaction_survey_final:
       - d77acc408c8ee3ec11072c4d9c1d9f2e
+      - 9
+    qol_survey:
+      - 64e65407ed5e8185711dc4ae66973d47
       - 9
     satisfaction_survey_monthly:
       - c4bc9c2848550c34a9f700986619020a
       - 11
-    sleep:
-      - 8dd034c69f2aa5a26e604633c81a3df4
+    warrior-shield::demographics:
+      - 399046658ca5a2a7ce50b3a53d9efdc8
+      - 12
+    health_care:
+      - 68e8cbf3405497fe9b40300f29a7fbe2
       - 9
     sleep_stress_pain:
       - 08bd2781c1180c59c267ac132f3277b1
       - 11
+    sleep:
+      - 8dd034c69f2aa5a26e604633c81a3df4
+      - 9
+    warrior-shield::heartmath-satisfaction:
+      - c588eded36488a4d47a2912f9473c7aa
+      - 7
+    warrior-shield::report-new-information:
+      - bc04b7534046f348cdd9191a700d78da
+      - 6
+    warrior-shield::daily-check-in:
+      - a86144938ca2522e90c217121bc2899a
+      - 9
+    warrior-shield::devices:
+      - 6a305204b1bb89224e3ea9c5601350b2
+      - 8
+    warrior-shield::start-intervention:
+      - 87a4ccb971d37399f22b3e008dc912e6
+      - 16
     library::cd-risc-10:
       - 18f6ba4eca68f78358e7f67e7a8b3290
       - 4
     library::cd-risc-2:
       - d89948889bd4ca16edc956c3f3a4cbe6
       - 4
-    library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
-      - 5c303eb75ccca1b04e46e6c360df31f1
-      - 4
-    library::phq-4:
-      - 56890c6fd3ae1c5630f48cee38927943
-      - 5
     library::phq-8:
       - 93f2957fca5cfa1a3bb983051d83882d
       - 4
@@ -73,58 +85,46 @@ active:
     library::promis-sleep-disturbance-8a-v1.0:
       - 244fe53060b550c274c473585f25bff1
       - 3
+    library::phq-4:
+      - 56890c6fd3ae1c5630f48cee38927943
+      - 5
+    library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
+      - 5c303eb75ccca1b04e46e6c360df31f1
+      - 4
     library::promis-social-support-2-item:
       - 3dd65f645754ff491bc285c53a9e3796
-      - 6
-    library::pss-10:
-      - 107e6c1cd748582179e433f366832943
       - 6
     library::pss-4:
       - af5d3af60ca5da4ea3af82aa71130d0e
       - 4
-    warrior-shield::daily-check-in:
-      - a86144938ca2522e90c217121bc2899a
-      - 9
-    warrior-shield::demographics:
-      - 399046658ca5a2a7ce50b3a53d9efdc8
-      - 12
-    warrior-shield::heartmath-satisfaction:
-      - c588eded36488a4d47a2912f9473c7aa
-      - 7
-    warrior-shield::devices:
-      - 6a305204b1bb89224e3ea9c5601350b2
-      - 8
-    warrior-shield::start-intervention:
-      - 87a4ccb971d37399f22b3e008dc912e6
-      - 16
-    warrior-shield::report-new-information:
-      - bc04b7534046f348cdd9191a700d78da
+    library::pss-10:
+      - 107e6c1cd748582179e433f366832943
       - 6
   multimedia:
-    warrior-shield::hm-2:
-      - c8d173edac731cac2e8330d070306c25
-      - 5
     warrior-shield::hm-1:
-      - aed4cbb61660d011ab0fa589f2ab4752
-      - 5
+      - 07e84d8590a445821a3f2e0240fd2067
+      - 6
+    warrior-shield::hm-2:
+      - 414c843ecfd3f22c9729e91904a483d7
+      - 6
     warrior-shield::hm-3:
-      - 7331620c59dfbc2a2be54b91c5c8edd0
-      - 5
-    warrior-shield::hm-4:
-      - 621003e889a784eeb73e54276fc85d9c
-      - 5
-    warrior-shield::hm-6:
-      - 70514893f1d37b4d7e969eb149f56bc2
-      - 5
+      - dded9386bb0667c3b27cb0967fd73bc9
+      - 6
     warrior-shield::hm-5:
-      - 7d4e0c18eaff723cea0bc3c08f6b1013
-      - 5
-    warrior-shield::intro:
-      - 8ccb7a23f728370302fdff15a4766be7
-      - 2
+      - d98502f97efe558decea4e5dcad9e943
+      - 6
+    warrior-shield::hm-4:
+      - 6a7d198e227df8c7f75c6bdb796478cb
+      - 6
     warrior-shield::intro-always:
       - e4ebe17bc3e4932033f7f6140460baa0
       - 2
+    warrior-shield::intro:
+      - 8ccb7a23f728370302fdff15a4766be7
+      - 2
+    warrior-shield::hm-6:
+      - e12bbba8ef35dc70686442ca55ed140b
+      - 6
 inactive:
   studies:
     kyle:

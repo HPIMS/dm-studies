@@ -2,9 +2,7 @@ key: hm-5
 active: true
 schedule:
   type: PERIOD
-  period: ONCE
-  delay: 3
-  delayUnits: WEEKS
+  period: ALWAYS
 type: video
 timeEstimate: 13
 name: HeartMath Video 5

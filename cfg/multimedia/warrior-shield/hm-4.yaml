@@ -2,7 +2,7 @@ key: hm-4
 active: true
 schedule:
   type: PERIOD
-  period: ALWAYS
+  period: ONCE
   delay: 2
   delayUnits: WEEKS
 type: video
