@@ -14,14 +14,14 @@ name: "Positive Affect & Well-being"
 short: "Tell us about your well-being lately"
 intro:
   title: "Positive Affect & Well-being"
-  description: "Please respond to each question or statement by marking one answer per statement. Your answers should reflect how you felt over the last few weeks."
+  description: "Please respond to each question or statement by marking one answer per statement. Your answers should reflect how you felt lately."
 outro:
   title: Thank you!
   description: We appreciate your participation.
 sections:
   - key: "0"
     title: ""
-    description: "Please respond to each question or statement by marking one answer per statement."
+    description: "Please respond to each question or statement by marking one answer per statement. Lately..."
     questions:
       - key: wellbeing
         question: I had a sense of well-being
@@ -310,6 +310,139 @@ sections:
             score: 5
       - key: lovable
         question: I felt lovable
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: confident
+        question: I felt confident
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: good_life
+        question: I had a good life
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: peaceful
+        question: My life was peaceful
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: fullest_life
+        question: I was living life to the fullest
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: ideal_life
+        question: In most ways my life was close to my ideal
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: thought_control
+        question: I had good control of my thoughts
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: had_hope
+        question: Even when things were going badly, I still had hope
         type: SINGLE_CHOICE
         options:
           - value: never
