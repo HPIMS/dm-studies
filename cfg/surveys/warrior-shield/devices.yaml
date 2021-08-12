@@ -21,13 +21,16 @@ sections:
       - key: address
         question: What is the address you would like us to send the HeartMath Device?
         type: TEXTAREA
+        required: true
       - key: apple_watch
         question: Do you have an Apple Watch Series 4, 5, or 6?
         type: YESNO_CHOICE
+        required: true
       - key: apple_watch_pickup
         question: Would you prefer to pick up your watch in person at the main Mount Sinai Hospital campus, or have it sent to the address provided above?
         description: If you select in person pick up we will reach out to you via email to set up a pick up time.
         type: SINGLE_CHOICE
+        required: true
         triggers:
           - action:
               type: SHOW
@@ -41,3 +44,6 @@ sections:
             text: In person pick up
           - value: no
             text: Mailed to me
+      - key: notes
+        question: Notes
+        type: TEXTAREA
