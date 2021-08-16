@@ -14,14 +14,38 @@ outro:
   title: "Thank you!"
   description: 'Once you have your devices, you must connect your Apple Watch to the eHive app and wear it for at least 7 days before starting the HeartMath intervention. We will remind you over the course of the next few weeks. Once you have worn the watch for at least 7 days, you will press the "start intervention" button in this App to start the study.'
 sections:
+  - key: address
+    title: Address
+    description: What is the address you would like us to send the HeartMath Device?
+    questions:
+      - key: full_name
+        question: Full Name
+        type: TEXT
+        required: true  
+      - key: street
+        question: Street
+        type: TEXT
+        required: true
+      - key: apt_floor
+        question: Apt/floor
+        type: TEXT
+        required: false
+      - key: city
+        question: City
+        type: TEXT
+        required: true
+      - key: state
+        question: State
+        type: TEXT
+        required: true
+      - key: zip
+        question: Zip
+        type: TEXT
+        required: true
   - key: "0"
     title: ""
     description: ""
     questions:
-      - key: address
-        question: What is the address you would like us to send the HeartMath Device?
-        type: TEXTAREA
-        required: true
       - key: apple_watch
         question: Do you have an Apple Watch Series 4, 5, or 6?
         type: YESNO_CHOICE
