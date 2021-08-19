@@ -421,8 +421,7 @@ sections:
     description: ""
     questions:
       - key: familiy_disease
-        question: "Are there any conditions or diseases related to your complaint that
-          run in your family? "
+        question: "Are there any relevant conditions or diseases that run in your family?"
         description: If yes, please specify
         type: SINGLE_CHOICE
         options:
@@ -457,8 +456,7 @@ sections:
     description: ""
     questions:
       - key: allergy
-        question: Have you ever had a severe allergic reaction (e.g., bee stings, food
-          {milk, nuts}?
+        question: Have you ever had a severe allergic reaction (e.g., bee stings, nuts)?
         description: If yes, please specify
         type: SINGLE_CHOICE
         options:
@@ -471,7 +469,7 @@ sections:
               question: ""
               type: TEXTAREA
       - key: allergy_medication
-        question: Have you ever had an allergic action to any medications (antibiotics,
+        question: Have you ever had an allergic reaction to any medications (antibiotics,
           Codeine, etc.)?
         description: If yes, please specify
         type: SINGLE_CHOICE
