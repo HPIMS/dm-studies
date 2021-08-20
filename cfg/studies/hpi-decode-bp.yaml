@@ -1,0 +1,23 @@
+key: hpi-decode-bp
+active: true
+platform:
+  - ios
+  - android
+name: "Decode BP"
+description: Lorem Ipsum
+consentId: ehive-hpi-decode-bp
+withdrawText: |-
+  Thank you for participating in the Decode BP! We value your time and effort, and appreciate your contribution to research.
+  
+  Please contact us at
+  ehive.decodebp@mssm.edu if you have any further questions about the study or future research on the eHive platform.
+wearables:
+  - withings
+baseline: []
+surveys: 
+  - key: demographics
+    rank: 1
+  - key: fitzpatrick-skin-type
+    rank: 2
+  - usability
+  - clearance

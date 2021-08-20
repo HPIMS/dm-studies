@@ -4,6 +4,10 @@ const scoringFns = {
   // library surveys
   "library::cd-risc-2": sumScore,
   "library::cd-risc-10": sumScore,
+  "library::fitzpatrick-skin-type": (surveyData, optionScoreMap) => {
+    const score = sumScore(surveyData, optionScoreMap);
+    return Math.floor(score / 7) + 1; // converts sum score to fitzpatrick skin type
+  },
   "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": (
     surveyData,
     optionScoreMap

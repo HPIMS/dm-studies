@@ -1,0 +1,17 @@
+key: withings-send-data
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+type: video
+timeEstimate: 5
+name: Send Withings Data
+short: How to send your BP measurement
+intro:
+  title: Lorem Ipsum
+  description: Lorem Ipsum
+outro:
+  title: Lorem Ipsum
+  description: Lorem Ipsum
+resizeMode: contain
+rate: 1
