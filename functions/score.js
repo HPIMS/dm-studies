@@ -23,6 +23,7 @@ const scoringFns = {
   // Study Specific Surveys
   "warrior-shield::start-intervention": sumScore,
   "warrior-shield::devices": () => 1,
+  "hpi-decode-bp::clearance": sumScore,
   // legacy surveys
   baseline_cd_risc_survey: sumScore, // library::cd-risc-2
   mood_survey: sumScore, // library::phq-8
