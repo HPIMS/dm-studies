@@ -1,8 +1,8 @@
-key: calibration
+key: calibration-video
 active: true
 schedule:
   type: PERIOD
-  period: ONCE
+  period: NEVER
 type: video
 timeEstimate: 5
 name: Withings Calibration

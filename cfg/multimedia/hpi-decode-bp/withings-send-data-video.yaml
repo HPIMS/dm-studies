@@ -1,8 +1,8 @@
-key: withings-send-data
+key: withings-send-data-video
 active: true
 schedule:
   type: PERIOD
-  period: ONCE
+  period: NEVER
 type: video
 timeEstimate: 5
 name: Send Withings Data
