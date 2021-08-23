@@ -27,21 +27,25 @@ const nextVersions = {
     studies: {},
     surveys: {},
     multimedia: {},
+    interventions: {},
   },
   inactive: {
     studies: {},
     surveys: {},
     multimedia: {},
+    interventions: {},
   },
 };
 
 const surveyLibrary = new Set();
 const multimediaLibrary = new Set();
+const interventionLibrary = new Set();
 
 const diffs = new Map();
 diffs.set("studies", new Set());
 diffs.set("surveys", new Set());
 diffs.set("multimedia", new Set());
+diffs.set("interventions", new Set());
 
 async function getFile(path) {
   const data = await fs.promises.readFile(path, { encoding: "utf-8" });
@@ -231,6 +235,94 @@ async function processMultimedia() {
   return Promise.all(promises);
 }
 
+async function processInterventions() {
+  log.plain("*****************************************");
+  log.plain("****     Diffing Interventions       ****");
+  log.plain("*****************************************");
+
+  const dir = path.join(__dirname, "../cfg/interventions");
+  const interventionGroups = await fs.promises.readdir(dir);
+
+  const promises = interventionGroups.map(async (interventionGroup) => {
+    const groupDir = `${dir}/${interventionGroup}`;
+    const interventions = await fs.promises.readdir(groupDir);
+    const interventionPrefix = interventionGroup;
+
+    const interventionPromises = interventions.map(async (file) => {
+      const rootName = file.replace(/\.yaml$|\.yml$/, "");
+      const extension = file.split(".").pop();
+      const name = `${interventionPrefix}::${rootName}`;
+
+      const { data, hash: nextHash } = await getFile(`${groupDir}/${file}`);
+      const [lastHash, lastVersion] = versions.active.interventions[name] ||
+        versions.inactive.interventions[name] || [null, null];
+      let nextVersion = lastVersion;
+
+      log.info(`[${name}] Processing`);
+
+      // skip if inactive
+      if (!data.active) {
+        log.warning(`[${name}] Inactive.`);
+        // Write out as inactive. If it's new and inactive, create a new record.
+        // If it's changed an inactive, we don't care. The changes will be picked
+        // up when/if it's moved to active again.
+        nextVersions.inactive.interventions[name] = [
+          lastHash || nextHash,
+          lastVersion || 1,
+        ];
+        return;
+      }
+
+      if (rootName !== data.key) {
+        log.error(`[${name}] Intervention key and Filename mismatch.`);
+        return;
+      }
+
+      // If we are using .yml, automatically move to .yaml.
+      if (extension === "yml") {
+        try {
+          // see if the .yaml file that we want to move it to already exists
+          await fs.promises.stat(`${groupDir}/${rootName}.yaml`);
+          log.error(
+            `[${name}] Uses a .yml extension and another file with a .yaml extension already exists. Could not automatically rename.`
+          );
+          return;
+        } catch (err) {
+          log.warning(`[${name}] Renaming to ${name}.yaml.`);
+          // if we get here it means we can rename
+          await fs.promises.rename(
+            `${groupDir}/${rootName}.yml`,
+            `${groupDir}/${rootName}.yaml`
+          );
+        }
+      }
+
+      // add this multimedia to the multimedia library
+      interventionLibrary.add(name);
+
+      if (!lastHash || !lastVersion) {
+        nextVersion = 1;
+        // If this is the first time seeing this file set the version to the
+        // existing version in the yaml, or 1.
+        log.info(`[${name}] New Intervention. Setting version to 1.`);
+        diffs.get("interventions").add(name);
+      } else if (lastHash !== nextHash) {
+        nextVersion = lastVersion + 1;
+        // If we've seen this file, but it has changed, increment the version
+        log.info(
+          `[${name}] Intervention modified. Bumping version to ${nextVersion}.`
+        );
+        diffs.get("interventions").add(name);
+      }
+      log.important(`[${name}] Finished processing. Writing to version.lock.`);
+      // write to the versions file
+      nextVersions.active.interventions[name] = [nextHash, nextVersion];
+    });
+    return Promise.all(interventionPromises);
+  });
+  return Promise.all(promises);
+}
+
 async function processStudies() {
   log.plain("*****************************************");
   log.plain("****         Diffing Studies         ****");
@@ -324,6 +416,19 @@ async function processStudies() {
       }
     });
 
+    // warn if requested intervention is not available
+    (data.interventions || []).forEach((i) => {
+      const reqInterventionKey = typeof i === "string" ? i : i.key;
+      if (
+        !interventionLibrary.has(`${name}::${reqInterventionKey}`) &&
+        !interventionLibrary.has(`library::${reqInterventionKey}`)
+      ) {
+        log.warning(
+          `[${name}] Includes intervention "${reqInterventionKey}" which does not exist in the intervention library.`
+        );
+      }
+    });
+
     if (!lastHash || !lastVersion) {
       nextVersion = 1;
       // If this is the first time seeing this file set the version to the
@@ -377,7 +482,27 @@ async function processStudies() {
         }
       });
 
-      if (surveyModified || multimediaModified) {
+      let interventionModified = false;
+      // If it is a study, and we didn't change the file itself,
+      // check to see if any of the study's multimedia tasks have changed.
+      (data.interventions || []).forEach((i) => {
+        const iKey = i.key || i;
+        if (
+          (interventionLibrary.has(`${name}::${iKey}`) &&
+            diffs.get("interventions").has(`${name}::${iKey}`)) ||
+          (!interventionLibrary.has(`${name}::${iKey}`) &&
+            // library
+            interventionLibrary.has(`library::${iKey}`) &&
+            diffs.get("interventions").has(`library::${iKey}`))
+        ) {
+          log.info(
+            `[${name}] Contains modified interventions ${iKey}. The study version will be bumped.`
+          );
+          interventionModified = true;
+        }
+      });
+
+      if (surveyModified || multimediaModified || interventionModified) {
         nextVersion = lastVersion + 1;
         // If we've seen this file, but it has changed, increment the version
         log.info(`[${name}] Study bumped to version ${nextVersion}.`);
@@ -395,6 +520,7 @@ async function processStudies() {
 async function diff() {
   await processSurveys();
   await processMultimedia();
+  await processInterventions();
   await processStudies();
   // write out the new versions file
   await fs.promises.writeFile(

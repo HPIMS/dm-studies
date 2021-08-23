@@ -1,0 +1,61 @@
+key: hpi-decode-bp
+active: true
+platform:
+  - ios
+  - android
+name: "Decode BP"
+description: Lorem Ipsum
+consentId: ehive-hpi-decode-bp
+withdrawText: |-
+  Thank you for participating in the Decode BP Study! We value your time and effort, and appreciate your contribution to research.
+  
+  Please contact us at
+  ehive.decodebp@mssm.edu if you have any further questions about the study or future research on the eHive platform.
+wearables:
+  - withings
+baseline: []
+surveys: 
+  - key: demographics
+    rank: 1
+  - key: fitzpatrick-skin-type
+    rank: 1
+  - key: usability
+    #triggers:
+    #- action: SHOW
+    #  condition:
+    #    - type: TASK??
+    #      resource: hpi-decode-bp::calibration-measurement
+    #      operator: IS_COMPLETE
+    rank: 3
+  # NEVER task (need the configuration, but won't show in the task list)
+  - key: clearance
+    rank: -1
+multimedia:
+  - key: intervention-video-always
+    #triggers:
+    #- action: SHOW
+    #  condition:
+    #    - type: TASK??
+    #      resource: hpi-decode-bp::bp-measurement
+    #      operator: IS_COMPLETE
+    rank: 1000
+  - key: withings-send-data-video-always
+    #triggers:
+    #- action: SHOW
+    #  condition:
+    #    - type: TASK??
+    #      resource: hpi-decode-bp::calibration-measurement
+    #      operator: IS_COMPLETE
+    rank: 1001
+  # NEVER tasks (need a configuration for the intervention but don't show in task list)
+  - key: calibration-video
+    rank: -1
+  - key: intervention-video
+    rank: -1
+  - key: withings-send-data-video
+    rank: -1
+interventions:
+  - key: calibration-measurement
+    rank: 2
+  - key: calibration-measurement
+    rank: 2

@@ -1,0 +1,197 @@
+key: fitzpatrick-skin-type
+scorable: true
+active: true
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: ONCE
+timeEstimate: 3
+name: Fitzpatrick Skin Type
+short: Determine your skin tone
+intro:
+  title: Fitzpatrick Skin Type
+  description: |-
+    In the following, we will ask you a few questions to determine your skin tone based on the Fitzpatrick scale (from https://www.skincancer.org/)
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: eye_color
+        question: "Your eye color is:"
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Light blue, light gray or light green
+            score: 0
+          - value: "1"
+            text: Blue, gray or green
+            score: 1
+          - value: "2"
+            text: Hazel or light brown
+            score: 2
+          - value: "3"
+            text: Dark brown
+            score: 3
+          - value: "4"
+            text: Brownish black
+            score: 4
+      - key: hair_color
+        question: "Your natural hair color is:"
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Red or light blonde
+            score: 0
+          - value: "1"
+            text: Blonde
+            score: 1
+          - value: "2"
+            text: Dark blonde or light brown
+            score: 2
+          - value: "3"
+            text: Dark brown
+            score: 3
+          - value: "4"
+            text: Black
+            score: 4
+      - key: hair_color
+        question: "Your natural hair color is:"
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Red or light blonde
+            score: 0
+          - value: "1"
+            text: Blonde
+            score: 1
+          - value: "2"
+            text: Dark blonde or light brown
+            score: 2
+          - value: "3"
+            text: Dark brown
+            score: 3
+          - value: "4"
+            text: Black
+            score: 4
+      - key: skin_color
+        question: "Your natural skin color (before sun exposure) is:"
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Ivory white
+            score: 0
+          - value: "1"
+            text: Fair or pale
+            score: 1
+          - value: "2"
+            text: Fair to beige, with golden undertone
+            score: 2
+          - value: "3"
+            text: Olive or light brown
+            score: 3
+          - value: "4"
+            text: Dark brown or black
+            score: 4
+      - key: freckles
+        question: How many freckles do you have on unexposed areas of your skin?
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Many
+            score: 0
+          - value: "1"
+            text: Several
+            score: 1
+          - value: "2"
+            text: A few
+            score: 2
+          - value: "3"
+            text: Very few
+            score: 3
+          - value: "4"
+            text: None
+            score: 4
+      - key: burn_frequency
+        question: How does your skin respond to the sun?
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Always burns, blisters and peels
+            score: 0
+          - value: "1"
+            text: Often burns, blisters and peels
+            score: 1
+          - value: "2"
+            text: Burns moderately
+            score: 2
+          - value: "3"
+            text: Burns rarely, if at all
+            score: 3
+          - value: "4"
+            text: Never burns
+            score: 4
+      - key: tan_frequency
+        question: Does your skin tan?
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Never -- I always burn
+            score: 0
+          - value: "1"
+            text: Seldom
+            score: 1
+          - value: "2"
+            text: Sometimes
+            score: 2
+          - value: "3"
+            text: Often
+            score: 3
+          - value: "4"
+            text: Always
+            score: 4
+      - key: tan_deepness
+        question: How deeply do you tan?
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Not at all or very little
+            score: 0
+          - value: "1"
+            text: Lightly
+            score: 1
+          - value: "2"
+            text: Moderately
+            score: 2
+          - value: "3"
+            text: Deeply
+            score: 3
+          - value: "4"
+            text: My skin is naturally dark
+            score: 4
+      - key: face_sensitivity
+        question: How sensitive is your face to the sun?
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: Very sensitive
+            score: 0
+          - value: "1"
+            text: Sensitive
+            score: 1
+          - value: "2"
+            text: Normal
+            score: 2
+          - value: "3"
+            text: Resistant
+            score: 3
+          - value: "4"
+            text: Very resistant/Never had a problem
+            score: 4
