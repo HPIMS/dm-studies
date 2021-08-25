@@ -1,8 +1,10 @@
 key: bp-measurement
 active: true
 schedule:
-  type: PERIOD
-  period: 2X_DAILY
+  type: TIMETABLE
+  timetable: [0, 1, 2, 3, 4, 5, 6]
+  timetableUnits: DAYS
+  timeOfDay: [['0001', '1459'], ['1500', '2359']]
 timeEstimate: 10
 name: Blood Pressure Measurement
 short: Record a blood pressure measurement

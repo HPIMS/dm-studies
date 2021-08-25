@@ -20,32 +20,35 @@ surveys:
   - key: fitzpatrick-skin-type
     rank: 1
   - key: usability
-    #triggers:
-    #- action: SHOW
-    #  condition:
-    #    - type: TASK??
-    #      resource: hpi-decode-bp::calibration-measurement
-    #      operator: IS_COMPLETE
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::calibration-measurement
+          operator: ">"
+          score: 0
     rank: 3
   # NEVER task (need the configuration, but won't show in the task list)
   - key: clearance
     rank: -1
 multimedia:
   - key: intervention-video-always
-    #triggers:
-    #- action: SHOW
-    #  condition:
-    #    - type: TASK??
-    #      resource: hpi-decode-bp::bp-measurement
-    #      operator: IS_COMPLETE
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::bp-measurement
+          operator: ">"
+          score: 0
     rank: 1000
   - key: withings-send-data-video-always
-    #triggers:
-    #- action: SHOW
-    #  condition:
-    #    - type: TASK??
-    #      resource: hpi-decode-bp::calibration-measurement
-    #      operator: IS_COMPLETE
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::calibration-measurement
+          operator: ">"
+          score: 0
     rank: 1001
   # NEVER tasks (need a configuration for the intervention but don't show in task list)
   - key: calibration-video
@@ -56,6 +59,25 @@ multimedia:
     rank: -1
 interventions:
   - key: calibration-measurement
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::demographics
+          operator: ">"
+          score: 0
+          AND: 
+          - type: COMPLETED
+            resource: hpi-decode-bp::fitzpatrick-skin-type
+            operator: ">"
+            score: 0
     rank: 2
-  - key: calibration-measurement
+  - key: bp-measurement
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::calibration-measurement
+          operator: ">"
+          score: 0
     rank: 2
