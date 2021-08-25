@@ -242,7 +242,7 @@ async function processInterventions() {
       short,
       editable: data.editable,
     };
-    dftMultimediaCfg[interventionKey] = interventionCfg;
+    dftInterventionCfg[interventionKey] = interventionCfg;
 
     log.info(`[${interventionKey}] Adding to interventions index.`);
     index.push({
