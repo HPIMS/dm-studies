@@ -62,25 +62,6 @@ sections:
           - value: "4"
             text: Black
             score: 4
-      - key: hair_color
-        question: "Your natural hair color is:"
-        type: SINGLE_CHOICE
-        options:
-          - value: "0"
-            text: Red or light blonde
-            score: 0
-          - value: "1"
-            text: Blonde
-            score: 1
-          - value: "2"
-            text: Dark blonde or light brown
-            score: 2
-          - value: "3"
-            text: Dark brown
-            score: 3
-          - value: "4"
-            text: Black
-            score: 4
       - key: skin_color
         question: "Your natural skin color (before sun exposure) is:"
         type: SINGLE_CHOICE
