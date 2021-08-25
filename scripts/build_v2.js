@@ -385,6 +385,7 @@ async function processStudies() {
         return {
           key: actualInterventionKey,
           ...dftInterventionCfg[actualInterventionKey],
+          type: "intervention",
         };
       }
       // Otherwise, we'll override the default with our custom configs
@@ -392,6 +393,7 @@ async function processStudies() {
         ...dftInterventionCfg[actualInterventionKey],
         ...intervention,
         key: actualInterventionKey,
+        type: "intervention",
       };
     });
 
