@@ -208,11 +208,13 @@ async function processStudies() {
       encoding: "utf-8",
     });
     const data = YAML.parse(cfg);
+    const visibility = data.visibility;
 
     const version = versions.active.studies[study][1];
 
     // Remove configs we don't need
     delete data.active;
+    delete data.visibility;
 
     // set additional configs
     data.version = version;
@@ -295,6 +297,7 @@ async function processStudies() {
     log.info(`[${study}] Adding to study index.`);
     index.push({
       key: data.key,
+      visibility,
       version: version,
       name: data.name,
       description: data.description,
