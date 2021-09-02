@@ -92,7 +92,7 @@ protocol:
     device: empatica
   - id: 6
     activity: waitForTimer
-    duration: 20
+    duration: 300
     showCountdown: true
     stepNumber: 5
     text: >-
@@ -174,7 +174,7 @@ protocol:
   - id: 9
     stepNumber: 8
     activity: waitForTimer
-    duration: 20
+    duration: 60
     showCountdown: true
     text: Continue to sit in a relaxed position for 1 minute.
     animation: true
@@ -251,7 +251,7 @@ protocol:
     animation: false
   - id: 12
     activity: waitForTimer
-    duration: 20
+    duration: 60
     showCountdown: true
     stepNumber: 11
     text: Continue to sit in a relaxed position for 1 minute.
