@@ -9,8 +9,11 @@ timeEstimate: 10
 name: Blood Pressure Measurement
 short: Record a blood pressure measurement
 intro:
-  title: test intro
-  description: test intro description
+  title: Blood Pressure Measurement
+  description: Please make sure your bladder is empty and that you have not smoked,
+    exercised, drunk caffeine or taken any medication that could alter your blood pressure
+    in the past 30 minutes.Also, make sure you are in a quiet room with a table, chair and
+    a comfortable temperature.
 outro:
   title: Session Complete
   description: >-
@@ -269,5 +272,5 @@ protocol:
     stepNumber: 13
     text: Uploading Empatica data. Please remain on this screen.
   - id: 14
-    stepNumber: 14
+    stepNumber: 13
     activity: finish
