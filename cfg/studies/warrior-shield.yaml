@@ -137,6 +137,15 @@ surveys:
 multimedia:
   - key: intro
     rank: 0
+  - key: intro-always
+    rank: 1000
+    triggers:
+      - action: SHOW
+        condition:
+          - type: VIDEO
+            resource: warrior-shield::intro
+            operator: =
+            score: 100
   - key: hm-1
     rank: 101
     triggers:
@@ -155,6 +164,15 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
+  - key: hm-2-always
+    rank: 1002
+    triggers:
+      - action: SHOW
+        condition:
+          - type: VIDEO
+            resource: warrior-shield::hm-2
+            operator: =
+            score: 100
   - key: hm-3
     rank: 103
     triggers:
