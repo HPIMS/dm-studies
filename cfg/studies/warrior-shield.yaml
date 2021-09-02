@@ -155,15 +155,6 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
-  - key: hm-1-always
-    rank: 1001
-    triggers:
-      - action: SHOW
-        condition:
-          - type: VIDEO
-            resource: warrior-shield::hm-1
-            operator: =
-            score: 100
   - key: hm-2
     rank: 102
     triggers:
@@ -191,15 +182,6 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
-  - key: hm-3-always
-    rank: 1003
-    triggers:
-      - action: SHOW
-        condition:
-          - type: VIDEO
-            resource: warrior-shield::hm-3
-            operator: =
-            score: 100
   - key: hm-4
     rank: 104
     triggers:
@@ -209,15 +191,6 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
-  - key: hm-4-always
-    rank: 1004
-    triggers:
-      - action: SHOW
-        condition:
-          - type: VIDEO
-            resource: warrior-shield::hm-4
-            operator: =
-            score: 100
   - key: hm-5
     rank: 105
     triggers:
@@ -227,15 +200,6 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
-  - key: hm-5-always
-    rank: 1005
-    triggers:
-      - action: SHOW
-        condition:
-          - type: VIDEO
-            resource: warrior-shield::hm-5
-            operator: =
-            score: 100
   - key: hm-6
     rank: 106
     triggers:
@@ -245,15 +209,6 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
-  - key: hm-6-always
-    rank: 1006
-    triggers:
-      - action: SHOW
-        condition:
-          - type: VIDEO
-            resource: warrior-shield::hm-6
-            operator: =
-            score: 100
 requiredData:
   ActiveEnergyBurned: HKQuantityTypeIdentifier
   AppleExerciseTime: HKQuantityTypeIdentifier
