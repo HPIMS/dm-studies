@@ -40,6 +40,12 @@ multimedia:
           resource: hpi-decode-bp::bp-measurement
           operator: ">"
           score: 0
+    - action: HIDE
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::bp-measurement
+          operator: ">"
+          score: 6
     rank: 1000
   - key: withings-send-data-video-always
     triggers:
@@ -49,6 +55,12 @@ multimedia:
           resource: hpi-decode-bp::calibration-measurement
           operator: ">"
           score: 0
+    - action: HIDE
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::calibration-measurement
+          operator: ">"
+          score: 6
     rank: 1001
   # NEVER tasks (need a configuration for the intervention but don't show in task list)
   - key: calibration-video
@@ -62,15 +74,16 @@ interventions:
     triggers:
     - action: SHOW
       condition:
+        type: AND
+        tasks:
         - type: COMPLETED
           resource: hpi-decode-bp::demographics
           operator: ">"
           score: 0
-          AND: 
-          - type: COMPLETED
-            resource: hpi-decode-bp::fitzpatrick-skin-type
-            operator: ">"
-            score: 0
+        - type: COMPLETED
+          resource: hpi-decode-bp::fitzpatrick-skin-type
+          operator: ">"
+          score: 0
     rank: 2
   - key: bp-measurement
     triggers:
