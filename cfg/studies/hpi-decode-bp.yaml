@@ -81,7 +81,7 @@ interventions:
           operator: ">"
           score: 0
         - type: COMPLETED
-          resource: hpi-decode-bp::fitzpatrick-skin-type
+          resource: library::fitzpatrick-skin-type
           operator: ">"
           score: 0
     rank: 2
