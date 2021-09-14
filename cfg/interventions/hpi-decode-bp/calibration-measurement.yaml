@@ -45,7 +45,7 @@ protocol:
     activity: waitForPress
     stepNumber: 3
     text: >-
-      Open the Withings Health Mate an turn on 3X mode.....
+      Open the Withings Health Mate an turn on 3X mode... (Ariane, can you provide this text)
     buttonLabel: Continue
   - id: 4
     activity: waitForTimer
@@ -115,8 +115,8 @@ protocol:
             value: 0
             operator: '>'
     timeout: 480
-    branchSuccess: 6
-    branchFailure: 5
+    branchSuccess: 9
+    branchFailure: 8
     animation: true
   - id: 9
     activity: waitForChoice
@@ -143,7 +143,7 @@ protocol:
     activity: waitForPress
     stepNumber: 11
     text: >-
-      Open the Withings Health Mate an turn off 3X mode.....
+      Open the Withings Health Mate an turn off 3X mode... (Ariane, can you provide this text)
   - id: 12
     stepNumber: 11
     activity: finish
