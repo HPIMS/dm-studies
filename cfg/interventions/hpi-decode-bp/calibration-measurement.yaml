@@ -143,8 +143,8 @@ protocol:
             value: 0
             operator: '>'
     timeout: 600
-    branchSuccess: 9
-    branchFailure: 8
+    branchSuccess: 10
+    branchFailure: 1002
     animation: true
   - id: 1002
     activity: waitForInput
