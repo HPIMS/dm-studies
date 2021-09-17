@@ -27,7 +27,7 @@ sdkDevices: []
 oAuthDevices:
   - withings
 protocol:
-  - id: 0
+  - id: 1
     activity: waitForPress
     stepNumber: 1
     text: >-
@@ -73,10 +73,30 @@ protocol:
           - key: diastolic
             value: 0
             operator: '>'
-    timeout: 480
+    timeout: 600
     branchSuccess: 6
-    branchFailure: 5
+    branchFailure: 1001
     animation: true
+  - id: 1001
+    activity: waitForInput
+    stepNumber: 5
+    text: >-
+      The app was unable to automatically retrieve your blood pressure
+      measurement. Please manually enter the values in the fields below.
+    buttonLabel: Submit
+    messageKey: BP_RECEIVED
+    data:
+      - label: Systolic
+        key: systolic
+        type: number
+        placeholder: '120'
+        labelWidth: 84
+      - label: Diastolic
+        key: diastolic
+        type: number
+        placeholder: '80'
+        labelWidth: 84
+    animation: false
   - id: 6
     activity: waitForChoice
     stepNumber: 6
@@ -92,15 +112,23 @@ protocol:
         branch: 5
     animation: false
   - id: 7
+    activity: waitForPress
     stepNumber: 7
+    text: >-
+      Place the Withings BPM Connect on your upper right arm. The white tube
+      should be positioned against your inner arm with the start button at the
+      bottom.
+    buttonLabel: Continue
+  - id: 8
+    stepNumber: 8
     activity: waitForTimer
     duration: 60
     showCountdown: true
     text: Continue to sit in a relaxed position for 1 minute.
     animation: true
-  - id: 8
+  - id: 9
     activity: subscribeToMessage
-    stepNumber: 8
+    stepNumber: 9
     text: >-
       Turn on your Withings BPM Connect and begin a measurement. The device will automatically
       record 3 measurements with 1 minute of rest in between. Please stay on this screen, it
@@ -114,36 +142,55 @@ protocol:
           - key: diastolic
             value: 0
             operator: '>'
-    timeout: 480
-    branchSuccess: 9
-    branchFailure: 8
+    timeout: 600
+    branchSuccess: 10
+    branchFailure: 1002
     animation: true
-  - id: 9
-    activity: waitForChoice
+  - id: 1002
+    activity: waitForInput
     stepNumber: 9
+    text: >-
+      The app was unable to automatically retrieve your blood pressure
+      measurement. Please manually enter the values in the fields below.
+    buttonLabel: Submit
+    messageKey: BP_RECEIVED
+    data:
+      - label: Systolic
+        key: systolic
+        type: number
+        placeholder: '120'
+        labelWidth: 84
+      - label: Diastolic
+        key: diastolic
+        type: number
+        placeholder: '80'
+        labelWidth: 84
+  - id: 10
+    activity: waitForChoice
+    stepNumber: 10
     text: >-
       Your blood pressure was measured to be {{systolic}}/{{diastolic}}. Would
       you like to accept or retake this measurement?
     choices:
       - label: Accept
-        branch: 10
+        branch: 11
       - label: Retake
         themeColor: danger
         action: rejectMessage
-        branch: 8
+        branch: 9
     animation: false
-  - id: 10
+  - id: 11
     activity: waitForTimer
     duration: 60
     showCountdown: true
-    stepNumber: 10
+    stepNumber: 11
     text: Continue to sit in a relaxed position for 1 minute.
     animation: true
-  - id: 11
+  - id: 12
     activity: waitForPress
-    stepNumber: 11
+    stepNumber: 12
     text: >-
       Open the Withings Health Mate an turn off 3X mode... (Ariane, can you provide this text)
-  - id: 12
-    stepNumber: 11
+  - id: 13
+    stepNumber: 13
     activity: finish
