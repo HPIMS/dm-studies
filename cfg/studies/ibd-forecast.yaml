@@ -23,26 +23,24 @@ surveys:
       type: DAILY
       graceDays: 1
     triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: baseline_demographics
-                question: ibd_type
-                operator: =
-                value: crohns
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: baseline_demographics::ibd_type
+            operator: =
+            score: crohns
   - key: pro-2-uc
     rank: 6
     schedule:
       type: DAILY
       graceDays: 1
     triggers:
-          - action:
-              type: HIDE
-            condition:
-              - section: baseline_demographics
-                question: ibd_type
-                operator: =
-                value: crohns
+      - action: HIDE
+        condition:
+          - type: SCORE
+            resource: baseline_demographics::ibd_type
+            operator: =
+            score: crohns
   - key: promis-gi-belly-pain
     rank: 7
     schedule:

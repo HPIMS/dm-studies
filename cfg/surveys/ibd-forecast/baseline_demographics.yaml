@@ -142,7 +142,7 @@ sections:
             text: Other
       - key: wearable_model
         question: Which model wearable device are you using?
-        type: 'NUMERIC'
+        type: 'TEXTAREA'
       - key: ibd_type
         question: Which type of IBD do you have?
         type: SINGLE_CHOICE
