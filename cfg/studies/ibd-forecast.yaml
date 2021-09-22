@@ -1,0 +1,60 @@
+key: ibd-forecast
+active: true
+platform:
+  - ios
+  - android
+name: "IBD Forecast"
+description: The main goal of the IBD Forecast study is to help us learn how to identify and predict flares in the hopes of transforming IBD care. 
+In the study, we collect data from your wearable device and through brief app-based surveys. 
+consentId: ehive-ibd-forecast
+baseline: []
+surveys:
+  - key: baseline_demographics
+    rank: 1
+  - key: baseline_health
+    rank: 2
+  - key: lab_tests
+    rank: 3
+  - key: new_meds
+    rank: 4
+  - key: pro-2-crohns
+    rank: 5
+    schedule:
+      type: DAILY
+      graceDays: 1
+    triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: baseline_demographics
+                question: ibd_type
+                operator: =
+                value: crohns
+  - key: pro-2-uc
+    rank: 6
+    schedule:
+      type: DAILY
+      graceDays: 1
+    triggers:
+          - action:
+              type: HIDE
+            condition:
+              - section: baseline_demographics
+                question: ibd_type
+                operator: =
+                value: crohns
+  - key: promis-gi-belly-pain
+    rank: 7
+    schedule:
+      type: PERIOD
+      period: BIWEEKLY
+  - key: promis-gi-diarrhea
+    rank: 8
+    schedule:
+      type: PERIOD
+      period: BIWEEKLY
+  - key: pss-4
+    rank: 9
+    schedule: 
+      type: PERIOD
+      period: BIWEEKLY
