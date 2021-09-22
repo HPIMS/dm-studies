@@ -30,34 +30,34 @@ sections:
     description: ""
     questions: 
     - key: stool_freq
-        question: Indicate your stool frequency (based on yesterday)
-        type: SINGLE_CHOICE
-        options:
-            - value: normal
+      question: Indicate your stool frequency (based on yesterday)
+      type: SINGLE_CHOICE
+      options:
+          - value: normal
             text: Normal
             score: 0
-            - value: 1_2_stools
+          - value: 1_2_stools
             text: 1-2 stools/day more than normal
             score: 1
-            - value: 3_4_stools
+          - value: 3_4_stools
             text: 3-4 stools/day more than normal
             score: 2
-            - value: over_4_stools
+          - value: over_4_stools
             text: Over 4 stools/day more than normal
             score: 3
     - key: bleeding_severity
-        question: Please indicate the severity of your rectal bleeding (based on yesterday)
-        type: SINGLE_CHOICE
-        options:
-            - value: no_blood
+      question: Please indicate the severity of your rectal bleeding (based on yesterday)
+      type: SINGLE_CHOICE
+      options:
+          - value: no_blood
             text: No blood seen
             score: 0
-            - value: less_than_half
+          - value: less_than_half
             text: Blood with stool less than half the time
             score: 1
-            - value: half_the_time
+          - value: half_the_time
             text: Blood with stool half of the time or more
             score: 2
-            - value: blood_alone
+          - value: blood_alone
             text: Passing blood alone (with no stool)(half or more stools have visible blood and one or more bowel movements with blood alone)
             score: 3
