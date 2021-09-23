@@ -93,7 +93,7 @@ sections:
               value: yes
     - key: new_med_dose
       question: What is the dose when you started the new medication (in mg)?
-      type: TEXTAREA
+      type: NUMERIC
       triggers:
             - action: 
                 type: SHOW
@@ -212,7 +212,7 @@ sections:
                   value: yes
     - key: stopping_dose
       question: What is the dose at stopping (in mg)?
-      type: TEXTAREA
+      type: NUMERIC
       triggers:
             - action: 
                 type: SHOW
@@ -319,7 +319,7 @@ sections:
               value: yes
     - key: change_dose_amt
       question: What is the new dose of the medication (in mg)?
-      type: TEXTAREA
+      type: NUMERIC
       triggers:
             - action: 
                 type: SHOW
