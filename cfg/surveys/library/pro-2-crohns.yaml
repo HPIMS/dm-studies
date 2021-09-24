@@ -1,0 +1,63 @@
+key: pro-2-crohns
+active: true
+scorable: true
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: DAILY
+timeEstimate: 1
+name: Crohn's Check-in
+short: Reflect on the past day
+intro:
+  title: Crohn's Check-in
+  description: We want to understand more about the past day. Please fill
+    out this survey and let us know. You may skip any questions that you are not
+    comfortable answering.
+
+    The surveys in this app are NOT a replacement or substitute for medical care.
+    The answers you provide will not be used for clinical care. For any health concerns
+    you may have, please contact your regular healthcare provider.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "pro-2-crohns"
+    title: ""
+    description: ""
+    questions: 
+    - key: stool_freq
+      question: Indicate your stool frequency (based on yesterday)
+      type: SINGLE_CHOICE
+      options:
+          - value: normal
+            text: Normal
+            score: 0
+          - value: 1_2_stools
+            text: 1-2 stools/day more than normal
+            score: 1
+          - value: 3_4_stools
+            text: 3-4 stools/day more than normal
+            score: 2
+          - value: over_4_stools
+            text: Over 4 stools/day more than normal
+            score: 3
+    - key: bleeding_severity
+      question: Please indicate the severity of your rectal bleeding (based on yesterday)
+      type: SINGLE_CHOICE
+      options:
+          - value: no_blood
+            text: No blood seen
+            score: 0
+          - value: less_than_half
+            text: Blood with stool less than half the time
+            score: 1
+          - value: half_the_time
+            text: Blood with stool half of the time or more
+            score: 2
+          - value: blood_alone
+            text: Passing blood alone (with no stool)(half or more stools have visible blood and one or more bowel movements with blood alone)
+            score: 3

@@ -1,0 +1,361 @@
+key: new_meds
+active: true
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeEstimate: 5
+name: Report a new, stopped, or altered medication
+short: "Enter info about your changed medication"
+intro:
+  title: "Report a new, stopped, or altered medication"
+  description: "Let us know if you have started, stopped, or adjusted a medication"
+outro:
+  title: "Report Complete"
+  description: "Thank you! Your participation is always valued."
+sections:
+    - key: "new_meds"
+      title: ""
+      description: ""
+      questions:
+        - key: start_med_yn
+          question: I started a new medication
+          type: SINGLE_CHOICE
+          options:
+          - value: yes
+            text: Yes
+          - value: no
+            text: No 
+    - key: new_med_name
+      question: What medication did you start? 
+      type: SINGLE_CHOICE
+      options: 
+          - value: corticosteroid
+            text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
+          - value: Budesonide
+            text: Budesonide (Entocort, Uceris)
+          - value: rectal_steroid
+            text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
+          - value: oral_5
+            text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
+          - value: Azulfidine
+            text: Azulfidine (Sulfasalazine)
+          - value: rectal_5
+            text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+          - value: Ciprofloxacin
+            text: Ciprofloxacin (to treat IBD)
+          - value: Flagyl
+            text: Flagyl (metronidazole) (to treat IBD)
+          - value: other_antibiotics
+            text: Other antibiotics prescribed for IBD
+          - value: Purethinol
+            text: Purethinol (6-MP) / Imuran (Azathioprine)
+          - value: Methotrexate
+            text: Methotrexate 
+          - value: Remicade
+            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+          - value: Humira
+            text: Humira (adalimumab)
+          - value: Cimzia
+            text: Cimzia (cetolizumab pegol)
+          - value: Simponi
+            text: Simponi (golimumab)
+          - value: Entyvio
+            text: Entyvio (vedolizumab)
+          - value: Ustekinumab
+            text: Ustekinumab (Stelara)
+          - value: tofacitinib
+            text: tofacitinib (Xeljanz)
+          - value: Ozanimod
+            text: Ozanimod (Zeposia)
+          - value: Imodium
+            text: Imodium (Ioperamide)
+          - value: lamotil
+            text: Lamotil (diphenoxylate/atropine)
+          - value: tincture_opium
+            text: Tincture of opium (DTO, opium tincture, morphine tincture)
+          - value: Cholestyramine
+            text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
+          - value: other
+            text: Other 
+            inlineQuestion:
+                key: which_med_other_description
+                question: "Please specify:"
+                type: TEXTAREA
+          - value: no_new_med
+            text: I did not start a new medication
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: start_med_yn
+              operator: =
+              value: yes
+    - key: new_med_dose
+      question: What is the dose when you started the new medication (in mg)?
+      type: NUMERIC
+      triggers:
+            - action: 
+                type: SHOW
+                condition:
+            - section: new_meds
+              question: start_med_yn
+              operator: =
+              value: yes
+    - key: new_med_freq
+      question: How often do you take the medication?
+      type: TEXTAREA
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: start_med_yn
+              operator: =
+              value: yes
+    - key: new_med_method
+      question: How is the medicine given to you?
+      type: SINGLE_CHOICE
+      options: 
+        - value: mouth
+          text: By mouth
+        - value: iv
+          text: In an IV (intravenous/in a vein)
+        - value: under_skin
+          text: Injected under the skin
+        - value: in_rectum
+          text: In the rectum
+      triggers:
+        - action: 
+            type: SHOW
+          condition:
+        - section: new_meds
+          question: start_med_yn
+          operator: =
+          value: yes
+    - key: new_med_start_date
+      question: When did you start the medication?
+      type: DATE
+      triggers:
+        - action: 
+            type: SHOW
+          condition:
+        - section: new_meds
+          question: start_med_yn
+          operator: =
+          value: yes
+    - key: stop_med_yn
+      question: I stopped a medication
+      type: SINGLE_CHOICE
+      options:
+        - value: yes
+          text: Yes
+        - value: no
+          text: No 
+    - key: med_name_stopped
+      question: What medication did you stop? 
+      type: SINGLE_CHOICE
+      options: 
+            - value: corticosteroid
+              text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
+            - value: Budesonide
+              text: Budesonide (Entocort, Uceris)
+            - value: rectal_steroid
+              text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
+            - value: oral_5
+              text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
+            - value: Azulfidine
+              text: Azulfidine (Sulfasalazine)
+            - value: rectal_5
+              text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            - value: Ciprofloxacin
+              text: Ciprofloxacin (to treat IBD)
+            - value: Flagyl
+              text: Flagyl (metronidazole) (to treat IBD)
+            - value: other_antibiotics
+              text: Other antibiotics prescribed for IBD
+            - value: Purethinol
+              text: Purethinol (6-MP) / Imuran (Azathioprine)
+            - value: Methotrexate
+              text: Methotrexate 
+            - value: Remicade
+              text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+            - value: Humira
+              text: Humira (adalimumab)
+            - value: Cimzia
+              text: Cimzia (cetolizumab pegol)
+            - value: Simponi
+              text: Simponi (golimumab)
+            - value: Entyvio
+              text: Entyvio (vedolizumab)
+            - value: Ustekinumab
+              text: Ustekinumab (Stelara)
+            - value: tofacitinib
+              text: tofacitinib (Xeljanz)
+            - value: Ozanimod
+              text: Ozanimod (Zeposia)
+            - value: other
+              text: Other 
+              inlineQuestion:
+                key: which_med_other_description
+                question: "Please specify:"
+                type: TEXTAREA
+            - value: no_new_med
+              text: I did not stop a medication
+              triggers:
+                - action: 
+                    type: SHOW
+                  condition:
+                - section: new_meds
+                  question: stop_med_yn
+                  operator: =
+                  value: yes
+    - key: stopping_dose
+      question: What is the dose at stopping (in mg)?
+      type: NUMERIC
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: stop_med_yn
+              operator: =
+              value: yes
+    - key: stop_med_freq 
+      question: How often did you take the medication?
+      type: TEXTAREA
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: stop_med_yn
+              operator: =
+              value: yes
+    - key: stop_med_date
+      question: When did you stop the medication?
+      type: DATE
+      triggers:
+            - action: 
+                type: SHOW
+                condition:
+            - section: new_meds
+              question: stop_med_yn
+              operator: =
+              value: yes
+    - key: change_med_dose_yn
+      question: I changed the dose of a medication I am taking
+      type: SINGLE_CHOICE
+      options: 
+            - value: yes
+              text: Yes
+            - value: no
+              text: No
+    - key: change_med_dose_name
+      question: What medication did you change the dose of?
+      type: SINGLE_CHOICE
+      options: 
+            - value: corticosteroid
+              text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
+            - value: Budesonide
+              text: Budesonide (Entocort, Uceris)
+            - value: rectal_steroid
+              text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
+            - value: oral_5
+              text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
+            - value: Azulfidine
+              text: Azulfidine (Sulfasalazine)
+            - value: rectal_5
+              text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            - value: Ciprofloxacin
+              text: Ciprofloxacin (to treat IBD)
+            - value: Flagyl
+              text: Flagyl (metronidazole) (to treat IBD)
+            - value: other_antibiotics
+              text: Other antibiotics prescribed for IBD
+            - value: Purethinol
+              text: Purethinol (6-MP) / Imuran (Azathioprine)
+            - value: Methotrexate
+              text: Methotrexate 
+            - value: Remicade
+              text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+            - value: Humira
+              text: Humira (adalimumab)
+            - value: Cimzia
+              text: Cimzia (cetolizumab pegol)
+            - value: Simponi
+              text: Simponi (golimumab)
+            - value: Entyvio
+              text: Entyvio (vedolizumab)
+            - value: Ustekinumab
+              text: Ustekinumab (Stelara)
+            - value: tofacitinib
+              text: tofacitinib (Xeljanz)
+            - value: Ozanimod
+              text: Ozanimod (Zeposia)
+            - value: Imodium
+              text: Imodium (Ioperamide)
+            - value: lamotil
+              text: Lamotil (diphenoxylate/atropine)
+            - value: tincture_opium
+              text: Tincture of opium (DTO, opium tincture, morphine tincture)
+            - value: Cholestyramine
+              text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
+            - value: other
+              text: Other 
+              inlineQuestion:
+                key: which_med_other_description
+                question: "Please specify:"
+                type: TEXTAREA
+            - value: no_new_dose
+              text: I did not change my medication dosage
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: change_med_dose_yn
+              operator: =
+              value: yes
+    - key: change_dose_amt
+      question: What is the new dose of the medication (in mg)?
+      type: NUMERIC
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: change_med_dose_yn
+              operator: =
+              value: yes
+    - key: change_dose_freq
+      question: How often do you take the medication?
+      type: TEXTAREA
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: change_med_dose_yn
+              operator: =
+              value: yes
+    - key: change_dose_method
+      question: How is the medicine given to you?
+      type: SINGLE_CHOICE
+      options:
+            - value: mouth
+              text: By mouth
+            - value: iv
+              text: In an IV (intravenous/in a vein)
+            - value: under_skin
+              text: Injected under the skin
+            - value: in_rectum
+              text: In the rectum
+      triggers:
+            - action: 
+                type: SHOW
+              condition:
+            - section: new_meds
+              question: change_med_dose_yn
+              operator: =
+              value: yes
