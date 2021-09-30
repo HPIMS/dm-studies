@@ -3,20 +3,20 @@ active: true
 schedule:
   type: PERIOD
   period: ONCE
-timeEstimate: 10
+timeEstimate: 15
 name: Blood Pressure Calibration
 short: Complete the calibration procedure
 intro:
   title: Blood Pressure Calibration
   description: Please make sure your bladder is empty and that you have not smoked,
     exercised, drunk caffeine or taken any medication that could alter your blood pressure
-    in the past 30 minutes.Also, make sure you are in a quiet room with a table, chair and
+    in the past 30 minutes. Also, make sure you are in a quiet room with a table, chair and
     a comfortable temperature.
 outro:
   title: Session Complete
   description: >-
     The blood pressure calibration session is complete. You may now turn off and remove the
-    wearable devices. Thank you.
+    blood pressure device. Thank you.
 survey:
   key: hpi-decode-bp::clearance
   score:
@@ -31,7 +31,7 @@ protocol:
     activity: waitForPress
     stepNumber: 1
     text: >-
-      You have been cleared to complete a the calibration procedure. Please press Begin to start.
+      You have been cleared to complete the calibration procedure. Please press Begin to start.
     buttonLabel: Begin
   - id: 2
     activity: waitForPress
@@ -44,8 +44,7 @@ protocol:
   - id: 3
     activity: waitForPress
     stepNumber: 3
-    text: >-
-      Open the Withings Health Mate an turn on 3X mode... (Ariane, can you provide this text)
+    text: On the Withings BPM Connect device press the button to turn it on and then give it a long press to go from single BP mode to BP x3 mode. You should see the text change from BP to BP x3.
     buttonLabel: Continue
   - id: 4
     activity: waitForTimer
@@ -189,8 +188,7 @@ protocol:
   - id: 12
     activity: waitForPress
     stepNumber: 12
-    text: >-
-      Open the Withings Health Mate an turn off 3X mode... (Ariane, can you provide this text)
+    text: On the Withings BPM Connect device press the button to turn it on and then give it a long press to go back from BP x3 mode to normal BP mode. You should see the text change from BP x3 to BP only. Press the button again to turn off the device.
     buttonLabel: Continue
   - id: 13
     stepNumber: 13

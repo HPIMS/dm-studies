@@ -5,20 +5,20 @@ schedule:
   timetable: [0, 1, 2, 3, 4, 5, 6]
   timetableUnits: DAYS
   timeOfDay: [['0001', '1459'], ['1500', '2359']]
-timeEstimate: 10
+timeEstimate: 15
 name: Blood Pressure Measurement
 short: Record a blood pressure measurement
 intro:
   title: Blood Pressure Measurement
   description: Please make sure your bladder is empty and that you have not smoked,
     exercised, drunk caffeine or taken any medication that could alter your blood pressure
-    in the past 30 minutes.Also, make sure you are in a quiet room with a table, chair and
+    in the past 30 minutes. Also, make sure you are in a quiet room with a table, chair and
     a comfortable temperature.
 outro:
   title: Session Complete
   description: >-
     The blood pressure session is complete. You may now turn off and remove the
-    wearable devices. Thank you.
+    wearable devices. The Empatica and Polar devices are off when there is no green light blinking. Thank you.
 survey:
   key: hpi-decode-bp::clearance
   score:
