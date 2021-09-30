@@ -299,7 +299,7 @@ async function processStudies() {
       name: data.name,
       description: data.description,
       consentId: data.consentId,
-      sutdyEmail: data.studyEmail,
+      studyEmail: data.studyEmail,
       wearables: data.wearables,
       platform: data.platform,
     });
