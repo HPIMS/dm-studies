@@ -42,20 +42,20 @@ protocol:
       bottom.
     buttonLabel: Continue
   - id: 3
-    activity: waitForPress
-    stepNumber: 3
-    text: On the Withings BPM Connect device press the button to turn it on and then give it a long press to go from single BP mode to BP x3 mode. You should see the text change from BP to BP x3.
-    buttonLabel: Continue
-  - id: 4
     activity: waitForTimer
     duration: 300
     showCountdown: true
-    stepNumber: 4
+    stepNumber: 3
     text: >-
       Please sit and relax for 5 minutes: arm resting on the table with mid-arm
       at heart level; back supported on the chair; legs uncrossed and feet flat
       on the floor.
     animation: true
+  - id: 4
+    activity: waitForPress
+    stepNumber: 4
+    text: On the Withings BPM Connect device press the button to turn it on and then give it a long press to go from single BP mode to BP x3 mode. You should see the text change from BP to BP x3.
+    buttonLabel: Continue
   - id: 5
     activity: subscribeToMessage
     stepNumber: 5
