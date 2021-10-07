@@ -60,7 +60,7 @@ protocol:
     activity: subscribeToMessage
     stepNumber: 5
     text: >-
-      Turn on your Withings BPM Connect and begin a measurement. The device will automatically
+      Turn on your Withings BPM Connect, press the button again and begin a measurement. Please, remain silent and stay on this screen, it will automatically
       record 3 measurements with 1 minute of rest in between. Please stay on this screen, it
       will update automatically when the blood pressure measurement is received.
     messageKey: BP_RECEIVED
@@ -129,7 +129,7 @@ protocol:
     activity: subscribeToMessage
     stepNumber: 9
     text: >-
-      Turn on your Withings BPM Connect and begin a measurement. The device will automatically
+      Turn on your Withings BPM Connect, press the button again and begin a measurement. Please, remain silent and stay on this screen, it will automatically
       record 3 measurements with 1 minute of rest in between. Please stay on this screen, it
       will update automatically when the blood pressure measurement is received.
     messageKey: BP_RECEIVED
