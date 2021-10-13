@@ -30,7 +30,7 @@ surveys:
           - type: SCORE
             resource: baseline_demographics::ibd_type
             operator: =
-            score: crohns
+            score: 0
   - key: pro-2-uc
     rank: 6
     schedule:
@@ -42,7 +42,7 @@ surveys:
           - type: SCORE
             resource: baseline_demographics::ibd_type
             operator: =
-            score: crohns
+            score: 0
   - key: promis-gi-belly-pain
     rank: 7
     schedule:
@@ -58,3 +58,19 @@ surveys:
     schedule: 
       type: PERIOD
       period: BIWEEKLY
+requiredData:
+  ActiveEnergyBurned: HKQuantityTypeIdentifier
+  AppleExerciseTime: HKQuantityTypeIdentifier
+  HeartRate: HKQuantityTypeIdentifier
+  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
+  RestingHeartRate: HKQuantityTypeIdentifier
+  WalkingHeartRateAverage: HKQuantityTypeIdentifier
+  OxygenSaturation: HKQuantityTypeIdentifier
+  StepCount: HKQuantityTypeIdentifier
+  AppleStandTime: HKQuantityTypeIdentifier
+  EnvironmentalAudioExposure: HKQuantityTypeIdentifier
+  SleepAnalysis: HKQuantityTypeIdentifier
+  DietaryEnergyConsumed: HKQuantityTypeIdentifier
+  BloodPressureDiastolic: HKQuantityTypeIdentifier
+  BloodPressureSystolic: HKQuantityTypeIdentifier
+  BloodGlucose: HKQuantityTypeIdentifier

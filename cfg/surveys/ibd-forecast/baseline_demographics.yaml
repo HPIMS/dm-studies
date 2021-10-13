@@ -1,4 +1,5 @@
 key: baseline_demographics
+scorable: true
 active: true
 schedule:
   type: PERIOD
@@ -149,10 +150,13 @@ sections:
         options:
           - value: crohns
             text: Chrohn's Disease
+            score: 0
           - value: ulcerative_colitis
             text: Ulcerative colitis
+            score: 1
           - value: indeterminate
             text: Indeterminate colitis
+            score: 1
       - key: email_address
         question: What is your email address?
         type: TEXTAREA
