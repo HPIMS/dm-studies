@@ -17,6 +17,16 @@ sections:
     title: ""
     description: ""
     questions:
+      - key: sex
+        question: Sex (as in the birth certificate) 
+        type: SINGLE_CHOICE
+        options:
+          - value: female
+            text: Female
+          - value: male
+            text: Male
+          - value: other
+            text: Other
       - key: height_in_inch
         question: What is your height in inches?
         type: HEIGHT
