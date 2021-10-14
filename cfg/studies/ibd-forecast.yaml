@@ -9,6 +9,11 @@ name: "IBD Forecast"
 description: The main goal of the IBD Forecast study is to help us learn how to identify and predict flares in the hopes of transforming IBD care. 
   In the study, we collect data from your wearable device and through brief app-based surveys. 
 consentId: ehive-ibd-forecast
+withdrawText: |-
+  Thank you for participating in the IBD Forecast study! We value your time and effort, and appreciate your contribution to IBD research.
+wearables:
+  - fitbit
+  - oura
 baseline: []
 surveys:
   - key: baseline_demographics
