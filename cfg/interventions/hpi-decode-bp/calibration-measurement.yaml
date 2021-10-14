@@ -179,17 +179,10 @@ protocol:
         branch: 9
     animation: false
   - id: 11
-    activity: waitForTimer
-    duration: 60
-    showCountdown: true
-    stepNumber: 11
-    text: Continue to sit in a relaxed position for 1 minute.
-    animation: true
-  - id: 12
     activity: waitForPress
-    stepNumber: 12
+    stepNumber: 11
     text: On the Withings BPM Connect device press the button to turn it on and then give it a long press to go back from BP x3 mode to normal BP mode. You should see the text change from BP x3 to BP only. Press the button again to turn off the device.
     buttonLabel: Continue
-  - id: 13
-    stepNumber: 13
+  - id: 12
+    stepNumber: 12
     activity: finish
