@@ -33,40 +33,40 @@ sections:
         question: How many days did you have loose or watery stools?
         type: SINGLE_CHOICE
         options:
-            - value: none
-              text: No days
-              score: 1
-            - value: one_day
-              text: 1 day
-              score: 2
-            - value: two_days
-              text: 2 days
-              score: 3
-            - value: 3_5_days
-              text: 3-5 days
-              score: 4
-            - value: 6_7_days
-              text: 6-7 days
-              score: 5
+          - value: none
+            text: No days
+            score: 1
+          - value: one_day
+            text: 1 day
+            score: 2
+          - value: two_days
+            text: 2 days
+            score: 3
+          - value: 3_5_days
+            text: 3-5 days
+            score: 4
+          - value: 6_7_days
+            text: 6-7 days
+            score: 5
       - key: interfere_d2d_loose
         question: How much did having loose or watery stools interfere with your day-to-day activities? 
         type: SINGLE_CHOICE
         options: 
-            - value: not_at_all
-              text: Not at all
-              score: 1
-            - value: little_bit
-              text: A little bit
-              score: 2
-            - value: somewhat
-              text: somewhat
-              score: 3
-            - value: quite_bit
-              text: Quite a bit
-              score: 4
-            - value: very_much
-              text: Very much
-              score: 5
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
         triggers:
           - action:
               type: HIDE
@@ -79,21 +79,21 @@ sections:
         question: How much did having loose or watery stools bother you?
         type: SINGLE_CHOICE
         options:
-            - value: not_at_all
-              text: Not at all
-              score: 1
-            - value: little_bit
-              text: A little bit
-              score: 2
-            - value: somewhat
-              text: somewhat
-              score: 3
-            - value: quite_bit
-              text: Quite a bit
-              score: 4
-            - value: very_much
-              text: Very much
-              score: 5
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
         triggers:
           - action:
               type: HIDE
@@ -106,40 +106,40 @@ sections:
         question: How often did you feel like you needed to empty your bowels right away or else you would have an accident?
         type: SINGLE_CHOICE
         option:
-            - value: never  
-              text: Never
-              score: 1
-            - value: one_time
-              text: One time during the past 7 days
-              score: 2
-            - value: 2_6_times
-              text: 2-6 times during the past 7 days
-              score: 3
-            - value: once_per_day
-              text: Often once a day
-              score: 4
-            - value: over_once_daily
-              text: More than once per day
-              score: 5
+          - value: never  
+            text: Never
+            score: 1
+          - value: one_time
+            text: One time during the past 7 days
+            score: 2
+          - value: 2_6_times
+            text: 2-6 times during the past 7 days
+            score: 3
+          - value: once_per_day
+            text: Often once a day
+            score: 4
+          - value: over_once_daily
+            text: More than once per day
+            score: 5
       - key: immediate_interfere_d2d
         question: How much did feeling like you needed to empty your bowels right away interfere with your day-to-day activities?
         type: SINGLE_CHOICE
         options:
-            - value: not_at_all
-              text: Not at all
-              score: 1
-            - value: little_bit
-              text: A little bit
-              score: 2
-            - value: somewhat
-              text: somewhat
-              score: 3
-            - value: quite_bit
-              text: Quite a bit
-              score: 4
-            - value: very_much
-              text: Very much
-              score: 5
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
         triggers:
           - action:
               type: HIDE
@@ -152,21 +152,21 @@ sections:
         question: How much did feeling like you needed to empty your bowels right away bother you? 
         type: SINGLE_CHOICE
         options:
-            - value: not_at_all
-              text: Not at all
-              score: 1
-            - value: little_bit
-              text: A little bit
-              score: 2
-            - value: somewhat
-              text: somewhat
-              score: 3
-            - value: quite_bit
-              text: Quite a bit
-              score: 4
-            - value: very_much
-              text: Very much
-              score: 5
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
         triggers:
           - action:
               type: HIDE
@@ -175,3 +175,4 @@ sections:
                 question: immediate_accident
                 operator: =
                 value: never
+
