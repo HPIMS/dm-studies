@@ -87,10 +87,10 @@ sections:
           - action: 
               type: SHOW
             condition:
-          - section: new_meds
-            question: start_med_yn
-            operator: =
-            value: yes
+              - section: new_meds
+                question: start_med_yn
+                operator: =
+                value: yes
       - key: new_med_dose
         question: What is the dose when you started the new medication (in mg)?
         type: NUMERIC
@@ -106,13 +106,13 @@ sections:
         question: How often do you take the medication?
         type: TEXTAREA
         triggers:
-              - action: 
-                  type: SHOW
-                condition:
-                  - section: new_meds
-                    question: start_med_yn
-                    operator: =
-                    value: yes
+          - action: 
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: start_med_yn
+                operator: =
+                value: yes
       - key: new_med_method
         question: How is the medicine given to you?
         type: SINGLE_CHOICE
@@ -202,14 +202,14 @@ sections:
               type: TEXTAREA
           - value: no_new_med
             text: I did not stop a medication
-            triggers:
-              - action: 
-                  type: SHOW
-                condition:
-                  - section: new_meds
-                    question: stop_med_yn
-                    operator: =
-                    value: yes
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stop_med_yn
+                operator: =
+                value: yes
       - key: stopping_dose
         question: What is the dose at stopping (in mg)?
         type: NUMERIC
