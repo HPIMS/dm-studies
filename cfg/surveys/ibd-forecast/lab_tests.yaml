@@ -29,7 +29,7 @@ sections:
               text: Fecal calprotectin
         - key: c_reactive_value
           question: What is your C-reactive protein?
-          type: NUMERIC
+          type: 'NUMERIC'
           triggers:
               - action: 
                   type: SHOW
@@ -51,7 +51,7 @@ sections:
                 value: c_reactive
         - key: erythrocyte_value
           question: What is your erythrocyte sedimentation rate (ESR)?
-          type: NUMERIC
+          type: 'NUMERIC'
           triggers:
               - action:
                   type: SHOW

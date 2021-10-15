@@ -316,7 +316,7 @@ sections:
             score: 3
       - key: soft_stool_count
         question: How many liquid or very soft stools did you have today? 
-        type: NUMERIC
+        type: 'NUMERIC'
       - key: abdominal_pain_rating
         question: Please rate your abdominal pain today.
         type: SINGLE_CHOICE
