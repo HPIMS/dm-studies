@@ -23,7 +23,7 @@ sections:
         type: DATE
       - key: state
         question: What state do you live in?
-        type: SINGLE_CHOICE
+        type: 'TEXTAREA'
       - key: zipcode
         question: What is your zip code?
         type: 'NUMERIC'
@@ -364,7 +364,7 @@ sections:
             inlineQuestion:
               key: which_med_other_description
               question: "Please specify:"
-              type: TEXTAREA
+              type: 'TEXTAREA'
           - value: no_past_meds
             text: I have not take any medications before the medications I am currently using
       - key: meds_now
@@ -424,7 +424,7 @@ sections:
             inlineQuestion:
               key: which_med_other_description
               question: "Please specify:"
-              type: TEXTAREA
+              type: 'TEXTAREA'
       - key: current_dose
         question: What is the current dose of your medication (in mg)?
         type: NUMERIC
@@ -438,7 +438,7 @@ sections:
                 value: no_current_meds
       - key: med_schedule
         question: How often do you take the medication?
-        type: TEXTAREA
+        type: 'TEXTAREA'
         triggers:
           - action:
               type: HIDE
