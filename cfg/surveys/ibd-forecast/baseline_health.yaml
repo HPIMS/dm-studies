@@ -94,7 +94,7 @@ sections:
       - key: immediate_accident
         question: In the past 7 days, how often did you feel like you needed to empty your bowels right away or else you would have an accident?
         type: SINGLE_CHOICE
-        option:
+        options:
           - value: never  
             text: Never
             score: 1

@@ -34,10 +34,10 @@ sections:
           - action: 
               type: SHOW
             condition:
-          - section: lab_tests
-            question: new_test_yn
-            operator: INCLUDES
-            value: c_reactive
+              - section: lab_tests
+                question: new_test_yn
+                operator: INCLUDES
+                value: c_reactive
       - key: c_reactive_date
         question: What is the date this blood test was drawn?
         type: DATE
@@ -45,10 +45,10 @@ sections:
           - action: 
               type: SHOW
             condition:
-          - section: lab_tests
-            question: new_test_yn
-            operator: INCLUDES
-            value: c_reactive
+              - section: lab_tests
+                question: new_test_yn
+                operator: INCLUDES
+                value: c_reactive
       - key: erythrocyte_value
         question: What is your erythrocyte sedimentation rate (ESR)?
         type: NUMERIC
