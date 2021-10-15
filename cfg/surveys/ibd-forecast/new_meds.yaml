@@ -23,7 +23,7 @@ sections:
         options:
           - value: yes
             text: Yes
-          - value: no
+          - value: nox
             text: No 
       - key: new_med_name
         question: What medication did you start? 
@@ -97,11 +97,11 @@ sections:
         triggers:
           - action: 
               type: SHOW
-              condition:
-                - section: new_meds
-                  question: start_med_yn
-                  operator: =
-                  value: yes
+            condition:
+              - section: new_meds
+                question: start_med_yn
+                operator: =
+                value: yes
       - key: new_med_freq
         question: How often do you take the medication?
         type: TEXTAREA
@@ -238,11 +238,11 @@ sections:
         triggers:
           - action: 
               type: SHOW
-              condition:
-                - section: new_meds
-                  question: stop_med_yn
-                  operator: =
-                  value: yes
+            condition:
+              - section: new_meds
+                question: stop_med_yn
+                operator: =
+                value: yes
       - key: change_med_dose_yn
         question: I changed the dose of a medication I am taking
         type: SINGLE_CHOICE
