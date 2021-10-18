@@ -1,4 +1,5 @@
 key: baseline_health
+scorable: true
 active: true
 schedule:
   type: PERIOD
@@ -93,7 +94,7 @@ sections:
       - key: immediate_accident
         question: In the past 7 days, how often did you feel like you needed to empty your bowels right away or else you would have an accident?
         type: SINGLE_CHOICE
-        option:
+        options:
           - value: never  
             text: Never
             score: 1
@@ -564,8 +565,7 @@ sections:
             text: Very Often
             score: 0
       - key: your_way
-        question: In the last month, how often have you felt that things were going your
-          way?
+        question: In the last month, how often have you felt that things were going your way?
         type: SINGLE_CHOICE
         options:
           - value: never

@@ -162,7 +162,7 @@ sections:
         type: TEXTAREA
       - key: crohns_diagnosis
         question: What year were you diagnosed with Crohn's disease?
-        type: year
+        type: YEAR
         triggers:
           - action:
               type: SHOW
@@ -247,12 +247,12 @@ sections:
         question: Has the upper portion of your gastrointestinal tract been affected by Crohn's disease? 
         type: SINGLE_CHOICE
         options:
-            - value: yes
-              text: Yes
-            - value: no
-              text: No
-            - value: dont_know
-              text: I don't know
+          - value: yes
+            text: Yes
+          - value: no
+            text: No
+          - value: dont_know
+            text: I don't know
         triggers:
           - action:
               type: SHOW

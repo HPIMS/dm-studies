@@ -38,13 +38,13 @@ sections:
                 question: new_test_yn
                 operator: INCLUDES
                 value: c_reactive
-        - key: c_reactive_date
-          question: What is the date this blood test was drawn?
-          type: DATE
-          triggers:
-              - action: 
-                  type: SHOW
-                condition:
+      - key: c_reactive_date
+        question: What is the date this blood test was drawn?
+        type: DATE
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
               - section: lab_tests
                 question: new_test_yn
                 operator: INCLUDES
