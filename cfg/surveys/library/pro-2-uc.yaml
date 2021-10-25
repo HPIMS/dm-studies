@@ -24,27 +24,27 @@ intro:
 outro:
   title: Thank you!
   description: We appreciate your participation.
-  sections:
-    - key: "pro-2-uc"
-      title: ""
-      description: ""
-      questions: 
-      - key: soft_stool_count
-        question: How many liquid or very soft stools did you have today? 
-        type: NUMERIC
-      - key: abdominal_pain_rating
-        question: Please rate your abdominal pain today.
-        type: SINGLE_CHOICE
-        options:
-          - value: none
-            text: None
-            score: 0
-          - value: mild
-            text: Mild
-            score: 1
-          - value: moderate
-            text: Moderate
-            score: 2
-          - value: severe
-            text: Severe
-            score: 3
+sections:
+- key: "pro-2-uc"
+  title: ""
+  description: ""
+  questions:
+  - key: soft_stool_count
+    question: How many liquid or very soft stools did you have today?
+    type: NUMERIC
+  - key: abdominal_pain_rating
+    question: Please rate your abdominal pain today.
+    type: SINGLE_CHOICE
+    options:
+      - value: none
+        text: None
+        score: 0
+      - value: mild
+        text: Mild
+        score: 1
+      - value: moderate
+        text: Moderate
+        score: 2
+      - value: severe
+        text: Severe
+        score: 3

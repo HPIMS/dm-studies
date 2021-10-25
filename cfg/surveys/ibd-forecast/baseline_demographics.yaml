@@ -162,7 +162,7 @@ sections:
         type: "EMAIL"
       - key: crohns_diagnosis
         question: What year were you diagnosed with Crohn's disease?
-        type: YEAR
+        type: BIRTH_YEAR
         triggers:
           - action:
               type: SHOW
