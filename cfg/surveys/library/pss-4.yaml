@@ -3,7 +3,7 @@ scorable: true
 active: true
 metadata:
   author: ""
-  instrument: "PSS-10"
+  instrument: "PSS-4"
   version: ""
   references: []
 schedule:
@@ -11,16 +11,18 @@ schedule:
   period: MONTHLY
 timeEstimate: 2
 name: Stress
-short: "Tell us about your stress over the last month"
+short: "Share information about your stress"
 intro:
   title: "Stress"
   description: |-
-    The questions in this survey ask you about your feelings and thoughts during the LAST MONTH. In each case, please select your response by choosing the answer that represents how often you felt or thought a certain way.
-  
-    The surveys in this app are NOT a replacement or substitute for medical care. The answers you provide will not be used for clinical care. For any health concerns you may have, please contact your regular healthcare provider.
+    The questions in this scale ask you about your feelings and
+    thoughts during the last month.
+    
+    In each case, please select your response by choosing the answer that
+    represents how often you felt or thought a certain way.
 outro:
-  title: Thank you!
-  description: We appreciate your participation.
+  title: Thank you for your continued participation
+  description: You are a valued member of our study!
 sections:
   - key: "questions"
     title: ""
