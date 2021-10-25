@@ -1,0 +1,17 @@
+key: intervention-video-always
+active: true
+schedule:
+  type: PERIOD
+  period: ALWAYS
+type: video
+timeEstimate: 5
+name: Intervention Help
+short: How to use your wearable devices
+intro:
+  title: How to Wear the Devices
+  description: This video tutorial is the same as the one you watched the first time you did the intervention. Watch it again at any time for help on how to wear the devices.
+outro:
+  title: "Thank you!"
+  description: "Thanks for watching!"
+resizeMode: contain
+rate: 1

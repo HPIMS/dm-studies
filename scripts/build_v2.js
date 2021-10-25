@@ -34,6 +34,7 @@ async function copyDirectory(srcDir, destDir) {
 
 const dftSurveyCfg = {};
 const dftMultimediaCfg = {};
+const dftInterventionCfg = {};
 
 const defaultGraceDays = {
   ALWAYS: 0,
@@ -189,6 +190,85 @@ async function processMultimedia() {
   );
 }
 
+async function processInterventions() {
+  log.info("*****************************************");
+  log.info("****    Building Interventions       ****");
+  log.info("*****************************************");
+  const index = [];
+
+  const interventionsDir = path.join(__dirname, "../cfg/interventions");
+  const distDir = path.join(__dirname, "../dist/v2");
+
+  const interventions = Object.keys(versions.active.interventions);
+
+  const promises = interventions.map(async (interventionKey) => {
+    let study;
+    [, study, intervention] = interventionKey.match(/^(.*?)::(.*)/) || [
+      ,
+      null,
+      interventionKey,
+    ];
+    const cfg = await fs.promises.readFile(
+      `${interventionsDir}/${study}/${intervention}.yaml`,
+      {
+        encoding: "utf-8",
+      }
+    );
+
+    const version = versions.active.interventions[interventionKey][1];
+
+    log.info(`[${interventionKey}] Processing`);
+
+    const { name, short, schedule, timeEstimate, type, ...data } =
+      YAML.parse(cfg);
+
+    // Remove configs we don't need
+    delete data.active;
+
+    // set additional configs
+    data.version = version;
+
+    // add default grace days to the schedule for "PERIOD" schedules
+    if (schedule.type === "PERIOD" && !schedule.graceDays) {
+      schedule.graceDays = defaultGraceDays[schedule.period];
+    }
+
+    const interventionCfg = {
+      version,
+      type,
+      schedule,
+      timeEstimate,
+      name,
+      short,
+      editable: data.editable,
+    };
+    dftMultimediaCfg[interventionKey] = interventionCfg;
+
+    log.info(`[${interventionKey}] Adding to interventions index.`);
+    index.push({
+      key: interventionKey,
+      type,
+      version,
+      name,
+      description: short,
+    });
+
+    log.important(
+      `[${interventionKey}] Finished processing. Writing ${interventionKey}.json`
+    );
+    await fs.promises.writeFile(
+      `${distDir}/interventions/${interventionKey}.json`,
+      JSON.stringify({ ...data, key: interventionKey })
+    );
+  });
+
+  await Promise.all(promises);
+  await fs.promises.writeFile(
+    `${distDir}/interventions/index.json`,
+    JSON.stringify(index)
+  );
+}
+
 async function processStudies() {
   log.info("*****************************************");
   log.info("****        Building Studies         ****");
@@ -288,13 +368,47 @@ async function processStudies() {
       };
     });
 
+    const interventionTasks = (data.interventions || []).map((intervention) => {
+      const reqInterventionKey =
+        typeof intervention === "string" ? intervention : intervention.key;
+
+      let actualInterventionKey;
+      if (versions.active.interventions[`${study}::${reqInterventionKey}`]) {
+        actualInterventionKey = `${study}::${reqInterventionKey}`;
+      } else if (
+        versions.active.interventions[`library::${reqInterventionKey}`]
+      ) {
+        actualInterventionKey = `library::${reqInterventionKey}`;
+      } else {
+        return undefined;
+      }
+
+      // If we've defined the survey in the study config as a string
+      // it means we just want to take all defaults.
+      if (typeof intervention === "string") {
+        return {
+          key: actualInterventionKey,
+          ...dftInterventionCfg[actualInterventionKey],
+        };
+      }
+      // Otherwise, we'll override the default with our custom configs
+      return {
+        ...dftInterventionCfg[actualInterventionKey],
+        ...intervention,
+        key: actualInterventionKey,
+      };
+    });
+
     delete data.baseline;
     delete data.surveys;
     delete data.multimedia;
+    delete data.interventions;
 
-    data.tasks = [...surveyTasks, ...multimediaTasks].filter(
-      (o) => o !== undefined
-    );
+    data.tasks = [
+      ...surveyTasks,
+      ...multimediaTasks,
+      ...interventionTasks,
+    ].filter((o) => o !== undefined);
 
     log.info(`[${study}] Adding to study index.`);
     index.push({
@@ -333,9 +447,11 @@ async function build() {
     mkdir(`${distDir}/studies`),
     mkdir(`${distDir}/surveys`),
     mkdir(`${distDir}/multimedia`),
+    mkdir(`${distDir}/interventions`),
   ]);
   await processSurveys();
   await processMultimedia();
+  await processInterventions();
   await processStudies();
   await copyDirectory(
     path.join(__dirname, "../cfg/images"),

@@ -1,0 +1,44 @@
+key: demographics
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+timeEstimate: 5
+name: Demographics
+short: "About You"
+intro:
+  title: "Demographics"
+  description: "Tell us about yourself by answering the following questions."
+outro:
+  title: "Thank you!"
+  description: "Thank you for completing this task! Your participation is always valued."
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: sex
+        question: Sex (as in the birth certificate) 
+        type: SINGLE_CHOICE
+        options:
+          - value: female
+            text: Female
+          - value: male
+            text: Male
+          - value: other
+            text: Other
+      - key: height_in_inch
+        question: What is your height in inches?
+        type: HEIGHT
+      - key: weight_in_pounds
+        question: What is your weight in pounds?
+        type: WEIGHT
+      - key: age
+        question: "What is your age?"
+        type: NUMERIC
+      - key: right_wrist_circumference
+        question: Using the measuring tape in the box, what is your right wrist circumference in inches?
+        type: NUMERIC
+      - key: right_upper_arm_circumference
+        question: Using the measuring tape in the box, what is your right upper arm circumference in inches?
+        type: NUMERIC
