@@ -159,7 +159,7 @@ sections:
             score: 1
       - key: email_address
         question: What is your email address?
-        type: TEXT
+        type: "EMAIL"
       - key: crohns_diagnosis
         question: What year were you diagnosed with Crohn's disease?
         type: YEAR
