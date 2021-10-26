@@ -1,7 +1,7 @@
 key: pss-4
 scorable: true
 active: true
-metadata: 
+metadata:
   author: ""
   instrument: "PSS-4"
   version: ""
@@ -11,11 +11,11 @@ schedule:
   period: MONTHLY
 timeEstimate: 2
 name: Stress
-short: Share information about your stress
+short: "Tell us about your stress over the last month"
 intro:
-  title: Stress
+  title: "Stress"
   description: |-
-  The questions in this scale ask you about your feelings and
+    The questions in this scale ask you about your feelings and
     thoughts during the last month.
     
     In each case, please select your response by choosing the answer that
@@ -108,3 +108,4 @@ sections:
           - value: very_often
             text: Very Often
             score: 4
+
