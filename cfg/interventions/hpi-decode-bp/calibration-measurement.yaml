@@ -72,7 +72,7 @@ protocol:
           - key: diastolic
             value: 0
             operator: '>'
-    timeout: 600
+    timeout: 360
     branchSuccess: 6
     branchFailure: 1001
     animation: true
@@ -141,7 +141,7 @@ protocol:
           - key: diastolic
             value: 0
             operator: '>'
-    timeout: 600
+    timeout: 360
     branchSuccess: 10
     branchFailure: 1002
     animation: true
