@@ -19,8 +19,24 @@ baseline: []
 surveys:
   - key: baseline_demographics
     rank: 1
-  - key: baseline_health
+  - key: baseline_health_crohn
     rank: 2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: baseline_demographics::ibd_type
+            operator: =
+            score: 0
+    - key: baseline_health_uc
+    rank: 2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: baseline_demographics::ibd_type
+            operator: =
+            score: 1
   - key: lab_tests
     rank: 3
   - key: new_meds
@@ -38,17 +54,17 @@ surveys:
             operator: =
             score: 0
   - key: pro-2-uc
-    rank: 6
+    rank: 5
     schedule:
       type: DAILY
       graceDays: 1
     triggers:
-      - action: HIDE
+      - action: SHOW
         condition:
           - type: SCORE
             resource: baseline_demographics::ibd_type
             operator: =
-            score: 0
+            score: 1
   - key: promis-gi-belly-pain
     rank: 7
     schedule:
@@ -64,6 +80,16 @@ surveys:
     schedule: 
       type: PERIOD
       period: BI_WEEKLY
+  - key: CD-RISC10
+    rank: 9
+requiredHealthRecords:
+  AllergyRecord: HKClinicalTypeIdentifier
+  ConditionRecord: HKClinicalTypeIdentifier
+  ImmunizationRecord: HKClinicalTypeIdentifier
+  LabResultRecord: HKClinicalTypeIdentifier
+  MedicationRecord: HKClinicalTypeIdentifier
+  ProcedureRecord: HKClinicalTypeIdentifier
+  VitalSignRecord: HKClinicalTypeIdentifier
 requiredData:
   ActiveEnergyBurned: HKQuantityTypeIdentifier
   AppleExerciseTime: HKQuantityTypeIdentifier
