@@ -28,36 +28,23 @@ sections:
   - key: "pro-2-crohns"
     title: ""
     description: ""
-    questions: 
-    - key: stool_freq
-      question: Indicate your stool frequency (based on yesterday)
-      type: SINGLE_CHOICE
-      options:
-          - value: normal
-            text: Normal
+    questions:
+      - key: soft_stool_count
+        question: How many liquid or very soft stools did you have yesterday?
+        type: NUMERIC
+      - key: abdominal_pain_rating
+        question: Please rate your abdominal pain yesterday.
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
             score: 0
-          - value: 1_2_stools
-            text: 1-2 stools/day more than normal
+          - value: mild
+            text: Mild
             score: 1
-          - value: 3_4_stools
-            text: 3-4 stools/day more than normal
+          - value: moderate
+            text: Moderate
             score: 2
-          - value: over_4_stools
-            text: Over 4 stools/day more than normal
-            score: 3
-    - key: bleeding_severity
-      question: Please indicate the severity of your rectal bleeding (based on yesterday)
-      type: SINGLE_CHOICE
-      options:
-          - value: no_blood
-            text: No blood seen
-            score: 0
-          - value: less_than_half
-            text: Blood with stool less than half the time
-            score: 1
-          - value: half_the_time
-            text: Blood with stool half of the time or more
-            score: 2
-          - value: blood_alone
-            text: Passing blood alone (with no stool)(half or more stools have visible blood and one or more bowel movements with blood alone)
+          - value: severe
+            text: Severe
             score: 3
