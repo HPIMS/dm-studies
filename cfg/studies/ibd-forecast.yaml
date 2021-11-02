@@ -80,7 +80,7 @@ surveys:
     schedule: 
       type: PERIOD
       period: BI_WEEKLY
-  - key: CD-RISC10
+  - key: cd-risc-10
     rank: 9
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
