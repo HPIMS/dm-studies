@@ -25,7 +25,7 @@ surveys:
       - action: SHOW
         condition:
           - type: SCORE
-            resource: baseline_demographics::ibd_type
+            resource: ibd-forecast::baseline_demographics
             operator: =
             score: 0
   - key: baseline_health_uc
@@ -34,7 +34,7 @@ surveys:
       - action: SHOW
         condition:
           - type: SCORE
-            resource: baseline_demographics::ibd_type
+            resource: ibd-forecast::baseline_demographics
             operator: =
             score: 1
   - key: lab_tests
@@ -50,7 +50,7 @@ surveys:
       - action: SHOW
         condition:
           - type: SCORE
-            resource: baseline_demographics::ibd_type
+            resource: ibd-forecast::baseline_demographics
             operator: =
             score: 0
   - key: pro-2-uc
@@ -62,7 +62,7 @@ surveys:
       - action: SHOW
         condition:
           - type: SCORE
-            resource: baseline_demographics::ibd_type
+            resource: ibd-forecast::baseline_demographics
             operator: =
             score: 1
   - key: promis-gi-belly-pain
