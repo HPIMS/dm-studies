@@ -43,9 +43,6 @@ surveys:
     rank: 4
   - key: pro-2-crohns
     rank: 5
-    schedule:
-      type: DAILY
-      graceDays: 1
     triggers:
       - action: SHOW
         condition:
@@ -55,9 +52,6 @@ surveys:
             score: 0
   - key: pro-2-uc
     rank: 5
-    schedule:
-      type: DAILY
-      graceDays: 1
     triggers:
       - action: SHOW
         condition:
