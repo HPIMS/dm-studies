@@ -28,7 +28,7 @@ surveys:
             resource: baseline_demographics::ibd_type
             operator: =
             score: 0
-    - key: baseline_health_uc
+  - key: baseline_health_uc
     rank: 2
     triggers:
       - action: SHOW
