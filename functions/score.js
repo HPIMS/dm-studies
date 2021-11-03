@@ -9,6 +9,7 @@ const scoringFns = {
     return Math.floor(score / 7) + 1; // converts sum score to fitzpatrick skin type
   },
   "ibd-forecast::baseline_demographics": sumScore,
+  "ibd-forecast::pss-4": sumScore,
   "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": (
     surveyData,
     optionScoreMap
