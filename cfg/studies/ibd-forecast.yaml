@@ -79,7 +79,7 @@ surveys:
         condition:
           - type: SCORE
             resource: ibd-forecast::pss-4-baseline
-            operator: >
+            operator: ">"
             score: -1
   - key: cd-risc-10
     rank: 9
