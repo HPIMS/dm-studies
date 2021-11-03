@@ -42,7 +42,7 @@ surveys:
   - key: new_meds
     rank: 4
   - key: pro-2-crohns
-    rank: 5
+    rank: 2
     triggers:
       - action: SHOW
         condition:
@@ -51,7 +51,7 @@ surveys:
             operator: =
             score: 0
   - key: pro-2-uc
-    rank: 5
+    rank: 2
     triggers:
       - action: SHOW
         condition:
@@ -70,7 +70,7 @@ surveys:
       type: PERIOD
       period: BI_WEEKLY
   - key: pss-4-baseline
-    rank: 9
+    rank: 3
   - key: pss-4-bi-weekly
     rank: 9
     triggers:
