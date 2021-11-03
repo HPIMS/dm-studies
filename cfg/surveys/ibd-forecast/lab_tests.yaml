@@ -29,9 +29,9 @@ sections:
             text: Fecal calprotectin
       - key: c_reactive_value
         question: What is your C-reactive protein?
-        type: NUMERIC
+        type: 'NUMERIC'
         triggers:
-          - action: 
+          - action:
               type: SHOW
             condition:
               - section: lab_tests
@@ -51,45 +51,45 @@ sections:
                 value: c_reactive
       - key: erythrocyte_value
         question: What is your erythrocyte sedimentation rate (ESR)?
-        type: NUMERIC
+        type: 'NUMERIC'
         triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: lab_tests
-                question: new_test_yn
-                operator: INCLUDES
-                value: erythrocyte_sr
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: erythrocyte_sr
       - key: erythrocyte_date
         question: What is the date this blood test was drawn?
         type: DATE
         triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: lab_tests
-                question: new_test_yn
-                operator: INCLUDES
-                value: erythrocyte_sr
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: erythrocyte_sr
       - key: fecal_value
         question: What is your fecal calprotectin?
         type: NUMERIC
         triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: lab_tests
-                question: new_test_yn
-                operator: INCLUDES
-                value: fecal_calprotectin
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: fecal_calprotectin
       - key: fecal_date
         question: What is the date this stool test was collected?
         type: DATE
         triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: lab_tests
-                question: new_test_yn
-                operator: INCLUDES
-                value: fecal_calprotectin
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: fecal_calprotectin
