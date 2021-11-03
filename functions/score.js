@@ -5,6 +5,7 @@ const scoringFns = {
   "library::cd-risc-2": sumScore,
   "library::cd-risc-10": sumScore,
   "ibd-forecast::baseline_demographics": sumScore,
+  "ibd-forecast::pss-4": sumScore,
   "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": (
     surveyData,
     optionScoreMap
