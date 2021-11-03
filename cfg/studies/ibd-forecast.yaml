@@ -73,14 +73,13 @@ surveys:
     rank: 9
   - key: pss-4-bi-weekly
     rank: 9
-    schedule: 
-      triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: ibd-forecast::pss-4-baseline
-            operator: >
-            score: -1
+    triggers:
+    - action: SHOW
+      condition:
+        - type: SCORE
+          resource: ibd-forecast::pss-4-baseline
+          operator: ">"
+          score: -1
   - key: cd-risc-10
     rank: 9
 requiredHealthRecords:
