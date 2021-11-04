@@ -93,31 +93,31 @@ sections:
                 operator: =
                 value: yes
       - key: new_med_dose_corticosteroid
-        question: What is the dose when you started Corticosteroid (in mg)?
+        question: What is the dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone) (in mg)?
         type: NUMERIC
         triggers:
             - action:
                 type: SHOW
               condition:
-                - section: "new_meds"
+                - section: new_meds
                   question: new_med_name
                   operator: INCLUDES
                   value: corticosteroid
       - key: new_med_freq_corticosteroid
-        question: How often do you take Corticosteroid?
+        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: TEXTAREA
         triggers:
             - action:
                 type: SHOW
               condition:
-                - section: "new_meds"
+                - section: new_meds
                   question: new_med_name
                   operator: INCLUDES
                   value: corticosteroid
       - key: new_med_method_corticosteroid
-        question: How is the Corticosteroid given to you?
+        question: How is the Corticosteroids (prednisone, prednisolone, methylpredninsolone) given to you?
         type: SINGLE_CHOICE
-        options: 
+        options:
           - value: mouth
             text: By mouth
           - value: iv
@@ -130,21 +130,1240 @@ sections:
             - action:
                 type: SHOW
               condition:
-                - section: "new_meds"
+                - section: new_meds
                   question: new_med_name
                   operator: INCLUDES
                   value: corticosteroid
       - key: new_med_start_date_corticosteroid
-        question: When did you start the Corticosteroid?
+        question: When did you start the Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: DATE
         triggers:
             - action:
                 type: SHOW
               condition:
-                - section: "new_meds"
+                - section: new_meds
                   question: new_med_name
                   operator: INCLUDES
                   value: corticosteroid
+      - key: new_med_dose_budesonide
+        question: What is the dose when you started Budesonide (Entocort, Uceris) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: budesonide
+      - key: new_med_freq_budesonide
+        question: How often do you take Budesonide (Entocort, Uceris)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: budesonide
+      - key: new_med_method_budesonide
+        question: How is the Budesonide (Entocort, Uceris) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: budesonide
+      - key: new_med_start_date_budesonide
+        question: When did you start the Budesonide (Entocort, Uceris)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: budesonide
+      - key: new_med_dose_rectal_steroid
+        question: What is the dose when you started Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_steroid
+      - key: new_med_freq_rectal_steroid
+        question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_steroid
+      - key: new_med_method_rectal_steroid
+        question: How is the Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_steroid
+      - key: new_med_start_date_rectal_steroid
+        question: When did you start the Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_steroid
+      - key: new_med_dose_oral_5
+        question: What is the dose when you started Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine)) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: oral_5
+      - key: new_med_freq_oral_5
+        question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: oral_5
+      - key: new_med_method_oral_5
+        question: How is the Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine)) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: oral_5
+      - key: new_med_start_date_oral_5
+        question: When did you start the Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: oral_5
+      - key: new_med_dose_azulfidine
+        question: What is the dose when you started Azulfidine (Sulfasalazine) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: azulfidine
+      - key: new_med_freq_azulfidine
+        question: How often do you take Azulfidine (Sulfasalazine)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: azulfidine
+      - key: new_med_method_azulfidine
+        question: How is the Azulfidine (Sulfasalazine) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: azulfidine
+      - key: new_med_start_date_azulfidine
+        question: When did you start the Azulfidine (Sulfasalazine)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: azulfidine
+      - key: new_med_dose_rectal_5
+        question: What is the dose when you started Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal)) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_5
+      - key: new_med_freq_rectal_5
+        question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_5
+      - key: new_med_method_rectal_5
+        question: How is the Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal)) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_5
+      - key: new_med_start_date_rectal_5
+        question: When did you start the Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: rectal_5
+      - key: new_med_dose_ciprofloxacin
+        question: What is the dose when you started Ciprofloxacin (to treat IBD) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ciprofloxacin
+      - key: new_med_freq_ciprofloxacin
+        question: How often do you take Ciprofloxacin (to treat IBD)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ciprofloxacin
+      - key: new_med_method_ciprofloxacin
+        question: How is the Ciprofloxacin (to treat IBD) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ciprofloxacin
+      - key: new_med_start_date_ciprofloxacin
+        question: When did you start the Ciprofloxacin (to treat IBD)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ciprofloxacin
+      - key: new_med_dose_flagyl
+        question: What is the dose when you started Flagyl (metronidazole) (to treat IBD) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: flagyl
+      - key: new_med_freq_flagyl
+        question: How often do you take Flagyl (metronidazole) (to treat IBD)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: flagyl
+      - key: new_med_method_flagyl
+        question: How is the Flagyl (metronidazole) (to treat IBD) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: flagyl
+      - key: new_med_start_date_flagyl
+        question: When did you start the Flagyl (metronidazole) (to treat IBD)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: flagyl
+      - key: new_med_dose_other_antibiotics
+        question: What is the dose when you started Other antibiotics prescribed for IBD (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other_antibiotics
+      - key: new_med_freq_other_antibiotics
+        question: How often do you take Other antibiotics prescribed for IBD?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other_antibiotics
+      - key: new_med_method_other_antibiotics
+        question: How is the Other antibiotics prescribed for IBD given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other_antibiotics
+      - key: new_med_start_date_other_antibiotics
+        question: When did you start the Other antibiotics prescribed for IBD?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other_antibiotics
+      - key: new_med_dose_purethinol
+        question: What is the dose when you started Purethinol (6-MP) / Imuran (Azathioprine) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: purethinol
+      - key: new_med_freq_purethinol
+        question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: purethinol
+      - key: new_med_method_purethinol
+        question: How is the Purethinol (6-MP) / Imuran (Azathioprine) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: purethinol
+      - key: new_med_start_date_purethinol
+        question: When did you start the Purethinol (6-MP) / Imuran (Azathioprine)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: purethinol
+      - key: new_med_dose_methotrexate
+        question: What is the dose when you started Methotrexate (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: methotrexate
+      - key: new_med_freq_methotrexate
+        question: How often do you take Methotrexate?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: methotrexate
+      - key: new_med_method_methotrexate
+        question: How is the Methotrexate given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: methotrexate
+      - key: new_med_start_date_methotrexate
+        question: When did you start the Methotrexate?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: methotrexate
+      - key: new_med_dose_remicade
+        question: What is the dose when you started Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra} (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: remicade
+      - key: new_med_freq_remicade
+        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: remicade
+      - key: new_med_method_remicade
+        question: How is the Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra} given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: remicade
+      - key: new_med_start_date_remicade
+        question: When did you start the Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: remicade
+      - key: new_med_dose_humira
+        question: What is the dose when you started Humira (adalimumab) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: humira
+      - key: new_med_freq_humira
+        question: How often do you take Humira (adalimumab)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: humira
+      - key: new_med_method_humira
+        question: How is the Humira (adalimumab) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: humira
+      - key: new_med_start_date_humira
+        question: When did you start the Humira (adalimumab)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: humira
+      - key: new_med_dose_cimzia
+        question: What is the dose when you started Cimzia (cetolizumab pegol) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cimzia
+      - key: new_med_freq_cimzia
+        question: How often do you take Cimzia (cetolizumab pegol)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cimzia
+      - key: new_med_method_cimzia
+        question: How is the Cimzia (cetolizumab pegol) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cimzia
+      - key: new_med_start_date_cimzia
+        question: When did you start the Cimzia (cetolizumab pegol)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cimzia
+      - key: new_med_dose_simponi
+        question: What is the dose when you started Simponi (golimumab) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: simponi
+      - key: new_med_freq_simponi
+        question: How often do you take Simponi (golimumab)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: simponi
+      - key: new_med_method_simponi
+        question: How is the Simponi (golimumab) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: simponi
+      - key: new_med_start_date_simponi
+        question: When did you start the Simponi (golimumab)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: simponi
+      - key: new_med_dose_entyvio
+        question: What is the dose when you started Entyvio (vedolizumab) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: entyvio
+      - key: new_med_freq_entyvio
+        question: How often do you take Entyvio (vedolizumab)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: entyvio
+      - key: new_med_method_entyvio
+        question: How is the Entyvio (vedolizumab) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: entyvio
+      - key: new_med_start_date_entyvio
+        question: When did you start the Entyvio (vedolizumab)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: entyvio
+      - key: new_med_dose_ustekinumab
+        question: What is the dose when you started Ustekinumab (Stelara) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ustekinumab
+      - key: new_med_freq_ustekinumab
+        question: How often do you take Ustekinumab (Stelara)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ustekinumab
+      - key: new_med_method_ustekinumab
+        question: How is the Ustekinumab (Stelara) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ustekinumab
+      - key: new_med_start_date_ustekinumab
+        question: When did you start the Ustekinumab (Stelara)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ustekinumab
+      - key: new_med_dose_tofacitinib
+        question: What is the dose when you started tofacitinib (Xeljanz) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tofacitinib
+      - key: new_med_freq_tofacitinib
+        question: How often do you take tofacitinib (Xeljanz)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tofacitinib
+      - key: new_med_method_tofacitinib
+        question: How is the tofacitinib (Xeljanz) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tofacitinib
+      - key: new_med_start_date_tofacitinib
+        question: When did you start the tofacitinib (Xeljanz)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tofacitinib
+      - key: new_med_dose_ozanimod
+        question: What is the dose when you started Ozanimod (Zeposia) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ozanimod
+      - key: new_med_freq_ozanimod
+        question: How often do you take Ozanimod (Zeposia)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ozanimod
+      - key: new_med_method_ozanimod
+        question: How is the Ozanimod (Zeposia) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ozanimod
+      - key: new_med_start_date_ozanimod
+        question: When did you start the Ozanimod (Zeposia)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: ozanimod
+      - key: new_med_dose_imodium
+        question: What is the dose when you started Imodium (Ioperamide) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: imodium
+      - key: new_med_freq_imodium
+        question: How often do you take Imodium (Ioperamide)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: imodium
+      - key: new_med_method_imodium
+        question: How is the Imodium (Ioperamide) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: imodium
+      - key: new_med_start_date_imodium
+        question: When did you start the Imodium (Ioperamide)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: imodium
+      - key: new_med_dose_lamotil
+        question: What is the dose when you started Lamotil (diphenoxylate/atropine) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: lamotil
+      - key: new_med_freq_lamotil
+        question: How often do you take Lamotil (diphenoxylate/atropine)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: lamotil
+      - key: new_med_method_lamotil
+        question: How is the Lamotil (diphenoxylate/atropine) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: lamotil
+      - key: new_med_start_date_lamotil
+        question: When did you start the Lamotil (diphenoxylate/atropine)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: lamotil
+      - key: new_med_dose_tincture_opium
+        question: What is the dose when you started Tincture of opium (DTO, opium tincture, morphine tincture) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tincture_opium
+      - key: new_med_freq_tincture_opium
+        question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tincture_opium
+      - key: new_med_method_tincture_opium
+        question: How is the Tincture of opium (DTO, opium tincture, morphine tincture) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tincture_opium
+      - key: new_med_start_date_tincture_opium
+        question: When did you start the Tincture of opium (DTO, opium tincture, morphine tincture)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: tincture_opium
+      - key: new_med_dose_cholestyramine
+        question: What is the dose when you started Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam) (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cholestyramine
+      - key: new_med_freq_cholestyramine
+        question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cholestyramine
+      - key: new_med_method_cholestyramine
+        question: How is the Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam) given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cholestyramine
+      - key: new_med_start_date_cholestyramine
+        question: When did you start the Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: cholestyramine
+      - key: new_med_dose_other
+        question: What is the dose when you started Other (in mg)?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other
+      - key: new_med_freq_other
+        question: How often do you take Other?
+        type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other
+      - key: new_med_method_other
+        question: How is the Other given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other
+      - key: new_med_start_date_other
+        question: When did you start the Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: new_meds
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: other
       - key: stop_med_yn
         question: I stopped a medication
         type: SINGLE_CHOICE
@@ -159,7 +1378,7 @@ sections:
         options: 
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
-          - value: Budesonide
+          - value: budesonide
             text: Budesonide (Entocort, Uceris)
           - value: rectal_steroid
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
@@ -169,31 +1388,31 @@ sections:
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
             text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
-          - value: Ciprofloxacin
+          - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
-          - value: Flagyl
+          - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
-          - value: Purethinol
+          - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
-          - value: Methotrexate
+          - value: methotrexate
             text: Methotrexate 
-          - value: Remicade
+          - value: remicade
             text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
-          - value: Humira
+          - value: humira
             text: Humira (adalimumab)
-          - value: Cimzia
+          - value: cimzia
             text: Cimzia (cetolizumab pegol)
-          - value: Simponi
+          - value: simponi
             text: Simponi (golimumab)
-          - value: Entyvio
+          - value: entyvio
             text: Entyvio (vedolizumab)
-          - value: Ustekinumab
+          - value: ustekinumab
             text: Ustekinumab (Stelara)
           - value: tofacitinib
             text: tofacitinib (Xeljanz)
-          - value: Ozanimod
+          - value: ozanimod
             text: Ozanimod (Zeposia)
           - value: other
             text: Other 
@@ -203,39 +1422,6 @@ sections:
               type: TEXTAREA
           - value: no_new_med
             text: I did not stop a medication
-        triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: stop_med_yn
-                operator: =
-                value: yes
-      - key: stopping_dose
-        question: What is the dose at stopping (in mg)?
-        type: NUMERIC
-        triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: stop_med_yn
-                operator: =
-                value: yes
-      - key: stop_med_freq 
-        question: How often did you take the medication?
-        type: TEXTAREA
-        triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: stop_med_yn
-                operator: =
-                value: yes
-      - key: stop_med_date
-        question: When did you stop the medication?
-        type: DATE
         triggers:
           - action: 
               type: SHOW
@@ -310,48 +1496,6 @@ sections:
               type: TEXTAREA
           - value: no_new_dose
             text: I did not change my medication dosage
-        triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: change_med_dose_yn
-                operator: =
-                value: yes
-      - key: change_dose_amt
-        question: What is the new dose of the medication (in mg)?
-        type: NUMERIC
-        triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: change_med_dose_yn
-                operator: =
-                value: yes
-      - key: change_dose_freq
-        question: How often do you take the medication?
-        type: TEXTAREA
-        triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: change_med_dose_yn
-                operator: =
-                value: yes
-      - key: change_dose_method
-        question: How is the medicine given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action: 
               type: SHOW
