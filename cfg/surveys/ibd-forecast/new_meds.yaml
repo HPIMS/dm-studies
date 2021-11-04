@@ -38,43 +38,43 @@ sections:
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
           - value: oral_5
             text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
-          - value: Azulfidine
+          - value: azulfidine
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
             text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
-          - value: Ciprofloxacin
+          - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
-          - value: Flagyl
+          - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
-          - value: Purethinol
+          - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
-          - value: Methotrexate
+          - value: methotrexate
             text: Methotrexate 
-          - value: Remicade
+          - value: remicade
             text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
-          - value: Humira
+          - value: humira
             text: Humira (adalimumab)
-          - value: Cimzia
+          - value: cimzia
             text: Cimzia (cetolizumab pegol)
-          - value: Simponi
+          - value: simponi
             text: Simponi (golimumab)
-          - value: Entyvio
+          - value: entyvio
             text: Entyvio (vedolizumab)
-          - value: Ustekinumab
+          - value: ustekinumab
             text: Ustekinumab (Stelara)
           - value: tofacitinib
             text: tofacitinib (Xeljanz)
-          - value: Ozanimod
+          - value: ozanimod
             text: Ozanimod (Zeposia)
-          - value: Imodium
+          - value: imodium
             text: Imodium (Ioperamide)
           - value: lamotil
             text: Lamotil (diphenoxylate/atropine)
           - value: tincture_opium
             text: Tincture of opium (DTO, opium tincture, morphine tincture)
-          - value: Cholestyramine
+          - value: cholestyramine
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
           - value: other
             text: Other 
@@ -92,30 +92,30 @@ sections:
                 question: start_med_yn
                 operator: =
                 value: yes
-      - key: new_med_dose
-        question: What is the dose when you started the new medication (in mg)?
+      - key: new_med_dose_corticosteroid
+        question: What is the dose when you started Corticosteroid (in mg)?
         type: NUMERIC
         triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: start_med_yn
-                operator: =
-                value: yes
-      - key: new_med_freq
-        question: How often do you take the medication?
+            - action:
+                type: SHOW
+              condition:
+                - section: "new_meds"
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: corticosteroid
+      - key: new_med_freq_corticosteroid
+        question: How often do you take Corticosteroid?
         type: TEXTAREA
         triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: start_med_yn
-                operator: =
-                value: yes
-      - key: new_med_method
-        question: How is the medicine given to you?
+            - action:
+                type: SHOW
+              condition:
+                - section: "new_meds"
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: corticosteroid
+      - key: new_med_method_corticosteroid
+        question: How is the Corticosteroid given to you?
         type: SINGLE_CHOICE
         options: 
           - value: mouth
@@ -127,24 +127,24 @@ sections:
           - value: in_rectum
             text: In the rectum
         triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: start_med_yn
-                operator: =
-                value: yes
-      - key: new_med_start_date
-        question: When did you start the medication?
+            - action:
+                type: SHOW
+              condition:
+                - section: "new_meds"
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: corticosteroid
+      - key: new_med_start_date_corticosteroid
+        question: When did you start the Corticosteroid?
         type: DATE
         triggers:
-          - action: 
-              type: SHOW
-            condition:
-              - section: new_meds
-                question: start_med_yn
-                operator: =
-                value: yes
+            - action:
+                type: SHOW
+              condition:
+                - section: "new_meds"
+                  question: new_med_name
+                  operator: INCLUDES
+                  value: corticosteroid
       - key: stop_med_yn
         question: I stopped a medication
         type: SINGLE_CHOICE

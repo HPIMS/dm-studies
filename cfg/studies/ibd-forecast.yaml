@@ -38,11 +38,11 @@ surveys:
             operator: =
             score: 1
   - key: lab_tests
-    rank: 3
+    rank: 5
   - key: new_meds
-    rank: 4
+    rank: 5
   - key: pro-2-crohns
-    rank: 2
+    rank: 4
     triggers:
       - action: SHOW
         condition:
@@ -51,7 +51,7 @@ surveys:
             operator: =
             score: 0
   - key: pro-2-uc
-    rank: 2
+    rank: 4
     triggers:
       - action: SHOW
         condition:
@@ -60,19 +60,19 @@ surveys:
             operator: =
             score: 1
   - key: promis-gi-belly-pain
-    rank: 7
+    rank: 3
     schedule:
       type: PERIOD
       period: BI_WEEKLY
   - key: promis-gi-diarrhea
-    rank: 8
+    rank: 3
     schedule:
       type: PERIOD
       period: BI_WEEKLY
   - key: pss-4-baseline
     rank: 3
   - key: pss-4-bi-weekly
-    rank: 9
+    rank: 3
     triggers:
     - action: SHOW
       condition:
@@ -81,7 +81,7 @@ surveys:
           operator: ">"
           score: -1
   - key: cd-risc-10
-    rank: 9
+    rank: 3
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier
