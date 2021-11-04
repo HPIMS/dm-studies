@@ -18,6 +18,20 @@ sections:
     title: ""
     description: ""
     questions:
+      - key: ibd_type
+        question: Which type of IBD do you have?
+        required: true
+        type: SINGLE_CHOICE
+        options:
+          - value: crohns
+            text: Crohn's Disease
+            score: 0
+          - value: ulcerative_colitis
+            text: Ulcerative colitis
+            score: 1
+          - value: indeterminate
+            text: Indeterminate colitis
+            score: 1
       - key: age
         question: What is your date of birth?
         type: DATE
@@ -157,19 +171,6 @@ sections:
               key: conditions_other_description
               question: "Please specify brand and model:"
               type: TEXTAREA
-      - key: ibd_type
-        question: Which type of IBD do you have?
-        type: SINGLE_CHOICE
-        options:
-          - value: crohns
-            text: Crohn's Disease
-            score: 0
-          - value: ulcerative_colitis
-            text: Ulcerative colitis
-            score: 1
-          - value: indeterminate
-            text: Indeterminate colitis
-            score: 1
       - key: email_address
         question: What is your email address?
         type: "EMAIL"

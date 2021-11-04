@@ -107,6 +107,14 @@ sections:
                 question: ibd_surgery
                 operator: =
                 value: yes
+      - key: past_med_trigger
+        question: Have you taken any medications in the past, but are not currently taking at this time?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: no
+            text: No
       - key: meds_in_past
         question: Which medications have you taken in the past, but are not currently taking at this time?
         type: MULTIPLE_CHOICE
@@ -157,6 +165,24 @@ sections:
               type: 'TEXTAREA'
           - value: no_past_meds
             text: I have not take any medications before the medications I am currently using
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: baseline
+                question: past_med_trigger
+                operator: =
+                value: yes
+
+      - key: current_med_trigger
+        question: Have you taken any medications in the past, but are not currently taking at this time?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: no
+            text: No
+
       - key: meds_now
         question: Which medications are you currently taking?
         type: MULTIPLE_CHOICE
@@ -215,56 +241,11 @@ sections:
               key: which_med_other_description
               question: "Please specify:"
               type: 'TEXTAREA'
-      - key: current_dose
-        question: What is the current dose of your medication (in mg)?
-        type: NUMERIC
         triggers:
           - action:
-              type: HIDE
-            condition:
-              - section: baseline_demographics
-                question: meds_now
-                operator: =
-                value: no_current_meds
-      - key: med_schedule
-        question: How often do you take the medication?
-        type: 'TEXTAREA'
-        triggers:
-          - action:
-              type: HIDE
-            condition:
-              - section: baseline_demographics
-                question: meds_now
-                operator: =
-                value: no_current_meds
-      - key: med_method
-        question: What is the way the medication is given to you?
-        type: MULTIPLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-          - action:
-              type: HIDE
-            condition:
-              - section: baseline_demographics
-                question: meds_now
-                operator: =
-                value: no_current_meds
-      - key: last_dose
-        question: When was your last dose?
-        type: DATE
-        triggers:
-          - action:
-              type: HIDE
+              type: SHOW
             condition:
               - section: baseline
-                question: meds_now
+                question: past_med_trigger
                 operator: =
-                value: no_current_meds
+                value: yes
