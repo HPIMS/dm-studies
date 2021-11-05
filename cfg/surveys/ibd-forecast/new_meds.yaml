@@ -46,8 +46,6 @@ sections:
             text: Ciprofloxacin (to treat IBD)
           - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
-          - value: other_antibiotics
-            text: Other antibiotics prescribed for IBD
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
           - value: methotrexate
@@ -76,6 +74,8 @@ sections:
             text: Tincture of opium (DTO, opium tincture, morphine tincture)
           - value: cholestyramine
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
+          - value: other_antibiotics
+            text: Other antibiotics prescribed for IBD
           - value: other
             text: Other 
             inlineQuestion:
@@ -1390,8 +1390,6 @@ sections:
             text: Ciprofloxacin (to treat IBD)
           - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
-          - value: other_antibiotics
-            text: Other antibiotics prescribed for IBD
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
           - value: methotrexate
@@ -1420,6 +1418,8 @@ sections:
             text: Tincture of opium (DTO, opium tincture, morphine tincture)
           - value: cholestyramine
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
+          - value: other_antibiotics
+            text: Other antibiotics prescribed for IBD
           - value: other
             text: Other 
             inlineQuestion:

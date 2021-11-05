@@ -70,12 +70,16 @@ sections:
             score: 5
         triggers:
           - action:
-              type: HIDE
+              type: SHOW
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: days_loose
-                operator: =
-                value: none
+                operator: IS_SET
+                AND:
+                  - section: promis_gi_diarrhea
+                    question: days_loose
+                    operator: NOT_INCLUDES
+                    value: none
       - key: bother_you_loose
         question: How much did having loose or watery stools bother you?
         type: SINGLE_CHOICE
@@ -97,12 +101,16 @@ sections:
             score: 5
         triggers:
           - action:
-              type: HIDE
+              type: SHOW
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: days_loose
-                operator: =
-                value: none
+                operator: IS_SET
+                AND:
+                  - section: promis_gi_diarrhea
+                    question: days_loose
+                    operator: NOT_INCLUDES
+                    value: none
       - key: immediate_accident
         question: How often did you feel like you needed to empty your bowels right away or else you would have an accident?
         type: SINGLE_CHOICE
@@ -143,12 +151,16 @@ sections:
             score: 5
         triggers:
           - action:
-              type: HIDE
+              type: SHOW
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: immediate_accident
-                operator: =
-                value: never
+                operator: IS_SET
+                AND:
+                  - section: promis_gi_diarrhea
+                    question: immediate_accident
+                    operator: NOT_INCLUDES
+                    value: never
       - key: immediate_bother
         question: How much did feeling like you needed to empty your bowels right away bother you? 
         type: SINGLE_CHOICE
@@ -170,10 +182,14 @@ sections:
             score: 5
         triggers:
           - action:
-              type: HIDE
+              type: SHOW
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: immediate_accident
-                operator: =
-                value: never
+                operator: IS_SET
+                AND:
+                  - section: promis_gi_diarrhea
+                    question: immediate_accident
+                    operator: NOT_INCLUDES
+                    value: never
 
