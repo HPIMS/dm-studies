@@ -115,7 +115,7 @@ sections:
             text: Yes
           - value: no
             text: No
-      - key: meds_in_past
+      - key: past_meds
         question: Which medications have you taken in the past, but are not currently taking at this time?
         type: MULTIPLE_CHOICE
         options:
