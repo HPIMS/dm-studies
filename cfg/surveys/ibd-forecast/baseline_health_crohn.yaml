@@ -21,8 +21,8 @@ sections:
       - key: crohns_diagnosis
         question: What year were you diagnosed with Crohn's disease?
         type: BIRTH_YEAR
-      - key: fistula_notaround
-        question: Have you ever had a fistula (small tract that connects a part of your inestine to something else) that was not around the rectum/anus/vagina?
+      - key: stricture
+        question: Have you ever had a stricture or narrowing in your intestine?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -31,8 +31,8 @@ sections:
             text: No
           - value: dont_know
             text: I don't know
-      - key: stricture
-        question: Have you ever had a stricture or narrowing in your intestine?
+      - key: fistula_notaround
+        question: Have you ever had a fistula (small tract that connects a part of your inestine to something else) that was not around the rectum/anus/vagina?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -108,7 +108,7 @@ sections:
                 operator: =
                 value: yes
       - key: past_med_trigger
-        question: Have you taken any medications in the past, but are not currently taking at this time?
+        question: Have you taken any medications in the past that you are not currently taking?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -135,8 +135,6 @@ sections:
             text: Ciprofloxacin (to treat IBD)
           - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
-          - value: other_antibiotics
-            text: Other antibiotics prescribed for IBD
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
           - value: methotrexate
@@ -157,6 +155,8 @@ sections:
             text: tofacitinib (Xeljanz)
           - value: ozanimod
             text: Ozanimod (Zeposia)
+          - value: other_antibiotics
+            text: Other antibiotics prescribed for IBD
           - value: other
             text: Other
             inlineQuestion:
@@ -1446,7 +1446,7 @@ sections:
                   operator: INCLUDES
                   value: other
       - key: current_med_trigger
-        question: Have you taken any medications in the past, but are not currently taking at this time?
+        question: Are you currently taking any medication?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -1475,8 +1475,6 @@ sections:
             text: Ciprofloxacin (to treat IBD)
           - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
-          - value: other_antibiotics
-            text: Other antibiotics prescribed for IBD
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
           - value: methotrexate
@@ -1505,6 +1503,8 @@ sections:
             text: Tincture of opium (DTO, opium tincture, morphine tincture)
           - value: cholestyramine
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
+          - value: other_antibiotics
+            text: Other antibiotics prescribed for IBD
           - value: other
             text: Other
             inlineQuestion:
