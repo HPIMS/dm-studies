@@ -103,7 +103,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline_demographics
+              - section: baseline
                 question: ibd_surgery
                 operator: =
                 value: yes
