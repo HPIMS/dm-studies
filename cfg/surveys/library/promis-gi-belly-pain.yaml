@@ -71,7 +71,7 @@ sections:
           - action:
               type: HIDE
             condition:
-              - section: promis-gi-belly-pain
+              - section: promis_gi_belly_pain
                 question: pain_often
                 operator: =
                 value: never
@@ -98,7 +98,7 @@ sections:
           - action:
               type: HIDE
             condition:
-              - section: promis-gi-belly-pain
+              - section: promis_gi_belly_pain
                 question: pain_often
                 operator: =
                 value: never
@@ -125,7 +125,7 @@ sections:
           - action:
               type: HIDE
             condition:
-              - section: promis-gi-belly-pain
+              - section: promis_gi_belly_pain
                 question: pain_often
                 operator: =
                 value: never

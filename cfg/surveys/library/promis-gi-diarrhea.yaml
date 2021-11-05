@@ -72,7 +72,7 @@ sections:
           - action:
               type: HIDE
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: days_loose
                 operator: =
                 value: none
@@ -99,7 +99,7 @@ sections:
           - action:
               type: HIDE
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: days_loose
                 operator: =
                 value: none
@@ -145,7 +145,7 @@ sections:
           - action:
               type: HIDE
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: immediate_accident
                 operator: =
                 value: never
@@ -172,7 +172,7 @@ sections:
           - action:
               type: HIDE
             condition:
-              - section: promis-gi-diarrhea
+              - section: promis_gi_diarrhea
                 question: immediate_accident
                 operator: =
                 value: never
