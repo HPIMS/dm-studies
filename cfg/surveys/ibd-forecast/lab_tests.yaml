@@ -18,7 +18,7 @@ sections:
     description: ""
     questions:
       - key: new_test_yn
-        question: Do you have a new blood or stool test to report? Select all that apply.
+        question: Do you have a new blood or stool test to report?
         type: MULTIPLE_CHOICE
         options:
           - value: c_reactive
