@@ -1453,8 +1453,7 @@ sections:
             text: Yes
           - value: no
             text: No
-
-      - key: meds_now
+      - key: current_meds
         question: Which medications are you currently taking?
         type: MULTIPLE_CHOICE
         options:
@@ -1517,7 +1516,7 @@ sections:
               type: SHOW
             condition:
               - section: baseline
-                question: past_med_trigger
+                question: current_med_trigger
                 operator: =
                 value: yes
       - key: current_med_dose_corticosteroid

@@ -66,6 +66,14 @@ sections:
                 question: ibd_surgery
                 operator: =
                 value: yes
+      - key: past_med_trigger
+        question: Have you taken any medications in the past, but are not currently taking at this time?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: no
+            text: No
       - key: past_meds
         question: Which medications have you taken in the past, but are not currently taking at this time?
         type: MULTIPLE_CHOICE
@@ -116,6 +124,14 @@ sections:
               type: 'TEXTAREA'
           - value: no_past_meds
             text: I have not take any medications before the medications I am currently using
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: baseline
+                question: past_med_trigger
+                operator: =
+                value: yes
       - key: past_med_dose_corticosteroid
         question: What is the dose when you stopped Corticosteroids (prednisone, prednisolone, methylpredninsolone) (in mg)?
         type: NUMERIC
@@ -1388,7 +1404,14 @@ sections:
                   question: past_meds
                   operator: INCLUDES
                   value: other
-
+      - key: current_med_trigger
+        question: Have you taken any medications in the past, but are not currently taking at this time?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: no
+            text: No
       - key: current_meds
         question: Which medications are you currently taking?
         type: MULTIPLE_CHOICE
@@ -1447,6 +1470,14 @@ sections:
               key: which_med_other_description
               question: "Please specify:"
               type: 'TEXTAREA'
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: baseline
+                question: current_med_trigger
+                operator: =
+                value: yes
       - key: current_med_dose_corticosteroid
         question: What is the dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone) (in mg)?
         type: NUMERIC
