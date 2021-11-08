@@ -32,22 +32,46 @@ sections:
         options: 
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
-          - value: Budesonide
+            inlineQuestion:
+                key: which_new_med_corticosteroid
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
+          - value: budesonide
             text: Budesonide (Entocort, Uceris)
+            inlineQuestion:
+                key: which_new_med_budesonide
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: rectal_steroid
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
+            inlineQuestion:
+                key: which_new_med_rectal_steroid
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: oral_5
             text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
+            inlineQuestion:
+                key: which_new_med_oral_5
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: azulfidine
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
             text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            inlineQuestion:
+                key: which_new_med_rectal_5
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
           - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
+            inlineQuestion:
+                key: which_new_med_purethinol
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: methotrexate
             text: Methotrexate 
           - value: remicade
@@ -63,7 +87,7 @@ sections:
           - value: ustekinumab
             text: Ustekinumab (Stelara)
           - value: tofacitinib
-            text: tofacitinib (Xeljanz)
+            text: Tofacitinib (Xeljanz)
           - value: ozanimod
             text: Ozanimod (Zeposia)
           - value: imodium
@@ -76,10 +100,14 @@ sections:
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
+            inlineQuestion:
+                key: which_new_med_other_antibiotics
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: other
             text: Other 
             inlineQuestion:
-                key: which_med_other_description
+                key: which_new_med_other_description
                 question: "Please specify:"
                 type: TEXTAREA
         triggers:
@@ -3248,26 +3276,50 @@ sections:
         options: 
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
+            inlineQuestion:
+                key: which_stopped_med_corticosteroid
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: budesonide
             text: Budesonide (Entocort, Uceris)
+            inlineQuestion:
+                key: which_stopped_med_budesonide
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: rectal_steroid
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
+            inlineQuestion:
+                key: which_stopped_med_rectal_steroid
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: oral_5
             text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
-          - value: Azulfidine
+            inlineQuestion:
+                key: which_stopped_med_other_oral_5
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
+          - value: azulfidine
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
             text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            inlineQuestion:
+                key: which_stopped_med_rectal_5
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
           - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
+            inlineQuestion:
+                key: which_stopped_med_purethinol
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: methotrexate
-            text: Methotrexate 
+            text: Methotrexate
           - value: remicade
-            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra
           - value: humira
             text: Humira (adalimumab)
           - value: cimzia
@@ -3279,7 +3331,7 @@ sections:
           - value: ustekinumab
             text: Ustekinumab (Stelara)
           - value: tofacitinib
-            text: tofacitinib (Xeljanz)
+            text: Tofacitinib (Xeljanz)
           - value: ozanimod
             text: Ozanimod (Zeposia)
           - value: imodium
@@ -3292,12 +3344,16 @@ sections:
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
-          - value: other
-            text: Other 
             inlineQuestion:
-              key: which_med_other_description
-              question: "Please specify:"
-              type: TEXTAREA
+                key: which_stopped_med_other_antibiotics
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
+          - value: other
+            text: Other
+            inlineQuestion:
+                key: which_stopped_med_other_description
+                question: "Please specify:"
+                type: TEXTAREA
         triggers:
           - action: 
               type: SHOW
@@ -6464,24 +6520,46 @@ sections:
         options:
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
+            inlineQuestion:
+                key: which_change_med_corticosteroid
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: budesonide
             text: Budesonide (Entocort, Uceris)
+            inlineQuestion:
+                key: which_change_med_budesonide
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: rectal_steroid
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
+            inlineQuestion:
+                key: which_stopped_med_rectal_steroid
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: oral_5
             text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
+            inlineQuestion:
+                key: which_change_med_other_oral_5
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: azulfidine
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
             text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            inlineQuestion:
+                key: which_change_med_rectal_5
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
           - value: flagyl
             text: Flagyl (metronidazole) (to treat IBD)
-          - value: other_antibiotics
-            text: Other antibiotics prescribed for IBD
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
+            inlineQuestion:
+                key: which_change_med_purethinol
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: methotrexate
             text: Methotrexate
           - value: remicade
@@ -6497,7 +6575,7 @@ sections:
           - value: ustekinumab
             text: Ustekinumab (Stelara)
           - value: tofacitinib
-            text: tofacitinib (Xeljanz)
+            text: Tofacitinib (Xeljanz)
           - value: ozanimod
             text: Ozanimod (Zeposia)
           - value: imodium
@@ -6508,12 +6586,18 @@ sections:
             text: Tincture of opium (DTO, opium tincture, morphine tincture)
           - value: cholestyramine
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
+          - value: other_antibiotics
+            text: Other antibiotics prescribed for IBD
+            inlineQuestion:
+                key: which_change_med_other_antibiotics
+                question: "Please list which medication you are taking"
+                type: TEXTAREA
           - value: other
             text: Other
             inlineQuestion:
-              key: which_med_other_description
-              question: "Please specify:"
-              type: TEXTAREA
+                key: which_change_med_other_description
+                question: "Please specify:"
+                type: TEXTAREA
         triggers:
           - action:
               type: SHOW
