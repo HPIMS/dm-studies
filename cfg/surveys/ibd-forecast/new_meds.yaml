@@ -93,25 +93,26 @@ sections:
       - key: new_med_dose_corticosteroid
         question: What is the dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
-        value: mg
+        options:
+          - value: mg
             text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_corticosteroid_mg
               question: "What is the dose when you started Corticosteroids"
               type: TEXTAREA
-        value: g
+          - value: g
             text: grams (g)
             inlineQuestion:
               key: new_med_dose_corticosteroid_g
               question: "What is the dose when you started Corticosteroids?"
               type: TEXTAREA
-        value: ml
+          - value: ml
             text: milliliter (ml)
             inlineQuestion:
               key: new_med_dose_corticosteroid_ml
               question: "What is the dose when you started Corticosteroids?"
               type: TEXTAREA
-        value: others
+          - value: others
             text: Other metrics
             inlineQuestion:
               key: new_med_dose_corticosteroid_ml
@@ -128,31 +129,32 @@ sections:
       - key: new_med_freq_corticosteroid
         question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
-                value: daily
+        options:
+          - value: daily
             text: milligramms (mg)
             inlineQuestion:
               key: new_med_freq_corticosteroid_daily
               question: "How often do you take?"
               type: TEXTAREA
-        value: weekly
+          - value: weekly
             text: weekly
             inlineQuestion:
               key: new_med_freq_corticosteroid_weekly
               question: "How often do you take?"
               type: TEXTAREA
-        value: biweekly
+          - value: biweekly
             text: Every two weeks
             inlineQuestion:
               key: new_med_dose_corticosteroid_biweekly
               question: "How often do you take?"
               type: TEXTAREA
-        value: monthly
+          - value: monthly
             text: Monthly
             inlineQuestion:
               key: new_med_dose_corticosteroid_monthly
               question: "How often do you take?"
               type: TEXTAREA
-        value: other
+          - value: other
             text: Other
             inlineQuestion:
               key: new_med_dose_corticosteroid_other
