@@ -156,7 +156,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: corticosteroid
-      - key: new_med_res_freq_corticosteroid
+      - key: new_med_freq_corticosteroid
         question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -179,7 +179,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_corticosteroid_other
+              key: new_med_freq_corticosteroid_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -287,7 +287,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: budesonide
-      - key: new_med_res_freq_budesonide
+      - key: new_med_freq_budesonide
         question: How often do you take Budesonide (Entocort, Uceris)?
         type: SINGLE_CHOICE
         options:
@@ -310,7 +310,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_budesonide_other
+              key: new_med_freq_budesonide_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -418,7 +418,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: rectal_steroid
-      - key: new_med_res_freq_rectal_steroid
+      - key: new_med_freq_rectal_steroid
         question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: SINGLE_CHOICE
         options:
@@ -441,7 +441,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_rectal_steroid_other
+              key: new_med_freq_rectal_steroid_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -549,7 +549,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: oral_5
-      - key: new_med_res_freq_oral_5
+      - key: new_med_freq_oral_5
         question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
@@ -572,7 +572,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_oral_5_other
+              key: new_med_freq_oral_5_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -680,7 +680,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: azulfidine
-      - key: new_med_res_freq_azulfidine
+      - key: new_med_freq_azulfidine
         question: How often do you take Azulfidine (Sulfasalazine)?
         type: SINGLE_CHOICE
         options:
@@ -703,7 +703,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_azulfidine_other
+              key: new_med_freq_azulfidine_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -811,7 +811,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: rectal_5
-      - key: new_med_res_freq_rectal_5
+      - key: new_med_freq_rectal_5
         question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
@@ -834,7 +834,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_rectal_5_other
+              key: new_med_freq_rectal_5_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -942,7 +942,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: ciprofloxacin
-      - key: new_med_res_freq_ciprofloxacin
+      - key: new_med_freq_ciprofloxacin
         question: How often do you take Ciprofloxacin (to treat IBD)?
         type: SINGLE_CHOICE
         options:
@@ -965,7 +965,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_ciprofloxacin_other
+              key: new_med_freq_ciprofloxacin_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1073,7 +1073,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: flagyl
-      - key: new_med_res_freq_flagyl
+      - key: new_med_freq_flagyl
         question: How often do you take Flagyl (metronidazole) (to treat IBD)?
         type: SINGLE_CHOICE
         options:
@@ -1096,7 +1096,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_flagyl_other
+              key: new_med_freq_flagyl_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1204,7 +1204,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: other_antibiotics
-      - key: new_med_res_freq_other_antibiotics
+      - key: new_med_freq_other_antibiotics
         question: How often do you take Other antibiotics prescribed for IBD?
         type: SINGLE_CHOICE
         options:
@@ -1227,7 +1227,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_other_antibiotics_other
+              key: new_med_freq_other_antibiotics_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1335,7 +1335,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: purethinol
-      - key: new_med_res_freq_purethinol
+      - key: new_med_freq_purethinol
         question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
         type: SINGLE_CHOICE
         options:
@@ -1358,7 +1358,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_purethinol_other
+              key: new_med_freq_purethinol_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1466,7 +1466,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: methotrexate
-      - key: new_med_res_freq_methotrexate
+      - key: new_med_freq_methotrexate
         question: How often do you take Methotrexate?
         type: SINGLE_CHOICE
         options:
@@ -1489,7 +1489,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_methotrexate_other
+              key: new_med_freq_methotrexate_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1597,7 +1597,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: remicade
-      - key: new_med_res_freq_remicade
+      - key: new_med_freq_remicade
         question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: SINGLE_CHOICE
         options:
@@ -1620,7 +1620,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_remicade_other
+              key: new_med_freq_remicade_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1728,7 +1728,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: humira
-      - key: new_med_res_freq_humira
+      - key: new_med_freq_humira
         question: How often do you take Humira (adalimumab)?
         type: SINGLE_CHOICE
         options:
@@ -1751,7 +1751,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_humira_other
+              key: new_med_freq_humira_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1859,7 +1859,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: cimzia
-      - key: new_med_res_freq_cimzia
+      - key: new_med_freq_cimzia
         question: How often do you take Cimzia (cetolizumab pegol)?
         type: SINGLE_CHOICE
         options:
@@ -1882,7 +1882,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_cimzia_other
+              key: new_med_freq_cimzia_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -1990,7 +1990,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: simponi
-      - key: new_med_res_freq_simponi
+      - key: new_med_freq_simponi
         question: How often do you take Simponi (golimumab)?
         type: SINGLE_CHOICE
         options:
@@ -2013,7 +2013,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_simponi_other
+              key: new_med_freq_simponi_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -2121,7 +2121,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: entyvio
-      - key: new_med_res_freq_entyvio
+      - key: new_med_freq_entyvio
         question: How often do you take Entyvio (vedolizumab)?
         type: SINGLE_CHOICE
         options:
@@ -2144,7 +2144,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_entyvio_other
+              key: new_med_freq_entyvio_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -2252,7 +2252,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: ustekinumab
-      - key: new_med_res_freq_ustekinumab
+      - key: new_med_freq_ustekinumab
         question: How often do you take Ustekinumab (Stelara)?
         type: SINGLE_CHOICE
         options:
@@ -2275,7 +2275,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_ustekinumab_other
+              key: new_med_freq_ustekinumab_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -2383,7 +2383,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: tofacitinib
-      - key: new_med_res_freq_tofacitinib
+      - key: new_med_freq_tofacitinib
         question: How often do you take tofacitinib (Xeljanz)?
         type: SINGLE_CHOICE
         options:
@@ -2406,7 +2406,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_tofacitinib_other
+              key: new_med_freq_tofacitinib_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -2514,7 +2514,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: ozanimod
-      - key: new_med_res_freq_ozanimod
+      - key: new_med_freq_ozanimod
         question: How often do you take Ozanimod (Zeposia)?
         type: SINGLE_CHOICE
         options:
@@ -2537,7 +2537,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_ozanimod_other
+              key: new_med_freq_ozanimod_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -2645,7 +2645,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: imodium
-      - key: new_med_res_freq_imodium
+      - key: new_med_freq_imodium
         question: How often do you take Imodium (Ioperamide)?
         type: SINGLE_CHOICE
         options:
@@ -2668,7 +2668,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_imodium_other
+              key: new_med_freq_imodium_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -2776,7 +2776,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: lamotil
-      - key: new_med_res_freq_lamotil
+      - key: new_med_freq_lamotil
         question: How often do you take Lamotil (diphenoxylate/atropine)?
         type: SINGLE_CHOICE
         options:
@@ -2799,7 +2799,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_lamotil_other
+              key: new_med_freq_lamotil_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -2907,7 +2907,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: tincture_opium
-      - key: new_med_res_freq_tincture_opium
+      - key: new_med_freq_tincture_opium
         question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: SINGLE_CHOICE
         options:
@@ -2930,7 +2930,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_tincture_opium_other
+              key: new_med_freq_tincture_opium_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3038,7 +3038,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: cholestyramine
-      - key: new_med_res_freq_cholestyramine
+      - key: new_med_freq_cholestyramine
         question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: SINGLE_CHOICE
         options:
@@ -3061,7 +3061,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_cholestyramine_other
+              key: new_med_freq_cholestyramine_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3169,7 +3169,7 @@ sections:
                   question: new_med_name
                   operator: INCLUDES
                   value: other
-      - key: new_med_res_freq_other
+      - key: new_med_freq_other
         question: How often do you take Other?
         type: SINGLE_CHOICE
         options:
@@ -3192,7 +3192,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: new_med_res_freq_other_other
+              key: new_med_freq_other_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3372,7 +3372,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: corticosteroid
-      - key: stop_med_res_freq_corticosteroid
+      - key: stop_med_freq_corticosteroid
         question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -3395,7 +3395,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_corticosteroid_other
+              key: stop_med_freq_corticosteroid_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3503,7 +3503,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: budesonide
-      - key: stop_med_res_freq_budesonide
+      - key: stop_med_freq_budesonide
         question: How often do you take Budesonide (Entocort, Uceris)?
         type: SINGLE_CHOICE
         options:
@@ -3526,7 +3526,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_budesonide_other
+              key: stop_med_freq_budesonide_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3634,7 +3634,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: rectal_steroid
-      - key: stop_med_res_freq_rectal_steroid
+      - key: stop_med_freq_rectal_steroid
         question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: SINGLE_CHOICE
         options:
@@ -3657,7 +3657,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_rectal_steroid_other
+              key: stop_med_freq_rectal_steroid_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3765,7 +3765,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: oral_5
-      - key: stop_med_res_freq_oral_5
+      - key: stop_med_freq_oral_5
         question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
@@ -3788,7 +3788,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_oral_5_other
+              key: stop_med_freq_oral_5_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3896,7 +3896,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: azulfidine
-      - key: stop_med_res_freq_azulfidine
+      - key: stop_med_freq_azulfidine
         question: How often do you take Azulfidine (Sulfasalazine)?
         type: SINGLE_CHOICE
         options:
@@ -3919,7 +3919,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_azulfidine_other
+              key: stop_med_freq_azulfidine_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4027,7 +4027,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: rectal_5
-      - key: stop_med_res_freq_rectal_5
+      - key: stop_med_freq_rectal_5
         question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
@@ -4050,7 +4050,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_rectal_5_other
+              key: stop_med_freq_rectal_5_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4158,7 +4158,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: ciprofloxacin
-      - key: stop_med_res_freq_ciprofloxacin
+      - key: stop_med_freq_ciprofloxacin
         question: How often do you take Ciprofloxacin (to treat IBD)?
         type: SINGLE_CHOICE
         options:
@@ -4181,7 +4181,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_ciprofloxacin_other
+              key: stop_med_freq_ciprofloxacin_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4289,7 +4289,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: flagyl
-      - key: stop_med_res_freq_flagyl
+      - key: stop_med_freq_flagyl
         question: How often do you take Flagyl (metronidazole) (to treat IBD)?
         type: SINGLE_CHOICE
         options:
@@ -4312,7 +4312,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_flagyl_other
+              key: stop_med_freq_flagyl_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4420,7 +4420,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: other_antibiotics
-      - key: stop_med_res_freq_other_antibiotics
+      - key: stop_med_freq_other_antibiotics
         question: How often do you take Other antibiotics prescribed for IBD?
         type: SINGLE_CHOICE
         options:
@@ -4443,7 +4443,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_other_antibiotics_other
+              key: stop_med_freq_other_antibiotics_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4551,7 +4551,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: purethinol
-      - key: stop_med_res_freq_purethinol
+      - key: stop_med_freq_purethinol
         question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
         type: SINGLE_CHOICE
         options:
@@ -4574,7 +4574,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_purethinol_other
+              key: stop_med_freq_purethinol_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4682,7 +4682,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: methotrexate
-      - key: stop_med_res_freq_methotrexate
+      - key: stop_med_freq_methotrexate
         question: How often do you take Methotrexate?
         type: SINGLE_CHOICE
         options:
@@ -4705,7 +4705,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_methotrexate_other
+              key: stop_med_freq_methotrexate_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4813,7 +4813,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: remicade
-      - key: stop_med_res_freq_remicade
+      - key: stop_med_freq_remicade
         question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: SINGLE_CHOICE
         options:
@@ -4836,7 +4836,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_remicade_other
+              key: stop_med_freq_remicade_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -4944,7 +4944,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: humira
-      - key: stop_med_res_freq_humira
+      - key: stop_med_freq_humira
         question: How often do you take Humira (adalimumab)?
         type: SINGLE_CHOICE
         options:
@@ -4967,7 +4967,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_humira_other
+              key: stop_med_freq_humira_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5075,7 +5075,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: cimzia
-      - key: stop_med_res_freq_cimzia
+      - key: stop_med_freq_cimzia
         question: How often do you take Cimzia (cetolizumab pegol)?
         type: SINGLE_CHOICE
         options:
@@ -5098,7 +5098,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_cimzia_other
+              key: stop_med_freq_cimzia_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5206,7 +5206,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: simponi
-      - key: stop_med_res_freq_simponi
+      - key: stop_med_freq_simponi
         question: How often do you take Simponi (golimumab)?
         type: SINGLE_CHOICE
         options:
@@ -5229,7 +5229,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_simponi_other
+              key: stop_med_freq_simponi_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5337,7 +5337,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: entyvio
-      - key: stop_med_res_freq_entyvio
+      - key: stop_med_freq_entyvio
         question: How often do you take Entyvio (vedolizumab)?
         type: SINGLE_CHOICE
         options:
@@ -5360,7 +5360,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_entyvio_other
+              key: stop_med_freq_entyvio_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5468,7 +5468,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: ustekinumab
-      - key: stop_med_res_freq_ustekinumab
+      - key: stop_med_freq_ustekinumab
         question: How often do you take Ustekinumab (Stelara)?
         type: SINGLE_CHOICE
         options:
@@ -5491,7 +5491,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_ustekinumab_other
+              key: stop_med_freq_ustekinumab_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5599,7 +5599,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: tofacitinib
-      - key: stop_med_res_freq_tofacitinib
+      - key: stop_med_freq_tofacitinib
         question: How often do you take tofacitinib (Xeljanz)?
         type: SINGLE_CHOICE
         options:
@@ -5622,7 +5622,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_tofacitinib_other
+              key: stop_med_freq_tofacitinib_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5730,7 +5730,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: ozanimod
-      - key: stop_med_res_freq_ozanimod
+      - key: stop_med_freq_ozanimod
         question: How often do you take Ozanimod (Zeposia)?
         type: SINGLE_CHOICE
         options:
@@ -5753,7 +5753,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_ozanimod_other
+              key: stop_med_freq_ozanimod_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5861,7 +5861,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: imodium
-      - key: stop_med_res_freq_imodium
+      - key: stop_med_freq_imodium
         question: How often do you take Imodium (Ioperamide)?
         type: SINGLE_CHOICE
         options:
@@ -5884,7 +5884,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_imodium_other
+              key: stop_med_freq_imodium_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -5992,7 +5992,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: lamotil
-      - key: stop_med_res_freq_lamotil
+      - key: stop_med_freq_lamotil
         question: How often do you take Lamotil (diphenoxylate/atropine)?
         type: SINGLE_CHOICE
         options:
@@ -6015,7 +6015,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_lamotil_other
+              key: stop_med_freq_lamotil_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -6123,7 +6123,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: tincture_opium
-      - key: stop_med_res_freq_tincture_opium
+      - key: stop_med_freq_tincture_opium
         question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: SINGLE_CHOICE
         options:
@@ -6146,7 +6146,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_tincture_opium_other
+              key: stop_med_freq_tincture_opium_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -6254,7 +6254,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: cholestyramine
-      - key: stop_med_res_freq_cholestyramine
+      - key: stop_med_freq_cholestyramine
         question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: SINGLE_CHOICE
         options:
@@ -6277,7 +6277,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_cholestyramine_other
+              key: stop_med_freq_cholestyramine_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -6385,7 +6385,7 @@ sections:
                   question: stopped_med_name
                   operator: INCLUDES
                   value: other
-      - key: stop_med_res_freq_other
+      - key: stop_med_freq_other
         question: How often do you take Other?
         type: SINGLE_CHOICE
         options:
@@ -6408,7 +6408,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: stop_med_res_freq_other_other
+              key: stop_med_freq_other_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -6588,7 +6588,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: corticosteroid
-      - key: change_med_res_freq_corticosteroid
+      - key: change_med_freq_corticosteroid
         question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -6611,7 +6611,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_corticosteroid_other
+              key: change_med_freq_corticosteroid_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -6719,7 +6719,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: budesonide
-      - key: change_med_res_freq_budesonide
+      - key: change_med_freq_budesonide
         question: How often do you take Budesonide (Entocort, Uceris)?
         type: SINGLE_CHOICE
         options:
@@ -6742,7 +6742,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_budesonide_other
+              key: change_med_freq_budesonide_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -6850,7 +6850,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: rectal_steroid
-      - key: change_med_res_freq_rectal_steroid
+      - key: change_med_freq_rectal_steroid
         question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: SINGLE_CHOICE
         options:
@@ -6873,7 +6873,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_rectal_steroid_other
+              key: change_med_freq_rectal_steroid_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -6981,7 +6981,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: oral_5
-      - key: change_med_res_freq_oral_5
+      - key: change_med_freq_oral_5
         question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
@@ -7004,7 +7004,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_oral_5_other
+              key: change_med_freq_oral_5_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -7112,7 +7112,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: azulfidine
-      - key: change_med_res_freq_azulfidine
+      - key: change_med_freq_azulfidine
         question: How often do you take Azulfidine (Sulfasalazine)?
         type: SINGLE_CHOICE
         options:
@@ -7135,7 +7135,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_azulfidine_other
+              key: change_med_freq_azulfidine_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -7243,7 +7243,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: rectal_5
-      - key: change_med_res_freq_rectal_5
+      - key: change_med_freq_rectal_5
         question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
@@ -7266,7 +7266,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_rectal_5_other
+              key: change_med_freq_rectal_5_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -7374,7 +7374,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: ciprofloxacin
-      - key: change_med_res_freq_ciprofloxacin
+      - key: change_med_freq_ciprofloxacin
         question: How often do you take Ciprofloxacin (to treat IBD)?
         type: SINGLE_CHOICE
         options:
@@ -7397,7 +7397,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_ciprofloxacin_other
+              key: change_med_freq_ciprofloxacin_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -7505,7 +7505,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: flagyl
-      - key: change_med_res_freq_flagyl
+      - key: change_med_freq_flagyl
         question: How often do you take Flagyl (metronidazole) (to treat IBD)?
         type: SINGLE_CHOICE
         options:
@@ -7528,7 +7528,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_flagyl_other
+              key: change_med_freq_flagyl_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -7636,7 +7636,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: other_antibiotics
-      - key: change_med_res_freq_other_antibiotics
+      - key: change_med_freq_other_antibiotics
         question: How often do you take Other antibiotics prescribed for IBD?
         type: SINGLE_CHOICE
         options:
@@ -7659,7 +7659,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_other_antibiotics_other
+              key: change_med_freq_other_antibiotics_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -7767,7 +7767,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: purethinol
-      - key: change_med_res_freq_purethinol
+      - key: change_med_freq_purethinol
         question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
         type: SINGLE_CHOICE
         options:
@@ -7790,7 +7790,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_purethinol_other
+              key: change_med_freq_purethinol_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -7898,7 +7898,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: methotrexate
-      - key: change_med_res_freq_methotrexate
+      - key: change_med_freq_methotrexate
         question: How often do you take Methotrexate?
         type: SINGLE_CHOICE
         options:
@@ -7921,7 +7921,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_methotrexate_other
+              key: change_med_freq_methotrexate_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8029,7 +8029,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: remicade
-      - key: change_med_res_freq_remicade
+      - key: change_med_freq_remicade
         question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: SINGLE_CHOICE
         options:
@@ -8052,7 +8052,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_remicade_other
+              key: change_med_freq_remicade_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8160,7 +8160,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: humira
-      - key: change_med_res_freq_humira
+      - key: change_med_freq_humira
         question: How often do you take Humira (adalimumab)?
         type: SINGLE_CHOICE
         options:
@@ -8183,7 +8183,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_humira_other
+              key: change_med_freq_humira_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8291,7 +8291,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: cimzia
-      - key: change_med_res_freq_cimzia
+      - key: change_med_freq_cimzia
         question: How often do you take Cimzia (cetolizumab pegol)?
         type: SINGLE_CHOICE
         options:
@@ -8314,7 +8314,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_cimzia_other
+              key: change_med_freq_cimzia_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8422,7 +8422,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: simponi
-      - key: change_med_res_freq_simponi
+      - key: change_med_freq_simponi
         question: How often do you take Simponi (golimumab)?
         type: SINGLE_CHOICE
         options:
@@ -8445,7 +8445,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_simponi_other
+              key: change_med_freq_simponi_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8553,7 +8553,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: entyvio
-      - key: change_med_res_freq_entyvio
+      - key: change_med_freq_entyvio
         question: How often do you take Entyvio (vedolizumab)?
         type: SINGLE_CHOICE
         options:
@@ -8576,7 +8576,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_entyvio_other
+              key: change_med_freq_entyvio_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8684,7 +8684,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: ustekinumab
-      - key: change_med_res_freq_ustekinumab
+      - key: change_med_freq_ustekinumab
         question: How often do you take Ustekinumab (Stelara)?
         type: SINGLE_CHOICE
         options:
@@ -8707,7 +8707,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_ustekinumab_other
+              key: change_med_freq_ustekinumab_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8815,7 +8815,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: tofacitinib
-      - key: change_med_res_freq_tofacitinib
+      - key: change_med_freq_tofacitinib
         question: How often do you take tofacitinib (Xeljanz)?
         type: SINGLE_CHOICE
         options:
@@ -8838,7 +8838,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_tofacitinib_other
+              key: change_med_freq_tofacitinib_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -8946,7 +8946,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: ozanimod
-      - key: change_med_res_freq_ozanimod
+      - key: change_med_freq_ozanimod
         question: How often do you take Ozanimod (Zeposia)?
         type: SINGLE_CHOICE
         options:
@@ -8969,7 +8969,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_ozanimod_other
+              key: change_med_freq_ozanimod_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -9077,7 +9077,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: imodium
-      - key: change_med_res_freq_imodium
+      - key: change_med_freq_imodium
         question: How often do you take Imodium (Ioperamide)?
         type: SINGLE_CHOICE
         options:
@@ -9100,7 +9100,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_imodium_other
+              key: change_med_freq_imodium_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -9208,7 +9208,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: lamotil
-      - key: change_med_res_freq_lamotil
+      - key: change_med_freq_lamotil
         question: How often do you take Lamotil (diphenoxylate/atropine)?
         type: SINGLE_CHOICE
         options:
@@ -9231,7 +9231,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_lamotil_other
+              key: change_med_freq_lamotil_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -9339,7 +9339,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: tincture_opium
-      - key: change_med_res_freq_tincture_opium
+      - key: change_med_freq_tincture_opium
         question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: SINGLE_CHOICE
         options:
@@ -9362,7 +9362,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_tincture_opium_other
+              key: change_med_freq_tincture_opium_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -9470,7 +9470,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: cholestyramine
-      - key: change_med_res_freq_cholestyramine
+      - key: change_med_freq_cholestyramine
         question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: SINGLE_CHOICE
         options:
@@ -9493,7 +9493,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_cholestyramine_other
+              key: change_med_freq_cholestyramine_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -9601,7 +9601,7 @@ sections:
                   question: change_dose_med_name
                   operator: INCLUDES
                   value: other
-      - key: change_med_res_freq_other
+      - key: change_med_freq_other
         question: How often do you take Other?
         type: SINGLE_CHOICE
         options:
@@ -9624,7 +9624,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: change_med_res_freq_other_other
+              key: change_med_freq_other_other
               question: ""
               type: TEXTAREA
         triggers:
