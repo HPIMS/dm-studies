@@ -64,15 +64,34 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
+      graceDays: 7
+    triggers:
+      - action: SHOW
+      condition:
+        type: OR
+        tasks:
+        - type: COMPLETED
+          resource: ibd-forecast::baseline_health_crohn
+          operator: ">"
+          score: 0
+        - type: COMPLETED
+          resource: ibd-forecast::baseline_health_uc
+          operator: ">"
+          score: 0
   - key: promis-gi-diarrhea
     rank: 3
     schedule:
       type: PERIOD
       period: BI_WEEKLY
+      graceDays: 7
   - key: pss-4-baseline
     rank: 3
   - key: pss-4-bi-weekly
     rank: 3
+    schedule:
+      type: PERIOD
+      period: BI_WEEKLY
+      graceDays: 7
     triggers:
     - action: SHOW
       condition:
