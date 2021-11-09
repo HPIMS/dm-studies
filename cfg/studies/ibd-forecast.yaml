@@ -67,17 +67,17 @@ surveys:
       graceDays: 7
     triggers:
       - action: SHOW
-      condition:
-        type: OR
-        tasks:
-        - type: COMPLETED
-          resource: ibd-forecast::baseline_health_crohn
-          operator: ">"
-          score: 0
-        - type: COMPLETED
-          resource: ibd-forecast::baseline_health_uc
-          operator: ">"
-          score: 0
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: promis-gi-diarrhea
     rank: 3
     schedule:
