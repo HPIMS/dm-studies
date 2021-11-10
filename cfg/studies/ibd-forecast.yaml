@@ -20,7 +20,7 @@ surveys:
   - key: baseline_demographics
     rank: 1
   - key: baseline_health_crohn
-    rank: 2
+    rank: 1
     triggers:
       - action: SHOW
         condition:
@@ -29,7 +29,7 @@ surveys:
             operator: =
             score: 0
   - key: baseline_health_uc
-    rank: 2
+    rank: 1
     triggers:
       - action: SHOW
         condition:
@@ -98,7 +98,7 @@ surveys:
             operator: ">"
             score: 0
   - key: pss-4-baseline
-    rank: 3
+    rank: 2
     triggers:
       - action: SHOW
         condition:
@@ -113,7 +113,7 @@ surveys:
             operator: ">"
             score: 0   
   - key: pss-4-bi-weekly
-    rank: 3
+    rank: 2
     schedule:
       type: PERIOD
       period: BI_WEEKLY
@@ -126,7 +126,7 @@ surveys:
           operator: ">"
           score: -1
   - key: cd-risc-10
-    rank: 3
+    rank: 2
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier
