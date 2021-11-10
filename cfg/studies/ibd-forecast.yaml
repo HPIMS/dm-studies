@@ -53,7 +53,7 @@ surveys:
               operator: =
               score: 0
             - type: COMPLETED
-              resource: ibd-forecast::baseline_health_uc
+              resource: ibd-forecast::baseline_health_crohn
               operator: ">"
               score: 0
   - key: pro-2-uc
