@@ -153,6 +153,19 @@ surveys:
           score: -1
   - key: cd-risc-10
     rank: 2
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0  
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier
