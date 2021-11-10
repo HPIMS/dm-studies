@@ -20,7 +20,7 @@ surveys:
   - key: baseline_demographics
     rank: 1
   - key: baseline_health_crohn
-    rank: 2
+    rank: 1
     triggers:
       - action: SHOW
         condition:
@@ -29,7 +29,7 @@ surveys:
             operator: =
             score: 0
   - key: baseline_health_uc
-    rank: 2
+    rank: 1
     triggers:
       - action: SHOW
         condition:
@@ -39,26 +39,52 @@ surveys:
             score: 1
   - key: lab_tests
     rank: 5
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: new_meds
     rank: 5
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: pro-2-crohns
     rank: 4
     triggers:
       - action: SHOW
         condition:
-          - type: SCORE
-            resource: ibd-forecast::baseline_demographics
-            operator: =
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
             score: 0
   - key: pro-2-uc
     rank: 4
     triggers:
       - action: SHOW
         condition:
-          - type: SCORE
-            resource: ibd-forecast::baseline_demographics
-            operator: =
-            score: 1
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: promis-gi-belly-pain
     rank: 3
     schedule:
@@ -67,27 +93,53 @@ surveys:
       graceDays: 7
     triggers:
       - action: SHOW
-      condition:
-        type: OR
-        tasks:
-        - type: COMPLETED
-          resource: ibd-forecast::baseline_health_crohn
-          operator: ">"
-          score: 0
-        - type: COMPLETED
-          resource: ibd-forecast::baseline_health_uc
-          operator: ">"
-          score: 0
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: promis-gi-diarrhea
     rank: 3
     schedule:
       type: PERIOD
       period: BI_WEEKLY
       graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: pss-4-baseline
-    rank: 3
+    rank: 2
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0   
   - key: pss-4-bi-weekly
-    rank: 3
+    rank: 2
     schedule:
       type: PERIOD
       period: BI_WEEKLY
@@ -100,7 +152,7 @@ surveys:
           operator: ">"
           score: -1
   - key: cd-risc-10
-    rank: 3
+    rank: 2
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier
