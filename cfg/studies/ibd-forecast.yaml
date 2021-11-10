@@ -46,31 +46,19 @@ surveys:
     triggers:
       - action: SHOW
         condition:
-          type: AND
-          tasks:
-            - type: SCORE
-              resource: ibd-forecast::baseline_demographics
-              operator: =
-              score: 0
-            - type: COMPLETED
-              resource: ibd-forecast::baseline_health_crohn
-              operator: ">"
-              score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
   - key: pro-2-uc
     rank: 4
     triggers:
       - action: SHOW
         condition:
-          type: AND
-          tasks:
-            - type: SCORE
-              resource: ibd-forecast::baseline_demographics
-              operator: =
-              score: 1
-            - type: COMPLETED
-              resource: ibd-forecast::baseline_health_uc
-              operator: ">"
-              score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: promis-gi-belly-pain
     rank: 3
     schedule:
