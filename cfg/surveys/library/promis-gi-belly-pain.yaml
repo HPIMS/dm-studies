@@ -73,12 +73,20 @@ sections:
             condition:
               - section: promis_gi_belly_pain
                 question: pain_often
-                operator: IS_SET
-                AND:
-                  - section: promis_gi_belly_pain
-                    question: pain_often
-                    operator: NOT_INCLUDES
-                    value: never
+                operator: INCLUDES
+                value: one_day
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: 2_6_days        
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: once_daily
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: over_once_daily
       - key: belly_pain_interfere_d2d
         question: How much did belly pain interfere with your day-to-day activities?
         type: SINGLE_CHOICE
@@ -104,12 +112,20 @@ sections:
             condition:
               - section: promis_gi_belly_pain
                 question: pain_often
-                operator: IS_SET
-                AND:
-                  - section: promis_gi_belly_pain
-                    question: pain_often
-                    operator: NOT_INCLUDES
-                    value: never
+                operator: INCLUDES
+                value: one_day
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: 2_6_days        
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: once_daily
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: over_once_daily
       - key: belly_pain_bother
         question: How much did belly pain bother you?
         type: SINGLE_CHOICE
@@ -135,12 +151,20 @@ sections:
             condition:
               - section: promis_gi_belly_pain
                 question: pain_often
-                operator: IS_SET
-                AND:
-                  - section: promis_gi_belly_pain
-                    question: pain_often
-                    operator: NOT_INCLUDES
-                    value: never
+                operator: INCLUDES
+                value: one_day
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: 2_6_days        
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: once_daily
+              - section: promis_gi_belly_pain
+                question: pain_often
+                operator: INCLUDES
+                value: over_once_daily
       - key: belly_discomfort
         question: How often did you have discomfort in your belly? 
         type: SINGLE_CHOICE

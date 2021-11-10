@@ -74,12 +74,20 @@ sections:
             condition:
               - section: promis_gi_diarrhea
                 question: days_loose
-                operator: IS_SET
-                AND:
-                  - section: promis_gi_diarrhea
-                    question: days_loose
-                    operator: NOT_INCLUDES
-                    value: none
+                operator: INCLUDES
+                value: one_day
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: two_days        
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 3_5_days
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 6_7_days
       - key: bother_you_loose
         question: How much did having loose or watery stools bother you?
         type: SINGLE_CHOICE
@@ -105,12 +113,20 @@ sections:
             condition:
               - section: promis_gi_diarrhea
                 question: days_loose
-                operator: IS_SET
-                AND:
-                  - section: promis_gi_diarrhea
-                    question: days_loose
-                    operator: NOT_INCLUDES
-                    value: none
+                operator: INCLUDES
+                value: one_day
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: two_days        
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 3_5_days
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 6_7_days
       - key: immediate_accident
         question: How often did you feel like you needed to empty your bowels right away or else you would have an accident?
         type: SINGLE_CHOICE
@@ -155,12 +171,20 @@ sections:
             condition:
               - section: promis_gi_diarrhea
                 question: immediate_accident
-                operator: IS_SET
-                AND:
-                  - section: promis_gi_diarrhea
-                    question: immediate_accident
-                    operator: NOT_INCLUDES
-                    value: never
+                operator: INCLUDES
+                value: one_time
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: 2_6_times        
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: once_per_day
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: over_once_daily
       - key: immediate_bother
         question: How much did feeling like you needed to empty your bowels right away bother you? 
         type: SINGLE_CHOICE
@@ -186,10 +210,18 @@ sections:
             condition:
               - section: promis_gi_diarrhea
                 question: immediate_accident
-                operator: IS_SET
-                AND:
-                  - section: promis_gi_diarrhea
-                    question: immediate_accident
-                    operator: NOT_INCLUDES
-                    value: never
+                operator: INCLUDES
+                value: one_time
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: 2_6_times        
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: once_per_day
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: over_once_daily
 
