@@ -39,8 +39,34 @@ surveys:
             score: 1
   - key: lab_tests
     rank: 5
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: new_meds
     rank: 5
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
   - key: pro-2-crohns
     rank: 4
     triggers:
