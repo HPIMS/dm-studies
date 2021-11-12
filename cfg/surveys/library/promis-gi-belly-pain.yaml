@@ -14,10 +14,10 @@ name: Belly Pain
 short: About your belly pain
 intro:
   title: Belly Pain
-  description: We want to understand more about your belly pain over the past 7 days. Please fill
+  description: |-
+   We want to understand more about your belly pain over the past 7 days. Please fill
     out this survey and let us know. You may skip any questions that you are not
     comfortable answering.
-
 
     The surveys in this app are NOT a replacement or substitute for medical care.
     The answers you provide will not be used for clinical care. For any health concerns
@@ -99,7 +99,7 @@ sections:
             text: A little bit
             score: 2
           - value: somewhat
-            text: somewhat
+            text: Somewhat
             score: 3
           - value: quite_bit
             text: Quite a bit
