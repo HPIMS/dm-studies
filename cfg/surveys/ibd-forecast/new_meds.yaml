@@ -123,7 +123,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_corticosteroid_mg
               question: "Please provide the quantity"
@@ -185,7 +185,7 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: new_med_freq_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        question: How many times at the above interval do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -254,7 +254,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_budesonide_mg
               question: "Please provide the quantity"
@@ -316,7 +316,7 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: new_med_freq_budesonide
-        question: How often do you take Budesonide (Entocort, Uceris)?
+        question: How many times at the above interval do you take Budesonide (Entocort, Uceris)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -385,7 +385,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_rectal_steroid_mg
               question: "Please provide the quantity"
@@ -447,7 +447,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: new_med_freq_rectal_steroid
-        question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
+        question: How many times at the above interval do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -516,7 +516,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_oral_5_mg
               question: "Please provide the quantity"
@@ -578,7 +578,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: new_med_freq_oral_5
-        question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        question: How many times at the above interval do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -647,7 +647,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_azulfidine_mg
               question: "Please provide the quantity"
@@ -709,7 +709,7 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: new_med_freq_azulfidine
-        question: How often do you take Azulfidine (Sulfasalazine)?
+        question: How many times at the above interval do you take Azulfidine (Sulfasalazine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -778,7 +778,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_rectal_5_mg
               question: "Please provide the quantity"
@@ -840,7 +840,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: new_med_freq_rectal_5
-        question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        question: How many times at the above interval do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -909,7 +909,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_ciprofloxacin_mg
               question: "Please provide the quantity"
@@ -971,7 +971,7 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: new_med_freq_ciprofloxacin
-        question: How often do you take Ciprofloxacin (to treat IBD)?
+        question: How many times at the above interval do you take Ciprofloxacin (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1040,7 +1040,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_flagyl_mg
               question: "Please provide the quantity"
@@ -1102,7 +1102,7 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: new_med_freq_flagyl
-        question: How often do you take Flagyl (metronidazole) (to treat IBD)?
+        question: How many times at the above interval do you take Flagyl (metronidazole) (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1171,7 +1171,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_other_antibiotics_mg
               question: "Please provide the quantity"
@@ -1233,7 +1233,7 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: new_med_freq_other_antibiotics
-        question: How often do you take Other antibiotics prescribed for IBD?
+        question: How many times at the above interval do you take Other antibiotics prescribed for IBD?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1302,7 +1302,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_purethinol_mg
               question: "Please provide the quantity"
@@ -1364,7 +1364,7 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: new_med_freq_purethinol
-        question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
+        question: How many times at the above interval do you take Purethinol (6-MP) / Imuran (Azathioprine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1433,7 +1433,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_methotrexate_mg
               question: "Please provide the quantity"
@@ -1495,7 +1495,7 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: new_med_freq_methotrexate
-        question: How often do you take Methotrexate?
+        question: How many times at the above interval do you take Methotrexate?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1564,7 +1564,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_remicade_mg
               question: "Please provide the quantity"
@@ -1626,7 +1626,7 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: new_med_freq_remicade
-        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
+        question: How many times at the above interval do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1695,7 +1695,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_humira_mg
               question: "Please provide the quantity"
@@ -1757,7 +1757,7 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: new_med_freq_humira
-        question: How often do you take Humira (adalimumab)?
+        question: How many times at the above interval do you take Humira (adalimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1826,7 +1826,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_cimzia_mg
               question: "Please provide the quantity"
@@ -1888,7 +1888,7 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: new_med_freq_cimzia
-        question: How often do you take Cimzia (cetolizumab pegol)?
+        question: How many times at the above interval do you take Cimzia (cetolizumab pegol)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -1957,7 +1957,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_simponi_mg
               question: "Please provide the quantity"
@@ -2019,7 +2019,7 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: new_med_freq_simponi
-        question: How often do you take Simponi (golimumab)?
+        question: How many times at the above interval do you take Simponi (golimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -2088,7 +2088,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_entyvio_mg
               question: "Please provide the quantity"
@@ -2150,7 +2150,7 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: new_med_freq_entyvio
-        question: How often do you take Entyvio (vedolizumab)?
+        question: How many times at the above interval do you take Entyvio (vedolizumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -2219,7 +2219,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_ustekinumab_mg
               question: "Please provide the quantity"
@@ -2281,7 +2281,7 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: new_med_freq_ustekinumab
-        question: How often do you take Ustekinumab (Stelara)?
+        question: How many times at the above interval do you take Ustekinumab (Stelara)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -2350,7 +2350,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_tofacitinib_mg
               question: "Please provide the quantity"
@@ -2412,7 +2412,7 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: new_med_freq_tofacitinib
-        question: How often do you take tofacitinib (Xeljanz)?
+        question: How many times at the above interval do you take tofacitinib (Xeljanz)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -2481,7 +2481,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_ozanimod_mg
               question: "Please provide the quantity"
@@ -2543,7 +2543,7 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: new_med_freq_ozanimod
-        question: How often do you take Ozanimod (Zeposia)?
+        question: How many times at the above interval do you take Ozanimod (Zeposia)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -2612,7 +2612,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_imodium_mg
               question: "Please provide the quantity"
@@ -2674,7 +2674,7 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: new_med_freq_imodium
-        question: How often do you take Imodium (Ioperamide)?
+        question: How many times at the above interval do you take Imodium (Ioperamide)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -2743,7 +2743,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_lamotil_mg
               question: "Please provide the quantity"
@@ -2805,7 +2805,7 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: new_med_freq_lamotil
-        question: How often do you take Lamotil (diphenoxylate/atropine)?
+        question: How many times at the above interval do you take Lamotil (diphenoxylate/atropine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -2874,7 +2874,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_tincture_opium_mg
               question: "Please provide the quantity"
@@ -2936,7 +2936,7 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: new_med_freq_tincture_opium
-        question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
+        question: How many times at the above interval do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3005,7 +3005,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_cholestyramine_mg
               question: "Please provide the quantity"
@@ -3067,7 +3067,7 @@ sections:
                   operator: INCLUDES
                   value: cholestyramine
       - key: new_med_freq_cholestyramine
-        question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
+        question: How many times at the above interval do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3136,7 +3136,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: new_med_dose_other_mg
               question: "Please provide the quantity"
@@ -3198,7 +3198,7 @@ sections:
                   operator: INCLUDES
                   value: other
       - key: new_med_freq_other
-        question: How often do you take Other?
+        question: How many times at the above interval do you take Other?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3269,11 +3269,11 @@ sections:
           - value: yes
             text: Yes
           - value: no
-            text: No 
+            text: No
       - key: stopped_med_name
-        question: What medication did you stop? 
+        question: What medication did you stop?
         type: SINGLE_CHOICE
-        options: 
+        options:
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
@@ -3355,7 +3355,7 @@ sections:
                 question: "Please specify:"
                 type: TEXTAREA
         triggers:
-          - action: 
+          - action:
               type: SHOW
             condition:
               - section: new_meds
@@ -3367,7 +3367,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_corticosteroid_mg
               question: "Please provide the quantity"
@@ -3429,7 +3429,7 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: stop_med_freq_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        question: How many times at the above interval do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3498,7 +3498,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_budesonide_mg
               question: "Please provide the quantity"
@@ -3560,7 +3560,7 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: stop_med_freq_budesonide
-        question: How often do you take Budesonide (Entocort, Uceris)?
+        question: How many times at the above interval do you take Budesonide (Entocort, Uceris)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3629,7 +3629,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_rectal_steroid_mg
               question: "Please provide the quantity"
@@ -3691,7 +3691,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: stop_med_freq_rectal_steroid
-        question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
+        question: How many times at the above interval do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3760,7 +3760,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_oral_5_mg
               question: "Please provide the quantity"
@@ -3822,7 +3822,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: stop_med_freq_oral_5
-        question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        question: How many times at the above interval do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3891,7 +3891,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_azulfidine_mg
               question: "Please provide the quantity"
@@ -3953,7 +3953,7 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: stop_med_freq_azulfidine
-        question: How often do you take Azulfidine (Sulfasalazine)?
+        question: How many times at the above interval do you take Azulfidine (Sulfasalazine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4022,7 +4022,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_rectal_5_mg
               question: "Please provide the quantity"
@@ -4084,7 +4084,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: stop_med_freq_rectal_5
-        question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        question: How many times at the above interval do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4153,7 +4153,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_ciprofloxacin_mg
               question: "Please provide the quantity"
@@ -4215,7 +4215,7 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: stop_med_freq_ciprofloxacin
-        question: How often do you take Ciprofloxacin (to treat IBD)?
+        question: How many times at the above interval do you take Ciprofloxacin (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4284,7 +4284,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_flagyl_mg
               question: "Please provide the quantity"
@@ -4346,7 +4346,7 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: stop_med_freq_flagyl
-        question: How often do you take Flagyl (metronidazole) (to treat IBD)?
+        question: How many times at the above interval do you take Flagyl (metronidazole) (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4415,7 +4415,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_other_antibiotics_mg
               question: "Please provide the quantity"
@@ -4477,7 +4477,7 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: stop_med_freq_other_antibiotics
-        question: How often do you take Other antibiotics prescribed for IBD?
+        question: How many times at the above interval do you take Other antibiotics prescribed for IBD?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4546,7 +4546,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_purethinol_mg
               question: "Please provide the quantity"
@@ -4608,7 +4608,7 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: stop_med_freq_purethinol
-        question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
+        question: How many times at the above interval do you take Purethinol (6-MP) / Imuran (Azathioprine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4677,7 +4677,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_methotrexate_mg
               question: "Please provide the quantity"
@@ -4739,7 +4739,7 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: stop_med_freq_methotrexate
-        question: How often do you take Methotrexate?
+        question: How many times at the above interval do you take Methotrexate?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4808,7 +4808,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_remicade_mg
               question: "Please provide the quantity"
@@ -4870,7 +4870,7 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: stop_med_freq_remicade
-        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
+        question: How many times at the above interval do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4939,7 +4939,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_humira_mg
               question: "Please provide the quantity"
@@ -5001,7 +5001,7 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: stop_med_freq_humira
-        question: How often do you take Humira (adalimumab)?
+        question: How many times at the above interval do you take Humira (adalimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5070,7 +5070,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_cimzia_mg
               question: "Please provide the quantity"
@@ -5132,7 +5132,7 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: stop_med_freq_cimzia
-        question: How often do you take Cimzia (cetolizumab pegol)?
+        question: How many times at the above interval do you take Cimzia (cetolizumab pegol)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5201,7 +5201,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_simponi_mg
               question: "Please provide the quantity"
@@ -5263,7 +5263,7 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: stop_med_freq_simponi
-        question: How often do you take Simponi (golimumab)?
+        question: How many times at the above interval do you take Simponi (golimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5332,7 +5332,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_entyvio_mg
               question: "Please provide the quantity"
@@ -5394,7 +5394,7 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: stop_med_freq_entyvio
-        question: How often do you take Entyvio (vedolizumab)?
+        question: How many times at the above interval do you take Entyvio (vedolizumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5463,7 +5463,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_ustekinumab_mg
               question: "Please provide the quantity"
@@ -5525,7 +5525,7 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: stop_med_freq_ustekinumab
-        question: How often do you take Ustekinumab (Stelara)?
+        question: How many times at the above interval do you take Ustekinumab (Stelara)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5594,7 +5594,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_tofacitinib_mg
               question: "Please provide the quantity"
@@ -5656,7 +5656,7 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: stop_med_freq_tofacitinib
-        question: How often do you take tofacitinib (Xeljanz)?
+        question: How many times at the above interval do you take tofacitinib (Xeljanz)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5725,7 +5725,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_ozanimod_mg
               question: "Please provide the quantity"
@@ -5787,7 +5787,7 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: stop_med_freq_ozanimod
-        question: How often do you take Ozanimod (Zeposia)?
+        question: How many times at the above interval do you take Ozanimod (Zeposia)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5856,7 +5856,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_imodium_mg
               question: "Please provide the quantity"
@@ -5918,7 +5918,7 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: stop_med_freq_imodium
-        question: How often do you take Imodium (Ioperamide)?
+        question: How many times at the above interval do you take Imodium (Ioperamide)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5987,7 +5987,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_lamotil_mg
               question: "Please provide the quantity"
@@ -6049,7 +6049,7 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: stop_med_freq_lamotil
-        question: How often do you take Lamotil (diphenoxylate/atropine)?
+        question: How many times at the above interval do you take Lamotil (diphenoxylate/atropine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6118,7 +6118,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_tincture_opium_mg
               question: "Please provide the quantity"
@@ -6180,7 +6180,7 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: stop_med_freq_tincture_opium
-        question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
+        question: How many times at the above interval do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6249,7 +6249,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_cholestyramine_mg
               question: "Please provide the quantity"
@@ -6311,7 +6311,7 @@ sections:
                   operator: INCLUDES
                   value: cholestyramine
       - key: stop_med_freq_cholestyramine
-        question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
+        question: How many times at the above interval do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6380,7 +6380,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: stop_med_dose_other_mg
               question: "Please provide the quantity"
@@ -6442,7 +6442,7 @@ sections:
                   operator: INCLUDES
                   value: other
       - key: stop_med_freq_other
-        question: How often do you take Other?
+        question: How many times at the above interval do you take Other?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6611,7 +6611,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_corticosteroid_mg
               question: "Please provide the quantity"
@@ -6673,7 +6673,7 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: change_med_freq_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        question: How many times at the above interval do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6742,7 +6742,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_budesonide_mg
               question: "Please provide the quantity"
@@ -6804,7 +6804,7 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: change_med_freq_budesonide
-        question: How often do you take Budesonide (Entocort, Uceris)?
+        question: How many times at the above interval do you take Budesonide (Entocort, Uceris)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6873,7 +6873,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_rectal_steroid_mg
               question: "Please provide the quantity"
@@ -6935,7 +6935,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: change_med_freq_rectal_steroid
-        question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
+        question: How many times at the above interval do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7004,7 +7004,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_oral_5_mg
               question: "Please provide the quantity"
@@ -7066,7 +7066,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: change_med_freq_oral_5
-        question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        question: How many times at the above interval do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7135,7 +7135,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_azulfidine_mg
               question: "Please provide the quantity"
@@ -7197,7 +7197,7 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: change_med_freq_azulfidine
-        question: How often do you take Azulfidine (Sulfasalazine)?
+        question: How many times at the above interval do you take Azulfidine (Sulfasalazine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7266,7 +7266,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_rectal_5_mg
               question: "Please provide the quantity"
@@ -7328,7 +7328,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: change_med_freq_rectal_5
-        question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        question: How many times at the above interval do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7397,7 +7397,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_ciprofloxacin_mg
               question: "Please provide the quantity"
@@ -7459,7 +7459,7 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: change_med_freq_ciprofloxacin
-        question: How often do you take Ciprofloxacin (to treat IBD)?
+        question: How many times at the above interval do you take Ciprofloxacin (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7528,7 +7528,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_flagyl_mg
               question: "Please provide the quantity"
@@ -7590,7 +7590,7 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: change_med_freq_flagyl
-        question: How often do you take Flagyl (metronidazole) (to treat IBD)?
+        question: How many times at the above interval do you take Flagyl (metronidazole) (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7659,7 +7659,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_other_antibiotics_mg
               question: "Please provide the quantity"
@@ -7721,7 +7721,7 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: change_med_freq_other_antibiotics
-        question: How often do you take Other antibiotics prescribed for IBD?
+        question: How many times at the above interval do you take Other antibiotics prescribed for IBD?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7790,7 +7790,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_purethinol_mg
               question: "Please provide the quantity"
@@ -7852,7 +7852,7 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: change_med_freq_purethinol
-        question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
+        question: How many times at the above interval do you take Purethinol (6-MP) / Imuran (Azathioprine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -7921,7 +7921,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_methotrexate_mg
               question: "Please provide the quantity"
@@ -7983,7 +7983,7 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: change_med_freq_methotrexate
-        question: How often do you take Methotrexate?
+        question: How many times at the above interval do you take Methotrexate?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8052,7 +8052,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_remicade_mg
               question: "Please provide the quantity"
@@ -8114,7 +8114,7 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: change_med_freq_remicade
-        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
+        question: How many times at the above interval do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8183,7 +8183,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_humira_mg
               question: "Please provide the quantity"
@@ -8245,7 +8245,7 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: change_med_freq_humira
-        question: How often do you take Humira (adalimumab)?
+        question: How many times at the above interval do you take Humira (adalimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8314,7 +8314,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_cimzia_mg
               question: "Please provide the quantity"
@@ -8376,7 +8376,7 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: change_med_freq_cimzia
-        question: How often do you take Cimzia (cetolizumab pegol)?
+        question: How many times at the above interval do you take Cimzia (cetolizumab pegol)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8445,7 +8445,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_simponi_mg
               question: "Please provide the quantity"
@@ -8507,7 +8507,7 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: change_med_freq_simponi
-        question: How often do you take Simponi (golimumab)?
+        question: How many times at the above interval do you take Simponi (golimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8576,7 +8576,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_entyvio_mg
               question: "Please provide the quantity"
@@ -8638,7 +8638,7 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: change_med_freq_entyvio
-        question: How often do you take Entyvio (vedolizumab)?
+        question: How many times at the above interval do you take Entyvio (vedolizumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8707,7 +8707,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_ustekinumab_mg
               question: "Please provide the quantity"
@@ -8769,7 +8769,7 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: change_med_freq_ustekinumab
-        question: How often do you take Ustekinumab (Stelara)?
+        question: How many times at the above interval do you take Ustekinumab (Stelara)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8838,7 +8838,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_tofacitinib_mg
               question: "Please provide the quantity"
@@ -8900,7 +8900,7 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: change_med_freq_tofacitinib
-        question: How often do you take tofacitinib (Xeljanz)?
+        question: How many times at the above interval do you take tofacitinib (Xeljanz)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -8969,7 +8969,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_ozanimod_mg
               question: "Please provide the quantity"
@@ -9031,7 +9031,7 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: change_med_freq_ozanimod
-        question: How often do you take Ozanimod (Zeposia)?
+        question: How many times at the above interval do you take Ozanimod (Zeposia)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -9100,7 +9100,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_imodium_mg
               question: "Please provide the quantity"
@@ -9162,7 +9162,7 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: change_med_freq_imodium
-        question: How often do you take Imodium (Ioperamide)?
+        question: How many times at the above interval do you take Imodium (Ioperamide)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -9231,7 +9231,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_lamotil_mg
               question: "Please provide the quantity"
@@ -9293,7 +9293,7 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: change_med_freq_lamotil
-        question: How often do you take Lamotil (diphenoxylate/atropine)?
+        question: How many times at the above interval do you take Lamotil (diphenoxylate/atropine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -9362,7 +9362,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_tincture_opium_mg
               question: "Please provide the quantity"
@@ -9424,7 +9424,7 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: change_med_freq_tincture_opium
-        question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
+        question: How many times at the above interval do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -9493,7 +9493,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_cholestyramine_mg
               question: "Please provide the quantity"
@@ -9555,7 +9555,7 @@ sections:
                   operator: INCLUDES
                   value: cholestyramine
       - key: change_med_freq_cholestyramine
-        question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
+        question: How many times at the above interval do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -9624,7 +9624,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligrams (mg)
+            text: milligramms (mg)
             inlineQuestion:
               key: change_med_dose_other_mg
               question: "Please provide the quantity"
@@ -9686,7 +9686,7 @@ sections:
                   operator: INCLUDES
                   value: other
       - key: change_med_freq_other
-        question: How often do you take Other?
+        question: How many times at the above interval do you take Other?
         type: SINGLE_CHOICE
         options:
           - value: 1

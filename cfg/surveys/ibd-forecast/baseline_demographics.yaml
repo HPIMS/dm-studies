@@ -5,13 +5,13 @@ schedule:
   type: PERIOD
   period: ONCE
 timeEstimate: 5
-name: Baseline Demographics
+name: Demographics
 short: "About You"
 intro:
-  title: "Baseline Demographics"
+  title: "Demographics"
   description: "Tell us about yourself by answering the following questions."
 outro:
-  title: "Baseline Complete"
+  title: "Demographics Complete"
   description: "Thank you for completing this survey! Your participation is always valued."
 sections:
   - key: "baseline"
