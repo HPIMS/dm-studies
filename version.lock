@@ -1,119 +1,71 @@
 active:
   studies:
+    ibd-forecast:
+      - fbfd91f49bda0a6a3a841b25bea17f58
+      - 3
     pss:
       - 8762ac325abbbdb7a238ae6ae2330f5b
       - 7
-    baseline:
-      - 09a5a2da84e7aa72b83a7088b783aa58
-      - 12
-    ibd-forecast:
-      - d1f4d8a5a6ae1d66ced68d2bb4681101
-      - 2
     warrior-shield:
       - 674596a7ea3ab015f4a306203888a8b8
       - 9
+    baseline:
+      - 09a5a2da84e7aa72b83a7088b783aa58
+      - 12
   surveys:
-    ibd-forecast::baseline_health:
-      - f7544f6b2ba02d689e379fa95322be98
-      - 2
     ibd-forecast::lab_tests:
-      - c05fc58c58aebeefeaebb4f7b8050f34
-      - 2
-    ibd-forecast::new_meds:
-      - 81e732bb61496b067e1ce38dcc01f51c
-      - 2
+      - 84118f9418ca1371f650bc1aeb780576
+      - 3
+    ibd-forecast::pss-4-bi-weekly:
+      - fcf1e217b90c0825a30ef93b575eb88e
+      - 1
     ibd-forecast::baseline_demographics:
-      - 6cace71919515e9b9c9b50a9532df221
-      - 2
-    warrior-shield::daily-check-in:
-      - a86144938ca2522e90c217121bc2899a
-      - 1
-    warrior-shield::devices:
-      - 4355658e9d6813f91eff4415ef9dec52
+      - 0b52f67e0a7e4fa1e740dcbb82c282a6
       - 3
-    warrior-shield::heartmath-satisfaction:
-      - 34fca689f0a358443094e60e5f08f635
+    ibd-forecast::baseline_health_crohn:
+      - 41bace1ca55923ea0fe2ad2234f30844
       - 1
-    warrior-shield::demographics:
-      - ae166ccda0a12812fe1fad945a74e4a3
-      - 2
-    warrior-shield::start-intervention:
-      - 87a4ccb971d37399f22b3e008dc912e6
-      - 1
-    library::cd-risc-10:
-      - 0d36e4a316bfd15cf0b8d8ad8376f712
-      - 2
-    library::cd-risc-2:
-      - d89948889bd4ca16edc956c3f3a4cbe6
-      - 1
-    warrior-shield::report-new-information:
-      - a4bb1c2846ee5448983000b392cb8173
-      - 1
-    library::promis-gh-qol-2-item:
-      - ca0c06b2308830bfe709406f152dff8f
-      - 1
-    library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
-      - ac182528c734db612b8c13999c4a9812
-      - 3
-    library::phq-8:
-      - 93f2957fca5cfa1a3bb983051d83882d
-      - 1
-    library::promis-gi-diarrhea:
-      - 6522070cae66d12d65351e557107118f
-      - 2
-    library::pro-2-uc:
-      - 0c73ce005599db1a31daef145c802e8e
-      - 1
-    library::promis-sleep-disturbance-8a-v1.0:
-      - 244fe53060b550c274c473585f25bff1
-      - 1
-    library::promis-pain-interference-6b-v1.0:
-      - 547d6c5353b76caf53a54d1f7bca303c
-      - 1
-    library::promis-gi-belly-pain:
-      - bf1e59d9817f72ce7e17e9c0a960d902
-      - 1
-    library::pss-10:
-      - 107e6c1cd748582179e433f366832943
-      - 2
-    library::promis-social-support-2-item:
-      - 3dd65f645754ff491bc285c53a9e3796
+    ibd-forecast::new_meds:
+      - b79d3ef37b626b7815d385475b0f0584
       - 3
     baseline_demographics:
       - 3da11760b0cd0f3890d8a43d9dae9eeb
       - 10
-    library::pss-4:
-      - af5d3af60ca5da4ea3af82aa71130d0e
-      - 1
-    mood_survey:
-      - 5ebf3b1c67af7b731c5a1466136cf2e5
-      - 5
-    baseline_cd_risc_survey:
-      - c7ebe8d919288a6caa8f85b916164245
-      - 6
-    library::phq-4:
-      - fee497c647cdc08fd96f423bbcc36ce2
-      - 3
-    health_care:
-      - 68e8cbf3405497fe9b40300f29a7fbe2
-      - 6
-    library::pro-2-crohns:
-      - d4b08278102e076e787b4171a4e02844
+    ibd-forecast::baseline_health_uc:
+      - 308e526644f869bffbd52e9516317105
       - 1
     pain:
       - 3f408f06d636683e99edf88263b6eeac
       - 7
+    baseline_cd_risc_survey:
+      - c7ebe8d919288a6caa8f85b916164245
+      - 6
+    mood_survey:
+      - 5ebf3b1c67af7b731c5a1466136cf2e5
+      - 5
+    ibd-forecast::pss-4-baseline:
+      - c079d64792cd8b03da2e7504c25f4d5c
+      - 1
     pss4:
       - 0c62b91d0f6773c9773abb0812a23f0e
       - 7
     baseline_medical_history:
       - ada36de8c428a3f98bff31a1a03135d4
       - 11
+    health_care:
+      - 68e8cbf3405497fe9b40300f29a7fbe2
+      - 6
+    qol_survey:
+      - 64e65407ed5e8185711dc4ae66973d47
+      - 6
     satisfaction_survey_monthly:
       - c4bc9c2848550c34a9f700986619020a
       - 9
-    qol_survey:
-      - 64e65407ed5e8185711dc4ae66973d47
+    warrior-shield::daily-check-in:
+      - a86144938ca2522e90c217121bc2899a
+      - 1
+    sleep_stress_pain:
+      - 08bd2781c1180c59c267ac132f3277b1
       - 6
     satisfaction_survey_final:
       - d77acc408c8ee3ec11072c4d9c1d9f2e
@@ -121,37 +73,94 @@ active:
     sleep:
       - 8dd034c69f2aa5a26e604633c81a3df4
       - 7
-    sleep_stress_pain:
-      - 08bd2781c1180c59c267ac132f3277b1
-      - 6
-  multimedia:
-    warrior-shield::hm-1:
-      - 07e84d8590a445821a3f2e0240fd2067
+    warrior-shield::heartmath-satisfaction:
+      - 34fca689f0a358443094e60e5f08f635
+      - 1
+    warrior-shield::devices:
+      - 4355658e9d6813f91eff4415ef9dec52
       - 3
+    warrior-shield::start-intervention:
+      - 87a4ccb971d37399f22b3e008dc912e6
+      - 1
+    warrior-shield::report-new-information:
+      - a4bb1c2846ee5448983000b392cb8173
+      - 1
+    warrior-shield::demographics:
+      - ae166ccda0a12812fe1fad945a74e4a3
+      - 2
+    library::pro-2-crohns:
+      - bcdb6c00222d5d50c00f83ea90516ae0
+      - 2
+    library::cd-risc-10:
+      - 0d36e4a316bfd15cf0b8d8ad8376f712
+      - 2
+    library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
+      - ac182528c734db612b8c13999c4a9812
+      - 3
+    library::cd-risc-2:
+      - d89948889bd4ca16edc956c3f3a4cbe6
+      - 1
+    library::phq-4:
+      - fee497c647cdc08fd96f423bbcc36ce2
+      - 3
+    library::promis-gh-qol-2-item:
+      - ca0c06b2308830bfe709406f152dff8f
+      - 1
+    library::phq-8:
+      - 93f2957fca5cfa1a3bb983051d83882d
+      - 1
+    library::promis-pain-interference-6b-v1.0:
+      - 547d6c5353b76caf53a54d1f7bca303c
+      - 1
+    library::promis-social-support-2-item:
+      - 3dd65f645754ff491bc285c53a9e3796
+      - 3
+    library::promis-gi-belly-pain:
+      - a8a77228fd9ee8e23989fc1c20ea3248
+      - 2
+    library::promis-gi-diarrhea:
+      - 6313e756d1346c639f3bbaf892db4af7
+      - 3
+    library::promis-sleep-disturbance-8a-v1.0:
+      - 244fe53060b550c274c473585f25bff1
+      - 1
+    library::pss-10:
+      - 107e6c1cd748582179e433f366832943
+      - 2
+    library::pro-2-uc:
+      - a5b170a4ce6eea26ef21e62dfe3db6bb
+      - 2
+    library::pss-4:
+      - 348226b8bed06e492167ee4de96dc85c
+      - 2
+  multimedia:
     warrior-shield::hm-2-always:
       - ee1019dee8e4b8e5c7b3483ac73381f8
       - 1
-    warrior-shield::hm-2:
-      - 414c843ecfd3f22c9729e91904a483d7
-      - 4
+    warrior-shield::hm-1:
+      - 07e84d8590a445821a3f2e0240fd2067
+      - 3
     warrior-shield::hm-3:
       - dded9386bb0667c3b27cb0967fd73bc9
       - 4
     warrior-shield::hm-4:
       - 6a7d198e227df8c7f75c6bdb796478cb
       - 4
+    warrior-shield::intro-always:
+      - 7eecfaa97164ff15b16b2a5dfe5a6a6b
+      - 2
+    warrior-shield::hm-2:
+      - 414c843ecfd3f22c9729e91904a483d7
+      - 4
+    warrior-shield::intro:
+      - 9e9628e2d186a22b3cc308177fea3c26
+      - 2
     warrior-shield::hm-6:
       - e12bbba8ef35dc70686442ca55ed140b
       - 4
     warrior-shield::hm-5:
       - d98502f97efe558decea4e5dcad9e943
       - 4
-    warrior-shield::intro-always:
-      - 7eecfaa97164ff15b16b2a5dfe5a6a6b
-      - 2
-    warrior-shield::intro:
-      - 9e9628e2d186a22b3cc308177fea3c26
-      - 2
 inactive:
   studies: {}
   surveys: {}
