@@ -9,6 +9,8 @@ metadata:
 schedule:
   type: PERIOD
   period: BI_WEEKLY
+  delay: 2
+  delayUnits: WEEKS
 timeEstimate: 2
 name: Stress
 short: "Tell us about your stress over the last two weeks"
