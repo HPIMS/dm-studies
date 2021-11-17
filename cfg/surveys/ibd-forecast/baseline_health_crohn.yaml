@@ -32,7 +32,7 @@ sections:
           - value: dont_know
             text: I don't know
       - key: fistula_notaround
-        question: Have you ever had a fistula (small tract that connects a part of your inestine to something else) that was not around the rectum/anus/vagina?
+        question: Have you ever had a fistula (small tract that connects a part of your intestine to something else) that was not around the rectum/anus/vagina?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -108,7 +108,7 @@ sections:
                 operator: =
                 value: yes
       - key: past_med_trigger
-        question: Have you taken any medications in the past that you are not currently taking?
+        question: Have you taken any medications for your inflammatory bowel disease in the past that you are not currently taking?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -116,40 +116,40 @@ sections:
           - value: no
             text: No
       - key: past_meds
-        question: Which medications have you taken in the past, but are not currently taking at this time?
+        question: Which medications have you taken in the past for your inflammatory bowel disease, but are not currently taking at this time?
         type: MULTIPLE_CHOICE
         options:
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
                 key: which_past_med_corticosteroid
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: budesonide
             text: Budesonide (Entocort, Uceris)
             inlineQuestion:
                 key: which_past_med_budesonide
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: rectal_steroid
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
             inlineQuestion:
                 key: which_past_med_rectal_steroid
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: oral_5
-            text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
+            text: Oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
             inlineQuestion:
                 key: which_past_med_oral_5
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: azulfidine
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
-            text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            text: Rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))
             inlineQuestion:
                 key: which_past_med_rectal_5
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
@@ -159,7 +159,7 @@ sections:
             text: Purethinol (6-MP) / Imuran (Azathioprine)
             inlineQuestion:
                 key: which_past_med_purethinol
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: methotrexate
             text: Methotrexate
@@ -179,19 +179,11 @@ sections:
             text: Tofacitinib (Xeljanz)
           - value: ozanimod
             text: Ozanimod (Zeposia)
-          - value: imodium
-            text: Imodium (Ioperamide)
-          - value: lamotil
-            text: Lamotil (diphenoxylate/atropine)
-          - value: tincture_opium
-            text: Tincture of opium (DTO, opium tincture, morphine tincture)
-          - value: cholestyramine
-            text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
             inlineQuestion:
                 key: which_past_med_other_antibiotics
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: other
             text: Other
@@ -207,3250 +199,6 @@ sections:
                 question: past_med_trigger
                 operator: =
                 value: yes
-      - key: past_med_dose_corticosteroid
-        question: What is the dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligrams (mg)
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_res_freq_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_corticosteroid_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_freq_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_corticosteroid_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_dose_corticosteroid
-        question: What is the dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_corticosteroid_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_res_freq_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_corticosteroid_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_freq_corticosteroid
-        question: How many times at the above interval do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_corticosteroid_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_method_corticosteroid
-        question: What is the way the Corticosteroids (prednisone, prednisolone, methylpredninsolone) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_start_date_corticosteroid
-        question: When did you start the Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: corticosteroid
-      - key: past_med_dose_budesonide
-        question: What is the dose when you started Budesonide (Entocort, Uceris)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_budesonide_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_budesonide_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_budesonide_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_budesonide_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: budesonide
-      - key: past_med_res_freq_budesonide
-        question: How often do you take Budesonide (Entocort, Uceris)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_budesonide_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: budesonide
-      - key: past_med_freq_budesonide
-        question: How many times at the above interval do you take Budesonide (Entocort, Uceris)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_budesonide_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: budesonide
-      - key: past_med_method_budesonide
-        question: What is the way the Budesonide (Entocort, Uceris) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: budesonide
-      - key: past_med_start_date_budesonide
-        question: When did you start the Budesonide (Entocort, Uceris)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: budesonide
-      - key: past_med_dose_rectal_steroid
-        question: What is the dose when you started Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_rectal_steroid_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_rectal_steroid_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_rectal_steroid_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_rectal_steroid_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_steroid
-      - key: past_med_res_freq_rectal_steroid
-        question: How often do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_rectal_steroid_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_steroid
-      - key: past_med_freq_rectal_steroid
-        question: How many times at the above interval do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_rectal_steroid_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_steroid
-      - key: past_med_method_rectal_steroid
-        question: What is the way the Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_steroid
-      - key: past_med_start_date_rectal_steroid
-        question: When did you start the Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_steroid
-      - key: past_med_dose_oral_5
-        question: What is the dose when you started Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_oral_5_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_oral_5_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_oral_5_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_oral_5_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: oral_5
-      - key: past_med_res_freq_oral_5
-        question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_oral_5_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: oral_5
-      - key: past_med_freq_oral_5
-        question: How many times at the above interval do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_oral_5_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: oral_5
-      - key: past_med_method_oral_5
-        question: What is the way the Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine)) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: oral_5
-      - key: past_med_start_date_oral_5
-        question: When did you start the Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: oral_5
-      - key: past_med_dose_azulfidine
-        question: What is the dose when you started Azulfidine (Sulfasalazine)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_azulfidine_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_azulfidine_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_azulfidine_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_azulfidine_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: azulfidine
-      - key: past_med_res_freq_azulfidine
-        question: How often do you take Azulfidine (Sulfasalazine)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_azulfidine_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: azulfidine
-      - key: past_med_freq_azulfidine
-        question: How many times at the above interval do you take Azulfidine (Sulfasalazine)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_azulfidine_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: azulfidine
-      - key: past_med_method_azulfidine
-        question: What is the way the Azulfidine (Sulfasalazine) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: azulfidine
-      - key: past_med_start_date_azulfidine
-        question: When did you start the Azulfidine (Sulfasalazine)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: azulfidine
-      - key: past_med_dose_rectal_5
-        question: What is the dose when you started Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_rectal_5_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_rectal_5_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_rectal_5_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_rectal_5_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_5
-      - key: past_med_res_freq_rectal_5
-        question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_rectal_5_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_5
-      - key: past_med_freq_rectal_5
-        question: How many times at the above interval do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_rectal_5_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_5
-      - key: past_med_method_rectal_5
-        question: What is the way the Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal)) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_5
-      - key: past_med_start_date_rectal_5
-        question: When did you start the Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: rectal_5
-      - key: past_med_dose_ciprofloxacin
-        question: What is the dose when you started Ciprofloxacin (to treat IBD)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_ciprofloxacin_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_ciprofloxacin_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_ciprofloxacin_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_ciprofloxacin_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ciprofloxacin
-      - key: past_med_res_freq_ciprofloxacin
-        question: How often do you take Ciprofloxacin (to treat IBD)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_ciprofloxacin_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ciprofloxacin
-      - key: past_med_freq_ciprofloxacin
-        question: How many times at the above interval do you take Ciprofloxacin (to treat IBD)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_ciprofloxacin_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ciprofloxacin
-      - key: past_med_method_ciprofloxacin
-        question: What is the way the Ciprofloxacin (to treat IBD) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ciprofloxacin
-      - key: past_med_start_date_ciprofloxacin
-        question: When did you start the Ciprofloxacin (to treat IBD)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ciprofloxacin
-      - key: past_med_dose_flagyl
-        question: What is the dose when you started Flagyl (metronidazole) (to treat IBD)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_flagyl_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_flagyl_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_flagyl_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_flagyl_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: flagyl
-      - key: past_med_res_freq_flagyl
-        question: How often do you take Flagyl (metronidazole) (to treat IBD)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_flagyl_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: flagyl
-      - key: past_med_freq_flagyl
-        question: How many times at the above interval do you take Flagyl (metronidazole) (to treat IBD)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_flagyl_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: flagyl
-      - key: past_med_method_flagyl
-        question: What is the way the Flagyl (metronidazole) (to treat IBD) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: flagyl
-      - key: past_med_start_date_flagyl
-        question: When did you start the Flagyl (metronidazole) (to treat IBD)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: flagyl
-      - key: past_med_dose_other_antibiotics
-        question: What is the dose when you started Other antibiotics prescribed for IBD? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_other_antibiotics_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_other_antibiotics_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_other_antibiotics_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_other_antibiotics_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other_antibiotics
-      - key: past_med_res_freq_other_antibiotics
-        question: How often do you take Other antibiotics prescribed for IBD?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_other_antibiotics_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other_antibiotics
-      - key: past_med_freq_other_antibiotics
-        question: How many times at the above interval do you take Other antibiotics prescribed for IBD?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_other_antibiotics_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other_antibiotics
-      - key: past_med_method_other_antibiotics
-        question: What is the way the Other antibiotics prescribed for IBD is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other_antibiotics
-      - key: past_med_start_date_other_antibiotics
-        question: When did you start the Other antibiotics prescribed for IBD?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other_antibiotics
-      - key: past_med_dose_purethinol
-        question: What is the dose when you started Purethinol (6-MP) / Imuran (Azathioprine)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_purethinol_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_purethinol_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_purethinol_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_purethinol_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: purethinol
-      - key: past_med_res_freq_purethinol
-        question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_purethinol_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: purethinol
-      - key: past_med_freq_purethinol
-        question: How many times at the above interval do you take Purethinol (6-MP) / Imuran (Azathioprine)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_purethinol_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: purethinol
-      - key: past_med_method_purethinol
-        question: What is the way the Purethinol (6-MP) / Imuran (Azathioprine) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: purethinol
-      - key: past_med_start_date_purethinol
-        question: When did you start the Purethinol (6-MP) / Imuran (Azathioprine)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: purethinol
-      - key: past_med_dose_methotrexate
-        question: What is the dose when you started Methotrexate? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_methotrexate_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_methotrexate_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_methotrexate_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_methotrexate_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: methotrexate
-      - key: past_med_res_freq_methotrexate
-        question: How often do you take Methotrexate?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_methotrexate_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: methotrexate
-      - key: past_med_freq_methotrexate
-        question: How many times at the above interval do you take Methotrexate?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_methotrexate_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: methotrexate
-      - key: past_med_method_methotrexate
-        question: What is the way the Methotrexate is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: methotrexate
-      - key: past_med_start_date_methotrexate
-        question: When did you start the Methotrexate?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: methotrexate
-      - key: past_med_dose_remicade
-        question: What is the dose when you started Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_remicade_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_remicade_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_remicade_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_remicade_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: remicade
-      - key: past_med_res_freq_remicade
-        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_remicade_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: remicade
-      - key: past_med_freq_remicade
-        question: How many times at the above interval do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_remicade_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: remicade
-      - key: past_med_method_remicade
-        question: What is the way the Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra} is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: remicade
-      - key: past_med_start_date_remicade
-        question: When did you start the Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: remicade
-      - key: past_med_dose_humira
-        question: What is the dose when you started Humira (adalimumab)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_humira_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_humira_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_humira_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_humira_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: humira
-      - key: past_med_res_freq_humira
-        question: How often do you take Humira (adalimumab)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_humira_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: humira
-      - key: past_med_freq_humira
-        question: How many times at the above interval do you take Humira (adalimumab)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_humira_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: humira
-      - key: past_med_method_humira
-        question: What is the way the Humira (adalimumab) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: humira
-      - key: past_med_start_date_humira
-        question: When did you start the Humira (adalimumab)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: humira
-      - key: past_med_dose_cimzia
-        question: What is the dose when you started Cimzia (cetolizumab pegol)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_cimzia_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_cimzia_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_cimzia_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_cimzia_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cimzia
-      - key: past_med_res_freq_cimzia
-        question: How often do you take Cimzia (cetolizumab pegol)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_cimzia_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cimzia
-      - key: past_med_freq_cimzia
-        question: How many times at the above interval do you take Cimzia (cetolizumab pegol)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_cimzia_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cimzia
-      - key: past_med_method_cimzia
-        question: What is the way the Cimzia (cetolizumab pegol) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cimzia
-      - key: past_med_start_date_cimzia
-        question: When did you start the Cimzia (cetolizumab pegol)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cimzia
-      - key: past_med_dose_simponi
-        question: What is the dose when you started Simponi (golimumab)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_simponi_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_simponi_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_simponi_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_simponi_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: simponi
-      - key: past_med_res_freq_simponi
-        question: How often do you take Simponi (golimumab)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_simponi_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: simponi
-      - key: past_med_freq_simponi
-        question: How many times at the above interval do you take Simponi (golimumab)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_simponi_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: simponi
-      - key: past_med_method_simponi
-        question: What is the way the Simponi (golimumab) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: simponi
-      - key: past_med_start_date_simponi
-        question: When did you start the Simponi (golimumab)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: simponi
-      - key: past_med_dose_entyvio
-        question: What is the dose when you started Entyvio (vedolizumab)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_entyvio_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_entyvio_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_entyvio_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_entyvio_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: entyvio
-      - key: past_med_res_freq_entyvio
-        question: How often do you take Entyvio (vedolizumab)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_entyvio_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: entyvio
-      - key: past_med_freq_entyvio
-        question: How many times at the above interval do you take Entyvio (vedolizumab)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_entyvio_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: entyvio
-      - key: past_med_method_entyvio
-        question: What is the way the Entyvio (vedolizumab) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: entyvio
-      - key: past_med_start_date_entyvio
-        question: When did you start the Entyvio (vedolizumab)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: entyvio
-      - key: past_med_dose_ustekinumab
-        question: What is the dose when you started Ustekinumab (Stelara)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_ustekinumab_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_ustekinumab_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_ustekinumab_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_ustekinumab_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ustekinumab
-      - key: past_med_res_freq_ustekinumab
-        question: How often do you take Ustekinumab (Stelara)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_ustekinumab_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ustekinumab
-      - key: past_med_freq_ustekinumab
-        question: How many times at the above interval do you take Ustekinumab (Stelara)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_ustekinumab_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ustekinumab
-      - key: past_med_method_ustekinumab
-        question: What is the way the Ustekinumab (Stelara) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ustekinumab
-      - key: past_med_start_date_ustekinumab
-        question: When did you start the Ustekinumab (Stelara)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ustekinumab
-      - key: past_med_dose_tofacitinib
-        question: What is the dose when you started tofacitinib (Xeljanz)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_tofacitinib_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_tofacitinib_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_tofacitinib_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_tofacitinib_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tofacitinib
-      - key: past_med_res_freq_tofacitinib
-        question: How often do you take tofacitinib (Xeljanz)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_tofacitinib_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tofacitinib
-      - key: past_med_freq_tofacitinib
-        question: How many times at the above interval do you take tofacitinib (Xeljanz)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_tofacitinib_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tofacitinib
-      - key: past_med_method_tofacitinib
-        question: What is the way the tofacitinib (Xeljanz) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tofacitinib
-      - key: past_med_start_date_tofacitinib
-        question: When did you start the tofacitinib (Xeljanz)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tofacitinib
-      - key: past_med_dose_ozanimod
-        question: What is the dose when you started Ozanimod (Zeposia)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_ozanimod_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_ozanimod_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_ozanimod_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_ozanimod_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ozanimod
-      - key: past_med_res_freq_ozanimod
-        question: How often do you take Ozanimod (Zeposia)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_ozanimod_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ozanimod
-      - key: past_med_freq_ozanimod
-        question: How many times at the above interval do you take Ozanimod (Zeposia)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_ozanimod_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ozanimod
-      - key: past_med_method_ozanimod
-        question: What is the way the Ozanimod (Zeposia) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ozanimod
-      - key: past_med_start_date_ozanimod
-        question: When did you start the Ozanimod (Zeposia)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: ozanimod
-      - key: past_med_dose_imodium
-        question: What is the dose when you started Imodium (Ioperamide)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_imodium_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_imodium_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_imodium_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_imodium_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: imodium
-      - key: past_med_res_freq_imodium
-        question: How often do you take Imodium (Ioperamide)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_imodium_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: imodium
-      - key: past_med_freq_imodium
-        question: How many times at the above interval do you take Imodium (Ioperamide)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_imodium_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: imodium
-      - key: past_med_method_imodium
-        question: What is the way the Imodium (Ioperamide) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: imodium
-      - key: past_med_start_date_imodium
-        question: When did you start the Imodium (Ioperamide)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: imodium
-      - key: past_med_dose_lamotil
-        question: What is the dose when you started Lamotil (diphenoxylate/atropine)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_lamotil_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_lamotil_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_lamotil_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_lamotil_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: lamotil
-      - key: past_med_res_freq_lamotil
-        question: How often do you take Lamotil (diphenoxylate/atropine)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_lamotil_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: lamotil
-      - key: past_med_freq_lamotil
-        question: How many times at the above interval do you take Lamotil (diphenoxylate/atropine)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_lamotil_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: lamotil
-      - key: past_med_method_lamotil
-        question: What is the way the Lamotil (diphenoxylate/atropine) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: lamotil
-      - key: past_med_start_date_lamotil
-        question: When did you start the Lamotil (diphenoxylate/atropine)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: lamotil
-      - key: past_med_dose_tincture_opium
-        question: What is the dose when you started Tincture of opium (DTO, opium tincture, morphine tincture)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_tincture_opium_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_tincture_opium_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_tincture_opium_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_tincture_opium_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tincture_opium
-      - key: past_med_res_freq_tincture_opium
-        question: How often do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_tincture_opium_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tincture_opium
-      - key: past_med_freq_tincture_opium
-        question: How many times at the above interval do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_tincture_opium_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tincture_opium
-      - key: past_med_method_tincture_opium
-        question: What is the way the Tincture of opium (DTO, opium tincture, morphine tincture) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tincture_opium
-      - key: past_med_start_date_tincture_opium
-        question: When did you start the Tincture of opium (DTO, opium tincture, morphine tincture)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: tincture_opium
-      - key: past_med_dose_cholestyramine
-        question: What is the dose when you started Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_cholestyramine_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_cholestyramine_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_cholestyramine_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_cholestyramine_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cholestyramine
-      - key: past_med_res_freq_cholestyramine
-        question: How often do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_cholestyramine_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cholestyramine
-      - key: past_med_freq_cholestyramine
-        question: How many times at the above interval do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_cholestyramine_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cholestyramine
-      - key: past_med_method_cholestyramine
-        question: What is the way the Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam) is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cholestyramine
-      - key: past_med_start_date_cholestyramine
-        question: When did you start the Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: cholestyramine
-      - key: past_med_dose_other
-        question: What is the dose when you started Other? Please enter a number once you select the metric.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligramms (mg)
-            inlineQuestion:
-              key: past_med_dose_other_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: past_med_dose_other_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: past_med_dose_other_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other metrics
-            inlineQuestion:
-              key: past_med_dose_other_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other
-      - key: past_med_res_freq_other
-        question: How often do you take Other?
-        type: SINGLE_CHOICE
-        options:
-          - value: day
-            text: Daily
-          - value: week
-            text: Weekly
-          - value: 2_weeks
-            text: Every two weeks
-          - value: 4_weeks
-            text: Every four weeks
-          - value: 6_weeks
-            text: Every six weeks
-          - value: 8_weeks
-            text: Every eight weeks
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_res_freq_other_other
-              question: "How often do you take?"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other
-      - key: past_med_freq_other
-        question: How many times at the above interval do you take Other?
-        type: SINGLE_CHOICE
-        options:
-          - value: 1
-            text: 1
-          - value: 2
-            text: 2
-          - value: 3
-            text: 3
-          - value: 4
-            text: 4
-          - value: 5
-            text: 5
-          - value: 6
-            text: 6
-          - value: 7
-            text: 7
-          - value: 8
-            text: 8
-          - value: other
-            text: Other (please describe)
-            inlineQuestion:
-              key: past_med_freq_other_other
-              question: ""
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other
-      - key: past_med_method_other
-        question: What is the way the Other is given to you?
-        type: SINGLE_CHOICE
-        options:
-          - value: mouth
-            text: By mouth
-          - value: iv
-            text: In an IV (intravenous/in a vein)
-          - value: under_skin
-            text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other
-      - key: past_med_start_date_other
-        question: When did you start the Other?
-        type: DATE
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-                - section: baseline
-                  question: past_meds
-                  operator: INCLUDES
-                  value: other
       - key: current_med_trigger
         question: Are you currently taking any medication?
         type: SINGLE_CHOICE
@@ -3467,25 +215,25 @@ sections:
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
                 key: which_current_med_corticosteroid
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: budesonide
             text: Budesonide (Entocort, Uceris)
             inlineQuestion:
                 key: which_current_med_budesonide
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: rectal_steroid
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
             inlineQuestion:
                 key: which_current_med_rectal_steroid
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: oral_5
             text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
             inlineQuestion:
                 key: which_current_med_oral_5
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: azulfidine
             text: Azulfidine (Sulfasalazine)
@@ -3493,7 +241,7 @@ sections:
             text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
             inlineQuestion:
                 key: which_current_med_rectal_5
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
@@ -3503,7 +251,7 @@ sections:
             text: Purethinol (6-MP) / Imuran (Azathioprine)
             inlineQuestion:
                 key: which_current_med_purethinol
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: methotrexate
             text: Methotrexate
@@ -3535,7 +283,7 @@ sections:
             text: Other antibiotics prescribed for IBD
             inlineQuestion:
                 key: which_current_med_other_antibiotics
-                question: "Please list which medication you are taking"
+                question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: other
             text: Other
@@ -3552,11 +300,11 @@ sections:
                 operator: =
                 value: yes
       - key: current_med_dose_corticosteroid
-        question: What is the dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_corticosteroid_mg
               question: "Please provide the quantity"
@@ -3574,7 +322,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_corticosteroid_others
               question: "please provide the metric and quantity"
@@ -3592,9 +340,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -3618,7 +366,7 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: current_med_freq_corticosteroid
-        question: How many times at the above interval do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        question: How many times at the above frequency do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3672,7 +420,7 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: current_med_start_date_corticosteroid
-        question: When did you start the Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        question: When was the last dose of Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
         type: DATE
         triggers:
             - action:
@@ -3683,11 +431,11 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: current_med_dose_budesonide
-        question: What is the dose when you started Budesonide (Entocort, Uceris)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Budesonide (Entocort, Uceris)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_budesonide_mg
               question: "Please provide the quantity"
@@ -3705,7 +453,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_budesonide_others
               question: "please provide the metric and quantity"
@@ -3723,9 +471,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -3749,7 +497,7 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: current_med_freq_budesonide
-        question: How many times at the above interval do you take Budesonide (Entocort, Uceris)?
+        question: How many times at the above frequency do you take Budesonide (Entocort, Uceris)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3803,7 +551,7 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: current_med_start_date_budesonide
-        question: When did you start the Budesonide (Entocort, Uceris)?
+        question: When was the last dose of Budesonide (Entocort, Uceris)?
         type: DATE
         triggers:
             - action:
@@ -3814,11 +562,11 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: current_med_dose_rectal_steroid
-        question: What is the dose when you started Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_rectal_steroid_mg
               question: "Please provide the quantity"
@@ -3836,7 +584,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_rectal_steroid_others
               question: "please provide the metric and quantity"
@@ -3854,9 +602,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -3880,7 +628,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: current_med_freq_rectal_steroid
-        question: How many times at the above interval do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
+        question: How many times at the above frequency do you take Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3934,7 +682,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: current_med_start_date_rectal_steroid
-        question: When did you start the Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
+        question: When was the last dose of Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)?
         type: DATE
         triggers:
             - action:
@@ -3945,11 +693,11 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: current_med_dose_oral_5
-        question: What is the dose when you started Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))? Please enter a number once you select the metric.
+        question: What is the current dose when you started oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_oral_5_mg
               question: "Please provide the quantity"
@@ -3967,7 +715,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_oral_5_others
               question: "please provide the metric and quantity"
@@ -3981,13 +729,13 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: current_med_res_freq_oral_5
-        question: How often do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        question: How often do you take oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4011,7 +759,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: current_med_freq_oral_5
-        question: How many times at the above interval do you take Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        question: How many times at the above frequency do you take oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4045,7 +793,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: current_med_method_oral_5
-        question: What is the way the Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine)) is given to you?
+        question: What is the way the oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine)) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -4065,7 +813,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: current_med_start_date_oral_5
-        question: When did you start the Oral 5 {ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
+        question: When was the last dose of oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))?
         type: DATE
         triggers:
             - action:
@@ -4076,11 +824,11 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: current_med_dose_azulfidine
-        question: What is the dose when you started Azulfidine (Sulfasalazine)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Azulfidine (Sulfasalazine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_azulfidine_mg
               question: "Please provide the quantity"
@@ -4098,7 +846,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_azulfidine_others
               question: "please provide the metric and quantity"
@@ -4116,9 +864,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4142,7 +890,7 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: current_med_freq_azulfidine
-        question: How many times at the above interval do you take Azulfidine (Sulfasalazine)?
+        question: How many times at the above frequency do you take Azulfidine (Sulfasalazine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4196,7 +944,7 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: current_med_start_date_azulfidine
-        question: When did you start the Azulfidine (Sulfasalazine)?
+        question: When was the last dose of Azulfidine (Sulfasalazine)?
         type: DATE
         triggers:
             - action:
@@ -4207,11 +955,11 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: current_med_dose_rectal_5
-        question: What is the dose when you started Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))? Please enter a number once you select the metric.
+        question: What is the current dose when you started rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_rectal_5_mg
               question: "Please provide the quantity"
@@ -4229,7 +977,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_rectal_5_others
               question: "please provide the metric and quantity"
@@ -4243,13 +991,13 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: current_med_res_freq_rectal_5
-        question: How often do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        question: How often do you take rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4273,7 +1021,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: current_med_freq_rectal_5
-        question: How many times at the above interval do you take Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        question: How many times at the above frequency do you take rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4307,7 +1055,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: current_med_method_rectal_5
-        question: What is the way the Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal)) is given to you?
+        question: What is the way the rectal 5-ASA (Rowasa, Canasa (mesalamine rectal)) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -4327,7 +1075,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: current_med_start_date_rectal_5
-        question: When did you start the Rectal 5 {ASA (Rowasa, Canasa (mesalamine rectal))?
+        question: When was the last dose of rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))?
         type: DATE
         triggers:
             - action:
@@ -4338,11 +1086,11 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: current_med_dose_ciprofloxacin
-        question: What is the dose when you started Ciprofloxacin (to treat IBD)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Ciprofloxacin (to treat IBD)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_ciprofloxacin_mg
               question: "Please provide the quantity"
@@ -4360,7 +1108,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_ciprofloxacin_others
               question: "please provide the metric and quantity"
@@ -4378,9 +1126,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4404,7 +1152,7 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: current_med_freq_ciprofloxacin
-        question: How many times at the above interval do you take Ciprofloxacin (to treat IBD)?
+        question: How many times at the above frequency do you take Ciprofloxacin (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4458,7 +1206,7 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: current_med_start_date_ciprofloxacin
-        question: When did you start the Ciprofloxacin (to treat IBD)?
+        question: When was the last dose of Ciprofloxacin (to treat IBD)?
         type: DATE
         triggers:
             - action:
@@ -4469,11 +1217,11 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: current_med_dose_flagyl
-        question: What is the dose when you started Flagyl (metronidazole) (to treat IBD)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Flagyl (metronidazole) (to treat IBD)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_flagyl_mg
               question: "Please provide the quantity"
@@ -4491,7 +1239,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_flagyl_others
               question: "please provide the metric and quantity"
@@ -4509,9 +1257,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4535,7 +1283,7 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: current_med_freq_flagyl
-        question: How many times at the above interval do you take Flagyl (metronidazole) (to treat IBD)?
+        question: How many times at the above frequency do you take Flagyl (metronidazole) (to treat IBD)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4589,7 +1337,7 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: current_med_start_date_flagyl
-        question: When did you start the Flagyl (metronidazole) (to treat IBD)?
+        question: When was the last dose of Flagyl (metronidazole) (to treat IBD)?
         type: DATE
         triggers:
             - action:
@@ -4600,11 +1348,11 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: current_med_dose_other_antibiotics
-        question: What is the dose when you started Other antibiotics prescribed for IBD? Please enter a number once you select the metric.
+        question: What is the current dose when you started Other antibiotics prescribed for IBD? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_other_antibiotics_mg
               question: "Please provide the quantity"
@@ -4622,7 +1370,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_other_antibiotics_others
               question: "please provide the metric and quantity"
@@ -4640,9 +1388,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4666,7 +1414,7 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: current_med_freq_other_antibiotics
-        question: How many times at the above interval do you take Other antibiotics prescribed for IBD?
+        question: How many times at the above frequency do you take Other antibiotics prescribed for IBD?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4720,7 +1468,7 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: current_med_start_date_other_antibiotics
-        question: When did you start the Other antibiotics prescribed for IBD?
+        question: When was the last dose of Other antibiotics prescribed for IBD?
         type: DATE
         triggers:
             - action:
@@ -4731,11 +1479,11 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: current_med_dose_purethinol
-        question: What is the dose when you started Purethinol (6-MP) / Imuran (Azathioprine)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Purethinol (6-MP) / Imuran (Azathioprine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_purethinol_mg
               question: "Please provide the quantity"
@@ -4753,7 +1501,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_purethinol_others
               question: "please provide the metric and quantity"
@@ -4771,9 +1519,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4797,7 +1545,7 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: current_med_freq_purethinol
-        question: How many times at the above interval do you take Purethinol (6-MP) / Imuran (Azathioprine)?
+        question: How many times at the above frequency do you take Purethinol (6-MP) / Imuran (Azathioprine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4851,7 +1599,7 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: current_med_start_date_purethinol
-        question: When did you start the Purethinol (6-MP) / Imuran (Azathioprine)?
+        question: When was the last dose of Purethinol (6-MP) / Imuran (Azathioprine)?
         type: DATE
         triggers:
             - action:
@@ -4862,11 +1610,11 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: current_med_dose_methotrexate
-        question: What is the dose when you started Methotrexate? Please enter a number once you select the metric.
+        question: What is the current dose when you started Methotrexate? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_methotrexate_mg
               question: "Please provide the quantity"
@@ -4884,7 +1632,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_methotrexate_others
               question: "please provide the metric and quantity"
@@ -4902,9 +1650,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -4928,7 +1676,7 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: current_med_freq_methotrexate
-        question: How many times at the above interval do you take Methotrexate?
+        question: How many times at the above frequency do you take Methotrexate?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4982,7 +1730,7 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: current_med_start_date_methotrexate
-        question: When did you start the Methotrexate?
+        question: When was the last dose of Methotrexate?
         type: DATE
         triggers:
             - action:
@@ -4993,11 +1741,11 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: current_med_dose_remicade
-        question: What is the dose when you started Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}? Please enter a number once you select the metric.
+        question: What is the current dose when you started Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_remicade_mg
               question: "Please provide the quantity"
@@ -5015,7 +1763,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_remicade_others
               question: "please provide the metric and quantity"
@@ -5033,9 +1781,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5059,7 +1807,7 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: current_med_freq_remicade
-        question: How many times at the above interval do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
+        question: How many times at the above frequency do you take Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5113,7 +1861,7 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: current_med_start_date_remicade
-        question: When did you start the Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
+        question: When was the last dose of Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}?
         type: DATE
         triggers:
             - action:
@@ -5124,11 +1872,11 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: current_med_dose_humira
-        question: What is the dose when you started Humira (adalimumab)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Humira (adalimumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_humira_mg
               question: "Please provide the quantity"
@@ -5146,7 +1894,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_humira_others
               question: "please provide the metric and quantity"
@@ -5164,9 +1912,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5190,7 +1938,7 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: current_med_freq_humira
-        question: How many times at the above interval do you take Humira (adalimumab)?
+        question: How many times at the above frequency do you take Humira (adalimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5244,7 +1992,7 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: current_med_start_date_humira
-        question: When did you start the Humira (adalimumab)?
+        question: When was the last dose of Humira (adalimumab)?
         type: DATE
         triggers:
             - action:
@@ -5255,11 +2003,11 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: current_med_dose_cimzia
-        question: What is the dose when you started Cimzia (cetolizumab pegol)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Cimzia (cetolizumab pegol)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_cimzia_mg
               question: "Please provide the quantity"
@@ -5277,7 +2025,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_cimzia_others
               question: "please provide the metric and quantity"
@@ -5295,9 +2043,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5321,7 +2069,7 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: current_med_freq_cimzia
-        question: How many times at the above interval do you take Cimzia (cetolizumab pegol)?
+        question: How many times at the above frequency do you take Cimzia (cetolizumab pegol)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5375,7 +2123,7 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: current_med_start_date_cimzia
-        question: When did you start the Cimzia (cetolizumab pegol)?
+        question: When was the last dose of Cimzia (cetolizumab pegol)?
         type: DATE
         triggers:
             - action:
@@ -5386,11 +2134,11 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: current_med_dose_simponi
-        question: What is the dose when you started Simponi (golimumab)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Simponi (golimumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_simponi_mg
               question: "Please provide the quantity"
@@ -5408,7 +2156,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_simponi_others
               question: "please provide the metric and quantity"
@@ -5426,9 +2174,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5452,7 +2200,7 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: current_med_freq_simponi
-        question: How many times at the above interval do you take Simponi (golimumab)?
+        question: How many times at the above frequency do you take Simponi (golimumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5506,7 +2254,7 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: current_med_start_date_simponi
-        question: When did you start the Simponi (golimumab)?
+        question: When was the last dose of Simponi (golimumab)?
         type: DATE
         triggers:
             - action:
@@ -5517,11 +2265,11 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: current_med_dose_entyvio
-        question: What is the dose when you started Entyvio (vedolizumab)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Entyvio (vedolizumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_entyvio_mg
               question: "Please provide the quantity"
@@ -5539,7 +2287,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_entyvio_others
               question: "please provide the metric and quantity"
@@ -5557,9 +2305,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5583,7 +2331,7 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: current_med_freq_entyvio
-        question: How many times at the above interval do you take Entyvio (vedolizumab)?
+        question: How many times at the above frequency do you take Entyvio (vedolizumab)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5637,7 +2385,7 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: current_med_start_date_entyvio
-        question: When did you start the Entyvio (vedolizumab)?
+        question: When was the last dose of Entyvio (vedolizumab)?
         type: DATE
         triggers:
             - action:
@@ -5648,11 +2396,11 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: current_med_dose_ustekinumab
-        question: What is the dose when you started Ustekinumab (Stelara)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Ustekinumab (Stelara)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_ustekinumab_mg
               question: "Please provide the quantity"
@@ -5670,7 +2418,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_ustekinumab_others
               question: "please provide the metric and quantity"
@@ -5688,9 +2436,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5714,7 +2462,7 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: current_med_freq_ustekinumab
-        question: How many times at the above interval do you take Ustekinumab (Stelara)?
+        question: How many times at the above frequency do you take Ustekinumab (Stelara)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5768,7 +2516,7 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: current_med_start_date_ustekinumab
-        question: When did you start the Ustekinumab (Stelara)?
+        question: When was the last dose of Ustekinumab (Stelara)?
         type: DATE
         triggers:
             - action:
@@ -5779,11 +2527,11 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: current_med_dose_tofacitinib
-        question: What is the dose when you started tofacitinib (Xeljanz)? Please enter a number once you select the metric.
+        question: What is the current dose when you started tofacitinib (Xeljanz)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_tofacitinib_mg
               question: "Please provide the quantity"
@@ -5801,7 +2549,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_tofacitinib_others
               question: "please provide the metric and quantity"
@@ -5819,9 +2567,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5845,7 +2593,7 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: current_med_freq_tofacitinib
-        question: How many times at the above interval do you take tofacitinib (Xeljanz)?
+        question: How many times at the above frequency do you take tofacitinib (Xeljanz)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -5899,7 +2647,7 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: current_med_start_date_tofacitinib
-        question: When did you start the tofacitinib (Xeljanz)?
+        question: When was the last dose of tofacitinib (Xeljanz)?
         type: DATE
         triggers:
             - action:
@@ -5910,11 +2658,11 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: current_med_dose_ozanimod
-        question: What is the dose when you started Ozanimod (Zeposia)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Ozanimod (Zeposia)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_ozanimod_mg
               question: "Please provide the quantity"
@@ -5932,7 +2680,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_ozanimod_others
               question: "please provide the metric and quantity"
@@ -5950,9 +2698,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -5976,7 +2724,7 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: current_med_freq_ozanimod
-        question: How many times at the above interval do you take Ozanimod (Zeposia)?
+        question: How many times at the above frequency do you take Ozanimod (Zeposia)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6030,7 +2778,7 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: current_med_start_date_ozanimod
-        question: When did you start the Ozanimod (Zeposia)?
+        question: When was the last dose of Ozanimod (Zeposia)?
         type: DATE
         triggers:
             - action:
@@ -6041,11 +2789,11 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: current_med_dose_imodium
-        question: What is the dose when you started Imodium (Ioperamide)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Imodium (Ioperamide)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_imodium_mg
               question: "Please provide the quantity"
@@ -6063,7 +2811,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_imodium_others
               question: "please provide the metric and quantity"
@@ -6081,9 +2829,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -6107,7 +2855,7 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: current_med_freq_imodium
-        question: How many times at the above interval do you take Imodium (Ioperamide)?
+        question: How many times at the above frequency do you take Imodium (Ioperamide)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6161,7 +2909,7 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: current_med_start_date_imodium
-        question: When did you start the Imodium (Ioperamide)?
+        question: When was the last dose of Imodium (Ioperamide)?
         type: DATE
         triggers:
             - action:
@@ -6172,11 +2920,11 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: current_med_dose_lamotil
-        question: What is the dose when you started Lamotil (diphenoxylate/atropine)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Lamotil (diphenoxylate/atropine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_lamotil_mg
               question: "Please provide the quantity"
@@ -6194,7 +2942,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_lamotil_others
               question: "please provide the metric and quantity"
@@ -6212,9 +2960,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -6238,7 +2986,7 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: current_med_freq_lamotil
-        question: How many times at the above interval do you take Lamotil (diphenoxylate/atropine)?
+        question: How many times at the above frequency do you take Lamotil (diphenoxylate/atropine)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6292,7 +3040,7 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: current_med_start_date_lamotil
-        question: When did you start the Lamotil (diphenoxylate/atropine)?
+        question: When was the last dose of Lamotil (diphenoxylate/atropine)?
         type: DATE
         triggers:
             - action:
@@ -6303,11 +3051,11 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: current_med_dose_tincture_opium
-        question: What is the dose when you started Tincture of opium (DTO, opium tincture, morphine tincture)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Tincture of opium (DTO, opium tincture, morphine tincture)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_tincture_opium_mg
               question: "Please provide the quantity"
@@ -6325,7 +3073,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_tincture_opium_others
               question: "please provide the metric and quantity"
@@ -6343,9 +3091,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -6369,7 +3117,7 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: current_med_freq_tincture_opium
-        question: How many times at the above interval do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
+        question: How many times at the above frequency do you take Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6423,7 +3171,7 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: current_med_start_date_tincture_opium
-        question: When did you start the Tincture of opium (DTO, opium tincture, morphine tincture)?
+        question: When was the last dose of Tincture of opium (DTO, opium tincture, morphine tincture)?
         type: DATE
         triggers:
             - action:
@@ -6434,11 +3182,11 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: current_med_dose_cholestyramine
-        question: What is the dose when you started Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)? Please enter a number once you select the metric.
+        question: What is the current dose when you started Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_cholestyramine_mg
               question: "Please provide the quantity"
@@ -6456,7 +3204,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_cholestyramine_others
               question: "please provide the metric and quantity"
@@ -6474,9 +3222,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -6500,7 +3248,7 @@ sections:
                   operator: INCLUDES
                   value: cholestyramine
       - key: current_med_freq_cholestyramine
-        question: How many times at the above interval do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
+        question: How many times at the above frequency do you take Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6554,7 +3302,7 @@ sections:
                   operator: INCLUDES
                   value: cholestyramine
       - key: current_med_start_date_cholestyramine
-        question: When did you start the Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
+        question: When was the last dose of Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)?
         type: DATE
         triggers:
             - action:
@@ -6565,11 +3313,11 @@ sections:
                   operator: INCLUDES
                   value: cholestyramine
       - key: current_med_dose_other
-        question: What is the dose when you started Other? Please enter a number once you select the metric.
+        question: What is the current dose when you started Other? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
-            text: milligramms (mg)
+            text: milligrams (mg)
             inlineQuestion:
               key: current_med_dose_other_mg
               question: "Please provide the quantity"
@@ -6587,7 +3335,7 @@ sections:
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
-            text: Other metrics
+            text: Other amount
             inlineQuestion:
               key: current_med_dose_other_others
               question: "please provide the metric and quantity"
@@ -6605,9 +3353,9 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: day
-            text: Daily
+            text: Every day
           - value: week
-            text: Weekly
+            text: Each week
           - value: 2_weeks
             text: Every two weeks
           - value: 4_weeks
@@ -6631,7 +3379,7 @@ sections:
                   operator: INCLUDES
                   value: other
       - key: current_med_freq_other
-        question: How many times at the above interval do you take Other?
+        question: How many times at the above frequency do you take Other?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -6685,7 +3433,7 @@ sections:
                   operator: INCLUDES
                   value: other
       - key: current_med_start_date_other
-        question: When did you start the Other?
+        question: When was the last dose of Other?
         type: DATE
         triggers:
             - action:
