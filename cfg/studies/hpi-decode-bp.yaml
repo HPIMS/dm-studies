@@ -1,0 +1,81 @@
+key: hpi-decode-bp
+active: true
+irb: STUDY-21-00745
+platform:
+  - ios
+  - android
+name: "Decode BP"
+description: The main goal of the Decode BP study is to understand if data derived from optical sensors in wearable devices can be used to track blood pressure. Two wearables (Empatica E4 and Polar Verity) will be used and compared to a medical-grade blood pressure monitor (Withings BPM Connect). We will collect data from these two wearables while simultaneously measuring your blood pressure 2 times a day for one week. We hope to better understand the relationship between the data from the optical sensors to the standard blood pressure monitor.
+consentId: ehive-hpi-decode-bp
+studyEmail: ehive-decodebp@mssm.edu
+withdrawText: |-
+  Thank you for participating in the Decode BP Study! We value your time and effort, and appreciate your contribution to research.
+  
+  Please contact us at
+  ehive.decodebp@mssm.edu if you have any further questions about the study or future research on the eHive platform.
+wearables:
+  - withings
+baseline: []
+surveys: 
+  - key: demographics
+    rank: 1
+  - key: fitzpatrick-skin-type
+    rank: 1
+  - key: usability
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::calibration-measurement
+          operator: ">"
+          score: 0
+    rank: 3
+  # NEVER task (need the configuration, but won't show in the task list)
+  - key: clearance
+    rank: -1
+multimedia:
+  - key: intervention-video-always
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::bp-measurement
+          operator: ">"
+          score: 0
+    - action: HIDE
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::bp-measurement
+          operator: ">"
+          score: 6
+    rank: 1000
+  # NEVER tasks (need a configuration for the intervention but don't show in task list)
+  - key: calibration-video
+    rank: -1
+  - key: intervention-video
+    rank: -1
+interventions:
+  - key: calibration-measurement
+    triggers:
+    - action: SHOW
+      condition:
+        type: AND
+        tasks:
+        - type: COMPLETED
+          resource: hpi-decode-bp::demographics
+          operator: ">"
+          score: 0
+        - type: COMPLETED
+          resource: library::fitzpatrick-skin-type
+          operator: ">"
+          score: 0
+    rank: 2
+  - key: bp-measurement
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: hpi-decode-bp::calibration-measurement
+          operator: ">"
+          score: 0
+    rank: 2

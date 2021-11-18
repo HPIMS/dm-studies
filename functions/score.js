@@ -6,6 +6,10 @@ const scoringFns = {
   "library::cd-risc-10": sumScore,
   "ibd-forecast::baseline_demographics": sumScore,
   "ibd-forecast::pss-4-baseline": sumScore,
+  "library::fitzpatrick-skin-type": (surveyData, optionScoreMap) => {
+    const score = sumScore(surveyData, optionScoreMap);
+    return Math.floor(score / 7) + 1; // converts sum score to fitzpatrick skin type
+  },
   "library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0": (
     surveyData,
     optionScoreMap
@@ -21,6 +25,7 @@ const scoringFns = {
   // Study Specific Surveys
   "warrior-shield::start-intervention": sumScore,
   "warrior-shield::devices": () => 1,
+  "hpi-decode-bp::clearance": sumScore,
   // legacy surveys
   baseline_cd_risc_survey: sumScore, // library::cd-risc-2
   mood_survey: sumScore, // library::phq-8

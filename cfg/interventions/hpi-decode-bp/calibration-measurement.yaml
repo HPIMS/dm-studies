@@ -1,0 +1,188 @@
+key: calibration-measurement
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+timeEstimate: 15
+name: Blood Pressure Calibration
+short: Complete the calibration procedure
+intro:
+  title: Blood Pressure Calibration
+  description: Please make sure your bladder is empty and that you have not smoked,
+    exercised, drunk caffeine or taken any medication that could alter your blood pressure
+    in the past 30 minutes. Also, make sure you are in a quiet room with a table, chair and
+    a comfortable temperature.
+outro:
+  title: Session Complete
+  description: >-
+    The blood pressure calibration session is complete. You may now turn off and remove the
+    blood pressure device. Thank you.
+survey:
+  key: hpi-decode-bp::clearance
+  score:
+    value: 0
+    operator: '='
+videoKey: hpi-decode-bp::calibration-video
+sdkDevices: []
+oAuthDevices:
+  - withings
+protocol:
+  - id: 1
+    activity: waitForPress
+    stepNumber: 1
+    text: >-
+      You have been cleared to complete the calibration procedure. Please press Begin to start.
+    buttonLabel: Begin
+  - id: 2
+    activity: waitForPress
+    stepNumber: 2
+    text: >-
+      Place the Withings BPM Connect on your upper left arm. The white tube
+      should be positioned against your inner arm with the start button at the
+      bottom.
+    buttonLabel: Continue
+  - id: 3
+    activity: waitForTimer
+    duration: 300
+    showCountdown: true
+    stepNumber: 3
+    text: >-
+      Please sit and relax for 5 minutes: arm resting on the table with mid-arm
+      at heart level; back supported on the chair; legs uncrossed and feet flat
+      on the floor.
+    animation: true
+  - id: 4
+    activity: waitForPress
+    stepNumber: 4
+    text: On the Withings BPM Connect device press the button to turn it on and then give it a long press to go from single BP mode to BP x3 mode. You should see the text change from BP to BP x3.
+    buttonLabel: Continue
+  - id: 5
+    activity: subscribeToMessage
+    stepNumber: 5
+    text: >-
+      Turn on your Withings BPM Connect, press the button again and begin a measurement. Please, remain silent and stay on this screen, it will automatically
+      record 3 measurements with 1 minute of rest in between. Please stay on this screen, it
+      will update automatically when the blood pressure measurement is received.
+    messageKey: BP_RECEIVED
+    condition:
+      - key: systolic
+        value: 0
+        operator: '>'
+        and:
+          - key: diastolic
+            value: 0
+            operator: '>'
+    timeout: 360
+    branchSuccess: 6
+    branchFailure: 1001
+    animation: true
+  - id: 1001
+    activity: waitForInput
+    stepNumber: 5
+    text: >-
+      The app was unable to automatically retrieve your blood pressure
+      measurement. Please manually enter the values in the fields below.
+    buttonLabel: Submit
+    messageKey: BP_RECEIVED
+    data:
+      - label: Systolic
+        key: systolic
+        type: number
+        placeholder: '120'
+        labelWidth: 84
+      - label: Diastolic
+        key: diastolic
+        type: number
+        placeholder: '80'
+        labelWidth: 84
+    animation: false
+  - id: 6
+    activity: waitForChoice
+    stepNumber: 6
+    text: >-
+      Your blood pressure was measured to be {{systolic}}/{{diastolic}}. Would
+      you like to accept or retake this measurement?
+    choices:
+      - label: Accept
+        branch: 7
+      - label: Retake
+        themeColor: danger
+        action: rejectMessage
+        branch: 5
+    animation: false
+  - id: 7
+    activity: waitForPress
+    stepNumber: 7
+    text: >-
+      Place the Withings BPM Connect on your upper right arm. The white tube
+      should be positioned against your inner arm with the start button at the
+      bottom.
+    buttonLabel: Continue
+  - id: 8
+    stepNumber: 8
+    activity: waitForTimer
+    duration: 60
+    showCountdown: true
+    text: Continue to sit in a relaxed position for 1 minute.
+    animation: true
+  - id: 9
+    activity: subscribeToMessage
+    stepNumber: 9
+    text: >-
+      Turn on your Withings BPM Connect, press the button again and begin a measurement. Please, remain silent and stay on this screen, it will automatically
+      record 3 measurements with 1 minute of rest in between. Please stay on this screen, it
+      will update automatically when the blood pressure measurement is received.
+    messageKey: BP_RECEIVED
+    condition:
+      - key: systolic
+        value: 0
+        operator: '>'
+        and:
+          - key: diastolic
+            value: 0
+            operator: '>'
+    timeout: 360
+    branchSuccess: 10
+    branchFailure: 1002
+    animation: true
+  - id: 1002
+    activity: waitForInput
+    stepNumber: 9
+    text: >-
+      The app was unable to automatically retrieve your blood pressure
+      measurement. Please manually enter the values in the fields below.
+    buttonLabel: Submit
+    messageKey: BP_RECEIVED
+    data:
+      - label: Systolic
+        key: systolic
+        type: number
+        placeholder: '120'
+        labelWidth: 84
+      - label: Diastolic
+        key: diastolic
+        type: number
+        placeholder: '80'
+        labelWidth: 84
+  - id: 10
+    activity: waitForChoice
+    stepNumber: 10
+    text: >-
+      Your blood pressure was measured to be {{systolic}}/{{diastolic}}. Would
+      you like to accept or retake this measurement?
+    choices:
+      - label: Accept
+        branch: 11
+      - label: Retake
+        themeColor: danger
+        action: rejectMessage
+        branch: 9
+    animation: false
+  - id: 11
+    activity: waitForPress
+    stepNumber: 11
+    text: On the Withings BPM Connect device press the button to turn it on and then give it a long press to go back from BP x3 mode to normal BP mode. You should see the text change from BP x3 to BP only. Press the button again to turn off the device.
+    buttonLabel: Continue
+  - id: 12
+    stepNumber: 12
+    activity: finish
