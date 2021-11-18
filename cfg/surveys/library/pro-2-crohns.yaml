@@ -1,0 +1,51 @@
+key: pro-2-crohns
+active: true
+scorable: true
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: DAILY
+timeEstimate: 1
+name: "Crohn’s Check-in"
+short: Reflect on the past day
+intro:
+  title: "Crohn’s Check-in"
+  description: |-
+    We want to understand more about the past day. Please fill
+    out this survey and let us know. You may skip any questions that you are not
+    comfortable answering.
+
+    The surveys in this app are NOT a replacement or substitute for medical care.
+    The answers you provide will not be used for clinical care. For any health concerns
+    you may have, please contact your regular healthcare provider.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "pro-2-crohns"
+    title: ""
+    description: ""
+    questions:
+      - key: soft_stool_count
+        question: How many liquid or very soft stools did you have yesterday?
+        type: NUMERIC
+      - key: abdominal_pain_rating
+        question: Please rate your abdominal pain yesterday.
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3

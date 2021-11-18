@@ -1,0 +1,194 @@
+key: ibd-forecast
+active: true
+irb: STUDY-21-01455
+visibility: 'private'
+platform:
+  - ios
+  - android
+name: "IBD Forecast"
+description: The main goal of the IBD Forecast study is to help us learn how to identify and predict flares of inflammatory bowel disease in the hopes of transforming IBD care. 
+  In the study, we collect data from your wearable device and through brief app-based surveys. 
+consentId: ehive-ibd-forecast
+studyEmail: ibdforecast@mssm.edu
+withdrawText: |-
+  Thank you for participating in the IBD Forecast study! We value your time and effort, and appreciate your contribution to IBD research.
+wearables:
+  - fitbit
+  - oura
+baseline: []
+surveys:
+  - key: baseline_demographics
+    rank: 1
+  - key: baseline_health_crohn
+    rank: 1
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: ibd-forecast::baseline_demographics
+            operator: =
+            score: 0
+  - key: baseline_health_uc
+    rank: 1
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: ibd-forecast::baseline_demographics
+            operator: =
+            score: 1
+  - key: lab_tests
+    rank: 5
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+  - key: new_meds
+    rank: 5
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+  - key: pro-2-crohns
+    rank: 4
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+  - key: pro-2-uc
+    rank: 4
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+  - key: promis-gi-belly-pain
+    rank: 3
+    schedule:
+      type: PERIOD
+      period: BI_WEEKLY
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+  - key: promis-gi-diarrhea
+    rank: 3
+    schedule:
+      type: PERIOD
+      period: BI_WEEKLY
+      graceDays: 7
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+  - key: pss-4-baseline
+    rank: 2
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0   
+  - key: pss-4-bi-weekly
+    rank: 2
+    schedule:
+      type: PERIOD
+      period: BI_WEEKLY
+      graceDays: 7
+      delay: 2
+      delayUnits: WEEKS
+    triggers:
+    - action: SHOW
+      condition:
+        - type: SCORE
+          resource: ibd-forecast::pss-4-baseline
+          operator: ">"
+          score: -1
+  - key: cd-risc-10
+    rank: 2
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_crohn
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0  
+requiredHealthRecords:
+  AllergyRecord: HKClinicalTypeIdentifier
+  ConditionRecord: HKClinicalTypeIdentifier
+  ImmunizationRecord: HKClinicalTypeIdentifier
+  LabResultRecord: HKClinicalTypeIdentifier
+  MedicationRecord: HKClinicalTypeIdentifier
+  ProcedureRecord: HKClinicalTypeIdentifier
+  VitalSignRecord: HKClinicalTypeIdentifier
+requiredData:
+  ActiveEnergyBurned: HKQuantityTypeIdentifier
+  AppleExerciseTime: HKQuantityTypeIdentifier
+  HeartRate: HKQuantityTypeIdentifier
+  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
+  RestingHeartRate: HKQuantityTypeIdentifier
+  WalkingHeartRateAverage: HKQuantityTypeIdentifier
+  OxygenSaturation: HKQuantityTypeIdentifier
+  StepCount: HKQuantityTypeIdentifier
+  AppleStandTime: HKQuantityTypeIdentifier
+  EnvironmentalAudioExposure: HKQuantityTypeIdentifier
+  SleepAnalysis: HKQuantityTypeIdentifier
+  DietaryEnergyConsumed: HKQuantityTypeIdentifier
+  BloodPressureDiastolic: HKQuantityTypeIdentifier
+  BloodPressureSystolic: HKQuantityTypeIdentifier
+  BloodGlucose: HKQuantityTypeIdentifier

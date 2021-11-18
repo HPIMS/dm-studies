@@ -1,4 +1,4 @@
-key: pss-4
+key: pss-4-bi-weekly
 scorable: true
 active: true
 metadata:
@@ -8,25 +8,25 @@ metadata:
   references: []
 schedule:
   type: PERIOD
-  period: MONTHLY
+  period: BI_WEEKLY
 timeEstimate: 2
 name: Stress
-short: "Tell us about your stress over the last month"
+short: "Tell us about your stress over the last two weeks"
 intro:
   title: "Stress"
   description: |-
     The questions in this scale ask you about your feelings and
-    thoughts during the last month.
+    thoughts during the two weeks.
     
     In each case, please select your response by choosing the answer that
     represents how often you felt or thought a certain way.
 outro:
-  title: Thank you for your continued participation
+  title: "Thank you for your continued\nparticipation"
   description: You are a valued member of our study!
 sections:
   - key: "questions"
     title: ""
-    description: "In the last month:"
+    description: "In the two weeks:"
     questions:
       - key: control
         question: How often have you felt that you were unable to

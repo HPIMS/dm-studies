@@ -1,0 +1,95 @@
+key: lab_tests
+active: true
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeEstimate: 5
+name: Report a new lab test
+short: "Enter info about your lab results"
+intro:
+  title: "Report a new lab test"
+  description: "Let us know if you have new results to share"
+outro:
+  title: "Report Complete"
+  description: "Thank you! Your participation is always valued."
+sections:
+  - key: "lab_tests"
+    title: ""
+    description: ""
+    questions:
+      - key: new_test_yn
+        question: Do you have a new blood or stool test to report?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: c_reactive
+            text: C-reactive protein (CRP)
+          - value: erythrocyte_sr
+            text: Erythrocyte sedimentation rate (ESR)
+          - value: fecal_calprotectin
+            text: Fecal calprotectin
+      - key: c_reactive_value
+        question: What is your C-reactive protein?
+        type: 'NUMERIC'
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: lab_tests
+                question: new_test_yn
+                operator: INCLUDES
+                value: c_reactive
+      - key: c_reactive_date
+        question: What is the date this blood test was drawn?
+        type: DATE
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
+              - section: lab_tests
+                question: new_test_yn
+                operator: INCLUDES
+                value: c_reactive
+      - key: erythrocyte_value
+        question: What is your erythrocyte sedimentation rate (ESR)?
+        type: 'NUMERIC'
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: erythrocyte_sr
+      - key: erythrocyte_date
+        question: What is the date this blood test was drawn?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: erythrocyte_sr
+      - key: fecal_value
+        question: What is your fecal calprotectin?
+        type: NUMERIC
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: fecal_calprotectin
+      - key: fecal_date
+        question: What is the date this stool test was collected?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: lab_tests
+                  question: new_test_yn
+                  operator: INCLUDES
+                  value: fecal_calprotectin
