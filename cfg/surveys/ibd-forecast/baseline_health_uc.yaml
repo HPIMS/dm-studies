@@ -166,100 +166,8 @@ sections:
             text: Yes
           - value: no
             text: No
-      - key: current_meds
-        question: Which medications are you currently taking?
-        type: MULTIPLE_CHOICE
-        options:
-          - value: corticosteroid
-            text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
-            inlineQuestion:
-                key: which_current_med_corticosteroid
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: budesonide
-            text: Budesonide (Entocort, Uceris)
-            inlineQuestion:
-                key: which_current_med_budesonide
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: rectal_steroid
-            text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
-            inlineQuestion:
-                key: which_current_med_rectal_steroid
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: oral_5
-            text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
-            inlineQuestion:
-                key: which_current_med_oral_5
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: azulfidine
-            text: Azulfidine (Sulfasalazine)
-          - value: rectal_5
-            text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
-            inlineQuestion:
-                key: which_current_med_rectal_5
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: ciprofloxacin
-            text: Ciprofloxacin (to treat IBD)
-          - value: flagyl
-            text: Flagyl (metronidazole) (to treat IBD)
-          - value: purethinol
-            text: Purethinol (6-MP) / Imuran (Azathioprine)
-            inlineQuestion:
-                key: which_current_med_purethinol
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: methotrexate
-            text: Methotrexate
-          - value: remicade
-            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra
-          - value: humira
-            text: Humira (adalimumab)
-          - value: cimzia
-            text: Cimzia (cetolizumab pegol)
-          - value: simponi
-            text: Simponi (golimumab)
-          - value: entyvio
-            text: Entyvio (vedolizumab)
-          - value: ustekinumab
-            text: Ustekinumab (Stelara)
-          - value: tofacitinib
-            text: Tofacitinib (Xeljanz)
-          - value: ozanimod
-            text: Ozanimod (Zeposia)
-          - value: imodium
-            text: Imodium (Ioperamide)
-          - value: lamotil
-            text: Lamotil (diphenoxylate/atropine)
-          - value: tincture_opium
-            text: Tincture of opium (DTO, opium tincture, morphine tincture)
-          - value: cholestyramine
-            text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
-          - value: other_antibiotics
-            text: Other antibiotics prescribed for IBD
-            inlineQuestion:
-                key: which_current_med_other_antibiotics
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: other
-            text: Other
-            inlineQuestion:
-                key: which_current_med_other_description
-                question: "Please specify:"
-                type: TEXTAREA
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: baseline
-                question: current_med_trigger
-                operator: =
-                value: yes
       - key: current_med_dose_corticosteroid
-        question: What is the current dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
+        question: What is the current dose of Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -390,7 +298,7 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: current_med_dose_budesonide
-        question: What is the current dose when you started Budesonide (Entocort, Uceris)? Please enter a number once you select a dose.
+        question: What is the current dose of Budesonide (Entocort, Uceris)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -521,7 +429,7 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: current_med_dose_rectal_steroid
-        question: What is the current dose when you started Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)? Please enter a number once you select a dose.
+        question: What is the current dose of Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -652,7 +560,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: current_med_dose_oral_5
-        question: What is the current dose when you started oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))? Please enter a number once you select a dose.
+        question: What is the current dose of oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -783,7 +691,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: current_med_dose_azulfidine
-        question: What is the current dose when you started Azulfidine (Sulfasalazine)? Please enter a number once you select a dose.
+        question: What is the current dose of Azulfidine (Sulfasalazine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -914,7 +822,7 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: current_med_dose_rectal_5
-        question: What is the current dose when you started rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))? Please enter a number once you select a dose.
+        question: What is the current dose of rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1045,7 +953,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: current_med_dose_ciprofloxacin
-        question: What is the current dose when you started Ciprofloxacin (to treat IBD)? Please enter a number once you select a dose.
+        question: What is the current dose of Ciprofloxacin (to treat IBD)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1176,7 +1084,7 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: current_med_dose_flagyl
-        question: What is the current dose when you started Flagyl (metronidazole) (to treat IBD)? Please enter a number once you select a dose.
+        question: What is the current dose of Flagyl (metronidazole) (to treat IBD)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1307,7 +1215,7 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: current_med_dose_other_antibiotics
-        question: What is the current dose when you started Other antibiotics prescribed for IBD? Please enter a number once you select a dose.
+        question: What is the current dose of Other antibiotics prescribed for IBD? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1438,7 +1346,7 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: current_med_dose_purethinol
-        question: What is the current dose when you started Purethinol (6-MP) / Imuran (Azathioprine)? Please enter a number once you select a dose.
+        question: What is the current dose of Purethinol (6-MP) / Imuran (Azathioprine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1569,7 +1477,7 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: current_med_dose_methotrexate
-        question: What is the current dose when you started Methotrexate? Please enter a number once you select a dose.
+        question: What is the current dose of Methotrexate? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1700,7 +1608,7 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: current_med_dose_remicade
-        question: What is the current dose when you started Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}? Please enter a number once you select a dose.
+        question: What is the current dose of Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1831,7 +1739,7 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: current_med_dose_humira
-        question: What is the current dose when you started Humira (adalimumab)? Please enter a number once you select a dose.
+        question: What is the current dose of Humira (adalimumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1962,7 +1870,7 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: current_med_dose_cimzia
-        question: What is the current dose when you started Cimzia (cetolizumab pegol)? Please enter a number once you select a dose.
+        question: What is the current dose of Cimzia (cetolizumab pegol)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2093,7 +2001,7 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: current_med_dose_simponi
-        question: What is the current dose when you started Simponi (golimumab)? Please enter a number once you select a dose.
+        question: What is the current dose of Simponi (golimumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2224,7 +2132,7 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: current_med_dose_entyvio
-        question: What is the current dose when you started Entyvio (vedolizumab)? Please enter a number once you select a dose.
+        question: What is the current dose of Entyvio (vedolizumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2355,7 +2263,7 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: current_med_dose_ustekinumab
-        question: What is the current dose when you started Ustekinumab (Stelara)? Please enter a number once you select a dose.
+        question: What is the current dose of Ustekinumab (Stelara)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2486,7 +2394,7 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: current_med_dose_tofacitinib
-        question: What is the current dose when you started tofacitinib (Xeljanz)? Please enter a number once you select a dose.
+        question: What is the current dose of tofacitinib (Xeljanz)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2617,7 +2525,7 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: current_med_dose_ozanimod
-        question: What is the current dose when you started Ozanimod (Zeposia)? Please enter a number once you select a dose.
+        question: What is the current dose of Ozanimod (Zeposia)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2748,7 +2656,7 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: current_med_dose_imodium
-        question: What is the current dose when you started Imodium (Ioperamide)? Please enter a number once you select a dose.
+        question: What is the current dose of Imodium (Ioperamide)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2879,7 +2787,7 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: current_med_dose_lamotil
-        question: What is the current dose when you started Lamotil (diphenoxylate/atropine)? Please enter a number once you select a dose.
+        question: What is the current dose of Lamotil (diphenoxylate/atropine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3010,7 +2918,7 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: current_med_dose_tincture_opium
-        question: What is the current dose when you started Tincture of opium (DTO, opium tincture, morphine tincture)? Please enter a number once you select a dose.
+        question: What is the current dose of Tincture of opium (DTO, opium tincture, morphine tincture)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3141,7 +3049,7 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: current_med_dose_cholestyramine
-        question: What is the current dose when you started Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)? Please enter a number once you select a dose.
+        question: What is the current dose of Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3272,7 +3180,7 @@ sections:
                   operator: INCLUDES
                   value: cholestyramine
       - key: current_med_dose_other
-        question: What is the current dose when you started Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
