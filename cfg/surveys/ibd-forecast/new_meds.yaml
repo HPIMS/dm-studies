@@ -3363,39 +3363,6 @@ sections:
                 operator: =
                 value: yes
       - key: stop_med_dose_corticosteroid
-        question: What is the dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
-        type: SINGLE_CHOICE
-        options:
-          - value: mg
-            text: milligrams (mg)
-            inlineQuestion:
-              key: stop_med_dose_corticosteroid_mg
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: g
-            text: grams (g)
-            inlineQuestion:
-              key: stop_med_dose_corticosteroid_g
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: ml
-            text: milliliter (ml)
-            inlineQuestion:
-              key: stop_med_dose_corticosteroid_ml
-              question: "Please provide the quantity"
-              type: TEXTAREA
-          - value: others
-            text: Other amount
-            inlineQuestion:
-              key: stop_med_dose_corticosteroid_others
-              question: "please provide the metric and quantity"
-              type: TEXTAREA
-        triggers:
-            - action:
-                type: SHOW
-              condition:
-      
-      - key: stop_med_dose_corticosteroid
         question: What is the dose when you stopped Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
