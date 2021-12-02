@@ -243,8 +243,8 @@ sections:
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
             key: which_current_med_other_antibiotics
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+            question: "Please list which specific medication you were taking."
+            type: TEXTAREA
           - value: other1
             text: Other
             inlineQuestion:
