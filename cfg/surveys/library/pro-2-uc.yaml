@@ -34,16 +34,16 @@ sections:
       type: SINGLE_CHOICE
       options:
           - value: normal
-            text: Normal
+            text: Normal number of stools
             score: 0
           - value: 1_2_stools
-            text: 1-2 stools/day more than normal
+            text: 1-2 stools more than normal
             score: 1
           - value: 3_4_stools
-            text: 3-4 stools/day more than normal
+            text: 3-4 stools more than normal
             score: 2
           - value: over_4_stools
-            text: Over 4 stools/day more than normal
+            text: Over 4 stools more than normal
             score: 3
     - key: bleeding_severity
       question: Please indicate the severity of your rectal bleeding (based on yesterday)
