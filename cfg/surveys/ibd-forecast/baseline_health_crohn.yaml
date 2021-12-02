@@ -253,8 +253,6 @@ sections:
         question: Which medications are you currently taking?
         type: MULTIPLE_CHOICE
         options:
-          - value: no_current_meds
-            text: I am not currently taking medication
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
@@ -282,7 +280,7 @@ sections:
           - value: azulfidine
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
-            text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            text: Rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))
             inlineQuestion:
                 key: which_current_med_rectal_5
                 question: "Please list which specific medication you are taking."
@@ -325,9 +323,10 @@ sections:
             text: Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
-            key: which_current_med_other_antibiotics
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+            inlineQuestion:
+              key: which_current_med_other_antibiotics
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: other1
             text: Other
             inlineQuestion:
