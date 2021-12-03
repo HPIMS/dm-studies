@@ -212,8 +212,6 @@ sections:
         question: Which medications are you currently taking?
         type: MULTIPLE_CHOICE
         options:
-          - value: no_current_meds
-            text: I am not currently taking medication
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
