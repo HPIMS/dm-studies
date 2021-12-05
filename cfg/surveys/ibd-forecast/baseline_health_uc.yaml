@@ -1390,3 +1390,134 @@ sections:
                   question: current_meds
                   operator: INCLUDES
                   value: abcd
+      - key: current_med_dose_corticosteroid
+        question: What is the current dose of Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_corticosteroid_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_corticosteroid_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_corticosteroid_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_corticosteroid_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: corticosteroid
+      - key: current_med_res_freq_corticosteroid
+        question: How often do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_corticosteroid_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: corticosteroid
+      - key: current_med_freq_corticosteroid
+        question: How many times at the above frequency do you take Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_corticosteroid_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: corticosteroid
+      - key: current_med_method_corticosteroid
+        question: What is the way the Corticosteroids (prednisone, prednisolone, methylpredninsolone) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: corticosteroid
+      - key: current_med_start_date_corticosteroid
+        question: When was the last dose of Corticosteroids (prednisone, prednisolone, methylpredninsolone)?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: corticosteroid
