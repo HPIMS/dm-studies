@@ -384,3 +384,1051 @@ sections:
                 question: current_med_trigger
                 operator: =
                 value: yes
+      - key: current_med_dose_other1
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other1_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other1_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other1_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other1_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other1
+      - key: current_med_res_freq_other1
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other1_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other1
+      - key: current_med_freq_other1
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other1_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other1
+      - key: current_med_method_other1
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other1
+      - key: current_med_start_date_other1
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other1
+      - key: current_med_dose_other2
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other2_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other2_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other2_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other2_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_res_freq_other2
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other2_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_freq_other2
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other2_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_method_other2
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_start_date_other2
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_dose_other3
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other3_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other3_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other3_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other3_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_res_freq_other3
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other3_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_freq_other3
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other3_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_method_other3
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_start_date_other3
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_dose_other4
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other4_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other4_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other4_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other4_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_res_freq_other4
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other4_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_freq_other4
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other4_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_method_other4
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_start_date_other4
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_dose_other5
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other5_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other5_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other5_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other5_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_res_freq_other5
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other5_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_freq_other5
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other5_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_method_other5
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_start_date_other5
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_dose_other6
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other6_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other6_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other6_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other6_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_res_freq_other6
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other6_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_freq_other6
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other6_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_method_other6
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_start_date_other6
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_dose_other7
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other7_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other7_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other7_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other7_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_res_freq_other7
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other7_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_freq_other7
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other7_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_method_other7
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_start_date_other7
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_dose_other8
+        question: What is the current dose of Other? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other8_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other8_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other8_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other8_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_res_freq_other8
+        question: How often do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other8_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_freq_other8
+        question: How many times at the above frequency do you take Other?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other8_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_method_other8
+        question: What is the way the Other is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_start_date_other8
+        question: When was the last dose of Other?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
