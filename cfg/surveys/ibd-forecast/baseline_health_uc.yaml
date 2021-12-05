@@ -328,7 +328,7 @@ sections:
               key: which_current_med_other7_description
               question: "Please specify:"
               type: 'TEXTAREA'
-          - value: other8
+          - value: abcd
             text: "Other medication #8"
             inlineQuestion:
               key: which_current_med_other8_description
@@ -1294,7 +1294,7 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other8
+                  value: abcd
       - key: current_med_res_freq_other8
         question: How often do you take Other?
         type: SINGLE_CHOICE
@@ -1324,7 +1324,7 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other8
+                  value: abcd
       - key: current_med_freq_other8
         question: How many times at the above frequency do you take Other?
         type: SINGLE_CHOICE
@@ -1378,7 +1378,7 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other8
+                  value: abcd
       - key: current_med_start_date_other8
         question: When was the last dose of Other?
         type: DATE
@@ -1389,4 +1389,4 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other8
+                  value: abcd
