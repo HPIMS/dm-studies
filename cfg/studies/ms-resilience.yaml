@@ -4,12 +4,18 @@ platform:
   - ios
   - android
 name: "Mount Sinai Resilience Study"
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+shortDescription: ""
+longDescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Maecenas eros enim, malesuada sit amet ex vitae, blandit vestibulum ipsum.
   Integer finibus a leo id hendrerit. Vestibulum mollis ligula eget odio dignissim maximus.
   Cras sapien felis, mollis eget accumsan in, pretium ut mauris. Vivamus id lorem pretium,
   egestas risus sed, vestibulum lacus. Curabitur eget enim eget purus pretium varius.
 consentId: ehive-ms-resilience
+imageId: ""
+animationId: ""
+videoId: ""
+eligibilityCriteria: []
+timeResponsibility: {}
 baseline:
   - baseline_demographics
   - baseline_cd_risc_survey
