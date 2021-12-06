@@ -151,43 +151,43 @@ sections:
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other2
-            text: "Other medication #2"
+            text: "Other medication number 2"
             inlineQuestion:
               key: which_past_med_other2_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other3
-            text: "Other medication #3"
+            text: "Other medication number 3"
             inlineQuestion:
               key: which_past_med_other3_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other4
-            text: "Other medication #4"
+            text: "Other medication number 4"
             inlineQuestion:
               key: which_past_med_other4_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other5
-            text: "Other medication #5"
+            text: "Other medication number 5"
             inlineQuestion:
               key: which_past_med_other5_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other6
-            text: "Other medication #6"
+            text: "Other medication number 6"
             inlineQuestion:
               key: which_past_med_other6_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other7
-            text: "Other medication #7"
+            text: "Other medication number 7"
             inlineQuestion:
               key: which_past_med_other7_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other8
-            text: "Other medication #8"
+            text: "Other medication number 8"
             inlineQuestion:
               key: which_past_med_other8_description
               question: "Please specify:"
@@ -212,8 +212,6 @@ sections:
         question: Which medications are you currently taking?
         type: MULTIPLE_CHOICE
         options:
-          - value: no_current_meds
-            text: I am not currently taking medication
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
@@ -295,43 +293,43 @@ sections:
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other2
-            text: "Other medication #2"
+            text: "Other medication number 2"
             inlineQuestion:
               key: which_current_med_other2_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other3
-            text: "Other medication #3"
+            text: "Other medication number 3"
             inlineQuestion:
               key: which_current_med_other3_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other4
-            text: "Other medication #4"
+            text: "Other medication number 4"
             inlineQuestion:
               key: which_current_med_other4_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other5
-            text: "Other medication #5"
+            text: "Other medication number 5"
             inlineQuestion:
               key: which_current_med_other5_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other6
-            text: "Other medication #6"
+            text: "Other medication number 6"
             inlineQuestion:
               key: which_current_med_other6_description
               question: "Please specify:"
               type: 'TEXTAREA'
           - value: other7
-            text: "Other medication #7"
+            text: "Other medication number 7"
             inlineQuestion:
               key: which_current_med_other7_description
               question: "Please specify:"
               type: 'TEXTAREA'
-          - value: other8
-            text: "Other medication #8"
+          - value: abcd
+            text: "Other medication number 8"
             inlineQuestion:
               key: which_current_med_other8_description
               question: "Please specify:"
@@ -344,6 +342,7 @@ sections:
                 question: current_med_trigger
                 operator: =
                 value: yes
+
       - key: current_med_dose_corticosteroid
         question: What is the current dose of Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
@@ -3489,7 +3488,7 @@ sections:
                   operator: INCLUDES
                   value: other1
       - key: current_med_dose_other2
-        question: What is the current dose of Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other number 2? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3525,7 +3524,7 @@ sections:
                   operator: INCLUDES
                   value: other2
       - key: current_med_res_freq_other2
-        question: How often do you take Other?
+        question: How often do you take Other number 2?
         type: SINGLE_CHOICE
         options:
           - value: day
@@ -3555,7 +3554,7 @@ sections:
                   operator: INCLUDES
                   value: other2
       - key: current_med_freq_other2
-        question: How many times at the above frequency do you take Other?
+        question: How many times at the above frequency do you take Other number 2?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3589,7 +3588,7 @@ sections:
                   operator: INCLUDES
                   value: other2
       - key: current_med_method_other2
-        question: What is the way the Other is given to you?
+        question: What is the way the Other number 2 is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -3609,7 +3608,7 @@ sections:
                   operator: INCLUDES
                   value: other2
       - key: current_med_start_date_other2
-        question: When was the last dose of Other?
+        question: When was the last dose of Other number 2?
         type: DATE
         triggers:
             - action:
@@ -3620,7 +3619,7 @@ sections:
                   operator: INCLUDES
                   value: other2
       - key: current_med_dose_other3
-        question: What is the current dose of Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other number 3? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3656,7 +3655,7 @@ sections:
                   operator: INCLUDES
                   value: other3
       - key: current_med_res_freq_other3
-        question: How often do you take Other?
+        question: How often do you take Other number 3?
         type: SINGLE_CHOICE
         options:
           - value: day
@@ -3686,7 +3685,7 @@ sections:
                   operator: INCLUDES
                   value: other3
       - key: current_med_freq_other3
-        question: How many times at the above frequency do you take Other?
+        question: How many times at the above frequency do you take Other number 3?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3720,7 +3719,7 @@ sections:
                   operator: INCLUDES
                   value: other3
       - key: current_med_method_other3
-        question: What is the way the Other is given to you?
+        question: What is the way the Other number 3 is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -3740,7 +3739,7 @@ sections:
                   operator: INCLUDES
                   value: other3
       - key: current_med_start_date_other3
-        question: When was the last dose of Other?
+        question: When was the last dose of Other number 3?
         type: DATE
         triggers:
             - action:
@@ -3751,7 +3750,7 @@ sections:
                   operator: INCLUDES
                   value: other3
       - key: current_med_dose_other4
-        question: What is the current dose of Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other number 4? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3787,7 +3786,7 @@ sections:
                   operator: INCLUDES
                   value: other4
       - key: current_med_res_freq_other4
-        question: How often do you take Other?
+        question: How often do you take Other number 4?
         type: SINGLE_CHOICE
         options:
           - value: day
@@ -3817,7 +3816,7 @@ sections:
                   operator: INCLUDES
                   value: other4
       - key: current_med_freq_other4
-        question: How many times at the above frequency do you take Other?
+        question: How many times at the above frequency do you take Other number 4?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3851,7 +3850,7 @@ sections:
                   operator: INCLUDES
                   value: other4
       - key: current_med_method_other4
-        question: What is the way the Other is given to you?
+        question: What is the way the Other number 4 is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -3871,7 +3870,7 @@ sections:
                   operator: INCLUDES
                   value: other4
       - key: current_med_start_date_other4
-        question: When was the last dose of Other?
+        question: When was the last dose of Other number 4?
         type: DATE
         triggers:
             - action:
@@ -3882,7 +3881,7 @@ sections:
                   operator: INCLUDES
                   value: other4
       - key: current_med_dose_other5
-        question: What is the current dose of Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other number 5? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3918,7 +3917,7 @@ sections:
                   operator: INCLUDES
                   value: other5
       - key: current_med_res_freq_other5
-        question: How often do you take Other?
+        question: How often do you take Other number 5?
         type: SINGLE_CHOICE
         options:
           - value: day
@@ -3948,7 +3947,7 @@ sections:
                   operator: INCLUDES
                   value: other5
       - key: current_med_freq_other5
-        question: How many times at the above frequency do you take Other?
+        question: How many times at the above frequency do you take Other number 5?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -3982,7 +3981,7 @@ sections:
                   operator: INCLUDES
                   value: other5
       - key: current_med_method_other5
-        question: What is the way the Other is given to you?
+        question: What is the way the Other number 5 is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -4002,7 +4001,7 @@ sections:
                   operator: INCLUDES
                   value: other5
       - key: current_med_start_date_other5
-        question: When was the last dose of Other?
+        question: When was the last dose of Other number 5?
         type: DATE
         triggers:
             - action:
@@ -4013,7 +4012,7 @@ sections:
                   operator: INCLUDES
                   value: other5
       - key: current_med_dose_other6
-        question: What is the current dose of Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other number 6? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -4049,7 +4048,7 @@ sections:
                   operator: INCLUDES
                   value: other6
       - key: current_med_res_freq_other6
-        question: How often do you take Other?
+        question: How often do you take Other number 6?
         type: SINGLE_CHOICE
         options:
           - value: day
@@ -4079,7 +4078,7 @@ sections:
                   operator: INCLUDES
                   value: other6
       - key: current_med_freq_other6
-        question: How many times at the above frequency do you take Other?
+        question: How many times at the above frequency do you take Other number 6?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4113,7 +4112,7 @@ sections:
                   operator: INCLUDES
                   value: other6
       - key: current_med_method_other6
-        question: What is the way the Other is given to you?
+        question: What is the way the Other number 6 is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -4133,7 +4132,7 @@ sections:
                   operator: INCLUDES
                   value: other6
       - key: current_med_start_date_other6
-        question: When was the last dose of Other?
+        question: When was the last dose of Other number 6?
         type: DATE
         triggers:
             - action:
@@ -4144,7 +4143,7 @@ sections:
                   operator: INCLUDES
                   value: other6
       - key: current_med_dose_other7
-        question: What is the current dose of Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other number 7? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -4180,7 +4179,7 @@ sections:
                   operator: INCLUDES
                   value: other7
       - key: current_med_res_freq_other7
-        question: How often do you take Other?
+        question: How often do you take Other number 7?
         type: SINGLE_CHOICE
         options:
           - value: day
@@ -4210,7 +4209,7 @@ sections:
                   operator: INCLUDES
                   value: other7
       - key: current_med_freq_other7
-        question: How many times at the above frequency do you take Other?
+        question: How many times at the above frequency do you take Other number 7?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4244,7 +4243,7 @@ sections:
                   operator: INCLUDES
                   value: other7
       - key: current_med_method_other7
-        question: What is the way the Other is given to you?
+        question: What is the way the Other number 7 is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -4264,7 +4263,7 @@ sections:
                   operator: INCLUDES
                   value: other7
       - key: current_med_start_date_other7
-        question: When was the last dose of Other?
+        question: When was the last dose of Other number 7?
         type: DATE
         triggers:
             - action:
@@ -4275,7 +4274,7 @@ sections:
                   operator: INCLUDES
                   value: other7
       - key: current_med_dose_other8
-        question: What is the current dose of Other? Please enter a number once you select a dose.
+        question: What is the current dose of Other number 8? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -4311,7 +4310,7 @@ sections:
                   operator: INCLUDES
                   value: other8
       - key: current_med_res_freq_other8
-        question: How often do you take Other?
+        question: How often do you take Other number 8?
         type: SINGLE_CHOICE
         options:
           - value: day
@@ -4341,7 +4340,7 @@ sections:
                   operator: INCLUDES
                   value: other8
       - key: current_med_freq_other8
-        question: How many times at the above frequency do you take Other?
+        question: How many times at the above frequency do you take Other number 8?
         type: SINGLE_CHOICE
         options:
           - value: 1
@@ -4375,7 +4374,7 @@ sections:
                   operator: INCLUDES
                   value: other8
       - key: current_med_method_other8
-        question: What is the way the Other is given to you?
+        question: What is the way the Other number 8 is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -4395,7 +4394,7 @@ sections:
                   operator: INCLUDES
                   value: other8
       - key: current_med_start_date_other8
-        question: When was the last dose of Other?
+        question: When was the last dose of Other number 8?
         type: DATE
         triggers:
             - action:
