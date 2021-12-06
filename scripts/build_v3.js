@@ -52,7 +52,7 @@ async function processSurveys() {
   const index = [];
 
   const surveyDir = path.join(__dirname, "../cfg/surveys");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const surveys = Object.keys(versions.active.surveys);
 
@@ -124,7 +124,7 @@ async function processMultimedia() {
   const index = [];
 
   const multimediaDir = path.join(__dirname, "../cfg/multimedia");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const multimedia = Object.keys(versions.active.multimedia);
 
@@ -197,7 +197,7 @@ async function processInterventions() {
   const index = [];
 
   const interventionsDir = path.join(__dirname, "../cfg/interventions");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const interventions = Object.keys(versions.active.interventions);
 
@@ -276,7 +276,7 @@ async function processStudies() {
   const index = [];
 
   const studyDir = path.join(__dirname, "../cfg/studies");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const studies = Object.keys(versions.active.studies);
 
@@ -288,9 +288,18 @@ async function processStudies() {
       encoding: "utf-8",
     });
     const data = YAML.parse(cfg);
-    const visibility = data.visibility;
-    const irb = data.irb;
-    const description = data.longDescription;
+
+    const {
+      visibility,
+      irb,
+      shortDescription,
+      longDescription,
+      eligibilityCriteria,
+      timeResponsibility,
+      imageId,
+      animationId,
+      videoId,
+    } = data;
 
     const version = versions.active.studies[study][1];
 
@@ -298,7 +307,6 @@ async function processStudies() {
     delete data.active;
     delete data.visibility;
     delete data.irb;
-
     delete data.shortDescription;
     delete data.longDescription;
     delete data.eligibilityCriteria;
@@ -306,7 +314,6 @@ async function processStudies() {
     delete data.imageId;
     delete data.animationId;
     delete data.videoId;
-
     // set additional configs
     data.version = version;
 
@@ -426,9 +433,15 @@ async function processStudies() {
       key: data.key,
       visibility,
       irb,
+      shortDescription,
+      longDescription,
+      eligibilityCriteria,
+      timeResponsibility,
+      imageId,
+      animationId,
+      videoId,
       version: version,
       name: data.name,
-      description: description,
       consentId: data.consentId,
       studyEmail: data.studyEmail,
       wearables: data.wearables,
@@ -438,7 +451,7 @@ async function processStudies() {
     log.important(`[${study}] Finished processing. Writing ${study}.json`);
     await fs.promises.writeFile(
       `${distDir}/studies/${study}.json`,
-      JSON.stringify({ ...data, description })
+      JSON.stringify(data)
     );
   });
 
@@ -450,7 +463,7 @@ async function processStudies() {
 }
 
 async function build() {
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
   await Promise.all([
     mkdir(path.resolve(distDir, "..")),
     mkdir(distDir),
