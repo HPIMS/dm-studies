@@ -4,7 +4,9 @@ irb: STUDY-21-00596
 platform:
   - ios
 name: "Warrior Shield"
-shortDescription: ""
+shortDescription: The main goal of the Warrior Shield study is to understand
+  how a breathing intervention based on the HeartMath system improves
+  the psychological well being of health care workers impacted by COVID-19.
 longDescription: The main goal of the Warrior Shield study is to understand
   how a breathing intervention based on the HeartMath system improves
   the psychological well being of health care workers impacted by COVID-19.
@@ -16,7 +18,10 @@ imageId: study-warrior-shield
 animationId: ""
 videoId: ""
 eligibilityCriteria: []
-timeResponsibility: {}
+timeResponsibility:
+  time: 10
+  timeUnits: minutes
+  timePeriod: daily
 baseline: []
 surveys:
   - key: demographics
