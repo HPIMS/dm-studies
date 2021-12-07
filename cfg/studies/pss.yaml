@@ -4,23 +4,19 @@ irb: STUDY-20-00256
 platform:
   - ios
   - android
-name: "DDP: Pain, Stress, Sleep Study"
-shortDescription: ""
-longDescription: The Digital Discovery Program at the Hasso Plattner Institute for
-  Digital Health at Mount Sinai is focused on understanding how digital
-  technology can be used to increase our understanding of complex disease. In
-  this study, we aim to use wearable devices to learn about underlying symptoms
-  related to pain, stress, and sleep, which affect us all every day. By
-  providing lifestyle data, you can gain insight into your own health and
-  behaviors, lead a healthier life, all while contributing to important
-  scientific research.
+name: Pain, Stress, Sleep
+shortDescription: In this study, we aim to use wearable devices to learn about underlying symptoms related to pain, stress, and sleep, which affect us all every day. 
+longDescription: In this study, we aim to use wearable devices to learn about underlying symptoms related to pain, stress, and sleep, which affect us all every day. By providing lifestyle data, you can gain insight into your own health and behaviors, lead a healthier life, all while contributing to important scientific research.
 consentId: ehive-pss
 studyEmail: ehive.pss@mssm.edu
 imageId: animation_bg_n
 animationId: study-pss
 videoId: ""
-eligibilityCriteria: []
-timeResponsibility: {}
+eligibilityCriteria: [[ageRange, {min: 18, max: 100 }]]
+timeResponsibility:
+  time: 2
+  timeUnits: minutes
+  timePeriod: daily
 withdrawText: |-
   Thank you for participating in the DDP: Pain, Stress, Sleep study! We value your time and effort, and appreciate your contribution to research.
   
