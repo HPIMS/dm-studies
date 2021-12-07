@@ -437,6 +437,8 @@ async function processStudies() {
       key: data.key,
       visibility,
       irb,
+      studyTeamId,
+      openEnrollment,
       shortDescription,
       longDescription,
       eligibilityCriteria,
