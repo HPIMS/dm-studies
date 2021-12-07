@@ -467,7 +467,6 @@ async function build() {
   await Promise.all([
     mkdir(path.resolve(distDir, "..")),
     mkdir(distDir),
-    mkdir(`${distDir}/images`),
     mkdir(`${distDir}/studies`),
     mkdir(`${distDir}/surveys`),
     mkdir(`${distDir}/multimedia`),
@@ -477,10 +476,6 @@ async function build() {
   await processMultimedia();
   await processInterventions();
   await processStudies();
-  await copyDirectory(
-    path.join(__dirname, "../cfg/images"),
-    `${distDir}/images`
-  );
   await fs.promises.writeFile(
     `${distDir}/versions.json`,
     JSON.stringify(versions)
