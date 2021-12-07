@@ -292,6 +292,8 @@ async function processStudies() {
     const {
       visibility,
       irb,
+      studyTeamId,
+      openEnrollment,
       shortDescription,
       longDescription,
       eligibilityCriteria,
@@ -307,6 +309,8 @@ async function processStudies() {
     delete data.active;
     delete data.visibility;
     delete data.irb;
+    delete data.studyTeamId;
+    delete data.openEnrollment;
     delete data.shortDescription;
     delete data.longDescription;
     delete data.eligibilityCriteria;

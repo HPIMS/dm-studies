@@ -299,6 +299,8 @@ async function processStudies() {
     delete data.visibility;
     delete data.irb;
 
+    delete data.studyTeamId;
+    delete data.openEnrollment;
     delete data.shortDescription;
     delete data.longDescription;
     delete data.eligibilityCriteria;
