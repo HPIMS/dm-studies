@@ -1,12 +1,20 @@
 key: kyle
+studyTeamId: mountsinai
+openEnrollment: true
 visibility: 'private'
-active: true
+active: false
 platform:
   - ios
   - android
 name: "Kyle's super amazing study"
-description: The best ever study.  Not even joking.
+shortDescription: ""
+longDescription: The best ever study.  Not even joking.
 consentId: ehive-kyle
+imageId: "study-default"
+animationId: ""
+videoId: ""
+eligibilityCriteria: []
+timeResponsibility: {}
 wearables:
   - oura
 baseline:

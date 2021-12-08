@@ -1,15 +1,25 @@
 key: ibd-forecast
 active: true
 irb: STUDY-21-01455
+studyTeamId: mountsinai
+openEnrollment: true
 visibility: 'private'
 platform:
   - ios
   - android
 name: "IBD Forecast"
-description: The main goal of the IBD Forecast study is to help us learn how to identify and predict flares of inflammatory bowel disease in the hopes of transforming IBD care. 
-  In the study, we collect data from your wearable device and through brief app-based surveys. 
+shortDescription: The IBD Forecast study will help us learn more about how to identify and predict flares in the hopes of transforming IBD care.
+longDescription: The main goal of the IBD Forecast study is to help us learn how to identify and predict flares in the hopes of transforming IBD care. In the study, we collect data from your wearable device and through brief app-based surveys.
 consentId: ehive-ibd-forecast
 studyEmail: ibdforecast@mssm.edu
+imageId: study-ibd-forecast
+animationId: ""
+videoId: ""
+eligibilityCriteria: [[diagnosis, { disease: 'IBD'}], [medication, { disease: 'IBD'}], [ageRange, {min: 18, max: 100 }]]
+timeResponsibility:
+  time: 2
+  timeUnits: minutes
+  timePeriod: daily
 withdrawText: |-
   Thank you for participating in the IBD Forecast study! We value your time and effort, and appreciate your contribution to IBD research.
 wearables:
