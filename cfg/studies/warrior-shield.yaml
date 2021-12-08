@@ -19,7 +19,7 @@ studyEmail: covid.hcw@mssm.edu
 imageId: study-warrior-shield
 animationId: ""
 videoId: ""
-eligibilityCriteria: []
+eligibilityCriteria: ['heathcare_worker', [minAge, {min: 18 }]]
 timeResponsibility:
   time: 10
   timeUnits: minutes
