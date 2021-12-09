@@ -185,12 +185,54 @@ sections:
                 key: which_past_med_other_antibiotics
                 question: "Please list which specific medication you were taking."
                 type: TEXTAREA
-          - value: other
+          - value: other1
             text: Other
             inlineQuestion:
-                key: which_past_med_other_description
-                question: "Please specify:"
-                type: TEXTAREA
+              key: which_past_med_other1_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other2
+            text: "Other medication number 2"
+            inlineQuestion:
+              key: which_past_med_other2_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other3
+            text: "Other medication number 3"
+            inlineQuestion:
+              key: which_past_med_other3_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other4
+            text: "Other medication number 4"
+            inlineQuestion:
+              key: which_past_med_other4_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other5
+            text: "Other medication number 5"
+            inlineQuestion:
+              key: which_past_med_other5_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other6
+            text: "Other medication number 6"
+            inlineQuestion:
+              key: which_past_med_other6_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other7
+            text: "Other medication number 7"
+            inlineQuestion:
+              key: which_past_med_other7_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other8
+            text: "Other medication number 8"
+            inlineQuestion:
+              key: which_past_med_other8_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
         triggers:
           - action:
               type: SHOW
@@ -215,33 +257,33 @@ sections:
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
                 key: which_current_med_corticosteroid
-                question: "Please list which specific medication you were taking."
+                question: "Please list which specific medication you are taking."
                 type: TEXTAREA
           - value: budesonide
             text: Budesonide (Entocort, Uceris)
             inlineQuestion:
                 key: which_current_med_budesonide
-                question: "Please list which specific medication you were taking."
+                question: "Please list which specific medication you are taking."
                 type: TEXTAREA
           - value: rectal_steroid
             text: Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)
             inlineQuestion:
                 key: which_current_med_rectal_steroid
-                question: "Please list which specific medication you were taking."
+                question: "Please list which specific medication you are taking."
                 type: TEXTAREA
           - value: oral_5
             text: Oral 5 - ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))
             inlineQuestion:
                 key: which_current_med_oral_5
-                question: "Please list which specific medication you were taking."
+                question: "Please list which specific medication you are taking."
                 type: TEXTAREA
           - value: azulfidine
             text: Azulfidine (Sulfasalazine)
           - value: rectal_5
-            text: Rectal 5 - ASA (Rowasa, Canasa (mesalamine rectal))
+            text: Rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))
             inlineQuestion:
                 key: which_current_med_rectal_5
-                question: "Please list which specific medication you were taking."
+                question: "Please list which specific medication you are taking."
                 type: TEXTAREA
           - value: ciprofloxacin
             text: Ciprofloxacin (to treat IBD)
@@ -251,7 +293,7 @@ sections:
             text: Purethinol (6-MP) / Imuran (Azathioprine)
             inlineQuestion:
                 key: which_current_med_purethinol
-                question: "Please list which specific medication you were taking."
+                question: "Please list which specific medication you are taking."
                 type: TEXTAREA
           - value: methotrexate
             text: Methotrexate
@@ -268,7 +310,7 @@ sections:
           - value: ustekinumab
             text: Ustekinumab (Stelara)
           - value: tofacitinib
-            text: Tofacitinib (Xeljanz)
+            text: tofacitinib (Xeljanz)
           - value: ozanimod
             text: Ozanimod (Zeposia)
           - value: imodium
@@ -282,15 +324,57 @@ sections:
           - value: other_antibiotics
             text: Other antibiotics prescribed for IBD
             inlineQuestion:
-                key: which_current_med_other_antibiotics
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
-          - value: other
+              key: which_current_med_other_antibiotics
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
+          - value: other1
             text: Other
             inlineQuestion:
-                key: which_current_med_other_description
-                question: "Please specify:"
-                type: TEXTAREA
+              key: which_current_med_other1_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other2
+            text: "Other medication number 2"
+            inlineQuestion:
+              key: which_current_med_other2_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other3
+            text: "Other medication number 3"
+            inlineQuestion:
+              key: which_current_med_other3_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other4
+            text: "Other medication number 4"
+            inlineQuestion:
+              key: which_current_med_other4_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other5
+            text: "Other medication number 5"
+            inlineQuestion:
+              key: which_current_med_other5_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other6
+            text: "Other medication number 6"
+            inlineQuestion:
+              key: which_current_med_other6_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other7
+            text: "Other medication number 7"
+            inlineQuestion:
+              key: which_current_med_other7_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
+          - value: other8
+            text: "Other medication number 8"
+            inlineQuestion:
+              key: which_current_med_other8_description
+              question: "Please specify:"
+              type: 'TEXTAREA'
         triggers:
           - action:
               type: SHOW
@@ -299,8 +383,9 @@ sections:
                 question: current_med_trigger
                 operator: =
                 value: yes
+
       - key: current_med_dose_corticosteroid
-        question: What is the current dose when you started Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
+        question: What is the current dose of Corticosteroids (prednisone, prednisolone, methylpredninsolone)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -431,7 +516,7 @@ sections:
                   operator: INCLUDES
                   value: corticosteroid
       - key: current_med_dose_budesonide
-        question: What is the current dose when you started Budesonide (Entocort, Uceris)? Please enter a number once you select a dose.
+        question: What is the current dose of Budesonide (Entocort, Uceris)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -562,7 +647,7 @@ sections:
                   operator: INCLUDES
                   value: budesonide
       - key: current_med_dose_rectal_steroid
-        question: What is the current dose when you started Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)? Please enter a number once you select a dose.
+        question: What is the current dose of Rectal Steroids (Cortenema, Cortifoam (hydrocotisone rectal), etc.)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -693,7 +778,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_steroid
       - key: current_med_dose_oral_5
-        question: What is the current dose when you started oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))? Please enter a number once you select a dose.
+        question: What is the current dose of oral 5-ASA (Lialda, Asacol, Pentasa, Apriso (mesalamine), Colazal (balsalazide), Dipentum (olsalazine))? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -824,7 +909,7 @@ sections:
                   operator: INCLUDES
                   value: oral_5
       - key: current_med_dose_azulfidine
-        question: What is the current dose when you started Azulfidine (Sulfasalazine)? Please enter a number once you select a dose.
+        question: What is the current dose of Azulfidine (Sulfasalazine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -955,7 +1040,7 @@ sections:
                   operator: INCLUDES
                   value: azulfidine
       - key: current_med_dose_rectal_5
-        question: What is the current dose when you started rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))? Please enter a number once you select a dose.
+        question: What is the current dose of rectal 5-ASA (Rowasa, Canasa (mesalamine rectal))? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1086,7 +1171,7 @@ sections:
                   operator: INCLUDES
                   value: rectal_5
       - key: current_med_dose_ciprofloxacin
-        question: What is the current dose when you started Ciprofloxacin (to treat IBD)? Please enter a number once you select a dose.
+        question: What is the current dose of Ciprofloxacin (to treat IBD)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1217,7 +1302,7 @@ sections:
                   operator: INCLUDES
                   value: ciprofloxacin
       - key: current_med_dose_flagyl
-        question: What is the current dose when you started Flagyl (metronidazole) (to treat IBD)? Please enter a number once you select a dose.
+        question: What is the current dose of Flagyl (metronidazole) (to treat IBD)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1348,7 +1433,7 @@ sections:
                   operator: INCLUDES
                   value: flagyl
       - key: current_med_dose_other_antibiotics
-        question: What is the current dose when you started Other antibiotics prescribed for IBD? Please enter a number once you select a dose.
+        question: What is the current dose of Other antibiotics prescribed for IBD? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1479,7 +1564,7 @@ sections:
                   operator: INCLUDES
                   value: other_antibiotics
       - key: current_med_dose_purethinol
-        question: What is the current dose when you started Purethinol (6-MP) / Imuran (Azathioprine)? Please enter a number once you select a dose.
+        question: What is the current dose of Purethinol (6-MP) / Imuran (Azathioprine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1610,7 +1695,7 @@ sections:
                   operator: INCLUDES
                   value: purethinol
       - key: current_med_dose_methotrexate
-        question: What is the current dose when you started Methotrexate? Please enter a number once you select a dose.
+        question: What is the current dose of Methotrexate? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1741,7 +1826,7 @@ sections:
                   operator: INCLUDES
                   value: methotrexate
       - key: current_med_dose_remicade
-        question: What is the current dose when you started Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}? Please enter a number once you select a dose.
+        question: What is the current dose of Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra}? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -1872,7 +1957,7 @@ sections:
                   operator: INCLUDES
                   value: remicade
       - key: current_med_dose_humira
-        question: What is the current dose when you started Humira (adalimumab)? Please enter a number once you select a dose.
+        question: What is the current dose of Humira (adalimumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2003,7 +2088,7 @@ sections:
                   operator: INCLUDES
                   value: humira
       - key: current_med_dose_cimzia
-        question: What is the current dose when you started Cimzia (cetolizumab pegol)? Please enter a number once you select a dose.
+        question: What is the current dose of Cimzia (cetolizumab pegol)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2134,7 +2219,7 @@ sections:
                   operator: INCLUDES
                   value: cimzia
       - key: current_med_dose_simponi
-        question: What is the current dose when you started Simponi (golimumab)? Please enter a number once you select a dose.
+        question: What is the current dose of Simponi (golimumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2265,7 +2350,7 @@ sections:
                   operator: INCLUDES
                   value: simponi
       - key: current_med_dose_entyvio
-        question: What is the current dose when you started Entyvio (vedolizumab)? Please enter a number once you select a dose.
+        question: What is the current dose of Entyvio (vedolizumab)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2396,7 +2481,7 @@ sections:
                   operator: INCLUDES
                   value: entyvio
       - key: current_med_dose_ustekinumab
-        question: What is the current dose when you started Ustekinumab (Stelara)? Please enter a number once you select a dose.
+        question: What is the current dose of Ustekinumab (Stelara)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2527,7 +2612,7 @@ sections:
                   operator: INCLUDES
                   value: ustekinumab
       - key: current_med_dose_tofacitinib
-        question: What is the current dose when you started tofacitinib (Xeljanz)? Please enter a number once you select a dose.
+        question: What is the current dose of tofacitinib (Xeljanz)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2658,7 +2743,7 @@ sections:
                   operator: INCLUDES
                   value: tofacitinib
       - key: current_med_dose_ozanimod
-        question: What is the current dose when you started Ozanimod (Zeposia)? Please enter a number once you select a dose.
+        question: What is the current dose of Ozanimod (Zeposia)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2789,7 +2874,7 @@ sections:
                   operator: INCLUDES
                   value: ozanimod
       - key: current_med_dose_imodium
-        question: What is the current dose when you started Imodium (Ioperamide)? Please enter a number once you select a dose.
+        question: What is the current dose of Imodium (Ioperamide)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -2920,7 +3005,7 @@ sections:
                   operator: INCLUDES
                   value: imodium
       - key: current_med_dose_lamotil
-        question: What is the current dose when you started Lamotil (diphenoxylate/atropine)? Please enter a number once you select a dose.
+        question: What is the current dose of Lamotil (diphenoxylate/atropine)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3051,7 +3136,7 @@ sections:
                   operator: INCLUDES
                   value: lamotil
       - key: current_med_dose_tincture_opium
-        question: What is the current dose when you started Tincture of opium (DTO, opium tincture, morphine tincture)? Please enter a number once you select a dose.
+        question: What is the current dose of Tincture of opium (DTO, opium tincture, morphine tincture)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3182,7 +3267,7 @@ sections:
                   operator: INCLUDES
                   value: tincture_opium
       - key: current_med_dose_cholestyramine
-        question: What is the current dose when you started Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)? Please enter a number once you select a dose.
+        question: What is the current dose of Cholestyramine (Prevalite, Questran, Questran light, Cholamine, Welchol, Colesevelam)? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
@@ -3312,32 +3397,32 @@ sections:
                   question: current_meds
                   operator: INCLUDES
                   value: cholestyramine
-      - key: current_med_dose_other
-        question: What is the current dose when you started Other? Please enter a number once you select a dose.
+      - key: current_med_dose_other1
+        question: What is the current dose of Other? Please enter a number once you select a dose.
         type: SINGLE_CHOICE
         options:
           - value: mg
             text: milligrams (mg)
             inlineQuestion:
-              key: current_med_dose_other_mg
+              key: current_med_dose_other1_mg
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: g
             text: grams (g)
             inlineQuestion:
-              key: current_med_dose_other_g
+              key: current_med_dose_other1_g
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: ml
             text: milliliter (ml)
             inlineQuestion:
-              key: current_med_dose_other_ml
+              key: current_med_dose_other1_ml
               question: "Please provide the quantity"
               type: TEXTAREA
           - value: others
             text: Other amount
             inlineQuestion:
-              key: current_med_dose_other_others
+              key: current_med_dose_other1_others
               question: "please provide the metric and quantity"
               type: TEXTAREA
         triggers:
@@ -3347,8 +3432,8 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other
-      - key: current_med_res_freq_other
+                  value: other1
+      - key: current_med_res_freq_other1
         question: How often do you take Other?
         type: SINGLE_CHOICE
         options:
@@ -3367,7 +3452,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: current_med_res_freq_other_other
+              key: current_med_res_freq_other1_other
               question: "How often do you take?"
               type: TEXTAREA
         triggers:
@@ -3377,8 +3462,8 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other
-      - key: current_med_freq_other
+                  value: other1
+      - key: current_med_freq_other1
         question: How many times at the above frequency do you take Other?
         type: SINGLE_CHOICE
         options:
@@ -3401,7 +3486,7 @@ sections:
           - value: other
             text: Other (please describe)
             inlineQuestion:
-              key: current_med_freq_other_other
+              key: current_med_freq_other1_other
               question: ""
               type: TEXTAREA
         triggers:
@@ -3411,8 +3496,8 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other
-      - key: current_med_method_other
+                  value: other1
+      - key: current_med_method_other1
         question: What is the way the Other is given to you?
         type: SINGLE_CHOICE
         options:
@@ -3431,8 +3516,8 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other
-      - key: current_med_start_date_other
+                  value: other1
+      - key: current_med_start_date_other1
         question: When was the last dose of Other?
         type: DATE
         triggers:
@@ -3442,4 +3527,921 @@ sections:
                 - section: baseline
                   question: current_meds
                   operator: INCLUDES
-                  value: other
+                  value: other1
+      - key: current_med_dose_other2
+        question: What is the current dose of Other number 2? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other2_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other2_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other2_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other2_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_res_freq_other2
+        question: How often do you take Other number 2?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other2_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_freq_other2
+        question: How many times at the above frequency do you take Other number 2?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other2_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_method_other2
+        question: What is the way the Other number 2 is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_start_date_other2
+        question: When was the last dose of Other number 2?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other2
+      - key: current_med_dose_other3
+        question: What is the current dose of Other number 3? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other3_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other3_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other3_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other3_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_res_freq_other3
+        question: How often do you take Other number 3?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other3_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_freq_other3
+        question: How many times at the above frequency do you take Other number 3?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other3_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_method_other3
+        question: What is the way the Other number 3 is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_start_date_other3
+        question: When was the last dose of Other number 3?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other3
+      - key: current_med_dose_other4
+        question: What is the current dose of Other number 4? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other4_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other4_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other4_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other4_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_res_freq_other4
+        question: How often do you take Other number 4?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other4_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_freq_other4
+        question: How many times at the above frequency do you take Other number 4?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other4_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_method_other4
+        question: What is the way the Other number 4 is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_start_date_other4
+        question: When was the last dose of Other number 4?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other4
+      - key: current_med_dose_other5
+        question: What is the current dose of Other number 5? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other5_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other5_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other5_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other5_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_res_freq_other5
+        question: How often do you take Other number 5?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other5_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_freq_other5
+        question: How many times at the above frequency do you take Other number 5?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other5_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_method_other5
+        question: What is the way the Other number 5 is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_start_date_other5
+        question: When was the last dose of Other number 5?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other5
+      - key: current_med_dose_other6
+        question: What is the current dose of Other number 6? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other6_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other6_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other6_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other6_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_res_freq_other6
+        question: How often do you take Other number 6?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other6_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_freq_other6
+        question: How many times at the above frequency do you take Other number 6?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other6_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_method_other6
+        question: What is the way the Other number 6 is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_start_date_other6
+        question: When was the last dose of Other number 6?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other6
+      - key: current_med_dose_other7
+        question: What is the current dose of Other number 7? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other7_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other7_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other7_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other7_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_res_freq_other7
+        question: How often do you take Other number 7?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other7_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_freq_other7
+        question: How many times at the above frequency do you take Other number 7?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other7_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_method_other7
+        question: What is the way the Other number 7 is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_start_date_other7
+        question: When was the last dose of Other number 7?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other7
+      - key: current_med_dose_other8
+        question: What is the current dose of Other number 8? Please enter a number once you select a dose.
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: current_med_dose_other8_mg
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: current_med_dose_other8_g
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (ml)
+            inlineQuestion:
+              key: current_med_dose_other8_ml
+              question: "Please provide the quantity"
+              type: TEXTAREA
+          - value: others
+            text: Other amount
+            inlineQuestion:
+              key: current_med_dose_other8_others
+              question: "please provide the metric and quantity"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_res_freq_other8
+        question: How often do you take Other number 8?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_res_freq_other8_other
+              question: "How often do you take?"
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_freq_other8
+        question: How many times at the above frequency do you take Other number 8?
+        type: SINGLE_CHOICE
+        options:
+          - value: 1
+            text: 1
+          - value: 2
+            text: 2
+          - value: 3
+            text: 3
+          - value: 4
+            text: 4
+          - value: 5
+            text: 5
+          - value: 6
+            text: 6
+          - value: 7
+            text: 7
+          - value: 8
+            text: 8
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: current_med_freq_other8_other
+              question: ""
+              type: TEXTAREA
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_method_other8
+        question: What is the way the Other number 8 is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
+      - key: current_med_start_date_other8
+        question: When was the last dose of Other number 8?
+        type: DATE
+        triggers:
+            - action:
+                type: SHOW
+              condition:
+                - section: baseline
+                  question: current_meds
+                  operator: INCLUDES
+                  value: other8
