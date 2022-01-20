@@ -1,0 +1,160 @@
+key: baseline-demographics
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+timeEstimate: 3
+name: Demographics
+short: "About You"
+intro:
+  title: "Demographics"
+  description: "Tell us about yourself by answering the following questions."
+outro:
+  title: "Demographics Complete"
+  description: "Thank you for completing this survey!"
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: name
+        question: What is your name?
+        type: TEXT
+        required: true
+      - key: dob
+        question: What is your date of birth?
+        type: DATE
+        required: true
+      - key: height_in_inch
+        question: How tall are you (in inches)?
+        type: HEIGHT
+        required: true
+      - key: weight_in_pounds
+        question: What is your weight (in pounds)?
+        type: WEIGHT
+        required: true
+      - key: sex
+        question: What is your sex?
+        type: SINGLE_CHOICE
+        options:
+          - value: female
+            text: Female
+          - value: male
+            text: Male
+        required: true
+      - key: line_number
+        question: What is your life number?
+        type: TEXT
+        required: true
+      - key: email
+        question: What is your Mount Sinai email address?
+        type: EMAIL
+        required: true
+      - key: covid19_vaccine
+        question: Have you received your COVID-19 vaccine?
+        type: YESNO_CHOICE
+        required: true
+      - key: which_vaccine_dose_1
+        question: What type of vaccine was your first injection?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: covid19_vaccine
+                operator: =
+                value: yes
+        options:
+          - value: johnson_and_johnson
+            text: Johnson and Johnson
+          - value: moderna
+            text: Moderna
+          - value: pfizer
+            text: Pfizer
+      - key: vaccine_date_dose_1
+        question: When did you receive the first dose of the vaccine?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: covid19_vaccine
+                operator: =
+                value: yes            
+      - key: which_vaccine_dose_2
+        question: What type of vaccine was your second injection?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: which_vaccine_dose_1
+                operator: =
+                value: moderna
+              - section: "0"
+                question: which_vaccine_dose_1
+                operator: =
+                value: pfizer
+        options:
+          - value: moderna
+            text: Moderna
+          - value: pfizer
+            text: Pfizer
+      - key: vaccine_date_dose_2
+        question: When did you receive the second dose of the vaccine?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: which_vaccine_dose_1
+                operator: =
+                value: moderna
+              - section: "0"
+                question: which_vaccine_dose_1
+                operator: =
+                value: pfizer
+      - key: covid19_vaccine_booster
+        question: Have you received your COVID-19 booster vaccine?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: covid19_vaccine
+                operator: =
+                value: yes
+      - key: which_vaccine_booster
+        question: What type of vaccine was your booster injection?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: covid19_vaccine_booster
+                operator: =
+                value: yes
+        options:
+          - value: johnson_and_johnson
+            text: Johnson and Johnson
+          - value: moderna
+            text: Moderna
+          - value: pfizer
+            text: Pfizer    
+      - key: vaccine_date_booster
+        question: When did you receive the booster of the vaccine?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: covid19_vaccine
+                operator: =
+                value: yes    

@@ -1,0 +1,20 @@
+key: operationalizing-warrior-watch
+active: true
+irb: N/A
+platform:
+  - ios
+name: Operationalizing Warrior Watch
+description: I NEED THIS FROM ROB
+consentId: ehive-operationalizing-warrior-watch
+studyEmail: covid.hcw@mssm.edu
+withdrawText: |-
+  Thank you for participating in the Operationalizing Warrior Watch Program!
+  
+  Please contact us at
+  covid.hcw@mssm.edu if you have any further questions about the program or future research and programs on the eHive platform.
+surveys:
+  - baseline-demographics
+  - report-new-information
+requiredData:
+  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
+  RestingHeartRate: HKQuantityTypeIdentifier
