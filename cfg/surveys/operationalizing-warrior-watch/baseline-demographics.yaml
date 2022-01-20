@@ -102,7 +102,7 @@ sections:
           - value: not_applicable
             text: Not Applicable
       - key: vaccine_date_dose_2
-        question: When did you receive the second dose of the vaccine?
+        question: When did you receive the second dose of the vaccine (if applicable)?
         type: DATE
         triggers:
           - action:
@@ -131,7 +131,7 @@ sections:
               type: SHOW
             condition:
               - section: "0"
-                question: covid19_vaccine
+                question: covid19_vaccine_booster
                 operator: =
                 value: yes
         options:
