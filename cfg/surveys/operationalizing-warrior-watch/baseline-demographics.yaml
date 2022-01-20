@@ -84,25 +84,23 @@ sections:
                 operator: =
                 value: yes            
       - key: which_vaccine_dose_2
-        question: What type of vaccine was your second injection?
+        question: What type of vaccine was your second injection, if the series had two injections?
         type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: "0"
-                question: which_vaccine_dose_1
+                question: covid19_vaccine
                 operator: =
-                value: moderna
-              - section: "0"
-                question: which_vaccine_dose_1
-                operator: =
-                value: pfizer
+                value: yes  
         options:
           - value: moderna
             text: Moderna
           - value: pfizer
             text: Pfizer
+          - value: not_applicable
+            text: Not Applicable
       - key: vaccine_date_dose_2
         question: When did you receive the second dose of the vaccine?
         type: DATE
@@ -111,13 +109,9 @@ sections:
               type: SHOW
             condition:
               - section: "0"
-                question: which_vaccine_dose_1
+                question: covid19_vaccine
                 operator: =
-                value: moderna
-              - section: "0"
-                question: which_vaccine_dose_1
-                operator: =
-                value: pfizer
+                value: yes  
       - key: covid19_vaccine_booster
         question: Have you received your COVID-19 booster vaccine?
         type: YESNO_CHOICE
@@ -155,6 +149,6 @@ sections:
               type: SHOW
             condition:
               - section: "0"
-                question: covid19_vaccine
+                question: covid19_vaccine_booster
                 operator: =
-                value: yes    
+                value: yes
