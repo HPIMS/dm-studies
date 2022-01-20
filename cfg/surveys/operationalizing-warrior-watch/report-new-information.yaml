@@ -1,0 +1,98 @@
+key: report-new-information
+active: true
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeEstimate: 2
+name: Report New Information
+short: Report new test results and symptoms
+intro:
+  title: "Report New Information"
+  description: "Tell us about any new COVID-19 test results or symptons you may be having."
+outro:
+  title: "Finished"
+  description: "Thank you for completing this survey."
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: report_pcr
+        question: I would like to report a new COVID-19 PCR test result?
+        type: YESNO_CHOICE
+        required: true
+      - key: pcr_result
+        question: "My nasal or saliva PCR test was:"
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: report_pcr
+                operator: =
+                value: yes
+        options:
+          - value: positive
+            text: Positive
+          - value: negative
+            text: Negative
+      - key: report_rapid
+        question: I would like to report a new COVID-19 Rapid test result?
+        type: YESNO_CHOICE
+        required: true
+      - key: rapid_result
+        question: "My rapid COVID-19 test was:"
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: report_rapid
+                operator: =
+                value: yes
+        options:
+          - value: positive
+            text: Positive
+          - value: negative
+            text: Negative
+
+      - key: symptoms
+        question: Have you had any of the following symptoms in the past 24 hours?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: fever
+            text: Fever or high temperature
+          - value: chills
+            text: Chills
+          - value: tired
+            text: Tired or weak
+          - value: body_aches
+            text: Body aches
+          - value: dry_cough
+            text: Dry Cough
+          - value: sneezing
+            text: Sneezing
+          - value: runny_nose
+            text: Runny Nose
+          - value: diarrhea
+            text: Diarrhea
+          - value: sore_throat
+            text: Sore Throat
+          - value: headache
+            text: Headache
+          - value: shortness_of_breath
+            text: Shortness of breath
+          - value: loss_of_smell_or_taste
+            text: Loss of smell or taste
+          - value: itchy_eyes
+            text: Itchy eyes
+          - value: fatigue
+            text: Fatigue
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: symptoms_other_description
+              question: "Please specify:"
+              type: TEXTAREA
