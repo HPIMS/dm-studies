@@ -131,7 +131,7 @@ sections:
               type: SHOW
             condition:
               - section: "0"
-                question: covid19_vaccine_booster
+                question: covid19_vaccine
                 operator: =
                 value: yes
         options:
