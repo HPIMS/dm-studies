@@ -132,8 +132,8 @@ sections:
             condition:
               - section: "0"
                 question: covid19_vaccine_booster
-                operator: <>
-                value: no
+                operator: =
+                value: yes
         options:
           - value: johnson_and_johnson
             text: Johnson and Johnson
@@ -150,5 +150,5 @@ sections:
             condition:
               - section: "0"
                 question: covid19_vaccine_booster
-                operator: <>
-                value: no
+                operator: =
+                value: yes
