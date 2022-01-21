@@ -128,7 +128,7 @@ sections:
         type: SINGLE_CHOICE
         triggers:
           - action:
-              type: SHOQ
+              type: SHOW
             condition:
               - section: "0"
                 question: covid19_vaccine_booster
