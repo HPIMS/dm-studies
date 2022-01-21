@@ -128,11 +128,11 @@ sections:
         type: SINGLE_CHOICE
         triggers:
           - action:
-              type: HIDE
+              type: SHOQ
             condition:
               - section: "0"
                 question: covid19_vaccine_booster
-                operator: <>
+                operator: =
                 value: yes
         options:
           - value: johnson_and_johnson
@@ -146,9 +146,9 @@ sections:
         type: DATE
         triggers:
           - action:
-              type: HIDE
+              type: SHOW
             condition:
               - section: "0"
                 question: covid19_vaccine_booster
-                operator: <>
+                operator: =
                 value: yes
