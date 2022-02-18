@@ -295,7 +295,6 @@ async function processStudies() {
       studyTeamId,
       openEnrollment,
       shortDescription,
-      longDescription,
       eligibilityCriteria,
       timeResponsibility,
       imageId,
@@ -308,12 +307,8 @@ async function processStudies() {
     // Remove configs we don't need
     delete data.active;
     delete data.visibility;
-    delete data.irb;
-    delete data.studyTeamId;
     delete data.openEnrollment;
     delete data.shortDescription;
-    delete data.eligibilityCriteria;
-    delete data.timeResponsibility;
     delete data.imageId;
     delete data.animationId;
     delete data.videoId;
@@ -435,8 +430,6 @@ async function processStudies() {
     index.push({
       studyKey: data.key,
       visibility,
-      irb,
-      studyTeamId,
       openEnrollment,
       shortDescription,
       eligibilityCriteria,
@@ -446,7 +439,6 @@ async function processStudies() {
       videoId,
       version: version,
       name: data.name,
-      platform: data.platform,
     });
 
     log.important(`[${study}] Finished processing. Writing ${study}.json`);
