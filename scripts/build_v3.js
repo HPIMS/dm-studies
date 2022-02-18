@@ -312,7 +312,6 @@ async function processStudies() {
     delete data.studyTeamId;
     delete data.openEnrollment;
     delete data.shortDescription;
-    delete data.longDescription;
     delete data.eligibilityCriteria;
     delete data.timeResponsibility;
     delete data.imageId;
@@ -440,7 +439,6 @@ async function processStudies() {
       studyTeamId,
       openEnrollment,
       shortDescription,
-      longDescription,
       eligibilityCriteria,
       timeResponsibility,
       imageId,
@@ -448,9 +446,6 @@ async function processStudies() {
       videoId,
       version: version,
       name: data.name,
-      consentId: data.consentId,
-      studyEmail: data.studyEmail,
-      wearables: data.wearables,
       platform: data.platform,
     });
 
