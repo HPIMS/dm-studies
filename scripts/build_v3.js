@@ -434,7 +434,7 @@ async function processStudies() {
 
     log.info(`[${study}] Adding to study index.`);
     index.push({
-      key: data.key,
+      studyKey: data.key,
       visibility,
       irb,
       studyTeamId,
