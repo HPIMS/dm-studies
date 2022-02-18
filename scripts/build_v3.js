@@ -305,13 +305,8 @@ async function processStudies() {
     const version = versions.active.studies[study][1];
 
     // Remove configs we don't need
-    delete data.active;
     delete data.visibility;
-    delete data.openEnrollment;
     delete data.shortDescription;
-    delete data.imageId;
-    delete data.animationId;
-    delete data.videoId;
     // set additional configs
     data.version = version;
 
