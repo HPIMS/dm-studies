@@ -1,6 +1,7 @@
 key: hpi-decode-bp
 active: true
 irb: STUDY-21-00745
+pi: John Smith
 studyTeamId: mountsinai
 openEnrollment: true
 platform:
@@ -9,6 +10,11 @@ platform:
 name: "Decode BP"
 shortDescription: The goal of the Decode BP study is to understand if data derived from optical sensors in wearable devices can be used to track blood pressure. 
 longDescription: The Decode BP study aims to understand if data derived from optical sensors in wearable devices can be used to track blood pressure. Two wearables will be used and compared to a medical-grade blood pressure monitor. We hope to better understand the relationship between the data from the sensors and the standard blood pressure monitor.
+notes: 
+  - icon: 'thumb-up-outline'
+    text: 'This study is available to all patients.'
+  - icon: 'file-document-multiple-outline'
+    text: 'Participation in other studies is not allowed when enrolled in this study.'
 consentId: ehive-hpi-decode-bp
 studyEmail: ehivedecodebp@mssm.edu
 imageId: study-hpi-decode-bp
