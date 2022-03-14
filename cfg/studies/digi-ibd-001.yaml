@@ -1,0 +1,40 @@
+key: digi-ibd-001
+active: true
+irb: STUDY-00-00000
+openEnrollment: true
+visibility: 'public'
+platform:
+  - ios
+  - android
+name: Digital Signatures of Drug Response and Disease State Transitions in Inflammatory Bowel Disease
+
+shortDescription: The IBD Forecast study will help us learn more about how to identify and predict flares in the hopes of transforming IBD care.
+longDescription: The main goal of the IBD Forecast study is to help us learn how to identify and predict flares in the hopes of transforming IBD care. In the study, we collect data from your wearable device and through brief app-based surveys.
+
+consentId: ehive-digi-ibd-001
+withdrawText: |-
+  Thank you for participating in the IBD Forecast study! We value your time and effort, and appreciate your contribution to IBD research.
+wearables:
+  - oura
+baseline: []
+surveys:
+  - key: pro-3
+  - key: sccai
+  - key: pro-2-crohns
+  - key: pro-2-uc
+  - key: promis-gi-belly-pain
+  - key: promis-gi-diarrhea
+  - key: promis-emotional-distress-depression
+  - key: promis-emotional-distress-anxiety
+  - key: sibdq
+  - key: promis-sleep-disturbance-8a
+  - key: promis-sleep-related-impairment
+  - key: promis-fatigue-7a
+  - key: patient-global-impression-uc-severity
+  - key: patient-global-impression-uc-change
+  - key: patient-global-impression-crohns-severity
+  - key: patient-global-impression-crohns-change
+  - key: patient-global-impression-fatigue-severity
+  - key: patient-global-impression-fatigue-change
+  - key: patient-global-impression-sleep-disturbance-severity
+  - key: patient-global-impression-sleep-disturbance-change

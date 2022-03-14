@@ -1,0 +1,35 @@
+key: patient-global-impression-sleep-disturbance-change
+active: true
+schedule:
+  type: TIMETABLE
+  timetable: [2, 4, 6, 8, 14]
+  timetableUnits: WEEKS
+  graceDays: 3
+timeEstimate: 1
+name: Sleep Disturbance Change
+short: Global Impression of Change of Ulcerative Sleep Disturbance
+intro:
+  title: Sleep Disturbance Change
+  description: Tell us about your impression of the change in your sleep disturbance.
+outro:
+  title: Finished
+  description: Thank you for completing this survey.
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: change
+        question: Compared to when you received the first treatment in this study, how has your sleep disturbance changed?
+        type: SINGLE_CHOICE
+        options:
+          - value: much_better
+            text: Much better
+          - value: a_little_better
+            text: A little better
+          - value: no_change
+            text: No change
+          - value: a_little_worse
+            text: A little worse
+          - value: much_worse
+            text: Much worse

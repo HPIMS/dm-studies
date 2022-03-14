@@ -1,0 +1,35 @@
+key: patient-global-impression-uc-change
+active: true
+schedule:
+  type: TIMETABLE
+  timetable: [2, 4, 6, 8, 14]
+  timetableUnits: WEEKS
+  graceDays: 3
+timeEstimate: 1
+name: Ulcerative Colitis Change
+short: Global Impression of Change of Ulcerative Colitis Severity
+intro:
+  title: Ulcerative Colitis Change
+  description: Tell us about your impression of the change in your Ulcerative Colitis severity.
+outro:
+  title: Finished
+  description: Thank you for completing this survey.
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: change
+        question: Compared to when you received the first treatment in this study, how has your Ulcerative Colitis changed?
+        type: SINGLE_CHOICE
+        options:
+          - value: much_better
+            text: Much better
+          - value: a_little_better
+            text: A little better
+          - value: no_change
+            text: No change
+          - value: a_little_worse
+            text: A little worse
+          - value: much_worse
+            text: Much worse
