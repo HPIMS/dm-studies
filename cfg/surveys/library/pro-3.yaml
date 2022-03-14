@@ -1,0 +1,58 @@
+key: pro-3
+scorable: true
+active: true
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeEstimate: 2
+name: Disease Activity Assessment
+short: ""
+intro:
+  title: Disease Activity Assessment
+  description: How have you been feeling over the last 7 days?
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: "Over the last 7 days:"
+    questions:
+      - key: liquid_or_soft_stools
+        question: How many liquid or soft stools have you had each day?
+        type: NUMERIC
+      - key: abdominal_pain
+        question: Rate your abdominal pain each day.
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: well_being
+        question: Rate your well-being each day.
+        type: SINGLE_CHOICE
+        options:
+          - value: generally_well
+            text: Generally well
+            score: 0
+          - value: slightly_unwell
+            text: Slightly under par
+            score: 1
+          - value: poor
+            text: Poor
+            score: 2
+          - value: very_poor
+            text: Very poor
+            score: 3
+          - value: terrible
+            text: Terrible
+            score: 4
