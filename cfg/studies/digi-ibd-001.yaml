@@ -255,8 +255,8 @@ surveys:
     rank: 6
   
 
-  - key: promis-sleep-disturbance-8a-screening
-    copyFrom: promis-sleep-disturbance-8a
+  - key: promis-sleep-disturbance-8a-v1.0-screening
+    copyFrom: promis-sleep-disturbance-8a-v1.0
     schedule:
       type: PERIOD
       period: ONCE
@@ -271,7 +271,7 @@ surveys:
     rank: 7
 
 
-  - key: promis-sleep-disturbance-8a
+  - key: promis-sleep-disturbance-8a-v1.0
     schedule:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 10, 14]
