@@ -33,6 +33,10 @@ const scoringFns = {
   // pain: () => null, // library::promis-pain-interference-6b-v1.0
   // sleep: () => null, // library::promis-sleep-disturbance-8a-v1.0
   qol_survey: sumScore, // library::promis-gh-qol-2-item
+
+  // digi-ibd-001
+  "digi-ibd-001::which-ibd": sumScore,
+  "digi-ibd-001::begin-next-phase": sumScore,
 };
 
 function sumScore(surveyData, optionScoreMap) {
