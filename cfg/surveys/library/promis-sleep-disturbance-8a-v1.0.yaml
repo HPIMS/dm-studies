@@ -10,75 +10,93 @@ schedule:
   type: PERIOD
   period: WEEKLY
 timeEstimate: 3
-name: Sleep
+name: Sleep Disturbance
 short: Rate your sleep in the last week
 intro:
-  title: Sleep
+  title: Sleep Disturbance
   description: This survey asks questions about how you've been sleeping in the last week.
-    As always, you may choose to skip any questions that make you feel uncomfortable.
 outro:
-  title: Terrific!
-  description: The more you share, the more we can learn.
+  title: Thank you!
+  description: We appreciate your participation.
 sections:
   - key: sleep
     title: ""
-    description: "How was your sleep?"
+    description: "In the past 7 days:"
     questions:
-      - key: sleep_restless
-        question: My sleep was restless
+      - key: quality
+        question: "My sleep quality was:"
         type: SINGLE_CHOICE
         options:
-          - value: not_at_all
-            text: Not at all
+          - value: very_poor
+            text: Very Poor
             score: 1
-          - value: little
-            text: A little bit
+          - value: poor
+            text: Poor
             score: 2
-          - value: somewhat
-            text: Somewhat
+          - value: fair
+            text: Fair
             score: 3
-          - value: quite
-            text: Quite a bit
+          - value: good
+            text: Good
             score: 4
-          - value: very-much
-            text: Very much
+          - value: very_good
+            text: Very good
             score: 5
-      - key: sleep_satisfied
-        question: I was satisfied with my sleep
-        type: SINGLE_CHOICE
-        options:
-          - value: not_at_all
-            text: Not at all
-            score: 5
-          - value: little
-            text: A little bit
-            score: 4
-          - value: somewhat
-            text: Somewhat
-            score: 3
-          - value: quite
-            text: Quite a bit
-            score: 2
-          - value: very-much
-            text: Very much
-            score: 1
-      - key: sleep_refreshing
+      - key: refreshing
         question: My sleep was refreshing
         type: SINGLE_CHOICE
         options:
           - value: not_at_all
             text: Not at all
             score: 5
-          - value: little
+          - value: a_little_bit
             text: A little bit
             score: 4
           - value: somewhat
             text: Somewhat
             score: 3
-          - value: quite
+          - value: quite_a_bit
             text: Quite a bit
             score: 2
-          - value: very-much
+          - value: very_much
+            text: Very much
+            score: 1
+      - key: problem
+        question: I had a problem with my sleep
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 5
+          - value: a_little_bit
+            text: A little bit
+            score: 4
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 2
+          - value: very_much
+            text: Very much
+            score: 1
+      - key: difficulty
+        question: I had difficulty falling asleep
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 5
+          - value: a_little_bit
+            text: A little bit
+            score: 4
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 2
+          - value: very_much
             text: Very much
             score: 1
       - key: falling_asleep
@@ -87,92 +105,92 @@ sections:
         options:
           - value: not_at_all
             text: Not at all
-            score: 1
-          - value: little
+            score: 5
+          - value: a_little_bit
             text: A little bit
-            score: 2
+            score: 4
           - value: somewhat
             text: Somewhat
             score: 3
-          - value: quite
+          - value: quite_a_bit
             text: Quite a bit
-            score: 4
-          - value: very-much
+            score: 2
+          - value: very_much
             text: Very much
-            score: 5
-      - key: staying_asleep
-        question: I had trouble staying asleep
-        type: SINGLE_CHOICE
-        options:
-          - value: never
-            text: Never
             score: 1
-          - value: rarely
-            text: Rarely
-            score: 2
-          - value: sometimes
-            text: Sometimes
-            score: 3
-          - value: often
-            text: Often
-            score: 4
-          - value: always
-            text: Always
-            score: 5
-      - key: trouble_sleeping
-        question: I had trouble sleeping
+      - key: restless
+        question: My sleep was restless
         type: SINGLE_CHOICE
         options:
-          - value: never
-            text: Never
+          - value: not_at_all
+            text: Not at all
+            score: 5
+          - value: a_little_bit
+            text: A little bit
+            score: 4
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 2
+          - value: very_much
+            text: Very much
             score: 1
-          - value: rarely
-            text: Rarely
-            score: 2
-          - value: sometimes
-            text: Sometimes
-            score: 3
-          - value: often
-            text: Often
-            score: 4
-          - value: always
-            text: Always
-            score: 5
-      - key: enough_sleep
-        question: I got enough sleep
+      - key: tried_hard
+        question: I tried hard to get to sleep
         type: SINGLE_CHOICE
         options:
-          - value: never
-            text: Never
+          - value: not_at_all
+            text: Not at all
             score: 5
-          - value: rarely
-            text: Rarely
+          - value: a_little_bit
+            text: A little bit
             score: 4
-          - value: sometimes
-            text: Sometimes
+          - value: somewhat
+            text: Somewhat
             score: 3
-          - value: often
-            text: Often
+          - value: quite_a_bit
+            text: Quite a bit
             score: 2
-          - value: always
-            text: Always
+          - value: very_much
+            text: Very much
             score: 1
-      - key: sleep_quality
-        question: My sleep quality was
+      - key: worried
+        question: I worried about not being able to fall asleep
         type: SINGLE_CHOICE
         options:
-          - value: very_poor
-            text: Very poor
+          - value: not_at_all
+            text: Not at all
             score: 5
-          - value: poor
-            text: Poor
+          - value: a_little_bit
+            text: A little bit
             score: 4
-          - value: fair
-            text: Fair
+          - value: somewhat
+            text: Somewhat
             score: 3
-          - value: good
-            text: Good
+          - value: quite_a_bit
+            text: Quite a bit
             score: 2
-          - value: very_good
-            text: Very good
+          - value: very_much
+            text: Very much
+            score: 1
+      - key: satisfied
+        question: I was satisfied with my sleep
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 5
+          - value: a_little_bit
+            text: A little bit
+            score: 4
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 2
+          - value: very_much
+            text: Very much
             score: 1
