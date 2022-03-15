@@ -32,6 +32,44 @@ async function copyDirectory(srcDir, destDir) {
   return Promise.all(promises);
 }
 
+async function getFile(dir, group, file) {
+  let rawBaseData = "";
+  const rawData = await fs.promises.readFile(path.join(dir, group, file), {
+    encoding: "utf-8",
+  });
+
+  const data = YAML.parse(rawData) || {};
+  const { _extends } = data;
+
+  if (_extends) {
+    const extendsFile = `${_extends}.yaml`;
+    // Try the current group first. If that fails, try the library.
+    try {
+      rawBaseData = await fs.promises.readFile(
+        path.join(dir, group, extendsFile),
+        {
+          encoding: "utf-8",
+        }
+      );
+    } catch (err) {
+      log.warning(
+        `Could not find ${extendsFile} in ${group}. Checking library.`
+      );
+      try {
+        rawBaseData = await fs.promises.readFile(
+          path.join(dir, "library", extendsFile),
+          {
+            encoding: "utf-8",
+          }
+        );
+      } catch (err) {
+        log.error(`Could not find ${extendsFile} in library. Skipping.`);
+      }
+    }
+  }
+  return { ...(YAML.parse(rawBaseData) || {}), ...data };
+}
+
 const dftSurveyCfg = {};
 const dftMultimediaCfg = {};
 const dftInterventionCfg = {};
@@ -61,21 +99,17 @@ async function processSurveys() {
     [, study, survey] = surveyKey.match(/^(.*?)::(.*)/) || [, null, surveyKey];
     let cfg;
     if (study) {
-      cfg = await fs.promises.readFile(`${surveyDir}/${study}/${survey}.yaml`, {
-        encoding: "utf-8",
-      });
+      cfg = await getFile(surveyDir, study, `${survey}.yaml`);
     } else {
       // this is a fallback for 'legacy' surveys
-      cfg = await fs.promises.readFile(`${surveyDir}/legacy/${survey}.yaml`, {
-        encoding: "utf-8",
-      });
+      cfg = await getFile(surveyDir, "legacy", `${survey}.yaml`);
     }
 
     const version = versions.active.surveys[surveyKey][1];
 
     log.info(`[${surveyKey}] Processing`);
 
-    const { name, short, schedule, timeEstimate, ...data } = YAML.parse(cfg);
+    const { name, short, schedule, timeEstimate, ...data } = cfg;
 
     // Remove configs we don't need
     delete data.active;
@@ -135,19 +169,13 @@ async function processMultimedia() {
       null,
       multimediaKey,
     ];
-    const cfg = await fs.promises.readFile(
-      `${multimediaDir}/${study}/${media}.yaml`,
-      {
-        encoding: "utf-8",
-      }
-    );
+    const cfg = await getFile(multimediaDir, study, `${media}.yaml`);
 
     const version = versions.active.multimedia[multimediaKey][1];
 
     log.info(`[${multimediaKey}] Processing`);
 
-    const { name, short, schedule, timeEstimate, type, ...data } =
-      YAML.parse(cfg);
+    const { name, short, schedule, timeEstimate, type, ...data } = cfg;
 
     // Remove configs we don't need
     delete data.active;
@@ -208,19 +236,13 @@ async function processInterventions() {
       null,
       interventionKey,
     ];
-    const cfg = await fs.promises.readFile(
-      `${interventionsDir}/${study}/${intervention}.yaml`,
-      {
-        encoding: "utf-8",
-      }
-    );
+    const cfg = await getFile(interventionsDir, study, `${intervention}.yaml`);
 
     const version = versions.active.interventions[interventionKey][1];
 
     log.info(`[${interventionKey}] Processing`);
 
-    const { name, short, schedule, timeEstimate, type, ...data } =
-      YAML.parse(cfg);
+    const { name, short, schedule, timeEstimate, type, ...data } = cfg;
 
     // Remove configs we don't need
     delete data.active;
@@ -284,10 +306,7 @@ async function processStudies() {
     if (study === "baseline") {
       return;
     }
-    let cfg = await fs.promises.readFile(`${studyDir}/${study}.yaml`, {
-      encoding: "utf-8",
-    });
-    const data = YAML.parse(cfg);
+    const data = await getFile(studyDir, "", `${study}.yaml`);
     const visibility = data.visibility;
     const irb = data.irb;
 
