@@ -32,6 +32,44 @@ async function copyDirectory(srcDir, destDir) {
   return Promise.all(promises);
 }
 
+async function getFile(dir, group, file) {
+  let rawBaseData = "";
+  const rawData = await fs.promises.readFile(path.join(dir, group, file), {
+    encoding: "utf-8",
+  });
+
+  const data = YAML.parse(rawData) || {};
+  const { _extends } = data;
+
+  if (_extends) {
+    const extendsFile = `${_extends}.yaml`;
+    // Try the current group first. If that fails, try the library.
+    try {
+      rawBaseData = await fs.promises.readFile(
+        path.join(dir, group, extendsFile),
+        {
+          encoding: "utf-8",
+        }
+      );
+    } catch (err) {
+      log.warning(
+        `Could not find ${extendsFile} in ${group}. Checking library.`
+      );
+      try {
+        rawBaseData = await fs.promises.readFile(
+          path.join(dir, "library", extendsFile),
+          {
+            encoding: "utf-8",
+          }
+        );
+      } catch (err) {
+        log.error(`Could not find ${extendsFile} in library. Skipping.`);
+      }
+    }
+  }
+  return { ...(YAML.parse(rawBaseData) || {}), ...data };
+}
+
 const dftSurveyCfg = {};
 
 async function processSurveys() {
@@ -50,14 +88,10 @@ async function processSurveys() {
     [, study, survey] = surveyKey.match(/^(.*?)::(.*)/) || [, null, surveyKey];
     let cfg;
     if (study) {
-      cfg = await fs.promises.readFile(`${surveyDir}/${study}/${survey}.yaml`, {
-        encoding: "utf-8",
-      });
+      cfg = await getFile(surveyDir, study, `${survey}.yaml`);
     } else {
       // this is a fallback for 'legacy' surveys
-      cfg = await fs.promises.readFile(`${surveyDir}/legacy/${survey}.yaml`, {
-        encoding: "utf-8",
-      });
+      cfg = await getFile(surveyDir, "legacy", `${survey}.yaml`);
     }
 
     const version = versions.active.surveys[surveyKey][1];
@@ -73,7 +107,7 @@ async function processSurveys() {
       intro,
       outro,
       ...data
-    } = YAML.parse(cfg);
+    } = cfg;
 
     // Remove configs we don't need
     delete data.active;
@@ -123,11 +157,7 @@ async function processStudies() {
   const studies = Object.keys(versions.active.studies);
 
   const promises = studies.map(async (study) => {
-    let cfg = await fs.promises.readFile(`${studyDir}/${study}.yaml`, {
-      encoding: "utf-8",
-    });
-    const data = YAML.parse(cfg);
-
+    const data = await getFile(studyDir, "", `${study}.yaml`);
     const version = versions.active.studies[study][1];
 
     // Remove configs we don't need

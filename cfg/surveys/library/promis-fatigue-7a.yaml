@@ -1,0 +1,153 @@
+key: promis-fatigue-7a
+active: true
+scorable: true
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeEstimate: 3
+name: Fatigue
+short: ""
+intro:
+  title: Fatigue
+  description: "How has your fatigue affected you over the past week?"
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: "In the past 7 days:"
+    questions:
+      - key: tired
+        question: How often did you feel tired?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: extreme_exhaustion
+        question: How often did you experience extreme exhaustion?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: out_of_energy
+        question: How often did you run out of energy?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: limit_at_work
+        question: How often did your fatigue limit you at work (include work at home)?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: too_tired_to_think
+        question: How often were you too tired to think clearly?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: too_tired_bathe
+        question: How often were you too tired to take a bath or shower?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: too_tired_exercise
+        question: How often were you too tired to exercise strenuously?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5

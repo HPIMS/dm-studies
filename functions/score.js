@@ -26,6 +26,13 @@ const scoringFns = {
   "warrior-shield::start-intervention": sumScore,
   "warrior-shield::devices": () => 1,
   "hpi-decode-bp::clearance": sumScore,
+  // digi-ibd-001
+  "digi-ibd-001::which-ibd": sumScore,
+  "digi-ibd-001::begin-next-phase": sumScore,
+  //
+  //
+  //
+  //
   // legacy surveys
   baseline_cd_risc_survey: sumScore, // library::cd-risc-2
   mood_survey: sumScore, // library::phq-8

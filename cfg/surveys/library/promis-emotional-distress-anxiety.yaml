@@ -1,0 +1,96 @@
+key: promis-emotional-distress-anxiety
+scorable: true
+active: true
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeEstimate: 1
+name: Emotional-Distress Anxiety
+short: ""
+intro:
+  title: Emotional-Distress Anxiety
+  description: "Tell us about your feelings of anxiety over the past 7 days."
+outro:
+  title: Thank you for your continued participation
+  description: You are a valued member of our study!
+sections:
+  - key: "0"
+    title: ""
+    description: "In the past 7 days:"
+    questions:
+      - key: fearful
+        question: "I felt fearful:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4
+      - key: focus
+        question: "I found it hard to focus on anything other than my anxiety:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4
+      - key: overwhelmed
+        question: "My worries overwhelmed me:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4
+      - key: uneasy
+        question: "I felt uneasy:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4

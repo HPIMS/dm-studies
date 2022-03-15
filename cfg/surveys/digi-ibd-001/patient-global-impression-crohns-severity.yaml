@@ -1,0 +1,33 @@
+key: patient-global-impression-crohns-severity
+active: true
+schedule:
+  type: TIMETABLE
+  timetable: [0, 2, 4, 6, 8, 14]
+  timetableUnits: WEEKS
+  graceDays: 3
+timeEstimate: 1
+name: Chrohn's Disease Severity
+short: Global Impression of Chrohn's Disease Severity
+intro:
+  title: Chrohn's Disease Severity
+  description: Tell us about your impression of the severity of your Chrohn's diease.
+outro:
+  title: Finished
+  description: Thank you for completing this survey.
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: severity
+        question: Overall, how would you rate the severity of your Chrohn's diease currently?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe

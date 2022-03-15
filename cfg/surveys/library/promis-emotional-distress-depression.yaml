@@ -1,0 +1,96 @@
+key: promis-emotional-distress-depression
+scorable: true
+active: true
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeEstimate: 1
+name: Emotional-Distress Depression
+short: ""
+intro:
+  title: Emotional-Distress Depression
+  description: "Tell us about your feelings of depression over the past 7 days."
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: "In the past 7 days:"
+    questions:
+      - key: worthless
+        question: "I felt worthless:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4
+      - key: helpless
+        question: "I felt helpless:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4
+      - key: depressed
+        question: "I felt depressed:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4
+      - key: hopeless
+        question: "I felt hopeless:"
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: always
+            text: Always
+            score: 4
