@@ -47,11 +47,50 @@ diffs.set("surveys", new Set());
 diffs.set("multimedia", new Set());
 diffs.set("interventions", new Set());
 
-async function getFile(path) {
-  const data = await fs.promises.readFile(path, { encoding: "utf-8" });
+async function getFile(dir, group, file) {
+  let rawBaseData = "";
+  const rawData = await fs.promises.readFile(path.join(dir, group, file), {
+    encoding: "utf-8",
+  });
+
+  const data = YAML.parse(rawData) || {};
+  const { _extends } = data;
+
+  if (_extends) {
+    const extendsFile = `${_extends}.yaml`;
+    //console.log("HERE", YAML.parse("{}"));
+    // Try the current group first. If that fails, try the library.
+    try {
+      rawBaseData = await fs.promises.readFile(
+        path.join(dir, group, extendsFile),
+        {
+          encoding: "utf-8",
+        }
+      );
+    } catch (err) {
+      log.warning(
+        `Could not find ${extendsFile} in ${group}. Checking library.`
+      );
+      try {
+        rawBaseData = await fs.promises.readFile(
+          path.join(dir, "library", extendsFile),
+          {
+            encoding: "utf-8",
+          }
+        );
+      } catch (err) {
+        log.error(`Could not find ${extendsFile} in library. Skipping.`);
+      }
+    }
+  }
+
+  const allData = { ...(YAML.parse(rawBaseData) || {}), ...data };
   return {
-    data: YAML.parse(data) || {},
-    hash: crypto.createHash("md5").update(data).digest("hex"),
+    data: allData,
+    hash: crypto
+      .createHash("md5")
+      .update(JSON.stringify(allData))
+      .digest("hex"),
   };
 }
 
@@ -77,7 +116,7 @@ async function processSurveys() {
       const extension = file.split(".").pop();
       const name = `${surveyPrefix ? `${surveyPrefix}::` : ""}${rootName}`;
 
-      const { data, hash: nextHash } = await getFile(`${groupDir}/${file}`);
+      const { data, hash: nextHash } = await getFile(dir, surveyGroup, file);
       const [lastHash, lastVersion] = versions.active.surveys[name] ||
         versions.inactive.surveys[name] || [null, null];
       let nextVersion = lastVersion;
@@ -165,7 +204,11 @@ async function processMultimedia() {
       const extension = file.split(".").pop();
       const name = `${multimediaPrefix}::${rootName}`;
 
-      const { data, hash: nextHash } = await getFile(`${groupDir}/${file}`);
+      const { data, hash: nextHash } = await getFile(
+        dir,
+        multimediaGroup,
+        file
+      );
       const [lastHash, lastVersion] = versions.active.multimedia[name] ||
         versions.inactive.multimedia[name] || [null, null];
       let nextVersion = lastVersion;
@@ -253,7 +296,11 @@ async function processInterventions() {
       const extension = file.split(".").pop();
       const name = `${interventionPrefix}::${rootName}`;
 
-      const { data, hash: nextHash } = await getFile(`${groupDir}/${file}`);
+      const { data, hash: nextHash } = await getFile(
+        dir,
+        interventionGroup,
+        file
+      );
       const [lastHash, lastVersion] = versions.active.interventions[name] ||
         versions.inactive.interventions[name] || [null, null];
       let nextVersion = lastVersion;
@@ -334,7 +381,7 @@ async function processStudies() {
   const promises = files.map(async (file) => {
     const name = file.replace(/\.yaml$|\.yml$/, "");
     const extension = file.split(".").pop();
-    const { data, hash: nextHash } = await getFile(`${dir}/${file}`);
+    const { data, hash: nextHash } = await getFile(dir, "", file);
     const [lastHash, lastVersion] = versions.active.studies[name] ||
       versions.inactive.studies[name] || [null, null];
     let nextVersion = lastVersion;
