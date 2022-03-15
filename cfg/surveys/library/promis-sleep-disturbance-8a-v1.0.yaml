@@ -1,5 +1,6 @@
 key: promis-sleep-disturbance-8a-v1.0
 active: true
+scorable: true
 metadata: 
   author: PROMIS
   instrument: Sleep Disturbance - Short Form 8a
@@ -19,7 +20,7 @@ outro:
   title: Thank you!
   description: We appreciate your participation.
 sections:
-  - key: sleep
+  - key: "0"
     title: ""
     description: "In the past 7 days:"
     questions:
