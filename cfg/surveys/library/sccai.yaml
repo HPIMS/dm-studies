@@ -1,0 +1,140 @@
+key: sccai
+scorable: true
+active: true
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeEstimate: 1
+name: Disease Activity Assessment
+short: ""
+intro:
+  title: Disease Activity Assessment
+  description: How have you been feeling over the last 7 days?
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: "Over the last 7 days:"
+    questions:
+      - key: bowel_frequency_daytime
+        question: "Bowel frequency during the day:"
+        type: SINGLE_CHOICE
+        options:
+          - value: "0_3"
+            text: 0 - 3 occurrences
+            score: 0
+          - value: "4_6"
+            text: 4 - 6 occurrences
+            score: 1
+          - value: "7_9"
+            text: 7 - 9 occurrences
+            score: 2
+          - value: ">9"
+            text: "> 9 occurrences"
+            score: 3
+      - key: bowel_frequency_nighttime
+        question: "Bowel frequency during the night:"
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0 occurrences
+            score: 0
+          - value: "1_3"
+            text: 1 - 3 occurrences
+            score: 1
+          - value: "4_6"
+            text: 4 - 6 occurrences
+            score: 2
+      - key: urgency_of_defecation
+        question: "Urgency of defecation:"
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: hurry
+            text: Hurry
+            score: 1
+          - value: immediately
+            text: Immediately (toilet nearby)
+            score: 2
+          - value: incontinence
+            text: Incontinence
+            score: 3
+      - key: blood_in_stool
+        question: "Blood in the stool:"
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: trace
+            text: Trace
+            score: 1
+          - value: occasionally
+            text: Occasionally frank (<50% of defecation)
+            score: 2
+          - value: usually
+            text: Usually frank (>50% of defecation)
+            score: 3
+      - key: general_well_being
+        question: "General well being:"
+        type: SINGLE_CHOICE
+        options:
+          - value: very_well
+            text: Very Well
+            score: 0
+          - value: slightly_below_par
+            text: Slightly below par
+            score: 1
+          - value: poor
+            text: Poor
+            score: 2
+          - value: very_poor
+            text: Very poor
+            score: 3
+          - value: terrible
+            text: Terrible
+            score: 4
+      - key: arthritis
+        question: "Have you had Arthritis?"
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: uveitis
+        question: "Have you had Uveitis?"
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: erythema_nodosum
+        question: "Have you had Erythema Nodosum?"
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: pyoderma_gangrenosum
+        question: "Have you had Pyoderma Gangrenosum?"
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
