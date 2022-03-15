@@ -62,7 +62,6 @@ surveys:
 
 
   - key: pro-3-screening
-    copyFrom: pro-3
     schedule:
       type: PERIOD
       period: ONCE
@@ -95,7 +94,6 @@ surveys:
 
 
   - key: sccai-screening
-    copyFrom: sccai
     schedule:
       type: PERIOD
       period: ONCE
@@ -128,7 +126,6 @@ surveys:
 
 
   - key: sibdq-screening
-    copyFrom: sibdq
     schedule:
       type: PERIOD
       period: ONCE
@@ -160,7 +157,6 @@ surveys:
 
 
   - key: promis-fatigue-7a-screening
-    copyFrom: promis-fatigue-7a
     schedule:
       type: PERIOD
       period: ONCE
@@ -192,7 +188,6 @@ surveys:
 
 
   - key: promis-gi-diarrhea-screening
-    copyFrom: promis-gi-diarrhea
     schedule:
       type: PERIOD
       period: ONCE
@@ -224,7 +219,6 @@ surveys:
 
 
   - key: promis-gi-belly-pain-screening
-    copyFrom: promis-gi-belly-pain
     schedule:
       type: PERIOD
       period: ONCE
@@ -256,7 +250,6 @@ surveys:
   
 
   - key: promis-sleep-disturbance-8a-v1.0-screening
-    copyFrom: promis-sleep-disturbance-8a-v1.0
     schedule:
       type: PERIOD
       period: ONCE
@@ -288,7 +281,6 @@ surveys:
 
 
   - key: promis-sleep-related-impairment-screening
-    copyFrom: promis-sleep-related-impairment
     schedule:
       type: PERIOD
       period: ONCE
@@ -320,7 +312,6 @@ surveys:
 
 
   - key: promis-emotional-distress-depression-screening
-    copyFrom: promis-emotional-distress-depression
     schedule:
       type: PERIOD
       period: ONCE
@@ -352,7 +343,6 @@ surveys:
 
 
   - key: promis-emotional-distress-anxiety-screening
-    copyFrom: promis-emotional-distress-anxiety
     schedule:
       type: PERIOD
       period: ONCE
