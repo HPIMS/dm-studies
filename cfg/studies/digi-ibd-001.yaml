@@ -18,23 +18,477 @@ wearables:
   - oura
 baseline: []
 surveys:
-  - key: pro-3
-  - key: sccai
+  - key: which-ibd
+    rank: 1
+
+
+  # TODO: REQUIRE BASELINES TO BE COMPLETED FIRST!
+  - key: begin-next-phase
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+      - action: HIDE
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 999
+
+
   - key: pro-2-crohns
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 0 # crohns
+    rank: 1
+
+
   - key: pro-2-uc
-  - key: promis-gi-belly-pain
-  - key: promis-gi-diarrhea
-  - key: promis-emotional-distress-depression
-  - key: promis-emotional-distress-anxiety
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 1 # uc
+    rank: 1
+
+
+  - key: pro-3-screening
+    copyFrom: pro-3
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 0 # crohns
+    rank: 2
+
+
+  - key: pro-3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: AND
+            tasks:
+              - type: SCORE
+                resource: digi-ibd-001::which-ibd
+                operator: "="
+                score: 0 # crohns
+              - type: SCORE
+                resource: digi-ibd-001::begin-next-phase
+                operator: "="
+                score: 1
+    rank: 2
+
+
+  - key: sccai-screening
+    copyFrom: sccai
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 1 # uc
+    rank: 2
+
+
+  - key: sccai
+    triggers:
+      - action: SHOW
+        condition:
+          - type: AND
+            tasks:
+              - type: SCORE
+                resource: digi-ibd-001::which-ibd
+                operator: "="
+                score: 1 # uc
+              - type: SCORE
+                resource: digi-ibd-001::begin-next-phase
+                operator: "="
+                score: 1
+    rank: 2
+
+
+  - key: sibdq-screening
+    copyFrom: sibdq
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 3
+
+
   - key: sibdq
-  - key: promis-sleep-disturbance-8a
-  - key: promis-sleep-related-impairment
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 3
+
+
+  - key: promis-fatigue-7a-screening
+    copyFrom: promis-fatigue-7a
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 4
+
+
   - key: promis-fatigue-7a
-  - key: patient-global-impression-uc-severity
-  - key: patient-global-impression-uc-change
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 4
+
+
+  - key: promis-gi-diarrhea-screening
+    copyFrom: promis-gi-diarrhea
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 5
+
+
+  - key: promis-gi-diarrhea
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 5
+
+
+  - key: promis-gi-belly-pain-screening
+    copyFrom: promis-gi-belly-pain
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 6
+
+
+  - key: promis-gi-belly-pain
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 6
+  
+
+  - key: promis-sleep-disturbance-8a-screening
+    copyFrom: promis-sleep-disturbance-8a
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 7
+
+
+  - key: promis-sleep-disturbance-8a
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 7
+
+
+  - key: promis-sleep-related-impairment-screening
+    copyFrom: promis-sleep-related-impairment
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 8
+
+
+  - key: promis-sleep-related-impairment
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 8
+
+
+  - key: promis-emotional-distress-depression-screening
+    copyFrom: promis-emotional-distress-depression
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 9
+
+
+  - key: promis-emotional-distress-depression
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 9
+
+
+  - key: promis-emotional-distress-anxiety-screening
+    copyFrom: promis-emotional-distress-anxiety
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 10
+
+
+  - key: promis-emotional-distress-anxiety
+    schedule:
+      type: PERIOD
+      period: ONCE
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 10
+
+
   - key: patient-global-impression-crohns-severity
+    triggers:
+      - action: SHOW
+        condition:
+          - type: AND
+            tasks:
+              - type: SCORE
+                resource: digi-ibd-001::which-ibd
+                operator: "="
+                score: 0 # crohns
+              - type: SCORE
+                resource: digi-ibd-001::begin-next-phase
+                operator: "="
+                score: 1
+    rank: 11
+
+
   - key: patient-global-impression-crohns-change
+    triggers:
+      - action: SHOW
+        condition:
+          - type: AND
+            tasks:
+              - type: SCORE
+                resource: digi-ibd-001::which-ibd
+                operator: "="
+                score: 0 # crohns
+              - type: SCORE
+                resource: digi-ibd-001::begin-next-phase
+                operator: "="
+                score: 1
+    rank: 12
+
+
+  - key: patient-global-impression-uc-severity
+    triggers:
+      - action: SHOW
+        condition:
+          - type: AND
+            tasks:
+              - type: SCORE
+                resource: digi-ibd-001::which-ibd
+                operator: "="
+                score: 1 # uc
+              - type: SCORE
+                resource: digi-ibd-001::begin-next-phase
+                operator: "="
+                score: 1
+    rank: 11
+
+
+  - key: patient-global-impression-uc-change
+    triggers:
+      - action: SHOW
+        condition:
+          - type: AND
+            tasks:
+              - type: SCORE
+                resource: digi-ibd-001::which-ibd
+                operator: "="
+                score: 1 # uc
+              - type: SCORE
+                resource: digi-ibd-001::begin-next-phase
+                operator: "="
+                score: 1
+    rank: 12
+
+
   - key: patient-global-impression-fatigue-severity
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 13
+
+
   - key: patient-global-impression-fatigue-change
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 14
+
+
   - key: patient-global-impression-sleep-disturbance-severity
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 15
+
+
   - key: patient-global-impression-sleep-disturbance-change
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 16
