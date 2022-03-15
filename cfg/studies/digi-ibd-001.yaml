@@ -22,7 +22,6 @@ surveys:
     rank: 1
 
 
-  # TODO: REQUIRE BASELINES TO BE COMPLETED FIRST!
   - key: begin-next-phase
     triggers:
       - action: SHOW
@@ -338,8 +337,9 @@ surveys:
 
   - key: promis-emotional-distress-depression
     schedule:
-      type: PERIOD
-      period: ONCE
+      type: TIMETABLE
+      timetable: [0, 14]
+      timetableUnits: WEEKS
       graceDays: 3
     triggers:
       - action: SHOW
@@ -369,8 +369,9 @@ surveys:
 
   - key: promis-emotional-distress-anxiety
     schedule:
-      type: PERIOD
-      period: ONCE
+      type: TIMETABLE
+      timetable: [0, 14]
+      timetableUnits: WEEKS
       graceDays: 3
     triggers:
       - action: SHOW
