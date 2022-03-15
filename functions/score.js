@@ -26,6 +26,13 @@ const scoringFns = {
   "warrior-shield::start-intervention": sumScore,
   "warrior-shield::devices": () => 1,
   "hpi-decode-bp::clearance": sumScore,
+  // digi-ibd-001
+  "digi-ibd-001::which-ibd": sumScore,
+  "digi-ibd-001::begin-next-phase": sumScore,
+  //
+  //
+  //
+  //
   // legacy surveys
   baseline_cd_risc_survey: sumScore, // library::cd-risc-2
   mood_survey: sumScore, // library::phq-8
@@ -33,10 +40,6 @@ const scoringFns = {
   // pain: () => null, // library::promis-pain-interference-6b-v1.0
   // sleep: () => null, // library::promis-sleep-disturbance-8a-v1.0
   qol_survey: sumScore, // library::promis-gh-qol-2-item
-
-  // digi-ibd-001
-  "digi-ibd-001::which-ibd": sumScore,
-  "digi-ibd-001::begin-next-phase": sumScore,
 };
 
 function sumScore(surveyData, optionScoreMap) {
