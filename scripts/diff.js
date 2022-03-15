@@ -572,7 +572,7 @@ async function diff() {
   // write out the new versions file
   await fs.promises.writeFile(
     "./version.lock",
-    `${YAML.stringify(nextVersions)}\n`
+    `${YAML.stringify(nextVersions, { sortMapEntries: true })}\n`
   );
 }
 diff();
