@@ -76,16 +76,16 @@ surveys:
     triggers:
       - action: SHOW
         condition:
-          - type: AND
-            tasks:
-              - type: SCORE
-                resource: digi-ibd-001::which-ibd
-                operator: "="
-                score: 0 # crohns
-              - type: SCORE
-                resource: digi-ibd-001::begin-next-phase
-                operator: "="
-                score: 1
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 2
 
 
@@ -108,16 +108,16 @@ surveys:
     triggers:
       - action: SHOW
         condition:
-          - type: AND
-            tasks:
-              - type: SCORE
-                resource: digi-ibd-001::which-ibd
-                operator: "="
-                score: 1 # uc
-              - type: SCORE
-                resource: digi-ibd-001::begin-next-phase
-                operator: "="
-                score: 1
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 2
 
 
@@ -373,16 +373,16 @@ surveys:
     triggers:
       - action: SHOW
         condition:
-          - type: AND
-            tasks:
-              - type: SCORE
-                resource: digi-ibd-001::which-ibd
-                operator: "="
-                score: 0 # crohns
-              - type: SCORE
-                resource: digi-ibd-001::begin-next-phase
-                operator: "="
-                score: 1
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 11
 
 
@@ -390,16 +390,16 @@ surveys:
     triggers:
       - action: SHOW
         condition:
-          - type: AND
-            tasks:
-              - type: SCORE
-                resource: digi-ibd-001::which-ibd
-                operator: "="
-                score: 0 # crohns
-              - type: SCORE
-                resource: digi-ibd-001::begin-next-phase
-                operator: "="
-                score: 1
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 12
 
 
@@ -407,16 +407,16 @@ surveys:
     triggers:
       - action: SHOW
         condition:
-          - type: AND
-            tasks:
-              - type: SCORE
-                resource: digi-ibd-001::which-ibd
-                operator: "="
-                score: 1 # uc
-              - type: SCORE
-                resource: digi-ibd-001::begin-next-phase
-                operator: "="
-                score: 1
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 11
 
 
@@ -424,16 +424,16 @@ surveys:
     triggers:
       - action: SHOW
         condition:
-          - type: AND
-            tasks:
-              - type: SCORE
-                resource: digi-ibd-001::which-ibd
-                operator: "="
-                score: 1 # uc
-              - type: SCORE
-                resource: digi-ibd-001::begin-next-phase
-                operator: "="
-                score: 1
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 12
 
 
