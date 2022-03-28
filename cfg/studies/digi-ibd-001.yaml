@@ -61,7 +61,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -93,7 +92,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -125,7 +123,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -156,7 +153,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -187,7 +183,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -218,7 +213,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -249,7 +243,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -280,7 +273,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -311,7 +303,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -342,7 +333,6 @@ surveys:
     schedule:
       type: PERIOD
       period: ONCE
-      graceDays: 3
     triggers:
       - action: SHOW
         condition:
