@@ -297,6 +297,7 @@ async function processStudies() {
     const data = await getFile(studyDir, "", `${study}.yaml`);
 
     const {
+      key: studyKey,
       visibility,
       irb,
       studyTeamId,
@@ -430,7 +431,7 @@ async function processStudies() {
 
     log.info(`[${study}] Adding to study index.`);
     index.push({
-      studyKey: data.key,
+      studyKey,
       visibility,
       openEnrollment,
       shortDescription,
@@ -446,7 +447,7 @@ async function processStudies() {
     log.important(`[${study}] Finished processing. Writing ${study}.json`);
     await fs.promises.writeFile(
       `${distDir}/studies/${study}.json`,
-      JSON.stringify(data)
+      JSON.stringify({ studyKey, ...data })
     );
   });
 
