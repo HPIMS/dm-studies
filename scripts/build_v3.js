@@ -279,6 +279,33 @@ async function processInterventions() {
   );
 }
 
+async function processConsents() {
+  log.info("*****************************************");
+  log.info("****        Building Consents        ****");
+  log.info("*****************************************");
+
+  const consentDir = path.join(__dirname, "../cfg/consents");
+  const distDir = path.join(__dirname, "../dist/v3");
+
+  const studies = Object.keys(versions.active.studies);
+
+  const promises = studies.map(async (study) => {
+    if (study === "baseline") {
+      return;
+    }
+    try {
+      const file = await fs.promises.readFile(
+        path.join(consentDir, `${study}.json`),
+        { encoding: "utf-8" }
+      );
+      await fs.promises.writeFile(`${distDir}/consents/${study}.json`, file);
+    } catch (err) {
+      log.error(err);
+    }
+  });
+  await Promise.all(promises);
+}
+
 async function processStudies() {
   log.info("*****************************************");
   log.info("****        Building Studies         ****");
@@ -464,6 +491,7 @@ async function build() {
     mkdir(path.resolve(distDir, "..")),
     mkdir(distDir),
     mkdir(`${distDir}/studies`),
+    mkdir(`${distDir}/consents`),
     mkdir(`${distDir}/surveys`),
     mkdir(`${distDir}/multimedia`),
     mkdir(`${distDir}/interventions`),
@@ -471,6 +499,7 @@ async function build() {
   await processSurveys();
   await processMultimedia();
   await processInterventions();
+  await processConsents();
   await processStudies();
   await fs.promises.writeFile(
     `${distDir}/versions.json`,
