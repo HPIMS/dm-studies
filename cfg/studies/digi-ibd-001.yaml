@@ -6,10 +6,15 @@ visibility: 'public'
 platform:
   - ios
   - android
-name: Digital Signatures of Drug Response and Disease State Transitions in Inflammatory Bowel Disease
-description: ""
+name: Digital Signatures of Drug Response in IBD
+description: Using data collected from wearable devices, app-based surveys, and blood and stool samples, this study will aid us in identifying and predicting who responds to IBD medications.
 consentId: ehive-digi-ibd-001
-withdrawText: ""
+studyEmail: robert.hirten@mountsinai.org
+withdrawText: |-
+  Thank you for participating in the Digital Signatures of Drug Response in IBD Study! We value your time and effort, and appreciate your contribution to research.
+  
+  Please contact us at
+  robert.hirten@mountsinai.org if you have any further questions about the study or future research on the eHive platform.
 wearables:
   - oura
 baseline: []

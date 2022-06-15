@@ -1,19 +1,20 @@
 key: patient-global-impression-fatigue-change
 active: true
+scorable: true
 schedule:
   type: TIMETABLE
   timetable: [2, 4, 6, 8, 14]
   timetableUnits: WEEKS
   graceDays: 3
 timeEstimate: 1
-name: Fatigue change
-short: Global Impression of Change in Fatigue
+name: Fatigue Response
+short: About your fatigue
 intro:
-  title: Fatigue Change
-  description: Tell us about your impression of the change in your fatigue.
+  title: Fatigue Response
+  description: We want to understand more about how your fatigue is doing since starting treatment. Please fill out this survey and let us know.
 outro:
-  title: Finished
-  description: Thank you for completing this survey.
+  title: Thank you!
+  description: We appreciate your participation.
 sections:
   - key: "0"
     title: ""
@@ -25,11 +26,16 @@ sections:
         options:
           - value: much_better
             text: Much better
+            score: 1
           - value: a_little_better
             text: A little better
+            score: 2
           - value: no_change
             text: No change
+            score: 3
           - value: a_little_worse
             text: A little worse
+            score: 4
           - value: much_worse
             text: Much worse
+            score: 5

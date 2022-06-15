@@ -5,11 +5,11 @@ schedule:
   type: PERIOD
   period: WEEKLY
 timeEstimate: 3
-name: Sleep Related Impairment
-short: ""
+name: Tiredness Assessment
+short: "Tiredness reflection"
 intro:
-  title: Sleep Related Impairment
-  description: "How has your sleep affected you over the past week?"
+  title: Tiredness Assessment
+  description: We want to understand more about how your sleep is impacting your life over the past 7 days. Please fill out this survey and let us know. 
 outro:
   title: Thank you!
   description: We appreciate your participation.
@@ -43,19 +43,19 @@ sections:
         options:
           - value: not_at_all
             text: Not at all
-            score: 1
+            score: 5
           - value: a_little_bit
             text: A little bit
-            score: 2
+            score: 4
           - value: somewhat
             text: Somewhat
             score: 3
           - value: quite_a_bit
             text: Quite a bit
-            score: 4
+            score: 2
           - value: very_much
             text: Very much
-            score: 5
+            score: 1
       - key: tired
         question: I felt tired
         type: SINGLE_CHOICE
