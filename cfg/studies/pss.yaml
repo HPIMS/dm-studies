@@ -45,6 +45,20 @@ surveys:
   - qol_survey
   - satisfaction_survey_monthly
   - satisfaction_survey_final
+
+interventions:
+  - key: rockley-start
+    rank: 0
+  - key: rockley-stop
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: pss::rockley-start
+          operator: ">"
+          score: 0
+    rank: 1
+
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier

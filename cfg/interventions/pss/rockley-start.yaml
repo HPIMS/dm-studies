@@ -1,0 +1,81 @@
+key: rockley-start
+active: true
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeEstimate: 1
+name: Start Rockley
+short: Begin Recording
+intro:
+  title: Start Rockley
+  description: Begin recording with your rockley device
+outro:
+  title: Complete
+  description: Your rockley device is recording.
+sdkDevices: []
+oAuthDevices:
+  - rockley
+protocol:
+  - id: 1
+    activity: waitForPress
+    stepNumber: 1
+    text: Press Start to begin recording with your Rockley device
+    buttonLabel: Start
+
+  - id: 2
+    activity: subscribeToMessage
+    stepNumber: 2
+    text: Starting...
+    messageKey: rockley::start
+    condition: []
+    timeout: 60
+    branchSuccess: 3
+    branchFailure: 6
+    animation: true
+
+  # Rockley Start Success
+
+  - id: 3
+    activity: subscribeToMessage
+    stepNumber: 3
+    text: Fetching Status...
+    messageKey: rockley::status
+    condition: []
+    timeout: 60
+    branchSuccess: 4
+    branchFailure: 8
+    animation: true
+
+  - id: 4
+    activity: waitForPress
+    stepNumber: 4
+    text: The rockley device is {{status}} # TODO: REAL PUBLIC VALUE!
+    buttonLabel: Continue
+
+  - id: 5
+    stepNumber: 5
+    activity: finish
+
+  # Rockley Start Failure
+
+  - id: 6
+    activity: waitForPress
+    stepNumber: 3
+    text: The rockley device failed to begin recording!
+    buttonLabel: Continue
+
+  - id: 7
+    stepNumber: 4
+    activity: finish
+
+  # Rockley Status Failure
+
+  - id: 8
+    activity: waitForPress
+    stepNumber: 3
+    text: We were unable to determine the status of your Rockley device
+    buttonLabel: Continue
+
+  - id: 9
+    stepNumber: 4
+    activity: finish
