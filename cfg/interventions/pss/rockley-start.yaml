@@ -25,26 +25,28 @@ protocol:
   - id: 2
     activity: subscribeToMessage
     stepNumber: 2
-    text: Starting...
+    text: ''
     messageKey: rockley::start
     condition: []
     timeout: 60
     branchSuccess: 3
     branchFailure: 6
     animation: true
+    animationLabel: Starting...
 
   # Rockley Start Success
 
   - id: 3
     activity: subscribeToMessage
     stepNumber: 3
-    text: Fetching Status...
+    text: ''
     messageKey: rockley::status
     condition: []
     timeout: 60
     branchSuccess: 4
     branchFailure: 8
     animation: true
+    animationLabel: Fetching Status...
 
   - id: 4
     activity: waitForPress
