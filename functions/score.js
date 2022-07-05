@@ -21,14 +21,17 @@ const scoringFns = {
   "library::promis-emotional-distress-depression": sumScore,
   "library::promis-fatigue-7a": sumScore,
   "library::promis-gh-qol-2-item": sumScore,
+  "library::promis-gi-belly-pain": sumScore,
+  "library::promis-gi-diarrhea": sumScore,
   "library::promis-sleep-disturbance-8a-v1.0": sumScore,
   "library::promis-sleep-related-impairment": sumScore,
   "library::promis-social-support-2-item": sumScore,
   "library::pss-4": sumScore,
   "library::pss-10": sumScore,
   "library::pro-2-crohns": pro2Crohns,
-  "library::pro-2-uc": pro2UC,
+  "library::pro-2-uc": sumScore,
   "library::pro-3": pro3,
+  "library:::sibdq": sumScore,
   "library::sibdq": sumScore,
   // Study Specific Surveys
   "warrior-shield::start-intervention": sumScore,
@@ -45,26 +48,17 @@ const scoringFns = {
     sumScore,
   "digi-ibd-001::patient-global-impression-uc-change": sumScore,
   "digi-ibd-001::patient-global-impression-uc-severity": sumScore,
-
   "digi-ibd-001::pro-3-screening-screening": pro3,
   "digi-ibd-001::promis-emotional-distress-anxiety-screening": sumScore,
   "digi-ibd-001::promis-emotional-distress-depression-screening": sumScore,
   "digi-ibd-001::promis-fatigue-7a-screening": sumScore,
-  /*
-TODO: digi-ibd-001::promis-gi-belly-pain-screening-screening
-TODO: digi-ibd-001::promis-gi-diarrhea-screening
-  */
+  "digi-ibd-001::promis-gi-belly-pain-screening": sumScore,
+  "digi-ibd-001::promis-gi-diarrhea-screening": sumScore,
   "digi-ibd-001::promis-sleep-disturbance-8a-v1.0-screening": sumScore,
   "digi-ibd-001::promis-sleep-related-impairment-screening": sumScore,
-  /*
-TODO: digi-ibd-001::sccai-screening
-  */
+  "digi-ibd-001::sccai-screening": sumScore,
   "digi-ibd-001::sibdq-screening": sumScore,
   "digi-ibd-001::which-ibd": sumScore,
-  //
-  //
-  //
-  //
   // legacy surveys
   baseline_cd_risc_survey: sumScore, // library::cd-risc-2
   mood_survey: sumScore, // library::phq-8
@@ -123,11 +117,6 @@ function pro2Crohns() {
     ] || 0;
   // Return the weighted sum.
   return softStools * 2 + abdominalPain * 5;
-}
-
-function pro2UC() {
-  const data = surveyData["pro-2-uc"] || {};
-  // TODO: FINISH IMPLEMENTING ME!
 }
 
 function pro3(surveyData, optionScoreMap) {

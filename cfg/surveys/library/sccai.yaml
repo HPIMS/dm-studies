@@ -98,43 +98,25 @@ sections:
           - value: terrible
             text: Terrible
             score: 4
-      - key: arthritis
-        question: "Have you had Arthritis?"
+      - key: extracolonic_features
+        question: "Extracolonic features:"
         type: SINGLE_CHOICE
         options:
-          - value: yes
-            text: Yes
-            score: 1
-          - value: no
-            text: No
+          - value: no_features
+            text: No Features
             score: 0
-      - key: uveitis
-        question: "Have you had Uveitis?"
-        type: SINGLE_CHOICE
-        options:
-          - value: yes
-            text: Yes
+          - value: one_feature
+            text: 1 Feature
             score: 1
-          - value: no
-            text: No
-            score: 0
-      - key: erythema_nodosum
-        question: "Have you had Erythema Nodosum?"
-        type: SINGLE_CHOICE
-        options:
-          - value: yes
-            text: Yes
-            score: 1
-          - value: no
-            text: No
-            score: 0
-      - key: pyoderma_gangrenosum
-        question: "Have you had Pyoderma Gangrenosum?"
-        type: SINGLE_CHOICE
-        options:
-          - value: yes
-            text: Yes
-            score: 1
-          - value: no
-            text: No
-            score: 0
+          - value: two_features
+            text: 2 Features
+            score: 2
+          - value: three_features
+            text: 3 Features
+            score: 3
+          - value: four_features
+            text: 4 Features
+            score: 4
+          - value: five_features
+            text: 5 Features
+            score: 5

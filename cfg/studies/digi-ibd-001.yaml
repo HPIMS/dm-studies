@@ -77,6 +77,11 @@ surveys:
 
 
   - key: pro-3
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 8, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
     triggers:
       - action: SHOW
         condition:
@@ -108,6 +113,11 @@ surveys:
 
 
   - key: sccai
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 8, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
     triggers:
       - action: SHOW
         condition:
