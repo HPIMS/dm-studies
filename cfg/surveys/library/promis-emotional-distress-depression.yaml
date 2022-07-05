@@ -4,12 +4,12 @@ active: true
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 1
-name: Emotional-Distress Depression
-short: ""
+timeEstimate: 2
+name: Depression Assessment
+short: "Reflect on your well-being"
 intro:
-  title: Emotional-Distress Depression
-  description: "Tell us about your feelings of depression over the past 7 days."
+  title: Depression Assessment
+  description: We want to understand more about how you're feeling over the past 7 days. Please fill out this survey and let us know. 
 outro:
   title: Thank you!
   description: We appreciate your participation.
@@ -24,73 +24,73 @@ sections:
         options:
           - value: never
             text: Never
-            score: 0
+            score: 1
           - value: rarely
             text: Rarely
-            score: 1
+            score: 2
           - value: sometimes
             text: Sometimes
-            score: 2
+            score: 3
           - value: often
             text: Often
-            score: 3
+            score: 4
           - value: always
             text: Always
-            score: 4
+            score: 5
       - key: helpless
         question: "I felt helpless:"
         type: SINGLE_CHOICE
         options:
           - value: never
             text: Never
-            score: 0
+            score: 1
           - value: rarely
             text: Rarely
-            score: 1
+            score: 2
           - value: sometimes
             text: Sometimes
-            score: 2
+            score: 3
           - value: often
             text: Often
-            score: 3
+            score: 4
           - value: always
             text: Always
-            score: 4
+            score: 5
       - key: depressed
         question: "I felt depressed:"
         type: SINGLE_CHOICE
         options:
           - value: never
             text: Never
-            score: 0
+            score: 1
           - value: rarely
             text: Rarely
-            score: 1
+            score: 2
           - value: sometimes
             text: Sometimes
-            score: 2
+            score: 3
           - value: often
             text: Often
-            score: 3
+            score: 4
           - value: always
             text: Always
-            score: 4
+            score: 5
       - key: hopeless
         question: "I felt hopeless:"
         type: SINGLE_CHOICE
         options:
           - value: never
             text: Never
-            score: 0
+            score: 1
           - value: rarely
             text: Rarely
-            score: 1
+            score: 2
           - value: sometimes
             text: Sometimes
-            score: 2
+            score: 3
           - value: often
             text: Often
-            score: 3
+            score: 4
           - value: always
             text: Always
-            score: 4
+            score: 5

@@ -5,11 +5,11 @@ schedule:
   type: PERIOD
   period: WEEKLY
 timeEstimate: 3
-name: Fatigue
-short: ""
+name: Fatigue Assessment
+short: "About your fatigue"
 intro:
-  title: Fatigue
-  description: "How has your fatigue affected you over the past week?"
+  title: Fatigue Assessment
+  description: We want to understand more about how fatigue is impacting your life over the past 7 days. Please fill out this survey and let us know. 
 outro:
   title: Thank you!
   description: We appreciate your participation.
@@ -133,21 +133,21 @@ sections:
             text: Always
             score: 5
       - key: too_tired_exercise
-        question: How often were you too tired to exercise strenuously?
+        question: How often did you have enough energy to exercise strenuously?
         type: SINGLE_CHOICE
         options:
           - value: never
             text: Never
-            score: 1
+            score: 5
           - value: rarely
             text: Rarely
-            score: 2
+            score: 4
           - value: sometimes
             text: Sometimes
             score: 3
           - value: often
             text: Often
-            score: 4
+            score: 2
           - value: always
             text: Always
-            score: 5
+            score: 1
