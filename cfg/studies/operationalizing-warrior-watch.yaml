@@ -1,22 +1,52 @@
 key: operationalizing-warrior-watch
+consentId: ehive-operationalizing-warrior-watch
+
 active: true
-visibility: 'public'
-irb: ""
+openEnrollment: false
+visibility: private
+
+irb: "Not Applicable"
+pi: Robert Hirten MD
+studyEmail: covid.hcw@mssm.edu # Legacy
+
 platform:
   - ios
-  - android
+
+# Legacy
+wearables:
+  - applehealth
+  - applehealth_ehr
+
 name: COVID-19 Monitoring Program
+
+shortDescription:  A digital program to monitor for COVID-19 infections.
 longDescription: A digital program to monitor for COVID-19 infections.
-consentId: ehive-operationalizing-warrior-watch
-studyEmail: covid.hcw@mssm.edu
+
+notes: []
+
+imageId: ''
+animationId: ''
+videoId: ''
+
+timeResponsibility:
+  time: 0
+  timeUnits: minutes
+  timePeriod: daily
+
+# Legacy
 withdrawText: |-
   Thank you for participating in the Operationalizing Warrior Watch Program!
   
   Please contact us at
   covid.hcw@mssm.edu if you have any further questions about the program or future research and programs on the eHive platform.
+
+baseline: [] # Legacy
+
 surveys:
   - baseline-demographics
   - report-new-information
+
+# Legacy
 requiredData:
   HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
   RestingHeartRate: HKQuantityTypeIdentifier

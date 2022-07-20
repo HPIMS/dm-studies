@@ -1,23 +1,51 @@
 key: digi-ibd-001
+consentId: ehive-digi-ibd-001
+
 active: true
-irb: STUDY-00-00000
 openEnrollment: true
-visibility: 'private'
+visibility: private
+
+irb: STUDY-00-00000
+pi: Robert Hirten MD
+studyEmail: robert.hirten@mountsinai.org # Legacy
+
 platform:
   - ios
   - android
+
+# Legacy
+wearables:
+  - oura
+
 name: Digital Signatures of Drug Response in IBD
-description: Using data collected from wearable devices, app-based surveys, and blood and stool samples, this study will aid us in identifying and predicting who responds to IBD medications.
-consentId: ehive-digi-ibd-001
-studyEmail: robert.hirten@mountsinai.org
+
+shortDescription: Using data collected from wearable devices, app-based surveys, 
+  and blood and stool samples, this study will aid us in identifying and predicting
+  who responds to IBD medications.
+longDescription: Using data collected from wearable devices, app-based surveys, 
+  and blood and stool samples, this study will aid us in identifying and predicting
+  who responds to IBD medications.
+
+notes: []
+
+imageId: ''
+animationId: ''
+videoId: ''
+
+timeResponsibility:
+  time: 5
+  timeUnits: minutes
+  timePeriod: daily
+
+# Legacy
 withdrawText: |-
   Thank you for participating in the Digital Signatures of Drug Response in IBD Study! We value your time and effort, and appreciate your contribution to research.
   
   Please contact us at
   robert.hirten@mountsinai.org if you have any further questions about the study or future research on the eHive platform.
-wearables:
-  - oura
-baseline: []
+
+baseline: [] # Legacy
+
 surveys:
   - key: which-ibd
     rank: 1

@@ -319,12 +319,10 @@ async function processStudies() {
     delete data.irb;
 
     delete data.pi;
-    delete data.studyTeamId;
     delete data.openEnrollment;
     delete data.shortDescription;
     delete data.longDescription;
     delete data.notes;
-    delete data.eligibilityCriteria;
     delete data.timeResponsibility;
     delete data.imageId;
     delete data.animationId;

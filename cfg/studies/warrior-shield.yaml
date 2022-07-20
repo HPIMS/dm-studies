@@ -1,11 +1,21 @@
 key: warrior-shield
+consentId: ehive-warrior-shield # Legacy
+
 active: true
-irb: STUDY-21-00596
-studyTeamId: mountsinai
 openEnrollment: true
+
+irb: STUDY-21-00596
+pi: Robert Hirten MD
+studyEmail: covid.hcw@mssm.edu  # Legacy
+
 platform:
   - ios
+
+# Legacy
+wearables: []
+
 name: "Warrior Shield"
+
 shortDescription: The main goal of the Warrior Shield study is to understand
   how a breathing intervention based on the HeartMath system improves
   the psychological well being of health care workers impacted by COVID-19.
@@ -14,17 +24,20 @@ longDescription: The main goal of the Warrior Shield study is to understand
   the psychological well being of health care workers impacted by COVID-19.
   This study is collecting data from your iPhone and Apple Watch to look at
   the impact this intervention has on stress, mental health and your physical well being.
-consentId: ehive-warrior-shield
-studyEmail: covid.hcw@mssm.edu
+
+notes: []
+
 imageId: study-warrior-shield
 animationId: ""
 videoId: ""
-eligibilityCriteria: ['healthcare_worker', [minAge, {min: 18 }]]
+
 timeResponsibility:
   time: 10
   timeUnits: minutes
   timePeriod: daily
-baseline: []
+
+baseline: [] # Legacy
+
 surveys:
   - key: demographics
     rank: 1
@@ -224,6 +237,8 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
+
+# Legacy
 requiredData:
   ActiveEnergyBurned: HKQuantityTypeIdentifier
   AppleExerciseTime: HKQuantityTypeIdentifier
