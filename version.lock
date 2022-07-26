@@ -62,15 +62,12 @@ active:
     ibd-forecast:
       - c7c822abdca81e3694bc6ab6b775f076
       - 10
-    operationalizing-warrior-watch:
-      - 0d43e38b2ce1abf1ce91f5a518388c3c
-      - 17
     pss:
       - ef26f7ad91c84b63ac70be5a9bb9f092
       - 19
     warrior-shield:
-      - fd28085d9fa7934bebcdcaab1538365c
-      - 13
+      - 4bd95befd9f6f05f54ffe72192d3d405
+      - 14
   surveys:
     baseline_cd_risc_survey:
       - 7526ffe53d131d520705edf5fb802d3c
@@ -294,6 +291,9 @@ active:
 inactive:
   interventions: {}
   multimedia: {}
-  studies: {}
+  studies:
+    operationalizing-warrior-watch:
+      - 0d43e38b2ce1abf1ce91f5a518388c3c
+      - 17
   surveys: {}
 
