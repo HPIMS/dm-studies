@@ -50,14 +50,14 @@
       "ineligibleText": "You must not be currently pregnant."
     },
     {
-      "text": "Are you currently pregnant?",
-      "isEligible": false,
-      "ineligibleText": "You must not be currently pregnant."
-    },
-    {
       "text": "Do you currently have cancer or other significant medical problems such as a recent heart attack, recent stroke, significant kidney disease, or an infection?",
       "isEligible": false,
       "ineligibleText": "You must not be currently have cancer or other significant medical problems."
+    },
+    {
+      "text": "Do you have a pacemaker or defibrillator?",
+      "isEligible": false,
+      "ineligibleText": "You must not have a pacemaker or defibrillator."
     },
     {
       "text": "I use medications that impact how my heart beats such as beta blockers (ie. atenolol, carvedilol, metoprolol, Coreg, Tenormin, Normodyne, Trandate), digoxin, calcium channel blockers (ie. Novasc, amlodipine, Cardene, nicrdipine, Procrdia, nifedipine, Cardizem, diltiazem), or regularly used benzodiazepines.",
