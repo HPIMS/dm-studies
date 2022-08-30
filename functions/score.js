@@ -108,7 +108,7 @@ function prorateSum(surveyData, optionScoreMap, minThreshold = 1) {
   );
 }
 
-function pro2Crohns() {
+function pro2Crohns(surveyData, optionScoreMap) {
   const data = surveyData["pro-2-crohns"] || {};
   const softStools = data.soft_stool_count || 0;
   const abdominalPain =
