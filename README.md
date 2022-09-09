@@ -1,9 +1,9 @@
-# Digi*Me* Studies
+# ehive Studies
 
 Study and Survey configurations for Digi*Me*.
 
-### Instructions
+## Instructions
 
 Run the command `npm install` to install all dependencies.
 
-Run the command `npm run-script sync` before committing any configuration changes. This ensures that the correct version number is applied during the build process.
+Run the command `npm run-script diff` before committing any configuration changes. This ensures that the correct version number is applied during the build process.

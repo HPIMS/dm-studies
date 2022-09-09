@@ -1,32 +1,62 @@
 key: pss
+consentId: ehive-pss
+
 active: true
+openEnrollment: true
+visibility: private
+
 irb: STUDY-20-00256
+pi: 'Girish Nadkarni MD'
+studyEmail: ehive.pss@mssm.edu
+
 platform:
   - ios
   - android
-name: "DDP: Pain, Stress, Sleep Study"
-description: The Digital Discovery Program at the Hasso Plattner Institute for
-  Digital Health at Mount Sinai is focused on understanding how digital
-  technology can be used to increase our understanding of complex disease. In
-  this study, we aim to use wearable devices to learn about underlying symptoms
-  related to pain, stress, and sleep, which affect us all every day. By
-  providing lifestyle data, you can gain insight into your own health and
-  behaviors, lead a healthier life, all while contributing to important
-  scientific research.
-consentId: ehive-pss
-studyEmail: ehive.pss@mssm.edu
+
+# Legacy
+wearables:
+  - applehealth
+  - applehealth_ehr
+  - dexcom
+  - fitbit
+  - oura
+  - rockley
+  - twentythreeandme
+  - withings
+
+name: Pain, Stress, Sleep
+
+shortDescription: In this study, we aim to use wearable devices to learn about
+  underlying symptoms related to pain, stress, and sleep, which affect us all every day. 
+longDescription: In this study, we aim to use wearable devices to learn about
+  underlying symptoms related to pain, stress, and sleep, which affect us all every day.
+  By providing lifestyle data, you can gain insight into your own health and behaviors,
+  lead a healthier life, all while contributing to important scientific research.
+
+notes: []
+
+imageId: study-pss
+animationId: ''
+videoId: ''
+
+timeResponsibility:
+  time: 1
+  timeUnits: minutes
+  timePeriod: daily
+
+# Legacy
 withdrawText: |-
   Thank you for participating in the DDP: Pain, Stress, Sleep study! We value your time and effort, and appreciate your contribution to research.
   
   Please contact us at
   ehive.pss@mssm.edu if you have any further questions about the study or future research on the eHive platform.
-wearables:
-  - fitbit
-  - oura
+
+ # Legacy
 baseline:
   - baseline_demographics
   - baseline_medical_history
   - baseline_cd_risc_survey
+
 surveys:
   - sleep_stress_pain
   - pss4
@@ -37,6 +67,21 @@ surveys:
   - qol_survey
   - satisfaction_survey_monthly
   - satisfaction_survey_final
+
+interventions:
+  - key: rockley-start
+    rank: 0
+  - key: rockley-stop
+    triggers:
+    - action: SHOW
+      condition:
+        - type: COMPLETED
+          resource: pss::rockley-start
+          operator: ">"
+          score: 0
+    rank: 1
+
+# Legacy
 requiredHealthRecords:
   AllergyRecord: HKClinicalTypeIdentifier
   ConditionRecord: HKClinicalTypeIdentifier
@@ -45,6 +90,8 @@ requiredHealthRecords:
   MedicationRecord: HKClinicalTypeIdentifier
   ProcedureRecord: HKClinicalTypeIdentifier
   VitalSignRecord: HKClinicalTypeIdentifier
+
+# Legacy
 requiredData:
   ActiveEnergyBurned: HKQuantityTypeIdentifier
   AppleExerciseTime: HKQuantityTypeIdentifier

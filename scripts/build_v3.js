@@ -22,16 +22,6 @@ async function mkdir(path) {
   }
 }
 
-async function copyDirectory(srcDir, destDir) {
-  const files = await fs.promises.readdir(srcDir);
-  const promises = files.map(async (file) => {
-    const src = `${srcDir}/${file}`;
-    const dest = `${destDir}/${file}`;
-    await fs.promises.copyFile(src, dest);
-  });
-  return Promise.all(promises);
-}
-
 async function getFile(dir, group, file) {
   let rawBaseData = "";
   const rawData = await fs.promises.readFile(path.join(dir, group, file), {
@@ -90,7 +80,7 @@ async function processSurveys() {
   const index = [];
 
   const surveyDir = path.join(__dirname, "../cfg/surveys");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const surveys = Object.keys(versions.active.surveys);
 
@@ -158,7 +148,7 @@ async function processMultimedia() {
   const index = [];
 
   const multimediaDir = path.join(__dirname, "../cfg/multimedia");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const multimedia = Object.keys(versions.active.multimedia);
 
@@ -170,7 +160,6 @@ async function processMultimedia() {
       multimediaKey,
     ];
     const cfg = await getFile(multimediaDir, study, `${media}.yaml`);
-
     const version = versions.active.multimedia[multimediaKey][1];
 
     log.info(`[${multimediaKey}] Processing`);
@@ -225,7 +214,7 @@ async function processInterventions() {
   const index = [];
 
   const interventionsDir = path.join(__dirname, "../cfg/interventions");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const interventions = Object.keys(versions.active.interventions);
 
@@ -237,7 +226,6 @@ async function processInterventions() {
       interventionKey,
     ];
     const cfg = await getFile(interventionsDir, study, `${intervention}.yaml`);
-
     const version = versions.active.interventions[interventionKey][1];
 
     log.info(`[${interventionKey}] Processing`);
@@ -291,6 +279,33 @@ async function processInterventions() {
   );
 }
 
+async function processConsents() {
+  log.info("*****************************************");
+  log.info("****        Building Consents        ****");
+  log.info("*****************************************");
+
+  const consentDir = path.join(__dirname, "../cfg/consents");
+  const distDir = path.join(__dirname, "../dist/v3");
+
+  const studies = Object.keys(versions.active.studies);
+
+  const promises = studies.map(async (study) => {
+    if (study === "baseline") {
+      return;
+    }
+    try {
+      const file = await fs.promises.readFile(
+        path.join(consentDir, `${study}.json`),
+        { encoding: "utf-8" }
+      );
+      await fs.promises.writeFile(`${distDir}/consents/${study}.json`, file);
+    } catch (err) {
+      log.error(err);
+    }
+  });
+  await Promise.all(promises);
+}
+
 async function processStudies() {
   log.info("*****************************************");
   log.info("****        Building Studies         ****");
@@ -298,7 +313,7 @@ async function processStudies() {
   const index = [];
 
   const studyDir = path.join(__dirname, "../cfg/studies");
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
 
   const studies = Object.keys(versions.active.studies);
 
@@ -307,27 +322,24 @@ async function processStudies() {
       return;
     }
     const data = await getFile(studyDir, "", `${study}.yaml`);
-    const visibility = data.visibility;
-    const irb = data.irb;
-    const description = data.longDescription;
+
+    const {
+      key: studyKey,
+      visibility,
+      irb,
+      openEnrollment,
+      shortDescription,
+      timeResponsibility,
+      imageId,
+      animationId,
+      videoId,
+    } = data;
 
     const version = versions.active.studies[study][1];
 
     // Remove configs we don't need
-    delete data.active;
     delete data.visibility;
-    delete data.irb;
-
-    delete data.pi;
-    delete data.openEnrollment;
     delete data.shortDescription;
-    delete data.longDescription;
-    delete data.notes;
-    delete data.timeResponsibility;
-    delete data.imageId;
-    delete data.animationId;
-    delete data.videoId;
-
     // set additional configs
     data.version = version;
 
@@ -444,22 +456,22 @@ async function processStudies() {
 
     log.info(`[${study}] Adding to study index.`);
     index.push({
-      key: data.key,
+      studyKey,
       visibility,
-      irb,
+      openEnrollment,
+      shortDescription,
+      timeResponsibility,
+      imageId,
+      animationId,
+      videoId,
       version: version,
       name: data.name,
-      description: description,
-      consentId: data.consentId,
-      studyEmail: data.studyEmail,
-      wearables: data.wearables,
-      platform: data.platform,
     });
 
     log.important(`[${study}] Finished processing. Writing ${study}.json`);
     await fs.promises.writeFile(
       `${distDir}/studies/${study}.json`,
-      JSON.stringify({ ...data, description })
+      JSON.stringify({ studyKey, ...data })
     );
   });
 
@@ -471,12 +483,12 @@ async function processStudies() {
 }
 
 async function build() {
-  const distDir = path.join(__dirname, "../dist/v2");
+  const distDir = path.join(__dirname, "../dist/v3");
   await Promise.all([
     mkdir(path.resolve(distDir, "..")),
     mkdir(distDir),
-    mkdir(`${distDir}/images`),
     mkdir(`${distDir}/studies`),
+    mkdir(`${distDir}/consents`),
     mkdir(`${distDir}/surveys`),
     mkdir(`${distDir}/multimedia`),
     mkdir(`${distDir}/interventions`),
@@ -484,11 +496,8 @@ async function build() {
   await processSurveys();
   await processMultimedia();
   await processInterventions();
+  await processConsents();
   await processStudies();
-  await copyDirectory(
-    path.join(__dirname, "../cfg/images"),
-    `${distDir}/images`
-  );
   await fs.promises.writeFile(
     `${distDir}/versions.json`,
     JSON.stringify(versions)
