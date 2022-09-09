@@ -1,0 +1,41 @@
+key: patient-global-impression-crohns-change
+active: true
+scorable: true
+schedule:
+  type: TIMETABLE
+  timetable: [2, 4, 6, 8, 14]
+  timetableUnits: WEEKS
+  graceDays: 3
+timeEstimate: 1
+name: Treatment Response
+short: Your treatment response
+intro:
+  title: Treatment Response
+  description: We want to understand more about how your Crohn's disease is doing since starting treatment. Please fill out this survey and let us know.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: change
+        question: Compared to when you received the first treatment in this study, how has your Crohn's disease changed?
+        type: SINGLE_CHOICE
+        options:
+          - value: much_better
+            text: Much better
+            score: 1
+          - value: a_little_better
+            text: A little better
+            score: 2
+          - value: no_change
+            text: No change
+            score: 3
+          - value: a_little_worse
+            text: A little worse
+            score: 4
+          - value: much_worse
+            text: Much worse
+            score: 5

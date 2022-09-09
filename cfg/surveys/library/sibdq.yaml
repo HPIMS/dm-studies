@@ -1,0 +1,270 @@
+key: sibdq
+active: true
+scorable: true
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
+timeEstimate: 3
+name: Quality Assessment
+short: "Reflect on quality of life"
+intro:
+  title: Quality Assessment
+  description: We want to understand more about your quality of life over the past 2 weeks. Please fill out this survey and let us know. 
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: "Over the last two weeks:"
+    questions:
+      - key: fatigue
+        question: How often has the feeling of fatigue or of being tired and worn out been a problem for you?
+        type: SINGLE_CHOICE
+        options:
+          - value: all_of_the_time
+            text: All of the time
+            score: 1
+          - value: most_of_the_time
+            text: Most of the time
+            score: 2
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 3
+          - value: some_of_the_time
+            text: Some of the time
+            score: 4
+          - value: a_little_bit_of_the_time
+            text: A little bit of the time
+            score: 5
+          - value: hardly_any_of_the_time
+            text: Hardly any of the time
+            score: 6
+          - value: none_of_the_time
+            text: None of the time
+            score: 7
+      - key: delay_cancel
+        question: How often have you had to delay or cancel a social engagement because of your bowel problem?
+        type: SINGLE_CHOICE
+        options:
+          - value: all_of_the_time
+            text: All of the time
+            score: 1
+          - value: most_of_the_time
+            text: Most of the time
+            score: 2
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 3
+          - value: some_of_the_time
+            text: Some of the time
+            score: 4
+          - value: a_little_bit_of_the_time
+            text: A little bit of the time
+            score: 5
+          - value: hardly_any_of_the_time
+            text: Hardly any of the time
+            score: 6
+          - value: none_of_the_time
+            text: None of the time
+            score: 7
+      - key: leisure_sports
+        question: How much difficulty have you had, as a result of your bowel problems, doing leisure or sports activities you would have liked to have done?
+        type: SINGLE_CHOICE
+        options:
+          - value: a_great_deal_of_difficulty
+            text: A great deal of difficulty; activities made impossible
+            score: 1
+          - value: a_lot_of_difficulty
+            text: A lot of difficulty
+            score: 2
+          - value: a_fair_bit_of_difficulty
+            text: A fair bit of difficulty
+            score: 3
+          - value: some_difficulty
+            text: Some difficulty
+            score: 4
+          - value: a_little_difficulty
+            text: A little difficulty
+            score: 5
+          - value: hardly_any_difficulty
+            text: Hardly any difficulty
+            score: 6
+          - value: no_difficulty
+            text: None difficulty; the bowel problems did not limit sports or leisure activities
+            score: 7
+      - key: abdominal_pain
+        question: How often have your been troubled by pain in the abdomen?
+        type: SINGLE_CHOICE
+        options:
+          - value: all_of_the_time
+            text: All of the time
+            score: 1
+          - value: most_of_the_time
+            text: Most of the time
+            score: 2
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 3
+          - value: some_of_the_time
+            text: Some of the time
+            score: 4
+          - value: a_little_bit_of_the_time
+            text: A little bit of the time
+            score: 5
+          - value: hardly_any_of_the_time
+            text: Hardly any of the time
+            score: 6
+          - value: none_of_the_time
+            text: None of the time
+            score: 7
+      - key: depressed_discouraged
+        question: How often have you felt depressed or discouraged?
+        type: SINGLE_CHOICE
+        options:
+          - value: all_of_the_time
+            text: All of the time
+            score: 1
+          - value: most_of_the_time
+            text: Most of the time
+            score: 2
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 3
+          - value: some_of_the_time
+            text: Some of the time
+            score: 4
+          - value: a_little_bit_of_the_time
+            text: A little bit of the time
+            score: 5
+          - value: hardly_any_of_the_time
+            text: Hardly any of the time
+            score: 6
+          - value: none_of_the_time
+            text: None of the time
+            score: 7
+      - key: gas
+        question: How much of a problem have you had with passing large amounts of gas?
+        type: SINGLE_CHOICE
+        options:
+          - value: a_major_problem
+            text: A major problem
+            score: 1
+          - value: a_big_problem
+            text: A big problem
+            score: 2
+          - value: a_significant_problem
+            text: A significant problem
+            score: 3
+          - value: some_trouble
+            text: Some trouble
+            score: 4
+          - value: a_little_trouble
+            text: A little trouble
+            score: 5
+          - value: hardly_any_trouble
+            text: Hardly any trouble
+            score: 6
+          - value: no_trouble
+            text: No trouble
+            score: 7
+      - key: weight
+        question: How much of a problem have you had maintaining or getting to, the weight you would like to be at?
+        type: SINGLE_CHOICE
+        options:
+          - value: a_major_problem
+            text: A major problem
+            score: 1
+          - value: a_big_problem
+            text: A big problem
+            score: 2
+          - value: a_significant_problem
+            text: A significant problem
+            score: 3
+          - value: some_trouble
+            text: Some trouble
+            score: 4
+          - value: a_little_trouble
+            text: A little trouble
+            score: 5
+          - value: hardly_any_trouble
+            text: Hardly any trouble
+            score: 6
+          - value: no_trouble
+            text: No trouble
+            score: 7
+      - key: relaxed
+        question: How often have you felt relaxed and free of tension?
+        type: SINGLE_CHOICE
+        options:
+          - value: all_of_the_time
+            text: All of the time
+            score: 1
+          - value: most_of_the_time
+            text: Most of the time
+            score: 2
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 3
+          - value: some_of_the_time
+            text: Some of the time
+            score: 4
+          - value: a_little_bit_of_the_time
+            text: A little bit of the time
+            score: 5
+          - value: hardly_any_of_the_time
+            text: Hardly any of the time
+            score: 6
+          - value: none_of_the_time
+            text: None of the time
+            score: 7
+      - key: tenesmus
+        question: How much of the time have your been troubled by a feeling of having to go to the bathroom even though your bowels were empty?
+        type: SINGLE_CHOICE
+        options:
+          - value: all_of_the_time
+            text: All of the time
+            score: 1
+          - value: most_of_the_time
+            text: Most of the time
+            score: 2
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 3
+          - value: some_of_the_time
+            text: Some of the time
+            score: 4
+          - value: a_little_bit_of_the_time
+            text: A little bit of the time
+            score: 5
+          - value: hardly_any_of_the_time
+            text: Hardly any of the time
+            score: 6
+          - value: none_of_the_time
+            text: None of the time
+            score: 7
+      - key: anger
+        question: How much of the time have you felt angry as a result of your bowel problem?
+        type: SINGLE_CHOICE
+        options:
+          - value: all_of_the_time
+            text: All of the time
+            score: 1
+          - value: most_of_the_time
+            text: Most of the time
+            score: 2
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 3
+          - value: some_of_the_time
+            text: Some of the time
+            score: 4
+          - value: a_little_bit_of_the_time
+            text: A little bit of the time
+            score: 5
+          - value: hardly_any_of_the_time
+            text: Hardly any of the time
+            score: 6
+          - value: none_of_the_time
+            text: None of the time
+            score: 7
