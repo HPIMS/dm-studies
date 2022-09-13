@@ -1,0 +1,514 @@
+key: digi-ibd-001
+consentId: ehive-digi-ibd-001
+
+active: true
+openEnrollment: true
+visibility: private
+
+irb: STUDY-22-00083
+pi: Robert Hirten MD
+studyEmail: robert.hirten@mountsinai.org
+
+platform:
+  - ios
+  - android
+
+# Legacy
+wearables:
+  - oura
+
+name: Digital Signatures of Drug Response in IBD
+
+shortDescription: Using data collected from wearable devices, app-based surveys, 
+  and blood and stool samples, this study will aid us in identifying and predicting
+  who responds to IBD medications.
+longDescription: Using data collected from wearable devices, app-based surveys, 
+  and blood and stool samples, this study will aid us in identifying and predicting
+  who responds to IBD medications.
+
+notes: []
+
+imageId: ''
+animationId: ''
+videoId: ''
+
+timeResponsibility:
+  time: 5
+  timeUnits: minutes
+  timePeriod: daily
+
+# Legacy
+withdrawText: |-
+  Thank you for participating in the Digital Signatures of Drug Response in IBD Study! We value your time and effort, and appreciate your contribution to research.
+  
+  Please contact us at
+  robert.hirten@mountsinai.org if you have any further questions about the study or future research on the eHive platform.
+
+baseline: [] # Legacy
+
+surveys:
+  - key: which-ibd
+    rank: 1
+
+
+  - key: begin-next-phase
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+      - action: HIDE
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 999
+
+
+  - key: pro-2-crohns
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 0 # crohns
+    rank: 1
+
+
+  - key: pro-2-uc
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 1 # uc
+    rank: 1
+
+
+  - key: pro-3-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 0 # crohns
+    rank: 2
+
+
+  - key: pro-3
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 8, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
+    rank: 2
+
+
+  - key: sccai-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 1 # uc
+    rank: 2
+
+
+  - key: sccai
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 8, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
+    rank: 2
+
+
+  - key: sibdq-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 3
+
+
+  - key: sibdq
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 3
+
+
+  - key: promis-fatigue-7a-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 4
+
+
+  - key: promis-fatigue-7a
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 4
+
+
+  - key: promis-gi-diarrhea-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 5
+
+
+  - key: promis-gi-diarrhea
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 5
+
+
+  - key: promis-gi-belly-pain-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 6
+
+
+  - key: promis-gi-belly-pain
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 6
+  
+
+  - key: promis-sleep-disturbance-8a-v1.0-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 7
+
+
+  - key: promis-sleep-disturbance-8a-v1.0
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 7
+
+
+  - key: promis-sleep-related-impairment-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 8
+
+
+  - key: promis-sleep-related-impairment
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 2, 4, 6, 10, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 8
+
+
+  - key: promis-emotional-distress-depression-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 9
+
+
+  - key: promis-emotional-distress-depression
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 9
+
+
+  - key: promis-emotional-distress-anxiety-screening
+    schedule:
+      type: PERIOD
+      period: ONCE
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
+    rank: 10
+
+
+  - key: promis-emotional-distress-anxiety
+    schedule:
+      type: TIMETABLE
+      timetable: [0, 14]
+      timetableUnits: WEEKS
+      graceDays: 3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 10
+
+
+  - key: patient-global-impression-crohns-severity
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
+    rank: 11
+
+
+  - key: patient-global-impression-crohns-change
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
+    rank: 12
+
+
+  - key: patient-global-impression-uc-severity
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
+    rank: 11
+
+
+  - key: patient-global-impression-uc-change
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
+    rank: 12
+
+
+  - key: patient-global-impression-fatigue-severity
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 13
+
+
+  - key: patient-global-impression-fatigue-change
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 14
+
+
+  - key: patient-global-impression-sleep-disturbance-severity
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 15
+
+
+  - key: patient-global-impression-sleep-disturbance-change
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 16
