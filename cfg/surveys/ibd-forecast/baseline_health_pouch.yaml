@@ -1,4 +1,4 @@
-key: baseline_health_uc
+key: baseline_health_pouch
 active: true
 schedule:
   type: PERIOD
@@ -17,21 +17,6 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: uc_diagnosis
-        question: What year were you diagnosed with ulcerative colitis?
-        type: YEAR
-      - key: colon_affected
-        question: How much of your colon has ulcerative colitis affected?
-        type: SINGLE_CHOICE
-        options:
-          - value: rectum
-            text: Just my rectum
-          - value: left_side
-            text: The left side of my colon (rectum, sigmoid colon, descending colon)
-          - value: more_than_left
-            text: More than just the left side of my colon OR my entire colon
-          - value: dont_know
-            text: I do not know
       - key: ibd_surgery
         question: Have you ever had surgery for your inflammatory bowel disease?
         type: SINGLE_CHOICE

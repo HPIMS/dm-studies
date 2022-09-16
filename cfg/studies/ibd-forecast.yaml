@@ -64,6 +64,15 @@ surveys:
             resource: ibd-forecast::baseline_demographics
             operator: =
             score: 1
+  - key: baseline_health_pouch
+    rank: 1
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: ibd-forecast::baseline_demographics
+            operator: =
+            score: 2
   - key: lab_tests
     rank: 5
     triggers:
@@ -79,6 +88,10 @@ surveys:
             resource: ibd-forecast::baseline_health_uc
             operator: ">"
             score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_pouch
+            operator: ">"
+            score: 0
   - key: new_meds
     rank: 5
     triggers:
@@ -92,6 +105,10 @@ surveys:
             score: 0
           - type: COMPLETED
             resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_pouch
             operator: ">"
             score: 0
   - key: pro-2-crohns
@@ -110,6 +127,15 @@ surveys:
         condition:
           - type: COMPLETED
             resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+  - key: pouch
+    rank: 4
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_pouch
             operator: ">"
             score: 0
   - key: promis-gi-belly-pain
@@ -131,6 +157,10 @@ surveys:
             resource: ibd-forecast::baseline_health_uc
             operator: ">"
             score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_pouch
+            operator: ">"
+            score: 0
   - key: promis-gi-diarrhea
     rank: 3
     schedule:
@@ -150,6 +180,10 @@ surveys:
             resource: ibd-forecast::baseline_health_uc
             operator: ">"
             score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_pouch
+            operator: ">"
+            score: 0
   - key: pss-4-baseline
     rank: 2
     triggers:
@@ -163,6 +197,10 @@ surveys:
             score: 0
           - type: COMPLETED
             resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0   
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_pouch
             operator: ">"
             score: 0   
   - key: pss-4-bi-weekly
@@ -193,6 +231,10 @@ surveys:
             score: 0
           - type: COMPLETED
             resource: ibd-forecast::baseline_health_uc
+            operator: ">"
+            score: 0
+          - type: COMPLETED
+            resource: ibd-forecast::baseline_health_pouch
             operator: ">"
             score: 0
 
