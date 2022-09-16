@@ -1,0 +1,130 @@
+key: pouch
+scorable: true
+active: true
+schedule:
+  type: PERIOD
+  period: DAILY
+timeEstimate: 2
+name: Symptom Check-in
+short: Reflect on your IBD
+intro:
+  title: Symptom Check-in
+  description: We want to understand more about your symptoms. Please fill out this survey and let us know.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: stool_freq
+        question: What was your stool frequency yesterday?
+        type: SINGLE_CHOICE
+        options:
+          - value: normal
+            text: Your usual frequency since surgery
+            score: 0
+          - value: 1_2_stools
+            text: 1-2 stools/day more than your usual frequency since surgery
+            score: 1
+          - value: 3_4_stools
+            text: 3 or More stools/day more than your usual frequency since surgery
+            score: 2
+      - key: rectal_bleeding
+        question: Did you have rectal bleeding yesterday?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None or rarely
+            score: 0
+          - value: daily
+            text: Daily rectal bleeding
+            score: 1
+      - key: urgency
+        question: Did you have urgency with your bowel movements yesterday?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: occasionaly
+            text: Occasionaly
+            score: 1
+          - value: usually
+            text: It was usually occuring
+            score: 2
+      - key: fever
+        question: Did you have a fever yesterday (at least 38.0 degrees celcius/100.4 degrees fahrenheit)?
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: None
+            score: 0
+          - value: yes
+            text: I had a fever
+            score: 1
+  - key: "1"
+    title: ""
+    description: "Yesterday did you have any new symptoms or increased frequency or intensity of:"
+    questions:
+      - key: increased_diarrhea_at_night
+        question: Diarrhea at night
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+            score: 0
+          - value: yes
+            text: Yes
+            score: 1
+      - key: increased_leakage_of_stool
+        question: Leakage of stool
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+            score: 0
+          - value: yes
+            text: Yes
+            score: 1
+      - key: increased_urgency_with_bowel_movements
+        question: Urgency with your bowel movements
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+            score: 0
+          - value: yes
+            text: Yes
+            score: 1
+      - key: increased_blood_in_stool
+        question: Blood in your stool
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+            score: 0
+          - value: yes
+            text: Yes
+            score: 1
+      - key: increased_fever
+        question: Fever of at least 38.0 degrees celcius/100.4 degrees fahrenheit
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+            score: 0
+          - value: yes
+            text: Yes
+            score: 1
+      - key: increased_malaise
+        question: Malaise or a general feeling of uneasiness or illness
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+            score: 0
+          - value: yes
+            text: Yes
+            score: 1
