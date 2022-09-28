@@ -47,6 +47,9 @@ active:
     baseline:
       - 373d1e29033ffc5ea60dbff8907d8999
       - 13
+    digi-ibd-001:
+      - ebf1bae09694e0e0fe58e2efe90ed9c4
+      - 1
     hpi-decode-bp:
       - add468a9e3f3dbfa3c8f96546476f969
       - 8
@@ -69,6 +72,66 @@ active:
     baseline_medical_history:
       - 8ef115f3b2339b5ba6b73394c29f241c
       - 12
+    digi-ibd-001::begin-next-phase:
+      - 999905e7470650bb2b7fc37ce106f60f
+      - 1
+    digi-ibd-001::patient-global-impression-crohns-change:
+      - 093859dde202a289cb059ac4b91e0aa8
+      - 1
+    digi-ibd-001::patient-global-impression-crohns-severity:
+      - c619d1ce79b8b31854a471c68a5068a4
+      - 1
+    digi-ibd-001::patient-global-impression-fatigue-change:
+      - b1ab50df68ca3ed04ebb5241946531d6
+      - 1
+    digi-ibd-001::patient-global-impression-fatigue-severity:
+      - 975fa66443990ca81bfb75524a482d92
+      - 1
+    digi-ibd-001::patient-global-impression-sleep-disturbance-change:
+      - b0e8d292039b290d47ddd872b597d13b
+      - 1
+    digi-ibd-001::patient-global-impression-sleep-disturbance-severity:
+      - f399fe815f389f7d7fe3ebfcc273828d
+      - 1
+    digi-ibd-001::patient-global-impression-uc-change:
+      - 16dae51bb344e7cc7b39a2a8dc1913bd
+      - 1
+    digi-ibd-001::patient-global-impression-uc-severity:
+      - c082cf443db7ea9605fbb450ba8e02ea
+      - 1
+    digi-ibd-001::pro-3-screening:
+      - 85855e19a54ab10b7da3d226b21e1de6
+      - 1
+    digi-ibd-001::promis-emotional-distress-anxiety-screening:
+      - 9e419efedf89c95fed2544f48aedfacb
+      - 1
+    digi-ibd-001::promis-emotional-distress-depression-screening:
+      - 0aa66ac66ac0f62b42e7fc4d3d52ed93
+      - 1
+    digi-ibd-001::promis-fatigue-7a-screening:
+      - abef631d4c28d56179b339b712b2abb9
+      - 1
+    digi-ibd-001::promis-gi-belly-pain-screening:
+      - 676c0a69d768db4adf451e544f153c72
+      - 1
+    digi-ibd-001::promis-gi-diarrhea-screening:
+      - 7387458c30a2cab3b8d15ac88c714861
+      - 1
+    digi-ibd-001::promis-sleep-disturbance-8a-v1.0-screening:
+      - e4015e8c403cab3fdc8c572819587e78
+      - 1
+    digi-ibd-001::promis-sleep-related-impairment-screening:
+      - 32f38543beaa619648420f6aa3f3af4e
+      - 1
+    digi-ibd-001::sccai-screening:
+      - 944074270690b8fb903254a52780b3fe
+      - 1
+    digi-ibd-001::sibdq-screening:
+      - 323832ea5af74917466c89a3407d4e88
+      - 1
+    digi-ibd-001::which-ibd:
+      - a5d3a33fde1e262980a3fd7bb493576a
+      - 1
     health_care:
       - 552cb6895afd4638b76f0210a822b913
       - 7
@@ -126,6 +189,18 @@ active:
     library::pro-2-uc:
       - 7eb9c97f1cf328f1c8aa8fd315a71a22
       - 4
+    library::pro-3:
+      - 1f790e5b643c48a62bfa2e13972ff08c
+      - 1
+    library::promis-emotional-distress-anxiety:
+      - 9e6a631648bc229c1b16c28a450432ea
+      - 1
+    library::promis-emotional-distress-depression:
+      - c8be2911658de15d9f01e6b3e9a4376b
+      - 1
+    library::promis-fatigue-7a:
+      - 3de2c2d2bb14a6f525a60c5c3d4c4b3a
+      - 1
     library::promis-gh-qol-2-item:
       - cef695da15ed1cb2bdac3834a61d9c16
       - 2
@@ -139,8 +214,11 @@ active:
       - 94dbeeec688f8765b02da22f7070be85
       - 2
     library::promis-sleep-disturbance-8a-v1.0:
-      - 091e371dd69db6bc49d9d57bf0afd3bb
-      - 2
+      - 3062650e4acbc2f20cc7ddde799afa5b
+      - 3
+    library::promis-sleep-related-impairment:
+      - 6126266e4f7385e9d9d3fa274c839c4e
+      - 1
     library::promis-social-support-2-item:
       - b8e67f7514d946cba544af114a5e86de
       - 4
@@ -150,6 +228,12 @@ active:
     library::pss-4:
       - c40ecb35ce10635713e915ed379c9b07
       - 3
+    library::sccai:
+      - 571eebc45da9b0e436248c42879ac068
+      - 1
+    library::sibdq:
+      - 2b0f52afb9a7b585a36a04635398e254
+      - 1
     mood_survey:
       - d4fa6e64c43da7ef6fd70d70f317dfec
       - 6
