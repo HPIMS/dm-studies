@@ -39,6 +39,40 @@ sections:
       - key: third_surgery
         question: What year was your third J-Pouch related surgery? If applicable.
         type: YEAR
+      - key: other_ibd_surgery
+        question: Have you ever had surgery for your inflammatory bowel disease? Other than your J-Pouch?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: no
+            text: No
+          - value: dont_know
+            text: I do not know
+      - key: other_surgery_type
+        question: Which type of surgery did you have (choose all that apply)?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: entire_colon
+            text: My entire colon removed
+          - value: part_colon
+            text: Part of my colon removed
+          - value: part_intestine
+            text: Part of my small intestine removed
+          - value: icr
+            text: An ileocolic resection (ICR) (part of the last part of my small intestine/terminal ileum and part of the colon)
+          - value: drained_abscess
+            text: An abscess drained
+          - value: setons_placed
+            text: Setons placed in the anal area because of a fistula/abscess
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: baseline
+                question: other_ibd_surgery
+                operator: =
+                value: yes
       - key: past_med_trigger
         question: Have you taken any medications for your inflammatory bowel disease in the past that you are not currently taking?
         type: SINGLE_CHOICE
