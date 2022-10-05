@@ -25,6 +25,7 @@ sections:
     questions:
       - key: soft_stool_count
         question: 1. How many liquid or very soft stools did you have yesterday?
+        placeholder: e.g. 2
         type: NUMERIC
       - key: abdominal_pain_rating
         question: 2. Please rate your abdominal pain yesterday.
