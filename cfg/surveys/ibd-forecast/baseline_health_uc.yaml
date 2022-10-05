@@ -17,9 +17,6 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: uc_diagnosis
-        question: What year were you diagnosed with ulcerative colitis?
-        type: YEAR
       - key: colon_affected
         question: How much of your colon has ulcerative colitis affected?
         type: SINGLE_CHOICE
@@ -32,6 +29,9 @@ sections:
             text: More than just the left side of my colon OR my entire colon
           - value: dont_know
             text: I do not know
+      - key: uc_diagnosis
+        question: What year were you diagnosed with ulcerative colitis?
+        type: YEAR
       - key: ibd_surgery
         question: Have you ever had surgery for your inflammatory bowel disease?
         type: SINGLE_CHOICE
