@@ -1,4 +1,4 @@
-key: baseline_health_uc
+key: baseline_health_pouch
 active: true
 schedule:
   type: PERIOD
@@ -17,23 +17,30 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: colon_affected
-        question: How much of your colon has ulcerative colitis affected?
+      - key: ibd_type
+        question: Which condition were you diagnosed with prior to your J-Pouch Surgery?
         type: SINGLE_CHOICE
         options:
-          - value: rectum
-            text: Just my rectum
-          - value: left_side
-            text: The left side of my colon (rectum, sigmoid colon, descending colon)
-          - value: more_than_left
-            text: More than just the left side of my colon OR my entire colon
-          - value: dont_know
-            text: I do not know
+          - value: crohns
+            text: Crohn's Disease
+          - value: ulcerative_colitis
+            text: Ulcerative colitis
+          - value: indeterminate
+            text: Indeterminate colitis
       - key: uc_diagnosis
-        question: What year were you diagnosed with ulcerative colitis?
+        question: What year were you diagnosed with inflammatory bowel disease?
         type: YEAR
-      - key: ibd_surgery
-        question: Have you ever had surgery for your inflammatory bowel disease?
+      - key: first_surgery
+        question: Often J pouch surgeries are performed over several stages. What year was your first J-Pouch related surgery?
+        type: YEAR     
+      - key: second_surgery
+        question: What year was your second J-Pouch related surgery? If applicable.
+        type: YEAR     
+      - key: third_surgery
+        question: What year was your third J-Pouch related surgery? If applicable.
+        type: YEAR
+      - key: other_ibd_surgery
+        question: Have you ever had surgery for your inflammatory bowel disease? Other than your J-Pouch?
         type: SINGLE_CHOICE
         options:
           - value: yes
@@ -42,7 +49,7 @@ sections:
             text: No
           - value: dont_know
             text: I do not know
-      - key: surgery_type
+      - key: other_surgery_type
         question: Which type of surgery did you have (choose all that apply)?
         type: MULTIPLE_CHOICE
         options:
@@ -54,8 +61,6 @@ sections:
             text: Part of my small intestine removed
           - value: icr
             text: An ileocolic resection (ICR) (part of the last part of my small intestine/terminal ileum and part of the colon)
-          - value: j_pouch
-            text: A J-pouch created
           - value: drained_abscess
             text: An abscess drained
           - value: setons_placed
@@ -65,7 +70,7 @@ sections:
               type: SHOW
             condition:
               - section: baseline
-                question: ibd_surgery
+                question: other_ibd_surgery
                 operator: =
                 value: yes
       - key: past_med_trigger

@@ -32,6 +32,9 @@ sections:
           - value: indeterminate
             text: Indeterminate colitis
             score: 1
+          - value: j_pouch
+            text: I have a J-pouch (IPAA, ileal pouch-anal anastomosis)
+            score: 2
       - key: age
         question: What is your date of birth?
         type: DATE
