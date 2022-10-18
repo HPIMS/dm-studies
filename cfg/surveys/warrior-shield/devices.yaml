@@ -12,7 +12,7 @@ intro:
   description: "Complete the following section to let us know where to send the HeartMath intervention device, and to let us know if you need an Apple Watch."
 outro:
   title: "Thank you!"
-  description: 'Once you have your devices, you must connect your Apple Watch to the eHive app and wear it for at least 7 days before starting the HeartMath intervention. We will remind you over the course of the next few weeks. Once you have worn the watch for at least 7 days, you will press the "start intervention" button in this App to start the study.'
+  description: 'Once you have your devices, you must connect your Apple Watch to the ehive app and wear it for at least 7 days before starting the HeartMath intervention. We will remind you over the course of the next few weeks. Once you have worn the watch for at least 7 days, you will press the "start intervention" button in this App to start the study.'
 sections:
   - key: address
     title: Address
@@ -21,7 +21,7 @@ sections:
       - key: full_name
         question: Full Name
         type: TEXT
-        required: true  
+        required: true
       - key: street
         question: Street
         type: TEXT

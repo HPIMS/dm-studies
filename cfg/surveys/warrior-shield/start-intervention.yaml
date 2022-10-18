@@ -14,7 +14,7 @@ intro:
 
     1. Have the HeartMath sensor and the Apple Watch
     2. Download the HeartMath Inner Balance app (instructions sent via email)
-    3. Sync the Apple Watch to the eHive app
+    3. Sync the Apple Watch to the ehive app
     4. Wear the Apple Watch for 7 days of baseline measurements
 
     Please continue with this survey once you have completed the steps above.
@@ -37,7 +37,7 @@ sections:
             text: No
             score: 0
       - key: apple_watch
-        question: Have you connected the Apple Watch to the eHive app and worn it for 7 days?
+        question: Have you connected the Apple Watch to the ehive app and worn it for 7 days?
         type: SINGLE_CHOICE
         triggers:
           - action:

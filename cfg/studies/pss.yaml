@@ -6,7 +6,7 @@ openEnrollment: true
 visibility: private
 
 irb: STUDY-20-00256
-pi: 'Girish Nadkarni MD'
+pi: "Girish Nadkarni MD"
 studyEmail: ehive.pss@mssm.edu
 
 platform:
@@ -27,7 +27,7 @@ wearables:
 name: Pain, Stress, Sleep
 
 shortDescription: In this study, we aim to use wearable devices to learn about
-  underlying symptoms related to pain, stress, and sleep, which affect us all every day. 
+  underlying symptoms related to pain, stress, and sleep, which affect us all every day.
 longDescription: In this study, we aim to use wearable devices to learn about
   underlying symptoms related to pain, stress, and sleep, which affect us all every day.
   By providing lifestyle data, you can gain insight into your own health and behaviors,
@@ -36,8 +36,8 @@ longDescription: In this study, we aim to use wearable devices to learn about
 notes: []
 
 imageId: study-pss
-animationId: ''
-videoId: ''
+animationId: ""
+videoId: ""
 
 timeResponsibility:
   time: 1
@@ -47,11 +47,11 @@ timeResponsibility:
 # Legacy
 withdrawText: |-
   Thank you for participating in the DDP: Pain, Stress, Sleep study! We value your time and effort, and appreciate your contribution to research.
-  
-  Please contact us at
-  ehive.pss@mssm.edu if you have any further questions about the study or future research on the eHive platform.
 
- # Legacy
+  Please contact us at
+  ehive.pss@mssm.edu if you have any further questions about the study or future research on the ehive platform.
+
+# Legacy
 baseline:
   - baseline_demographics
   - baseline_medical_history
