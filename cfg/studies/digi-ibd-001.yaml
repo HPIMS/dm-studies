@@ -19,18 +19,18 @@ wearables:
 
 name: Digital Signatures of Drug Response in IBD
 
-shortDescription: Using data collected from wearable devices, app-based surveys, 
+shortDescription: Using data collected from wearable devices, app-based surveys,
   and blood and stool samples, this study will aid us in identifying and predicting
   who responds to IBD medications.
-longDescription: Using data collected from wearable devices, app-based surveys, 
+longDescription: Using data collected from wearable devices, app-based surveys,
   and blood and stool samples, this study will aid us in identifying and predicting
   who responds to IBD medications.
 
 notes: []
 
-imageId: ''
-animationId: ''
-videoId: ''
+imageId: ""
+animationId: ""
+videoId: ""
 
 timeResponsibility:
   time: 5
@@ -40,16 +40,15 @@ timeResponsibility:
 # Legacy
 withdrawText: |-
   Thank you for participating in the Digital Signatures of Drug Response in IBD Study! We value your time and effort, and appreciate your contribution to research.
-  
+
   Please contact us at
-  robert.hirten@mountsinai.org if you have any further questions about the study or future research on the eHive platform.
+  robert.hirten@mountsinai.org if you have any further questions about the study or future research on the ehive platform.
 
 baseline: [] # Legacy
 
 surveys:
   - key: which-ibd
     rank: 1
-
 
   - key: begin-next-phase
     triggers:
@@ -67,7 +66,6 @@ surveys:
             score: 1
     rank: 999
 
-
   - key: pro-2-crohns
     triggers:
       - action: SHOW
@@ -78,7 +76,6 @@ surveys:
             score: 0 # crohns
     rank: 1
 
-
   - key: pro-2-uc
     triggers:
       - action: SHOW
@@ -88,7 +85,6 @@ surveys:
             operator: "="
             score: 1 # uc
     rank: 1
-
 
   - key: pro-3-screening
     schedule:
@@ -102,7 +98,6 @@ surveys:
             operator: "="
             score: 0 # crohns
     rank: 2
-
 
   - key: pro-3
     schedule:
@@ -125,7 +120,6 @@ surveys:
               score: 1
     rank: 2
 
-
   - key: sccai-screening
     schedule:
       type: PERIOD
@@ -138,7 +132,6 @@ surveys:
             operator: "="
             score: 1 # uc
     rank: 2
-
 
   - key: sccai
     schedule:
@@ -161,7 +154,6 @@ surveys:
               score: 1
     rank: 2
 
-
   - key: sibdq-screening
     schedule:
       type: PERIOD
@@ -174,7 +166,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 3
-
 
   - key: sibdq
     schedule:
@@ -191,7 +182,6 @@ surveys:
             score: 1
     rank: 3
 
-
   - key: promis-fatigue-7a-screening
     schedule:
       type: PERIOD
@@ -204,7 +194,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 4
-
 
   - key: promis-fatigue-7a
     schedule:
@@ -221,7 +210,6 @@ surveys:
             score: 1
     rank: 4
 
-
   - key: promis-gi-diarrhea-screening
     schedule:
       type: PERIOD
@@ -234,7 +222,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 5
-
 
   - key: promis-gi-diarrhea
     schedule:
@@ -251,7 +238,6 @@ surveys:
             score: 1
     rank: 5
 
-
   - key: promis-gi-belly-pain-screening
     schedule:
       type: PERIOD
@@ -264,7 +250,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 6
-
 
   - key: promis-gi-belly-pain
     schedule:
@@ -280,7 +265,6 @@ surveys:
             operator: "="
             score: 1
     rank: 6
-  
 
   - key: promis-sleep-disturbance-8a-v1.0-screening
     schedule:
@@ -294,7 +278,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 7
-
 
   - key: promis-sleep-disturbance-8a-v1.0
     schedule:
@@ -311,7 +294,6 @@ surveys:
             score: 1
     rank: 7
 
-
   - key: promis-sleep-related-impairment-screening
     schedule:
       type: PERIOD
@@ -324,7 +306,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 8
-
 
   - key: promis-sleep-related-impairment
     schedule:
@@ -341,7 +322,6 @@ surveys:
             score: 1
     rank: 8
 
-
   - key: promis-emotional-distress-depression-screening
     schedule:
       type: PERIOD
@@ -354,7 +334,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 9
-
 
   - key: promis-emotional-distress-depression
     schedule:
@@ -371,7 +350,6 @@ surveys:
             score: 1
     rank: 9
 
-
   - key: promis-emotional-distress-anxiety-screening
     schedule:
       type: PERIOD
@@ -384,7 +362,6 @@ surveys:
             operator: ">"
             score: 0
     rank: 10
-
 
   - key: promis-emotional-distress-anxiety
     schedule:
@@ -400,7 +377,6 @@ surveys:
             operator: "="
             score: 1
     rank: 10
-
 
   - key: patient-global-impression-crohns-severity
     triggers:
@@ -418,7 +394,6 @@ surveys:
               score: 1
     rank: 11
 
-
   - key: patient-global-impression-crohns-change
     triggers:
       - action: SHOW
@@ -434,7 +409,6 @@ surveys:
               operator: "="
               score: 1
     rank: 12
-
 
   - key: patient-global-impression-uc-severity
     triggers:
@@ -452,7 +426,6 @@ surveys:
               score: 1
     rank: 11
 
-
   - key: patient-global-impression-uc-change
     triggers:
       - action: SHOW
@@ -469,7 +442,6 @@ surveys:
               score: 1
     rank: 12
 
-
   - key: patient-global-impression-fatigue-severity
     triggers:
       - action: SHOW
@@ -479,7 +451,6 @@ surveys:
             operator: "="
             score: 1
     rank: 13
-
 
   - key: patient-global-impression-fatigue-change
     triggers:
@@ -491,7 +462,6 @@ surveys:
             score: 1
     rank: 14
 
-
   - key: patient-global-impression-sleep-disturbance-severity
     triggers:
       - action: SHOW
@@ -501,7 +471,6 @@ surveys:
             operator: "="
             score: 1
     rank: 15
-
 
   - key: patient-global-impression-sleep-disturbance-change
     triggers:

@@ -19,8 +19,9 @@ wearables:
 
 name: "Decode BP"
 
-shortDescription: The goal of the Decode BP study is to understand if data derived
-  from optical sensors in wearable devices can be used to track blood pressure. 
+shortDescription:
+  The goal of the Decode BP study is to understand if data derived
+  from optical sensors in wearable devices can be used to track blood pressure.
 longDescription: The Decode BP study aims to understand if data derived
   from optical sensors in wearable devices can be used to track blood pressure.
 
@@ -28,13 +29,13 @@ longDescription: The Decode BP study aims to understand if data derived
   We hope to better understand the relationship between the data from the sensors and the
   standard blood pressure monitor.
 
-notes: 
-  - icon: 'thumb-up-outline'
-    text: 'This study is available to all patients.'
+notes:
+  - icon: "thumb-up-outline"
+    text: "This study is available to all patients."
 
 imageId: study-hpi-decode-bp
-animationId: ''
-videoId: ''
+animationId: ""
+videoId: ""
 
 timeResponsibility:
   time: 30
@@ -44,25 +45,25 @@ timeResponsibility:
 # Legacy
 withdrawText: |-
   Thank you for participating in the Decode BP Study! We value your time and effort, and appreciate your contribution to research.
-  
+
   Please contact us at
-  ehive.decodebp@mssm.edu if you have any further questions about the study or future research on the eHive platform.
+  ehive.decodebp@mssm.edu if you have any further questions about the study or future research on the ehive platform.
 
 baseline: [] # Legacy
 
-surveys: 
+surveys:
   - key: demographics
     rank: 1
   - key: fitzpatrick-skin-type
     rank: 1
   - key: usability
     triggers:
-    - action: SHOW
-      condition:
-        - type: COMPLETED
-          resource: hpi-decode-bp::calibration-measurement
-          operator: ">"
-          score: 0
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: hpi-decode-bp::calibration-measurement
+            operator: ">"
+            score: 0
     rank: 3
   # NEVER task (need the configuration, but won't show in the task list)
   - key: clearance
@@ -70,18 +71,18 @@ surveys:
 multimedia:
   - key: intervention-video-always
     triggers:
-    - action: SHOW
-      condition:
-        - type: COMPLETED
-          resource: hpi-decode-bp::bp-measurement
-          operator: ">"
-          score: 0
-    - action: HIDE
-      condition:
-        - type: COMPLETED
-          resource: hpi-decode-bp::bp-measurement
-          operator: ">"
-          score: 6
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: hpi-decode-bp::bp-measurement
+            operator: ">"
+            score: 0
+      - action: HIDE
+        condition:
+          - type: COMPLETED
+            resource: hpi-decode-bp::bp-measurement
+            operator: ">"
+            score: 6
     rank: 1000
   # NEVER tasks (need a configuration for the intervention but don't show in task list)
   - key: calibration-video
@@ -91,25 +92,25 @@ multimedia:
 interventions:
   - key: calibration-measurement
     triggers:
-    - action: SHOW
-      condition:
-        type: AND
-        tasks:
-        - type: COMPLETED
-          resource: hpi-decode-bp::demographics
-          operator: ">"
-          score: 0
-        - type: COMPLETED
-          resource: library::fitzpatrick-skin-type
-          operator: ">"
-          score: 0
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: COMPLETED
+              resource: hpi-decode-bp::demographics
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: library::fitzpatrick-skin-type
+              operator: ">"
+              score: 0
     rank: 2
   - key: bp-measurement
     triggers:
-    - action: SHOW
-      condition:
-        - type: COMPLETED
-          resource: hpi-decode-bp::calibration-measurement
-          operator: ">"
-          score: 0
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: hpi-decode-bp::calibration-measurement
+            operator: ">"
+            score: 0
     rank: 2
