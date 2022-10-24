@@ -43,7 +43,7 @@ sections:
         type: 'TEXT'
       - key: zipcode
         question: What is your zip code?
-        type: 'NUMERIC'
+        type: 'TEXT'
       - key: sex
         question: What is your sex at birth?
         type: SINGLE_CHOICE
