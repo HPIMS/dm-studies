@@ -6,6 +6,7 @@ const scoringFns = {
   "library::cd-risc-10": sumScore,
   "ibd-forecast::baseline_demographics": sumScore,
   "ibd-forecast::pss-4-baseline": sumScore,
+  "ibd-forecast::pss-4-bi-weekly": sumScore,
   "ibd-forecast::pouch": sumScore,
   "library::fitzpatrick-skin-type": (surveyData, optionScoreMap) => {
     const score = sumScore(surveyData, optionScoreMap);
