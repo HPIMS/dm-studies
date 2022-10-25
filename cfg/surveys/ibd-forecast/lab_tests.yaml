@@ -30,6 +30,8 @@ sections:
       - key: c_reactive_value
         question: What is your C-reactive protein?
         type: 'NUMERIC'
+        allowDecimals: true
+        decimalPrecision: 1
         triggers:
           - action:
               type: SHOW
@@ -74,6 +76,8 @@ sections:
       - key: fecal_value
         question: What is your fecal calprotectin?
         type: NUMERIC
+        allowDecimals: true
+        decimalPrecision: 2
         triggers:
             - action:
                 type: SHOW
