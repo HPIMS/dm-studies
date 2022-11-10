@@ -20,7 +20,7 @@
       "Section",
       [
         "BodyLarge",
-        "We are inviting you to participate in the CRAMP Study. The main goal of the study is to understand how stress resilience impacts symptoms of menstruation related pain, also known as dysmenorrhea. We will also evaluate the effect of social network and social interaction on the intensity of dysmenorrhea. The study collects data from surveys, app-based exercises, audio video recordings, and from your iPhone and Apple watch."
+        "We are inviting you to participate in the CRAMP Study. The main goal of the study is to understand how stress resilience impacts menstruation related pain, also known as dysmenorrhea. We will also evaluate the effect of social network and social interaction on the intensity of menstrual pain. The study collects data from surveys, audio and video recordings during an app-based task, and from your iPhone and Apple watch."
       ]
     ],
     [
@@ -28,6 +28,13 @@
       [
         "BodyLarge",
         "If you are interested in learning more about joining this study, this simple walk through will first see if you are eligible and then highlight the details of what participation will involve."
+      ]
+    ],
+    [
+      "Section",
+      [
+        "BodyLarge",
+        "After reading about the study, we will give you a short quiz to make sure that you understand what’s involved."
       ]
     ]
   ],
@@ -59,12 +66,12 @@
       "ineligibleText": "You must not have taken hormonal contraceptions within the past 3 months"
     },
     {
-      "text": "I am currently pregnant or breast feedings",
+      "text": "I am currently pregnant or breastfeeding",
       "isEligible": false,
-      "ineligibleText": "You must not currently be breast feeding"
+      "ineligibleText": "You must not currently be breastfeeding"
     },
     {
-      "text": "I currently have an acute illness (short team illness like cold, cough etc.)",
+      "text": "I currently have an acute illness (short-term illness like cold, cough etc.)",
       "isEligible": false,
       "ineligibleText": "You must not currently have an acute illness"
     },
@@ -118,7 +125,11 @@
           "short": [
             [
               "BodyLarge",
-              "To protect your privacy, we use a random code instead of your name on your study data. Learn more about how your privacy and identity are protected."
+              "To protect your privacy, we use a random code instead of your name on your study data. Moreover, the National Institute of Health has issued a certificate of confidentiality to protect your personal information from forced disclosure, for example in court, without your prior consent."
+            ],
+            [
+              "BodyLarge",
+              "Learn more about how your privacy and identity are protected."
             ]
           ],
           "long": [
@@ -139,18 +150,61 @@
             ],
             [
               "BodyLarge",
-              "You will be asked to link your electronic health record data to the study however this is not required. You will also be asked to share your social interaction data from WhatsApp and Facebook. This is also optional. Learn more about how data is gathered and used."
-            ]
+              "You will be asked to link your electronic health record data to the study however this is not required. You will also be asked to share your social interaction data from WhatsApp and Facebook Messenger. This is also optional. WhatsApp and Facebook Messenger data will not contain information regarding the content of your messages. We will collect audio and video recording during the resilience test from your iPhone front camera and microphone."
+            ],
+            ["BodyLarge", "Learn more about how data is gathered and used."]
           ],
           "long": [
             [
               "BodyLarge",
-              "This study can gather sensor data from your iPhone and Apple Watch with your permission. We will NOT access your personal contacts, other applications, text messages, personal photos or websites visited. By signing this consent, you are giving permission to use your iPhone and Apple Watch data, the survey data you provide, and any electronic health record data you choose to link to the study. You are also giving permission for other researchers to access your data without identifiers, for future unrestricted research. This would be in a coded fashion, where your identifiers are masked and replaced with a unique code."
+              "This study can gather sensor data from your iPhone and Apple Watch with your permission, as well as data regarding your location and use of messages and phone calls. Location data will NOT include any information regarding specific addresses, but will include information regarding visit time, location type and distance from home. We will NOT access your personal contacts, other applications, text messages, personal photos or websites visited. By signing this consent, you are giving permission to use your iPhone and Apple Watch data, the survey data you provide, and any electronic health record data you choose to link to the study. You are also giving permission for other researchers to access your data without identifiers, for future unrestricted research. This would be in a coded fashion, where your identifiers are masked and replaced with a unique code."
             ]
           ]
         }
       ],
       "quiz": [
+        {
+          "prompt": "While there is always for privacy breach, we will do everything to protect your privacy including:",
+          "options": [
+            {
+              "text": "Using a random code instead of your name in our study data",
+              "isCorrect": false
+            },
+            {
+              "text": "Analyzing your data without information that identifies you",
+              "isCorrect": false
+            },
+            {
+              "text": "Storing your data in a manner that keeps your information as safe as possible",
+              "isCorrect": false
+            },
+            {
+              "text": "All of the above",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "prompt": "In this study, we will collect information from which of the following",
+          "options": [
+            {
+              "text": "iPhone and apple watch sensors",
+              "isCorrect": false
+            },
+            {
+              "text": "Audio and Video recording during the resilience test",
+              "isCorrect": false
+            },
+            {
+              "text": "Answers to survey questions",
+              "isCorrect": false
+            },
+            {
+              "text": "All of the above",
+              "isCorrect": true
+            }
+          ]
+        },
         {
           "prompt": "The main purpose of this study is to",
           "options": [
@@ -222,12 +276,54 @@
           "long": [
             [
               "BodyLarge",
-              "There are procedures in place to minimize this risk. It is also possible that the application's presence on your phone, the alerts or the reminders may be observed by someone other than you. Information on how we store your data may be found in the privacy section. You may incur standard data charges when using our app, depending on your service carrier."
+              "There are procedures in place to minimize this risk. It is also possible that the application's presence on your phone, the alerts or the reminders may be observed by someone other than you. Information regarding the locations you visited includes location type (home, work, school, gym, other) and approximate times in which you visited each location as well as distance from home. Through this information one could infer your daily routine. However, all measures are in place to protect your data privacy and we will not perform analysis isolatedly on your specific routine pattern.  Information on how we store your data may be found in the privacy section. You may incur standard data charges when using our app, depending on your service carrier."
             ]
           ]
         }
       ],
       "quiz": [
+        {
+          "prompt": "Regarding the potential benefits of this study, mark the right statement",
+          "options": [
+            {
+              "text": "While we don’t expect any direct benefits for you or others in participating in this study, the data generated from this study will be used to support development of interventions to improve symptoms in patients with dysmenorrhea (menstruation related pain)",
+              "isCorrect": true
+            },
+            {
+              "text": "We expect a very high benefit for you in participating in this study",
+              "isCorrect": false
+            },
+            {
+              "text": "We expect a very high benefit for others in participating in this study",
+              "isCorrect": false
+            },
+            {
+              "text": "No one will ever benefit from this study",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "prompt": "Regarding the potential risks of this study, mark the right statement",
+          "options": [
+            {
+              "text": "There are absolutely no risks associated with this study",
+              "isCorrect": false
+            },
+            {
+              "text": "There always exists the potential for loss of private information and there are procedures in place to minimize this risk",
+              "isCorrect": true
+            },
+            {
+              "text": "There always exists the potential for loss of private information and there are NO procedures in place to minimize this risk",
+              "isCorrect": false
+            },
+            {
+              "text": "None of the above",
+              "isCorrect": false
+            }
+          ]
+        },
         {
           "prompt": "Under what circumstances would you expect to hear from the researchers again?",
           "options": [
@@ -251,7 +347,6 @@
         }
       ]
     },
-
     {
       "key": "3",
       "title": "Section Three",
@@ -320,6 +415,48 @@
       ],
       "quiz": [
         {
+          "prompt": "Regarding the results of the study, select the correct statement",
+          "options": [
+            {
+              "text": "The results of this study could be published or presented at scientific meetings, lectures, etc., but would not include any information that would let others know who you are, unless you give separate permission to do so",
+              "isCorrect": true
+            },
+            {
+              "text": "The results of this study will never be published",
+              "isCorrect": false
+            },
+            {
+              "text": "The results of this study will include any information that would let others know who you are",
+              "isCorrect": false
+            },
+            {
+              "text": "None of the above",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "prompt": "Regarding withdrawal from this study, select the correct statement",
+          "options": [
+            {
+              "text": "You can withdraw your consent and discontinue participation at any time",
+              "isCorrect": true
+            },
+            {
+              "text": "If you withdraw your consent and discontinue participation you will have to pay a small penalty",
+              "isCorrect": false
+            },
+            {
+              "text": "None of the above",
+              "isCorrect": false
+            },
+            {
+              "text": "All of the above",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
           "prompt": "How are the data you provide and your personal health information stored?",
           "options": [
             {
@@ -360,7 +497,7 @@
       "BodyLarge",
       [
         ["Italic", "Form Version Date: "],
-        ["Text", "October 31, 2022"]
+        ["Text", "November 08, 2022"]
       ]
     ],
     [
@@ -517,7 +654,7 @@
         ["H4", "Smartphone and Wearable device:"],
         [
           "BodyLarge",
-          "We will collect the following information from your iPhone (iPhone will not be provided by the study): screen unlocks, screen wakes, duration social media app usage, duration of music app usage, number of messages, phone calls and unique contacts with whom you interacted, smartphone keyboard usage statistics including number of words written with a specific sentiment, location. No information that may identify you or your contacts will be collected or stored. Information regarding time spent in a specific location (home, work, school, gym or other) and its distance from home will be determined by Apple algorithm. Location information will not include any address or GPS location information."
+          "We will collect the following information from your iPhone (iPhone will not be provided by the study): number of screen unlocks, number of screen wakes, duration of social media app usage, duration of music app usage, number of messages, phone calls and unique contacts with whom you interacted, smartphone keyboard usage statistics including number of words written with a specific sentiment, and information regarding significant locations you visited. Information regarding significant locations includes approximate time of arrival and departure, location type determined by Apple’s algorithm out of five possible categories (home, work, school, gym, other), and distance of location from home. Location information will not include any address or GPS location information. Information regarding location will only be collected if Apple’s algorithm identifies that location to be frequently visited by you as part of your daily routine.  No information that may identify you or your contacts will be collected or stored."
         ],
         [
           "BodyLarge",
@@ -663,6 +800,10 @@
             [
               "BodyLarge",
               "Risk of loss of private information; this risk always exists, but there are procedures in place to minimize the risk. Your name and other information that could directly identify you (such as address, date of birth or social security number) will never be placed into a scientific database."
+            ],
+            [
+              "BodyLarge",
+              "Information regarding significant locations visited by you might be used to identify your routine mobility pattern. However, no information regarding specific addresses or specific location types beyond those categories provided by Apple (i.e. home, work, school, gym, other) will be collected. We will not perform single analysis on your specific location data."
             ],
             ["BodyLarge", "The resilience test may be uncomfortable."],
             [
