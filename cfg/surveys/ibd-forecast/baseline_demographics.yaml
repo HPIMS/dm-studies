@@ -153,25 +153,25 @@ sections:
           - value: apple_watch
             text: Apple Watch
             inlineQuestion:
-              key: conditions_other_description
+              key: wearable_device_apple_watch_description
               question: "Please specify model:"
               type: TEXTAREA
           - value: fitbit
             text: Fitbit
             inlineQuestion:
-              key: conditions_other_description
+              key: wearable_device_fitbit_description
               question: "Please specify model:"
               type: TEXTAREA
           - value: oura
             text: Oura Ring
             inlineQuestion:
-              key: conditions_other_description
+              key: wearable_device_oura_description
               question: "Please specify model:"
               type: TEXTAREA
           - value: other
             text: "Other"
             inlineQuestion:
-              key: conditions_other_description
+              key: wearable_device_other_description
               question: "Please specify brand and model:"
               type: TEXTAREA
       - key: email_address
