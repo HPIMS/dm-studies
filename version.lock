@@ -53,12 +53,18 @@ active:
     baseline:
       - 373d1e29033ffc5ea60dbff8907d8999
       - 13
+    cppd-1:
+      - f426cc50a08d658e3d8e6eb911f5b684
+      - 1
+    cppd-2:
+      - 8390f0c6ed1e62173412a516e65a7011
+      - 1
     cramp:
       - 7eaa2a10b236747555c0f49f0b59421a
       - 2
     digi-ibd-001:
       - 5ce183d1db1ab8ac437404d38f516e79
-      - 18
+      - 19
     hpi-decode-bp:
       - 00783e5154ee5312655ba6dd114f7d2e
       - 14
@@ -81,6 +87,9 @@ active:
     baseline_medical_history:
       - 8ef115f3b2339b5ba6b73394c29f241c
       - 12
+    cppd-1::physical-therapy:
+      - b2e0e12f881c5188ae5ccdbfb26a3a07
+      - 1
     digi-ibd-001::begin-next-phase:
       - 999905e7470650bb2b7fc37ce106f60f
       - 2
@@ -127,8 +136,8 @@ active:
       - 7387458c30a2cab3b8d15ac88c714861
       - 3
     digi-ibd-001::promis-sleep-disturbance-8a-v1.0-screening:
-      - e4015e8c403cab3fdc8c572819587e78
-      - 4
+      - 306181e7f9a4aa3f99718350d0dd95f5
+      - 5
     digi-ibd-001::promis-sleep-related-impairment-screening:
       - 32f38543beaa619648420f6aa3f3af4e
       - 4
@@ -189,9 +198,18 @@ active:
     library::fitzpatrick-skin-type:
       - 7c7b0c4c75bc5a97b3f99907b2447aa7
       - 5
+    library::ipaq:
+      - e784c6df08a284c562e54efd57ce1de3
+      - 1
+    library::mpq:
+      - eda9ae728c65edf0458cb2ad19677e91
+      - 1
     library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
       - 841be1ae7a49d352b35bf4a3d9d2aad1
       - 6
+    library::pcs:
+      - 31cdfd0df6aa45828f42616f79001604
+      - 1
     library::phq-4:
       - 34f951ecaba167c5b2cba05b11b82a71
       - 6
@@ -213,6 +231,9 @@ active:
     library::promis-emotional-distress-depression:
       - c8be2911658de15d9f01e6b3e9a4376b
       - 4
+    library::promis-fatigue-4a-v1.0:
+      - a54e2aee058aeb1ff5ceb400079e52ee
+      - 1
     library::promis-fatigue-7a:
       - 3de2c2d2bb14a6f525a60c5c3d4c4b3a
       - 4
@@ -225,12 +246,21 @@ active:
     library::promis-gi-diarrhea:
       - e07df426a5db0c94e8cc1811a2a29d85
       - 4
+    library::promis-global-mental-health-2a-v1.2:
+      - 58d1194b036d582f10bfc21edd7f3642
+      - 1
     library::promis-pain-interference-6b-v1.0:
       - 94dbeeec688f8765b02da22f7070be85
       - 4
+    library::promis-pain-interference-6b-v1.1:
+      - ab89f6b3261b6ed58f1cec2eef2598ce
+      - 1
+    library::promis-sleep-disturbance-4a-v1.0:
+      - 5fdfca7cfe1a5f493b98a6af01c9e834
+      - 1
     library::promis-sleep-disturbance-8a-v1.0:
-      - 3062650e4acbc2f20cc7ddde799afa5b
-      - 5
+      - 064c877c86c37de0667e83f393a763cd
+      - 6
     library::promis-sleep-related-impairment:
       - 6126266e4f7385e9d9d3fa274c839c4e
       - 4
