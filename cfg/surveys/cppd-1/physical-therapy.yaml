@@ -1,0 +1,37 @@
+key: physical-therapy
+active: true
+scorable: true
+schedule:
+  type: PERIOD
+  period: DAILY
+timeEstimate: 1
+name: ""
+short: ""
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: pt_1
+        question: Did you do any physical therapy exercises today as prescribed by your provider?
+        type: YESNO_CHOICE
+      - key: pt_2
+        question: Please specify the excercise types, duration/repetitions, and any other important details.
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pt_1
+                operator: =
+                value: yes
+      - key: pt_3
+        question: Overall, how hard were you working during the exercises?
+        description: Please rate your perceived exertion from 6 - 20.
+          With 6 being no or minimal exertion and 20 being maximum possible effort.
+          For example, a rating of 11 would correspond to light, and 15 would correspond to hard intensity.
+        type: SLIDER
+        min: 6
+        max: 20
+        step: 1
