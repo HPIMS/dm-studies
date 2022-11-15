@@ -19,7 +19,7 @@ sections:
       We want to understand more about how fatigue is impacting your life. During the past 7 days:
     questions:
       - key: fatigue_1
-        question: I feel fatigued
+        question: I felt fatigued
         type: SINGLE_CHOICE
         options:
           - value: not_at_all
@@ -38,7 +38,7 @@ sections:
             text: Very much
             score: 5
       - key: fatigue_2
-        question: I have trouble starting things because I am tired 
+        question: I had trouble starting things because I am tired 
         type: SINGLE_CHOICE
         options:
           - value: not_at_all
