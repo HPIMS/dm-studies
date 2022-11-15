@@ -1,0 +1,44 @@
+key: cppd-1
+consentId: ehive-cppd-1
+
+active: true
+openEnrollment: true
+visibility: public # TODO: make private
+
+irb: STUDY-22-01002
+pi: Ipek Ensari
+studyEmail: "" # TODO: need email
+
+platform:
+  - ios
+  - android
+
+name: mHealth Outcome Measures
+
+shortDescription: This is a longitudinal mobile self-tracking study
+  which aims to develop patient-centered treatment response measures
+  for chronic pelvic pain disorders.
+
+longDescription: This study is enrolling women with a chronic pelvic
+  pain disorder(CPPD, e.g.,endometriosis, uterine fibroids, adenomyosis)
+  and starting physical therapy treatment. Participation involves using
+  a smart phone App to self-track health symptoms and self-management
+  using mobile Apps, and wearing a wrist-worn activity tracker provided
+  by the study team. Participants will be remunerated up to $150 for 12
+  weeks of participation in the study. Data from the study will be used
+  to design patient-centered measures specific for CPPD that can used to
+  monitor progress and response to treatments, such as response to a
+  physical therapy program.   
+
+notes: []
+
+imageId: ""  # TODO: need image
+animationId: ""
+videoId: ""
+
+timeResponsibility:
+  time: "???" # TODO: need time estimate
+  timeUnits: minutes
+  timePeriod: daily
+
+surveys: []
