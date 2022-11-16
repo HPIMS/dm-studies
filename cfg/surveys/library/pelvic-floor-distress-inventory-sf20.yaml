@@ -1,0 +1,485 @@
+key: pelvic-floor-distress-inventory-sf20
+active: true
+scorable: true
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: MONTHLY
+timeEstimate: 1
+name: Pelvic Floor Distress
+short: ""
+intro:
+  title: Pelvic Floor Distress
+  description: These questions will ask you if you have certain bowel,
+    bladder, or pelvic symptoms and if you do how much they bother you.
+    If you are unsure about how to answer, please give the best answer you can.
+    While answering these questions, please consider your symptoms over the last 3 months.
+sections:
+  - key: "0"
+    title: ""
+    description: "Over the last 3 months:"
+    questions:
+      - key: wuc_1
+        question: Do you usually experience pressure in the lower abdomen?
+        type: YESNO_CHOICE
+      - key: wuc_$1.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_1
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_2
+        question: Do you usually experience heaviness or dullness in the lower abdomen?
+        type: YESNO_CHOICE
+      - key: wuc_2.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_2
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_3
+        question: Do you usually have a bulge or something falling out that you can see or fell in the vaginal area?
+        type: YESNO_CHOICE
+      - key: wuc_3.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_3
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_4
+        question: Do you usually have to push on the vagina or around the rectum to have a complete bowel movement?
+        type: YESNO_CHOICE
+      - key: wuc_4.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_4
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_5
+        question: Do you usually experience a feeling of incomplete bladder emptying?
+        type: YESNO_CHOICE
+      - key: wuc_5.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_5
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_6
+        question: Do you ever have to push up in the vaginal area with your fingers to start or complete urination?
+        type: YESNO_CHOICE
+      - key: wuc_6.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_6
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_7
+        question: Do you feel you need to strain too hard to have a bowel movement?
+        type: YESNO_CHOICE
+      - key: wuc_7.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_7
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_8
+        question: Do you feel you have not completely emptied your bowels at the end of a bowel movement?
+        type: YESNO_CHOICE
+      - key: wuc_8.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_8
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_9
+        question: Do you usually lose stool beyond your control if your stool is well formed?
+        type: YESNO_CHOICE
+      - key: wuc_9.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_9
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_10
+        question: Do you usually lose stool beyond your control if you stool is loose or liquid?
+        type: YESNO_CHOICE
+      - key: wuc_10.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_10
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_11
+        question: Do you usually lose gas from the rectum beyond your control?
+        type: YESNO_CHOICE
+      - key: wuc_11.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_11
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_12
+        question: Do you usually have pain when you pass your stool?
+        type: YESNO_CHOICE
+      - key: wuc_12.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_12
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_13
+        question: Do you experience a strong sense of urgency and have to rush to the bathroom to have a bowel movement?
+        type: YESNO_CHOICE
+      - key: wuc_13.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_13
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_14
+        question: Does part of your stool ever pass through the rectum and bulge outside during or after a bowel movement?
+        type: YESNO_CHOICE
+      - key: wuc_14.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_14
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_15
+        question: Do you usually experience frequent urination?
+        type: YESNO_CHOICE
+      - key: wuc_15.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_15
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_16
+        question: Do you usually experience urine leakage associated with a feeling of urgency; that is, a strong sensation of needing to go to the bathroom?
+        type: YESNO_CHOICE
+      - key: wuc_16.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_16
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_17
+        question: Do you usually experience urine leakage related to laughing, coughing, or sneezing?
+        type: YESNO_CHOICE
+      - key: wuc_17.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_17
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_18
+        question: Do you usually experience small amounts of urine leakage (that is, drops)?
+        type: YESNO_CHOICE
+      - key: wuc_18.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_18
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_19
+        question: Do you usually experience difficulty emptying your bladder?
+        type: YESNO_CHOICE
+      - key: wuc_19.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_19
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: wuc_20
+        question: Do you usually experience pain of discomfort in the lower abdomen or genital region?
+        type: YESNO_CHOICE
+      - key: wuc_20.1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: wuc_20
+                operator: =
+                value: yes
+        question: How much does it bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
