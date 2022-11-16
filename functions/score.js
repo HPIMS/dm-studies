@@ -68,7 +68,6 @@ const scoringFns = {
   // pain: () => null, // library::promis-pain-interference-6b-v1.0
   // sleep: () => null, // library::promis-sleep-disturbance-8a-v1.0
   qol_survey: sumScore, // library::promis-gh-qol-2-item
-  //
 };
 
 function sumScore(surveyData, optionScoreMap) {
