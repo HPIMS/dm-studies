@@ -53,33 +53,46 @@ withdrawText: |-
 
 # Legacy
 baseline:
-  - baseline_demographics
-  - baseline_medical_history
-  - baseline_cd_risc_survey
+  # - baseline_demographics
+  # - baseline_medical_history
+  # - baseline_cd_risc_survey
 
 surveys:
-  - sleep_stress_pain
-  - pss4
-  - sleep
-  - pain
-  - health_care
-  - mood_survey
-  - qol_survey
-  - satisfaction_survey_monthly
-  - satisfaction_survey_final
+  - promis-pain-interference-6b-v1.1
+  - promis-fatigue-4a-v1.0
+  - promis-physical-function-4a-v1.0
+  - promis-sleep-disturbance-4a-v1.0
+  - mpq
+  - pcs
+  - promis-global-mental-health-2a-v1.2
+  - euro-qol-eq-5d-5l
+  - ipaq
+  - physical-therapy
+  - pelvic-floor-distress-inventory-sf20
+  - nih-cpsi
+  # OLD SURVEYS
+  # - sleep_stress_pain
+  # - pss4
+  # - sleep
+  # - pain
+  # - health_care
+  # - mood_survey
+  # - qol_survey
+  # - satisfaction_survey_monthly
+  # - satisfaction_survey_final
 
-interventions:
-  - key: rockley-start
-    rank: 0
-  - key: rockley-stop
-    triggers:
-    - action: SHOW
-      condition:
-        - type: COMPLETED
-          resource: pss::rockley-start
-          operator: ">"
-          score: 0
-    rank: 1
+interventions: []
+  # - key: rockley-start
+  #  rank: 0
+  # - key: rockley-stop
+  #   triggers:
+  #   - action: SHOW
+  #     condition:
+  #      - type: COMPLETED
+  #         resource: pss::rockley-start
+  #         operator: ">"
+  #         score: 0
+  #   rank: 1
 
 # Legacy
 requiredHealthRecords:
