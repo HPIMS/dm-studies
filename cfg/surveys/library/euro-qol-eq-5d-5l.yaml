@@ -14,11 +14,10 @@ short: Reflect on your qualitity of life
 sections:
   - key: "0"
     title: ""
-    description: ""
+    description: For each heading, please select the ONE option that best describes your health TODAY.
     questions:
       - key: mobility
         question: MOBILITY
-        description: Please select the ONE option that best describes your health TODAY
         type: SINGLE_CHOICE
         options:
           - value: no_problem
@@ -33,7 +32,6 @@ sections:
             text: I am unable to walk about
       - key: self_care
         question: SELF-CARE
-        description: Please select the ONE option that best describes your health TODAY
         type: SINGLE_CHOICE
         options:
           - value: no_problem
@@ -47,8 +45,8 @@ sections:
           - value: unable_to
             text: I am unable to wash or dress myself
       - key: usual_activities
-        question: USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)
-        description: Please select the ONE option that best describes your health TODAY
+        question: USUAL ACTIVITIES
+        description: (e.g. work, study, housework, family or leisure activities)
         type: SINGLE_CHOICE
         options:
           - value: no_problem
@@ -63,7 +61,6 @@ sections:
             text: I am unable to do my usual activities
       - key: pain_discomfort
         question: PAIN / DISCOMFORT
-        description: Please select the ONE option that best describes your health TODAY
         type: SINGLE_CHOICE
         options:
           - value: no_pain
@@ -78,7 +75,6 @@ sections:
             text: I have extreme pain or discomfort
       - key: anxiety_depression
         question: ANXIETY / DEPRESSION
-        description: Please select the ONE option that best describes your health TODAY
         type: SINGLE_CHOICE
         options:
           - value: not_anxious
