@@ -264,12 +264,8 @@ sections:
     description: ""
     questions:
       - key: mpq_scale
-        question: "TODO: MAKE THIS A SLIDER"
-        type: SINGLE_CHOICE
-        options:
-          - value: none
-            text: None
-            score: 0
+        question: "TODO: IMPLEMENT ME!"
+        type: V_SCALE
   - key: "2"
     title: ""
     description: "" 
