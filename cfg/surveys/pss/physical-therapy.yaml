@@ -5,7 +5,7 @@ schedule:
   type: PERIOD
   period: DAILY
 timeEstimate: 1
-name: ""
+name: "Physical Therapy"
 short: ""
 sections:
   - key: "0"
@@ -35,3 +35,11 @@ sections:
         min: 6
         max: 20
         step: 1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pt_1
+                operator: =
+                value: yes
