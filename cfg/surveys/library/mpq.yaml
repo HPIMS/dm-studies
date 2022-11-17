@@ -265,6 +265,7 @@ sections:
     questions:
       - key: mpq_scale
         question: pain
+        hideHeader: true
         type: V_SCALE
   - key: "2"
     title: ""
