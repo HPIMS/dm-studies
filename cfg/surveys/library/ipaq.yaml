@@ -14,7 +14,7 @@ short: Reflect on your physical activity
 sections:
   - key: vigorous_activity
     title: ""
-    description: |
+    description: |-
       Think about all the vigorous activities that you did in the last 7 days.
       Vigorous physical activities refer to activities that take hard physical
       effort and make you breathe much harder than normal.Think only about those
@@ -42,6 +42,8 @@ sections:
         type: DURATION
         hours: true
         minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day
         triggers:
           - action:
               type: SHOW
@@ -80,6 +82,8 @@ sections:
         type: DURATION
         hours: true
         minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day
         triggers:
           - action:
               type: SHOW
@@ -118,6 +122,8 @@ sections:
         type: DURATION
         hours: true
         minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day
         triggers:
           - action:
               type: SHOW
@@ -141,3 +147,5 @@ sections:
         type: DURATION
         hours: true
         minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day
