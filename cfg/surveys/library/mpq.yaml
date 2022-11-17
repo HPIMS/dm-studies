@@ -264,9 +264,17 @@ sections:
     description: ""
     questions:
       - key: mpq_scale
-        question: pain
-        hideHeader: true
+        question: Your pain right now
         type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: pain
+        ask: We would like to know how severe your pain is right now.
+        scaleExplanation: 0 means no pain. 100 means the worst pain you can imagine.
+        prompt: Indicate on the scale how severe your pain is right now.
+        minLabel: No pain
+        maxLabel: Worst possible pain
   - key: "2"
     title: ""
     description: "" 
