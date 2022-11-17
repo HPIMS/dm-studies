@@ -68,9 +68,9 @@ sections:
         question: 4. Which number best describes your AVERAGE pain or discomfort on the days that you had it, over the last week?
         type: SLIDER
         min: 0
-        minDescription: "No pain"
+        minLabel: No pain
         max: 10
-        maxDescription: "Pain as bad as you can imagine"
+        maxLabel: Pain as bad as you can imagine
         step: 1
   - key: urination
     title: Urination

@@ -24,9 +24,9 @@ sections:
         question: How would you rate your ehive experience, overall?
         type: SLIDER
         min: 1
-        minDescription: Worst
+        minLabel: Worst
         max: 10
-        maxDescription: Best
+        maxLabel: Best
         step: 1
       - key: recommend
         question: Would you recommend the ehive platform to a friend?

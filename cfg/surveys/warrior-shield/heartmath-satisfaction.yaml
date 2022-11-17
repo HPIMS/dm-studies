@@ -23,9 +23,9 @@ sections:
         question: How satisfied are you with the HeartMath intervention on a scale of 1 to 7?
         type: SLIDER
         min: 1
-        minDescription: Least Satisfied 
+        minLabel: Least Satisfied 
         max: 7
-        maxDescription: Most Satisfied
+        maxLabel: Most Satisfied
         step: 1
       - key: learning
         question: Did you pursue additional learning about HeartMath and its system outside of what was provided during the study?

@@ -25,25 +25,25 @@ sections:
           stress you've ever experienced.
         type: SLIDER
         min: 0
-        minDescription: No Stress
+        minLabel: No Stress
         max: 10
-        maxDescription: Most Stress
+        maxLabel: Most Stress
         step: 1
       - key: sleep
         question: How is your sleep? - from 0 being good sleep and 10 being the worst
           sleep you've ever experienced.
         type: SLIDER
         min: 0
-        minDescription: Good Sleep
+        minLabel: Good Sleep
         max: 10
-        maxDescription: Bad Sleep
+        maxLabel: Bad Sleep
         step: 1
       - key: pain
         question: How is your pain? - from 0 being no pain and 10 being the worst pain
           you've ever experienced.
         type: SLIDER
         min: 0
-        minDescription: No Pain
+        minLabel: No Pain
         max: 10
-        maxDescription: Most Pain
+        maxLabel: Most Pain
         step: 1

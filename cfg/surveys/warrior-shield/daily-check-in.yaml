@@ -35,17 +35,17 @@ sections:
         question: How would you rate your stress today on a scale of 1 to 7?
         type: SLIDER
         min: 1
-        minDescription: No Stress
+        minLabel: No Stress
         max: 7
-        maxDescription: High Stress
+        maxLabel: High Stress
         step: 1
       - key: heartmath_skills
         question: Over the past 24 hours, to what extent did you apply the HeartMath skills you have learned?
         type: SLIDER
         min: 1
-        minDescription: Rarely
+        minLabel: Rarely
         max: 7
-        maxDescription: Very Often
+        maxLabel: Very Often
         step: 1
       - key: heartmath_use
         question: Over the past 24 hours, did you use the HeartMath technology, including the phone App and ear sensor?
