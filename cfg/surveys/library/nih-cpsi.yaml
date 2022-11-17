@@ -66,11 +66,10 @@ sections:
             score: 5
       - key: cspi_4
         question: 4. Which number best describes your AVERAGE pain or discomfort on the days that you had it, over the last week?
+        description: 0 means no pain. 10 means pain as bad as you can imagine.
         type: SLIDER
         min: 0
-        minLabel: No pain
         max: 10
-        maxLabel: Pain as bad as you can imagine
         step: 1
   - key: urination
     title: Urination
