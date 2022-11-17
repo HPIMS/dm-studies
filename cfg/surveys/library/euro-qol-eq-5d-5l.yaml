@@ -92,6 +92,7 @@ sections:
     description: ""
     questions:
       - key: health_today
-        question: health
+        question: YOUR HEALTH TODAY
         hideHeader: true
         type: V_SCALE
+        category: health
