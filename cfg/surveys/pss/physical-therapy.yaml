@@ -16,8 +16,33 @@ sections:
         question: Did you do any physical therapy exercises today as prescribed by your provider?
         type: YESNO_CHOICE
       - key: pt_2
-        question: Please specify the excercise types, duration/repetitions, and any other important details.
-        type: TEXTAREA
+        question: Please select all those you completed and the total duration you spent on each today.
+        type: MULTIPLE_CHOICE
+        options:
+          - value: relaxation
+            text: Relaxation
+            inlineQuestion:
+              key: relaxation_description
+              question: Duration or repetitions
+              type: TEXTAREA
+          - value: strengthening_stability
+            text: Strengthening/stability
+            inlineQuestion:
+              key: strengthening_stability_description
+              question: Duration or repetitions
+              type: TEXTAREA
+          - value: stretching
+            text: Stretching
+            inlineQuestion:
+              key: stretching_description
+              question: Duration or repetitions
+              type: TEXTAREA
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: other_description
+              question: Duration or repetitions
+              type: TEXTAREA
         triggers:
           - action:
               type: SHOW
