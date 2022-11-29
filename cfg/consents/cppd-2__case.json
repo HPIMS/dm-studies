@@ -1,5 +1,5 @@
 {
-  "key": "ehive-cppd-2",
+  "key": "ehive-cppd-2__case",
   "title": "CPP Tracker",
   "timeEstimate": { "time": 15, "timeUnits": "minutes" },
 
@@ -18,19 +18,11 @@
     ["Section", ["BodyLarge", ""]]
   ],
 
-  "arm": {
-    "question": "I am a patient with chronic pelvic pain disorder (CPP)",
-    "options": [
-      {
-        "value": "yes",
-        "text": "Yes",
-        "arm": "case"
-      },
-      {
-        "value": "no",
-        "text": "No",
-        "arm": "control"
-      }
-    ]
-  }
+  "review": [
+    [
+      "H3",
+      "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION"
+    ],
+    ["Display", "Icahn School of Medicine at Mount Sinai"]
+  ]
 }

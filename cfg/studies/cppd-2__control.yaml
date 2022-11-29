@@ -1,9 +1,7 @@
-key: cppd-2
-consentId: ehive-cppd-2
+key: cppd-2__control
+belongsTo: cppd-2
 
-arms:
-  - case
-  - control
+consentId: ehive-cppd-2__control
 
 active: true
 openEnrollment: true
@@ -17,7 +15,7 @@ platform:
   - ios
   - android
 
-name: CPP Tracker
+name: CPP Tracker Control
 
 shortDescription: This longitudinal study aims to design digital,
   patient-centered measures of pain and Quality of Life for chronic
