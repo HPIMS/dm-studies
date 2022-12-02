@@ -18,6 +18,22 @@
     ["Section", ["BodyLarge", ""]]
   ],
 
+  "arm": {
+    "question": "I am a patient with chronic pelvic pain disorder (CPP)",
+    "options": [
+      {
+        "value": "yes",
+        "text": "Yes",
+        "arm": "case"
+      },
+      {
+        "value": "no",
+        "text": "No",
+        "arm": "control"
+      }
+    ]
+  },
+
   "review": [
     [
       "H3",
