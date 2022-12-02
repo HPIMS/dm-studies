@@ -325,6 +325,7 @@ async function processStudies() {
 
     const {
       key: studyKey,
+      belongsTo,
       visibility,
       irb,
       openEnrollment,
@@ -457,6 +458,7 @@ async function processStudies() {
     log.info(`[${study}] Adding to study index.`);
     index.push({
       studyKey,
+      belongsTo,
       visibility,
       openEnrollment,
       shortDescription,
