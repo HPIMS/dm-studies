@@ -34,6 +34,44 @@
     ]
   },
 
+  "eligibility": [
+    {
+      "text": "Are you 18 years of age or older?",
+      "isEligible": true,
+      "ineligibleText": "You must be 18 or older."
+    },
+    {
+      "text": "Have you been diagnosed with ulcerative colitis or Crohn's disease?",
+      "isEligible": true,
+      "ineligibleText": "You must have a diagnosis of ulcerative colitis or Crohn's disease."
+    },
+    {
+      "text": "Are you on a medication to treat inflammatory bowel disease such as mesalamine (pentasa, apriso, lialda, delzicol, sulfasalazine), a biologic medication (infliximab, remicade, inflectra, avsola, adalimumab, humira, ustekinumab, stelara, vedolizumab, entyvio), or a small molecule (tofacitinib, xeljanz, ozanimod, zeposia)?",
+      "isEligible": true,
+      "ineligibleText": "You must be on a medication to treat inflammatory bowel disease."
+    },
+    {
+      "text": "Are you currently pregnant?",
+      "isEligible": false,
+      "ineligibleText": "You must not be currently pregnant."
+    },
+    {
+      "text": "Do you currently have cancer or other significant medical problems such as a recent heart attack, recent stroke, significant kidney disease, or an infection?",
+      "isEligible": false,
+      "ineligibleText": "You must not be currently have cancer or other significant medical problems."
+    },
+    {
+      "text": "Do you have a pacemaker or defibrillator?",
+      "isEligible": false,
+      "ineligibleText": "You must not have a pacemaker or defibrillator."
+    },
+    {
+      "text": "I use medications that impact how my heart beats such as beta blockers (ie. atenolol, carvedilol, metoprolol, Coreg, Tenormin, Normodyne, Trandate), digoxin, calcium channel blockers (ie. Novasc, amlodipine, Cardene, nicrdipine, Procrdia, nifedipine, Cardizem, diltiazem), or regularly used benzodiazepines.",
+      "isEligible": false,
+      "ineligibleText": "You must not use medications that impact how your heart beats."
+    }
+  ],
+
   "review": [
     [
       "H3",
