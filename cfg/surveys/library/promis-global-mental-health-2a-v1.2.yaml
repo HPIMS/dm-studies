@@ -10,7 +10,9 @@ metadata:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 1
+timeRequirements: 
+  time: 30
+  timeUnits: seconds
 name: Mental Health
 short: Reflect on your mental health
 sections:

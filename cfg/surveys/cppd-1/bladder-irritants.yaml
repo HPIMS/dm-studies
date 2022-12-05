@@ -8,7 +8,9 @@ metadata:
 schedule:
   type: PERIOD
   period: ALWAYS
-timeEstimate: 1
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
 name: Bladder Irritants
 short: Do you have any bladder irritants?
 intro:

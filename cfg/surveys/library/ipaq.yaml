@@ -8,7 +8,9 @@ metadata:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 3
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
 name: Physical Activity
 short: Reflect on your physical activity
 sections:

@@ -4,7 +4,9 @@ scorable: true
 schedule:
   type: PERIOD
   period: ALWAYS
-timeEstimate: 1
+timeRequirements: 
+  time: 30
+  timeUnits: seconds
 name: Begin the Next Study Phase
 short: Have you received your first injection or infusion?
 intro:

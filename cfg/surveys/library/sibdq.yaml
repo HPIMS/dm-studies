@@ -4,7 +4,9 @@ scorable: true
 schedule:
   type: PERIOD
   period: BI_WEEKLY
-timeEstimate: 3
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
 name: Quality Assessment
 short: "Reflect on quality of life"
 intro:

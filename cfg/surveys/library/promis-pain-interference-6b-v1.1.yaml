@@ -7,7 +7,9 @@ metadata:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Pain Interference
 short: How has your pain interfered with your life?
 sections: 

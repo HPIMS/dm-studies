@@ -3,7 +3,9 @@ active: true
 schedule:
   type: PERIOD
   period: DAILY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Daily Check-in
 short: "Tell us how you’re doing today"
 intro:

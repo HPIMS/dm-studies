@@ -4,7 +4,9 @@ schedule:
   type: PERIOD
   period: FINAL
 repeat: 1
-timeEstimate: 5
+timeRequirements: 
+  time: 5
+  timeUnits: minutes
 name: Final Check-in Survey
 short: Final study satisfaction
 intro:

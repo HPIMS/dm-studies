@@ -8,7 +8,9 @@ metadata:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 2
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Quality of Life
 short: Reflect on your qualitity of life
 sections:

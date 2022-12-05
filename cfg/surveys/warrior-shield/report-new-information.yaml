@@ -3,7 +3,9 @@ active: true
 schedule:
   type: PERIOD
   period: ALWAYS
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Report New Information
 short: "New COVID nasal/antibody test"
 intro:

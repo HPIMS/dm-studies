@@ -4,7 +4,9 @@ active: true
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 2
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Depression Assessment
 short: "Reflect on your well-being"
 intro:
