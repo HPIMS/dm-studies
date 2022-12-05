@@ -4,7 +4,9 @@ scorable: true
 schedule:
   type: PERIOD
   period: DAILY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: "Physical Therapy"
 short: ""
 sections:

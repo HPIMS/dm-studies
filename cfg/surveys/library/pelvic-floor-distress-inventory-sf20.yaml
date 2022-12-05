@@ -9,7 +9,9 @@ metadata:
 schedule:
   type: PERIOD
   period: QUARTERLY
-timeEstimate: 1
+timeRequirements: 
+  time: 5
+  timeUnits: minutes
 name: Pelvic Floor Distress
 short: ""
 intro:
