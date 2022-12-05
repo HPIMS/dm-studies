@@ -4,7 +4,9 @@ schedule:
   type: PERIOD
   period: DAILY
 repeat: 0
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Sleep, Stress, and Pain Survey
 short: Your daily check-in
 intro:

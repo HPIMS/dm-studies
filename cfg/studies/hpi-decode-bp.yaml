@@ -1,7 +1,7 @@
 key: hpi-decode-bp
 consentId: ehive-hpi-decode-bp
 
-active: true
+active: false
 openEnrollment: true
 visibility: private
 
@@ -12,6 +12,9 @@ studyEmail: ehivedecodebp@mssm.edu
 platform:
   - ios
   - android
+
+# minVersion: '2.3' // No min version right now.
+capTo: 30
 
 # Legacy
 wearables:

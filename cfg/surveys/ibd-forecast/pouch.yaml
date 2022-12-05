@@ -4,7 +4,9 @@ active: true
 schedule:
   type: PERIOD
   period: DAILY
-timeEstimate: 2
+timeRequirements: 
+  time: 5
+  timeUnits: minutes
 name: Symptom Check-in
 short: Reflect on your IBD
 intro:

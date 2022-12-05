@@ -4,7 +4,9 @@ schedule:
   type: PERIOD
   period: WEEKLY
 repeat: 12
-timeEstimate: 3
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
 name: Pain Survey
 short: Rate your pain in the last week
 intro:
