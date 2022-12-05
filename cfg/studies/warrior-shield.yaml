@@ -1,7 +1,7 @@
 key: warrior-shield
 consentId: ehive-warrior-shield
 
-active: true
+active: false
 openEnrollment: true
 
 irb: STUDY-21-00596
@@ -10,6 +10,9 @@ studyEmail: covid.hcw@mssm.edu
 
 platform:
   - ios
+
+# minVersion: '2.2'
+capTo: 500
 
 # Legacy
 wearables: []

@@ -9,7 +9,9 @@ metadata:
 schedule:
   type: PERIOD
   period: MONTHLY
-timeEstimate: 2
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Stress
 short: "Tell us about your stress over the last month"
 intro:

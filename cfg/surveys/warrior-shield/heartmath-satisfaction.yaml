@@ -5,7 +5,9 @@ schedule:
   period: ONCE
   delay: 5
   delayUnits: WEEKS
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: HeartMath Satisfaction Survey
 short: "Tell us what you think of the HeartMath intervention"
 intro:

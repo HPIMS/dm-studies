@@ -5,7 +5,9 @@ schedule:
   type: PERIOD
   period: NEVER
 repeat: 0
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: BP Clearance
 short: ""
 intro:
