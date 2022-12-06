@@ -7,18 +7,18 @@ arms:
 
 active: true
 openEnrollment: true
-visibility: public # TODO: make private
+visibility: private
 
 irb: STUDY-22-01002
 pi: Ipek Ensari
-studyEmail: "" # TODO: need email
+studyEmail: ipek.ensari@mssm.edu # TODO: need email
 
 platform:
   - ios
   - android
 
 minVersion: '2.3'
-capTo: 1000
+capTo: 180
 
 name: CPP Tracker
 
@@ -51,4 +51,13 @@ timeResponsibility:
   timeUnits: minutes
   timePeriod: daily
 
-surveys: []
+surveys: 
+  - promis-pain-interference-6b-v1.1
+  - promis-fatigue-4a-v1.0
+  - promis-physical-function-4a-v1.0
+  - promis-sleep-disturbance-4a-v1.0
+  - mpq
+  - pcs
+  - promis-global-mental-health-2a-v1.2
+  - euro-qol-eq-5d-5l
+  - ipaq
