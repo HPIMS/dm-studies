@@ -1,6 +1,6 @@
 {
-  "key": "ehive-cppd-1",
-  "title": "d²prom PT",
+  "key": "ehive-cppd-2__control",
+  "title": "CPP Tracker",
   "timeEstimate": { "time": 15, "timeUnits": "minutes" },
   "contact": {
     "pi": "Ipek Ensari",
@@ -33,6 +33,21 @@
       ]
     ]
   ],
+  "arm": {
+    "question": "I am a patient with chronic pelvic pain disorder (CPP)",
+    "options": [
+      {
+        "value": "yes",
+        "text": "Yes",
+        "arm": "case"
+      },
+      {
+        "value": "no",
+        "text": "No",
+        "arm": "control"
+      }
+    ]
+  },
   "options": [
     {
       "title": "Contacting",
@@ -139,22 +154,25 @@
             ["BodyLarge", "Download two mHealth apps, Phendo and ehive"],
             [
               "BodyLarge",
-              "Use Phendo to self-track your daily symptoms, well-being, self-management techniques, and brief details about your physical therapy (PT) exercises"
+              "Use Phendo to self-track your daily symptoms, well-being, and self-management techniques"
             ],
             [
               "BodyLarge",
               "Complete brief standardized questionnaires on pain and quality of life each week through the ehive app"
             ],
-            ["BodyLarge", "Wear an activity tracker on your wrist"],
             [
               "BodyLarge",
-              "Meet with our research coordinator (virtually) upon enrollment for them to orient you to the mHealth Apps and the activity tracker for the study"
+              "Wear an activity tracker on your wrist every day for 3 months"
+            ],
+            [
+              "BodyLarge",
+              "Meet with our research coordinator (virtually or in-person) upon enrollment for them to orient you to the mHealth Apps and the activity tracker for the study"
             ]
           ]
         ],
         [
           "BodyLarge",
-          "You will be compensated for your participation in this study."
+          "The orientation meeting is anticipated to take approximately 40 minutes and you will have a chance to ask any questions you might have to our coordinator. The time frame for your involvement in the study thereafter is 5-10 minutes per day for 3 months. The study does not require any in-person visits to Mount Sinai premises, and there are no costs associated with participating in this study. You will be compensated for your participation in this study."
         ],
         [
           "BodyLarge",
@@ -177,7 +195,7 @@
         ],
         [
           "BodyLarge",
-          "We invite you to this study because you are beginning physical therapy (PT) with a physiotherapist for your CPP symptoms. You may qualify to take part in this research study because 1) you are a woman between the ages of 18 and 64, 2) you have been diagnosed with CPP by a clinician, and 3) you have experienced CPP symptoms (other than menstruation related pain) for at least 6 months. You should not participate in this study if you are currently pregnant, or given birth in the past 6 months, or if you have any other major illnesses (e.g., active cancer, acute coronary syndromes)."
+          "We invite you to this study because you do NOT have a known CPP disorder. You may be qualified to take part in this study because 1) you are a woman between the ages of 18 and 64, 2) you have NOT been diagnosed with CPP, and 3) you have NOT experienced CPP symptoms (other than menstruation related pain) for at least 6 months. You should not participate in this study if you are currently pregnant, or given birth in the past 6 months, or if you have any other major illnesses (e.g., active cancer, acute coronary syndromes)."
         ],
         [
           "BodyLarge",
@@ -191,7 +209,7 @@
         ["H3", "LENGTH OF TIME AND NUMBER OF PEOPLE EXPECTED TO PARTICIPATE"],
         [
           "BodyLarge",
-          "Your participation in this research study is expected to last 12 weeks. The number of people expected to take part in this research study in the Mount Sinai Health System is approximately 90 participants."
+          "Your participation in this research study is expected to last 3 months. The number of people expected to take part in this research study in the Mount Sinai Health System is approximately 180 participants."
         ]
       ]
     ],
@@ -216,7 +234,7 @@
                 ["Underline", ["Italic", "daily"]],
                 [
                   "Italic",
-                  " physical and mood symptoms, well-being, PT exercises, and self-management habits. You will also be asked about your medication use for CPP."
+                  " physical and mood symptoms, well-being, and self-management habits."
                 ]
               ]
             ],
@@ -261,7 +279,7 @@
           "BodyLarge",
           [
             "Italic",
-            "The study does not require you to come to Mount Sinai during the course of the study. We will check in with you once a week regarding how the study is going, either via email or ehive. If you are having any trouble with the activity tracker or any of the Apps, you can ask for the research coordinator to contact you to help troubleshoot by replying to the check-ins. In addition, study coordinators may reach out to you to remind/reinforce study procedures. This may happen at most twice a week. It is important that you do not skip a day of entering data. Your participation in this study will not alter any of the procedures and therapies performed by your physiotherapist as part of standard clinical care."
+            "The study does not require you to come to Mount Sinai during the course of the study. We will check in with you once a week regarding how the study is going, either via email or ehive. If you are having any trouble with the activity tracker or any of the Apps, you can ask for the research coordinator to contact you to help troubleshoot by replying to the check-ins. In addition, study coordinators may reach out to you to remind/reinforce study procedures. This may happen at most twice a week. It is important that you do not skip a day of entering data."
           ]
         ]
       ]
@@ -282,7 +300,7 @@
         ["H3", "YOUR RESPONSIBILITIES IF YOU TAKE PART IN THIS RESEARCH"],
         [
           "BodyLarge",
-          "If you decide to take part in this research study you will be responsible for the following things: 1) have access to a smartphone and wi-fi to be able to download the Phendo and ehive Apps, 2) wear a 24hour activity tracker for the duration of the study, 3) track your daily symptoms, self-management (e.g., medications, exercise, meditation), and any PT exercises you complete between your PT visits, and 4) respond to brief questionnaires once a week using your smartphone."
+          "If you decide to take part in this research study you will be responsible for the following things: 1) have access to a smartphone and wi-fi to be able to download the Phendo and ehive Apps, 2) wear a 24-hour activity tracker for the duration of the study, 3) track your daily symptoms, self-management (e.g., medications, exercise, meditation), and 4) respond to brief questionnaires once a week using your smartphone."
         ]
       ]
     ],
@@ -294,12 +312,12 @@
           "BodyLarge",
           [
             "Italic",
-            "Being in this research study will not lead to extra costs to you. You will not be reimbursed for your travel or time that may be required for PT office visits."
+            "Being in this research study will not lead to extra costs to you. You will not be reimbursed for your travel or time that may be required for any visits."
           ]
         ],
         [
           "BodyLarge",
-          "If you agree to take part in this research study, you will receive $150 for completing the entire study (i.e., 12 weeks of the data collection). You will receive $25 for each 2-week period of data collection. If you withdraw before completing the study, payments will be pro-rated to include only completed periods. A check will be mailed to you every 2 weeks after you complete each 2-week study period. You will need to provide your Social Security Number for payment. Checks require some time to be prepared and will be given to you once processed and available."
+          "If you agree to take part in this research study, you will receive $100 for completing the entire study (i.e., 3 months of the data collection). You will receive $15 for each 2-week period of data collection for the first 12 weeks, and another $10 for the final week of data collection. A check will be mailed to you every 2 weeks after you complete each 2-week study period. You will need to provide your Social Security Number for payment. Checks require some time to be prepared and will be given to you once processed and available."
         ],
         [
           "BodyLarge",
@@ -335,7 +353,7 @@
         ],
         [
           "BodyLarge",
-          "Privacy Risks - Your name and other information that could directly identify you (such as address, date of birth or social security number) will never be placed into a scientific database. However, because your genetic information is unique to you, there is a small chance that someone could trace it back to you. The risk of this happening is very small, but may grow in the future.  Since the database includes genetic information, a break in security may also pose a potential risk to blood relatives as well as yourself. For example, it could be used to make it harder for you (or a relative) to get or keep a job or insurance.  If your private information was misused it is possible you would also experience other harms, such as stress, anxiety, stigmatization, or embarrassment from revealing information about your family relationships, ethnic heritage, or health conditions."
+          "Privacy Risks - Your name and other information that could directly identify you (such as address, date of birth or social security number) will never be placed into a scientific database. However, because your genetic information is unique to you, there is a small chance that someone could trace it back to you. The risk of this happening is very small but may grow in the future.  Since the database includes genetic information, a break in security may also pose a potential risk to blood relatives as well as yourself. For example, it could be used to make it harder for you (or a relative) to get or keep a job or insurance.  If your private information was misused it is possible you would also experience other harms, such as stress, anxiety, stigmatization, or embarrassment from revealing information about your family relationships, ethnic heritage, or health conditions."
         ]
       ]
     ],
@@ -478,7 +496,7 @@
         ],
         [
           "BodyLarge",
-          "As part of this research project, the research team at the hospital(s) involved in the research will collect your name, address, date of birth, telephone numbers, e-mail address, and social security number. The researchers will also get information about your PT visits from your physiotherapist who will be working with you during the course of the study. This information will include date of your visit, outcomes they measure during the visit (muscle strength, range of motion, mobility, self-reported skin sensitivity), exercises you do during the session, and exercises they prescribe to you in between sessions (if any)."
+          "As part of this research project, the research team at the hospital(s) involved in the research will collect your name, address, date of birth, telephone numbers, e-mail address, and social security number."
         ],
         [
           "BodyLarge",
