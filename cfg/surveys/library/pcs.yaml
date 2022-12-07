@@ -1,6 +1,9 @@
 key: pcs
 active: true
 scorable: true
+score:
+  fn: sum-score
+  args: {}
 metadata: 
   instrument: Pain Catastrophization Scale (PCS)
   references:

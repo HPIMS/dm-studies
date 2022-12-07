@@ -1,6 +1,9 @@
 key: promis-sleep-disturbance-4a-v1.0
 active: true
 scorable: true
+score:
+  fn: sum-score
+  args: {}
 metadata: 
   author: PROMIS
   instrument: Sleep Disturbance - Short Form 4a
