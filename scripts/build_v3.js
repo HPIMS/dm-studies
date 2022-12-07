@@ -90,9 +90,6 @@ async function processSurveys() {
     let cfg;
     if (study) {
       cfg = await getFile(surveyDir, study, `${survey}.yaml`);
-    } else {
-      // this is a fallback for 'legacy' surveys
-      cfg = await getFile(surveyDir, "legacy", `${survey}.yaml`);
     }
 
     const version = versions.active.surveys[surveyKey][1];

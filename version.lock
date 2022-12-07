@@ -50,9 +50,6 @@ active:
       - f6900eccf8a6eb4e06d71251f54b10db
       - 3
   studies:
-    baseline:
-      - 373d1e29033ffc5ea60dbff8907d8999
-      - 14
     cppd-1:
       - beff5c61b09588bba804229be7cfc14e
       - 6
@@ -75,15 +72,6 @@ active:
       - b5ffacab62be68f93d70a5a82eb231d6
       - 22
   surveys:
-    baseline_cd_risc_survey:
-      - 4d9f3393a80ecb9d804462d7e1883247
-      - 8
-    baseline_demographics:
-      - 865543107dd2c4676521ae739d243726
-      - 12
-    baseline_medical_history:
-      - fb15b947a95f5912c4ea9145a8ec522b
-      - 13
     cppd-1::bladder-irritants:
       - c92c809cbf63419223802eec9b76f584
       - 2
@@ -150,9 +138,6 @@ active:
     digi-ibd-001::which-ibd:
       - cc46155c1593f9b46e42557fbc0a9592
       - 4
-    health_care:
-      - b0af74066ce2756e637d40847492cdf7
-      - 8
     hpi-decode-bp::clearance:
       - 55070a882c87f153e87d96e71059ffb0
       - 3
@@ -291,42 +276,18 @@ active:
     library::sibdq:
       - af028c15e98444f0b93bca9f93460d09
       - 4
-    mood_survey:
-      - 4a881f332b3e4df72a785cfe04d696ed
-      - 7
     operationalizing-warrior-watch::baseline-demographics:
       - 1c7da8b3887e46a060a916afcd35db68
       - 9
     operationalizing-warrior-watch::report-new-information:
       - 6f595e63ec23b7d26604e01bd53986d9
       - 2
-    pain:
-      - 9ba3c6ca34e2e8470757cf7e90e494f4
-      - 9
-    pss4:
-      - ed4464296557bd83019e0681775c15bf
-      - 9
     pss::bladder-irritants:
       - 0a905bad6f23611dcf598706499c49fa
       - 1
     pss::physical-therapy:
       - 7c1522a3277a1dcc462525771f14fd28
       - 3
-    qol_survey:
-      - f9d8eb9c48db097ba5e5f113dc440d6a
-      - 8
-    satisfaction_survey_final:
-      - 4d052e9733e4791c7cee230cb0170d2f
-      - 10
-    satisfaction_survey_monthly:
-      - 59fb2763b849dc61c9f5464848e48168
-      - 13
-    sleep:
-      - 5edda7e93c1b325640c1c05884823742
-      - 9
-    sleep_stress_pain:
-      - 0449d9f5264968094ea72766c8838186
-      - 9
     warrior-shield::daily-check-in:
       - c930a7be123813b45058f3cf54d7409f
       - 4
@@ -349,6 +310,9 @@ inactive:
   interventions: {}
   multimedia: {}
   studies:
+    baseline:
+      - 373d1e29033ffc5ea60dbff8907d8999
+      - 14
     hpi-decode-bp:
       - 00783e5154ee5312655ba6dd114f7d2e
       - 15

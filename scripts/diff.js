@@ -106,10 +106,7 @@ async function processSurveys() {
     const groupDir = `${dir}/${surveyGroup}`;
     const surveys = await fs.promises.readdir(groupDir);
 
-    let surveyPrefix = "";
-    if (surveyGroup !== "legacy") {
-      surveyPrefix = surveyGroup;
-    }
+    let surveyPrefix = surveyGroup;
 
     const surveyPromises = surveys.map(async (file) => {
       const rootName = file.replace(/\.yaml$|\.yml$/, "");
@@ -406,7 +403,7 @@ async function processStudies() {
       return;
     }
 
-    if (name === "library" || name === "legacy") {
+    if (name === "library") {
       log.error(`[${name}] Reserved study name.`);
       return;
     }
@@ -497,10 +494,8 @@ async function processStudies() {
             diffs.get("surveys").has(`${name}::${sKey}`)) ||
           (!surveyLibrary.has(`${name}::${sKey}`) &&
             // library
-            ((surveyLibrary.has(`library::${sKey}`) &&
-              diffs.get("surveys").has(`library::${sKey}`)) ||
-              // legacy
-              (surveyLibrary.has(sKey) && diffs.get("surveys").has(sKey))))
+            surveyLibrary.has(`library::${sKey}`) &&
+            diffs.get("surveys").has(`library::${sKey}`))
         ) {
           log.info(
             `[${name}] Contains modified survey ${sKey}. The study version will be bumped.`
