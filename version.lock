@@ -44,34 +44,13 @@ active:
       - f6900eccf8a6eb4e06d71251f54b10db
       - 3
   studies:
-    baseline:
-      - 373d1e29033ffc5ea60dbff8907d8999
-      - 13
     digi-ibd-001:
       - 5ce183d1db1ab8ac437404d38f516e79
       - 4
-    hpi-decode-bp:
-      - 00783e5154ee5312655ba6dd114f7d2e
-      - 9
     ibd-forecast:
       - c252625c63ccf76edddbfa7edef0a857
       - 15
-    pss:
-      - 84df1128bb2a7d0b651651c5907e796f
-      - 11
-    warrior-shield:
-      - 4bd95befd9f6f05f54ffe72192d3d405
-      - 12
   surveys:
-    baseline_cd_risc_survey:
-      - 7526ffe53d131d520705edf5fb802d3c
-      - 7
-    baseline_demographics:
-      - 9d4ecd53b595891685e9787706f79c42
-      - 11
-    baseline_medical_history:
-      - 8ef115f3b2339b5ba6b73394c29f241c
-      - 12
     digi-ibd-001::begin-next-phase:
       - 999905e7470650bb2b7fc37ce106f60f
       - 1
@@ -132,9 +111,6 @@ active:
     digi-ibd-001::which-ibd:
       - effac228199ebdc52b5e86d0ee226d76
       - 2
-    health_care:
-      - 552cb6895afd4638b76f0210a822b913
-      - 7
     hpi-decode-bp::clearance:
       - f16dd5c403c0406096bfe18374ff57d0
       - 2
@@ -240,30 +216,6 @@ active:
     library::sibdq:
       - 76adcdeb0579a3850466b5ff67ba66ea
       - 2
-    mood_survey:
-      - d4fa6e64c43da7ef6fd70d70f317dfec
-      - 6
-    pain:
-      - d50a18b8d0082a13bbf9cc585711585c
-      - 8
-    pss4:
-      - cbfc034b38840919b1cfa6333922dd6e
-      - 8
-    qol_survey:
-      - 1363873d1d15e3b5a98fea2af72ebdee
-      - 7
-    satisfaction_survey_final:
-      - 5475cf0fa45a7a16babd196845e2cde0
-      - 9
-    satisfaction_survey_monthly:
-      - ce31855952e018388898994aeb2d3321
-      - 11
-    sleep:
-      - 0ebd4b12e01bac5d343a21144658e97b
-      - 8
-    sleep_stress_pain:
-      - fd04400919f5dc5bd05fea6a6783425c
-      - 7
     warrior-shield::daily-check-in:
       - c3a58c2c52a8172fcfae9301e6540d30
       - 2
@@ -285,6 +237,18 @@ active:
 inactive:
   interventions: {}
   multimedia: {}
-  studies: {}
+  studies:
+    baseline:
+      - 373d1e29033ffc5ea60dbff8907d8999
+      - 13
+    hpi-decode-bp:
+      - 00783e5154ee5312655ba6dd114f7d2e
+      - 9
+    pss:
+      - 84df1128bb2a7d0b651651c5907e796f
+      - 11
+    warrior-shield:
+      - 4bd95befd9f6f05f54ffe72192d3d405
+      - 12
   surveys: {}
 
