@@ -50,7 +50,7 @@ const scoringFns = {
     sumScore,
   "digi-ibd-001::patient-global-impression-uc-change": sumScore,
   "digi-ibd-001::patient-global-impression-uc-severity": sumScore,
-  "digi-ibd-001::pro-3-screening-screening": pro3,
+  "digi-ibd-001::pro-3-screening": pro3,
   "digi-ibd-001::promis-emotional-distress-anxiety-screening": sumScore,
   "digi-ibd-001::promis-emotional-distress-depression-screening": sumScore,
   "digi-ibd-001::promis-fatigue-7a-screening": sumScore,
