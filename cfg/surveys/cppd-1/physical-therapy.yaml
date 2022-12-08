@@ -54,9 +54,7 @@ sections:
                 value: yes
       - key: pt_3
         question: Overall, how hard were you working during the exercises?
-        description: Please rate your perceived exertion from 6 - 20.
-          With 6 being no or minimal exertion and 20 being maximum possible effort.
-          For example, a rating of 11 would correspond to light, and 15 would correspond to hard intensity.
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates maximum possible effort. For example, a rating of 11 would correspond to light intensity activities, and 15 would correspond to hard intensity activities.
         type: SLIDER
         min: 6
         max: 20
