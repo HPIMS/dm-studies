@@ -32,8 +32,8 @@ async function handler(event, context) {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      messageType: showMessage ? messageType : messageTypes.none,
-      messageText: showMessage ? messageText : "",
+      type: showMessage ? messageType : messageTypes.none,
+      text: showMessage ? messageText : "",
     }),
     headers: {
       "Content-Type": "application/json",
