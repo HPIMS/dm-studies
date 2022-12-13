@@ -35,6 +35,10 @@ async function handler(event, context) {
       messageType: showMessage ? messageType : messageTypes.none,
       messageText: showMessage ? messageText : "",
     }),
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-cache, no-store",
+    },
   };
 }
 
