@@ -17,7 +17,7 @@ const messageType = messageTypes.error;
 
 // Set message text
 const messageText =
-  "ehive is currently experiencing degraded service. Please try again later.";
+  "ehive is currently experiencing outages. Please try again later.";
 
 /**
  * CONFIGURATION END
