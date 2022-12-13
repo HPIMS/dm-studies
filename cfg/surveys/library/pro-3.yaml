@@ -1,6 +1,9 @@
 key: pro-3
-scorable: true
 active: true
+scorable: true
+score:
+  fn: pro-3
+  args: {}
 schedule:
   type: PERIOD
   period: WEEKLY

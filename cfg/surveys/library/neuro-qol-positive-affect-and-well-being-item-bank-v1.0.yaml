@@ -1,6 +1,9 @@
 key: neuro-qol-positive-affect-and-well-being-item-bank-v1.0
 active: true
 scorable: true
+score:
+  fn: prorate-sum
+  args: { minThreshold: 0.5 }
 metadata: 
   author: "Neuro-QOL"
   instrument: "Positive Affect and Well-Being - Item Bank"
