@@ -1,4 +1,9 @@
-const messageTypes = { error: "ERROR", warning: "WARNING", notice: "Notice" };
+const messageTypes = {
+  error: "Error",
+  warning: "Warning",
+  notice: "Notice",
+  none: "None",
+};
 
 /**
  * CONFIGURATION START
@@ -19,14 +24,17 @@ const messageText =
  */
 
 async function handler(event, context) {
+  // Only allow GET
+  if (event.httpMethod !== "GET") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
+
   return {
     statusCode: 200,
-    body: showMessage
-      ? JSON.stringify({
-          messageType,
-          messageText,
-        })
-      : "{}",
+    body: JSON.stringify({
+      messageType: showMessage ? messageType : messageTypes.none,
+      messageText: showMessage ? messageText : "",
+    }),
   };
 }
 
