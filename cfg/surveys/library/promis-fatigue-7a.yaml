@@ -7,7 +7,9 @@ score:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 3
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
 name: Fatigue Assessment
 short: "About your fatigue"
 intro:

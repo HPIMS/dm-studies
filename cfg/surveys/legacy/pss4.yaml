@@ -5,7 +5,9 @@ schedule:
   type: PERIOD
   period: MONTHLY
 repeat: 3
-timeEstimate: 2
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Stress Survey
 short: Share information about your stress
 intro:

@@ -7,7 +7,9 @@ score:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Crohn's Assessment
 short: "Reflect on your Croh's"
 intro:

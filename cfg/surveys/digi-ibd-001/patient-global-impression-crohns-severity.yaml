@@ -9,7 +9,9 @@ schedule:
   timetable: [0, 2, 4, 6, 8, 14]
   timetableUnits: WEEKS
   graceDays: 3
-timeEstimate: 1
+timeRequirements: 
+  time: 30
+  timeUnits: seconds
 name: Crohn's severity
 short: How is your Crohn's
 intro:

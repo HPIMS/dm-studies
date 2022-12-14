@@ -12,7 +12,9 @@ metadata:
 schedule:
   type: PERIOD
   period: MONTHLY
-timeEstimate: 2
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: "Positive Affect & Well-being"
 short: "Tell us about your well-being lately"
 intro:

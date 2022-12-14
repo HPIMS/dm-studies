@@ -12,7 +12,9 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
-timeEstimate: 3
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Fitzpatrick Skin Type
 short: Determine your skin tone
 intro:

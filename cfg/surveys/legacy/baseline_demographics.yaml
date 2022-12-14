@@ -5,7 +5,9 @@ schedule:
   period: ONCE
 editable: true
 repeat: 1
-timeEstimate: 5
+timeRequirements: 
+  time: 5
+  timeUnits: minutes
 name: About You Questionnaire
 short: Information about you
 intro:

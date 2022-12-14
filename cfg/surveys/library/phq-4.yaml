@@ -12,7 +12,9 @@ metadata:
 schedule:
   type: PERIOD
   period: BI_WEEKLY
-timeEstimate: 2
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Health Questionnaire
 short: About your feelings
 intro:

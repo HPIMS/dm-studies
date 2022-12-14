@@ -12,7 +12,9 @@ metadata:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Gastrointestinal Diarrhea
 short: About your stool
 intro:

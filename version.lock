@@ -46,245 +46,245 @@ active:
   studies:
     baseline:
       - 373d1e29033ffc5ea60dbff8907d8999
-      - 13
+      - 15
     digi-ibd-001:
-      - 5ce183d1db1ab8ac437404d38f516e79
+      - ff3d5e056e949dccd63bcaaff4989d4a
+      - 6
+    ibd-forecast:
+      - b5ffacab62be68f93d70a5a82eb231d6
+      - 18
+  surveys:
+    baseline_cd_risc_survey:
+      - 4d9f3393a80ecb9d804462d7e1883247
+      - 8
+    baseline_demographics:
+      - 865543107dd2c4676521ae739d243726
+      - 12
+    baseline_medical_history:
+      - fb15b947a95f5912c4ea9145a8ec522b
+      - 13
+    digi-ibd-001::begin-next-phase:
+      - fd68b027dcb21d300b4fa0c454873601
+      - 3
+    digi-ibd-001::patient-global-impression-crohns-change:
+      - 7995a5d2a02b468a19a34ec349584970
+      - 4
+    digi-ibd-001::patient-global-impression-crohns-severity:
+      - 6bf6702063c794f81cb5f2ee731a545d
+      - 4
+    digi-ibd-001::patient-global-impression-fatigue-change:
+      - 4131ec9ec0e2c4c84b37a680dd2839c5
+      - 4
+    digi-ibd-001::patient-global-impression-fatigue-severity:
+      - 9c9c3733e52aa5b73ab8bca87f007aaa
+      - 4
+    digi-ibd-001::patient-global-impression-sleep-disturbance-change:
+      - 788a05a9659a2d3bbdcd14a6a5db1e25
+      - 4
+    digi-ibd-001::patient-global-impression-sleep-disturbance-severity:
+      - 34fac613c925bbbde7888fbe4cdebb0d
+      - 4
+    digi-ibd-001::patient-global-impression-uc-change:
+      - 1cd3f74bc1457427cd63839fba3fc3eb
+      - 4
+    digi-ibd-001::patient-global-impression-uc-severity:
+      - 556ef1434cf3d388cf2d212f84eebf21
+      - 4
+    digi-ibd-001::pro-3-screening:
+      - 7b3a83c6497a78aa28833afd7bf800dc
+      - 3
+    digi-ibd-001::promis-emotional-distress-anxiety-screening:
+      - 050b3aac34aa14df87120ae9c902c4d6
+      - 3
+    digi-ibd-001::promis-emotional-distress-depression-screening:
+      - 262f989cbbc2766a677d135d2da950a9
+      - 3
+    digi-ibd-001::promis-fatigue-7a-screening:
+      - a24b6b4a41c1d990161cab9d4857fe6f
+      - 3
+    digi-ibd-001::promis-gi-belly-pain-screening:
+      - abcdacabc501668ed65952c452631e2f
+      - 3
+    digi-ibd-001::promis-gi-diarrhea-screening:
+      - dc3f0f94e00dbc5e704d0c36e203dc76
+      - 3
+    digi-ibd-001::promis-sleep-disturbance-8a-v1.0-screening:
+      - 71fa5e194b9d57a2e1ec47dde60a8939
+      - 3
+    digi-ibd-001::promis-sleep-related-impairment-screening:
+      - 9a052b5da18a074257d30d3060676bb1
+      - 3
+    digi-ibd-001::sccai-screening:
+      - b5d584b1c96e786d06fefd8d70a89297
+      - 4
+    digi-ibd-001::sibdq-screening:
+      - 97059b47f3aa006289a000fd0ee4f567
+      - 4
+    digi-ibd-001::which-ibd:
+      - 801c7f6198bd7cd61c7d9683652cd89a
+      - 4
+    health_care:
+      - b0af74066ce2756e637d40847492cdf7
+      - 8
+    hpi-decode-bp::clearance:
+      - 55070a882c87f153e87d96e71059ffb0
+      - 3
+    hpi-decode-bp::demographics:
+      - 6e9f4e639a4c22800ea2ea505e3b50e8
       - 5
+    hpi-decode-bp::usability:
+      - 7776603b0fd3028f479b0be5daba542a
+      - 3
+    ibd-forecast::baseline_demographics:
+      - 4ada4ba14ec19588049723a9fbc84fd3
+      - 7
+    ibd-forecast::baseline_health_crohn:
+      - 8e971bc1da5c3f383cd3c92fb452e050
+      - 7
+    ibd-forecast::baseline_health_pouch:
+      - a7cfbbce98e5216a346976fc4cba596c
+      - 3
+    ibd-forecast::baseline_health_uc:
+      - 0d92bcbfbf976c336ae16a567faf9875
+      - 9
+    ibd-forecast::lab_tests:
+      - 9b8af549e65688ebc2e402db2792a4ad
+      - 5
+    ibd-forecast::new_meds:
+      - 8e107c8fdb6898b543fbdc5ab455579c
+      - 7
+    ibd-forecast::pouch:
+      - b1215a32d6b43d833c878a7e88b9b033
+      - 3
+    ibd-forecast::pss-4-baseline:
+      - 121972abe7230a567714feffb405d3bb
+      - 5
+    ibd-forecast::pss-4-bi-weekly:
+      - 09197dab70abbae80a5c4819c5389450
+      - 7
+    library::cd-risc-10:
+      - 3c45608b03052929ee972495885bb036
+      - 5
+    library::cd-risc-2:
+      - f17054b477203575a8ea3c2bd02ad89a
+      - 4
+    library::fitzpatrick-skin-type:
+      - b8589e2eaa6afaa4a8749716df860e3d
+      - 5
+    library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
+      - cb4ad94faa7215da9e1457f7c44ba1ee
+      - 6
+    library::phq-4:
+      - 4632d89144db4820a983b4513382a8ba
+      - 6
+    library::phq-8:
+      - 46d0cb4cbd7d3d4adfbc9b07cb0a8502
+      - 4
+    library::pro-2-crohns:
+      - 6891a5b19d41ba24719d106980b5a2a8
+      - 6
+    library::pro-2-uc:
+      - f14edf5a4773524031007d444a8066d6
+      - 7
+    library::pro-3:
+      - d14805ad8abbf76341a4a1eb4b76a523
+      - 3
+    library::promis-emotional-distress-anxiety:
+      - f530cd98c99c2d6268387266c524ecfd
+      - 3
+    library::promis-emotional-distress-depression:
+      - b6ffc4f02e63dad071b9d225af9b2c7c
+      - 3
+    library::promis-fatigue-7a:
+      - eb5b43a45860f2d7b2189897adb44a6b
+      - 3
+    library::promis-gh-qol-2-item:
+      - f17635ca757c80f5017bfd97a1ea7ffd
+      - 4
+    library::promis-gi-belly-pain:
+      - fc64b4c59f1e818d0a913d3161bd7b3d
+      - 4
+    library::promis-gi-diarrhea:
+      - 217f4db1c395bd608e23d165d2b28397
+      - 4
+    library::promis-pain-interference-6b-v1.0:
+      - de3366b26f8517a76d1c9a4894575763
+      - 4
+    library::promis-sleep-disturbance-8a-v1.0:
+      - c221ea3281690684e52a2a128e9b293d
+      - 5
+    library::promis-sleep-related-impairment:
+      - 8fbbcaf31cb761057901ad0de3a1e3a7
+      - 3
+    library::promis-social-support-2-item:
+      - 48915b8af812dc8a9ada2c7b48f8739d
+      - 6
+    library::pss-10:
+      - e9328f5e9a780afc6e79077c7b6fec6e
+      - 5
+    library::pss-4:
+      - d348f2c626449d64e2a739aac3f941bf
+      - 5
+    library::sccai:
+      - 31ff8440f26419e7bb4ed405d4e5ac1a
+      - 4
+    library::sibdq:
+      - c7d7cf6748d6c47f6c1c36ee1b1a29b5
+      - 4
+    mood_survey:
+      - 4a881f332b3e4df72a785cfe04d696ed
+      - 7
+    pain:
+      - 9ba3c6ca34e2e8470757cf7e90e494f4
+      - 9
+    pss4:
+      - ed4464296557bd83019e0681775c15bf
+      - 9
+    qol_survey:
+      - f9d8eb9c48db097ba5e5f113dc440d6a
+      - 8
+    satisfaction_survey_final:
+      - 4d052e9733e4791c7cee230cb0170d2f
+      - 10
+    satisfaction_survey_monthly:
+      - d9e90f97a5d57da3c4365714e7cb6f42
+      - 12
+    sleep:
+      - 5edda7e93c1b325640c1c05884823742
+      - 9
+    sleep_stress_pain:
+      - 4330f3f50b89dc301d5a857a13babcbb
+      - 8
+    warrior-shield::daily-check-in:
+      - 7b798e2bc0307c6e1049f8d6f7b95fd8
+      - 3
+    warrior-shield::demographics:
+      - f6076247f884a58a81168f1af2443225
+      - 4
+    warrior-shield::devices:
+      - 0876ed62347a41e8f3daa212fbe423ad
+      - 7
+    warrior-shield::heartmath-satisfaction:
+      - 2920ec41d151dfa9febc4d9267e612b0
+      - 3
+    warrior-shield::report-new-information:
+      - 975e0f71f5ac521a1cf07a5d9ca4f0a2
+      - 3
+    warrior-shield::start-intervention:
+      - d56389e6d954dc5c80dc2d4ffb6ff5ea
+      - 5
+inactive:
+  interventions: {}
+  multimedia: {}
+  studies:
     hpi-decode-bp:
       - 00783e5154ee5312655ba6dd114f7d2e
       - 10
-    ibd-forecast:
-      - c252625c63ccf76edddbfa7edef0a857
-      - 17
     pss:
       - 84df1128bb2a7d0b651651c5907e796f
       - 11
     warrior-shield:
       - 4bd95befd9f6f05f54ffe72192d3d405
       - 13
-  surveys:
-    baseline_cd_risc_survey:
-      - 7526ffe53d131d520705edf5fb802d3c
-      - 7
-    baseline_demographics:
-      - 9d4ecd53b595891685e9787706f79c42
-      - 11
-    baseline_medical_history:
-      - 8ef115f3b2339b5ba6b73394c29f241c
-      - 12
-    digi-ibd-001::begin-next-phase:
-      - b4ec11f4386217974ffe5ca27cce78c7
-      - 2
-    digi-ibd-001::patient-global-impression-crohns-change:
-      - c5cda8deb310a1c14c077b2a82e54462
-      - 3
-    digi-ibd-001::patient-global-impression-crohns-severity:
-      - 166da75caa8381e669e90e0940c1af75
-      - 3
-    digi-ibd-001::patient-global-impression-fatigue-change:
-      - b3d423ae1a06bc5ec3e188e094aa9496
-      - 3
-    digi-ibd-001::patient-global-impression-fatigue-severity:
-      - 6ad3ad1076cdbe630cc3492b31c6547b
-      - 3
-    digi-ibd-001::patient-global-impression-sleep-disturbance-change:
-      - f5bd1aa20b9523e0d781ef3747386617
-      - 3
-    digi-ibd-001::patient-global-impression-sleep-disturbance-severity:
-      - c5a34a653d272aee2eeeed3a6734e4d4
-      - 3
-    digi-ibd-001::patient-global-impression-uc-change:
-      - eca6820dfc5846a6144e1efa2b8d6beb
-      - 3
-    digi-ibd-001::patient-global-impression-uc-severity:
-      - 3415a999d0a7ac5b490b6fa67450ac5e
-      - 3
-    digi-ibd-001::pro-3-screening:
-      - d245d676b7c965f370cc50a2b64ead03
-      - 2
-    digi-ibd-001::promis-emotional-distress-anxiety-screening:
-      - 1745849bab437d543324469f8cf039d2
-      - 2
-    digi-ibd-001::promis-emotional-distress-depression-screening:
-      - 8d6a87643244aa934dc5a22c48d07466
-      - 2
-    digi-ibd-001::promis-fatigue-7a-screening:
-      - be18b68900c6b4099769d8f881a461ba
-      - 2
-    digi-ibd-001::promis-gi-belly-pain-screening:
-      - a6007e5891aeed0e645cfdf3b19a5f83
-      - 2
-    digi-ibd-001::promis-gi-diarrhea-screening:
-      - cf910e1024f1dd5af2390d97312f4070
-      - 2
-    digi-ibd-001::promis-sleep-disturbance-8a-v1.0-screening:
-      - 91da5a041b1a06bc13afbb864ce5f25d
-      - 2
-    digi-ibd-001::promis-sleep-related-impairment-screening:
-      - 37b2cff9c36740df9dbc1b6866fdcd30
-      - 2
-    digi-ibd-001::sccai-screening:
-      - a0abfc8f7c244bea8fbe5853e537160e
-      - 3
-    digi-ibd-001::sibdq-screening:
-      - 9c4059f46c5497b496be568893424fe8
-      - 3
-    digi-ibd-001::which-ibd:
-      - eb97b57a356f09d5f40b9584071e41c7
-      - 3
-    health_care:
-      - 552cb6895afd4638b76f0210a822b913
-      - 7
-    hpi-decode-bp::clearance:
-      - f16dd5c403c0406096bfe18374ff57d0
-      - 2
-    hpi-decode-bp::demographics:
-      - e45a990c0fb952954b02c9be0687b7ad
-      - 4
-    hpi-decode-bp::usability:
-      - 616d151620c66b629ae624ab41661a37
-      - 2
-    ibd-forecast::baseline_demographics:
-      - 27aa8007ddee5c8d7f48af47ac6980b2
-      - 6
-    ibd-forecast::baseline_health_crohn:
-      - 4e994ae4150e66afabb0103683d95173
-      - 6
-    ibd-forecast::baseline_health_pouch:
-      - f63f8c15335d94933f1d1bf675b0d06e
-      - 2
-    ibd-forecast::baseline_health_uc:
-      - 2fe4a5846193cabff9fb432b6086019f
-      - 8
-    ibd-forecast::lab_tests:
-      - 792b7e5aac2aa3120f7d02832dfacd3a
-      - 4
-    ibd-forecast::new_meds:
-      - cff8d09b78664ea8508ddd22d8f73c97
-      - 6
-    ibd-forecast::pouch:
-      - b061f95119c34c6603feeddb97aa3169
-      - 2
-    ibd-forecast::pss-4-baseline:
-      - 2cdcff5ef97534b49b5b85d968b3a8b3
-      - 4
-    ibd-forecast::pss-4-bi-weekly:
-      - f79b0d3681fde2c3b2889e737aef7a1d
-      - 6
-    library::cd-risc-10:
-      - fcb9e7bfc01c573b6f82764d5f981237
-      - 4
-    library::cd-risc-2:
-      - 0657c1eaff0b7e5bc891416fd86221e4
-      - 3
-    library::fitzpatrick-skin-type:
-      - ae059e02c50a91fddc5499dc54d6eac9
-      - 4
-    library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
-      - 7eba1c5af0db9559ba83da47a7e592aa
-      - 5
-    library::phq-4:
-      - 967ee89aa223f38f2c9c17c404a5fc7c
-      - 5
-    library::phq-8:
-      - 47b54eb7c38c5a1006d79da2b29d2931
-      - 3
-    library::pro-2-crohns:
-      - 8e60a027c134b30183c21ccb5f7b3e08
-      - 5
-    library::pro-2-uc:
-      - bd658d599ea40f824f8d6a33785df636
-      - 6
-    library::pro-3:
-      - 8849cd1b0403fc541619128ac94a4105
-      - 2
-    library::promis-emotional-distress-anxiety:
-      - fbb7adec1fa117326535544f9ebbf873
-      - 2
-    library::promis-emotional-distress-depression:
-      - 2f1faad2aa3580c84f76e67d520318db
-      - 2
-    library::promis-fatigue-7a:
-      - b5faf4cbde3cb354de3c4764639805bb
-      - 2
-    library::promis-gh-qol-2-item:
-      - b84b265b2bca6a15b6fe0e317fba8471
-      - 3
-    library::promis-gi-belly-pain:
-      - 60720c956e5ac680f176f8c82f6e1880
-      - 3
-    library::promis-gi-diarrhea:
-      - dd922307475e0345d88415f4f8a8838b
-      - 3
-    library::promis-pain-interference-6b-v1.0:
-      - 560aada9d2731a0f823f4f9cf3acf816
-      - 3
-    library::promis-sleep-disturbance-8a-v1.0:
-      - 39398b8e15e50820cc54f577bd882a22
-      - 4
-    library::promis-sleep-related-impairment:
-      - e5e794f4df93dc6b19c8d6011b9f3b2e
-      - 2
-    library::promis-social-support-2-item:
-      - b3d63c9370d3003ff600fed19b7f4e89
-      - 5
-    library::pss-10:
-      - feb175de10ec7edf1b008944d78587ca
-      - 4
-    library::pss-4:
-      - 71aeb58cc32d90569bd590afd9024ad1
-      - 4
-    library::sccai:
-      - b00da2bce8fd8608f0dcc274b06ee16e
-      - 3
-    library::sibdq:
-      - cecf9cbe66dafc7664792bc3fbf5014e
-      - 3
-    mood_survey:
-      - d4fa6e64c43da7ef6fd70d70f317dfec
-      - 6
-    pain:
-      - d50a18b8d0082a13bbf9cc585711585c
-      - 8
-    pss4:
-      - cbfc034b38840919b1cfa6333922dd6e
-      - 8
-    qol_survey:
-      - 1363873d1d15e3b5a98fea2af72ebdee
-      - 7
-    satisfaction_survey_final:
-      - 5475cf0fa45a7a16babd196845e2cde0
-      - 9
-    satisfaction_survey_monthly:
-      - ce31855952e018388898994aeb2d3321
-      - 11
-    sleep:
-      - 0ebd4b12e01bac5d343a21144658e97b
-      - 8
-    sleep_stress_pain:
-      - fd04400919f5dc5bd05fea6a6783425c
-      - 7
-    warrior-shield::daily-check-in:
-      - c3a58c2c52a8172fcfae9301e6540d30
-      - 2
-    warrior-shield::demographics:
-      - 3256d2d91f1c486aaaedb222a83aa812
-      - 3
-    warrior-shield::devices:
-      - a62aaa4e5c428e803d201d50a27bd63a
-      - 6
-    warrior-shield::heartmath-satisfaction:
-      - 94e0f346fa7141e8cc6fb0bd3c2d3908
-      - 2
-    warrior-shield::report-new-information:
-      - df7efc5d17fdb2a3f5aeacdd38579d98
-      - 2
-    warrior-shield::start-intervention:
-      - fa4c0879effa253695529beb90016a47
-      - 4
-inactive:
-  interventions: {}
-  multimedia: {}
-  studies: {}
   surveys: {}
 

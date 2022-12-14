@@ -5,7 +5,9 @@ schedule:
   type: PERIOD
   period: ONCE
 repeat: 1
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Resilience & Coping Survey
 short: How you cope
 intro:

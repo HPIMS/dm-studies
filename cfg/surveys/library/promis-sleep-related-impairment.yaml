@@ -7,7 +7,9 @@ score:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 3
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Tiredness Assessment
 short: "Tiredness reflection"
 intro:

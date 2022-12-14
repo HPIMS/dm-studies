@@ -12,7 +12,9 @@ metadata:
 schedule:
   type: PERIOD
   period: MONTHLY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Social Support
 short: "Tell us about your support over the last month"
 intro:

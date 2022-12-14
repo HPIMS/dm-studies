@@ -4,7 +4,9 @@ schedule:
   type: PERIOD
   period: MONTHLY
 repeat: 3
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Monthly Study Check-in Survey
 short: Monthly study satisfaction
 intro:

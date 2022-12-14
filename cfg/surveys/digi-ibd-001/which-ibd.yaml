@@ -7,7 +7,9 @@ score:
 schedule:
   type: PERIOD
   period: ONCE
-timeEstimate: 1
+timeRequirements: 
+  time: 10
+  timeUnits: seconds
 name: IBD Type
 short: "Tell us about your IBD"
 sections:

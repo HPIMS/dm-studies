@@ -13,7 +13,9 @@ metadata:
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 3
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Pain
 short: Rate your pain in the last week
 intro:

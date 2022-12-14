@@ -3,7 +3,9 @@ active: true
 schedule:
   type: PERIOD
   period: ONCE
-timeEstimate: 5
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Devices
 short: Share your preference for receiving required study devices
 intro:
