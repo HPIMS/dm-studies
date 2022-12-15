@@ -29,6 +29,8 @@ sections:
         question: On how many days did you do vigorous physical activities?
         placeholder: e.g. 2
         type: NUMERIC
+        minValue: 0
+        maxValue: 7
         triggers:
           - action:
               type: SHOW
@@ -42,7 +44,11 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
+        minHours: 0
+        maxHours: 12
         minutes: true
+        minMinutes: 0
+        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
         triggers:
@@ -68,6 +74,8 @@ sections:
         question: On how many days did you do moderate physical activities?
         placeholder: e.g. 2
         type: NUMERIC
+        minValue: 0
+        maxValue: 7
         triggers:
           - action:
               type: SHOW
@@ -81,7 +89,11 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
+        minHours: 0
+        maxHours: 12
         minutes: true
+        minMinutes: 0
+        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
         triggers:
@@ -107,6 +119,8 @@ sections:
         question: On how many days did you walk?
         placeholder: e.g. 2
         type: NUMERIC
+        minValue: 0
+        maxValue: 7
         triggers:
           - action:
               type: SHOW
@@ -120,7 +134,11 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
+        minHours: 0
+        maxHours: 12
         minutes: true
+        minMinutes: 0
+        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
         triggers:
@@ -144,6 +162,10 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
+        minHours: 0
+        maxHours: 24
         minutes: true
+        minMinutes: 0
+        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
