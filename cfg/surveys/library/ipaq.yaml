@@ -44,11 +44,8 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
-        minHours: 0
         maxHours: 12
         minutes: true
-        minMinutes: 0
-        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
         triggers:
@@ -89,11 +86,8 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
-        minHours: 0
         maxHours: 12
         minutes: true
-        minMinutes: 0
-        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
         triggers:
@@ -134,11 +128,8 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
-        minHours: 0
         maxHours: 12
         minutes: true
-        minMinutes: 0
-        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
         triggers:
@@ -162,10 +153,7 @@ sections:
         description: Leave blank if unsure
         type: DURATION
         hours: true
-        minHours: 0
         maxHours: 24
         minutes: true
-        minMinutes: 0
-        maxMinutes: 60
         hoursPlaceholder: hours per day
         minutesPlaceholder: minutes per day
