@@ -47,6 +47,18 @@ active:
     baseline:
       - 373d1e29033ffc5ea60dbff8907d8999
       - 15
+    cppd-1:
+      - 47b398d5d9dc33283e05dffc54ed3e7f
+      - 1
+    cppd-2:
+      - af2b01db653dcf445e91eda0f23b978c
+      - 1
+    cppd-2__case:
+      - 18ee85973d1fd6b33fb0ca55c177eca9
+      - 1
+    cppd-2__control:
+      - a615343fac5faa3e1bf1b5b198c3b157
+      - 1
     digi-ibd-001:
       - ff3d5e056e949dccd63bcaaff4989d4a
       - 6
@@ -63,6 +75,12 @@ active:
     baseline_medical_history:
       - fb15b947a95f5912c4ea9145a8ec522b
       - 13
+    cppd-1::bladder-irritants:
+      - f8d3f42558cc2a332622be272771643a
+      - 1
+    cppd-1::physical-therapy:
+      - bc5e43b87b0ed4c4f97de7eb049c1561
+      - 1
     digi-ibd-001::begin-next-phase:
       - fd68b027dcb21d300b4fa0c454873601
       - 3
@@ -133,8 +151,8 @@ active:
       - 6e9f4e639a4c22800ea2ea505e3b50e8
       - 5
     hpi-decode-bp::usability:
-      - 7776603b0fd3028f479b0be5daba542a
-      - 3
+      - 043b15e39a40bd65c986e19a58e60b3e
+      - 4
     ibd-forecast::baseline_demographics:
       - 4ada4ba14ec19588049723a9fbc84fd3
       - 7
@@ -168,12 +186,30 @@ active:
     library::cd-risc-2:
       - f17054b477203575a8ea3c2bd02ad89a
       - 4
+    library::euro-qol-eq-5d-5l:
+      - 45f468e6ef2123bd9dda2527a053641f
+      - 1
     library::fitzpatrick-skin-type:
       - b8589e2eaa6afaa4a8749716df860e3d
       - 5
+    library::ipaq:
+      - 4b104006a1138a3e6ab697c535717d86
+      - 1
+    library::mpq:
+      - fe32b9b074a53a9718d1a6fba16634c4
+      - 1
     library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
       - cb4ad94faa7215da9e1457f7c44ba1ee
       - 6
+    library::nih-cpsi:
+      - 2dd555c74e605aad9fe133853af2fe80
+      - 1
+    library::pcs:
+      - 01f2d04634512c193a122d941159bff1
+      - 1
+    library::pelvic-floor-distress-inventory-sf20:
+      - 8e0ea5ed01a78b984f69cd5e798cae1a
+      - 1
     library::phq-4:
       - 4632d89144db4820a983b4513382a8ba
       - 6
@@ -195,6 +231,9 @@ active:
     library::promis-emotional-distress-depression:
       - b6ffc4f02e63dad071b9d225af9b2c7c
       - 3
+    library::promis-fatigue-4a-v1.0:
+      - 1b6d577da3fe65f5a763e74c474f1ec6
+      - 1
     library::promis-fatigue-7a:
       - eb5b43a45860f2d7b2189897adb44a6b
       - 3
@@ -207,9 +246,21 @@ active:
     library::promis-gi-diarrhea:
       - 217f4db1c395bd608e23d165d2b28397
       - 4
+    library::promis-global-mental-health-2a-v1.2:
+      - dd258d317db3ac6785d097f6cc5eb93a
+      - 1
     library::promis-pain-interference-6b-v1.0:
       - de3366b26f8517a76d1c9a4894575763
       - 4
+    library::promis-pain-interference-6b-v1.1:
+      - ac52dbcae6b987943014a52bd9356034
+      - 1
+    library::promis-physical-function-4a-v1.0:
+      - 9dcc524a619849387642b22dc6e8603c
+      - 1
+    library::promis-sleep-disturbance-4a-v1.0:
+      - 14824b9d7ad6ef05c249ed71c47e5d4c
+      - 1
     library::promis-sleep-disturbance-8a-v1.0:
       - c221ea3281690684e52a2a128e9b293d
       - 5
@@ -220,8 +271,8 @@ active:
       - 48915b8af812dc8a9ada2c7b48f8739d
       - 6
     library::pss-10:
-      - e9328f5e9a780afc6e79077c7b6fec6e
-      - 5
+      - 75ecd299a6663930e36fdf194b0e36a8
+      - 6
     library::pss-4:
       - d348f2c626449d64e2a739aac3f941bf
       - 5
@@ -247,17 +298,17 @@ active:
       - 4d052e9733e4791c7cee230cb0170d2f
       - 10
     satisfaction_survey_monthly:
-      - d9e90f97a5d57da3c4365714e7cb6f42
-      - 12
+      - 59fb2763b849dc61c9f5464848e48168
+      - 13
     sleep:
       - 5edda7e93c1b325640c1c05884823742
       - 9
     sleep_stress_pain:
-      - 4330f3f50b89dc301d5a857a13babcbb
-      - 8
+      - 0449d9f5264968094ea72766c8838186
+      - 9
     warrior-shield::daily-check-in:
-      - 7b798e2bc0307c6e1049f8d6f7b95fd8
-      - 3
+      - c930a7be123813b45058f3cf54d7409f
+      - 4
     warrior-shield::demographics:
       - f6076247f884a58a81168f1af2443225
       - 4
@@ -265,8 +316,8 @@ active:
       - 0876ed62347a41e8f3daa212fbe423ad
       - 7
     warrior-shield::heartmath-satisfaction:
-      - 2920ec41d151dfa9febc4d9267e612b0
-      - 3
+      - 25b8c2f538e7bf39ce70cee4f6243300
+      - 4
     warrior-shield::report-new-information:
       - 975e0f71f5ac521a1cf07a5d9ca4f0a2
       - 3
