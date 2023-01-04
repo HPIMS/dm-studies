@@ -31,7 +31,7 @@ sections:
       - key: wuc_1
         question: Do you usually experience pressure in the lower abdomen?
         type: YESNO_CHOICE
-      - key: wuc_$1.1
+      - key: wuc_1.1
         triggers:
           - action:
               type: SHOW
