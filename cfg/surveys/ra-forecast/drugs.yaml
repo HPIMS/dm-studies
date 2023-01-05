@@ -1,0 +1,2541 @@
+- key: current_med_dose_corticosteroid
+  question: What is the current dose of Corticosteroids (prednisone, prednisolone,
+    methylpredninsolone)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_corticosteroid_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_corticosteroid_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_corticosteroid_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_corticosteroid_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: corticosteroid
+- key: current_med_freq_units_corticosteroid
+  question: How often do you take Corticosteroids (prednisone, prednisolone,
+    methylpredninsolone)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_corticosteroid_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: corticosteroid
+- key: current_med_freq_value_corticosteroid
+  question: How many times at the above frequency do you take Corticosteroids
+    (prednisone, prednisolone, methylpredninsolone)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: corticosteroid
+- key: current_med_route_corticosteroid
+  question: What is the way the Corticosteroids (prednisone, prednisolone,
+    methylpredninsolone)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: corticosteroid
+- key: current_med_last_dose_date_corticosteroid
+  question: When was your last dose of Corticosteroids (prednisone, prednisolone,
+    methylpredninsolone)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: corticosteroid
+- key: current_med_dose_nsaids
+  question: What is the current dose of NSAIDs (ie. ibuprofen, advil, motrin,
+    naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+    sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
+    indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
+    celecoxib, celebrex)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_nsaids_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_nsaids_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_nsaids_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_nsaids_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: nsaids
+- key: current_med_freq_units_nsaids
+  question: How often do you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+    alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac,
+    clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin,
+    indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib,
+    celebrex)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_nsaids_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: nsaids
+- key: current_med_freq_value_nsaids
+  question: How many times at the above frequency do you take NSAIDs (ie.
+    ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac,
+    lodine, nabumetone, relafen, sulindac, clinoril, tolementin,
+    tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis,
+    oruvail, meloxicam, mobic, celecoxib, celebrex)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: nsaids
+- key: current_med_route_nsaids
+  question: What is the way the NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+    alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac,
+    clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin,
+    indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib,
+    celebrex)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: nsaids
+- key: current_med_last_dose_date_nsaids
+  question: When was your last dose of NSAIDs (ie. ibuprofen, advil, motrin,
+    naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+    sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
+    indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
+    celecoxib, celebrex)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: nsaids
+- key: current_med_dose_hydroxychloroquine
+  question: What is the current dose of Hydroxychloroquine (plaquenil)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_hydroxychloroquine_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_hydroxychloroquine_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_hydroxychloroquine_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_hydroxychloroquine_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: hydroxychloroquine
+- key: current_med_freq_units_hydroxychloroquine
+  question: How often do you take Hydroxychloroquine (plaquenil)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_hydroxychloroquine_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: hydroxychloroquine
+- key: current_med_freq_value_hydroxychloroquine
+  question: How many times at the above frequency do you take Hydroxychloroquine
+    (plaquenil)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: hydroxychloroquine
+- key: current_med_route_hydroxychloroquine
+  question: What is the way the Hydroxychloroquine (plaquenil)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: hydroxychloroquine
+- key: current_med_last_dose_date_hydroxychloroquine
+  question: When was your last dose of Hydroxychloroquine (plaquenil)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: hydroxychloroquine
+- key: current_med_dose_leflunomide
+  question: What is the current dose of Leflunomide (arava)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_leflunomide_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_leflunomide_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_leflunomide_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_leflunomide_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: leflunomide
+- key: current_med_freq_units_leflunomide
+  question: How often do you take Leflunomide (arava)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_leflunomide_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: leflunomide
+- key: current_med_freq_value_leflunomide
+  question: How many times at the above frequency do you take Leflunomide (arava)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: leflunomide
+- key: current_med_route_leflunomide
+  question: What is the way the Leflunomide (arava)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: leflunomide
+- key: current_med_last_dose_date_leflunomide
+  question: When was your last dose of Leflunomide (arava)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: leflunomide
+- key: current_med_dose_azulfidine
+  question: What is the current dose of Azulfidine (Sulfasalazine)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_azulfidine_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_azulfidine_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_azulfidine_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_azulfidine_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: azulfidine
+- key: current_med_freq_units_azulfidine
+  question: How often do you take Azulfidine (Sulfasalazine)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_azulfidine_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: azulfidine
+- key: current_med_freq_value_azulfidine
+  question: How many times at the above frequency do you take Azulfidine (Sulfasalazine)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: azulfidine
+- key: current_med_route_azulfidine
+  question: What is the way the Azulfidine (Sulfasalazine)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: azulfidine
+- key: current_med_last_dose_date_azulfidine
+  question: When was your last dose of Azulfidine (Sulfasalazine)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: azulfidine
+- key: current_med_dose_cyclosporine
+  question: What is the current dose of Cyclosporine (neoral, sandimmune)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_cyclosporine_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_cyclosporine_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_cyclosporine_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_cyclosporine_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclosporine
+- key: current_med_freq_units_cyclosporine
+  question: How often do you take Cyclosporine (neoral, sandimmune)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_cyclosporine_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclosporine
+- key: current_med_freq_value_cyclosporine
+  question: How many times at the above frequency do you take Cyclosporine
+    (neoral, sandimmune)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclosporine
+- key: current_med_route_cyclosporine
+  question: What is the way the Cyclosporine (neoral, sandimmune)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclosporine
+- key: current_med_last_dose_date_cyclosporine
+  question: When was your last dose of Cyclosporine (neoral, sandimmune)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclosporine
+- key: current_med_dose_cyclophosphamide
+  question: What is the current dose of Cyclophosphamide?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_cyclophosphamide_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_cyclophosphamide_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_cyclophosphamide_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_cyclophosphamide_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclophosphamide
+- key: current_med_freq_units_cyclophosphamide
+  question: How often do you take Cyclophosphamide?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_cyclophosphamide_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclophosphamide
+- key: current_med_freq_value_cyclophosphamide
+  question: How many times at the above frequency do you take Cyclophosphamide?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclophosphamide
+- key: current_med_route_cyclophosphamide
+  question: What is the way the Cyclophosphamide?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclophosphamide
+- key: current_med_last_dose_date_cyclophosphamide
+  question: When was your last dose of Cyclophosphamide?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: cyclophosphamide
+- key: current_med_dose_purethinol
+  question: What is the current dose of Purethinol (6-MP) / Imuran (Azathioprine)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_purethinol_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_purethinol_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_purethinol_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_purethinol_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: purethinol
+- key: current_med_freq_units_purethinol
+  question: How often do you take Purethinol (6-MP) / Imuran (Azathioprine)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_purethinol_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: purethinol
+- key: current_med_freq_value_purethinol
+  question: How many times at the above frequency do you take Purethinol (6-MP) /
+    Imuran (Azathioprine)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: purethinol
+- key: current_med_route_purethinol
+  question: What is the way the Purethinol (6-MP) / Imuran (Azathioprine)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: purethinol
+- key: current_med_last_dose_date_purethinol
+  question: When was your last dose of Purethinol (6-MP) / Imuran (Azathioprine)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: purethinol
+- key: current_med_dose_methotrexate
+  question: What is the current dose of Methotrexate (trexall, rheumatrex)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_methotrexate_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_methotrexate_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_methotrexate_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_methotrexate_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: methotrexate
+- key: current_med_freq_units_methotrexate
+  question: How often do you take Methotrexate (trexall, rheumatrex)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_methotrexate_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: methotrexate
+- key: current_med_freq_value_methotrexate
+  question: How many times at the above frequency do you take Methotrexate
+    (trexall, rheumatrex)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: methotrexate
+- key: current_med_route_methotrexate
+  question: What is the way the Methotrexate (trexall, rheumatrex)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: methotrexate
+- key: current_med_last_dose_date_methotrexate
+  question: When was your last dose of Methotrexate (trexall, rheumatrex)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: methotrexate
+- key: current_med_dose_remicade
+  question: What is the current dose of Remicade (infliximab), Renflexis, Ixifi,
+    Avsola, Inflectra?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_remicade_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_remicade_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_remicade_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_remicade_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: remicade
+- key: current_med_freq_units_remicade
+  question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola,
+    Inflectra?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_remicade_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: remicade
+- key: current_med_freq_value_remicade
+  question: How many times at the above frequency do you take Remicade
+    (infliximab), Renflexis, Ixifi, Avsola, Inflectra?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: remicade
+- key: current_med_route_remicade
+  question: What is the way the Remicade (infliximab), Renflexis, Ixifi, Avsola,
+    Inflectra?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: remicade
+- key: current_med_last_dose_date_remicade
+  question: When was your last dose of Remicade (infliximab), Renflexis, Ixifi,
+    Avsola, Inflectra?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: remicade
+- key: current_med_dose_humira
+  question: What is the current dose of Humira (adalimumab)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_humira_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_humira_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_humira_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_humira_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: humira
+- key: current_med_freq_units_humira
+  question: How often do you take Humira (adalimumab)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_humira_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: humira
+- key: current_med_freq_value_humira
+  question: How many times at the above frequency do you take Humira (adalimumab)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: humira
+- key: current_med_route_humira
+  question: What is the way the Humira (adalimumab)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: humira
+- key: current_med_last_dose_date_humira
+  question: When was your last dose of Humira (adalimumab)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: humira
+- key: current_med_dose_etanercept
+  question: What is the current dose of etanercept (enbrel)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_etanercept_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_etanercept_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_etanercept_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_etanercept_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: etanercept
+- key: current_med_freq_units_etanercept
+  question: How often do you take etanercept (enbrel)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_etanercept_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: etanercept
+- key: current_med_freq_value_etanercept
+  question: How many times at the above frequency do you take etanercept (enbrel)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: etanercept
+- key: current_med_route_etanercept
+  question: What is the way the etanercept (enbrel)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: etanercept
+- key: current_med_last_dose_date_etanercept
+  question: When was your last dose of etanercept (enbrel)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: etanercept
+- key: current_med_dose_abatacept
+  question: What is the current dose of abatacept (orencia)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_abatacept_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_abatacept_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_abatacept_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_abatacept_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: abatacept
+- key: current_med_freq_units_abatacept
+  question: How often do you take abatacept (orencia)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_abatacept_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: abatacept
+- key: current_med_freq_value_abatacept
+  question: How many times at the above frequency do you take abatacept (orencia)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: abatacept
+- key: current_med_route_abatacept
+  question: What is the way the abatacept (orencia)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: abatacept
+- key: current_med_last_dose_date_abatacept
+  question: When was your last dose of abatacept (orencia)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: abatacept
+- key: current_med_dose_rituximab
+  question: What is the current dose of rituximab (rituxan)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_rituximab_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_rituximab_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_rituximab_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_rituximab_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: rituximab
+- key: current_med_freq_units_rituximab
+  question: How often do you take rituximab (rituxan)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_rituximab_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: rituximab
+- key: current_med_freq_value_rituximab
+  question: How many times at the above frequency do you take rituximab (rituxan)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: rituximab
+- key: current_med_route_rituximab
+  question: What is the way the rituximab (rituxan)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: rituximab
+- key: current_med_last_dose_date_rituximab
+  question: When was your last dose of rituximab (rituxan)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: rituximab
+- key: current_med_dose_anakinra
+  question: What is the current dose of anakinra (kineret)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_anakinra_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_anakinra_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_anakinra_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_anakinra_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: anakinra
+- key: current_med_freq_units_anakinra
+  question: How often do you take anakinra (kineret)?
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_anakinra_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: anakinra
+- key: current_med_freq_value_anakinra
+  question: How many times at the above frequency do you take anakinra (kineret)?
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: anakinra
+- key: current_med_route_anakinra
+  question: What is the way the anakinra (kineret)?
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: anakinra
+- key: current_med_last_dose_date_anakinra
+  question: When was your last dose of anakinra (kineret)?
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: anakinra
+- key: current_med_dose_other1
+  question: "What is the current dose of Other Medication #1?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other1_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other1_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other1_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other1_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other1
+- key: current_med_freq_units_other1
+  question: "How often do you take Other Medication #1?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other1_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other1
+- key: current_med_freq_value_other1
+  question: "How many times at the above frequency do you take Other Medication #1?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other1
+- key: current_med_route_other1
+  question: "What is the way the Other Medication #1?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other1
+- key: current_med_last_dose_date_other1
+  question: "When was your last dose of Other Medication #1?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other1
+- key: current_med_dose_other2
+  question: "What is the current dose of Other Medication #2?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other2_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other2_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other2_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other2_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other2
+- key: current_med_freq_units_other2
+  question: "How often do you take Other Medication #2?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other2_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other2
+- key: current_med_freq_value_other2
+  question: "How many times at the above frequency do you take Other Medication #2?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other2
+- key: current_med_route_other2
+  question: "What is the way the Other Medication #2?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other2
+- key: current_med_last_dose_date_other2
+  question: "When was your last dose of Other Medication #2?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other2
+- key: current_med_dose_other3
+  question: "What is the current dose of Other Medication #3?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other3_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other3_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other3_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other3_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other3
+- key: current_med_freq_units_other3
+  question: "How often do you take Other Medication #3?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other3_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other3
+- key: current_med_freq_value_other3
+  question: "How many times at the above frequency do you take Other Medication #3?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other3
+- key: current_med_route_other3
+  question: "What is the way the Other Medication #3?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other3
+- key: current_med_last_dose_date_other3
+  question: "When was your last dose of Other Medication #3?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other3
+- key: current_med_dose_other4
+  question: "What is the current dose of Other Medication #4?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other4_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other4_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other4_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other4_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other4
+- key: current_med_freq_units_other4
+  question: "How often do you take Other Medication #4?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other4_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other4
+- key: current_med_freq_value_other4
+  question: "How many times at the above frequency do you take Other Medication #4?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other4
+- key: current_med_route_other4
+  question: "What is the way the Other Medication #4?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other4
+- key: current_med_last_dose_date_other4
+  question: "When was your last dose of Other Medication #4?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other4
+- key: current_med_dose_other5
+  question: "What is the current dose of Other Medication #5?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other5_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other5_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other5_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other5_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other5
+- key: current_med_freq_units_other5
+  question: "How often do you take Other Medication #5?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other5_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other5
+- key: current_med_freq_value_other5
+  question: "How many times at the above frequency do you take Other Medication #5?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other5
+- key: current_med_route_other5
+  question: "What is the way the Other Medication #5?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other5
+- key: current_med_last_dose_date_other5
+  question: "When was your last dose of Other Medication #5?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other5
+- key: current_med_dose_other6
+  question: "What is the current dose of Other Medication #6?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other6_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other6_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other6_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other6_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other6
+- key: current_med_freq_units_other6
+  question: "How often do you take Other Medication #6?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other6_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other6
+- key: current_med_freq_value_other6
+  question: "How many times at the above frequency do you take Other Medication #6?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other6
+- key: current_med_route_other6
+  question: "What is the way the Other Medication #6?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other6
+- key: current_med_last_dose_date_other6
+  question: "When was your last dose of Other Medication #6?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other6
+- key: current_med_dose_other7
+  question: "What is the current dose of Other Medication #7?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other7_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other7_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other7_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other7_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other7
+- key: current_med_freq_units_other7
+  question: "How often do you take Other Medication #7?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other7_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other7
+- key: current_med_freq_value_other7
+  question: "How many times at the above frequency do you take Other Medication #7?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other7
+- key: current_med_route_other7
+  question: "What is the way the Other Medication #7?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other7
+- key: current_med_last_dose_date_other7
+  question: "When was your last dose of Other Medication #7?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other7
+- key: current_med_dose_other8
+  question: "What is the current dose of Other Medication #8?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mg
+      text: milligrams (mg)
+      inlineQuestion:
+        key: current_med_dose_other8_mg_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: g
+      text: grams (g)
+      inlineQuestion:
+        key: current_med_dose_other8_g_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: ml
+      text: milliliter (mL)
+      inlineQuestion:
+        key: current_med_dose_other8_ml_description
+        question: Please provide the quantity
+        type: TEXTAREA
+    - value: other
+      text: Other amount
+      inlineQuestion:
+        key: current_med_dose_other8_other_description
+        question: please provide the metric and quantity
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other8
+- key: current_med_freq_units_other8
+  question: "How often do you take Other Medication #8?"
+  type: SINGLE_CHOICE
+  options:
+    - value: day
+      text: Every day
+    - value: week
+      text: Each week
+    - value: 2_weeks
+      text: Every two weeks
+    - value: 4_weeks
+      text: Every four weeks
+    - value: 6_weeks
+      text: Every six weeks
+    - value: 8_weeks
+      text: Every eight weeks
+    - value: other
+      text: Other (please describe)
+      inlineQuestion:
+        key: current_med_freq_units_other8_other_description
+        question: How often do you take the medication?
+        type: TEXTAREA
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other8
+- key: current_med_freq_value_other8
+  question: "How many times at the above frequency do you take Other Medication #8?"
+  type: NUMERIC
+  minValue: 0
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other8
+- key: current_med_route_other8
+  question: "What is the way the Other Medication #8?"
+  type: SINGLE_CHOICE
+  options:
+    - value: mouth
+      text: By mouth
+    - value: iv
+      text: In an IV (intravenous/in a vein)
+    - value: under_skin
+      text: Injected under the skin
+    - value: in_rectum
+      text: In the rectum
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other8
+- key: current_med_last_dose_date_other8
+  question: "When was your last dose of Other Medication #8?"
+  type: DATE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: baseline
+          question: current_meds
+          operator: INCLUDES
+          value: other8
