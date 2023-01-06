@@ -1,4 +1,4 @@
-key: baseline_health_crohn
+key: baseline_health
 active: true
 schedule:
   type: PERIOD
@@ -146,15 +146,20 @@ sections:
                 key: affected_joints_o_description
                 question: Which side of the body? (Left/Right/Both)
                 type: TEXTAREA      
-
-# TODO: !!
-# TODO: !!
-# TODO: Medications for pain!!
-# TODO: !!
-# TODO: !!
-# TODO: !!
-# TODO: !!
-
+      - key: pain_meds_trigger
+        question: Do you use any medications for pain?
+        type: YESNO_CHOICE
+      - key: pain_meds
+        question: Please specify which pain meds you take, the current dose (xx mg), how often do you take the medication, and when you last took the medication.
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: baseline
+                question: pain_meds_trigger
+                operator: =
+                value: yes
       - key: past_meds_trigger
         question: Have you taken any medications for your rheumatoid arthritis in the past that you are not currently taking?
         type: YESNO_CHOICE
@@ -235,9 +240,7 @@ sections:
                 question: past_meds_trigger
                 operator: =
                 value: yes
-
-
-      - key: current_med_trigger
+      - key: current_meds_trigger
         question: Are you currently taking any medication?
         type: YESNO_CHOICE
       - key: current_meds
@@ -351,7 +354,7 @@ sections:
               type: SHOW
             condition:
               - section: baseline
-                question: current_med_trigger
+                question: current_meds_trigger
                 operator: =
                 value: yes
       - key: current_med_dose_corticosteroid
