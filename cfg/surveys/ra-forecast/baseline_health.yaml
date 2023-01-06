@@ -157,12 +157,7 @@ sections:
 
       - key: past_meds_trigger
         question: Have you taken any medications for your rheumatoid arthritis in the past that you are not currently taking?
-        type: SINGLE_CHOICE
-        options:
-          - value: yes
-            text: Yes
-          - value: no
-            text: No
+        type: YESNO_CHOICE
       - key: past_meds
         question: Which medications have you taken in the past for your rheumatoid arthritis, but are not currently taking at this time?
         type: MULTIPLE_CHOICE
@@ -441,8 +436,8 @@ sections:
                 operator: INCLUDES
                 value: corticosteroid
       - key: current_med_route_corticosteroid
-        question: What is the way the Corticosteroids (prednisone, prednisolone,
-          methylpredninsolone)?
+        question: What is the way Corticosteroids (prednisone, prednisolone,
+          methylpredninsolone) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -564,11 +559,11 @@ sections:
                 operator: INCLUDES
                 value: nsaids
       - key: current_med_route_nsaids
-        question: What is the way the NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+        question: What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
           alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac,
           clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin,
           indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib,
-          celebrex)?
+          celebrex are given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -682,7 +677,7 @@ sections:
                 operator: INCLUDES
                 value: hydroxychloroquine
       - key: current_med_route_hydroxychloroquine
-        question: What is the way the Hydroxychloroquine (plaquenil)?
+        question: What is the way Hydroxychloroquine (plaquenil) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -791,7 +786,7 @@ sections:
                 operator: INCLUDES
                 value: leflunomide
       - key: current_med_route_leflunomide
-        question: What is the way the Leflunomide (arava)?
+        question: What is the way Leflunomide (arava) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -900,7 +895,7 @@ sections:
                 operator: INCLUDES
                 value: azulfidine
       - key: current_med_route_azulfidine
-        question: What is the way the Azulfidine (Sulfasalazine)?
+        question: What is the way Azulfidine (Sulfasalazine) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1010,7 +1005,7 @@ sections:
                 operator: INCLUDES
                 value: cyclosporine
       - key: current_med_route_cyclosporine
-        question: What is the way the Cyclosporine (neoral, sandimmune)?
+        question: What is the way Cyclosporine (neoral, sandimmune) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1119,7 +1114,7 @@ sections:
                 operator: INCLUDES
                 value: cyclophosphamide
       - key: current_med_route_cyclophosphamide
-        question: What is the way the Cyclophosphamide?
+        question: What is the way Cyclophosphamide is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1229,7 +1224,7 @@ sections:
                 operator: INCLUDES
                 value: purethinol
       - key: current_med_route_purethinol
-        question: What is the way the Purethinol (6-MP) / Imuran (Azathioprine)?
+        question: What is the way Purethinol (6-MP) / Imuran (Azathioprine) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1339,7 +1334,7 @@ sections:
                 operator: INCLUDES
                 value: methotrexate
       - key: current_med_route_methotrexate
-        question: What is the way the Methotrexate (trexall, rheumatrex)?
+        question: What is the way Methotrexate (trexall, rheumatrex) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1451,8 +1446,8 @@ sections:
                 operator: INCLUDES
                 value: remicade
       - key: current_med_route_remicade
-        question: What is the way the Remicade (infliximab), Renflexis, Ixifi, Avsola,
-          Inflectra?
+        question: What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
+          Inflectra is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1562,7 +1557,7 @@ sections:
                 operator: INCLUDES
                 value: humira
       - key: current_med_route_humira
-        question: What is the way the Humira (adalimumab)?
+        question: What is the way Humira (adalimumab) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1671,7 +1666,7 @@ sections:
                 operator: INCLUDES
                 value: etanercept
       - key: current_med_route_etanercept
-        question: What is the way the etanercept (enbrel)?
+        question: What is the way etanercept (enbrel) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1780,7 +1775,7 @@ sections:
                 operator: INCLUDES
                 value: abatacept
       - key: current_med_route_abatacept
-        question: What is the way the abatacept (orencia)?
+        question: What is the way abatacept (orencia) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1889,7 +1884,7 @@ sections:
                 operator: INCLUDES
                 value: rituximab
       - key: current_med_route_rituximab
-        question: What is the way the rituximab (rituxan)?
+        question: What is the way rituximab (rituxan) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -1998,7 +1993,7 @@ sections:
                 operator: INCLUDES
                 value: anakinra
       - key: current_med_route_anakinra
-        question: What is the way the anakinra (kineret)?
+        question: What is the way anakinra (kineret) is given to you?
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2107,7 +2102,7 @@ sections:
                 operator: INCLUDES
                 value: other1
       - key: current_med_route_other1
-        question: "What is the way the Other Medication #1?"
+        question: "What is the way Other Medication #1 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2216,7 +2211,7 @@ sections:
                 operator: INCLUDES
                 value: other2
       - key: current_med_route_other2
-        question: "What is the way the Other Medication #2?"
+        question: "What is the way Other Medication #2 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2325,7 +2320,7 @@ sections:
                 operator: INCLUDES
                 value: other3
       - key: current_med_route_other3
-        question: "What is the way the Other Medication #3?"
+        question: "What is the way Other Medication #3 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2434,7 +2429,7 @@ sections:
                 operator: INCLUDES
                 value: other4
       - key: current_med_route_other4
-        question: "What is the way the Other Medication #4?"
+        question: "What is the way Other Medication #4 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2543,7 +2538,7 @@ sections:
                 operator: INCLUDES
                 value: other5
       - key: current_med_route_other5
-        question: "What is the way the Other Medication #5?"
+        question: "What is the way Other Medication #5 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2652,7 +2647,7 @@ sections:
                 operator: INCLUDES
                 value: other6
       - key: current_med_route_other6
-        question: "What is the way the Other Medication #6?"
+        question: "What is the way Other Medication #6 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2761,7 +2756,7 @@ sections:
                 operator: INCLUDES
                 value: other7
       - key: current_med_route_other7
-        question: "What is the way the Other Medication #7?"
+        question: "What is the way Other Medication #7 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
@@ -2870,7 +2865,7 @@ sections:
                 operator: INCLUDES
                 value: other8
       - key: current_med_route_other8
-        question: "What is the way the Other Medication #8?"
+        question: "What is the way Other Medication #8 is given to you?"
         type: SINGLE_CHOICE
         options:
           - value: mouth
