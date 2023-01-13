@@ -71,6 +71,9 @@ active:
     ibd-forecast:
       - b5ffacab62be68f93d70a5a82eb231d6
       - 23
+    ra-forecast:
+      - 0f9c80d4f11db1c21d84eccc14ec2cbe
+      - 1
   surveys:
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
@@ -189,6 +192,9 @@ active:
     library::ipaq:
       - 4b104006a1138a3e6ab697c535717d86
       - 6
+    library::mdhaq:
+      - 7ed0ef9dde8cf8cd7803cb967fd08b0c
+      - 1
     library::mpq:
       - fe32b9b074a53a9718d1a6fba16634c4
       - 8
@@ -270,6 +276,9 @@ active:
     library::pss-4:
       - d348f2c626449d64e2a739aac3f941bf
       - 7
+    library::rapid3:
+      - bf762b7b720bd431ae310c1040d3a1c9
+      - 1
     library::sccai:
       - 31ff8440f26419e7bb4ed405d4e5ac1a
       - 5
@@ -288,6 +297,21 @@ active:
     pss::physical-therapy:
       - 7c1522a3277a1dcc462525771f14fd28
       - 3
+    ra-forecast::baseline_demographics:
+      - 18d4150a67f78dfcc37bd4f68b90c8f4
+      - 1
+    ra-forecast::baseline_health:
+      - bcf431aab25d429eb5eb7042fbe66f3e
+      - 1
+    ra-forecast::fatigue_scale:
+      - c18dd80af4093ba3b0f1fa13e50a651b
+      - 1
+    ra-forecast::lab_tests:
+      - b9fef4ded59306a201415662e107e17f
+      - 1
+    ra-forecast::new_meds:
+      - 73c119dd1553939c3d55d8c0cf658320
+      - 1
     warrior-shield::daily-check-in:
       - c930a7be123813b45058f3cf54d7409f
       - 4
