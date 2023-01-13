@@ -13,8 +13,8 @@ platform:
   - ios
   - android
 
-minVersion: '2.3'
-capTo: 10000
+minVersion: '2.3.1'
+capTo: 1000
 
 name: "RA Forecast"
 
@@ -55,8 +55,19 @@ surveys:
             resource: ra-forecast::baseline_health
             operator: ">"
             score: 0
-        
-  # TODO: LIKERT FATIGUE
+
+  - key: fatigue_scale
+    rank: 4
+    schedule:
+      type: PERIOD
+      period: DAILY
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: ra-forecast::baseline_health
+            operator: ">"
+            score: 0
 
   - key: pss-4
     rank: 5
