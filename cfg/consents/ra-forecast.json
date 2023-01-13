@@ -1,0 +1,891 @@
+{
+  "key": "ra-forecast",
+  "title": "RA Forecast",
+  "timeEstimate": { "time": 15, "timeUnits": "minutes" },
+  "contact": {
+    "pi": "Robert Hirten MD",
+    "email": "raforecast@mssm.edu",
+    "physicalAddress": "The Mount Sinai Hospital, 17 E 102nd Street, 5th Floor. New York, NY, 10029",
+    "mailingAddress": "One Gustave L Levy Place, NY, NY 10029"
+  },
+  "dates": {
+    "effectiveAt": "1900-01-01T00:00:00.0Z",
+    "effectiveUntil": "1900-12-31T23:59:59.0Z"
+  },
+  "intro": [
+    [
+      "Section",
+      [
+        "BodyLarge",
+        "We are inviting you to participate in the RA Forecast study. The main goal of this study is to see whether markers from wearable devices can predict flares or worsening of rheumatoid arthritis. This study collects data from survey questions and your wearable device. If you have an iPhone you can choose to share any electronic health record data. This is optional."
+      ]
+    ],
+    [
+      "Section",
+      [
+        "BodyLarge",
+        "If you are interested in learning more about joining this study, this simple walk through will first see if you are eligible and then highlight the details of what participation will involve. After reading about the study, we will give you a short quiz to make sure that you understand what's involved."
+      ]
+    ]
+  ],
+  "eligibility": [
+    {
+      "text": "Are you 18 years of age or older?",
+      "isEligible": true,
+      "ineligibleText": "You must be 18 or older."
+    },
+    {
+      "text": "Have you been diagnosed with rheumatoid arthritis?",
+      "isEligible": true,
+      "ineligibleText": "You must have a diagnosis of rheumatoid arthritis."
+    },
+    {
+      "text": "Are you on a medication to rheumatoid arthritis such as NSAIDs (ibuprofen, diclofenac, meloxicam, indomethacin), a biologic medication (infliximab, remicade, inflectra, renflexis, avsola, adalimumab, humira, certrolizumab, cimzia, tocilizumab, actemra, sarilumab, kevzara, golimumab, simponi, etanercept, Enbrel, abatacept, Orencia, rituximab, rituxan), or a others (rinvoq, upadacitinib, tofacitinib, xeljanz, baricitinib, olumiant, azathioprine, methotrexate, sulfasalazine, leflunomide, etc)?",
+      "isEligible": true,
+      "ineligibleText": "You must be on a medication to treat rheumatoid arthritis."
+    },
+    {
+      "text": "Are you currently pregnant?",
+      "isEligible": false,
+      "ineligibleText": "You must not be currently pregnant."
+    },
+    {
+      "text": "Do you currently have cancer or other significant medical problems such as a recent heart attack, recent stroke, significant kidney disease, or an infection?",
+      "isEligible": false,
+      "ineligibleText": "You must not be currently have cancer or other significant medical problems."
+    },
+    {
+      "text": "Do you have a pacemaker or defibrillator?",
+      "isEligible": false,
+      "ineligibleText": "You must not have a pacemaker or defibrillator."
+    },
+    {
+      "text": "I use medications that impact how my heart beats such as beta blockers (ie. atenolol, carvedilol, metoprolol, Coreg, Tenormin, Normodyne, Trandate), digoxin, calcium channel blockers (ie. Novasc, amlodipine, Cardene, nicrdipine, Procrdia, nifedipine, Cardizem, diltiazem), or regularly used benzodiazepines.",
+      "isEligible": false,
+      "ineligibleText": "You must not use medications that impact how your heart beats."
+    }
+  ],
+  "walkthrough": [
+    {
+      "key": "1",
+      "title": "Section One",
+      "data": [
+        {
+          "key": "1",
+          "title": "Study Tasks and Time Commitment",
+          "icon": "progress-check",
+          "short": [
+            ["BodyLarge", "To participate in this study, we will ask you to:"],
+            [
+              "UnorderedList",
+              [
+                [
+                  "BodyLarge",
+                  "Download and install the ehive app on your phone"
+                ],
+                ["BodyLarge", "Connect your wearable device to the ehive app"],
+                ["BodyLarge", "Complete study surveys in the ehive app"]
+              ]
+            ],
+            [
+              "BodyLarge",
+              "Registering for the study and completing the tasks should take about 15 minutes. You can stop and restart where you left off at any time. Your participation in the study will vary each day. Most days it will require only 10-20 seconds to answer survey questions."
+            ],
+
+            [
+              "BodyLarge",
+              "Every 2 weeks you will be asked to answer slightly longer survey questions. This will take approximately 3 minutes of your time."
+            ]
+          ]
+        },
+        {
+          "key": "2",
+          "title": "Privacy",
+          "icon": "eye",
+          "short": [
+            [
+              "BodyLarge",
+              "To protect your privacy, we use a random code instead of your name on your study data. Learn more about how your privacy and identity are protected."
+            ]
+          ],
+          "long": [
+            [
+              "BodyLarge",
+              "We will work hard to protect your privacy. A random code instead of your name or other information that could identify you will be used on all your study data. Researchers will only analyze data without information that identifies you. Your study data will be coded and stored in a manner that keeps your information as safe as possible and prevents unauthorized people from getting to your data. Even with removal of your personal information and these procedures, it is sometimes possible to re-identify an individual. This risk, while very low, should still be considered before enrolling."
+            ]
+          ]
+        },
+        {
+          "key": "3",
+          "title": "Data Collection and Use",
+          "icon": "clipboard-text-search-outline",
+          "short": [
+            [
+              "BodyLarge",
+              "There are sensors in your phone and wearable device that can help assess activity and additional data, plus you may have a Health app or a device app on your phone which stores activity or additional data. Additionally, you will be asked to sync your wearable device with the study application. This is a requirement for participation in the study. We may follow up with a phone call or message from the study team after you've consented and registered for the study if this is not done or to provide assistance.   You can link your electronic health record data to the study to provide this information to the study team if you have an iPhone, however this is not required. Learn more about how data is gathered and used."
+            ]
+          ],
+          "long": [
+            [
+              "BodyLarge",
+              "This study can also gather sensor data from your phone and your wearable device with your permission. You can choose not to do this and still participate in the study. We will NOT access your personal contacts, other applications, text messages, personal photos or websites visited. By signing this consent, you are giving permission to use your wearable device data, the survey data you provide, and any electronic health record data you choose to link to the study. Additionally, if you are a patient at Mount Sinai we may access your medical records to collect information about your disease as part of this study. You are also giving permission for other researchers to access your data without identifiers, for future unrestricted research. This would be in a coded fashion, where your identifiers are masked and replaced with a unique code."
+            ]
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "prompt": "The main purpose of this study is to",
+          "options": [
+            {
+              "text": "To determine if rheumatoid arthritis flares can be predicted from information collected from wearable devices.",
+              "isCorrect": true
+            },
+            {
+              "text": "To provide you with genetic information from the information you provide.",
+              "isCorrect": false
+            },
+            {
+              "text": "To provide your doctor with medical information obtained from all the information you provide us through the app.",
+              "isCorrect": false
+            },
+            {
+              "text": "To provide your health insurer with medical information obtained from your data and family/medical history questionnaires.",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "2",
+      "title": "Section Two",
+      "data": [
+        {
+          "key": "4",
+          "title": "Re-Contacting",
+          "icon": "refresh",
+          "short": [
+            [
+              "BodyLarge",
+              "By consenting to be part of this study you are consenting to be contacted in the future to be part of additional studies."
+            ]
+          ],
+          "long": [
+            [
+              "BodyLarge",
+              "The research team may reach out to you in the future to see if you are interested in participating in future studies. Participation in future studies is optional."
+            ]
+          ]
+        },
+        {
+          "key": "5",
+          "title": "Potential Benefits",
+          "icon": "test-tube",
+          "short": [
+            ["BodyLarge", "This study may not benefit participants or society."]
+          ],
+          "long": [
+            [
+              "BodyLarge",
+              "The goal of the study is to understand if we can predict a future flare of rheumatoid arthritis from the information collected from wearable devices. This could benefit people with rheumatoid arthritis with improved control and prediction of their disease."
+            ]
+          ]
+        },
+        {
+          "key": "6",
+          "title": "Potential Risks",
+          "icon": "alert",
+          "short": [
+            [
+              "BodyLarge",
+              "There always exists the potential for loss of private information."
+            ]
+          ],
+          "long": [
+            [
+              "BodyLarge",
+              "There are procedures in place to minimize this risk. It is also possible that the application's presence on your phone, the alerts or the reminders may be observed by someone other than the participant. Information on how we store your data may be found in the privacy section. You may incur standard data charges when using our app, depending on your service carrier."
+            ]
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "prompt": "Under what circumstances would you expect to hear from the researchers again?",
+          "options": [
+            {
+              "text": "Researchers may contact you to return results from your data.",
+              "isCorrect": false
+            },
+            {
+              "text": "Researchers may contact you to tell you about other research studies you may be interested in.",
+              "isCorrect": true
+            },
+            {
+              "text": "Researchers will never contact you again.",
+              "isCorrect": false
+            },
+            {
+              "text": "Researchers may contact you to let you know of other researchers studies your sample has been included in.",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "3",
+      "title": "Section Three",
+      "data": [
+        {
+          "key": "7",
+          "title": "Scientific Databases",
+          "icon": "test-tube",
+          "short": [
+            [
+              "BodyLarge",
+              "Some information from the analysis of your coded samples and your coded medical information like your age, sex, ethnic background, diagnosis and disease history, may be entered into one or more scientific databases available to other researchers inside and outside of Mount Sinai Health System. Your identifiable information (e.g. name, phone number, medical record number) will never be added to a scientific database without your approval."
+            ]
+          ]
+        },
+        {
+          "key": "8",
+          "title": "Withdrawing",
+          "icon": "logout-variant",
+          "short": [
+            [
+              "BodyLarge",
+              "There will be no penalty if you decide not to take part in this study. You can withdraw your consent and discontinue participation at any time. Learn more about withdrawing."
+            ]
+          ],
+          "long": [
+            [
+              "BodyLarge",
+              "There will be no penalty to you if you decide not to take part in this study. To stop being in the study at any time, you may withdraw from the study within the app and/or contact the study team by email. If you withdraw from the study, we will stop collecting new data, but any data already collected will remain as part of the study. The study team may also withdraw you from the study at any time for any reason."
+            ]
+          ]
+        },
+        {
+          "key": "9",
+          "title": "Confidentiality and Protected Information",
+          "icon": "lock-outline",
+          "short": [
+            [
+              "BodyLarge",
+              "As you take part in this research study, it will be necessary for the research team and others to use and share some of your private protected health information. Protected Health Information (PHI) include, for example: your name, address, telephone number, medical record number, date of birth, family history, your medical record, blood draw sample, etc. Your health information, along with results of any tests/procedures collected as part of this research study or regular clinical care, will be used for this study as explained earlier in this consent process. The results of this study could be published or presented at scientific meetings, lectures, etc., but would not include any information that would let others know who you are, unless you give separate permission to do so."
+            ]
+          ],
+          "long": [
+            [
+              "BodyLarge",
+              "Consistent with the federal Health Insurance Portability and Accountability Act (HIPAA), we are asking your permission to receive, use and share your Protected Health Information. Your authorization for the use of your protected health information for this specific study does not expire. During your participation in this study, you will have access to your medical record and any study information that is part of that record. The investigator is not required to release to you research information that is not part of your medical record. If you are authorizing the release of HIV-related information, you should be aware that the recipient(s) is (are) prohibited from re-disclosing any HIV-related information without your authorization unless permitted to do so under federal or state law. The research team and other authorized members of The Mount Sinai Health System (\"Mount Sinai\") workforce may use and share your information to ensure that the research meets legal, institutional or accreditation requirements. For example, the School's Program for the Protection of Human Subjects is responsible for overseeing research on human subjects, and may need to see your information."
+            ]
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "prompt": "How are the data you provide and your personal health information stored?",
+          "options": [
+            {
+              "text": "Data will be labeled with your name and other identifiers, so that researchers will know who the data came from.",
+              "isCorrect": false
+            },
+            {
+              "text": "Data is tagged with a unique study number code so that only researchers with permission can trace it back to your identity.",
+              "isCorrect": true
+            },
+            {
+              "text": "Your data is completely anonymous, and researchers cannot link the sample back to you.",
+              "isCorrect": false
+            },
+            {
+              "text": "Data and health information is stored in your medical record which is viewable to you and your doctor.",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": [
+    [
+      "H3",
+      "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION"
+    ],
+    [
+      "Display",
+      "Icahn School of Medicine at Mount Sinai, The Mount Sinai Hospital"
+    ],
+    [
+      "BodyLarge",
+      [
+        ["Italic", "Study ID#:"],
+        ["Text", " 22-01589"]
+      ]
+    ],
+    [
+      "BodyLarge",
+      [
+        ["Italic", "Form Version Date:"],
+        ["Text", " January 03, 2023"]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "STUDY INFORMATION"],
+        [
+          "BodyLarge",
+          [
+            ["Italic", "Study Title:"],
+            ["Text", " IBD Forecast"]
+          ]
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Italic", "Principal Investigator (Head Researcher):"],
+            ["Text", " Robert Hirten MD"]
+          ]
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Italic", "Physical Address:"],
+            ["Text", " 17 E 102nd Street, 5th Floor. New York, NY, 10029"]
+          ]
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Italic", "Mailing Address:"],
+            ["Text", " One Gustave L Levy Place, NY, NY 10029"]
+          ]
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Italic", "Email:"],
+            ["Email", " ibdforecast@mssm.edu "]
+          ]
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "SUMMARY OF THIS RESEARCH STUDY"],
+        [
+          "BodyLarge",
+          "In medicine there are many unanswered questions. A research study is when scientists try to answer a question about something that we don’t know enough about.  Participation in a research study may or may not directly help you or others. Participation is entirely voluntary. It is completely up to you whether or not you take part. You can also change your mind at any time and it will not affect your ability to get medical care within the Mount Sinai Health System."
+        ],
+        [
+          "BodyLarge",
+          "The purpose of this research study is to assess whether markers measured from wearable devices, such as the Apple Watch or Fitbit, can identify the development and predict the development of a flare of rheumatoid arthritis."
+        ],
+        [
+          "BodyLarge",
+          "If you choose to participate, you will be asked to download the study app to your smartphone and wear your wearable device for the duration of the study. In addition, you will be asked to complete surveys throughout the study. There is no cost associated with participating in the study. To participate in this study you must have a smartphone and a wearable device. If you are not a patient at Mount Sinai you must have your own wearable device to use as part of the study. However, some participants who are patients at Mount Sinai can be provided with an Apple Watch or Fitbit to use for the duration of the study if they do not have their own wearable device."
+        ],
+        [
+          "BodyLarge",
+          "The main risks to you if you choose to participate is loss of confidentiality. Participating in this research will not benefit you. If you are interested in learning more about this study, please continue to read below."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "PARTICIPATION IN THIS RESEARCH STUDY"],
+        [
+          "BodyLarge",
+          "Feel free to ask all the questions you want before you make a decision about whether or not to participate.  Any new information that develops during this research study that might make you change your mind about participating will be given to you promptly."
+        ],
+        [
+          "BodyLarge",
+          "You may qualify to take part in this research study because you have rheumatoid arthritis. If you have an iPhone and you would like to share your electronic health record data as part of the study, you can choose to do this. This is optional and not required to participate. If you are a patient at Mount Sinai the investigators may collect information from your medical records, including blood markers of inflammation that have been collected."
+        ],
+        [
+          "BodyLarge",
+          "Funds for conducting this research are provided by the Mount Sinai Hospital."
+        ],
+        [
+          "BodyLarge",
+          "Additionally, you may be contacted by the investigators regarding participating in other studies. You are under no obligation to participate in any other study."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "LENGTH OF TIME AND NUMBER OF PEOPLE EXPECTED TO PARTICIPATE"],
+        [
+          "BodyLarge",
+          "Your participation in this research study is ongoing. You can participate in the study for as long as you would like, though, if possible, should last up to 12 months. The total number of people expected to take part in this research study is up to one thousand people."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "DESCRIPTION OF WHAT'S INVOLVED"],
+        [
+          "BodyLarge",
+          "Research will take place remotely with no in-person visits required. If you agree to participate in this research study, the following information describes what may be involved."
+        ],
+        [
+          "UnorderedList",
+          [
+            [
+              "BodyLarge",
+              "You will download a study App (ehive App) on your phone in which you will answer survey questions at least every day about how you are feeling, with slightly more questions being asked every 2 weeks (the surveys should take several seconds to complete each day) and a few minutes every 2 weeks."
+            ],
+            [
+              "BodyLarge",
+              "You will wear your wearable device for the duration of the study."
+            ],
+            [
+              "BodyLarge",
+              "If you have an iPhone and link your electronic health records to your smart phone, you can choose to share these records with the researchers. This is optional and not required to participate."
+            ]
+          ]
+        ],
+        [
+          "BodyLarge",
+          "If you use an Apple Watch as part of the study, the watch collects environmental noise as part of its commercially available features. Specifically, it measures the ambient sound levels in a person’s environment using the microphone and measures the duration of exposure. It uses the microphone to sample and measure the sound levels in but doesn’t record or save any sounds to measure these levels."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "USE OF YOUR DATA AND/OR SPECIMENS"],
+        [
+          "BodyLarge",
+          "In the future, your identifiable information may be removed from the private information that is collected as part of this research. After this removal, the information could be used for future research studies or shared with other research teams for future research studies. You will not be informed of the details of specific research that is done with your medical information. That means that a research project might be done that you would not consent to if provided with the details of that research project."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "YOUR RESPONSIBILITIES IF YOU TAKE PART IN THIS RESEARCH"],
+        [
+          "BodyLarge",
+          "If you decide to take part in this research study you will be responsible for the following things:"
+        ],
+        [
+          "UnorderedList",
+          [
+            ["BodyLarge", "Downloading the custom smartphone App."],
+            ["BodyLarge", "Answering survey questions."],
+            [
+              "BodyLarge",
+              "Wearing your wearable device (e.g. Apple Watch, Fitbit, Our ring, etc.)"
+            ]
+          ]
+        ],
+
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "If you are not a patient at Mount Sinai you must have your own wearable device to use as part of the study. However, some participants who are patients at Mount Sinai can be provided with an Apple Watch or Fitbit to use for the duration of the study if they do not have their own wearable device. To request a wearable device email "
+            ],
+            ["Email", "raforecast@mssm.edu"],
+            [
+              "Text",
+              "A study coordinator will then be able to mail a device to you."
+            ]
+          ]
+        ],
+        [
+          "BodyLarge",
+          "If you are provided an Apple Watch or Fitbit for the study, this is to be used for the duration of your participation in the study.  You are responsible for returning the device either when the study ends, if you withdraw from the study, or if you are withdrawn from the study for not complying with study activities. You are not responsible if you lose or damage the Apple Watch or Fitbit. The study team will send you pre-paid postage to use to send back your wearable device to the study team."
+        ],
+        [
+          "BodyLarge",
+          "The information collected in this study is not monitored in real time. This includes any psychological assessments and rheumatoid arthritis disease activity. The data collected will not be evaluated in the future with the intent of monitoring or providing direct feedback to participants about how they are doing psychologically or physically. Any health related concerns should be directed to your physician or medical provider."
+        ],
+        [
+          "BodyLarge",
+          "No data collected as part of this study will be used clinically or shared with your doctor or medical teams. "
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "COSTS OR PAYMENTS THAT MAY RESULT FROM PARTICIPATION"],
+        [
+          "BodyLarge",
+          "If you agree to take part in this research study you will not receive compensation. There may be cellular data fees associated with the use of your wearable device and the study app which you will be responsible for."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "POSSIBLE BENEFITS"],
+        [
+          "BodyLarge",
+          "You are not expected to get any benefit from taking part in this research study. Others may not benefit either.  However, if the signatures generated from wearable devices are able to identify and predict disease flares then in the future others may benefit from improved disease control."
+        ],
+        [
+          "BodyLarge",
+          "As mentioned above, there is no real time assessment of the data collected. There will not be an evaluation of the data to provide monitoring or feedback to participants about their health. There will be no direct benefits provided to participants."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "REASONABLY FORESEEABLE RISKS AND DISCOMFORTS"],
+        [
+          "BodyLarge",
+          [
+            "Italic",
+            "There are potentially risks and discomforts associated with participation in this study:"
+          ]
+        ]
+      ],
+      [
+        "OrderedList",
+        [
+          [
+            "BodyLarge",
+            "Risk of loss of private or health information; this risk always exists, but there are procedures in place to minimize the risk."
+          ],
+          [
+            "BodyLarge",
+            "If you are being provided with an Apple Watch or Fitbit you should understand that you are agreeing to data sharing and privacy agreements with Apple or Google. You will read through and agree to this as part of the setup of this device. This agreement is the same agreement you would enter into with Apple or Google as would take place if you bought the device yourself. If you already have your own device you have already entered into a privacy and data use agreement with the device company. You should review this."
+          ]
+        ]
+      ],
+      [
+        "BodyLarge",
+        "You should understand that these commercially available wearable devices collect information about you. You should carefully read the terms of the data agreements you are entering into when using the wearable device to fully understand the information that is collected from these devices and what the device companies will have access too. This can include but is not limited to your location data and possibly your activities on your cell phone. As part of the study, we do not have access to this. We only have access to the following information from each device. This is already being collected from each device as part of their standard commercial use: "
+      ],
+      [
+        "OrderedList",
+        [
+          [
+            "BodyLarge",
+            "Apple Watch: Heart rate, heart rate variability (time difference between each heartbeat), your activity, oxygen levels (depending upon the model of your Apple Watch), environmental noise."
+          ],
+          [
+            "BodyLarge",
+            "Fitbit:  Heart rate, heart rate variability (time difference between each heartbeat), activity, sleep stages and quality."
+          ],
+          [
+            "BodyLarge",
+            "Oura Ring: Heart rate, heart rate variability (time difference between each heartbeat), activity, sleep stage and quality, body temperature."
+          ]
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "OTHER POSSIBLE OPTIONS TO CONSIDER"],
+        [
+          "BodyLarge",
+          "You may decide not to take part in this research study without any penalty.  The choice is totally up to you."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "IN CASE OF INJURY DURING THIS RESEARCH STUDY"],
+        [
+          "BodyLarge",
+          "If you believe that you have suffered an injury related to this research as a participant in this study, you should contact the Principal Investigator."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "ENDING PARTICIPATION IN THE RESEARCH STUDY"],
+        [
+          "BodyLarge",
+          "You may stop taking part in this research study at any time without any penalty. This will not affect your ability to receive medical care at any of the Mount Sinai Health System hospitals or to receive any benefits to which you are otherwise entitled."
+        ],
+        [
+          "BodyLarge",
+          "If you decide to stop being in the research study, please contact the Principal Investigator or the research staff.  You will be required to return the Apple Watch or Fitbit if you were provided one as part of your participation at Mount Sinai."
+        ],
+        [
+          "BodyLarge",
+          "If you decide you don’t want your data to be used for research anymore, you can contact the researcher and ask to have your data removed from future use. If any data have already been shared without your identity, it won’t be possible to retrieve them because no one will know who you are. Data that have already been used or collected will not be affected by your decision. Any data that are still linked to your identity by a code the researcher has will be withdrawn so that no future sharing of your data will take place.  Data that has already been collected for this study will be analyzed and will not be removed if you decide to withdraw."
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Underline", "Withdrawal without your consent:"],
+            [
+              "Text",
+              " The study doctor, the sponsor or the institution may stop your involvement in this research study at any time without your consent. This may be because the research study is being stopped, the instructions of the study team have not been followed, the investigator believes it is in your best interest, or for any other reason. If data have been stored as part of the research study, they too can be destroyed without your consent."
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "CONTACT INFORMATION"],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "If you have any questions, concerns, or complaints at any time about this research, or you think the research has harmed you, please contact the office of the research team and/or the Principal Investigator at the email address "
+            ],
+            ["Email", "raforecast@mssm.edu"],
+            ["Text", " or phone number "],
+            ["Telephone", "(212) 241-4500"]
+          ]
+        ],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "If you experience an emergency during your participation in this research, contact "
+            ],
+            ["Telephone", "(212) 241-4500"],
+            ["Text", "."]
+          ]
+        ],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "This research has been reviewed and approved by an Institutional Review Board. You may reach a representative of the Program for Protection of Human Subjects at the Icahn School of Medicine at Mount Sinai at telephone number "
+            ],
+            ["Telephone", "(212) 824-8200"],
+            [
+              "Text",
+              " during standard work hours for any of the reasons listed below. This office will direct your call to the right person within the Mount Sinai Health System:"
+            ]
+          ]
+        ],
+        [
+          "UnorderedList",
+          [
+            [
+              "BodyLarge",
+              "Your questions, concerns, or complaints are not being answered by the research team."
+            ],
+            ["BodyLarge", "You cannot reach the research team."],
+            [
+              "BodyLarge",
+              "You are not comfortable talking to the research team."
+            ],
+            [
+              "BodyLarge",
+              "You have questions about your rights as a research subject."
+            ],
+            [
+              "BodyLarge",
+              "You want to get information or provide input about this research."
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "DISCLOSURE OF FINANCIAL INTERESTS"],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "Sometimes, physicians/researchers receive payments for consulting or similar work performed for industry.  Effective September 2014 Mount Sinai reviews only payments to an individual totaling more than $5,000 a year per entity when determining potential conflicts of interest.  If you have questions regarding industry relationships, we encourage you to talk your physician/researcher or visit our website at "
+            ],
+            ["Hyperlink", "http://icahn.mssm.edu/"],
+            [
+              "Text",
+              "where Mount Sinai publicly discloses the industry relationships of our faculty."
+            ]
+          ]
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H3", "MAINTAINING CONFIDENTIALITY - HIPAA AUTHORIZATION"],
+        [
+          "BodyLarge",
+          "As you take part in this research project it will be necessary for the research team and others to use and share some of your private protected health information. Consistent with the federal Health Insurance Portability and Accountability Act (HIPAA), we are asking your permission to receive, use and share that information."
+        ],
+        [
+          "BodyLarge",
+          [
+            "Underline",
+            "What protected health information is collected and used in this study, and might also be shared with others?"
+          ]
+        ],
+        [
+          "BodyLarge",
+          "As part of this research project, the research team at the hospital(s) involved in the research will collect your name, date of birth, dates related to your medical history including diagnoses, admissions, discharges, procedures, imaging and potential surgeries."
+        ],
+        [
+          "BodyLarge",
+          "The researchers will also get information from your medical record in the hospital and clinic."
+        ],
+        [
+          "BodyLarge",
+          "During the study the researchers will gather information by:"
+        ],
+        [
+          "UnorderedList",
+          [
+            [
+              "BodyLarge",
+              "Your completion of questionnaires explained in the description section of this consent."
+            ],
+            ["BodyLarge", "Your using a wearable device."],
+            [
+              "BodyLarge",
+              "If you are a Mount Sinai patient, by collecting information from your health records, including blood results looking at inflammation."
+            ],
+            [
+              "BodyLarge",
+              "If you agreed to allow access to your electronic health records through your phone, this may be reviewed by the study team for information about your disease."
+            ]
+          ]
+        ],
+        [
+          "BodyLarge",
+          ["Underline", "Why is your protected health information being used?"]
+        ],
+        [
+          "BodyLarge",
+          "Your personal contact information is important to be able to contact you during the study. Your health information and the results of any tests and procedures being collected as part of this research study will be used for the purpose of this study as explained earlier in this consent form. The results of this study could be published or presented at scientific meetings, lectures, or other events, but would not include any information that would let others know who you are, unless you give separate permission to do so."
+        ],
+        [
+          "BodyLarge",
+          "The Principal Investigator may also use and share the results of these tests and procedures to treat you in collaboration with others in the Mount Sinai Health System."
+        ],
+        [
+          "BodyLarge",
+          "The research team and other authorized members of The Mount Sinai Health System (“Mount Sinai”) workforce may use and share your information to ensure that the research meets legal, institutional or accreditation requirements. For example, the School’s Program for the Protection of Human Subjects is responsible for overseeing research on human subjects, and may need to see your information. If you receive any payments for taking part in this study, the Mount Sinai Finance Department may need your name, address, social security number, payment amount, and related information for tax reporting purposes.  If the research team uncovers abuse, neglect, or reportable diseases, this information may be disclosed to appropriate authorities."
+        ],
+        [
+          "BodyLarge",
+          [
+            "Underline",
+            "Who, outside Mount Sinai, might receive your protected health information?"
+          ]
+        ],
+        [
+          "BodyLarge",
+          "As part of the study, the Principal Investigator, study team and others in the Mount Sinai workforce may disclose your protected health information, including the results of the research study tests and procedures, to the following people or organizations: (It is possible that there may be changes to the list during this research study; you may request an up-to-date list at any time by contacting the Principal Investigator.)"
+        ],
+        [
+          "UnorderedList",
+          [
+            [
+              "BodyLarge",
+              "The United States Department of Health and Human Services and the Office of Human Research Protection."
+            ]
+          ]
+        ],
+        [
+          "BodyLarge",
+          "In all disclosures outside of Mount Sinai, you will not be identified by name or using other direct personal identifier unless disclosure of the direct identifier is required by law. Some records and information disclosed may be identified with a unique code number. The Principal Investigator will ensure that the key to the code will be kept in a locked file, or will be securely stored electronically. The code will not be used to link the information back to you without your permission, unless the law requires it, or rarely if the Institutional Review Board allows it after determining that there would be minimal risk to your privacy. It is possible that a sponsor or their representatives, a data coordinating office, a contract research organization, may come to inspect your records. Even if those records are identifiable when inspected, the information leaving the institution will be stripped of direct identifiers.  Additionally, when applicable, the monitors, auditors, the IRB, the Office of Human Subjects Protection (OHRP) of the Department of Health and Human Services as well as the Food and Drug Administration (FDA) will be granted direct access to your medical records for verification of the research procedures and data. OHRP and FDA are authorized to remove information with identifiers if necessary to complete their task. By signing this document you are authorizing this access. We may publish the results of this research. However, we will keep your name and other identifying information confidential."
+        ],
+        [
+          "BodyLarge",
+          [
+            [
+              "Underline",
+              "For how long will Mount Sinai be able to use or disclose your protected health information?"
+            ],
+            [
+              "Text",
+              " Your authorization for use of your protected health information for this specific study does not expire."
+            ]
+          ]
+        ],
+        [
+          "BodyLarge",
+          ["Underline", "Will you be able to access your records?"]
+        ],
+        [
+          "BodyLarge",
+          "During your participation in this study, you will have access to your medical record and any study information that is part of that record. The investigator is not required to release to you research information that is not part of your medical record."
+        ],
+        [
+          "BodyLarge",
+          [
+            "Underline",
+            "Do you need to give us permission to obtain, use or share your health information?"
+          ]
+        ],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "NO! If you decide not to let us obtain, use or share your health information you should not sign this form, and you will not be allowed to volunteer in the research study. "
+            ],
+            [
+              "Underline",
+              "If you do not sign, it will not affect your treatment, payment or enrollment in any health plans or affect your eligibility for benefits."
+            ]
+          ]
+        ],
+        ["BodyLarge", ["Underline", "Can you change your mind?"]],
+        [
+          "BodyLarge",
+          "You may withdraw your permission for the use and disclosure of any of your protected information for research, but you must do so in writing to the Principal Investigator at the address on the first page. Even if you withdraw your permission, the Principal Investigator for the research study may still use your protected information that was already collected if that information is necessary to complete the study. Your health information may still be used or shared after you withdraw your authorization if you should have an adverse event (a bad effect) from being in the study. If you withdraw your permission to use your protected health information for research that means you will also be withdrawn from the research study, but standard medical care and any other benefits to which you are entitled will not be affected. You can also tell us you want to withdraw from the research study at any time without canceling the Authorization to use your data."
+        ],
+        [
+          "BodyLarge",
+          "If you have not already received it, you will also be given The Hospital’s Notice of Privacy Practices that contains more information about how The Hospital uses and discloses your protected health information."
+        ],
+        [
+          "BodyLarge",
+          "It is important for you to understand that once information is disclosed to others outside Mount Sinai, the information may be re-disclosed and will no longer be covered by the federal privacy protection regulations. However, even if your information will no longer be protected by federal regulations, where possible, Mount Sinai has entered into agreements with those who will receive your information to continue to protect your confidentiality."
+        ],
+        [
+          "BodyLarge",
+          "If as part of this research project your medical records are being reviewed, or a medical history is being taken, it is possible that HIV-related information may be revealed to the researchers.  If that is the case, the following information concerns you.  If this research does not involve any review of medical records or questions about your medical history or conditions, then the following section may be ignored."
+        ]
+      ]
+    ],
+    [
+      "Section",
+      [
+        ["H4", ["Underline", "Notice Concerning HIV-Related Information"]],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "If you are authorizing the release of HIV-related information, you should be aware that the recipient(s) is (are) prohibited from re-disclosing any HIV-related information without your authorization unless permitted to do so under federal or state law. You also have a right to request a list of people who may receive or use your HIV-related information without authorization. If you experience discrimination because of the release or disclosure of HIV-related information, you may contact the New York State Division of Human Rights at "
+            ],
+            ["Telephone", "(888) 392-3644"],
+            ["Text", " or the New York City Commission on Human Rights at "],
+            ["Telephone", "(212) 306-5070"],
+            [
+              "Text",
+              " These agencies are responsible for protecting your rights."
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+}
