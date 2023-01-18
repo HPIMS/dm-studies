@@ -87,7 +87,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds_trigger
                 operator: =
                 value: yes
@@ -124,7 +124,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: corticosteroid
@@ -155,7 +155,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: corticosteroid
@@ -168,7 +168,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: corticosteroid
@@ -189,7 +189,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: corticosteroid
@@ -201,7 +201,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: corticosteroid
@@ -241,7 +241,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: nsaids
@@ -275,7 +275,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: nsaids
@@ -291,7 +291,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: nsaids
@@ -315,7 +315,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: nsaids
@@ -330,7 +330,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: nsaids
@@ -366,7 +366,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: hydroxychloroquine
@@ -396,7 +396,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: hydroxychloroquine
@@ -409,7 +409,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: hydroxychloroquine
@@ -429,7 +429,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: hydroxychloroquine
@@ -440,7 +440,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: hydroxychloroquine
@@ -476,7 +476,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: leflunomide
@@ -506,7 +506,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: leflunomide
@@ -518,7 +518,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: leflunomide
@@ -538,7 +538,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: leflunomide
@@ -549,7 +549,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: leflunomide
@@ -585,7 +585,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: azulfidine
@@ -615,7 +615,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: azulfidine
@@ -628,7 +628,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: azulfidine
@@ -648,7 +648,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: azulfidine
@@ -659,7 +659,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: azulfidine
@@ -695,7 +695,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclosporine
@@ -725,7 +725,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclosporine
@@ -738,7 +738,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclosporine
@@ -758,7 +758,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclosporine
@@ -769,7 +769,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclosporine
@@ -805,7 +805,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclophosphamide
@@ -835,7 +835,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclophosphamide
@@ -847,7 +847,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclophosphamide
@@ -867,7 +867,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclophosphamide
@@ -878,7 +878,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: cyclophosphamide
@@ -914,7 +914,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: purethinol
@@ -944,7 +944,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: purethinol
@@ -957,7 +957,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: purethinol
@@ -977,7 +977,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: purethinol
@@ -988,7 +988,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: purethinol
@@ -1024,7 +1024,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: methotrexate
@@ -1054,7 +1054,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: methotrexate
@@ -1067,7 +1067,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: methotrexate
@@ -1087,7 +1087,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: methotrexate
@@ -1098,7 +1098,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: methotrexate
@@ -1135,7 +1135,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: remicade
@@ -1166,7 +1166,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: remicade
@@ -1179,7 +1179,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: remicade
@@ -1200,7 +1200,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: remicade
@@ -1212,7 +1212,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: remicade
@@ -1248,7 +1248,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: humira
@@ -1278,7 +1278,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: humira
@@ -1290,7 +1290,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: humira
@@ -1310,7 +1310,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: humira
@@ -1321,7 +1321,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: humira
@@ -1357,7 +1357,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: etanercept
@@ -1387,7 +1387,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: etanercept
@@ -1399,7 +1399,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: etanercept
@@ -1419,7 +1419,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: etanercept
@@ -1430,7 +1430,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: etanercept
@@ -1466,7 +1466,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: abatacept
@@ -1496,7 +1496,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: abatacept
@@ -1508,7 +1508,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: abatacept
@@ -1528,7 +1528,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: abatacept
@@ -1539,7 +1539,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: abatacept
@@ -1575,7 +1575,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: rituximab
@@ -1605,7 +1605,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: rituximab
@@ -1617,7 +1617,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: rituximab
@@ -1637,7 +1637,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: rituximab
@@ -1648,7 +1648,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: rituximab
@@ -1684,7 +1684,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: anakinra
@@ -1714,7 +1714,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: anakinra
@@ -1726,7 +1726,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: anakinra
@@ -1746,7 +1746,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: anakinra
@@ -1757,7 +1757,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: anakinra
@@ -1793,7 +1793,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: other
@@ -1823,7 +1823,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: other
@@ -1835,7 +1835,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: other
@@ -1855,7 +1855,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: other
@@ -1866,7 +1866,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: new_meds
                 operator: =
                 value: other
@@ -1935,7 +1935,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds_trigger
                 operator: =
                 value: yes
@@ -1972,7 +1972,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: corticosteroid
@@ -2003,7 +2003,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: corticosteroid
@@ -2016,7 +2016,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: corticosteroid
@@ -2037,7 +2037,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: corticosteroid
@@ -2049,7 +2049,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: corticosteroid
@@ -2089,7 +2089,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: nsaids
@@ -2123,7 +2123,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: nsaids
@@ -2139,7 +2139,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: nsaids
@@ -2163,7 +2163,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: nsaids
@@ -2178,7 +2178,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: nsaids
@@ -2214,7 +2214,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: hydroxychloroquine
@@ -2244,7 +2244,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: hydroxychloroquine
@@ -2257,7 +2257,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: hydroxychloroquine
@@ -2277,7 +2277,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: hydroxychloroquine
@@ -2288,7 +2288,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: hydroxychloroquine
@@ -2324,7 +2324,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: leflunomide
@@ -2354,7 +2354,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: leflunomide
@@ -2366,7 +2366,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: leflunomide
@@ -2386,7 +2386,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: leflunomide
@@ -2397,7 +2397,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: leflunomide
@@ -2433,7 +2433,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: azulfidine
@@ -2463,7 +2463,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: azulfidine
@@ -2476,7 +2476,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: azulfidine
@@ -2496,7 +2496,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: azulfidine
@@ -2507,7 +2507,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: azulfidine
@@ -2543,7 +2543,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclosporine
@@ -2573,7 +2573,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclosporine
@@ -2586,7 +2586,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclosporine
@@ -2606,7 +2606,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclosporine
@@ -2617,7 +2617,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclosporine
@@ -2653,7 +2653,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclophosphamide
@@ -2683,7 +2683,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclophosphamide
@@ -2695,7 +2695,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclophosphamide
@@ -2715,7 +2715,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclophosphamide
@@ -2726,7 +2726,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: cyclophosphamide
@@ -2762,7 +2762,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: purethinol
@@ -2792,7 +2792,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: purethinol
@@ -2805,7 +2805,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: purethinol
@@ -2825,7 +2825,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: purethinol
@@ -2836,7 +2836,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: purethinol
@@ -2872,7 +2872,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: methotrexate
@@ -2902,7 +2902,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: methotrexate
@@ -2915,7 +2915,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: methotrexate
@@ -2935,7 +2935,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: methotrexate
@@ -2946,7 +2946,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: methotrexate
@@ -2983,7 +2983,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: remicade
@@ -3014,7 +3014,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: remicade
@@ -3027,7 +3027,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: remicade
@@ -3048,7 +3048,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: remicade
@@ -3060,7 +3060,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: remicade
@@ -3096,7 +3096,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: humira
@@ -3126,7 +3126,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: humira
@@ -3138,7 +3138,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: humira
@@ -3158,7 +3158,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: humira
@@ -3169,7 +3169,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: humira
@@ -3205,7 +3205,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: etanercept
@@ -3235,7 +3235,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: etanercept
@@ -3247,7 +3247,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: etanercept
@@ -3267,7 +3267,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: etanercept
@@ -3278,7 +3278,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: etanercept
@@ -3314,7 +3314,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: abatacept
@@ -3344,7 +3344,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: abatacept
@@ -3356,7 +3356,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: abatacept
@@ -3376,7 +3376,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: abatacept
@@ -3387,7 +3387,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: abatacept
@@ -3423,7 +3423,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: rituximab
@@ -3453,7 +3453,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: rituximab
@@ -3465,7 +3465,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: rituximab
@@ -3485,7 +3485,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: rituximab
@@ -3496,7 +3496,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: rituximab
@@ -3532,7 +3532,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: anakinra
@@ -3562,7 +3562,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: anakinra
@@ -3574,7 +3574,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: anakinra
@@ -3594,7 +3594,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: anakinra
@@ -3605,7 +3605,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: anakinra
@@ -3641,7 +3641,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: other
@@ -3671,7 +3671,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: other
@@ -3683,7 +3683,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: other
@@ -3703,7 +3703,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
                 operator: =
                 value: other
@@ -3714,7 +3714,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: stopped_meds
             operator: =
             value: other
@@ -3783,7 +3783,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds_trigger
                 operator: =
                 value: yes
@@ -3820,7 +3820,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: corticosteroid
@@ -3851,7 +3851,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: corticosteroid
@@ -3864,7 +3864,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: corticosteroid
@@ -3885,7 +3885,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: corticosteroid
@@ -3897,7 +3897,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: corticosteroid
@@ -3937,7 +3937,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: nsaids
@@ -3971,7 +3971,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: nsaids
@@ -3987,7 +3987,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: nsaids
@@ -4011,7 +4011,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: nsaids
@@ -4026,7 +4026,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: nsaids
@@ -4062,7 +4062,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: hydroxychloroquine
@@ -4092,7 +4092,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: hydroxychloroquine
@@ -4105,7 +4105,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: hydroxychloroquine
@@ -4125,7 +4125,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: hydroxychloroquine
@@ -4136,7 +4136,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: hydroxychloroquine
@@ -4172,7 +4172,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: leflunomide
@@ -4202,7 +4202,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: leflunomide
@@ -4214,7 +4214,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: leflunomide
@@ -4234,7 +4234,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: leflunomide
@@ -4245,7 +4245,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: leflunomide
@@ -4281,7 +4281,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: azulfidine
@@ -4311,7 +4311,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: azulfidine
@@ -4324,7 +4324,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: azulfidine
@@ -4344,7 +4344,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: azulfidine
@@ -4355,7 +4355,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: azulfidine
@@ -4391,7 +4391,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclosporine
@@ -4421,7 +4421,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclosporine
@@ -4434,7 +4434,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclosporine
@@ -4454,7 +4454,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclosporine
@@ -4465,7 +4465,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclosporine
@@ -4501,7 +4501,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclophosphamide
@@ -4531,7 +4531,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclophosphamide
@@ -4543,7 +4543,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclophosphamide
@@ -4563,7 +4563,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclophosphamide
@@ -4574,7 +4574,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: cyclophosphamide
@@ -4610,7 +4610,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: purethinol
@@ -4640,7 +4640,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: purethinol
@@ -4653,7 +4653,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: purethinol
@@ -4673,7 +4673,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: purethinol
@@ -4685,7 +4685,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: purethinol
@@ -4721,7 +4721,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: methotrexate
@@ -4751,7 +4751,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: methotrexate
@@ -4764,7 +4764,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: methotrexate
@@ -4784,7 +4784,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: methotrexate
@@ -4795,7 +4795,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: methotrexate
@@ -4832,7 +4832,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: remicade
@@ -4863,7 +4863,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: remicade
@@ -4876,7 +4876,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: remicade
@@ -4897,7 +4897,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: remicade
@@ -4909,7 +4909,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: remicade
@@ -4945,7 +4945,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: humira
@@ -4975,7 +4975,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: humira
@@ -4987,7 +4987,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: humira
@@ -5007,7 +5007,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: humira
@@ -5018,7 +5018,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: humira
@@ -5054,7 +5054,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: etanercept
@@ -5084,7 +5084,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: etanercept
@@ -5096,7 +5096,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: etanercept
@@ -5116,7 +5116,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: etanercept
@@ -5127,7 +5127,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: etanercept
@@ -5163,7 +5163,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: abatacept
@@ -5193,7 +5193,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: abatacept
@@ -5205,7 +5205,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: abatacept
@@ -5225,7 +5225,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: abatacept
@@ -5236,7 +5236,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: abatacept
@@ -5272,7 +5272,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: rituximab
@@ -5302,7 +5302,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: rituximab
@@ -5314,7 +5314,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: rituximab
@@ -5334,7 +5334,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: rituximab
@@ -5345,7 +5345,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: rituximab
@@ -5381,7 +5381,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: anakinra
@@ -5411,7 +5411,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: anakinra
@@ -5423,7 +5423,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: anakinra
@@ -5443,7 +5443,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: anakinra
@@ -5454,7 +5454,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: anakinra
@@ -5490,7 +5490,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: other
@@ -5520,7 +5520,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: other
@@ -5532,7 +5532,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: other
@@ -5552,7 +5552,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: other
@@ -5563,7 +5563,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: new_meds
                 question: altered_meds
                 operator: =
                 value: other
