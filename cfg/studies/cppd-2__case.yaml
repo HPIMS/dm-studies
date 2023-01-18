@@ -1,0 +1,60 @@
+key: cppd-2__case
+consentId: ehive-cppd-2__case
+belongsTo: cppd-2
+
+active: true
+openEnrollment: true
+visibility: private
+
+irb: STUDY-22-01002
+pi: Ipek Ensari
+studyEmail: ehivecpp@mssm.edu # TODO: need email
+
+platform:
+  - ios
+  - android
+
+minVersion: "2.3"
+capTo: 180
+
+name: CPP Tracker
+
+shortDescription: This longitudinal study aims to design digital,
+  patient-centered measures of pain and Quality of Life for chronic
+  pelvic pain disorders.
+
+longDescription: This study aims to improve assessments of pain
+  and Quality of Life in chronic pelvic pain disorder
+  (CPPD, e.g.,endometriosis, uterine fibroids, adenomysis).
+
+
+  Participation involves using a smart phone App to self-track daily
+  health symptoms and self-management using mobile Apps, and wearing
+  a wrist-worn activity tracker provided by the study team.
+
+
+  Participants will be remunerated up to $100 for 90 days of participation in the
+  study. Data from the study will be used to design digital,
+  patient-centered measures of pain and Quality of Life.
+
+notes: []
+
+imageId: study-cppd-2
+animationId: ""
+videoId: ""
+
+timeResponsibility:
+  time: 5
+  timeUnits: minutes
+  timePeriod: daily
+
+surveys:
+  - promis-pain-interference-6b-v1.1
+  - promis-fatigue-4a-v1.0
+  - promis-physical-function-4a-v1.0
+  - promis-sleep-disturbance-4a-v1.0
+  - mpq
+  - pcs
+  - promis-global-mental-health-2a-v1.2
+  - euro-qol-eq-5d-5l
+  - ipaq
