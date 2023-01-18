@@ -3716,78 +3716,77 @@ sections:
             condition:
               - section: baseline
                 question: stopped_meds
+            operator: =
+            value: other
+      - key: altered_meds_trigger
+        question: I changed the dose of a medication I am taking
+        type: YESNO_CHOICE
+      - key: altered_meds
+        question: Which medication did change the dose for?
+        type: SINGLE_CHOICE
+        options:
+          - value: corticosteroid
+            text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
+            inlineQuestion:
+                key: altered_meds_corticosteroid_description
+                question: "Please list which specific medication you were taking."
+                type: TEXTAREA
+          - value: nsaids
+            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
+            inlineQuestion:
+                key: altered_meds_nsaids_description
+                question: "Please list which specific medication you were taking."
+                type: TEXTAREA
+          - value: hydroxychloroquine
+            text: Hydroxychloroquine (plaquenil)
+          - value: leflunomide
+            text: Leflunomide (arava)
+          - value: azulfidine
+            text: Azulfidine (Sulfasalazine)
+          - value: cyclosporine
+            text: Cyclosporine (neoral, sandimmune)
+            inlineQuestion:
+                key: altered_meds_cyclosporine_description
+                question: "Please list which specific medication you were taking."
+                type: TEXTAREA
+          - value: cyclophosphamide
+            text: Cyclophosphamide
+          - value: purethinol
+            text: Purethinol (6-MP) / Imuran (Azathioprine)
+            inlineQuestion:
+                key: altered_meds_purethinol_description
+                question: "Please list which specific medication you were taking."
+                type: TEXTAREA                
+          - value: methotrexate
+            text: Methotrexate (trexall, rheumatrex)
+            inlineQuestion:
+                key: altered_meds_methotrexate_description
+                question: "Please list which specific medication you were taking."
+                type: TEXTAREA                
+          - value: remicade
+            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+            inlineQuestion:
+                key: altered_meds_remicade_description
+                question: "Please list which specific medication you were taking."
+                type: TEXTAREA                
+          - value: humira
+            text: Humira (adalimumab)
+          - value: etanercept
+            text: etanercept (enbrel)
+          - value: abatacept
+            text: abatacept (orencia)
+          - value: rituximab
+            text: rituximab (rituxan)
+          - value: anakinra
+            text: anakinra (kineret)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: baseline
+                question: altered_meds_trigger
                 operator: =
-                value: other
-          - key: altered_meds_trigger
-            question: I changed the dose of a medication I am taking
-            type: YESNO_CHOICE
-          - key: altered_meds
-            question: Which medication did change the dose for?
-            type: SINGLE_CHOICE
-            options:
-              - value: corticosteroid
-                text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
-                inlineQuestion:
-                    key: altered_meds_corticosteroid_description
-                    question: "Please list which specific medication you were taking."
-                    type: TEXTAREA
-              - value: nsaids
-                text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
-                inlineQuestion:
-                    key: altered_meds_nsaids_description
-                    question: "Please list which specific medication you were taking."
-                    type: TEXTAREA
-              - value: hydroxychloroquine
-                text: Hydroxychloroquine (plaquenil)
-              - value: leflunomide
-                text: Leflunomide (arava)
-              - value: azulfidine
-                text: Azulfidine (Sulfasalazine)
-              - value: cyclosporine
-                text: Cyclosporine (neoral, sandimmune)
-                inlineQuestion:
-                    key: altered_meds_cyclosporine_description
-                    question: "Please list which specific medication you were taking."
-                    type: TEXTAREA
-              - value: cyclophosphamide
-                text: Cyclophosphamide
-              - value: purethinol
-                text: Purethinol (6-MP) / Imuran (Azathioprine)
-                inlineQuestion:
-                    key: altered_meds_purethinol_description
-                    question: "Please list which specific medication you were taking."
-                    type: TEXTAREA                
-              - value: methotrexate
-                text: Methotrexate (trexall, rheumatrex)
-                inlineQuestion:
-                    key: altered_meds_methotrexate_description
-                    question: "Please list which specific medication you were taking."
-                    type: TEXTAREA                
-              - value: remicade
-                text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
-                inlineQuestion:
-                    key: altered_meds_remicade_description
-                    question: "Please list which specific medication you were taking."
-                    type: TEXTAREA                
-              - value: humira
-                text: Humira (adalimumab)
-              - value: etanercept
-                text: etanercept (enbrel)
-              - value: abatacept
-                text: abatacept (orencia)
-              - value: rituximab
-                text: rituximab (rituxan)
-              - value: anakinra
-                text: anakinra (kineret)
-            triggers:
-              - action:
-                  type: SHOW
-                condition:
-                  - section: baseline
-                    question: altered_meds_trigger
-                    operator: =
-                    value: yes
-
+                value: yes
       - key: altered_med_dose_corticosteroid
         question: What is the new dose of Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
