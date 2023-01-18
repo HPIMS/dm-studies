@@ -1,0 +1,104 @@
+key: promis-sleep-disturbance-4a-v1.0
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata: 
+  author: PROMIS
+  instrument: Sleep Disturbance - Short Form 4a
+  version: "1.0"
+  references: 
+    - https://staging.healthmeasures.net/images/PROMIS/manuals/PROMIS_Sleep_Disturbance_Scoring_Manual.pdf 
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
+name: Sleep Disturbance
+short: Reflect on your sleep
+sections:
+  - key: "0"
+    title: ""
+    description: |-
+      We want to understand more about how your sleep has been.
+      
+      In the past 7 days:
+    questions:
+      - key: sleep_1
+        question: "My sleep quality was:"
+        type: SINGLE_CHOICE
+        options:
+          - value: very_poor
+            text: Very Poor
+            score: 5
+          - value: poor
+            text: Poor
+            score: 4
+          - value: fair
+            text: Fair
+            score: 3
+          - value: good
+            text: Good
+            score: 2
+          - value: very_good
+            text: Very good
+            score: 1
+      - key: sleep_2
+        question: My sleep was refreshing
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 5
+          - value: a_little_bit
+            text: A little bit
+            score: 4
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 2
+          - value: very_much
+            text: Very much
+            score: 1
+      - key: sleep_3
+        question: I had a problem with my sleep
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: a_little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+      - key: sleep_4
+        question: I had difficulty falling asleep
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: a_little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
