@@ -1,6 +1,9 @@
 key: pss-4-baseline
-scorable: true
 active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
 metadata:
   author: ""
   instrument: "PSS-4"
@@ -9,7 +12,9 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
-timeEstimate: 2
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
 name: Stress
 short: "Tell us about your stress over the last month"
 intro:

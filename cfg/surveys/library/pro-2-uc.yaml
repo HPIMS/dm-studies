@@ -1,6 +1,9 @@
 key: pro-2-uc
 active: true
 scorable: true
+score:
+  fn: sum-score
+  args: {}
 metadata: 
   author: ""
   instrument: ""
@@ -9,7 +12,9 @@ metadata:
 schedule:
   type: PERIOD
   period: DAILY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Ulcerative Colitis Check-in
 short: Reflect on your colitis
 intro:

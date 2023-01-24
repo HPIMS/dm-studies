@@ -3,7 +3,9 @@ active: true
 schedule:
   type: PERIOD
   period: ONCE
-timeEstimate: 5
+timeRequirements: 
+  time: 5
+  timeUnits: minutes
 name: Demographics
 short: "About You"
 intro:

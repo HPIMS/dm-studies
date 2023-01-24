@@ -5,7 +5,9 @@ schedule:
   type: PERIOD
   period: BI_WEEKLY
 repeat: 3
-timeEstimate: 3
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
 name: Mood Survey
 short: About your mood
 intro:

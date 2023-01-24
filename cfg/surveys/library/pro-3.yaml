@@ -1,10 +1,15 @@
 key: pro-3
-scorable: true
 active: true
+scorable: true
+score:
+  fn: pro-3
+  args: {}
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 1
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
 name: Crohn's Assessment
 short: "Reflect on your Croh's"
 intro:

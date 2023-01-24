@@ -1,10 +1,15 @@
 key: promis-fatigue-7a
 active: true
 scorable: true
+score:
+  fn: sum-score
+  args: {}
 schedule:
   type: PERIOD
   period: WEEKLY
-timeEstimate: 3
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
 name: Fatigue Assessment
 short: "About your fatigue"
 intro:

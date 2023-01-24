@@ -1,7 +1,7 @@
 key: pss
 consentId: ehive-pss
 
-active: true
+active: false
 openEnrollment: true
 visibility: private
 
@@ -12,6 +12,9 @@ studyEmail: ehive.pss@mssm.edu
 platform:
   - ios
   - android
+
+# minVersion: '2.2'
+capTo: 10000
 
 # Legacy
 wearables:

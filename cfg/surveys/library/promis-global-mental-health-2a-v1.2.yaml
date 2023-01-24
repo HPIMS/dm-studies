@@ -1,0 +1,66 @@
+key: promis-global-mental-health-2a-v1.2
+scorable: true
+active: true
+score:
+  fn: sum-score
+  args: {}
+metadata: 
+  author: PROMIS
+  instrument: PROMIS Global Mental Health - 2a
+  version: "1.2"
+  references:
+    - "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5934936/ "
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements: 
+  time: 30
+  timeUnits: seconds
+name: Mental Health
+short: Reflect on your mental health
+sections:
+  - key: "0"
+    title: ""
+    description: |-
+      We want to understand more about your mental health.
+      
+      In general, over the past 7 days:
+    questions:
+      - key: mental_1
+        question: How would you rate your mental health, including your mood and your ability to think?
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+            score: 5
+          - value: very_good
+            text: Very good
+            score: 4
+          - value: good
+            text: Good
+            score: 3
+          - value: fair
+            text: Fair
+            score: 2
+          - value: poor
+            text: Poor
+            score: 1
+      - key: mental_2
+        question: How would you rate your satisfaction with your social activities and relationships?
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+            score: 5
+          - value: very_good
+            text: Very good
+            score: 4
+          - value: good
+            text: Good
+            score: 3
+          - value: fair
+            text: Fair
+            score: 2
+          - value: poor
+            text: Poor
+            score: 1

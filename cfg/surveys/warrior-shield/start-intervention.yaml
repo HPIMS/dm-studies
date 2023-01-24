@@ -1,10 +1,15 @@
 key: start-intervention
 active: true
 scorable: true
+score:
+  fn: sum-score
+  args: {}
 schedule:
   type: PERIOD
   period: ALWAYS
-timeEstimate: 1
+timeRequirements: 
+  time: 30
+  timeUnits: seconds
 name: Start Intervention
 short: Answer these questions to begin the intervention.
 intro:

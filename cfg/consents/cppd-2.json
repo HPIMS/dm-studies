@@ -1,0 +1,53 @@
+{
+  "key": "ehive-cppd-2",
+  "title": "CPP Tracker",
+  "timeEstimate": { "time": 15, "timeUnits": "minutes" },
+  "contact": {
+    "pi": "Ipek Ensari",
+    "email": "ehivecpp@mssm.edu"
+  },
+  "dates": {
+    "effectiveAt": "2022-11-22T00:00:00.000Z",
+    "effectiveUntil": "2025-09-05T23:59:59.0Z"
+  },
+  "intro": [
+    [
+      "Section",
+      [
+        [
+          "BodyLarge",
+          "To participate, you must complete the Informed Consent Process."
+        ],
+        [
+          "BodyLarge",
+          "The following screens will contain a detailed description of the study. Research staff will explain the purpose of the study and what participation will entail. Please take the time you need to review the study information before you decide to participate."
+        ],
+        [
+          "BodyLarge",
+          "If you have any questions, please ask the research staff during the consent process or email the study mailbox by tapping the help button."
+        ],
+        [
+          "BodyLarge",
+          "Please read through each section carefully and make sure you understand what is being asked of you before signing."
+        ]
+      ]
+    ]
+  ],
+  "arm": {
+    "question": "I am a patient with chronic pelvic pain disorder (CPP)",
+    "options": [
+      {
+        "value": "yes",
+        "text": "Yes",
+        "arm": "case"
+      },
+      {
+        "value": "no",
+        "text": "No",
+        "arm": "control"
+      }
+    ]
+  },
+  "options": [],
+  "review": []
+}
