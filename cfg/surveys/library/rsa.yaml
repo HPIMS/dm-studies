@@ -1,0 +1,1098 @@
+key: rsa
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: ['https://www.hsph.harvard.edu/health-happiness/resilience-scale-for-adults-rsa/']
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements: 
+  time: 5
+  timeUnits: minutes
+name: Resilience
+sections:
+  - key: "0"
+    title: ""
+    description: "TODO: NEED PROMPT"
+    questions:
+      - key: rsa_1
+        question: I believe in my own abilities
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_2
+        question: Believeing in myself healps me to overcome difficult times
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_3
+        question: I know that I succeed if I carry on
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_4
+        question: I know how to reach my goals
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_5
+        question: No matter what happens I always find a solution
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_6
+        question: I am comfortable together with other persons
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_7
+        question: My future feels promising
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_8
+        question: I know that I can solve my personal problems
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_9
+        question: I am pleased with myself
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_10
+        question: I have realistic plans for the future
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_11
+        question: I completely trust my judgements and decisions
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_12
+        question: At hard times I know that better times will come
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_13
+        question: I am good at getting in touch with new people
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_14
+        question: I easily establish new friendships
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_15
+        question: It is easy for me to think of good conversational topics
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_16
+        question: I easily adjust to new social milieus
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_17
+        question: It is easy for me to make other people laugh
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_18
+        question: I enjoy being with other people
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_19
+        question: I know how to start a conversation
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_20
+        question: I easily laugh
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_21
+        question: It is important for me to be flexible in social circumstances
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_22
+        question: I experience good relations with both women and men
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_23
+        question: There are strong bonds in my family
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_24
+        question: I enjoy being with my family
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_25
+        question: In our family we are loyal towards each other
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_26
+        question: In my family we enjoy finding common activities
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_27
+        question: Even at difficult times my family keeps a positive outlook on the future
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_28
+        question: In my family we have a common understanding of what’s important in life
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_29
+        question: There are few conflicts in my family
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_30
+        question: I have some close friends/family members who really care about me
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_31
+        question: I have some friends/family members who back me up
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_32
+        question: I always have someone who can help me when needed
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_33
+        question: I have some close friends/family members who are good at encouraging me
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_34
+        question: I am quickly notified if some family members get into a crisis
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_35
+        question: I can discuss personal matters with friends/family members
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_36
+        question: I have some close friends/family members who value my abilities
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_37
+        question: I regularly keep in touch with my family
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_38
+        question: There are strong bonds between my friends
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_39
+        question: Rules and regular routines make my daily life easier
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_40
+        question: I keep up my daily routines even at difficult times
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_41
+        question: I prefer to plan my actions
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_42
+        question: I work best when I reach for a goal
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
+      - key: rsa_43
+        question: I am good at organizing my time
+        type: SINGLE_CHOICE
+        options:
+          - value: one
+            text: "1 - Strongly Disagree"
+            score: 1
+          - value: two
+            text: "2"
+            score: 2
+          - value: three
+            text: "3"
+            score: 3
+          - value: four
+            text: "4"
+            score: 4
+          - value: five
+            text: "5"
+            score: 5
+          - value: six
+            text: "6"
+            score: 6
+          - value: seven
+            text: "7 - Strongly Agree"
+            score: 7
