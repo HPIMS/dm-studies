@@ -18,17 +18,13 @@ timeRequirements:
   timeUnits: minutes
 name: Pain
 short: Rate your pain in the last week
-intro:
-  title: Pain
-  description: This survey asks questions about pain in the last week.
-    You may skip any questions that make you feel uncomfortable.
-outro:
-  title: Way to go!
-  description: We appreciate your participation.
 sections: 
   - key: "0"
     title: ""
-    description: "How was your pain?"
+    description: |-
+      We want to understand how your pain interfered with your life.
+      
+      In the past 7 days:
     questions:
       - key: pain_interfere_d2d
         question: How much did pain interfere with your day to day activities
