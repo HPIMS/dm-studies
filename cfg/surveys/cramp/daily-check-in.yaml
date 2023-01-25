@@ -208,6 +208,7 @@ sections:
       - key: symptoms_today
         question: Did you have any of the following today?
         type: MULTIPLE_CHOICE
+        description: Select all that apply
         options:
           - value: diarrhea
             text: Diarrhea
@@ -230,7 +231,7 @@ sections:
         type: YESNO_CHOICE
       - key: which_pain_meds_today
         question: Which pain medication/s did you use?
-        descritpion: Select all that apply
+        description: Select all that apply
         type: MULTIPLE_CHOICE
         options:
           - value: acetaminophen

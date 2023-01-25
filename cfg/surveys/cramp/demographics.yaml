@@ -1,0 +1,657 @@
+key: demographics
+active: true
+scorable: false
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements: 
+  time: 15
+  timeUnits: minutes
+name: About You
+sections:
+  - key: sdh
+    title: Demographics
+    description: ""
+    questions:
+      - key: ms_patient
+        question: Are you a patient at the Mount Sinai Health System?
+        type: YESNO_CHOICE
+      - key: age
+        question: When is your birthday?
+        type: DATE
+      - key: ethnicity
+        question: What is your ethnicity?
+        type: SINGLE_CHOICE
+        options:
+          - value: hispanic_or_latino
+            text: Hispanic or Latino
+          - value: not_hispanic_or_latino
+            text: Not Hispanic or Latino
+          - value: unknown
+            text: Unknown
+      - key: race
+        question: What is your race?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: american
+            text: American Indian or Alaska Native
+          - value: asian
+            text: Asian
+          - value: black
+            text: Black, African-American
+          - value: hawaiian
+            text: Native Hawaiian or Other Pacific Islander
+          - value: white
+            text: White
+          - value: unknown
+            text: Unknown
+      - key: education
+        question: What is your highest level of education? 
+        type: SINGLE_CHOICE
+        options:
+          - value: no_diploma
+            text: No high school diploma
+          - value: high_school
+            text: High school graduate
+          - value: ged
+            text: GED or equivalent
+          - value: some_college
+            text: Some college/No degree
+          - value: college_degree
+            text: College degree or higher
+          - value: occupational
+            text: Occupational, technical, or vocational program
+      - key: income
+        question: What is your current annual income?
+        type: SINGLE_CHOICE
+        options:
+          - value: under_15
+            text: Under $15,000
+          - value: 15_24
+            text: $15,000 to $24,999
+          - value: 25_34
+            text: $25,000 to $34,999
+          - value: 35_49
+            text: $35,000 to $49,999
+          - value: 50_74
+            text: $50,000 to $74,999
+          - value: 75_99
+            text: $75,000 to $99,999
+          - value: 100_149
+            text: $100,000 to $149,999
+          - value: 150_over
+            text: $150,000 and over
+          - value: unknown
+            text: Unknown
+          - value: no_response
+            text: I choose not to answer this question
+      - key: income_total
+        question: Which of the following best describes the total annual income of all members of your household?
+        type: SINGLE_CHOICE
+        options:
+          - value: under_50
+            text: Under $50,000
+          - value: 50_99
+            text: $50,000 to $99,999
+          - value: 100_149
+            text: $100,000 to $149,999
+          - value: 150_199
+            text: $150,000 to $199,999
+          - value: 200_249
+            text: $200,000 to $249,999
+          - value: 250_299
+            text: $250,000 to $299,999
+          - value: 300_over
+            text: $300,000 and over
+          - value: unknown
+            text: Unknown
+          - value: no_response
+            text: I choose not to answer this question
+      - key: household_size
+        question: How many family members, including yourself, do you currently live with?
+        type: NUMERIC
+        minValue: 1
+        maxValue: 20
+      - key: household_members
+        question: Describe the individual(s) with whom you live.
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: spouse
+            text: Husband or wife
+          - value: biological_child
+            text: Biological son or daughter
+          - value: adopted_child
+            text: Adopted son or daughter
+          - value: step_child
+            text: Stepson or stepdaughter
+          - value: sibling
+            text: Brother or sister
+          - value: parent
+            text: Father or mother
+          - value: step_parent
+            text: Stepfather or stepmother
+          - value: grandchild
+            text: Grandchild
+          - value: grandparent
+            text: Grandparent
+          - value: in_law_parent
+            text: Parent-in-law
+          - value: in_law_child
+            text: Son-in-law or daughter-in-law
+          - value: other_relative
+            text: Other relative
+          - value: roomer
+            text: Roomer or boarder
+          - value: roomate
+            text: Housemate or roommate
+          - value: partner
+            text: Unmarried partner
+          - value: foster_child
+            text: Foster child
+          - value: facility
+            text: Other patient/resident in care facility
+          - value: attendent
+            text: Personal care attendant
+          - value: other_non_relative
+            text: Other non-relative
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: sdh
+                question: household_size
+                operator: ">"
+                value: 1
+      - key: employment
+        question: What is your emplyment status?
+        type: SINGLE_CHOICE
+        options:
+          - value: employed
+            text: Employed with pay (part-time, full-time, self-employed)
+          - value: unable_to_work
+            text: Unable to work (i.e. disability, illness or other circumstances)
+          - value: student
+            text: Student
+          - value: caregiver
+            text: Taking care of house or family
+          - value: unemployed
+            text: Unemployed
+          - value: retired
+            text: Retired
+      - key: unemployed_duration
+        question: How long have you been unemployed?
+        type: SINGLE_CHOICE
+        options:
+          - value: less_than_1_year
+            text: Less than 1 year
+          - value: more_than_1_year
+            text: One or more years
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: sdh
+                question: employment
+                operator: =
+                value: unemployed
+      - key: state
+        question: In which state do you live in?
+        type: TEXT
+      - key: zipcode
+        question: What is your zip code?
+        type: TEXT
+      - key: marital_status
+        question: What is your marital status?
+        type: SINGLE_CHOICE
+        options:
+          - value: single
+            text: Single, never married 
+          - value: married
+            text: Married or in a domestic partnership 
+          - value: divorce
+            text: Separated or divorced 
+          - value: widowed
+            text: Widowed
+  - key: health
+    title: Health
+    description: ""
+    questions:
+      - key: height
+        question: What is your height?
+        type: HEIGHT
+      - key: weight
+        question: What is your weight?
+        type: WEIGHT
+      - key: drink_freq
+        question: How often do you have a drink containing alcohol?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+          - value: monthly
+            text: Monthly or less
+          - value: 2_4_month
+            text: 2-4 times per month
+          - value: 2_3_week
+            text: 2-3 times per week
+          - value: 4_week
+            text: 4+ times per week
+      - key: drink_count
+        question: How many drinks containing alcohol do you have on a typical day when you are drinking?
+        type: NUMERIC
+        minValue: 1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: drink_freq
+                operator: "<>"
+                value: never
+      - key: smoke_100
+        question: Have you smoked at least 100 cigarettes in your entire life?
+        type: YESNO_CHOICE
+      - key: smoking
+        question: How you currently smoke cigarettes?
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+          - value: sometimes
+            text: Sometimes
+          - value: daily
+            text: Every day
+      - key: cigarette_count
+        question: On average, how many cigarettes do you smoke per day?
+        type: NUMERIC
+        minValue: 1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: smoking
+                operator: "<>"
+                value: no
+      - key: coffee_count
+        question: On average, how many cups of coffee do you drink per day?
+        type: NUMERIC
+      - key: pain_other
+        question: Aside from menstruation-related pain, do you experience pain on a regular basis?
+        type: YESNO_CHOICE
+      - key: pain_diagnosis
+        question: Is your pain associated to any diagnosis you received by a doctor or healthcare practitioner?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: pain_other
+                operator: =
+                value: yes
+      - key: pain_diagnosis_specify
+        question: Please specify the condition.
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: pain_diagnosis
+                operator: =
+                value: yes
+      - key: pain_location
+        question: Where do you feel pain?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: pelvis
+            text: Pelvis and/or lower abdomen
+          - value: stomach
+            text: Stomach / upper abdomen
+          - value: lower_back
+            text: Lower back
+          - value: upper_back
+            text: Upper back, neck, or shoulders
+          - value: upper_legs
+            text: Upper legs
+          - value: lower_legs
+            text: Lower legs
+          - value: arms
+            text: Arms
+          - value: head
+            text: Head         
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: pain_location_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+      - key: pain_freq
+        question: How often do you feel pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: daily
+            text: Daily
+          - value: weekly
+            text: Weekly
+          - value: monthly
+            text: Monthly
+      - key: diagnosis_chronic
+        question: Have you been diagnosed by a doctor of other healthcare provider with a chronic condition (i.e. a condition that will last for a long period of time and you are currently having or taking medications for), excluding pelvic and gynecological conditions?
+        type: YESNO_CHOICE
+      - key: diagnosis_psychiatric
+        question: Have you been diagnosed with any of the following psychiatric conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Generalized anxiety disorder
+          - value: diagnosis_2
+            text: Panic attack/panic disorder
+          - value: diagnosis_3
+            text: Other anxiety disorders
+          - value: diagnosis_4
+            text: Major depression disorder
+          - value: diagnosis_5
+            text: Obsessive compulsive disorder
+          - value: diagnosis_6
+            text: Post-traumatic stress disorder
+          - value: diagnosis_7
+            text: Bipolar disorder
+          - value: diagnosis_8
+            text: Eating disorder, including anorexia nervosa or bulimia
+          - value: diagnosis_9
+            text: Schizophrenia
+          - value: diagnosis_10
+            text: Psychosis or other psychotic disorders beyond schizophrenia
+          - value: diagnosis_other
+            text: Other psychiatric conditions not listed above
+            inlineQuestion:
+              key: diagnosis_psychiatric_diagnosis_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+      - key: diagnosis_endocrinological
+        question: Have you been diagnosed with any of the following endocrinological conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Hyperprolactinemia (high prolactin levels)
+          - value: diagnosis_2
+            text: Some thyroid condition
+          - value: diagnosis_3
+            text: Some diabetic condition
+      - key: diagnosis_endocrinological_which_thyroid
+        question: Which thyroid condition have you been diagnosed with?
+        type: SINGLE_CHOICE
+        options:
+          - value: hyperthyroidism
+            text: Hyperthyroidism (high thyroid levels)
+          - value: hypothyroidism
+            text: Hypothyroidism (low thyroid levels)
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: diagnosis_endocrinological_which_thyroid_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+          - value: unsure
+            text: Unsure
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_endocrinological
+                operator: INCLUDES
+                value: diagnosis_2
+      - key: diagnosis_endocrinological_which_diabetic
+        question: Which diabetic condition have you been diagnosed with?
+        type: SINGLE_CHOICE
+        options:
+          - value: prediabetes
+            text: prediabetes
+          - value: diabetes_1
+            text: Type I diabetes
+          - value: diabetes_2
+            text: Type II diabetes
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: diagnosis_endocrinological_which_diabetic_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+          - value: unsure
+            text: Unsure
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_endocrinological
+                operator: INCLUDES
+                value: diagnosis_3
+      - key: diagnosis_cardiovascular
+        question: Have you been diagnosed with any of the following cardiovascular conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Arrhythmia (irregular heart beat)
+          - value: diagnosis_2
+            text: Congential heart disease
+          - value: diagnosis_3
+            text: Heart valve disease
+          - value: diagnosis_4
+            text: Coronary artery disease (narrow heart vessels)
+          - value: diagnosis_5
+            text: Congestive heart failure
+          - value: diagnosis_6
+            text: High cholesterol
+          - value: diagnosis_7
+            text: High blood pressure (hypertension)
+      - key: diagnosis_hematological
+        question: Have you been diagnosed with any of the following hematological conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Anemia (low blood count)
+          - value: diagnosis_2
+            text: Hemophilia (easy bleeding and bruising)
+          - value: diagnosis_3
+            text: Thrombophilia (frequent blot clots)
+      - key: diagnosis_renal
+        question: Have you been diagnosed with any of the following renal conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Kidney disease
+      - key: diagnosis_pulmonary
+        question: Have you been diagnosed with any of the following pulmonary conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Sleep apnea
+          - value: diagnosis_2
+            text: Asthma
+          - value: diagnosis_3
+            text: Chronic obstructive pulmonary disease
+          - value: diagnosis_4
+            text: Cystic fibrosis
+      - key: diagnosis_gastrointestinal
+        question: Have you been diagnosed with any of the following gastrointestinal conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Acid reflux
+          - value: diagnosis_2
+            text: Crohn's disease or ulcerative colitis 
+          - value: diagnosis_3
+            text: Celiac disease
+          - value: diagnosis_4
+            text: Irritable bowel syndrome
+      - key: diagnosis_connective_tissue
+        question: Have you been diagnosed with any of the following connective tissue conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Arthritis
+          - value: diagnosis_2
+            text: Fibromyalgia
+          - value: diagnosis_3
+            text: Lupus
+          - value: diagnosis_4
+            text: Osteoporosis
+          - value: diagnosis_5
+            text: Sarcoidosis
+      - key: diagnosis_neurological
+        question: Have you been diagnosed with any of the following neurological conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Chronic fatigue syndrome
+          - value: diagnosis_2
+            text: Epilepsy (seizures)
+          - value: diagnosis_3
+            text: Migraines
+          - value: diagnosis_4
+            text: Other types of chronic headaches
+          - value: diagnosis_5
+            text: Multiple sclerosis
+          - value: diagnosis_other
+            text: Other neurological conditions not listed above
+            inlineQuestion:
+              key: diagnosis_neurological_diagnosis_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+      - key: diagnosis_other
+        question: Please specify any other conditions you have been diagnosed with that are not listed above.
+        type: TEXTAREA
+      - key: surgery
+        question: Have you had any surgeries?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: surgery_1
+            text: Bone
+          - value: surgery_2
+            text: Breast
+          - value: surgery_3
+            text: Gallbladder
+          - value: surgery_4
+            text: Heart
+          - value: surgery_5
+            text: Stomach
+          - value: surgery_6
+            text: Colon or rectum
+          - value: surgery_7
+            text: Intestine
+          - value: surgery_8
+            text: Appendix
+          - value: surgery_9
+            text: Vascular
+          - value: surgery_10
+            text: C-section
+          - value: surgery_11
+            text: Uterine cervical surgery 
+          - value: surgery_12
+            text: "Surgery on uterus: removal of fibroid"
+          - value: surgery_13
+            text: "Surgery on uterus: removal of endometrial polyp"
+          - value: surgery_14
+            text: "Removal of an ovary"
+          - value: surgery_15
+            text: "Removal or ligation of fallopian tubes"
+      - key: medication_current
+        question: Do you currently take medications?
+        type: YESNO_CHOICE
+      - key: medication_text
+        question: Which medications are you currently taking?
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: medication_current
+                operator: =
+                value: yes
+      - key: cancer
+        question: Have you ever been diagnosed with cancer?
+        type: YESNO_CHOICE
+      - key: cancer_select
+        question: Which type of cancer have you been diagnosed with?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: cancer_1
+            text: Breast
+          - value: cancer_2
+            text: Colon or rectum
+          - value: cancer_3
+            text: Stomach
+          - value: cancer_4
+            text: Blood (lymphoma or leukemia)
+          - value: cancer_5
+            text: Bone
+          - value: cancer_6
+            text: Skin
+          - value: cancer_7
+            text: Uterus or endometrial
+          - value: cancer_8
+            text: Ovarian
+          - value: cancer_9
+            text: Cervical (uterine cervix)
+          - value: cancer_10
+            text: Pulmonary
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: cancer_select_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: cancer
+                operator: =
+                value: yes
+      - key: cancer_date
+        question: When were you first diagnosed with cancer?
+        description: If you do not know the exact date, choose the 1st of the month you were diagnosed.
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: cancer
+                operator: =
+                value: yes
+      - key: cancer_treat
+        question: When did you last receive treatment for your cancer?
+        description: If you do not know the exact date, choose the 1st of the month you last received treatment.
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: cancer
+                operator: =
+                value: yes
+      - key: cancer_status
+        question: Are you currently cancer free?
+        type: YESNO_CHOICE
