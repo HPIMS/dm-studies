@@ -32,7 +32,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "bleeding"
+              - section: bleeding
                 question: menses_today
                 operator: =
                 value: yes
@@ -221,7 +221,7 @@ sections:
             text: Dizziness
           - value: headache
             text: Headache
-  - key: pain_2
+  - key: medications
     title: Today's Medications
     description: ""
     questions:
@@ -249,7 +249,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: medications
                 question: pain_meds_today
                 operator: =
                 value: yes
@@ -260,7 +260,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: medications
                 question: pain_meds_today
                 operator: =
                 value: yes
