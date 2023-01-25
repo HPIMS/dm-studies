@@ -207,7 +207,7 @@ sections:
     questions:
       - key: symptoms_today
         question: Did you have any of the following today?
-        type: SINGLE_CHOICE
+        type: MULTIPLE_CHOICE
         options:
           - value: diarrhea
             text: Diarrhea
