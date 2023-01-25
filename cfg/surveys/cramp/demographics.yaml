@@ -254,7 +254,7 @@ sections:
         question: Have you smoked at least 100 cigarettes in your entire life?
         type: YESNO_CHOICE
       - key: smoking
-        question: How you currently smoke cigarettes?
+        question: Do you currently smoke cigarettes?
         type: SINGLE_CHOICE
         options:
           - value: no
@@ -263,6 +263,14 @@ sections:
             text: Sometimes
           - value: daily
             text: Every day
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: smoke_100
+                operator: =
+                value: yes
       - key: cigarette_count
         question: On average, how many cigarettes do you smoke per day?
         type: NUMERIC
