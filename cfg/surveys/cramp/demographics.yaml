@@ -751,6 +751,14 @@ sections:
       - key: cancer_status
         question: Are you currently cancer free?
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: cancer
+                operator: =
+                value: yes
   - key: pcs
     title: ""
     description: |-
