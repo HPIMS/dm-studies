@@ -5,7 +5,7 @@ schedule:
   type: PERIOD
   period: DAILY
 timeRequirements: 
-  time: 1
+  time: 3
   timeUnits: minutes
 name: Daily Check-in
 sections:
