@@ -10,7 +10,7 @@ timeRequirements:
 name: About You
 sections:
   - key: sdh
-    title: Demographics
+    title: ""
     description: ""
     questions:
       - key: ms_patient
@@ -374,6 +374,14 @@ sections:
               key: diagnosis_psychiatric_diagnosis_other_description
               question: "Please specify:"
               type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_endocrinological
         question: Have you been diagnosed with any of the following endocrinological conditions?
         description: Select all that apply
@@ -385,6 +393,14 @@ sections:
             text: Some thyroid condition
           - value: diagnosis_3
             text: Some diabetic condition
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_endocrinological_which_thyroid
         question: Which thyroid condition have you been diagnosed with?
         type: SINGLE_CHOICE
@@ -454,6 +470,14 @@ sections:
             text: High cholesterol
           - value: diagnosis_7
             text: High blood pressure (hypertension)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_hematological
         question: Have you been diagnosed with any of the following hematological conditions?
         description: Select all that apply
@@ -465,6 +489,14 @@ sections:
             text: Hemophilia (easy bleeding and bruising)
           - value: diagnosis_3
             text: Thrombophilia (frequent blot clots)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_renal
         question: Have you been diagnosed with any of the following renal conditions?
         description: Select all that apply
@@ -472,6 +504,14 @@ sections:
         options:
           - value: diagnosis_1
             text: Kidney disease
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_pulmonary
         question: Have you been diagnosed with any of the following pulmonary conditions?
         description: Select all that apply
@@ -485,6 +525,14 @@ sections:
             text: Chronic obstructive pulmonary disease
           - value: diagnosis_4
             text: Cystic fibrosis
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_gastrointestinal
         question: Have you been diagnosed with any of the following gastrointestinal conditions?
         description: Select all that apply
@@ -498,6 +546,14 @@ sections:
             text: Celiac disease
           - value: diagnosis_4
             text: Irritable bowel syndrome
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_connective_tissue
         question: Have you been diagnosed with any of the following connective tissue conditions?
         description: Select all that apply
@@ -513,6 +569,14 @@ sections:
             text: Osteoporosis
           - value: diagnosis_5
             text: Sarcoidosis
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_neurological
         question: Have you been diagnosed with any of the following neurological conditions?
         description: Select all that apply
@@ -534,9 +598,25 @@ sections:
               key: diagnosis_neurological_diagnosis_other_description
               question: "Please specify:"
               type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: diagnosis_other
         question: Please specify any other conditions you have been diagnosed with that are not listed above.
         type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: diagnosis_chronic
+                operator: =
+                value: yes
       - key: surgery
         question: Have you had any surgeries?
         description: Select all that apply
@@ -655,3 +735,622 @@ sections:
       - key: cancer_status
         question: Are you currently cancer free?
         type: YESNO_CHOICE
+  - key: pcs
+    title: ""
+    description: |-
+      We are interested in the types of thoughts and feeling that you have when you have menstrual pain. Listed below are thirteen statements describing different thoughts and feelings that may be associated with pain. Using the scale, please indicate the degree to which you have these thoughts and feelings when you are experiencing menstrual pain.
+      
+      With:
+      0 being not at all
+      1 to a slight degree
+      2 to a moderate degree
+      3 to a great degree
+      4 all the time
+    questions:
+      - key: pcs_1
+        question: I worry all the time about whether the pain will end
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_2
+        question: I feel I can't go on
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_3
+        question: It's terrible and I think it's never going to get any better
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_4
+        question: It's awful and I feel that it overwhelms me
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_5
+        question: I feel I can't stand it anymore
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_6
+        question: I become afraid that the pain will get worse
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_7
+        question: I keep thinking of other painful events
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_8
+        question: I anxiously want the pain to go away
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_9
+        question: I can't seem to keep it out of my mind
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_10
+        question: I keep thinking about how much it hurts
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_11
+        question: I keep thinking about how badly I want the pain to stop
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_12
+        question: There's nothing I can do to reduce the intensity of the pain
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+      - key: pcs_13
+        question: I wonder whether something serious may happen
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+  - key: pseq
+    title: ""
+    description: |-
+      Please rate how confident you are that you can do the following things at present, despite the menstrual pain. To indicate your answer tap one of the options on the scale under each item, from "not at all confident" to "completely confident".
+      
+      With:
+      0 being not at all confident
+      6 being completely confident
+    questions:
+      - key: pseq_1
+        question: I can enjoy things, despite the pain
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_2
+        question: I can do most of the household chores (e.g. tidying-up, washing dishes, etc.), despite the pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_3
+        question: I can socialise with my friends or family members as often as I used to do, despite the pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_4
+        question: I can cope with my pain in most situations. 
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_5
+        question: I can do some form of work, despite the pain. ('work' includes housework, paid and unpaid work).
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_6
+        question: I can still do many of the things I enjoy doing, such as hobbies or leisure activity, despite pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_7
+        question: I can cope with my pain without medication.
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_8
+        question: I can still accomplish most of my goals in life, despite the pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_9
+        question: I can live a normal lifestyle, despite the pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+      - key: pseq_10
+        question: I can gradually become more active, despite the pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: 0
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: 6
+  - key: psst
+    title: ""
+    description: Do you experience some or any of the following premenstrual symptoms which start before your period and stop within a few days of bleeding?
+    questions:
+      - key: psst_1
+        question: Anger/Irritability
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_2
+        question: Anxiety/tension
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_3
+        question: Tearful/Increased sensitivity to rejection
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_4
+        question: Depressed mood/hopelessness
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_5
+        question: Decreased interest in work activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_6
+        question: Decreased interest in home activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_7
+        question: Decreased interest in social activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_8
+        question: Difficulty concentrating
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_9
+        question: Fatigue/lack of energy
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_10
+        question: Overeating/food cravings
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_11
+        question: Insomnia
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_12
+        question: Hypersomnia (needing more sleep)
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_13
+        question: Feeling overwhelmed or out of control
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_14
+        question: Physical symptoms; breast tenderness, headaches, joint/muscle pain, bloating, weight gain
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_interlude
+        question: Have your symptoms, as listed above, interfered with
+        type: DISPLAY
+      - key: psst_a
+        question: Your work efficiency or productivity
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_b
+        question: Your relationships with coworkers
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_c
+        question: Your relationships with your family
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_d
+        question: Your social life activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_e
+        question: Your home responsibilities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+
