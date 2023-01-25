@@ -85,7 +85,7 @@ sections:
           - value: no
             text: No
       - key: sei-hs_7
-        question: Did you have had difficulty the last 12 months getting by on your household income?
+        question: In the last 12 months, have you had difficulty getting by on your household income?
         type: SINGLE_CHOICE
         options:
           - value: great_difficulty
@@ -98,7 +98,7 @@ sections:
             text: No difficulty
       - key: sei-hs_8
         question: Does your household usually have enough money to do the following things?
-        description: Can you afford ... 
+        description: "I can afford:"
         type: MULTIPLE_CHOICE
         options:
           - value: sei-hs_8_a
