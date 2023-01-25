@@ -330,6 +330,14 @@ sections:
               key: pain_location_other_description
               question: "Please specify:"
               type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: pain_other
+                operator: =
+                value: yes
       - key: pain_freq
         question: How often do you feel pain?
         type: SINGLE_CHOICE
@@ -340,6 +348,14 @@ sections:
             text: Weekly
           - value: monthly
             text: Monthly
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: pain_other
+                operator: =
+                value: yes
       - key: diagnosis_chronic
         question: Have you been diagnosed by a doctor of other healthcare provider with a chronic condition (i.e. a condition that will last for a long period of time and you are currently having or taking medications for), excluding pelvic and gynecological conditions?
         type: YESNO_CHOICE
