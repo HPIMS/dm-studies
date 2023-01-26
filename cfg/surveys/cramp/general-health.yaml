@@ -530,7 +530,7 @@ sections:
       - key: cancer_date
         question: When were you first diagnosed with cancer?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW
@@ -542,7 +542,7 @@ sections:
       - key: cancer_treat
         question: When did you last receive treatment for your cancer?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW

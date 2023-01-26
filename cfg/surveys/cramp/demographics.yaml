@@ -205,9 +205,11 @@ sections:
       - key: state
         question: In which state do you live in?
         type: TEXT
+        placeholder: e.g. NY
       - key: zipcode
         question: What is your zip code?
         type: TEXT
+        placeholder: e.g. 10029
       - key: marital_status
         question: What is your marital status?
         type: SINGLE_CHOICE
