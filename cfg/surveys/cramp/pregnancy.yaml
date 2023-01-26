@@ -3,7 +3,7 @@ active: true
 scorable: false
 schedule:
   type: PERIOD
-  period: DAILY
+  period: ONCE
 timeRequirements: 
   time: 3
   timeUnits: minutes
