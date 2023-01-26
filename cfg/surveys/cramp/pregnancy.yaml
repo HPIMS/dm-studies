@@ -190,7 +190,7 @@ sections:
       - key: hormone_meds_last_use_hormone_1
         question: When did you last use the birth control pill?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW
@@ -221,7 +221,7 @@ sections:
       - key: hormone_meds_last_use_hormone_2
         question: When did you last use the hormonal IUD (intrauterine device)?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW
@@ -252,7 +252,7 @@ sections:
       - key: hormone_meds_last_use_hormone_3
         question: When did you last use the hormonal implant (medication rod inserted under the skin of your arm)?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW
@@ -283,7 +283,7 @@ sections:
       - key: hormone_meds_last_use_hormone_4
         question: When did you last use the hormonal patch?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW
@@ -314,7 +314,7 @@ sections:
       - key: hormone_meds_last_use_hormone_5
         question: When did you last use the hormonal shot (shot every 3 months)?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW
@@ -345,7 +345,7 @@ sections:
       - key: hormone_meds_last_use_hormone_6
         question: When did you last use the hormonal vaginal ring?
         type: DATE
-        mode: MD
+        days: false
         triggers:
           - action:
               type: SHOW
