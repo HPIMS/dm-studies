@@ -11,7 +11,7 @@ name: EMA Placeholder
 sections:
   - key: pain
     title: ""
-    description: ""
+    description: "Please think about your pain during the last 10 minutes:"
     questions:
       - key: 10_min_pain
         question: Did you feel menstrual pain?
@@ -58,7 +58,7 @@ sections:
                 value: yes
   - key: mood
     title: ""
-    description: "Please think about the last 10 minutes:"
+    description: "Please think about your emotional state during the last 10 minutes:"
     questions:
       - key: 10_min_stress
         question: How would you rate your stress level?
