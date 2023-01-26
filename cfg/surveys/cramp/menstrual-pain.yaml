@@ -20,7 +20,7 @@ sections:
           - value: "0"
             text: 0
           - value: "1"
-            text: 2
+            text: 1
           - value: "2"
             text: 2
           - value: "3"
@@ -106,8 +106,8 @@ sections:
                 operator: =
                 value: often_required
   - key: worst_period
-    title: Please think about the worst menstrual period pain you have experienced.
-    description: ""
+    title: ""
+    description: "Please think about the worst menstrual period pain you have experienced."
     questions:
       - key: menses_pain_scale_worst
         question: Rate the pain intensity
@@ -134,8 +134,8 @@ sections:
               question: "Please specify:"
               type: TEXTAREA
   - key: last_period
-    title: Please think about the last menstrual period pain you have experienced.
-    description: ""
+    title: ""
+    description: "Please think about the last menstrual period pain you have experienced."
     questions:
       - key: menses_pain_scale_last
         question: Rate the pain intensity
