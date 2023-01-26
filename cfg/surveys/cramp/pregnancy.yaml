@@ -62,7 +62,7 @@ sections:
                 value: yes
       - key: preg_complication
         question: Have you ever had any complications during pregnancy?
-        type: NUMERIC
+        type: YESNO_CHOICE
         triggers:
           - action:
               type: SHOW
