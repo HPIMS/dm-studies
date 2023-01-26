@@ -1,25 +1,82 @@
-key: psst
+key: menstrual-health
 active: true
-scorable: true
-score:
-  fn: sum-score
-  args: {}
-metadata: 
-  author: ""
-  instrument: ""
-  version: ""
-  references: []
+scorable: false
 schedule:
   type: PERIOD
-  period: ONCE # TODO: NEED PERIOD!
+  period: ONCE
 timeRequirements: 
-  time: 1
+  time: 5
   timeUnits: minutes
-name: "TODO: NAME"
+name: Menstrual Health
 sections:
-  - key: "0"
+  - key: health
     title: ""
-    description: "TODO: NEED DESCRIPTION!"
+    description: ""
+    questions:
+      - key: age_menses
+        question: At what age did you have your first menstrual cycle?
+        type: AGE
+        modes:
+          - units: y
+            min: 8
+            max: 12
+      - key: cycle_average days
+        question: On average, how many days separate the first day of your menstrual cycle with the first day of the following menstrual cycle?
+        type: AGE
+        modes:
+          - units: d
+            min: 21
+            max: 35
+        required: true
+      - key: age_menses
+        question: On average, how many days do you bleed during your menstrual cycle?
+        type: AGE
+        modes:
+          - units: d
+            min: 0
+            max: 14
+        required: true
+      - key: menses_flow
+        question: How would you rate your usual menstrual flow?
+        type: SINGLE_CHOICE
+        options:
+          - value: scant
+            text: Scant amount
+          - value: light
+            text: Light amount
+          - value: moderate
+            text: Moderate amount
+          - value: heavy
+            text: Heavy amount
+      - key: spotting
+        question: Do you experience any bleeding or spotting between two menstrual cycles?
+        type: YESNO_CHOICE
+      - key: menses_flow
+        question: How often does it happen?
+        type: SINGLE_CHOICE
+        options:
+          - value: every
+            text: Almost every cycle
+          - value: most
+            text: Most of the cycles
+          - value: some
+            text: Some of the cycles
+          - value: rare
+            text: Very rarely
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: spotting
+                operator: =
+                value: yes
+      - key: menses_pain
+        question: Have you ever had painful menstrual cycles?
+        type: YESNO_CHOICE
+  - key: psst
+    title: ""
+    description: Do you experience some or any of the following premenstrual symptoms which start before your period and stop within a few days of bleeding?
     questions:
       - key: psst_1
         question: Anger/Irritability
@@ -190,7 +247,7 @@ sections:
           - value: severe
             text: Severe
       - key: psst_interlude
-        question: "Have your symptoms, as listed above, interfered with:"
+        question: Have your symptoms, as listed above, interfered with
         type: DISPLAY
       - key: psst_a
         question: Your work efficiency or productivity
@@ -252,3 +309,4 @@ sections:
             text: Moderate
           - value: severe
             text: Severe
+

@@ -1,0 +1,375 @@
+key: pregnancy
+active: true
+scorable: false
+schedule:
+  type: PERIOD
+  period: DAILY
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
+name: Sexual Activity and Pregnancy
+sections:
+  - key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: pregnancy
+        question: Have you ever been pregnant?
+        type: YESNO_CHOICE
+      - key: preg_live
+        question: How many live births have you had?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pregnancy
+                operator: =
+                value: yes
+      - key: preg_spont
+        question: How many miscarriages have you had?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pregnancy
+                operator: =
+                value: yes
+      - key: preg_legal
+        question: How many abortions have you had?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pregnancy
+                operator: =
+                value: yes
+      - key: preg_last
+        question: When did your last pregnancy end?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pregnancy
+                operator: =
+                value: yes
+      - key: preg_complication
+        question: Have you ever had any complications during pregnancy?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pregnancy
+                operator: =
+                value: yes
+      - key: preg_complication_select
+        question: Which complications have you had?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: complication_1
+            text: Gestational diabetes
+          - value: complication_2
+            text: Gestational hypertension
+          - value: complication_3
+            text: Preeclampsia or eclampsia
+          - value: complication_4
+            text: Heart problems
+          - value: complication_5
+            text: Post-partum hemorrage
+          - value: complication_6
+            text: Placental abruption
+          - value: complication_7
+            text: Intrauterine growth restriction
+          - value: complication_8
+            text: Perinatal depression
+          - value: complication_9
+            text: Severe infection
+          - value: complication_10
+            text: Seizure disorder
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: preg_complication_select_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: preg_complication
+                operator: =
+                value: yes
+      - key: sexual_active
+        question: Are you currently sexually active?
+        type: YESNO_CHOICE
+      - key: sexual_orientation
+        question: Which of the following best represents how you think of yourself?
+        type: SINGLE_CHOICE
+        options:
+          - value: asexual
+            text: Aasexual
+          - value: bisexual
+            text: Bisexual
+          - value: gay
+            text: Gay
+          - value: lesbian
+            text: lesbian
+          - value: heterosexual
+            text: Straight/heterosexual
+          - value: other
+            text: Another sexual orientation
+      - key: preg_seeking
+        question: Are you currently seeking a pregnancy?
+        type: YESNO_CHOICE
+      - key: preg_seeking_month
+        question: How many months have you been seeking the pregnancy?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: preg_seeking
+                operator: =
+                value: yes
+      - key: hormone_reason
+        question: Have you ever taken hormones for any of the following reasons?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: reason_1
+            text: To manage heavy menstrual bleeding
+          - value: reason_2
+            text: To manage acne
+          - value: reason_3
+            text: To manage menstrual pain
+          - value: reason_4
+            text: To manage irregular menstrual cycles
+          - value: reason_5
+            text: To increase likelihood of pregnancy
+          - value: reason_6
+            text: For cancer therapy
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: hormone_reason_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+          - value: never
+            text: I have never taken hormones
+      - key: hormone_meds
+        question: Have you ever taken any of the following hormones?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: hormone_1
+            text: Birth control pill
+          - value: hormone_2
+            text: Hormonal IUD (intrauterine device)
+          - value: hormone_3
+            text: Hormonal implant (medication rod inserted under the skin of your arm)
+          - value: hormone_4
+            text: Hormonal patch
+          - value: hormone_5
+            text: Hormonal shot (shot every 3 months)
+          - value: hormone_6
+            text: Hormonal vaginal ring
+          - value: none
+            text: None of the above
+      - key: hormone_meds_last_use_hormone_1
+        question: When did you last use the birth control pill?
+        type: DATE
+        mode: MD
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_1
+      - key: hormone_meds_total_use_hormone_1
+        question: Provide total duration of usage for the birth control pill across your life?
+        type: AGE
+        modes:
+          - units: y
+            min: 0
+            max: 999
+          - units: m
+            min: 0
+            max: 999
+        useUnitNames: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_1
+      - key: hormone_meds_last_use_hormone_2
+        question: When did you last use the hormonal IUD (intrauterine device)?
+        type: DATE
+        mode: MD
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_2
+      - key: hormone_meds_total_use_hormone_2
+        question: Provide total duration of usage for the hormonal IUD (intrauterine device) across your life?
+        type: AGE
+        modes:
+          - units: y
+            min: 0
+            max: 999
+          - units: m
+            min: 0
+            max: 999
+        useUnitNames: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_2
+      - key: hormone_meds_last_use_hormone_3
+        question: When did you last use the hormonal implant (medication rod inserted under the skin of your arm)?
+        type: DATE
+        mode: MD
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_3
+      - key: hormone_meds_total_use_hormone_3
+        question: Provide total duration of usage for the hormonal implant (medication rod inserted under the skin of your arm) across your life?
+        type: AGE
+        modes:
+          - units: y
+            min: 0
+            max: 999
+          - units: m
+            min: 0
+            max: 999
+        useUnitNames: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_3
+      - key: hormone_meds_last_use_hormone_4
+        question: When did you last use the hormonal patch?
+        type: DATE
+        mode: MD
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_4
+      - key: hormone_meds_total_use_hormone_4
+        question: Provide total duration of usage for the hormonal patch across your life?
+        type: AGE
+        modes:
+          - units: y
+            min: 0
+            max: 999
+          - units: m
+            min: 0
+            max: 999
+        useUnitNames: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_4
+      - key: hormone_meds_last_use_hormone_5
+        question: When did you last use the hormonal shot (shot every 3 months)?
+        type: DATE
+        mode: MD
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_5
+      - key: hormone_meds_total_use_hormone_5
+        question: Provide total duration of usage for the hormonal shot (shot every 3 months)?
+        type: AGE
+        modes:
+          - units: y
+            min: 0
+            max: 999
+          - units: m
+            min: 0
+            max: 999
+        useUnitNames: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_5
+      - key: hormone_meds_last_use_hormone_6
+        question: When did you last use the hormonal vaginal ring?
+        type: DATE
+        mode: MD
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_6
+      - key: hormone_meds_total_use_hormone_6
+        question: Provide total duration of usage for the hormonal vaginal ring?
+        type: AGE
+        modes:
+          - units: y
+            min: 0
+            max: 999
+          - units: m
+            min: 0
+            max: 999
+        useUnitNames: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: hormone_meds
+                operator: INCLUDES
+                value: hormone_6
