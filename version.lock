@@ -13,6 +13,9 @@ active:
       - d6f1382dbf5dd85e1a07ec769c5f85bc
       - 2
   multimedia:
+    cramp::intro:
+      - 8c2184eb1048ecdd60638d695390534b
+      - 1
     hpi-decode-bp::calibration-video:
       - 10cf91bed086e99dbfad0b0c15084592
       - 2
@@ -63,17 +66,17 @@ active:
       - a615343fac5faa3e1bf1b5b198c3b157
       - 6
     cramp:
-      - b4784eefb09daf521d860ad9ae934b49
-      - 24
+      - 3d9cbeac1511a5b4beb68f9070ead550
+      - 25
     digi-ibd-001:
       - ff3d5e056e949dccd63bcaaff4989d4a
       - 22
     ibd-forecast:
       - b5ffacab62be68f93d70a5a82eb231d6
-      - 23
+      - 24
     ra-forecast:
       - 0f9c80d4f11db1c21d84eccc14ec2cbe
-      - 7
+      - 8
   surveys:
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
@@ -82,8 +85,8 @@ active:
       - bc5e43b87b0ed4c4f97de7eb049c1561
       - 6
     cramp::daily-check-in:
-      - ec8e04eb83d1e711a5d687fe0d04cf3d
-      - 7
+      - 44ba456e301a4ceb4aca9d751115d7a3
+      - 8
     cramp::demographics:
       - 3d1eff6e2a88e57273d1186581055212
       - 7
@@ -91,14 +94,14 @@ active:
       - b553284a0acd55e868f4ecd2d4f3cbf6
       - 2
     cramp::general-health:
-      - 90c9d202fb7f38eddc15fd0c8c491765
-      - 2
+      - 515c6bf7f555dd6ee3d32c7f039c3947
+      - 3
     cramp::menstrual-health:
-      - 260ff1b3bb9c93a770aa253183cbe171
-      - 2
+      - b658366accc737e49efba39855c17874
+      - 3
     cramp::menstrual-pain:
-      - 837342cb4e288dea5ae6abc464f8489a
-      - 2
+      - a64ec9b6da69c8d002db9a3abab5df75
+      - 3
     cramp::mood:
       - c608e22c4a5ab09f8de7bd93ac23e945
       - 1
@@ -205,14 +208,14 @@ active:
       - 960f56237cbae5f100cdf4fb97cb4d8b
       - 1
     library::cd-risc-10:
-      - 3c45608b03052929ee972495885bb036
-      - 7
+      - 5fd4756c7d76f5854d5ee4f6a374dee1
+      - 8
     library::cd-risc-2:
       - f17054b477203575a8ea3c2bd02ad89a
       - 6
     library::dass-21:
-      - e6a0c9e69c2575b613708ada621225dc
-      - 2
+      - 0f8a2fd5cb24f40bac5165c40d388730
+      - 3
     library::euro-qol-eq-5d-5l:
       - 45f468e6ef2123bd9dda2527a053641f
       - 8
@@ -315,15 +318,18 @@ active:
     library::rapid3:
       - bf762b7b720bd431ae310c1040d3a1c9
       - 1
+    library::rs-14:
+      - 8f59801ca928905a812f4d52c1b6127c
+      - 1
     library::rsa:
-      - d41c73cdd3e0f4ec102f8879146bc9b0
-      - 3
+      - 8b357438ac3e84176510163b20f737fb
+      - 4
     library::sccai:
       - 31ff8440f26419e7bb4ed405d4e5ac1a
       - 5
     library::sei-hs:
-      - ef9f52beb07abf30f12c6a327186adff
-      - 4
+      - 0e7402c449574607c924423405958dc6
+      - 5
     library::sibdq:
       - c7d7cf6748d6c47f6c1c36ee1b1a29b5
       - 5
@@ -364,8 +370,8 @@ active:
       - a748b00d6c56500225d0a9d171279b92
       - 4
     warrior-shield::daily-check-in:
-      - c930a7be123813b45058f3cf54d7409f
-      - 4
+      - 961c0e388785c8a2b11609c9b230c349
+      - 5
     warrior-shield::demographics:
       - f6076247f884a58a81168f1af2443225
       - 4
