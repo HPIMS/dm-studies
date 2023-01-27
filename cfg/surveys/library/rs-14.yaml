@@ -13,7 +13,7 @@ schedule:
   type: PERIOD
   period: ONCE
 timeRequirements: 
-  time: 5
+  time: 2
   timeUnits: minutes
 name: Resilience
 sections:
@@ -39,8 +39,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -64,8 +64,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -89,8 +89,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -114,8 +114,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -139,8 +139,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -164,8 +164,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -189,8 +189,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -214,8 +214,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -239,8 +239,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -264,8 +264,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -289,8 +289,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -314,8 +314,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -339,8 +339,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
@@ -364,8 +364,8 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4: Neutral"
-            text: "4"
+          - value: "4"
+            text: "4: Neutral"
             score: 4
           - value: "5"
             text: "5"
