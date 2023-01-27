@@ -1,0 +1,18 @@
+key: intro
+active: true
+scorable: false
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements: 
+  time: 5
+  timeUnits: seconds
+name: Into
+sections:
+  - key: "0"
+    title: "INTRO"
+    description: "This is a placeholder for the intro video. Answer yes or no, it doesn't matter. Completing this task will trigger the next phase in the study."
+    questions:
+      - key: anything
+        question: Maybe?
+        type: YESNO_CHOICE
