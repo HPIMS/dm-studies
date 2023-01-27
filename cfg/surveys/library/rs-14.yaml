@@ -1,0 +1,378 @@
+key: rs-14
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: ['https://www.hsph.harvard.edu/health-happiness/resilience-scale-for-adults-rsa/']
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements: 
+  time: 5
+  timeUnits: minutes
+name: Resilience
+sections:
+  - key: "0"
+    title: ""
+    description: |-
+      Please read each statement and select the number that best indicates your feelings about the statement. To indicate your answer tap one of the options on the scale under each item, from "Strongly Disagree" to "Strongly Agree".
+      
+      With:
+      1 being you strongly disagree
+      7 being you strongly agree
+    questions:
+      - key: rs_1
+        question: I usually manage one way or another.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_2
+        question: I feel proud that I have accomplished things in my life.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_3
+        question: I usually take things in stride.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_4
+        question: I am friends with myself.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_5
+        question: I feel that I can handle many things at a time.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_6
+        question: I am determined.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_7
+        question: I can get through difficult times because I've experienced difficulty before.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_8
+        question: I have self-discipline.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_9
+        question: I keep interested in things.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_10
+        question: I can usually find something to laugh about.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_11
+        question: My belief in myself gets me through hard times.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_12
+        question: In an emergency, I'm someone people can generally rely on.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_13
+        question: My life has meaning.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7
+      - key: rs_14
+        question: When I'm in a difficult situation, I can usually find my way out of it.
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: "1: Strongly Disagree"
+            score: 1
+          - value: "2"
+            text: "2"
+            score: 2
+          - value: "3"
+            text: "3"
+            score: 3
+          - value: "4: Neutral"
+            text: "4"
+            score: 4
+          - value: "5"
+            text: "5"
+            score: 5
+          - value: "6"
+            text: "6"
+            score: 6
+          - value: "7"
+            text: "7: Strongly Agree"
+            score: 7

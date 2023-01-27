@@ -58,14 +58,6 @@ sections:
             text: Sometimes
           - value: daily
             text: Every day
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: health
-                question: smoke_100
-                operator: =
-                value: yes
       - key: cigarette_count
         question: On average, how many cigarettes do you smoke per day?
         type: NUMERIC

@@ -17,21 +17,16 @@ timeRequirements:
   timeUnits: minutes
 name: Resilience
 sections:
-  - key: "0"
-    title: ""
-    description: |-
-      Please respond with how much you agree with the following statements. To indicate your answer tap one of the options on the scale under each item, from "Strongly Disagree" to "Strongly Agree".
-      
-      With:
-      1 being you strongly disagree
-      7 being you strongly agree
+  - key: perception_of_self
+    title: Personal strength/Perception of self
+    description: Please complete the following survey by selecting a number on the scale
     questions:
       - key: rsa_1
-        question: I believe in my own abilities
+        question: When I'm in a difficult situation, I can usually find my way out of it.
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I always find a solution"
             score: 1
           - value: "2"
             text: "2"
@@ -39,7 +34,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -49,14 +44,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I often feel bewildered"
             score: 7
       - key: rsa_2
-        question: Believeing in myself healps me to overcome difficult times
+        question: My personal problems
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Are unsolvable"
             score: 1
           - value: "2"
             text: "2"
@@ -64,7 +59,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -74,14 +69,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I know how to solve"
             score: 7
       - key: rsa_3
-        question: I know that I succeed if I carry on
+        question: My abilities
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I strongly believe in"
             score: 1
           - value: "2"
             text: "2"
@@ -89,7 +84,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -99,14 +94,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I am uncertain about"
             score: 7
       - key: rsa_4
-        question: I know how to reach my goals
+        question: My judgements and decisions
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I often doubt"
             score: 1
           - value: "2"
             text: "2"
@@ -114,7 +109,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -124,14 +119,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I trust completely"
             score: 7
       - key: rsa_5
-        question: No matter what happens I always find a solution
+        question: In difficult periods I have a tendency to
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: View everything gloomy"
             score: 1
           - value: "2"
             text: "2"
@@ -139,7 +134,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -149,14 +144,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Find something good that help me thrive"
             score: 7
       - key: rsa_6
-        question: I am comfortable together with other persons
+        question: Events in my life that I cannot influence
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I manage to come to terms with"
             score: 1
           - value: "2"
             text: "2"
@@ -164,7 +159,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -174,14 +169,18 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Are a constant source of worry/concern"
             score: 7
+  - key: perception_of_future
+    title: Personal strength/Perception of future
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
       - key: rsa_7
-        question: My future feels promising
+        question: My plans for the future are
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Difficult to accomplish"
             score: 1
           - value: "2"
             text: "2"
@@ -189,7 +188,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -199,14 +198,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Possible to accomplish"
             score: 7
       - key: rsa_8
-        question: I know that I can solve my personal problems
+        question: My future goals
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I know how to accomplish"
             score: 1
           - value: "2"
             text: "2"
@@ -214,7 +213,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -224,14 +223,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I am unsure how to accomplish"
             score: 7
       - key: rsa_9
-        question: I am pleased with myself
+        question: I feel that my future looks
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Very promising"
             score: 1
           - value: "2"
             text: "2"
@@ -239,7 +238,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -249,14 +248,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Uncertain"
             score: 7
       - key: rsa_10
-        question: I have realistic plans for the future
+        question: My goals for the future are
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Unclear"
             score: 1
           - value: "2"
             text: "2"
@@ -264,7 +263,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -274,14 +273,18 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Well thought through"
             score: 7
+  - key: structured_style
+    title: Structured style
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
       - key: rsa_11
-        question: I completely trust my judgements and decisions
+        question: I am at my best when I
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Have a clear goal to strive for"
             score: 1
           - value: "2"
             text: "2"
@@ -289,7 +292,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -299,14 +302,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Can take one day at a time"
             score: 7
       - key: rsa_12
-        question: At hard times I know that better times will come
+        question: When I start on new things/projects
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I rarely plan ahead, just get on with it"
             score: 1
           - value: "2"
             text: "2"
@@ -314,7 +317,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -324,14 +327,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I prefer to have a thorough plan"
             score: 7
       - key: rsa_13
-        question: I am good at getting in touch with new people
+        question: I am good at
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Organizing my time"
             score: 1
           - value: "2"
             text: "2"
@@ -339,7 +342,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -349,14 +352,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Wasting my time"
             score: 7
       - key: rsa_14
-        question: I easily establish new friendships
+        question: Rules and regular routines
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Are absent in my everyday life"
             score: 1
           - value: "2"
             text: "2"
@@ -364,7 +367,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -374,14 +377,18 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Simplify my everyday life"
             score: 7
+  - key: social_competence
+    title: Social competence
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
       - key: rsa_15
-        question: It is easy for me to think of good conversational topics
+        question: I enjoy being
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Together with other people"
             score: 1
           - value: "2"
             text: "2"
@@ -389,7 +396,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -399,14 +406,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: By myself"
             score: 7
       - key: rsa_16
-        question: I easily adjust to new social milieus
+        question: To be flexible in social settings
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Is not important to me"
             score: 1
           - value: "2"
             text: "2"
@@ -414,7 +421,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -424,14 +431,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Is really important to me"
             score: 7
       - key: rsa_17
-        question: It is easy for me to make other people laugh
+        question: New friendships are something
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I make easily"
             score: 1
           - value: "2"
             text: "2"
@@ -439,7 +446,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -449,14 +456,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I have difficulty making"
             score: 7
       - key: rsa_18
-        question: I enjoy being with other people
+        question: Meeting new people is
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Difficult for me"
             score: 1
           - value: "2"
             text: "2"
@@ -464,7 +471,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -474,14 +481,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Something I am good at"
             score: 7
       - key: rsa_19
-        question: I know how to start a conversation
+        question: When I am with others
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I easily laugh"
             score: 1
           - value: "2"
             text: "2"
@@ -489,7 +496,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -499,14 +506,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: I seldom laugh"
             score: 7
       - key: rsa_20
-        question: I easily laugh
+        question: For me, thinking of good topics for conversation is
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Difficult"
             score: 1
           - value: "2"
             text: "2"
@@ -514,7 +521,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -524,14 +531,18 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Easy"
             score: 7
+  - key: family_cohesion
+    title: Family cohesion
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
       - key: rsa_21
-        question: It is important for me to be flexible in social circumstances
+        question: My family’s understanding of what is important in life is
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Quite different than mine"
             score: 1
           - value: "2"
             text: "2"
@@ -539,7 +550,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -549,14 +560,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Very similar to mine"
             score: 7
       - key: rsa_22
-        question: I experience good relations with both women and men
+        question: I feel
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Very happy with my family"
             score: 1
           - value: "2"
             text: "2"
@@ -564,7 +575,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -574,14 +585,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Very unhappy with my family"
             score: 7
       - key: rsa_23
-        question: There are strong bonds in my family
+        question: My family is characterized by
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Disconnection"
             score: 1
           - value: "2"
             text: "2"
@@ -589,7 +600,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -599,14 +610,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Healthy coherence"
             score: 7
       - key: rsa_24
-        question: I enjoy being with my family
+        question: In difficult periods my family
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Keeps a positive outlook on the future"
             score: 1
           - value: "2"
             text: "2"
@@ -614,7 +625,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -624,14 +635,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Views the future as gloomy"
             score: 7
       - key: rsa_25
-        question: In our family we are loyal towards each other
+        question: Facing other people, our family acts
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Unsupportive of one another"
             score: 1
           - value: "2"
             text: "2"
@@ -639,7 +650,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -649,14 +660,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Loyal towards one another"
             score: 7
       - key: rsa_26
-        question: In my family we enjoy finding common activities
+        question: In my family we like to
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Do things on our own"
             score: 1
           - value: "2"
             text: "2"
@@ -664,7 +675,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -674,14 +685,18 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Do things together"
             score: 7
+  - key: social_resources
+    title: Social resources
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
       - key: rsa_27
-        question: Even at difficult times my family keeps a positive outlook on the future
+        question: I can discuss personal issues with
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: No one"
             score: 1
           - value: "2"
             text: "2"
@@ -689,7 +704,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -699,14 +714,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
-            score: 7
+            text: "7: Friends/family-members"
+            score: 7 
       - key: rsa_28
-        question: In my family we have a common understanding of what’s important in life
+        question: Those who are good at encouraging me are
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Some close friends/family members"
             score: 1
           - value: "2"
             text: "2"
@@ -714,7 +729,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -724,14 +739,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Nowhere"
             score: 7
       - key: rsa_29
-        question: There are few conflicts in my family
+        question: The bonds among my friends is
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Weak"
             score: 1
           - value: "2"
             text: "2"
@@ -739,7 +754,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -749,14 +764,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Strong"
             score: 7
       - key: rsa_30
-        question: I have some close friends/family members who really care about me
+        question: When a family member experiences a crisis/emergency
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: I am informed right away"
             score: 1
           - value: "2"
             text: "2"
@@ -764,7 +779,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -774,14 +789,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: It takes quite a while before I am told"
             score: 7
       - key: rsa_31
-        question: I have some friends/family members who back me up
+        question: I get support from
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Friends/family members"
             score: 1
           - value: "2"
             text: "2"
@@ -789,7 +804,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -799,14 +814,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: No one"
             score: 7
       - key: rsa_32
-        question: I always have someone who can help me when needed
+        question: When needed, I have
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: No one who can help me"
             score: 1
           - value: "2"
             text: "2"
@@ -814,7 +829,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -824,14 +839,14 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Always someone who can help me"
             score: 7
       - key: rsa_33
-        question: I have some close friends/family members who are good at encouraging me
+        question: My close friends/family members
         type: SINGLE_CHOICE
         options:
           - value: "1"
-            text: "1"
+            text: "1: Appreciate my qualities"
             score: 1
           - value: "2"
             text: "2"
@@ -839,7 +854,7 @@ sections:
           - value: "3"
             text: "3"
             score: 3
-          - value: "4"
+          - value: "4: Neutral"
             text: "4"
             score: 4
           - value: "5"
@@ -849,255 +864,6 @@ sections:
             text: "6"
             score: 6
           - value: "7"
-            text: "7"
+            text: "7: Dislike my qualities"
             score: 7
-      - key: rsa_34
-        question: I am quickly notified if some family members get into a crisis
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_35
-        question: I can discuss personal matters with friends/family members
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_36
-        question: I have some close friends/family members who value my abilities
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_37
-        question: I regularly keep in touch with my family
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_38
-        question: There are strong bonds between my friends
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_39
-        question: Rules and regular routines make my daily life easier
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_40
-        question: I keep up my daily routines even at difficult times
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_41
-        question: I prefer to plan my actions
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_42
-        question: I work best when I reach for a goal
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
-      - key: rsa_43
-        question: I am good at organizing my time
-        type: SINGLE_CHOICE
-        options:
-          - value: "1"
-            text: "1"
-            score: 1
-          - value: "2"
-            text: "2"
-            score: 2
-          - value: "3"
-            text: "3"
-            score: 3
-          - value: "4"
-            text: "4"
-            score: 4
-          - value: "5"
-            text: "5"
-            score: 5
-          - value: "6"
-            text: "6"
-            score: 6
-          - value: "7"
-            text: "7"
-            score: 7
+  
