@@ -468,12 +468,12 @@ surveys:
 
   - key: final-check-in
     rank: 230
-    triggers:
-      - action: SHOW
-        condition:
-          - type: CALCULATION
-            fn: cramp::cycle-complete
-            args: {}
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
 
   # - key: dona
   #   rank: 240
