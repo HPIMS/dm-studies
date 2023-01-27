@@ -35,7 +35,20 @@ surveys:
   - demographics
   - general-health
   - menstrual-health
-  - menstrual-pain
+
+  - key: menstrual-pain
+    triggers:
+    - action: SHOW
+      condition:
+        - type: CALCULATION
+          fn: questionnaire-response-value
+          args:
+            questionnaire: cramp::menstrual-health
+            section: health
+            question: menses_pain
+            operator: =
+            value: yes
+
   - pregnancy
   - daily-check-in
   - ema
