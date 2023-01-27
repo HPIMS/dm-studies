@@ -163,198 +163,190 @@ sections:
               type: TEXTAREA
   - key: pcs
     title: ""
-    description: |-
-      We are interested in the types of thoughts and feeling that you have when you have menstrual pain. Listed below are thirteen statements describing different thoughts and feelings that may be associated with pain. Using the scale, please indicate the degree to which you have these thoughts and feelings when you are experiencing menstrual pain.
-      
-      With:
-      0 being not at all
-      1 to a slight degree
-      2 to a moderate degree
-      3 to a great degree
-      4 all the time
+    description: We are interested in the types of thoughts and feeling that you have when you have menstrual pain. Listed below are thirteen statements describing different thoughts and feelings that may be associated with pain. Using the scale, please indicate the degree to which you have these thoughts and feelings when you are experiencing menstrual pain.
     questions:
       - key: pcs_1
         question: I worry all the time about whether the pain will end
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_2
         question: I feel I can't go on
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_3
         question: It's terrible and I think it's never going to get any better
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_4
         question: It's awful and I feel that it overwhelms me
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_5
         question: I feel I can't stand it anymore
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_6
         question: I become afraid that the pain will get worse
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_7
         question: I keep thinking of other painful events
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_8
         question: I anxiously want the pain to go away
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_9
         question: I can't seem to keep it out of my mind
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_10
         question: I keep thinking about how much it hurts
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_11
         question: I keep thinking about how badly I want the pain to stop
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_12
         question: There's nothing I can do to reduce the intensity of the pain
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
       - key: pcs_13
         question: I wonder whether something serious may happen
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "Not at all"
           - value: "1"
-            text: 1
+            text: "To a slight degree"
           - value: "2"
-            text: 2
+            text: "To a moderate degree"
           - value: "3"
-            text: 3
+            text: "To a great degree"
           - value: "4"
-            text: 4
+            text: "All the time"
   - key: pseq
     title: ""
     description: |-
@@ -369,7 +361,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -381,13 +373,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_2
         question: I can do most of the household chores (e.g. tidying-up, washing dishes, etc.), despite the pain.
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -399,13 +391,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_3
         question: I can socialise with my friends or family members as often as I used to do, despite the pain.
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -417,13 +409,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_4
         question: I can cope with my pain in most situations. 
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -435,13 +427,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_5
         question: I can do some form of work, despite the pain ('work' includes housework, paid and unpaid work).
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -453,13 +445,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_6
         question: I can still do many of the things I enjoy doing, such as hobbies or leisure activity, despite pain.
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -471,13 +463,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_7
         question: I can cope with my pain without medication.
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -489,13 +481,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_8
         question: I can still accomplish most of my goals in life, despite the pain.
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -507,13 +499,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_9
         question: I can live a normal lifestyle, despite the pain.
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -525,13 +517,13 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
       - key: pseq_10
         question: I can gradually become more active, despite the pain.
         type: SINGLE_CHOICE
         options:
           - value: "0"
-            text: 0
+            text: "0: Not at all confident"
           - value: "1"
             text: 1
           - value: "2"
@@ -543,7 +535,7 @@ sections:
           - value: "5"
             text: 5
           - value: "6"
-            text: 6
+            text: "6: Completely confident"
   - key: symptoms
     title: ""
     description: ""
