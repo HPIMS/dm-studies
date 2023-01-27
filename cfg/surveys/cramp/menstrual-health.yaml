@@ -18,15 +18,15 @@ sections:
         type: AGE
         modes:
           - units: y
-            min: 8
-            max: 12
+            min: 0
+            max: 99
       - key: cycle_average days
         question: On average, how many days separate the first day of your menstrual cycle with the first day of the following menstrual cycle?
         type: AGE
         modes:
           - units: d
             min: 21
-            max: 35
+            max: 40
         required: true
       - key: period_days
         question: On average, how many days do you bleed during your menstrual cycle?
@@ -34,7 +34,7 @@ sections:
         modes:
           - units: d
             min: 0
-            max: 14
+            max: 40
         required: true
       - key: menses_flow
         question: How would you rate your usual menstrual flow?
@@ -51,7 +51,7 @@ sections:
       - key: spotting
         question: Do you experience any bleeding or spotting between two menstrual cycles?
         type: YESNO_CHOICE
-      - key: menses_flow
+      - key: spotting_freq
         question: How often does it happen?
         type: SINGLE_CHOICE
         options:

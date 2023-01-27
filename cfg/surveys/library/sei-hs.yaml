@@ -22,17 +22,17 @@ sections:
         question: How often do you have contact with neighbours or people who live in your street?
         type: SINGLE_CHOICE
         options:
-          - value: at_least_once_a_week
+          - value: once_a_week
             text: At least once a week
-          - value: 3_times_a_month
+          - value: 3_monthly
             text: 3 times a month
-          - value: 2_times_a_month
+          - value: 2_monthly
             text: 2 times a month
-          - value: once_a_month
+          - value: 1_monthly
             text: Once a month
-          - value: less_than_once_a_month
+          - value: less_than_monthly
             text: Less than once a month
-          - value: seldom_or_never
+          - value: never
             text: Seldom or never
       - key: sei-hs_2
         question: There is always someone I can talk to about my day-to-day problems
@@ -40,17 +40,17 @@ sections:
         options:
           - value: yes
             text: Yes
-          - value: more_or_less
+          - value: sometimes
             text: More or less
           - value: no
             text: No
       - key: sei-hs_3
-        question: I experience a general sense of emptiness 
+        question: I experience a general sense of emptiness
         type: SINGLE_CHOICE
         options:
           - value: yes
             text: Yes
-          - value: more_or_less
+          - value: sometimes
             text: More or less
           - value: no
             text: No
@@ -60,27 +60,27 @@ sections:
         options:
           - value: yes
             text: Yes
-          - value: more_or_less
+          - value: sometimes
             text: More or less
           - value: no
             text: No
       - key: sei-hs_5
-        question: I miss the pleasure of the company of others 
+        question: I miss the pleasure of the company of others
         type: SINGLE_CHOICE
         options:
           - value: yes
             text: Yes
-          - value: more_or_less
+          - value: sometimes
             text: More or less
           - value: no
             text: No
       - key: sei-hs_6
-        question: I often feel rejected 
+        question: I often feel rejected  
         type: SINGLE_CHOICE
         options:
           - value: yes
             text: Yes
-          - value: more_or_less
+          - value: sometimes
             text: More or less
           - value: no
             text: No
@@ -92,7 +92,7 @@ sections:
             text: Yes, great difficulty
           - value: some_difficulty
             text: Yes, some difficulty
-          - value: must_watch_spending
+          - value: watch_spending
             text: No, but I have to watch my spending
           - value: no_difficulty
             text: No difficulty
@@ -115,7 +115,7 @@ sections:
             text: Strongly agree
           - value: agree
             text: Agree
-          - value: neither_agree_nor_disagree
+          - value: neither
             text: Neither agree nor disagree
           - value: disagree
             text: Disagree
@@ -155,7 +155,7 @@ sections:
             text: Strongly agree
           - value: agree
             text: Agree
-          - value: neither_agree_nor_disagree
+          - value: neither
             text: Neither agree nor disagree
           - value: disagree
             text: Disagree
