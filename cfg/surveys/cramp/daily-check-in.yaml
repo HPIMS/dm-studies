@@ -275,6 +275,14 @@ sections:
             text: Somewhat effective
           - value: very_effective
             text: Very effective
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: medications
+                question: pain_meds_today
+                operator: =
+                value: yes
   - key: mood
     title: Today's Mood
     description: ""
