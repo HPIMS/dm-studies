@@ -521,8 +521,7 @@ sections:
                 value: yes
       - key: cancer_date
         question: When were you first diagnosed with cancer?
-        type: DATE
-        days: false
+        type: MONTH_YEAR
         triggers:
           - action:
               type: SHOW
@@ -533,8 +532,7 @@ sections:
                 value: yes
       - key: cancer_treat
         question: When did you last receive treatment for your cancer?
-        type: DATE
-        days: false
+        type: MONTH_YEAR
         triggers:
           - action:
               type: SHOW
