@@ -128,47 +128,13 @@ surveys:
     #         operator: ">"
     #         score: 0
 
-  - key: strain
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 60
-    # schedule:
-    #   type: PERIOD
-    #   period: ONCE
-    #   delay: 1
-    #   delayUnits: DAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: COMPLETED
-    #           resource: cramp::demographics
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::general-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::menstrual-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::pregnancy
-    #           operator: ">"
-    #           score: 0
-
   - key: rsa
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 70
+    rank: 60
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -202,7 +168,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 80
+    rank: 70
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -236,7 +202,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 90
+    rank: 80
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -270,7 +236,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 100
+    rank: 90
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -304,38 +270,11 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 110
+    rank: 100
     # schedule:
     #   type: PERIOD
     #   period: ONCE
     #   delay: 4
-    #   delayUnits: DAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: COMPLETED
-    #           resource: cramp::demographics
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::general-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::menstrual-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::pregnancy
-    #           operator: ">"
-    #           score: 0
-
-    # schedule:
-    #   type: PERIOD
-    #   period: ONCE
-    #   delay: 5
     #   delayUnits: DAYS
     # triggers:
     #   - action: SHOW
@@ -365,7 +304,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 120
+    rank: 110
   #   triggers:
   #   - action: SHOW
   #     condition:
@@ -380,7 +319,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 130
+    rank: 120
   #   triggers:
   #   - action: SHOW
   #     condition:
@@ -395,7 +334,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 140
+    rank: 130
   #   triggers:
   #   - action: SHOW
   #     condition:
@@ -405,7 +344,7 @@ surveys:
   #         args: {}
 
   # - key: dst
-  #   rank: 160
+  #   rank: 140
   #   schedule:
   #     type: PERIOD
   #     period: ONCE
@@ -439,7 +378,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 160
+    rank: 150
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -459,7 +398,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 170
+    rank: 160
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -474,7 +413,7 @@ surveys:
       #       args: {}
 
   # - key: pss-10-post
-  #   rank: 180
+  #   rank: 170
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -493,7 +432,7 @@ surveys:
     #           value: yes
 
   # - key: dass-21-post
-  #   rank: 190
+  #   rank: 180
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -512,7 +451,7 @@ surveys:
     #           value: yes
 
   # - key: sss-8-post
-  #   rank: 200
+  #   rank: 190
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -531,7 +470,7 @@ surveys:
     #           value: yes
 
   - key: promis-pain-interference-6b-v1.0
-    rank: 210
+    rank: 200
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -555,7 +494,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 220
+    rank: 210
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -564,7 +503,7 @@ surveys:
     #         args: {}
 
   # - key: dona
-  #   rank: 240
+  #   rank: 220
   #   triggers:
   #     - action: SHOW
   #       condition:
