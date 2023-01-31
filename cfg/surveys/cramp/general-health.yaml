@@ -29,7 +29,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: diagnosis
+              - section: general
                 question: medication_current
                 operator: =
                 value: yes
