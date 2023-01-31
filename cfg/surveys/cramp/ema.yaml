@@ -40,10 +40,6 @@ sections:
             text: Moderate stress
           - value: severe
             text: Severe stress
-      - key: stress_level
-        question: "Rate your current stress level:"
-        type: SINGLE_CHOICE
-        options:
       - key: mood_calm
         question: "You currently feel"
         type: SINGLE_CHOICE
