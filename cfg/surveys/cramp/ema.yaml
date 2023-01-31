@@ -4,116 +4,67 @@ scorable: false
 schedule:
   type: PERIOD
   period: DAILY
+  timeOfDay: [['0600', '1159'], ['1200', '1759'], ['1800', '2359']]
 timeRequirements: 
   time: 2
   timeUnits: minutes
-name: EMA Placeholder
+name: Pain, Stress, and Mood
 sections:
   - key: pain
     title: ""
-    description: "Please think about your pain during the last 10 minutes:"
+    description: "Please think about the last 10 minutes:"
     questions:
-      - key: 10_min_pain
-        question: Did you feel menstrual pain?
-        type: YESNO_CHOICE
-      - key: 10_min_pain_intensity
-        question: How would you rate the intensity of your pain?
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain
-                question: 10_min_pain
-                operator: =
-                value: yes
-      - key: 10_min_pain_location
-        question: Where did you feel pain?
-        descritpion: Select all that apply
-        type: MULTIPLE_CHOICE
-        options:
-          - value: lower_belly
-            text: Lower belly
-          - value: lower_back
-            text: Lower back
-          - value: upper_thigh
-            text: Upper thighs
-          - value: other
-            text: Other
-            inlineQuestion:
-              key: 10_min_pain_location_other_description
-              question: "Please specify:"
-              type: TEXTAREA
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain
-                question: 10_min_pain
-                operator: =
-                value: yes
-  - key: mood
-    title: ""
-    description: "Please think about your emotional state during the last 10 minutes:"
-    questions:
-      - key: 10_min_stress
-        question: How would you rate your stress level?
-        description: 0 means no stress, 5 means worst stress imaginable
-        type: SLIDER
-        min: 0
-        max: 5
-        step: 1
-      - key: 10_min_mood_happy
-        question: How would you rate your mood (happiness)?
-        description: 0 means unhappy, 5 means happy
-        type: SLIDER
-        min: 0
-        max: 5
-        step: 1
-      - key: 10_min_mood_calm
-        question: How would you rate your mood (calmness)?
-        description: 0 means calm, 5 means excited
-        type: SLIDER
-        min: 0
-        max: 5
-        step: 1
-  - key: meds
-    title: ""
-    description: ""
-    questions:
-      - key: 10_min_med
-        question: Have you taken any pain medications in the last 6 hours?
-        type: YESNO_CHOICE
-      - key: 10 min_med_list
-        question: Which pain medication/s did you use? 
-        type: TEXTAREA
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: meds
-                question: 10_min_med
-                operator: =
-                value: yes
-      - key: 10_min_med_effect
-        question: How effective were the pain medications?
+      - key: pain_intensity
+        question: "Rate your current pain intensity:"
         type: SINGLE_CHOICE
         options:
-          - value: not_effective
-            text: Not effective
-          - value: somewhat_effective
-            text: Somewhat effective
-          - value: very_effective
-            text: Very effective
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: meds
-                question: 10_min_med
-                operator: =
-                value: yes
+          - value: none
+            text: No pain
+          - value: mild
+            text: Mild menstrual pain
+          - value: moderate
+            text: Moderate menstrual pain
+          - value: severe
+            text: Severe menstrual pain
+          - value: other
+            text: Other non-menstrual pain
+      - key: stress_level
+        question: "Rate your current stress level:"
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: No stress
+          - value: mild
+            text: Mild stress
+          - value: moderate
+            text: Moderate stress
+          - value: severe
+            text: Severe stress
+      - key: stress_level
+        question: "Rate your current stress level:"
+        type: SINGLE_CHOICE
+        options:
+      - key: mood_calm
+        question: "You currently feel"
+        type: SINGLE_CHOICE
+        options:
+          - value: calm
+            text: Calm
+          - value: mostly_calm
+            text: More calm then excited
+          - value: mostly_excited
+            text: More excited then calm
+          - value: excited
+            text: Excited
+      - key: mood_happy
+        question: "You currently feel"
+        type: SINGLE_CHOICE
+        options:
+          - value: calm
+            text: Calm
+          - value: mostly_calm
+            text: More calm then excited
+          - value: mostly_excited
+            text: More excited then calm
+          - value: excited
+            text: Excited
