@@ -9,7 +9,7 @@ timeRequirements:
   timeUnits: minutes
 name: General Health
 sections:
-  - key: health
+  - key: bmi
     title: ""
     description: ""
     questions:
@@ -19,6 +19,10 @@ sections:
       - key: weight
         question: What is your weight?
         type: WEIGHT
+  - key: substance
+    title: ""
+    description: ""
+    questions:
       - key: drink_freq
         question: How often do you have a drink containing alcohol?
         type: SINGLE_CHOICE
@@ -41,7 +45,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: substance
                 question: drink_freq
                 operator: "<>"
                 value: never
@@ -66,13 +70,17 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: substance
                 question: smoking
                 operator: "<>"
                 value: no
       - key: coffee_count
         question: On average, how many cups of coffee do you drink per day?
         type: NUMERIC
+  - key: pain
+    title: ""
+    description: ""
+    questions:
       - key: pain_other
         question: Aside from menstruation-related pain, do you experience pain on a regular basis?
         type: YESNO_CHOICE
@@ -83,7 +91,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: pain
                 question: pain_other
                 operator: =
                 value: yes
@@ -94,7 +102,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: pain
                 question: pain_diagnosis
                 operator: =
                 value: yes
@@ -129,7 +137,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: pain
                 question: pain_other
                 operator: =
                 value: yes
@@ -147,10 +155,14 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: pain
                 question: pain_other
                 operator: =
                 value: yes
+  - key: diagnosis
+    title: ""
+    description: ""
+    questions:
       - key: diagnosis_chronic
         question: Have you been diagnosed by a doctor of other healthcare provider with a chronic condition (i.e. a condition that will last for a long period of time and you are currently having or taking medications for), excluding pelvic and gynecological conditions?
         type: YESNO_CHOICE
@@ -189,7 +201,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -208,7 +220,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -232,7 +244,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_endocrinological
                 operator: INCLUDES
                 value: diagnosis_2
@@ -258,7 +270,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_endocrinological
                 operator: INCLUDES
                 value: diagnosis_3
@@ -285,7 +297,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -304,7 +316,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -319,7 +331,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -340,7 +352,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -361,7 +373,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -384,7 +396,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -413,7 +425,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -424,7 +436,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: diagnosis_chronic
                 operator: =
                 value: yes
@@ -473,7 +485,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: medication_current
                 operator: =
                 value: yes
@@ -515,7 +527,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: cancer
                 operator: =
                 value: yes
@@ -526,7 +538,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: cancer
                 operator: =
                 value: yes
@@ -537,7 +549,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: cancer
                 operator: =
                 value: yes
@@ -548,7 +560,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health
+              - section: diagnosis
                 question: cancer
                 operator: =
                 value: yes
