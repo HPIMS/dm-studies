@@ -9,7 +9,7 @@ timeRequirements:
   timeUnits: minutes
 name: General Health
 sections:
-  - key: bmi
+  - key: general
     title: ""
     description: ""
     questions:
@@ -19,6 +19,20 @@ sections:
       - key: weight
         question: What is your weight?
         type: WEIGHT
+      - key: medication_current
+        question: Do you currently take medications?
+        type: YESNO_CHOICE
+      - key: medication_text
+        question: Which medications are you currently taking?
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: medication_current
+                operator: =
+                value: yes
   - key: substance
     title: ""
     description: ""
@@ -475,20 +489,6 @@ sections:
             text: "Removal of an ovary"
           - value: surgery_15
             text: "Removal or ligation of fallopian tubes"
-      - key: medication_current
-        question: Do you currently take medications?
-        type: YESNO_CHOICE
-      - key: medication_text
-        question: Which medications are you currently taking?
-        type: TEXTAREA
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: diagnosis
-                question: medication_current
-                operator: =
-                value: yes
       - key: cancer
         question: Have you ever been diagnosed with cancer?
         type: YESNO_CHOICE
