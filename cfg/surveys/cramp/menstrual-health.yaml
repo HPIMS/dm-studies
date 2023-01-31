@@ -36,6 +36,10 @@ sections:
             min: 0
             max: 40
         required: true
+      - key: last_period
+        question: When was the start of your last period?
+        type: DATE
+        required: true
       - key: menses_flow
         question: How would you rate your usual menstrual flow?
         type: SINGLE_CHOICE
@@ -72,7 +76,7 @@ sections:
                 operator: =
                 value: yes
       - key: menses_pain
-        question: Have you ever had painful menstrual cycles?
+        question: Have you ever felt pain during your menstruation?
         type: YESNO_CHOICE
   - key: psst
     title: ""

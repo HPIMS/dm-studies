@@ -9,50 +9,12 @@ timeRequirements:
   timeUnits: minutes
 name: Menstrual Pain
 sections:
-  - key: pain
+  - key: pain-1
     title: ""
     description: ""
     questions:
-      - key: menses_pain_freq
-        question: In how many of the last 10 menstrual cycles did you experience pain?
-        type: SINGLE_CHOICE
-        options:
-          - value: "0"
-            text: 0
-          - value: "1"
-            text: 1
-          - value: "2"
-            text: 2
-          - value: "3"
-            text: 3
-          - value: "4"
-            text: 4
-          - value: "5"
-            text: 5
-          - value: "6"
-            text: 6
-          - value: "7"
-            text: 7
-          - value: "8"
-            text: 8
-          - value: "9"
-            text: 9
-          - value: "10"
-            text: 10
-      - key: menses_pain_intensity
-        question: How variable was the pain intensity between different cycles?
-        type: SINGLE_CHOICE
-        options:
-          - value: highly_variable
-            text: Highly variable
-          - value: somewhat_variable
-            text: Somewhat variable
-          - value: somewhat_constant
-            text: Somewhat constant
-          - value: mostly_constant
-            text: Mostly constant
       - key: menses_pain_overall
-        question: Overall, how would you rate your usual menstrual cycle pain?
+        question: "Usually, during menstruation you experience:"
         type: SINGLE_CHOICE
         options:
           - value: no
@@ -63,6 +25,69 @@ sections:
             text: Moderate pain 
           - value: severe
             text: Severe pain
+      - key: menses_pain_freq
+        question: How frequently do you have painful periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: few
+            text: Only few of your periods are painful
+          - value: less_than_half
+            text: Less than half of your periods are painful
+          - value: more_than_half
+            text: More than half of your periods are painful
+          - value: most
+            text: Most of your periods are painful
+      - key: menses_pain_start
+        question: When does the pain usually begin?
+        type: SINGLE_CHOICE
+        options:
+          - value: before_menstruation
+            text: Before menstruation
+          - value: beginning_of_menstruation
+            text: With the start of menstruation
+          - value: day_after_menstruation
+            text: The day after menstruation already started,
+          - value: 2_or_more_days_after_menstruation
+            text: 2 or more days after menstruation started
+      - key: menses_pain_duration
+        question: How many days does your menstrual pain usually last?
+        type: AGE
+        modes:
+          - units: d
+            min: 0
+            max: 40
+      - key: menses_pain_variablity
+        question: Regarding pain intensity during menstruation, which of the following statements is more accurate?
+        type: SINGLE_CHOICE
+        options:
+          - value: mostly_constant
+            text: I can accurately predict how painful my period will be since the pain intensity almost never changes from one menstruation to the other
+          - value: somewhat_constant
+            text: Pain intensity sometimes changes from one menstruation to the other
+          - value: somewhat_variable
+            text: Pain intensity often changes from one menstruation to the other
+          - value: mostly_variable
+            text: I can never predict how painful my period will be since the pain intensity almost always changes from one menstruation to the other
+  - key: pain-2
+    title: ""
+    description: ""
+    questions:
+      - key: menses_average_pain_intensity
+        question: Rate your average menstrual pain intensity.
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: menstrual pain
+        ask: Rate your average menstrual pain intensity.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
+        prompt: Make your selection on the line.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: pain-3
+    title: ""
+    description: ""
+    questions:
       - key: menses_pain_affect
         question: Usually, how is your working/studying ability affected when you have menstrual pain?
         type: SINGLE_CHOICE
@@ -105,17 +130,26 @@ sections:
                 question: menses_pain_meds
                 operator: =
                 value: often_required
-  - key: worst_period
+  - key: worst_period_1
+    title: ""
+    description: ""
+    questions:
+      - key: menses_pain_scale_worst
+        question: Rate the pain intensity for the worst period pain you have experienced.
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: menstrual pain
+        ask: Rate the pain intensity for the worst period pain you have experienced.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
+        prompt: Make your selection on the line.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: worst_period_2
     title: ""
     description: "Please think about the worst menstrual period pain you have experienced."
     questions:
-      - key: menses_pain_scale_worst
-        question: Rate the pain intensity
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
       - key: menses_pain_location_worst
         question: Where was your pain located? 
         descritpion: Select all that apply
@@ -133,17 +167,26 @@ sections:
               key: menses_pain_location_worst_other_description
               question: "Please specify:"
               type: TEXTAREA
-  - key: last_period
+  - key: last_period_1
+    title: ""
+    description: ""
+    questions:
+      - key: menses_pain_scale_last
+        question: Rate the pain intensity for the last period pain you have experienced.
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: menstrual pain
+        ask: Rate the pain intensity for the last period pain you have experienced.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
+        prompt: Make your selection on the line.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: last_period_2
     title: ""
     description: "Please think about the last menstrual period pain you have experienced."
     questions:
-      - key: menses_pain_scale_last
-        question: Rate the pain intensity
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
       - key: menses_pain_location_last
         question: Where was your pain located? 
         descritpion: Select all that apply

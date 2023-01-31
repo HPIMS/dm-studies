@@ -7,7 +7,7 @@ schedule:
 timeRequirements: 
   time: 3
   timeUnits: minutes
-name: Sexual Activity and Pregnancy
+name: Reproductive History
 sections:
   - key: "0"
     title: ""
@@ -27,8 +27,19 @@ sections:
                 question: pregnancy
                 operator: =
                 value: yes
+      - key: preg_still
+        question: How many stillbirths have you had?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: pregnancy
+                operator: =
+                value: yes
       - key: preg_spont
-        question: How many miscarriages have you had?
+        question: How many miscarriages (spontaneous abortions) have you had?
         type: NUMERIC
         triggers:
           - action:
