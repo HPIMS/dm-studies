@@ -38,7 +38,7 @@ sections:
                 value: yes
       - key: preg_spont
         question: How many early miscarriages (spontaneous abortions) have you had?
-        description: i.e. occurring within the first 5 months of pregnancy
+        description: Consider those occurring within the first 5 months of pregnancy.
         type: NUMERIC
         triggers:
           - action:
@@ -50,7 +50,7 @@ sections:
                 value: yes
       - key: preg_still
         question: How many stillbriths or late miscarriages have you had?
-        description: i.e. occurring after the 5th month of pregnancy
+        description: Consider those occurring after the 5th month of pregnancy.
         type: NUMERIC
         triggers:
           - action:

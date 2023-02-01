@@ -37,6 +37,54 @@ sections:
                 operator: =
                 value: yes
   - key: pain_1
+    title: ""
+    description: ""
+    questions:
+      - key: pain_today_lower_belly_intensity_vas
+        question: Your lower belly pain
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: Lower belly pain
+        ask: Please think about your lower belly pain today.
+        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: pain_2
+    title: ""
+    description: ""
+    questions:
+      - key: pain_today_lower_back_intensity_vas
+        question: Your lower back pain
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: Lower back pain
+        ask: Please think about your lower back pain today.
+        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: pain_3
+    title: ""
+    description: ""
+    questions:
+      - key: pain_today_upper_thighs_intensity_vas
+        question: Your upper thigh pain
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: upper thigh pain
+        ask: Please think about your upper thigh pain today.
+        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: pain_4
     title: Today's Pain
     description: For each of the following body locations, please rate today's pain, with 0 being no pain and 10 being the worst pain imaginable.
     questions:
@@ -58,7 +106,7 @@ sections:
         min: 0
         max: 10
         step: 1
-  - key: pain_2
+  - key: pain_5
     title: Today's Pain Continued
     description: ""
     questions:
@@ -283,6 +331,71 @@ sections:
                 question: pain_meds_today
                 operator: =
                 value: yes
+
+  - key: mood_1
+    title: ""
+    description: ""
+    questions:
+      - key: mood_today_happy_vas
+        question: Your happiness
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: happiness
+        ask: Please think about your happiness today.
+        scaleExplanation: 0 is unhappy, 10 is happy.
+        prompt: Rate your mood.
+        minLabel: Unhappy
+        maxLabel: Happy
+  - key: mood_2
+    title: ""
+    description: ""
+    questions:
+      - key: mood_today_calm_vas
+        question: Your calmness
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: calmness
+        ask: Please think about your calmness today.
+        scaleExplanation: 0 is excited, 10 is calm.
+        prompt: Rate your mood.
+        minLabel: Excited
+        maxLabel: Calm
+  - key: mood_3
+    title: ""
+    description: ""
+    questions:
+      - key: stress_today_vas
+        question: Your stress
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: stress
+        ask: Please think about your overall stress level today.
+        scaleExplanation: 0 is no stress, 10 is excited.
+        prompt: Rate your mood.
+        minLabel: No stress
+        maxLabel: The worst stress imaginable
+  - key: mood_4
+    title: ""
+    description: ""
+    questions:
+      - key: productivity_today_vas
+        question: Your productivity
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: stress
+        ask: Please think about your overall work/school productivity today.
+        scaleExplanation: 0 is not productive, 10 is highly productive.
+        prompt: Rate your mood.
+        minLabel: Not productive
+        maxLabel: Highly productive
   - key: mood
     title: Today's Mood
     description: ""
