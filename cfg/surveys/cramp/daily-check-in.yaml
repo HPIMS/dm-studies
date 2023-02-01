@@ -140,7 +140,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other
                 operator: =
                 value: yes
@@ -155,7 +155,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: stomach
@@ -170,7 +170,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: upper_back
@@ -185,7 +185,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: upper_legs
@@ -200,7 +200,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: lower_legs
@@ -215,7 +215,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: arms
@@ -230,7 +230,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: head
@@ -245,7 +245,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: other
