@@ -23,7 +23,7 @@ intro:
 
     You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
 sections:
-  - key: psst
+  - key: section_1
     title: ""
     description: Do you experience some or any of the following premenstrual symptoms which start before your period and stop within a few days of bleeding?
     questions:
@@ -195,9 +195,10 @@ sections:
             text: Moderate
           - value: severe
             text: Severe
-      - key: psst_interlude
-        question: Have your symptoms, as listed above, interfered with
-        type: DISPLAY
+  - key: section_2
+    title: ""
+    description: "Have your symptoms, as listed previously, interfered with:"
+    questions:
       - key: psst_a
         question: Your work efficiency or productivity
         type: SINGLE_CHOICE

@@ -205,14 +205,14 @@ sections:
         min: 0
         max: 10
         category: menstrual pain
-        ask: Please think about your usual menstruation.
+        ask: Please think about your usual menstural pain.
         scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - key: average_period_2
     title: ""
-    description: Please think about your usual menstruation.
+    description: Please think about your usual menstrual pain.
     questions:
       - key: menses_pain_location_average
         question: Where was your pain located? 
@@ -242,14 +242,14 @@ sections:
         min: 0
         max: 10
         category: menstrual pain
-        ask: Please think about your most recent menstrual period.
+        ask: Please think about your most recent menstrual pain.
         scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - key: last_period_2
     title: ""
-    description: Please think about your most recent menstrual period.
+    description: Please think about your most recent menstrual pain.
     questions:
       - key: menses_pain_location_last
         question: Where was your pain located? 
