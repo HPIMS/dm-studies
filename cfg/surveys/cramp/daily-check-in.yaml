@@ -405,28 +405,28 @@ sections:
         description: 0 means unhappy, 5 means happy
         type: SLIDER
         min: 0
-        max: 5
+        max: 10
         step: 1
       - key: mood_today_calm
         question: How would you rate your overall mood today (calmness)?
         description: 0 means calm, 5 means excited
         type: SLIDER
         min: 0
-        max: 5
+        max: 10
         step: 1
       - key: stress_today
         question: How would you rate your overall stress level today?
         description: 0 means no stress, 5 means worst stress imaginable
         type: SLIDER
         min: 0
-        max: 5
+        max: 10
         step: 1
       - key: productivity_today
         question: How would you rate your overall work/school productivity today?
         description: 0 means not productive, 5 means highly productive
         type: SLIDER
         min: 0
-        max: 5
+        max: 10
         step: 1
   - key: activity
     title: Today's Activity
