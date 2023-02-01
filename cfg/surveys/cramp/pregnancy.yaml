@@ -8,6 +8,15 @@ timeRequirements:
   time: 3
   timeUnits: minutes
 name: Reproductive History
+intro:
+  title: Reproductive History
+  description: |-
+    In this survey we ask you to answer some questions regarding your reproductive history. 
+
+    Why is completing this survey important?
+    Menstruation is the other side of the coin of pregnancy in the reproductive cycle. We will therefore ask you several questions regarding your sexual activity and pregnancy history. These will enable us to understand the relationship between these factors and your experience with menstrual pain. We know this information is very private, and you might be concerned to answer some of these questions, especially after the recent supreme court ruling. We therefore requested a certificate of confidentiality to the national institute of health. This will prohibit anyone from requesting access to the information you share with us – not even police or FBI. 
+
+    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
 sections:
   - key: "0"
     title: ""
@@ -27,8 +36,9 @@ sections:
                 question: pregnancy
                 operator: =
                 value: yes
-      - key: preg_still
-        question: How many stillbirths have you had?
+      - key: preg_spont
+        question: How many early miscarriages (spontaneous abortions) have you had?
+        description: i.e. occurring within the first 5 months of pregnancy
         type: NUMERIC
         triggers:
           - action:
@@ -38,8 +48,9 @@ sections:
                 question: pregnancy
                 operator: =
                 value: yes
-      - key: preg_spont
-        question: How many miscarriages (spontaneous abortions) have you had?
+      - key: preg_still
+        question: How many stillbriths or late miscarriages have you had?
+        description: i.e. occurring after the 5th month of pregnancy
         type: NUMERIC
         triggers:
           - action:

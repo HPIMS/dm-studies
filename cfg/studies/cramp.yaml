@@ -86,13 +86,43 @@ surveys:
     #         operator: ">"
     #         score: 0
 
-  - key: menstrual-pain
+  - key: psst
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
       period: ALWAYS
     # TODO: END
     rank: 40
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
+
+  - key: pregnancy
+    # TODO: REMOVE ME!
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # TODO: END
+    rank: 50
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
+
+  - key: menstrual-pain
+    # TODO: REMOVE ME!
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # TODO: END
+    rank: 60
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -113,28 +143,13 @@ surveys:
   #           operator: =
   #           value: yes
 
-  - key: pregnancy
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 50
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::intro
-    #         operator: ">"
-    #         score: 0
-
   - key: rsa
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 60
+    rank: 70
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -168,7 +183,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 70
+    rank: 80
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -192,45 +207,15 @@ surveys:
     #           operator: ">"
     #           score: 0
     #         - type: COMPLETED
+    #           resource: library::psst
+    #           operator: ">"
+    #           score: 0    
+    #         - type: COMPLETED
     #           resource: cramp::pregnancy
     #           operator: ">"
     #           score: 0
 
   - key: lsns
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 80
-    # schedule:
-    #   type: PERIOD
-    #   period: ONCE
-    #   delay: 4
-    #   delayUnits: DAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: COMPLETED
-    #           resource: cramp::demographics
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::general-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::menstrual-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::pregnancy
-    #           operator: ">"
-    #           score: 0
-
-  - key: ucls-ls
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
@@ -260,11 +245,15 @@ surveys:
     #           operator: ">"
     #           score: 0
     #         - type: COMPLETED
+    #           resource: library::psst
+    #           operator: ">"
+    #           score: 0    
+    #         - type: COMPLETED
     #           resource: cramp::pregnancy
     #           operator: ">"
     #           score: 0
 
-  - key: sei-hs
+  - key: ucls-ls
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
@@ -294,26 +283,53 @@ surveys:
     #           operator: ">"
     #           score: 0
     #         - type: COMPLETED
+    #           resource: library::psst
+    #           operator: ">"
+    #           score: 0    
+    #         - type: COMPLETED
     #           resource: cramp::pregnancy
     #           operator: ">"
     #           score: 0
 
-  - key: pss-10-pre
+  - key: sei-hs
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
       period: ALWAYS
     # TODO: END
     rank: 110
-  #   triggers:
-  #   - action: SHOW
-  #     condition:
-  #       - type: CALCULATION
-  #         Today in m + L - 14 : m + L - 7;
-  #         fn: cramp::ovulation-phase
-  #         args: {}
+    # schedule:
+    #   type: PERIOD
+    #   period: ONCE
+    #   delay: 4
+    #   delayUnits: DAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       type: AND
+    #       tasks:
+    #         - type: COMPLETED
+    #           resource: cramp::demographics
+    #           operator: ">"
+    #           score: 0
+    #         - type: COMPLETED
+    #           resource: cramp::general-health
+    #           operator: ">"
+    #           score: 0
+    #         - type: COMPLETED
+    #           resource: cramp::menstrual-health
+    #           operator: ">"
+    #           score: 0
+    #         - type: COMPLETED
+    #           resource: library::psst
+    #           operator: ">"
+    #           score: 0    
+    #         - type: COMPLETED
+    #           resource: cramp::pregnancy
+    #           operator: ">"
+    #           score: 0
 
-  - key: dass-21-pre
+  - key: pss-10-pre
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
@@ -328,7 +344,7 @@ surveys:
   #         fn: cramp::ovulation-phase
   #         args: {}
 
-  - key: sss-8-pre
+  - key: dass-21-pre
     # TODO: REMOVE ME!
     schedule:
       type: PERIOD
@@ -343,8 +359,23 @@ surveys:
   #         fn: cramp::ovulation-phase
   #         args: {}
 
+  - key: sss-8-pre
+    # TODO: REMOVE ME!
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # TODO: END
+    rank: 140
+  #   triggers:
+  #   - action: SHOW
+  #     condition:
+  #       - type: CALCULATION
+  #         Today in m + L - 14 : m + L - 7;
+  #         fn: cramp::ovulation-phase
+  #         args: {}
+
   # - key: dst
-  #   rank: 140
+  #   rank: 150
   #   schedule:
   #     type: PERIOD
   #     period: ONCE
@@ -378,7 +409,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 150
+    rank: 160
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -398,7 +429,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 160
+    rank: 170
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -413,25 +444,6 @@ surveys:
       #       args: {}
 
   # - key: pss-10-post
-  #   rank: 170
-    # schedule:
-    #   type: PERIOD
-    #   period: ONCE
-    #   delay: 7
-    #   delayUnits: DAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: cramp::daily-check-in
-    #           section: bleeding
-    #           question: menses_today
-    #           operator: =
-    #           value: yes
-
-  # - key: dass-21-post
   #   rank: 180
     # schedule:
     #   type: PERIOD
@@ -450,7 +462,7 @@ surveys:
     #           operator: =
     #           value: yes
 
-  # - key: sss-8-post
+  # - key: dass-21-post
   #   rank: 190
     # schedule:
     #   type: PERIOD
@@ -469,8 +481,27 @@ surveys:
     #           operator: =
     #           value: yes
 
+  # - key: sss-8-post
+  #   rank: 200
+    # schedule:
+    #   type: PERIOD
+    #   period: ONCE
+    #   delay: 7
+    #   delayUnits: DAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: questionnaire-response-value
+    #         args:
+    #           questionnaire: cramp::daily-check-in
+    #           section: bleeding
+    #           question: menses_today
+    #           operator: =
+    #           value: yes
+
   - key: promis-pain-interference-6b-v1.0
-    rank: 200
+    rank: 210
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -494,7 +525,7 @@ surveys:
       type: PERIOD
       period: ALWAYS
     # TODO: END
-    rank: 210
+    rank: 220
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -503,7 +534,7 @@ surveys:
     #         args: {}
 
   # - key: dona
-  #   rank: 220
+  #   rank: 230
   #   triggers:
   #     - action: SHOW
   #       condition:

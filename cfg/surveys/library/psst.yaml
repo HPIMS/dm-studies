@@ -1,0 +1,260 @@
+key: psst
+active: true
+scorable: false
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements: 
+  time: 2
+  timeUnits: minutes
+name: Premenstrual symptoms
+intro:
+  title: Premenstrual symptoms
+  description: |-
+    In this survey we ask you to answer some questions regarding symptoms you experience before the menstruation. 
+
+    Why is completing this survey important?
+    Menstruation is not only bleeding. The menstrual cycle is a complex cyclical process, with hormones fluctuating and influencing several systems in our bodies. It is common to many women to experience symptoms right before menstruation, sometimes so debilitating that they are described as premenstrual syndrome. This condition has been linked to more severe stress and menstrual cramps. We will therefore ask you to complete a questionnaire that has been developed specifically to assess premenstrual symptoms. Answering these questions will enable us to take into account these factors when we characterize stress and menstrual pain. 
+
+    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
+sections:
+  - key: psst
+    title: ""
+    description: Do you experience some or any of the following premenstrual symptoms which start before your period and stop within a few days of bleeding?
+    questions:
+      - key: psst_1
+        question: Anger/Irritability
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_2
+        question: Anxiety/tension
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_3
+        question: Tearful/Increased sensitivity to rejection
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_4
+        question: Depressed mood/hopelessness
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_5
+        question: Decreased interest in work activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_6
+        question: Decreased interest in home activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_7
+        question: Decreased interest in social activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_8
+        question: Difficulty concentrating
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_9
+        question: Fatigue/lack of energy
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_10
+        question: Overeating/food cravings
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_11
+        question: Insomnia
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_12
+        question: Hypersomnia (needing more sleep)
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_13
+        question: Feeling overwhelmed or out of control
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_14
+        question: Physical symptoms; breast tenderness, headaches, joint/muscle pain, bloating, weight gain
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_interlude
+        question: Have your symptoms, as listed above, interfered with
+        type: DISPLAY
+      - key: psst_a
+        question: Your work efficiency or productivity
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_b
+        question: Your relationships with coworkers
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_c
+        question: Your relationships with your family
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_d
+        question: Your social life activities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: psst_e
+        question: Your home responsibilities
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
