@@ -255,8 +255,8 @@ sections:
                 operator: =
                 value: yes
       - key: pain_meds_frequency_today
-        question: How often did you take them today?
-        type: TEXTAREA
+        question: How many times did you take them today?
+        type: NUMERIC
         triggers:
           - action:
               type: SHOW
