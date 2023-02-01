@@ -89,19 +89,22 @@ sections:
     description: For each of the following body locations, please rate today's pain, with 0 being no pain and 10 being the worst pain imaginable.
     questions:
       - key: pain_today_lower_belly_intensity
-        question: Lower belly
+        question: Rate today's lower belly pain
+        description: 0 means no pain and 10 means the worst pain imaginable.
         type: SLIDER
         min: 0
         max: 10
         step: 1
       - key: pain_today_lower_back_intensity
-        question: Lower back
+        question: Rate today's lower back pain
+        description: 0 means no pain and 10 means the worst pain imaginable.
         type: SLIDER
         min: 0
         max: 10
         step: 1
       - key: pain_today_upper_thighs_intensity
-        question: Upper thighs
+        question: Rate today's upper thigh pain
+        description: 0 means no pain and 10 means the worst pain imaginable.
         type: SLIDER
         min: 0
         max: 10
@@ -140,7 +143,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other
                 operator: =
                 value: yes
@@ -155,7 +158,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: stomach
@@ -170,7 +173,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: upper_back
@@ -185,7 +188,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: upper_legs
@@ -200,7 +203,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: lower_legs
@@ -215,7 +218,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: arms
@@ -230,7 +233,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: head
@@ -245,7 +248,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: pain_2
+              - section: pain_5
                 question: pain_today_other_location
                 operator: INCLUDES
                 value: other
