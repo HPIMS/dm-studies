@@ -8,11 +8,33 @@ timeRequirements:
   time: 5
   timeUnits: minutes
 name: Menstrual Pain
+intro:
+  title: Menstrual Pain
+  description: |-
+    In this survey we ask you to answer some questions regarding how you usually experience menstrual cramps. 
+
+    Why is completing this survey important?
+    The CRAMP study is all about menstrual pain. We will ask you questions regarding your menstrual pain throughout the study. But we can’t make sure that what you will report during the study will be what your usual experience is. We therefore designed this survey to collect information regarding your usual experience with menstrual pain. We don’t only want to know how intense the pain is, but also how you experience the pain. We will therefore include two sets of questions, one regarding your thoughts and feelings during pain, and the other one regarding how your daily activities are affected by your pain. Answering these questions is important to help us characterize pain beyond a mere score on a piece of paper and unravel its complexity
+
+
+    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
 sections:
   - key: pain-1
     title: ""
     description: ""
     questions:
+      - key: menses_pain_freq
+        question: How frequently do you have pain during menstruation?
+        type: SINGLE_CHOICE
+        options:
+          - value: few
+            text: Only few of your periods are painful
+          - value: less_than_half
+            text: Less than half of your periods are painful
+          - value: more_than_half
+            text: More than half of your periods are painful
+          - value: most
+            text: Most of your periods are painful
       - key: menses_pain_overall
         question: "Usually, during menstruation you experience:"
         type: SINGLE_CHOICE
@@ -25,20 +47,8 @@ sections:
             text: Moderate pain 
           - value: severe
             text: Severe pain
-      - key: menses_pain_freq
-        question: How frequently do you have painful periods?
-        type: SINGLE_CHOICE
-        options:
-          - value: few
-            text: Only few of your periods are painful
-          - value: less_than_half
-            text: Less than half of your periods are painful
-          - value: more_than_half
-            text: More than half of your periods are painful
-          - value: most
-            text: Most of your periods are painful
       - key: menses_pain_start
-        question: When does the pain usually begin?
+        question: When you experience menstrual pain, when does it usually start?
         type: SINGLE_CHOICE
         options:
           - value: before_menstruation
@@ -50,7 +60,7 @@ sections:
           - value: 2_or_more_days_after_menstruation
             text: 2 or more days after menstruation started
       - key: menses_pain_duration
-        question: How many days does your menstrual pain usually last?
+        question: Usually, for how many days do you experience pain during menstruation?
         type: AGE
         modes:
           - units: d
@@ -68,26 +78,6 @@ sections:
             text: Pain intensity often changes from one menstruation to the other
           - value: mostly_variable
             text: I can never predict how painful my period will be since the pain intensity almost always changes from one menstruation to the other
-  - key: pain-2
-    title: ""
-    description: ""
-    questions:
-      - key: menses_average_pain_intensity
-        question: Rate your average menstrual pain intensity.
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: menstrual pain
-        ask: Rate your average menstrual pain intensity.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Make your selection on the line.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
-  - key: pain-3
-    title: ""
-    description: ""
-    questions:
       - key: menses_pain_affect
         question: Usually, how is your working/studying ability affected when you have menstrual pain?
         type: SINGLE_CHOICE
@@ -117,16 +107,16 @@ sections:
           - value: effective
             text: Pain medication is effective most of the time
           - value: ineffective
-            text:  Pain medication is not effective most of the time
+            text: Pain medication is not effective most of the time
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: pain
+              - section: pain-1
                 question: menses_pain_meds
                 operator: =
                 value: rarely
-              - section: pain
+              - section: pain-1
                 question: menses_pain_meds
                 operator: =
                 value: often_required
@@ -135,20 +125,20 @@ sections:
     description: ""
     questions:
       - key: menses_pain_scale_worst
-        question: Rate the pain intensity for the worst period pain you have experienced.
+        question: Your worst menstrual pain
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 100
+        max: 10
         category: menstrual pain
-        ask: Rate the pain intensity for the worst period pain you have experienced.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Make your selection on the line.
+        ask: Please think about the most painful menstruation you have experienced.
+        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - key: worst_period_2
     title: ""
-    description: "Please think about the worst menstrual period pain you have experienced."
+    description: Please think about the most painful menstruation you have experienced.
     questions:
       - key: menses_pain_location_worst
         question: Where was your pain located? 
@@ -167,25 +157,99 @@ sections:
               key: menses_pain_location_worst_other_description
               question: "Please specify:"
               type: TEXTAREA
+  - key: best_period_1
+    title: ""
+    description: ""
+    questions:
+      - key: menses_pain_scale_best
+        question: Your least painful menstruation
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: menstrual pain
+        ask: Please think about the least painful menstruation you have experienced.
+        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: best_period_2
+    title: ""
+    description: Please think about the least painful menstruation you have experienced.
+    questions:
+      - key: menses_pain_location_best
+        question: Where was your pain located? 
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: lower_back
+            text: Lower back
+          - value: lower_belly
+            text: Lower belly
+          - value: upper_legs
+            text: Upper legs
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: menses_pain_location_best_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+  - key: average_period_1
+    title: ""
+    description: ""
+    questions:
+      - key: menses_pain_scale_average
+        question: Your usual menstrual pain
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: menstrual pain
+        ask: Please think about your usual menstruation.
+        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - key: average_period_2
+    title: ""
+    description: Please think about your usual menstruation.
+    questions:
+      - key: menses_pain_location_average
+        question: Where was your pain located? 
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: lower_back
+            text: Lower back
+          - value: lower_belly
+            text: Lower belly
+          - value: upper_legs
+            text: Upper legs
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: menses_pain_location_average_other_description
+              question: "Please specify:"
+              type: TEXTAREA
   - key: last_period_1
     title: ""
     description: ""
     questions:
       - key: menses_pain_scale_last
-        question: Rate the pain intensity for the last period pain you have experienced.
+        question: Your most recent menstrual pain
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 100
+        max: 10
         category: menstrual pain
-        ask: Rate the pain intensity for the last period pain you have experienced.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Make your selection on the line.
+        ask: Please think about your most recent menstrual period.
+        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - key: last_period_2
     title: ""
-    description: "Please think about the last menstrual period pain you have experienced."
+    description: Please think about your most recent menstrual period.
     questions:
       - key: menses_pain_location_last
         question: Where was your pain located? 
