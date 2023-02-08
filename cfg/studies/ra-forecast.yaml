@@ -71,9 +71,6 @@ surveys:
 
   - key: pss-4
     rank: 5
-    schedule:
-      type: PERIOD
-      period: BI_WEEKLY
     triggers:
       - action: SHOW
         condition:
@@ -84,11 +81,6 @@ surveys:
 
   - key: mdhaq
     rank: 6
-    schedule:
-      type: PERIOD
-      period: BI_WEEKLY
-      delay: 2
-      delayUnits: WEEKS
     triggers:
       - action: SHOW
         condition:

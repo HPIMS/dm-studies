@@ -17,6 +17,7 @@ intro:
 outro:
   title: Report Complete
   description: Thank you! Your participation is always valued.
+    This task will remain available so that you can report changes at any time.
 sections:
   - key: new_meds
     title: ""
@@ -83,6 +84,22 @@ sections:
             text: rituximab (rituxan)
           - value: anakinra
             text: anakinra (kineret)
+          - value: tocilizumab
+            text: tocilizumab (actemra)
+          - value: sarilumab
+            text: sarilumab (kevzara)
+          - value: certrolizumab
+            text: certrolizumab (cimzia)
+          - value: goliumumab
+            text: goliumumab (simponi)
+          - value: baricitinib
+            text: baricitinib (olumiant)
+          - value: tofacitinib
+            text: tofacitinib (xeljanz)
+          - value: upadacitinib
+            text: upadacitinib (rinvoq)
+          - value: other
+            text: Other Medication
         triggers:
           - action:
               type: SHOW
@@ -1761,6 +1778,769 @@ sections:
                 question: new_meds
                 operator: =
                 value: anakinra
+      - key: new_med_dose_tocilizumab
+        question: What is the dose of tocilizumab (actemra)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: new_med_dose_tocilizumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: new_med_dose_tocilizumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: new_med_dose_tocilizumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: new_med_dose_tocilizumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tocilizumab
+      - key: new_med_freq_units_tocilizumab
+        question: How often do you take tocilizumab (actemra)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: new_med_freq_units_tocilizumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tocilizumab
+      - key: new_med_freq_value_tocilizumab
+        question: How many times at the above frequency do you take tocilizumab (actemra)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tocilizumab
+      - key: new_med_route_tocilizumab
+        question: What is the way tocilizumab (actemra) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tocilizumab
+      - key: new_med_start_date_tocilizumab
+        question: When did you start tocilizumab (actemra)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tocilizumab
+      - key: new_med_dose_sarilumab
+        question: What is the dose of sarilumab (kevzara)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: new_med_dose_sarilumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: new_med_dose_sarilumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: new_med_dose_sarilumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: new_med_dose_sarilumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: sarilumab
+      - key: new_med_freq_units_sarilumab
+        question: How often do you take sarilumab (kevzara)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: new_med_freq_units_sarilumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: sarilumab
+      - key: new_med_freq_value_sarilumab
+        question: How many times at the above frequency do you take sarilumab (kevzara)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: sarilumab
+      - key: new_med_route_sarilumab
+        question: What is the way sarilumab (kevzara) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: sarilumab
+      - key: new_med_start_date_sarilumab
+        question: When did you start sarilumab (kevzara)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: sarilumab
+      - key: new_med_dose_certrolizumab
+        question: What is the dose of certrolizumab (cimzia)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: new_med_dose_certrolizumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: new_med_dose_certrolizumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: new_med_dose_certrolizumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: new_med_dose_certrolizumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: certrolizumab
+      - key: new_med_freq_units_certrolizumab
+        question: How often do you take certrolizumab (cimzia)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: new_med_freq_units_certrolizumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: certrolizumab
+      - key: new_med_freq_value_certrolizumab
+        question: How many times at the above frequency do you take certrolizumab (cimzia)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: certrolizumab
+      - key: new_med_route_certrolizumab
+        question: What is the way certrolizumab (cimzia) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: certrolizumab
+      - key: new_med_start_date_certrolizumab
+        question: When did you start certrolizumab (cimzia)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: certrolizumab
+      - key: new_med_dose_goliumumab
+        question: What is the dose of goliumumab (simponi)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: new_med_dose_goliumumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: new_med_dose_goliumumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: new_med_dose_goliumumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: new_med_dose_goliumumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: goliumumab
+      - key: new_med_freq_units_goliumumab
+        question: How often do you take goliumumab (simponi)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: new_med_freq_units_goliumumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: goliumumab
+      - key: new_med_freq_value_goliumumab
+        question: How many times at the above frequency do you take goliumumab (simponi)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: goliumumab
+      - key: new_med_route_goliumumab
+        question: What is the way goliumumab (simponi) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: goliumumab
+      - key: new_med_start_date_goliumumab
+        question: When did you start goliumumab (simponi)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: goliumumab
+      - key: new_med_dose_baricitinib
+        question: What is the dose of baricitinib (olumiant)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: new_med_dose_baricitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: new_med_dose_baricitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: new_med_dose_baricitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: new_med_dose_baricitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: baricitinib
+      - key: new_med_freq_units_baricitinib
+        question: How often do you take baricitinib (olumiant)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: new_med_freq_units_baricitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: baricitinib
+      - key: new_med_freq_value_baricitinib
+        question: How many times at the above frequency do you take baricitinib (olumiant)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: baricitinib
+      - key: new_med_route_baricitinib
+        question: What is the way baricitinib (olumiant) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: baricitinib
+      - key: new_med_start_date_baricitinib
+        question: When did you start baricitinib (olumiant)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: baricitinib
+      - key: new_med_dose_tofacitinib
+        question: What is the dose of tofacitinib (xeljanz)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: new_med_dose_tofacitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: new_med_dose_tofacitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: new_med_dose_tofacitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: new_med_dose_tofacitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tofacitinib
+      - key: new_med_freq_units_tofacitinib
+        question: How often do you take tofacitinib (xeljanz)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: new_med_freq_units_tofacitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tofacitinib
+      - key: new_med_freq_value_tofacitinib
+        question: How many times at the above frequency do you take tofacitinib (xeljanz)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tofacitinib
+      - key: new_med_route_tofacitinib
+        question: What is the way tofacitinib (xeljanz) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tofacitinib
+      - key: new_med_start_date_tofacitinib
+        question: When did you start tofacitinib (xeljanz)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: tofacitinib
+      - key: new_med_dose_upadacitinib
+        question: What is the dose of upadacitinib (rinvoq)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: new_med_dose_upadacitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: new_med_dose_upadacitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: new_med_dose_upadacitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: new_med_dose_upadacitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: upadacitinib
+      - key: new_med_freq_units_upadacitinib
+        question: How often do you take upadacitinib (rinvoq)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: new_med_freq_units_upadacitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: upadacitinib
+      - key: new_med_freq_value_upadacitinib
+        question: How many times at the above frequency do you take upadacitinib (rinvoq)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: upadacitinib
+      - key: new_med_route_upadacitinib
+        question: What is the way upadacitinib (rinvoq) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: upadacitinib
+      - key: new_med_start_date_upadacitinib
+        question: When did you start upadacitinib (rinvoq)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: new_meds
+                operator: =
+                value: upadacitinib           
       - key: new_med_dose_other
         question: What is the dose of Other Medication?
         type: SINGLE_CHOICE
@@ -1931,6 +2711,22 @@ sections:
             text: rituximab (rituxan)
           - value: anakinra
             text: anakinra (kineret)
+          - value: tocilizumab
+            text: tocilizumab (actemra)
+          - value: sarilumab
+            text: sarilumab (kevzara)
+          - value: certrolizumab
+            text: certrolizumab (cimzia)
+          - value: goliumumab
+            text: goliumumab (simponi)
+          - value: baricitinib
+            text: baricitinib (olumiant)
+          - value: tofacitinib
+            text: tofacitinib (xeljanz)
+          - value: upadacitinib
+            text: upadacitinib (rinvoq)
+          - value: other
+            text: Other Medication
         triggers:
           - action:
               type: SHOW
@@ -3609,6 +4405,769 @@ sections:
                 question: stopped_meds
                 operator: =
                 value: anakinra
+      - key: stopped_med_dose_tocilizumab
+        question: What was the dose of tocilizumab (actemra) at stopping?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: stopped_med_dose_tocilizumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: stopped_med_dose_tocilizumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: stopped_med_dose_tocilizumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: stopped_med_dose_tocilizumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tocilizumab
+      - key: stopped_med_freq_units_tocilizumab
+        question: How often did you take tocilizumab (actemra)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: stopped_med_freq_units_tocilizumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tocilizumab
+      - key: stopped_med_freq_value_tocilizumab
+        question: How many times at the above frequency did you take tocilizumab (actemra)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tocilizumab
+      - key: stopped_med_route_tocilizumab
+        question: What is the way tocilizumab (actemra) was given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tocilizumab
+      - key: stopped_med_stop_date_tocilizumab
+        question: When did you stop tocilizumab (actemra)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tocilizumab
+      - key: stopped_med_dose_sarilumab
+        question: What was the dose of sarilumab (kevzara) at stopping?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: stopped_med_dose_sarilumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: stopped_med_dose_sarilumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: stopped_med_dose_sarilumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: stopped_med_dose_sarilumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: sarilumab
+      - key: stopped_med_freq_units_sarilumab
+        question: How often did you take sarilumab (kevzara)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: stopped_med_freq_units_sarilumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: sarilumab
+      - key: stopped_med_freq_value_sarilumab
+        question: How many times at the above frequency did you take sarilumab (kevzara)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: sarilumab
+      - key: stopped_med_route_sarilumab
+        question: What is the way sarilumab (kevzara) was given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: sarilumab
+      - key: stopped_med_stop_date_sarilumab
+        question: When did you stop sarilumab (kevzara)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: sarilumab
+      - key: stopped_med_dose_certrolizumab
+        question: What was the dose of certrolizumab (cimzia) at stopping?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: stopped_med_dose_certrolizumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: stopped_med_dose_certrolizumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: stopped_med_dose_certrolizumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: stopped_med_dose_certrolizumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: certrolizumab
+      - key: stopped_med_freq_units_certrolizumab
+        question: How often did you take certrolizumab (cimzia)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: stopped_med_freq_units_certrolizumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: certrolizumab
+      - key: stopped_med_freq_value_certrolizumab
+        question: How many times at the above frequency did you take certrolizumab (cimzia)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: certrolizumab
+      - key: stopped_med_route_certrolizumab
+        question: What is the way certrolizumab (cimzia) was given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: certrolizumab
+      - key: stopped_med_stop_date_certrolizumab
+        question: When did you stop certrolizumab (cimzia)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: certrolizumab
+      - key: stopped_med_dose_goliumumab
+        question: What was the dose of goliumumab (simponi) at stopping?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: stopped_med_dose_goliumumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: stopped_med_dose_goliumumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: stopped_med_dose_goliumumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: stopped_med_dose_goliumumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: goliumumab
+      - key: stopped_med_freq_units_goliumumab
+        question: How often did you take goliumumab (simponi)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: stopped_med_freq_units_goliumumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: goliumumab
+      - key: stopped_med_freq_value_goliumumab
+        question: How many times at the above frequency did you take goliumumab (simponi)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: goliumumab
+      - key: stopped_med_route_goliumumab
+        question: What is the way goliumumab (simponi) was given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: goliumumab
+      - key: stopped_med_stop_date_goliumumab
+        question: When did you stop goliumumab (simponi)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: goliumumab
+      - key: stopped_med_dose_baricitinib
+        question: What was the dose of baricitinib (olumiant) at stopping?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: stopped_med_dose_baricitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: stopped_med_dose_baricitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: stopped_med_dose_baricitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: stopped_med_dose_baricitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: baricitinib
+      - key: stopped_med_freq_units_baricitinib
+        question: How often did you take baricitinib (olumiant)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: stopped_med_freq_units_baricitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: baricitinib
+      - key: stopped_med_freq_value_baricitinib
+        question: How many times at the above frequency did you take baricitinib (olumiant)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: baricitinib
+      - key: stopped_med_route_baricitinib
+        question: What is the way baricitinib (olumiant) was given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: baricitinib
+      - key: stopped_med_stop_date_baricitinib
+        question: When did you stop baricitinib (olumiant)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: baricitinib
+      - key: stopped_med_dose_tofacitinib
+        question: What was the dose of tofacitinib (xeljanz) at stopping?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: stopped_med_dose_tofacitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: stopped_med_dose_tofacitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: stopped_med_dose_tofacitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: stopped_med_dose_tofacitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tofacitinib
+      - key: stopped_med_freq_units_tofacitinib
+        question: How often did you take tofacitinib (xeljanz)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: stopped_med_freq_units_tofacitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tofacitinib
+      - key: stopped_med_freq_value_tofacitinib
+        question: How many times at the above frequency did you take tofacitinib (xeljanz)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tofacitinib
+      - key: stopped_med_route_tofacitinib
+        question: What is the way tofacitinib (xeljanz) was given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tofacitinib
+      - key: stopped_med_stop_date_tofacitinib
+        question: When did you stop tofacitinib (xeljanz)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: tofacitinib
+      - key: stopped_med_dose_upadacitinib
+        question: What was the dose of upadacitinib (rinvoq) at stopping?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: stopped_med_dose_upadacitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: stopped_med_dose_upadacitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: stopped_med_dose_upadacitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: stopped_med_dose_upadacitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: upadacitinib
+      - key: stopped_med_freq_units_upadacitinib
+        question: How often did you take upadacitinib (rinvoq)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: stopped_med_freq_units_upadacitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: upadacitinib
+      - key: stopped_med_freq_value_upadacitinib
+        question: How many times at the above frequency did you take upadacitinib (rinvoq)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: upadacitinib
+      - key: stopped_med_route_upadacitinib
+        question: What is the way upadacitinib (rinvoq) was given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: upadacitinib
+      - key: stopped_med_stop_date_upadacitinib
+        question: When did you stop upadacitinib (rinvoq)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: stopped_meds
+                operator: =
+                value: upadacitinib
       - key: stopped_med_dose_other
         question: What was the dose of Other Medication at stopping?
         type: SINGLE_CHOICE
@@ -3779,6 +5338,22 @@ sections:
             text: rituximab (rituxan)
           - value: anakinra
             text: anakinra (kineret)
+          - value: tocilizumab
+            text: tocilizumab (actemra)
+          - value: sarilumab
+            text: sarilumab (kevzara)
+          - value: certrolizumab
+            text: certrolizumab (cimzia)
+          - value: goliumumab
+            text: goliumumab (simponi)
+          - value: baricitinib
+            text: baricitinib (olumiant)
+          - value: tofacitinib
+            text: tofacitinib (xeljanz)
+          - value: upadacitinib
+            text: upadacitinib (rinvoq)
+          - value: other
+            text: Other Medication
         triggers:
           - action:
               type: SHOW
@@ -5458,6 +7033,769 @@ sections:
                 question: altered_meds
                 operator: =
                 value: anakinra
+      - key: altered_med_dose_tocilizumab
+        question: What is the new dose of tocilizumab (actemra)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: altered_med_dose_tocilizumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: altered_med_dose_tocilizumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: altered_med_dose_tocilizumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: altered_med_dose_tocilizumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tocilizumab
+      - key: altered_med_freq_units_tocilizumab
+        question: How often do you take tocilizumab (actemra)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: altered_med_freq_units_tocilizumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tocilizumab
+      - key: altered_med_freq_value_tocilizumab
+        question: How many times at the above frequency do you take tocilizumab (actemra)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tocilizumab
+      - key: altered_med_route_tocilizumab
+        question: What is the way tocilizumab (actemra) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tocilizumab
+      - key: altered_med_change_date_tocilizumab
+        question: When did you start the new dose of tocilizumab (actemra)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tocilizumab
+      - key: altered_med_dose_sarilumab
+        question: What is the new dose of sarilumab (kevzara)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: altered_med_dose_sarilumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: altered_med_dose_sarilumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: altered_med_dose_sarilumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: altered_med_dose_sarilumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: sarilumab
+      - key: altered_med_freq_units_sarilumab
+        question: How often do you take sarilumab (kevzara)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: altered_med_freq_units_sarilumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: sarilumab
+      - key: altered_med_freq_value_sarilumab
+        question: How many times at the above frequency do you take sarilumab (kevzara)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: sarilumab
+      - key: altered_med_route_sarilumab
+        question: What is the way sarilumab (kevzara) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: sarilumab
+      - key: altered_med_change_date_sarilumab
+        question: When did you start the new dose of sarilumab (kevzara)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: sarilumab
+      - key: altered_med_dose_certrolizumab
+        question: What is the new dose of certrolizumab (cimzia)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: altered_med_dose_certrolizumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: altered_med_dose_certrolizumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: altered_med_dose_certrolizumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: altered_med_dose_certrolizumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: certrolizumab
+      - key: altered_med_freq_units_certrolizumab
+        question: How often do you take certrolizumab (cimzia)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: altered_med_freq_units_certrolizumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: certrolizumab
+      - key: altered_med_freq_value_certrolizumab
+        question: How many times at the above frequency do you take certrolizumab (cimzia)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: certrolizumab
+      - key: altered_med_route_certrolizumab
+        question: What is the way certrolizumab (cimzia) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: certrolizumab
+      - key: altered_med_change_date_certrolizumab
+        question: When did you start the new dose of certrolizumab (cimzia)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: certrolizumab
+      - key: altered_med_dose_goliumumab
+        question: What is the new dose of goliumumab (simponi)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: altered_med_dose_goliumumab_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: altered_med_dose_goliumumab_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: altered_med_dose_goliumumab_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: altered_med_dose_goliumumab_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: goliumumab
+      - key: altered_med_freq_units_goliumumab
+        question: How often do you take goliumumab (simponi)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: altered_med_freq_units_goliumumab_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: goliumumab
+      - key: altered_med_freq_value_goliumumab
+        question: How many times at the above frequency do you take goliumumab (simponi)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: goliumumab
+      - key: altered_med_route_goliumumab
+        question: What is the way goliumumab (simponi) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: goliumumab
+      - key: altered_med_change_date_goliumumab
+        question: When did you start the new dose of goliumumab (simponi)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: goliumumab
+      - key: altered_med_dose_baricitinib
+        question: What is the new dose of baricitinib (olumiant)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: altered_med_dose_baricitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: altered_med_dose_baricitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: altered_med_dose_baricitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: altered_med_dose_baricitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: baricitinib
+      - key: altered_med_freq_units_baricitinib
+        question: How often do you take baricitinib (olumiant)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: altered_med_freq_units_baricitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: baricitinib
+      - key: altered_med_freq_value_baricitinib
+        question: How many times at the above frequency do you take baricitinib (olumiant)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: baricitinib
+      - key: altered_med_route_baricitinib
+        question: What is the way baricitinib (olumiant) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: baricitinib
+      - key: altered_med_change_date_baricitinib
+        question: When did you start the new dose of baricitinib (olumiant)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: baricitinib
+      - key: altered_med_dose_tofacitinib
+        question: What is the new dose of tofacitinib (xeljanz)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: altered_med_dose_tofacitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: altered_med_dose_tofacitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: altered_med_dose_tofacitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: altered_med_dose_tofacitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tofacitinib
+      - key: altered_med_freq_units_tofacitinib
+        question: How often do you take tofacitinib (xeljanz)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: altered_med_freq_units_tofacitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tofacitinib
+      - key: altered_med_freq_value_tofacitinib
+        question: How many times at the above frequency do you take tofacitinib (xeljanz)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tofacitinib
+      - key: altered_med_route_tofacitinib
+        question: What is the way tofacitinib (xeljanz) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tofacitinib
+      - key: altered_med_change_date_tofacitinib
+        question: When did you start the new dose of tofacitinib (xeljanz)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: tofacitinib
+      - key: altered_med_dose_upadacitinib
+        question: What is the new dose of upadacitinib (rinvoq)?
+        type: SINGLE_CHOICE
+        options:
+          - value: mg
+            text: milligrams (mg)
+            inlineQuestion:
+              key: altered_med_dose_upadacitinib_mg_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: g
+            text: grams (g)
+            inlineQuestion:
+              key: altered_med_dose_upadacitinib_g_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: ml
+            text: milliliter (mL)
+            inlineQuestion:
+              key: altered_med_dose_upadacitinib_ml_description
+              question: Please provide the quantity
+              type: TEXTAREA
+          - value: other
+            text: Other amount
+            inlineQuestion:
+              key: altered_med_dose_upadacitinib_other_description
+              question: Please provide the metric and quantity
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: upadacitinib
+      - key: altered_med_freq_units_upadacitinib
+        question: How often do you take upadacitinib (rinvoq)?
+        type: SINGLE_CHOICE
+        options:
+          - value: day
+            text: Every day
+          - value: week
+            text: Each week
+          - value: 2_weeks
+            text: Every two weeks
+          - value: 4_weeks
+            text: Every four weeks
+          - value: 6_weeks
+            text: Every six weeks
+          - value: 8_weeks
+            text: Every eight weeks
+          - value: other
+            text: Other (please describe)
+            inlineQuestion:
+              key: altered_med_freq_units_upadacitinib_other_description
+              question: How often do you take the medication?
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: upadacitinib
+      - key: altered_med_freq_value_upadacitinib
+        question: How many times at the above frequency do you take upadacitinib (rinvoq)?
+        type: NUMERIC
+        minValue: 0
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: upadacitinib
+      - key: altered_med_route_upadacitinib
+        question: What is the way upadacitinib (rinvoq) is given to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: mouth
+            text: By mouth
+          - value: iv
+            text: In an IV (intravenous/in a vein)
+          - value: under_skin
+            text: Injected under the skin
+          - value: in_rectum
+            text: In the rectum
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: upadacitinib
+      - key: altered_med_change_date_upadacitinib
+        question: When did you start the new dose of upadacitinib (rinvoq)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: new_meds
+                question: altered_meds
+                operator: =
+                value: upadacitinib
       - key: altered_med_dose_other
         question: What is the new dose of Other Medication?
         type: SINGLE_CHOICE

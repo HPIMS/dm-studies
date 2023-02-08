@@ -2,6 +2,7 @@ const fs = require("fs");
 const YAML = require("yaml");
 
 const drugs = [
+  /*
   {
     value: "corticosteroid",
     text: "Corticosteroids (prednisone, prednisolone, methylpredninsolone)",
@@ -26,7 +27,36 @@ const drugs = [
   { value: "abatacept", text: "abatacept (orencia)" },
   { value: "rituximab", text: "rituximab (rituxan)" },
   { value: "anakinra", text: "anakinra (kineret)" },
+  {
+    value: "tocilizumab",
+    text: "tocilizumab (actemra)",
+  },
+  {
+    value: "sarilumab",
+    text: "sarilumab (kevzara)",
+  },
+  {
+    value: "certrolizumab",
+    text: "certrolizumab (cimzia)",
+  },
+  {
+    value: "goliumumab",
+    text: "goliumumab (simponi)",
+  },
+  {
+    value: "baricitinib",
+    text: "baricitinib (olumiant)",
+  },
+  {
+    value: "tofacitinib",
+    text: "tofacitinib (xeljanz)",
+  },
+  {
+    value: "upadacitinib",
+    text: "upadacitinib (rinvoq)",
+  },
   { value: "other", text: "Other Medication" },
+  */
   /*{ value: "other1", text: "Other Medication #1" },
   { value: "other2", text: "Other Medication #2" },
   { value: "other3", text: "Other Medication #3" },
@@ -36,6 +66,14 @@ const drugs = [
   { value: "other7", text: "Other Medication #7" },
   { value: "other8", text: "Other Medication #8" },
   */
+  { value: "pain1", text: "Pain Medication #1" },
+  { value: "pain2", text: "Pain Medication #2" },
+  { value: "pain3", text: "Pain Medication #3" },
+  { value: "pain4", text: "Pain Medication #4" },
+  { value: "pain5", text: "Pain Medication #5" },
+  { value: "pain6", text: "Pain Medication #6" },
+  { value: "pain7", text: "Pain Medication #7" },
+  { value: "pain8", text: "Pain Medication #8" },
 ];
 
 const createCurrentQuestions = (drug) => {
@@ -264,9 +302,9 @@ const createNewQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "new_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -302,9 +340,9 @@ const createNewQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "new_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -324,9 +362,9 @@ const createNewQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "new_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -351,9 +389,9 @@ const createNewQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "new_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -372,9 +410,9 @@ const createNewQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "new_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -437,9 +475,9 @@ const createStoppedQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "stopped_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -475,9 +513,9 @@ const createStoppedQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "stopped_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -497,9 +535,9 @@ const createStoppedQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "stopped_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -524,9 +562,9 @@ const createStoppedQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "stopped_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -545,9 +583,9 @@ const createStoppedQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "stopped_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -610,9 +648,9 @@ const createAlteredQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "altered_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -648,9 +686,9 @@ const createAlteredQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "altered_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -670,9 +708,9 @@ const createAlteredQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "altered_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -697,9 +735,9 @@ const createAlteredQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "altered_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -718,9 +756,9 @@ const createAlteredQuestions = (drug) => {
           },
           condition: [
             {
-              section: "baseline",
+              section: "new_meds",
               question: "altered_meds",
-              operator: "INCLUDES",
+              operator: "=",
               value,
             },
           ],
@@ -738,9 +776,9 @@ const questions = {
 };
 drugs.forEach((drug) => {
   questions.current.push(...createCurrentQuestions(drug));
-  questions.new.push(...createNewQuestions(drug));
-  questions.stopped.push(...createStoppedQuestions(drug));
-  questions.altered.push(...createAlteredQuestions(drug));
+  // questions.new.push(...createNewQuestions(drug));
+  // questions.stopped.push(...createStoppedQuestions(drug));
+  // questions.altered.push(...createAlteredQuestions(drug));
 });
 
 fs.writeFileSync("./drugs.yaml", YAML.stringify(questions));
