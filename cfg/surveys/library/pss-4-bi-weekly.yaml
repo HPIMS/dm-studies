@@ -1,4 +1,4 @@
-key: pss-4
+key: pss-4-bi-weekly
 scorable: true
 score:
   fn: sum-score
@@ -9,9 +9,9 @@ metadata:
   instrument: "PSS-4"
   version: ""
   references: []
-  schedule:
-    type: PERIOD
-    period: BI_WEEKLY
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
 timeRequirements: 
   time: 1
   timeUnits: minutes

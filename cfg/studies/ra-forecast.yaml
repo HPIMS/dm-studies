@@ -69,7 +69,7 @@ surveys:
             operator: ">"
             score: 0
 
-  - key: pss-4
+  - key: pss-4-bi-weekly
     rank: 5
     triggers:
       - action: SHOW
@@ -79,8 +79,13 @@ surveys:
             operator: ">"
             score: 0
 
-  - key: mdhaq
+  - key: mdhaq-bi-weekly
     rank: 6
+    schedule:
+      type: PERIOD
+      period: BI_WEEKLY
+      delay: 2
+      delayUnits: WEEKS
     triggers:
       - action: SHOW
         condition:
