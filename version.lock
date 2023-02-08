@@ -75,8 +75,8 @@ active:
       - b5ffacab62be68f93d70a5a82eb231d6
       - 25
     ra-forecast:
-      - 4d9fb083d5fd69a2c446e70c0c0c5398
-      - 9
+      - a8f5e140170c5ab0772ce36fcac48628
+      - 10
   surveys:
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
@@ -255,6 +255,9 @@ active:
     library::mdhaq:
       - 7ed0ef9dde8cf8cd7803cb967fd08b0c
       - 1
+    library::mdhaq-bi-weekly:
+      - c06c852fdac5483f28134e6bef3bae03
+      - 1
     library::mpq:
       - fe32b9b074a53a9718d1a6fba16634c4
       - 8
@@ -342,6 +345,9 @@ active:
     library::pss-4:
       - d93f7b1b6920b73462d01ba0ba575fc3
       - 8
+    library::pss-4-bi-weekly:
+      - 00509f0a1141378960cbe75b1aaa80f8
+      - 1
     library::psst:
       - b686331c3dd2bebb7a7b2225604f7217
       - 2
@@ -396,15 +402,9 @@ active:
     ra-forecast::lab_tests:
       - 5697f280cf56d02105fd394603a84fe5
       - 2
-    ra-forecast::mdhaq:
-      - c01c68a142f4c660282b3cffa230d79a
-      - 1
     ra-forecast::new_meds:
       - f813226747fdbb6fef1a83ca5371511e
       - 5
-    ra-forecast::pss-4:
-      - b8d54a5f03ed7409d12cbf332fa2be8f
-      - 1
     warrior-shield::daily-check-in:
       - 961c0e388785c8a2b11609c9b230c349
       - 5
