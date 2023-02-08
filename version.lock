@@ -70,13 +70,13 @@ active:
       - 49
     digi-ibd-001:
       - ff3d5e056e949dccd63bcaaff4989d4a
-      - 22
+      - 23
     ibd-forecast:
       - b5ffacab62be68f93d70a5a82eb231d6
-      - 24
+      - 25
     ra-forecast:
-      - 0f9c80d4f11db1c21d84eccc14ec2cbe
-      - 8
+      - 4d9fb083d5fd69a2c446e70c0c0c5398
+      - 9
   surveys:
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
@@ -172,8 +172,8 @@ active:
       - a24b6b4a41c1d990161cab9d4857fe6f
       - 6
     digi-ibd-001::promis-gi-belly-pain-screening:
-      - abcdacabc501668ed65952c452631e2f
-      - 3
+      - 00c2ef483454c3de6cccb32e94557030
+      - 4
     digi-ibd-001::promis-gi-diarrhea-screening:
       - dc3f0f94e00dbc5e704d0c36e203dc76
       - 5
@@ -304,8 +304,8 @@ active:
       - f17635ca757c80f5017bfd97a1ea7ffd
       - 6
     library::promis-gi-belly-pain:
-      - fc64b4c59f1e818d0a913d3161bd7b3d
-      - 4
+      - 076a3833c133d66c1c753d185d52989e
+      - 5
     library::promis-gi-diarrhea:
       - 217f4db1c395bd608e23d165d2b28397
       - 6
@@ -340,14 +340,14 @@ active:
       - 3819367095301b75912834053fc9b62a
       - 1
     library::pss-4:
-      - d348f2c626449d64e2a739aac3f941bf
-      - 7
+      - d93f7b1b6920b73462d01ba0ba575fc3
+      - 8
     library::psst:
       - b686331c3dd2bebb7a7b2225604f7217
       - 2
     library::rapid3:
-      - bf762b7b720bd431ae310c1040d3a1c9
-      - 1
+      - 94889e3d3bf3896111bf478adf441fd1
+      - 2
     library::rs-14:
       - 8a42279ca7edb82478ac98ab53291599
       - 2
@@ -388,17 +388,23 @@ active:
       - 6ef561e7892a5d0f18233d3afa438c70
       - 2
     ra-forecast::baseline_health:
-      - bcf431aab25d429eb5eb7042fbe66f3e
-      - 1
+      - 94151ae5c3a805c8f61d191c9350221b
+      - 2
     ra-forecast::fatigue_scale:
       - 63bebc5892739f455224b4abeb4ace2e
       - 3
     ra-forecast::lab_tests:
-      - b9fef4ded59306a201415662e107e17f
+      - 5697f280cf56d02105fd394603a84fe5
+      - 2
+    ra-forecast::mdhaq:
+      - c01c68a142f4c660282b3cffa230d79a
       - 1
     ra-forecast::new_meds:
-      - a748b00d6c56500225d0a9d171279b92
-      - 4
+      - f813226747fdbb6fef1a83ca5371511e
+      - 5
+    ra-forecast::pss-4:
+      - b8d54a5f03ed7409d12cbf332fa2be8f
+      - 1
     warrior-shield::daily-check-in:
       - 961c0e388785c8a2b11609c9b230c349
       - 5
