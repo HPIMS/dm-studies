@@ -84,8 +84,8 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
-      # delay: 2
-      # delayUnits: WEEKS
+      delay: 2
+      delayUnits: WEEKS
     triggers:
       - action: SHOW
         condition:
