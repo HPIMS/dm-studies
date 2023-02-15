@@ -61,10 +61,13 @@ active:
       - 1
     digi-ibd-001:
       - ff3d5e056e949dccd63bcaaff4989d4a
-      - 6
+      - 7
     ibd-forecast:
       - b5ffacab62be68f93d70a5a82eb231d6
-      - 18
+      - 19
+    ra-forecast:
+      - 9d49109c2dc9e038362cfc845ddc0fa8
+      - 1
   surveys:
     baseline_cd_risc_survey:
       - 4d9f3393a80ecb9d804462d7e1883247
@@ -121,8 +124,8 @@ active:
       - a24b6b4a41c1d990161cab9d4857fe6f
       - 3
     digi-ibd-001::promis-gi-belly-pain-screening:
-      - abcdacabc501668ed65952c452631e2f
-      - 3
+      - 00c2ef483454c3de6cccb32e94557030
+      - 4
     digi-ibd-001::promis-gi-diarrhea-screening:
       - dc3f0f94e00dbc5e704d0c36e203dc76
       - 3
@@ -195,6 +198,12 @@ active:
     library::ipaq:
       - 4b104006a1138a3e6ab697c535717d86
       - 1
+    library::mdhaq:
+      - 7ed0ef9dde8cf8cd7803cb967fd08b0c
+      - 1
+    library::mdhaq-bi-weekly:
+      - c06c852fdac5483f28134e6bef3bae03
+      - 1
     library::mpq:
       - fe32b9b074a53a9718d1a6fba16634c4
       - 1
@@ -241,8 +250,8 @@ active:
       - f17635ca757c80f5017bfd97a1ea7ffd
       - 4
     library::promis-gi-belly-pain:
-      - fc64b4c59f1e818d0a913d3161bd7b3d
-      - 4
+      - 076a3833c133d66c1c753d185d52989e
+      - 5
     library::promis-gi-diarrhea:
       - 217f4db1c395bd608e23d165d2b28397
       - 4
@@ -274,8 +283,14 @@ active:
       - 75ecd299a6663930e36fdf194b0e36a8
       - 6
     library::pss-4:
-      - d348f2c626449d64e2a739aac3f941bf
-      - 5
+      - d93f7b1b6920b73462d01ba0ba575fc3
+      - 6
+    library::pss-4-bi-weekly:
+      - 00509f0a1141378960cbe75b1aaa80f8
+      - 1
+    library::rapid3:
+      - 94889e3d3bf3896111bf478adf441fd1
+      - 1
     library::sccai:
       - 31ff8440f26419e7bb4ed405d4e5ac1a
       - 4
@@ -294,6 +309,21 @@ active:
     qol_survey:
       - f9d8eb9c48db097ba5e5f113dc440d6a
       - 8
+    ra-forecast::baseline_demographics:
+      - 6ef561e7892a5d0f18233d3afa438c70
+      - 1
+    ra-forecast::baseline_health:
+      - 94151ae5c3a805c8f61d191c9350221b
+      - 1
+    ra-forecast::fatigue_scale:
+      - 63bebc5892739f455224b4abeb4ace2e
+      - 1
+    ra-forecast::lab_tests:
+      - 5697f280cf56d02105fd394603a84fe5
+      - 1
+    ra-forecast::new_meds:
+      - f813226747fdbb6fef1a83ca5371511e
+      - 1
     satisfaction_survey_final:
       - 4d052e9733e4791c7cee230cb0170d2f
       - 10

@@ -1,4 +1,4 @@
-key: pss-4
+key: pss-4-bi-weekly
 scorable: true
 score:
   fn: sum-score
@@ -11,17 +11,16 @@ metadata:
   references: []
 schedule:
   type: PERIOD
-  period: MONTHLY
+  period: BI_WEEKLY
 timeRequirements: 
   time: 1
   timeUnits: minutes
 name: Stress
-short: "Tell us about your stress over the last month"
 intro:
   title: "Stress"
   description: >-
     The questions in this scale ask you about your feelings and
-    thoughts during the last month.
+    thoughts during the last 2 weeks.
 
 
     In each case, please select your response by choosing the answer that
@@ -32,7 +31,7 @@ outro:
 sections:
   - key: "questions"
     title: ""
-    description: "In the last month:"
+    description: "In the last 2 weeks:"
     questions:
       - key: control
         question: How often have you felt that you were unable to
