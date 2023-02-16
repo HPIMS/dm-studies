@@ -40,7 +40,7 @@
       "ineligibleText": "You must have a diagnosis of rheumatoid arthritis."
     },
     {
-      "text": "Are you on a medication to rheumatoid arthritis such as NSAIDs (ibuprofen, diclofenac, meloxicam, indomethacin), a biologic medication (infliximab, remicade, inflectra, renflexis, avsola, adalimumab, humira, certrolizumab, cimzia, tocilizumab, actemra, sarilumab, kevzara, golimumab, simponi, etanercept, Enbrel, abatacept, Orencia, rituximab, rituxan), or a others (rinvoq, upadacitinib, tofacitinib, xeljanz, baricitinib, olumiant, azathioprine, methotrexate, sulfasalazine, leflunomide, etc)?",
+      "text": "Are you on a medication to treat rheumatoid arthritis such as NSAIDs (ibuprofen, diclofenac, meloxicam, indomethacin), a biologic medication (infliximab, remicade, inflectra, renflexis, avsola, adalimumab, humira, certrolizumab, cimzia, tocilizumab, actemra, sarilumab, kevzara, golimumab, simponi, etanercept, Enbrel, abatacept, Orencia, rituximab, rituxan), or another type (rinvoq, upadacitinib, tofacitinib, xeljanz, baricitinib, olumiant, azathioprine, methotrexate, sulfasalazine, leflunomide, etc)?",
       "isEligible": true,
       "ineligibleText": "You must be on a medication to treat rheumatoid arthritis."
     },
@@ -498,7 +498,7 @@
             ["Email", "raforecast@mssm.edu"],
             [
               "Text",
-              "A study coordinator will then be able to mail a device to you."
+              ". A study coordinator will then be able to mail a device to you."
             ]
           ]
         ],
@@ -547,39 +547,39 @@
         [
           "BodyLarge",
           "There are potentially risks and discomforts associated with participation in this study:"
-        ]
-      ],
-      [
-        "OrderedList",
+        ],
         [
+          "OrderedList",
           [
-            "BodyLarge",
-            "Risk of loss of private or health information; this risk always exists, but there are procedures in place to minimize the risk."
-          ],
-          [
-            "BodyLarge",
-            "If you are being provided with an Apple Watch or Fitbit you should understand that you are agreeing to data sharing and privacy agreements with Apple or Google. You will read through and agree to this as part of the setup of this device. This agreement is the same agreement you would enter into with Apple or Google as would take place if you bought the device yourself. If you already have your own device you have already entered into a privacy and data use agreement with the device company. You should review this."
+            [
+              "BodyLarge",
+              "Risk of loss of private or health information; this risk always exists, but there are procedures in place to minimize the risk."
+            ],
+            [
+              "BodyLarge",
+              "If you are being provided with an Apple Watch or Fitbit you should understand that you are agreeing to data sharing and privacy agreements with Apple or Google. You will read through and agree to this as part of the setup of this device. This agreement is the same agreement you would enter into with Apple or Google as would take place if you bought the device yourself. If you already have your own device you have already entered into a privacy and data use agreement with the device company. You should review this."
+            ]
           ]
-        ]
-      ],
-      [
-        "BodyLarge",
-        "You should understand that these commercially available wearable devices collect information about you. You should carefully read the terms of the data agreements you are entering into when using the wearable device to fully understand the information that is collected from these devices and what the device companies will have access too. This can include but is not limited to your location data and possibly your activities on your cell phone. As part of the study, we do not have access to this. We only have access to the following information from each device. This is already being collected from each device as part of their standard commercial use: "
-      ],
-      [
-        "OrderedList",
+        ],
         [
+          "BodyLarge",
+          "You should understand that these commercially available wearable devices collect information about you. You should carefully read the terms of the data agreements you are entering into when using the wearable device to fully understand the information that is collected from these devices and what the device companies will have access too. This can include but is not limited to your location data and possibly your activities on your cell phone. As part of the study, we do not have access to this. We only have access to the following information from each device. This is already being collected from each device as part of their standard commercial use: "
+        ],
+        [
+          "OrderedList",
           [
-            "BodyLarge",
-            "Apple Watch: Heart rate, heart rate variability (time difference between each heartbeat), your activity, oxygen levels (depending upon the model of your Apple Watch), environmental noise."
-          ],
-          [
-            "BodyLarge",
-            "Fitbit:  Heart rate, heart rate variability (time difference between each heartbeat), activity, sleep stages and quality."
-          ],
-          [
-            "BodyLarge",
-            "Oura Ring: Heart rate, heart rate variability (time difference between each heartbeat), activity, sleep stage and quality, body temperature."
+            [
+              "BodyLarge",
+              "Apple Watch: Heart rate, heart rate variability (time difference between each heartbeat), your activity, oxygen levels (depending upon the model of your Apple Watch), environmental noise."
+            ],
+            [
+              "BodyLarge",
+              "Fitbit:  Heart rate, heart rate variability (time difference between each heartbeat), activity, sleep stages and quality."
+            ],
+            [
+              "BodyLarge",
+              "Oura Ring: Heart rate, heart rate variability (time difference between each heartbeat), activity, sleep stage and quality, body temperature."
+            ]
           ]
         ]
       ]
