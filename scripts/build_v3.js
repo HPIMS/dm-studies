@@ -47,13 +47,12 @@ async function getDependencyFiles(fileDefinitions) {
 }
 
 async function getFile(dir, group, file) {
-  const ret = {};
+  const taskDefinition = {};
 
   const rawData = await fs.promises.readFile(path.join(dir, group, file), {
     encoding: "utf-8",
   });
   const data = YAML.parse(rawData) || {};
-
   const { _extends } = data;
 
   if (_extends) {
@@ -64,48 +63,104 @@ async function getFile(dir, group, file) {
       file: `${f}.yaml`,
     }));
     const inheritanceFiles = await getDependencyFiles(fileDefinitions);
+
     // A -> B -> C where C is extended by B, and B is extended by A.
     // Therefore, we reverse the list and apply each change on top of
     // the next in the list. Sections from task A will appear BEFORE
     // the sections of task B when completing the task.
-    inheritanceFiles.reverse().forEach((parentTask, index) => {
-      const { key: taskKey } = parentTask;
-      // It's possible to extend a task multiple times, for example we
+    inheritanceFiles.reverse().forEach((inheritableTask, index) => {
+      const { key: inheritableTaskKey, sections = [] } = inheritableTask;
+      let mergedSections = sections;
+      // Some tasks may have sections with the same key (quite common). Also,
+      // it's possible to extend a task multiple times, for example we
       // may want to show one questionnaire, have the participant do
       // another task, then show the same  questionnaire to see if their
       // responses chance. Therefore, we need to assign unique keys to each
       // section. We also need to adjust any triggers that are used so that
-      // skip patterns continue to work.
+      // skip patterns continue to work. We only do this if the task inherits
+      // from multiple tasks. If it just inherits from one, then we know
+      // that there can't be a collision, unless the task it's inheriting
+      // from is improperly defined.
+      if (inheritanceFiles.length > 1) {
+        const createModifiedSectionKey = (taskIdx, taskKey, sectionKey) => {
+          return (
+            `task_key=${taskKey};` +
+            `task_idx=${taskIdx};` +
+            `section=${sectionKey};`
+          );
+        };
 
-      // TODO: ONLY DO THIS IF EXTENDS.LENGTH > 1
-      const blah = (taskKey.sections || []).map((section) => {
-        const { key: originalSectionKey } = section;
+        const modifyCondition = (taskIdx, taskKey, condition) => {
+          return condition.map((cond) => {
+            const { section, AND } = cond;
 
-        const taskIndex = inheritanceFiles.length - index - 1;
+            const modified = {
+              ...cond,
+              section: createModifiedSectionKey(taskIdx, taskKey, section),
+            };
 
-        // Add the task appearance index
-        const sectionKey = `${taskKey}__${taskIndex}__${originalSectionKey}`;
-        // If we extend more than one task, add the taskKey and taskIndex
-        // to the section key. We also need to adjust any triggers that
-        // are used so that skip patterns continue to work.
+            if (AND) {
+              modified.AND = modifyCondition(cond.AND);
+            }
 
-        console.log("HERE!", sectionKey);
-        // const newKey
-        //
-      });
+            return modified;
+          });
+        };
 
-      Object.assign(ret, {
-        ...parentTask,
-        sections: [...(parentTask.sections || []), ...(ret.sections || [])],
+        mergedSections = mergedSections.map((section) => {
+          const { key: originalSectionKey, questions: originalQuestions = [] } =
+            section;
+          const taskIndex = inheritanceFiles.length - index - 1;
+
+          // Create a new section key to uniquely identify this task section
+          const sectionKey = createModifiedSectionKey(
+            taskIndex,
+            inheritableTaskKey,
+            originalSectionKey
+          );
+
+          // We also need to adjust any triggers that are used so that skip patterns function.
+          const questions = originalQuestions.map((question) => {
+            const { triggers } = question;
+            const updatedQuestion = { ...question };
+
+            if (triggers) {
+              updatedQuestion.triggers = triggers.map((trigger) => {
+                const { condition } = trigger;
+                // Conditions are recursive, we need to get the section from each, and update
+                // it to the new section key.
+                return {
+                  ...trigger,
+                  condition: modifyCondition(
+                    taskIndex,
+                    inheritableTaskKey,
+                    condition
+                  ),
+                };
+              });
+            }
+            return updatedQuestion;
+          });
+
+          return {
+            ...section,
+            questions,
+            key: sectionKey,
+          };
+        });
+      }
+
+      Object.assign(taskDefinition, {
+        ...inheritableTask,
+        sections: [...mergedSections, ...(taskDefinition.sections || [])],
       });
     });
-
-    //
-    // TODO: USE DEPENDENCY FILES!
   }
 
-  // return { ...(YAML.parse(rawBaseData) || {}), ...data };
-  return Object.assign(ret, data);
+  return Object.assign(taskDefinition, {
+    ...data,
+    sections: [...(data.sections || []), ...(taskDefinition.sections || [])],
+  });
 }
 
 const dftSurveyCfg = {};
