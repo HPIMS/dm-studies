@@ -69,7 +69,7 @@ async function getFile(dir, group, file) {
     // the next in the list. Sections from task A will appear BEFORE
     // the sections of task B when completing the task.
     inheritanceFiles.reverse().forEach((inheritableTask, index) => {
-      const { key: inheritableTaskKey, sections = [] } = inheritableTask;
+      const { key: inheritableTaskKey, sections } = inheritableTask;
       let mergedSections = sections;
       // Some tasks may have sections with the same key (quite common). Also,
       // it's possible to extend a task multiple times, for example we
@@ -107,60 +107,76 @@ async function getFile(dir, group, file) {
           });
         };
 
-        mergedSections = mergedSections.map((section) => {
-          const { key: originalSectionKey, questions: originalQuestions = [] } =
-            section;
-          const taskIndex = inheritanceFiles.length - index - 1;
+        if (sections) {
+          mergedSections = mergedSections.map((section) => {
+            const {
+              key: originalSectionKey,
+              questions: originalQuestions = [],
+            } = section;
+            const taskIndex = inheritanceFiles.length - index - 1;
 
-          // Create a new section key to uniquely identify this task section
-          const sectionKey = createModifiedSectionKey(
-            taskIndex,
-            inheritableTaskKey,
-            originalSectionKey
-          );
+            // Create a new section key to uniquely identify this task section
+            const sectionKey = createModifiedSectionKey(
+              taskIndex,
+              inheritableTaskKey,
+              originalSectionKey
+            );
 
-          // We also need to adjust any triggers that are used so that skip patterns function.
-          const questions = originalQuestions.map((question) => {
-            const { triggers } = question;
-            const updatedQuestion = { ...question };
+            // We also need to adjust any triggers that are used so that skip patterns function.
+            const questions = originalQuestions.map((question) => {
+              const { triggers } = question;
+              const updatedQuestion = { ...question };
 
-            if (triggers) {
-              updatedQuestion.triggers = triggers.map((trigger) => {
-                const { condition } = trigger;
-                // Conditions are recursive, we need to get the section from each, and update
-                // it to the new section key.
-                return {
-                  ...trigger,
-                  condition: modifyCondition(
-                    taskIndex,
-                    inheritableTaskKey,
-                    condition
-                  ),
-                };
-              });
-            }
-            return updatedQuestion;
+              if (triggers) {
+                updatedQuestion.triggers = triggers.map((trigger) => {
+                  const { condition } = trigger;
+                  // Conditions are recursive, we need to get the section from each, and update
+                  // it to the new section key.
+                  return {
+                    ...trigger,
+                    condition: modifyCondition(
+                      taskIndex,
+                      inheritableTaskKey,
+                      condition
+                    ),
+                  };
+                });
+              }
+              return updatedQuestion;
+            });
+
+            return {
+              ...section,
+              questions,
+              key: sectionKey,
+            };
           });
-
-          return {
-            ...section,
-            questions,
-            key: sectionKey,
-          };
-        });
+        }
       }
 
-      Object.assign(taskDefinition, {
-        ...inheritableTask,
-        sections: [...mergedSections, ...(taskDefinition.sections || [])],
-      });
+      const { sections: _, ...contentToApply } = inheritableTask;
+      Object.assign(taskDefinition, contentToApply);
+      if (mergedSections || taskDefinition.sections) {
+        Object.assign(taskDefinition, {
+          sections: [
+            ...(mergedSections || []),
+            ...(taskDefinition.sections || []),
+          ],
+        });
+      }
     });
   }
 
-  return Object.assign(taskDefinition, {
-    ...data,
-    sections: [...(data.sections || []), ...(taskDefinition.sections || [])],
-  });
+  const { sections: _, ...contentToApply } = data;
+  Object.assign(taskDefinition, contentToApply);
+
+  if (data.sections || taskDefinition.sections) {
+    Object.assign(taskDefinition, {
+      sections: [...(data.sections || []), ...(taskDefinition.sections || [])],
+    });
+  }
+
+  return taskDefinition;
 }
 
 const dftSurveyCfg = {};

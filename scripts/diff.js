@@ -47,49 +47,165 @@ diffs.set("surveys", new Set());
 diffs.set("multimedia", new Set());
 diffs.set("interventions", new Set());
 
+async function getDependencyFiles(fileDefinitions) {
+  const promises = fileDefinitions.map(async (definition) => {
+    const { dir, group, file } = definition;
+    let rawData = {};
+    // Try the current group first. If that fails, try the library.
+    try {
+      rawData = await fs.promises.readFile(path.join(dir, group, file), {
+        encoding: "utf-8",
+      });
+    } catch (err) {
+      log.warning(`Could not find ${file} in ${group}. Checking library.`);
+      try {
+        rawData = await fs.promises.readFile(path.join(dir, "library", file), {
+          encoding: "utf-8",
+        });
+      } catch (err) {
+        log.error(`Could not find ${file} in library. Skipping.`);
+      }
+    }
+    return YAML.parse(rawData) || {};
+  });
+  return Promise.all(promises);
+}
+
 async function getFile(dir, group, file) {
-  let rawBaseData = "";
+  const taskDefinition = {};
+
   const rawData = await fs.promises.readFile(path.join(dir, group, file), {
     encoding: "utf-8",
   });
-
   const data = YAML.parse(rawData) || {};
   const { _extends } = data;
 
   if (_extends) {
-    const extendsFile = `${_extends}.yaml`;
-    //console.log("HERE", YAML.parse("{}"));
-    // Try the current group first. If that fails, try the library.
-    try {
-      rawBaseData = await fs.promises.readFile(
-        path.join(dir, group, extendsFile),
-        {
-          encoding: "utf-8",
+    const inheritanceChain = Array.isArray(_extends) ? _extends : [_extends];
+    const fileDefinitions = inheritanceChain.map((f) => ({
+      dir,
+      group,
+      file: `${f}.yaml`,
+    }));
+    const inheritanceFiles = await getDependencyFiles(fileDefinitions);
+
+    // A -> B -> C where C is extended by B, and B is extended by A.
+    // Therefore, we reverse the list and apply each change on top of
+    // the next in the list. Sections from task A will appear BEFORE
+    // the sections of task B when completing the task.
+    inheritanceFiles.reverse().forEach((inheritableTask, index) => {
+      const { key: inheritableTaskKey, sections } = inheritableTask;
+      let mergedSections = sections;
+      // Some tasks may have sections with the same key (quite common). Also,
+      // it's possible to extend a task multiple times, for example we
+      // may want to show one questionnaire, have the participant do
+      // another task, then show the same  questionnaire to see if their
+      // responses chance. Therefore, we need to assign unique keys to each
+      // section. We also need to adjust any triggers that are used so that
+      // skip patterns continue to work. We only do this if the task inherits
+      // from multiple tasks. If it just inherits from one, then we know
+      // that there can't be a collision, unless the task it's inheriting
+      // from is improperly defined.
+      if (inheritanceFiles.length > 1) {
+        const createModifiedSectionKey = (taskIdx, taskKey, sectionKey) => {
+          return (
+            `task_key=${taskKey};` +
+            `task_idx=${taskIdx};` +
+            `section=${sectionKey};`
+          );
+        };
+
+        const modifyCondition = (taskIdx, taskKey, condition) => {
+          return condition.map((cond) => {
+            const { section, AND } = cond;
+
+            const modified = {
+              ...cond,
+              section: createModifiedSectionKey(taskIdx, taskKey, section),
+            };
+
+            if (AND) {
+              modified.AND = modifyCondition(cond.AND);
+            }
+
+            return modified;
+          });
+        };
+
+        if (sections) {
+          mergedSections = mergedSections.map((section) => {
+            const {
+              key: originalSectionKey,
+              questions: originalQuestions = [],
+            } = section;
+            const taskIndex = inheritanceFiles.length - index - 1;
+
+            // Create a new section key to uniquely identify this task section
+            const sectionKey = createModifiedSectionKey(
+              taskIndex,
+              inheritableTaskKey,
+              originalSectionKey
+            );
+
+            // We also need to adjust any triggers that are used so that skip patterns function.
+            const questions = originalQuestions.map((question) => {
+              const { triggers } = question;
+              const updatedQuestion = { ...question };
+
+              if (triggers) {
+                updatedQuestion.triggers = triggers.map((trigger) => {
+                  const { condition } = trigger;
+                  // Conditions are recursive, we need to get the section from each, and update
+                  // it to the new section key.
+                  return {
+                    ...trigger,
+                    condition: modifyCondition(
+                      taskIndex,
+                      inheritableTaskKey,
+                      condition
+                    ),
+                  };
+                });
+              }
+              return updatedQuestion;
+            });
+
+            return {
+              ...section,
+              questions,
+              key: sectionKey,
+            };
+          });
         }
-      );
-    } catch (err) {
-      log.warning(
-        `Could not find ${extendsFile} in ${group}. Checking library.`
-      );
-      try {
-        rawBaseData = await fs.promises.readFile(
-          path.join(dir, "library", extendsFile),
-          {
-            encoding: "utf-8",
-          }
-        );
-      } catch (err) {
-        log.error(`Could not find ${extendsFile} in library. Skipping.`);
       }
-    }
+
+      const { sections: _, ...contentToApply } = inheritableTask;
+      Object.assign(taskDefinition, contentToApply);
+      if (mergedSections || taskDefinition.sections) {
+        Object.assign(taskDefinition, {
+          sections: [
+            ...(mergedSections || []),
+            ...(taskDefinition.sections || []),
+          ],
+        });
+      }
+    });
   }
 
-  const allData = { ...(YAML.parse(rawBaseData) || {}), ...data };
+  const { sections: _, ...contentToApply } = data;
+  Object.assign(taskDefinition, contentToApply);
+
+  if (data.sections || taskDefinition.sections) {
+    Object.assign(taskDefinition, {
+      sections: [...(data.sections || []), ...(taskDefinition.sections || [])],
+    });
+  }
+
   return {
-    data: allData,
+    data: taskDefinition,
     hash: crypto
       .createHash("md5")
-      .update(JSON.stringify(allData))
+      .update(JSON.stringify(taskDefinition))
       .digest("hex"),
   };
 }
