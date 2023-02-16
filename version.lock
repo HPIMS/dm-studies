@@ -7,6 +7,9 @@ active:
       - f3b1833a44eb0726ede71f5f2e88aa58
       - 6
   multimedia:
+    cramp::intro:
+      - 8c2184eb1048ecdd60638d695390534b
+      - 1
     hpi-decode-bp::calibration-video:
       - 10cf91bed086e99dbfad0b0c15084592
       - 2
@@ -49,25 +52,28 @@ active:
       - 15
     cppd-1:
       - 47b398d5d9dc33283e05dffc54ed3e7f
-      - 2
+      - 3
     cppd-2:
       - af2b01db653dcf445e91eda0f23b978c
-      - 1
+      - 2
     cppd-2__case:
       - 18ee85973d1fd6b33fb0ca55c177eca9
-      - 1
+      - 2
     cppd-2__control:
       - a615343fac5faa3e1bf1b5b198c3b157
+      - 2
+    cramp:
+      - f7093210061796f6c2f0e420abe20cf4
       - 1
     digi-ibd-001:
       - ff3d5e056e949dccd63bcaaff4989d4a
       - 7
     ibd-forecast:
       - b5ffacab62be68f93d70a5a82eb231d6
-      - 19
+      - 20
     ra-forecast:
       - 9d49109c2dc9e038362cfc845ddc0fa8
-      - 1
+      - 2
   surveys:
     baseline_cd_risc_survey:
       - 4d9f3393a80ecb9d804462d7e1883247
@@ -83,6 +89,57 @@ active:
       - 1
     cppd-1::physical-therapy:
       - bc5e43b87b0ed4c4f97de7eb049c1561
+      - 1
+    cramp::daily-check-in:
+      - 904ffe7e3d9b9c1147d9d2862bab475f
+      - 1
+    cramp::dass-21-post:
+      - 038684c27ab2b587e85748e9930b4107
+      - 1
+    cramp::dass-21-pre:
+      - b3f318a478e8a95e87cf24e55a0c9724
+      - 1
+    cramp::demographics:
+      - 68399ba2dda9ac6e89d8620a0f142ba9
+      - 1
+    cramp::ema:
+      - 7db752e1f3adea837fc818aca1bbedd8
+      - 1
+    cramp::final-check-in:
+      - 9ceb12eea063c186b7f9c1ef4bc73b96
+      - 1
+    cramp::general-health:
+      - 6a9d68fab3b10691a85ceea52a76dd03
+      - 1
+    cramp::intro:
+      - 4da3417cb4cf17d60dd5594c7f84badc
+      - 1
+    cramp::menstrual-health:
+      - 020b8639f7aebd202c966c4e7f8f39d0
+      - 1
+    cramp::menstrual-pain:
+      - 83a99e690f0e93e28d005735980cbf7d
+      - 1
+    cramp::mood:
+      - c608e22c4a5ab09f8de7bd93ac23e945
+      - 1
+    cramp::pregnancy:
+      - e3ef19a9937de4eef1ceec336514390e
+      - 1
+    cramp::pss-10-post:
+      - bd1f1eb0850fa3473a6b087494fb98f1
+      - 1
+    cramp::pss-10-pre:
+      - 2bc8bf87c3ed0b65efb62d6834755fd6
+      - 1
+    cramp::sss-8-post:
+      - 7e9e94e5fb8cd0fe7cfd334c26f7b8e2
+      - 1
+    cramp::sss-8-pre:
+      - da5e9ac0c94e095e46e5b70e15b4825a
+      - 1
+    cramp::test-task:
+      - 0d1b0b05fdc2011dee42ab0dc616c233
       - 1
     digi-ibd-001::begin-next-phase:
       - fd68b027dcb21d300b4fa0c454873601
@@ -183,12 +240,18 @@ active:
     ibd-forecast::pss-4-bi-weekly:
       - 09197dab70abbae80a5c4819c5389450
       - 7
+    library::bfi-10:
+      - b65aacf6301251f63b0e3584b15cb4f1
+      - 1
     library::cd-risc-10:
-      - 3c45608b03052929ee972495885bb036
-      - 5
+      - 5fd4756c7d76f5854d5ee4f6a374dee1
+      - 6
     library::cd-risc-2:
       - f17054b477203575a8ea3c2bd02ad89a
       - 4
+    library::dass-21:
+      - 0f8a2fd5cb24f40bac5165c40d388730
+      - 1
     library::euro-qol-eq-5d-5l:
       - 45f468e6ef2123bd9dda2527a053641f
       - 1
@@ -197,6 +260,9 @@ active:
       - 5
     library::ipaq:
       - 4b104006a1138a3e6ab697c535717d86
+      - 1
+    library::lsns:
+      - 718d227f05480cfadc12e77b85e2fbf9
       - 1
     library::mdhaq:
       - 7ed0ef9dde8cf8cd7803cb967fd08b0c
@@ -213,9 +279,12 @@ active:
     library::nih-cpsi:
       - 2dd555c74e605aad9fe133853af2fe80
       - 1
-    library::pcs:
-      - 01f2d04634512c193a122d941159bff1
+    library::panas-sf:
+      - 7a4e3a2c885856bfc99c66c6d9603436
       - 1
+    library::pcs:
+      - 174272eaefd4422357196ccf5eb2416e
+      - 2
     library::pelvic-floor-distress-inventory-sf20:
       - cfe434f4e1bcd922c161acb67b29b988
       - 2
@@ -259,8 +328,8 @@ active:
       - dd258d317db3ac6785d097f6cc5eb93a
       - 1
     library::promis-pain-interference-6b-v1.0:
-      - de3366b26f8517a76d1c9a4894575763
-      - 4
+      - c061b29d97866c37e83bcbc3702b6db1
+      - 5
     library::promis-pain-interference-6b-v1.1:
       - ac52dbcae6b987943014a52bd9356034
       - 1
@@ -280,23 +349,47 @@ active:
       - 48915b8af812dc8a9ada2c7b48f8739d
       - 6
     library::pss-10:
-      - 75ecd299a6663930e36fdf194b0e36a8
-      - 6
+      - f9f64ccf8b4f86ee83780965e1f8945b
+      - 7
+    library::pss-10-weekly:
+      - 3819367095301b75912834053fc9b62a
+      - 1
     library::pss-4:
       - d93f7b1b6920b73462d01ba0ba575fc3
       - 6
     library::pss-4-bi-weekly:
       - 00509f0a1141378960cbe75b1aaa80f8
       - 1
+    library::psst:
+      - b686331c3dd2bebb7a7b2225604f7217
+      - 1
     library::rapid3:
       - 94889e3d3bf3896111bf478adf441fd1
+      - 1
+    library::rs-14:
+      - 8a42279ca7edb82478ac98ab53291599
+      - 1
+    library::rsa:
+      - 483d7131e3d9596bae43b25d33c7a8c6
       - 1
     library::sccai:
       - 31ff8440f26419e7bb4ed405d4e5ac1a
       - 4
+    library::sei-hs:
+      - 10427aef2a6339ce72e236a0828b56f6
+      - 1
     library::sibdq:
       - c7d7cf6748d6c47f6c1c36ee1b1a29b5
       - 4
+    library::sss-8:
+      - d6f828c61add2b569a341ffc5f6369fc
+      - 1
+    library::strain:
+      - 5b705673dcabe47935102d6ca52762c6
+      - 1
+    library::ucls-ls:
+      - fe283fe1757564f080b188b73ac892af
+      - 1
     mood_survey:
       - 4a881f332b3e4df72a785cfe04d696ed
       - 7
@@ -337,8 +430,8 @@ active:
       - 0449d9f5264968094ea72766c8838186
       - 9
     warrior-shield::daily-check-in:
-      - c930a7be123813b45058f3cf54d7409f
-      - 4
+      - 961c0e388785c8a2b11609c9b230c349
+      - 5
     warrior-shield::demographics:
       - f6076247f884a58a81168f1af2443225
       - 4

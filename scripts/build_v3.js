@@ -4,10 +4,10 @@ const YAML = require("yaml");
 const chalk = require("chalk");
 
 const log = {
-  error: (t) => console.log(chalk.red(t)),
-  warning: (t) => console.log(chalk.yellow(t)),
-  info: (t) => console.log(chalk.cyan(t)),
-  important: (t) => console.log(chalk.green(t)),
+  error: (t) => {}, // console.log(chalk.red(t)),
+  warning: (t) => {}, // console.log(chalk.yellow(t)),
+  info: (t) => {}, // console.log(chalk.cyan(t)),
+  important: (t) => {}, // console.log(chalk.green(t)),
 };
 
 const versions = YAML.parse(
@@ -22,42 +22,90 @@ async function mkdir(path) {
   }
 }
 
+async function getDependencyFiles(fileDefinitions) {
+  const promises = fileDefinitions.map(async (definition) => {
+    const { dir, group, file } = definition;
+    let rawData = {};
+    // Try the current group first. If that fails, try the library.
+    try {
+      rawData = await fs.promises.readFile(path.join(dir, group, file), {
+        encoding: "utf-8",
+      });
+    } catch (err) {
+      log.warning(`Could not find ${file} in ${group}. Checking library.`);
+      try {
+        rawData = await fs.promises.readFile(path.join(dir, "library", file), {
+          encoding: "utf-8",
+        });
+      } catch (err) {
+        log.error(`Could not find ${file} in library. Skipping.`);
+      }
+    }
+    return YAML.parse(rawData) || {};
+  });
+  return Promise.all(promises);
+}
+
 async function getFile(dir, group, file) {
-  let rawBaseData = "";
+  const ret = {};
+
   const rawData = await fs.promises.readFile(path.join(dir, group, file), {
     encoding: "utf-8",
   });
-
   const data = YAML.parse(rawData) || {};
+
   const { _extends } = data;
 
   if (_extends) {
-    const extendsFile = `${_extends}.yaml`;
-    // Try the current group first. If that fails, try the library.
-    try {
-      rawBaseData = await fs.promises.readFile(
-        path.join(dir, group, extendsFile),
-        {
-          encoding: "utf-8",
-        }
-      );
-    } catch (err) {
-      log.warning(
-        `Could not find ${extendsFile} in ${group}. Checking library.`
-      );
-      try {
-        rawBaseData = await fs.promises.readFile(
-          path.join(dir, "library", extendsFile),
-          {
-            encoding: "utf-8",
-          }
-        );
-      } catch (err) {
-        log.error(`Could not find ${extendsFile} in library. Skipping.`);
-      }
-    }
+    const inheritanceChain = Array.isArray(_extends) ? _extends : [_extends];
+    const fileDefinitions = inheritanceChain.map((f) => ({
+      dir,
+      group,
+      file: `${f}.yaml`,
+    }));
+    const inheritanceFiles = await getDependencyFiles(fileDefinitions);
+    // A -> B -> C where C is extended by B, and B is extended by A.
+    // Therefore, we reverse the list and apply each change on top of
+    // the next in the list. Sections from task A will appear BEFORE
+    // the sections of task B when completing the task.
+    inheritanceFiles.reverse().forEach((parentTask, index) => {
+      const { key: taskKey } = parentTask;
+      // It's possible to extend a task multiple times, for example we
+      // may want to show one questionnaire, have the participant do
+      // another task, then show the same  questionnaire to see if their
+      // responses chance. Therefore, we need to assign unique keys to each
+      // section. We also need to adjust any triggers that are used so that
+      // skip patterns continue to work.
+
+      // TODO: ONLY DO THIS IF EXTENDS.LENGTH > 1
+      const blah = (taskKey.sections || []).map((section) => {
+        const { key: originalSectionKey } = section;
+
+        const taskIndex = inheritanceFiles.length - index - 1;
+
+        // Add the task appearance index
+        const sectionKey = `${taskKey}__${taskIndex}__${originalSectionKey}`;
+        // If we extend more than one task, add the taskKey and taskIndex
+        // to the section key. We also need to adjust any triggers that
+        // are used so that skip patterns continue to work.
+
+        console.log("HERE!", sectionKey);
+        // const newKey
+        //
+      });
+
+      Object.assign(ret, {
+        ...parentTask,
+        sections: [...(parentTask.sections || []), ...(ret.sections || [])],
+      });
+    });
+
+    //
+    // TODO: USE DEPENDENCY FILES!
   }
-  return { ...(YAML.parse(rawBaseData) || {}), ...data };
+
+  // return { ...(YAML.parse(rawBaseData) || {}), ...data };
+  return Object.assign(ret, data);
 }
 
 const dftSurveyCfg = {};
