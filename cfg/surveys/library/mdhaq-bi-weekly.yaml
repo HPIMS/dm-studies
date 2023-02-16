@@ -549,7 +549,7 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: ____
+      - key: symptoms
         question: Please select if you have experienced any of the following over the last month?
         type: MULTIPLE_CHOICE
         options:
@@ -725,7 +725,7 @@ sections:
             text: Better
             score: 2
           - value: the_same
-            text: the Same
+            text: The Same
             score: 3
           - value: worse
             text: Worse
