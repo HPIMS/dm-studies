@@ -1,0 +1,76 @@
+key: promis-gh-qol-2-item
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: MONTHLY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: General Health and Quality of Life
+short: Your opinion on your life
+intro:
+  title: General Health and Quality of Life
+  description: >-
+    We want to understand more about your quality of life. Please fill
+    out this survey and let us know. You may skip any questions that you are not
+    comfortable answering.
+
+    The surveys in this app are NOT a replacement or substitute for medical care. The answers you provide will not be used for clinical care. For any health concerns you may have, please contact your regular healthcare provider.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: health
+        question: In general, would you say your health is...
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+            score: 5
+          - value: very_good
+            text: Very Good
+            score: 4
+          - value: good
+            text: Good
+            score: 3
+          - value: fair
+            text: Fair
+            score: 2
+          - value: poor
+            text: Poor
+            score: 1
+      - key: quality-of-life
+        question: In general, would you say your quality of life is...
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+            score: 5
+          - value: very_good
+            text: Very Good
+            score: 4
+          - value: good
+            text: Good
+            score: 3
+          - value: fair
+            text: Fair
+            score: 2
+          - value: poor
+            text: Poor
+            score: 1
+

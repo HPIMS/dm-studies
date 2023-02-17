@@ -1,0 +1,33 @@
+key: which-ibd
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 10
+  timeUnits: seconds
+name: IBD Type
+short: Tell us about your IBD
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: ibd_type
+        question: Which type of IBD do you have?
+        required: true
+        type: SINGLE_CHOICE
+        options:
+          - value: crohns
+            text: Crohn's Disease
+            score: 0
+          - value: ulcerative_colitis
+            text: Ulcerative colitis
+            score: 1
+

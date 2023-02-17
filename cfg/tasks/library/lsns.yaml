@@ -1,0 +1,170 @@
+key: lsns
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references:
+    - https://www.brandeis.edu/roybal/docs/LSNS_website_PDF.pdf
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Social Network
+sections:
+  - type: survey
+    key: "0"
+    title: Family
+    description: Considering the people to whom you are related by birth, marriage,
+      adoption, etc...
+    questions:
+      - key: lsns_1
+        question: How many relatives do you see or hear from at least once a month?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: one
+            text: One
+            score: 1
+          - value: two
+            text: Two
+            score: 2
+          - value: three_or_four
+            text: Three or four
+            score: 3
+          - value: five_to_eight
+            text: Five to eight
+            score: 4
+          - value: nine_or_more
+            text: Nine or more
+            score: 5
+      - key: lsns_2
+        question: How many relatives do you feel at ease with that you can talk about
+          private matters?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: one
+            text: One
+            score: 1
+          - value: two
+            text: Two
+            score: 2
+          - value: three_or_four
+            text: Three or four
+            score: 3
+          - value: five_to_eight
+            text: Five to eight
+            score: 4
+          - value: nine_or_more
+            text: Nine or more
+            score: 5
+      - key: lsns_3
+        question: How many relatives do you feel close to such that you could call on
+          them for help?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: one
+            text: One
+            score: 1
+          - value: two
+            text: Two
+            score: 2
+          - value: three_or_four
+            text: Three or four
+            score: 3
+          - value: five_to_eight
+            text: Five to eight
+            score: 4
+          - value: nine_or_more
+            text: Nine or more
+            score: 5
+  - type: survey
+    key: "1"
+    title: Friendships
+    description: Considering all of your friends including those who live in your
+      neighborhood...
+    questions:
+      - key: lsns_4
+        question: How many of your friends do you see or hear from at least once a month?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: one
+            text: One
+            score: 1
+          - value: two
+            text: Two
+            score: 2
+          - value: three_or_four
+            text: Three or four
+            score: 3
+          - value: five_to_eight
+            text: Five to eight
+            score: 4
+          - value: nine_or_more
+            text: Nine or more
+            score: 5
+      - key: lsns_5
+        question: How many friends do you feel at ease with that you can talk about
+          private matters?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: one
+            text: One
+            score: 1
+          - value: two
+            text: Two
+            score: 2
+          - value: three_or_four
+            text: Three or four
+            score: 3
+          - value: five_to_eight
+            text: Five to eight
+            score: 4
+          - value: nine_or_more
+            text: Nine or more
+            score: 5
+      - key: lsns_6
+        question: How many friends do you feel close to such that you could call on them
+          for help?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: one
+            text: One
+            score: 1
+          - value: two
+            text: Two
+            score: 2
+          - value: three_or_four
+            text: Three or four
+            score: 3
+          - value: five_to_eight
+            text: Five to eight
+            score: 4
+          - value: nine_or_more
+            text: Nine or more
+            score: 5
+

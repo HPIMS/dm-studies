@@ -1,0 +1,852 @@
+key: mdhaq-bi-weekly
+type: task
+active: true
+scorable: true
+score:
+  fn: mdhaq
+  args: {}
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
+timeRequirements:
+  time: 3
+  timeUnits: minutes
+name: Multidimensional Health Assessment
+intro:
+  title: Multidimensional Health Assessment
+  description: Please try to answer each question, even if you do not think it is
+    related to you at this time. There are no right or wrong answers. Please
+    answer exactly as you think or feel. Thank you!
+sections:
+  - type: survey
+    key: group_0
+    title: ""
+    description: "Over the last 2 weeks, were you able to:"
+    questions:
+      - key: ability_a
+        question: Dress yourself, including tying shoelaces and doing buttons?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_b
+        question: Get in and out of bed?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_c
+        question: Lift a full cup or glass to your mouth?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_d
+        question: Walk outdoors on flat ground?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_e
+        question: Wash and dry your entire body?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_f
+        question: Bend down to pick up clothing from the floor?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_g
+        question: Turn regular faucets on and off?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_h
+        question: Get in and out of a car, bus, train, or airplane?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_i
+        question: Walk two miles or three kilometers, if you wish?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_j
+        question: Participate in recreational activities and sports as you would like,
+          if you wish?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3
+      - key: ability_k
+        question: Get a good night's sleep?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1.1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2.2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3.3
+      - key: ability_l
+        question: Deal with feelings of anxiety or being nervous?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1.1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2.2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3.3
+      - key: ability_m
+        question: Deal with feelings of depression or feeling blue?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 0
+          - value: some_difficulty
+            text: With some difficulty
+            score: 1.1
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2.2
+          - value: unable_to_do
+            text: Unable to do
+            score: 3.3
+  - type: survey
+    key: group_1
+    title: ""
+    description: ""
+    questions:
+      - key: pain
+        question: How much pain have you had because of your condition OVER THE PAST
+          WEEK?
+        description: Please indicate below how severe your pain has been, where 0 is no
+          pain, and 10 is pain as bad as it could be.
+        type: SLIDER
+        min: 0
+        minDescription: No Pain
+        max: 10
+        maxDescription: Pain as bad as it could be
+        step: 0.5
+  - type: survey
+    key: group_2
+    title: ""
+    description: How much pain are you having TODAY in each of the joint areas listed below?
+    questions:
+      - key: loc_a
+        question: Left Fingers
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_b
+        question: Left Wrist
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_c
+        question: Left Elbow
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_d
+        question: Left Shoulder
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_e
+        question: Left Hip
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_f
+        question: Left Knee
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_g
+        question: Left Ankle
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_h
+        question: Left Toes
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_i
+        question: Right Fingers
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_j
+        question: Right Wrist
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_k
+        question: Right Elbow
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_l
+        question: Right Shoulder
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_m
+        question: Right Hip
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_n
+        question: Right Knee
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_o
+        question: Right Ankle
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_p
+        question: Right Toes
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_q
+        question: Neck
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: loc_r
+        question: Back
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+  - type: survey
+    key: group_3
+    title: ""
+    description: ""
+    questions:
+      - key: affect
+        question: Consider all the ways in which illness and health conditions may
+          affect you at this time.
+        description: Please indicate below how you are doing, where 0 is very well, and
+          10 is very poorly.
+        type: SLIDER
+        min: 0
+        minDescription: Very well
+        max: 10
+        maxDescription: Very poorly
+        step: 0.5
+  - type: survey
+    key: group_4
+    title: ""
+    description: ""
+    questions:
+      - key: ____
+        question: Please select if you have experienced any of the following over the
+          last month?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Fever
+          - value: b
+            text: Weight gain (>10 lbs)
+          - value: c
+            text: Weight loss (>10 lbs)
+          - value: d
+            text: Feeling sickly
+          - value: e
+            text: Headaches
+          - value: f
+            text: Unusual fatigue
+          - value: g
+            text: Swollen glands
+          - value: h
+            text: Loss of appetite
+          - value: i
+            text: Skin rash or hives
+          - value: j
+            text: Unusual bruising or bleeding
+          - value: k
+            text: Other skin problems
+          - value: l
+            text: Loss of hain
+          - value: m
+            text: Dry eyes
+          - value: n
+            text: Other eye problems
+          - value: o
+            text: Problems with hearing
+          - value: p
+            text: Ringing in the ears
+          - value: q
+            text: Stuffy nose
+          - value: r
+            text: Sores in the mouth
+          - value: s
+            text: Dry mouth
+          - value: t
+            text: Problems with taste or smell
+          - value: u
+            text: Lump in your throat
+          - value: v
+            text: Cough
+          - value: w
+            text: Shortness of breath
+          - value: x
+            text: Wheezing
+          - value: y
+            text: Pain in the chest
+          - value: z
+            text: Heart Pounding (palpitations)
+          - value: aa
+            text: Trouble swallowing
+          - value: ab
+            text: Heartburn or stomach gas
+          - value: ac
+            text: Stomach pain or cramps
+          - value: ad
+            text: Nausea
+          - value: ae
+            text: Vomiting
+          - value: af
+            text: Constipation
+          - value: ag
+            text: Diarrhea
+          - value: ah
+            text: Dark or blooding stools
+          - value: ai
+            text: Problems with urination
+          - value: aj
+            text: Gynecological (female) problems
+          - value: ak
+            text: Dizziness
+          - value: al
+            text: Losing your balance
+          - value: am
+            text: Muscle pain, aches, or cramps
+          - value: an
+            text: Muscle weakness
+          - value: ao
+            text: Paralysis of arms or legs
+          - value: ap
+            text: Numbness or tingling of arms or legs
+          - value: aq
+            text: Fainting spells
+          - value: ar
+            text: Swelling of hands
+          - value: as
+            text: Swelling of ankles
+          - value: at
+            text: Swelling in other joints
+          - value: au
+            text: Joint pain
+          - value: av
+            text: Back pain
+          - value: aw
+            text: Neck pain
+          - value: ax
+            text: Use of drugs not sold in stores
+          - value: ay
+            text: Smoking cigarettes
+          - value: az
+            text: More than 2 alcoholic drinks per day
+          - value: ba
+            text: Depression - feeling blue
+          - value: bb
+            text: Anxiety - feeling nervous
+          - value: bc
+            text: Problems with thinking
+          - value: bd
+            text: Problems with memory
+          - value: be
+            text: Problems with sleeping
+          - value: bf
+            text: Sexual problems
+          - value: bg
+            text: Burning in sex organs
+          - value: bh
+            text: Problems with social activities
+  - type: survey
+    key: group_5
+    title: ""
+    description: ""
+    questions:
+      - key: stiff
+        question: When you awakened in the morning OVER THE LAST WEEK, did you feel
+          stiff?
+        type: YESNO_CHOICE
+      - key: stiff_duration
+        question: How long does it take until you are as limber as you will be for the
+          day?
+        type: DURATION
+        hours: true
+        minutes: true
+        hoursPlaceholder: hours
+        minutesPlaceholder: or minutes
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_5
+                question: stiff
+                operator: =
+                value: yes
+      - key: exercise
+        question: How often do you exercise aerobically (sweating, increased heart rate,
+          shortness of breath) for at least one half hour (30 minutes)?
+        type: SINGLE_CHOICE
+        options:
+          - value: 3+_weekly
+            text: 3 or more times per week
+            score: 3
+          - value: 1-2_weekly
+            text: 1-2 times per week
+            score: 2
+          - value: 1-2_monthly
+            text: 1-2 times per month
+            score: 1
+          - value: not_regularly
+            text: Do not exercise regularly
+            score: 0
+          - value: unable
+            text: Cannot exercise due to disability / handicap
+            score: 9
+      - key: health_change
+        question: How do you feel today compared to one week ago?
+        type: SINGLE_CHOICE
+        options:
+          - value: much_better
+            text: Much better
+            score: 1
+          - value: better
+            text: Better
+            score: 2
+          - value: the_same
+            text: the Same
+            score: 3
+          - value: worse
+            text: Worse
+            score: 4
+          - value: much_worse
+            text: Much Worse
+            score: 5
+      - key: fatigue
+        question: How much of a problem has UNUSUAL fatigue or tiredness been for you
+          OVER THE PAST WEEK?
+        description: Where 0 means fatigue is no problem, and 10 means fatigue is a
+          major problem.
+        type: SLIDER
+        min: 0
+        minDescription: No problem
+        max: 10
+        maxDescription: Major problem
+        step: 0.5
+  - type: survey
+    key: group_6
+    title: ""
+    description: ""
+    questions:
+      - key: health_matters
+        question: "Over the last 6 months have you had:"
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: An operation
+            inlineQuestion:
+              key: health_matters_a_description
+              question: Please explain
+              type: TEXTAREA
+          - value: b
+            text: Inpatient hospitalization
+            inlineQuestion:
+              key: health_matters_b_description
+              question: Please explain
+              type: TEXTAREA
+          - value: c
+            text: A new illness, accident, or trauma
+            inlineQuestion:
+              key: health_matters_c_description
+              question: Please explain
+              type: TEXTAREA
+          - value: d
+            text: An important new symptom
+            inlineQuestion:
+              key: health_matters_d_description
+              question: Please explain
+              type: TEXTAREA
+          - value: e
+            text: Side effect(s) of a new drug
+            inlineQuestion:
+              key: health_matters_e_description
+              question: Please explain
+              type: TEXTAREA
+          - value: f
+            text: Smoke cigarettes regularly
+            inlineQuestion:
+              key: health_matters_f_description
+              question: Please explain
+              type: TEXTAREA
+          - value: g
+            text: Change(s) of arthritis drugs or other drugs
+            inlineQuestion:
+              key: health_matters_g_description
+              question: Please explain
+              type: TEXTAREA
+          - value: h
+            text: Change(s) of address
+            inlineQuestion:
+              key: health_matters_h_description
+              question: Please explain
+              type: TEXTAREA
+          - value: i
+            text: Change(s) of marital status
+            inlineQuestion:
+              key: health_matters_i_description
+              question: Please explain
+              type: TEXTAREA
+          - value: j
+            text: Change job or work duties, quit work, retired
+            inlineQuestion:
+              key: health_matters_j_description
+              question: Please explain
+              type: TEXTAREA
+          - value: k
+            text: Change of medical insurance, Medicare, etc.
+            inlineQuestion:
+              key: health_matters_k_description
+              question: Please explain
+              type: TEXTAREA
+          - value: l
+            text: Change of primary care or other doctor
+            inlineQuestion:
+              key: health_matters_l_description
+              question: Please explain
+              type: TEXTAREA
+          - value: m
+            text: Other health matters that affect you
+            inlineQuestion:
+              key: health_matters_m_description
+              question: Please explain
+              type: TEXTAREA
+

@@ -1,0 +1,352 @@
+key: ucls-ls
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references:
+    - https://fetzer.org/sites/default/files/images/stories/pdf/selfmeasures/Self_Measures_for_Loneliness_and_Interpersonal_Problems_UCLA_LONELINESS.pdf
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 3
+  timeUnits: minutes
+name: Loneliness
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: Please indicate how often each of the statements below is
+      descriptive of you.
+    questions:
+      - key: ucls-ls_1
+        question: How often do you feel that you are "in tune" with the people around
+          you?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_2
+        question: How often do you feel that you lack companionship?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_3
+        question: How often do you feel that there is no one you can turn to?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_4
+        question: How often do you feel alone?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_5
+        question: How often do you feel part of a group of friends?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_6
+        question: How often do you feel that you have a lot in common with the people
+          around you?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_7
+        question: How often do you feel that you are no longer close to anyone?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_8
+        question: How often do you feel that your interests and ideas are not shared by
+          those around you?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_9
+        question: How often do you feel outgoing and friendly?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_10
+        question: How often do you feel close to people?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_11
+        question: How often do you feel left out?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_12
+        question: How often do you feel that your relationships with others are not
+          meaningful?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_13
+        question: How often do you feel that no one really knows you well?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_14
+        question: How often do you feel isolated from others?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_15
+        question: How often do you feel you can find companionship when you want it?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_16
+        question: How often do you feel that there are people who really understand you?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_17
+        question: How often do you feel shy?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_18
+        question: How often do you feel that people are around you but not with you?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_19
+        question: How often do you feel that there are people you can talk to?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+      - key: ucls-ls_20
+        question: How often do you feel that there are people you can turn to?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+

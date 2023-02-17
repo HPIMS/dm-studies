@@ -1,0 +1,51 @@
+key: heartmath-satisfaction
+type: task
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+  delay: 5
+  delayUnits: WEEKS
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: HeartMath Satisfaction Survey
+short: Tell us what you think of the HeartMath intervention
+intro:
+  title: HeartMath Satisfaction
+  description: We want to know your thoughts about the HeartMath intervention.
+    Please fill out the following survey to share what you think about the Inner
+    Balance device and process.
+outro:
+  title: Satisfaction Survey Complete
+  description: Thank you for sharing! Your contribution is always valued.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: satisfaction
+        question: How satisfied are you with the HeartMath intervention on a scale of 1
+          to 7?
+        type: SLIDER
+        min: 1
+        minLabel: Least Satisfied
+        max: 7
+        maxLabel: Most Satisfied
+        step: 1
+      - key: learning
+        question: Did you pursue additional learning about HeartMath and its system
+          outside of what was provided during the study?
+        description: If yes, please specify
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+          - value: yes
+            text: Yes
+            inlineQuestion:
+              key: learning_yes_description
+              question: Please specify
+              type: TEXTAREA
+

@@ -1,0 +1,205 @@
+key: nih-cpsi
+type: task
+active: true
+scorable: true
+score:
+  fn: nih-cpsi
+  args: {}
+metadata:
+  author: ""
+  instrument: Female NIH-Chronic Prostatitis Symptom Index (NIH-CPSI)
+  version: ""
+  references:
+    - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2783956/
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Prostatitis Symptom Index
+short: Reflect on your prostatitis symptoms
+sections:
+  - type: survey
+    key: pain
+    title: Pain or Discomfort
+    description: ""
+    questions:
+      - key: cspi_1
+        question: 1. In the last week, have you experienced any pain or discomfort in
+          the following areas?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: cspi_1_a
+            text: Area between rectum and vagina (perineum)
+          - value: cspi_1_b
+            text: Labia
+          - value: cspi_1_c
+            text: Clitoris (not related to urination)
+          - value: cspi_1_d
+            text: Below your waist in your pubic area
+          - value: cspi_1_e
+            text: Below your waist in your rectal area
+      - key: cspi_2
+        question: "2. In the last week, have you experienced:"
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: cspi_2_a
+            text: Pain or burning during urination
+          - value: cspi_2_b
+            text: Pain or discomfort during or after sexual climax
+      - key: cspi_3
+        question: 3. How often have you had pain or discomfort in any of these areas
+          over the last week?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 0
+          - value: rarely
+            text: Rarely
+            score: 1
+          - value: sometimes
+            text: Sometimes
+            score: 2
+          - value: often
+            text: Often
+            score: 3
+          - value: usually
+            text: Usually
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: cspi_4
+        question: 4. Which number best describes your AVERAGE pain or discomfort on the
+          days that you had it, over the last week?
+        description: 0 means no pain. 10 means pain as bad as you can imagine.
+        type: SLIDER
+        min: 0
+        max: 10
+        step: 1
+  - type: survey
+    key: urination
+    title: Urination
+    description: ""
+    questions:
+      - key: cspi_5
+        question: 5. How often have you had a sensation of not emptying your bladder
+          completely after you finished urinating, over the last week?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: lessthan_1in5
+            text: Less than 1 time in 5
+            score: 1
+          - value: lessthan_half
+            text: Less than half the time
+            score: 2
+          - value: half_the_time
+            text: About half the time
+            score: 3
+          - value: morethan_half
+            text: More than half the time
+            score: 4
+          - value: almost_always
+            text: Almost always or always
+            score: 5
+      - key: cspi_6
+        question: 6. How often have you had to urinate again less than two hours after
+          you finished urinating, over the last week?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: lessthan_1in5
+            text: Less than 1 time in 5
+            score: 1
+          - value: lessthan_half
+            text: Less than half the time
+            score: 2
+          - value: half_the_time
+            text: About half the time
+            score: 3
+          - value: morethan_half
+            text: More than half the time
+            score: 4
+          - value: almost_always
+            text: Almost always or always
+            score: 5
+  - type: survey
+    key: symptom_impact
+    title: Impact of Symptoms
+    description: ""
+    questions:
+      - key: cspi_7
+        question: 7. How much have your symptoms kept you from doing the kinds of things
+          you would usually do, over the last week?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: only_little
+            text: Only a little
+            score: 1
+          - value: some
+            text: Some
+            score: 2
+          - value: lot
+            text: A lot
+            score: 3
+      - key: cspi_8
+        question: 8. How much did you think about your symptoms, over the last week?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: only_little
+            text: Only a little
+            score: 1
+          - value: some
+            text: Some
+            score: 2
+          - value: lot
+            text: A lot
+            score: 3
+  - type: survey
+    key: qol
+    title: Quality of Life
+    description: ""
+    questions:
+      - key: cspi_9
+        question: 9. If you were to spend the rest of your life with your symptoms just
+          the way they have been during the last week, how would you feel about
+          that?
+        type: SINGLE_CHOICE
+        options:
+          - value: delighted
+            text: Delighted
+            score: 0
+          - value: pleased
+            text: Pleased
+            score: 1
+          - value: mostly_satisfied
+            text: Mostly satisfied
+            score: 2
+          - value: mixed
+            text: Mixed (about equally satisfied and dissatisfied)
+            score: 3
+          - value: mostly_dissatisfied
+            text: Mostly dissatisfied
+            score: 4
+          - value: unhappy
+            text: Unhappy
+            score: 5
+          - value: terrible
+            text: Terrible
+            score: 6
+

@@ -1,0 +1,35 @@
+key: fatigue_scale
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+schedule:
+  type: PERIOD
+  period: DAILY
+timeRequirements:
+  time: 30
+  timeUnits: seconds
+name: Fatigue Scale
+short: Rate your fatigue
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: scale
+        question: Your fatigue
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 10
+        category: fatigue
+        ask: We would like to know about your fatigue today.
+        scaleExplanation: 0 is no fatigue, 1-3 is mild fatigue, 4-6 is moderate fatigue,
+          and 7-10 is severe fatigue.
+        prompt: Please rate your fatigue.
+        minLabel: No fatigue
+        maxLabel: Severe fatigue
+

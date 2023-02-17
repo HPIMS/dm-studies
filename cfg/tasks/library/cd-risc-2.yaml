@@ -1,0 +1,77 @@
+key: cd-risc-2
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: CD-RISC2
+  version: ""
+  references:
+    - "Vaishnavi, S., Connor, K., & Davidson, J. R. (2007). An abbreviated
+      version of the Connor-Davidson Resilience Scale (CD-RISC), the CD-RISC2:
+      Psychometric properties and applications in psychopharmacological trials.
+      Psychiatry research, 152(2-3), 293-297."
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Resilience & Coping
+short: How you cope
+intro:
+  title: Resilience & Coping
+  description: We want to learn about how you cope. Please fill out this survey
+    and let us know. You may skip any questions that you are not comfortable
+    answering.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: adaptation
+        question: I am able to adapt when changes occur.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all true
+            score: 0
+          - value: rarely_true
+            text: Rarely true
+            score: 1
+          - value: sometimes_true
+            text: Sometimes true
+            score: 2
+          - value: often_true
+            text: Often true
+            score: 3
+          - value: true_nearly_all_the_time
+            text: True nearly all the time
+            score: 4
+      - key: recovery
+        question: I tend to bounce back after illness, injury or other hardships.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all true
+            score: 0
+          - value: rarely_true
+            text: Rarely true
+            score: 1
+          - value: sometimes_true
+            text: Sometimes true
+            score: 2
+          - value: often_true
+            text: Often true
+            score: 3
+          - value: true_nearly_all_the_time
+            text: True nearly all the time
+            score: 4
+

@@ -1,0 +1,75 @@
+key: pro-2-uc
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: DAILY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Ulcerative Colitis Check-in
+short: Reflect on your colitis
+intro:
+  title: Ulcerative Colitis Check-in
+  description: We want to understand more about your symptoms yesterday. Please
+    fill out this survey and let us know.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - type: survey
+    key: pro-2-uc
+    title: ""
+    description: ""
+    questions:
+      - key: stool_freq
+        question: 1. Indicate your stool frequency (based on yesterday)
+        type: SINGLE_CHOICE
+        required: true
+        options:
+          - value: normal
+            text: Normal number of stools
+            score: 0
+          - value: 1_2_stools
+            text: 1-2 stools more than normal
+            score: 1
+          - value: 3_4_stools
+            text: 3-4 stools more than normal
+            score: 2
+          - value: over_4_stools
+            text: Over 4 stools more than normal
+            score: 3
+          - value: no_answer
+            text: Prefer not to answer
+            score: -999
+      - key: bleeding_severity
+        question: 2. Please indicate the severity of your rectal bleeding (based on
+          yesterday)
+        type: SINGLE_CHOICE
+        required: true
+        options:
+          - value: no_blood
+            text: No blood seen
+            score: 0
+          - value: less_than_half
+            text: Blood with stool less than half the time
+            score: 1
+          - value: half_the_time
+            text: Blood with stool half of the time or more
+            score: 2
+          - value: blood_alone
+            text: Passing blood alone (bowel movements with blood alone without stool)
+            score: 3
+          - value: no_answer
+            text: Prefer not to answer
+            score: -999
+

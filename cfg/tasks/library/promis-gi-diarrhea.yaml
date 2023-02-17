@@ -1,0 +1,241 @@
+key: promis-gi-diarrhea
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Gastrointestinal Diarrhea
+short: About your stool
+intro:
+  title: Gastrointestinal Diarrhea
+  description: >-
+    We want to understand more about your stool over the past 7 days.
+
+
+    Please fill out this survey and let us know. You may skip any questions that you are not comfortable answering.
+
+
+    The surveys in this app are NOT a replacement or substitute for medical care.
+
+
+    The answers you provide will not be used for clinical care. For any health concerns you may have, please contact your regular healthcare provider.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - type: survey
+    key: promis_gi_diarrhea
+    title: ""
+    description: "In the past 7 days:"
+    questions:
+      - key: days_loose
+        question: How many days did you have loose or watery stools?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: No days
+            score: 1
+          - value: one_day
+            text: 1 day
+            score: 2
+          - value: two_days
+            text: 2 days
+            score: 3
+          - value: 3_5_days
+            text: 3-5 days
+            score: 4
+          - value: 6_7_days
+            text: 6-7 days
+            score: 5
+      - key: interfere_d2d_loose
+        question: How much did having loose or watery stools interfere with your
+          day-to-day activities?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: one_day
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: two_days
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 3_5_days
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 6_7_days
+      - key: bother_you_loose
+        question: How much did having loose or watery stools bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: one_day
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: two_days
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 3_5_days
+              - section: promis_gi_diarrhea
+                question: days_loose
+                operator: INCLUDES
+                value: 6_7_days
+      - key: immediate_accident
+        question: How often did you feel like you needed to empty your bowels right away
+          or else you would have an accident?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: one_time
+            text: One time during the past 7 days
+            score: 2
+          - value: 2_6_times
+            text: 2-6 times during the past 7 days
+            score: 3
+          - value: once_per_day
+            text: Often once a day
+            score: 4
+          - value: over_once_daily
+            text: More than once per day
+            score: 5
+      - key: immediate_interfere_d2d
+        question: How much did feeling like you needed to empty your bowels right away
+          interfere with your day-to-day activities?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: one_time
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: 2_6_times
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: once_per_day
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: over_once_daily
+      - key: immediate_bother
+        question: How much did feeling like you needed to empty your bowels right away
+          bother you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: one_time
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: 2_6_times
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: once_per_day
+              - section: promis_gi_diarrhea
+                question: immediate_accident
+                operator: INCLUDES
+                value: over_once_daily
+

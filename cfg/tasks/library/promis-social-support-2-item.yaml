@@ -1,0 +1,75 @@
+key: promis-social-support-2-item
+type: task
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: MONTHLY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Social Support
+short: Tell us about your support over the last month
+intro:
+  title: Social Support
+  description: >-
+    This survey asks questions about support in the past month. 
+
+
+    The surveys in this app are NOT a replacement or substitute for medical care. The answers you provide will not be used for clinical care. For any health concerns you may have, please contact your regular healthcare provider.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: listen
+        question: I have someone who will listen to me when I need to talk.
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+      - key: feelings
+        question: I have someone I trust to talk with about my feelings.
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+            score: 1
+          - value: rarely
+            text: Rarely
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: often
+            text: Often
+            score: 4
+          - value: always
+            text: Always
+            score: 5
+
