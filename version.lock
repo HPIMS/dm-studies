@@ -1,51 +1,4 @@
 active:
-  interventions:
-    hpi-decode-bp::bp-measurement:
-      - 1ab226d3cdcca843a3525596ffb5d69e
-      - 5
-    hpi-decode-bp::calibration-measurement:
-      - f3b1833a44eb0726ede71f5f2e88aa58
-      - 6
-  multimedia:
-    cramp::intro:
-      - 8c2184eb1048ecdd60638d695390534b
-      - 1
-    hpi-decode-bp::calibration-video:
-      - 10cf91bed086e99dbfad0b0c15084592
-      - 2
-    hpi-decode-bp::intervention-video:
-      - 75c48c71686148717832f9b51c4931f9
-      - 3
-    hpi-decode-bp::intervention-video-always:
-      - f6c705f1c46c1bccc1aa495c7c95e038
-      - 3
-    warrior-shield::hm-1:
-      - c37f6aa42acc7c4043a43d1bb4b44ba2
-      - 4
-    warrior-shield::hm-2:
-      - 8eacff141bd92a10bd16046a4c14b40f
-      - 5
-    warrior-shield::hm-2-always:
-      - 22500e0842018473f426338ad8eeb568
-      - 2
-    warrior-shield::hm-3:
-      - c021fe4d4bd35f1724eec835d05ea7ee
-      - 5
-    warrior-shield::hm-4:
-      - d5759284a57ad7a29e333b9a25d99007
-      - 5
-    warrior-shield::hm-5:
-      - 481295b45c390ab68f2c2babda217e54
-      - 5
-    warrior-shield::hm-6:
-      - 262748a29ad49530ddb4d520680c9559
-      - 5
-    warrior-shield::intro:
-      - 7f9c6ea409d1c0187b9d4725a164c9d3
-      - 3
-    warrior-shield::intro-always:
-      - f6900eccf8a6eb4e06d71251f54b10db
-      - 3
   studies:
     cppd-1:
       - 47b398d5d9dc33283e05dffc54ed3e7f
@@ -71,7 +24,7 @@ active:
     ra-forecast:
       - 9d49109c2dc9e038362cfc845ddc0fa8
       - 2
-  surveys:
+  tasks:
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
       - 1
@@ -189,12 +142,27 @@ active:
     digi-ibd-001::which-ibd:
       - 801c7f6198bd7cd61c7d9683652cd89a
       - 4
+    hpi-decode-bp::bp-measurement:
+      - 1ab226d3cdcca843a3525596ffb5d69e
+      - 5
+    hpi-decode-bp::calibration-measurement:
+      - f3b1833a44eb0726ede71f5f2e88aa58
+      - 6
+    hpi-decode-bp::calibration-video:
+      - 10cf91bed086e99dbfad0b0c15084592
+      - 2
     hpi-decode-bp::clearance:
       - 55070a882c87f153e87d96e71059ffb0
       - 3
     hpi-decode-bp::demographics:
       - 6e9f4e639a4c22800ea2ea505e3b50e8
       - 5
+    hpi-decode-bp::intervention-video:
+      - 75c48c71686148717832f9b51c4931f9
+      - 3
+    hpi-decode-bp::intervention-video-always:
+      - f6c705f1c46c1bccc1aa495c7c95e038
+      - 3
     hpi-decode-bp::usability:
       - 043b15e39a40bd65c986e19a58e60b3e
       - 4
@@ -399,6 +367,33 @@ active:
     warrior-shield::heartmath-satisfaction:
       - 25b8c2f538e7bf39ce70cee4f6243300
       - 4
+    warrior-shield::hm-1:
+      - c37f6aa42acc7c4043a43d1bb4b44ba2
+      - 4
+    warrior-shield::hm-2:
+      - 8eacff141bd92a10bd16046a4c14b40f
+      - 5
+    warrior-shield::hm-2-always:
+      - 22500e0842018473f426338ad8eeb568
+      - 2
+    warrior-shield::hm-3:
+      - c021fe4d4bd35f1724eec835d05ea7ee
+      - 5
+    warrior-shield::hm-4:
+      - d5759284a57ad7a29e333b9a25d99007
+      - 5
+    warrior-shield::hm-5:
+      - 481295b45c390ab68f2c2babda217e54
+      - 5
+    warrior-shield::hm-6:
+      - 262748a29ad49530ddb4d520680c9559
+      - 5
+    warrior-shield::intro:
+      - 7f9c6ea409d1c0187b9d4725a164c9d3
+      - 3
+    warrior-shield::intro-always:
+      - f6900eccf8a6eb4e06d71251f54b10db
+      - 3
     warrior-shield::report-new-information:
       - 975e0f71f5ac521a1cf07a5d9ca4f0a2
       - 3
@@ -406,8 +401,6 @@ active:
       - d56389e6d954dc5c80dc2d4ffb6ff5ea
       - 5
 inactive:
-  interventions: {}
-  multimedia: {}
   studies:
     hpi-decode-bp:
       - 00783e5154ee5312655ba6dd114f7d2e
@@ -415,5 +408,5 @@ inactive:
     warrior-shield:
       - 4bd95befd9f6f05f54ffe72192d3d405
       - 13
-  surveys: {}
+  tasks: {}
 
