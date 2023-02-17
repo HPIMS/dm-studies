@@ -1,0 +1,27 @@
+key: hm-2-always
+type: task
+active: true
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeEstimate: 10
+name: HeartMath Video 2
+intro:
+  title: Tech Tutorial & Heart Lock-In
+  description: >-
+    Learn more about how to apply the HeartMath intervention techniques
+    to your life.
+
+
+    This video will remain available to you for the duration of the study. You may watch it as many times as you'd like.
+outro:
+  title: Thank you!
+  description: Thanks for watching and learning - we hope you use these tools of
+    resilience in your daily life!
+sections:
+  - type: video
+    key: hm-2-always
+    videoId: hm-2-always
+    rate: 1.3
+    resizeMode: contain
+

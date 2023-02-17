@@ -1,0 +1,23 @@
+key: intro
+type: task
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+timeEstimate: 5
+name: Welcome
+intro:
+  title: Welcome to the Warrior Shield Study
+  description: Please watch a short introductory video by our Principal
+    Investigator, Dr. Robert Hirten, to learn about the Warrior Shield study and
+    what we hope to learn from it.
+outro:
+  title: Thank you!
+  description: Thanks for watching!
+sections:
+  - type: video
+    key: intro
+    videoId: intro
+    rate: 1
+    resizeMode: contain
+
