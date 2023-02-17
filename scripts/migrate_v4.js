@@ -29,9 +29,10 @@ async function doMigrateSurveys() {
 
     const surveyPromises = surveys.map(async (file) => {
       const survey = await getFile(inDir, surveyGroup, file);
+      const { short, ...ret } = survey;
 
-      survey.type = "task";
-      survey.sections = survey.sections?.map((section) => ({
+      ret.type = "task";
+      ret.sections = ret.sections?.map((section) => ({
         type: "survey",
         ...section,
       }));
@@ -39,7 +40,7 @@ async function doMigrateSurveys() {
       await mkdir(path.join(outDir, surveyGroup));
       await fs.promises.writeFile(
         path.join(outDir, surveyGroup, file),
-        `${YAML.stringify(survey, { sortMapEntries: false })}\n`
+        `${YAML.stringify(ret, { sortMapEntries: false })}\n`
       );
     });
 
@@ -49,4 +50,65 @@ async function doMigrateSurveys() {
   return Promise.all(promises);
 }
 
+async function doMigrateMultimedia() {
+  const inDir = path.join(__dirname, "../cfg/multimedia");
+  const outDir = path.join(__dirname, "../cfg/tasks");
+
+  const mediaGroups = await fs.promises.readdir(inDir);
+
+  const promises = mediaGroups.map(async (mediaGroup) => {
+    const groupDir = `${inDir}/${mediaGroup}`;
+    const mediaFiles = await fs.promises.readdir(groupDir);
+
+    const mediaPromises = mediaFiles.map(async (file) => {
+      const media = await getFile(inDir, mediaGroup, file);
+
+      const {
+        short,
+        autoplay,
+        beginMuted,
+        controls,
+        rate,
+        resizeMode,
+        minimumWatchThreshold,
+        ...ret
+      } = media;
+
+      ret.type = "task";
+      ret.sections = [
+        {
+          type: "video",
+          key: ret.key,
+          videoId: ret.key,
+          autoplay,
+          beginMuted,
+          controls,
+          rate,
+          resizeMode,
+          minimumWatchThreshold,
+        },
+      ];
+
+      if (ret.intro && !ret.intro.title && !ret.intro.description) {
+        delete ret.intro;
+      }
+
+      if (ret.outro && !ret.outro.title && !ret.outro.description) {
+        delete ret.outro;
+      }
+
+      await mkdir(path.join(outDir, mediaGroup));
+      await fs.promises.writeFile(
+        path.join(outDir, mediaGroup, file),
+        `${YAML.stringify(ret, { sortMapEntries: false })}\n`
+      );
+    });
+
+    return Promise.all(mediaPromises);
+  });
+
+  return Promise.all(promises);
+}
+
 doMigrateSurveys();
+// doMigrateMultimedia();
