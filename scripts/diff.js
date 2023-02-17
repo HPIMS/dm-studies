@@ -4,9 +4,7 @@ const path = require("path");
 const YAML = require("yaml");
 const chalk = require("chalk");
 
-// TODO: Use lowercase, dash no underscore
-// TODO: Not schema validating surveys
-// TODO: Add schema validation for multimedia
+const waterfall = require("./waterfall");
 
 const log = {
   error: (t) => console.log(chalk.red(t)),
@@ -16,8 +14,6 @@ const log = {
   plain: (t) => console.log(t),
 };
 
-const validateSchema = require("./validate_schema");
-
 const versions = YAML.parse(
   fs.readFileSync("./version.lock", { encoding: "utf-8" })
 );
@@ -25,54 +21,54 @@ const versions = YAML.parse(
 const nextVersions = {
   active: {
     studies: {},
-    surveys: {},
-    multimedia: {},
-    interventions: {},
+    tasks: {},
   },
   inactive: {
     studies: {},
-    surveys: {},
-    multimedia: {},
-    interventions: {},
+    tasks: {},
   },
 };
 
-const surveyLibrary = new Set();
-const multimediaLibrary = new Set();
-const interventionLibrary = new Set();
+const taskLibrary = new Set();
+const activeTasks = new Set();
 
-const diffs = new Map();
-diffs.set("studies", new Set());
-diffs.set("surveys", new Set());
-diffs.set("multimedia", new Set());
-diffs.set("interventions", new Set());
+const diffs = new Map([
+  ["studies", new Set()],
+  ["tasks", new Set()],
+]);
 
-async function getDependencyFiles(fileDefinitions) {
+function hashFileContents(content) {
+  return crypto.createHash("md5").update(JSON.stringify(content)).digest("hex");
+}
+
+async function getInheritedTaskFiles(fileDefinitions) {
   const promises = fileDefinitions.map(async (definition) => {
     const { dir, group, file } = definition;
     let rawData = {};
+
     // Try the current group first. If that fails, try the library.
     try {
       rawData = await fs.promises.readFile(path.join(dir, group, file), {
         encoding: "utf-8",
       });
     } catch (err) {
-      log.warning(`Could not find ${file} in ${group}. Checking library.`);
       try {
         rawData = await fs.promises.readFile(path.join(dir, "library", file), {
           encoding: "utf-8",
         });
       } catch (err) {
-        log.error(`Could not find ${file} in library. Skipping.`);
+        log.error(`Could not find ${file}. Skipping.`);
       }
     }
     return YAML.parse(rawData) || {};
   });
+
   return Promise.all(promises);
 }
 
-async function getFile(dir, group, file) {
-  const taskDefinition = {};
+async function getTaskFile(group, file) {
+  const dir = path.join(__dirname, "../cfg/tasks");
+  let taskDefinition = {};
 
   const rawData = await fs.promises.readFile(path.join(dir, group, file), {
     encoding: "utf-8",
@@ -87,7 +83,7 @@ async function getFile(dir, group, file) {
       group,
       file: `${f}.yaml`,
     }));
-    const inheritanceFiles = await getDependencyFiles(fileDefinitions);
+    const inheritanceFiles = await getInheritedTaskFiles(fileDefinitions);
 
     // A -> B -> C where C is extended by B, and B is extended by A.
     // Therefore, we reverse the list and apply each change on top of
@@ -132,23 +128,26 @@ async function getFile(dir, group, file) {
           });
         };
 
-        if (sections) {
-          mergedSections = mergedSections.map((section) => {
-            const {
-              key: originalSectionKey,
-              questions: originalQuestions = [],
-            } = section;
-            const taskIndex = inheritanceFiles.length - index - 1;
+        mergedSections = mergedSections.map((section) => {
+          const {
+            type: sectionType,
+            key: originalSectionKey,
+            questions,
+          } = section;
+          const taskIndex = inheritanceFiles.length - index - 1;
 
-            // Create a new section key to uniquely identify this task section
-            const sectionKey = createModifiedSectionKey(
-              taskIndex,
-              inheritableTaskKey,
-              originalSectionKey
-            );
+          const out = { ...section };
 
+          // Create a new section key to uniquely identify this task section
+          const sectionKey = createModifiedSectionKey(
+            taskIndex,
+            inheritableTaskKey,
+            originalSectionKey
+          );
+
+          if (sectionType === "survey") {
             // We also need to adjust any triggers that are used so that skip patterns function.
-            const questions = originalQuestions.map((question) => {
+            out.questions = (questions || []).map((question) => {
               const { triggers } = question;
               const updatedQuestion = { ...question };
 
@@ -169,90 +168,57 @@ async function getFile(dir, group, file) {
               }
               return updatedQuestion;
             });
+          }
 
-            return {
-              ...section,
-              questions,
-              key: sectionKey,
-            };
-          });
-        }
+          return {
+            ...out,
+            key: sectionKey,
+          };
+        });
       }
 
       const { sections: _, ...contentToApply } = inheritableTask;
-      Object.assign(taskDefinition, contentToApply);
+      taskDefinition = { ...taskDefinition, ...contentToApply };
+
       if (mergedSections || taskDefinition.sections) {
-        Object.assign(taskDefinition, {
+        taskDefinition = {
+          ...taskDefinition,
           sections: [
             ...(mergedSections || []),
             ...(taskDefinition.sections || []),
           ],
-        });
+        };
       }
     });
   }
 
   const { sections: _, ...contentToApply } = data;
-  Object.assign(taskDefinition, contentToApply);
+  taskDefinition = { ...taskDefinition, ...contentToApply };
 
   if (data.sections || taskDefinition.sections) {
-    Object.assign(taskDefinition, {
+    taskDefinition = {
+      ...taskDefinition,
       sections: [...(data.sections || []), ...(taskDefinition.sections || [])],
-    });
+    };
   }
 
-  return {
-    data: taskDefinition,
-    hash: crypto
-      .createHash("md5")
-      .update(JSON.stringify(taskDefinition))
-      .digest("hex"),
-  };
+  return taskDefinition;
 }
 
-async function processSurveys() {
-  log.plain("*****************************************");
-  log.plain("****         Diffing Surveys         ****");
-  log.plain("*****************************************");
+async function processTasks() {
+  const dir = path.join(__dirname, "../cfg/tasks");
+  const groups = await fs.promises.readdir(dir);
 
-  const dir = path.join(__dirname, "../cfg/surveys");
-  const surveyGroups = await fs.promises.readdir(dir);
+  const groupExecutors = groups.map((taskGroup) => async () => {
+    const groupDir = `${dir}/${taskGroup}`;
+    const tasks = await fs.promises.readdir(groupDir);
 
-  const promises = surveyGroups.map(async (surveyGroup) => {
-    const groupDir = `${dir}/${surveyGroup}`;
-    const surveys = await fs.promises.readdir(groupDir);
-
-    const surveyPromises = surveys.map(async (file) => {
+    const taskExecutors = tasks.map(async (file) => {
       const rootName = file.replace(/\.yaml$|\.yml$/, "");
-      const extension = file.split(".").pop();
-      const name = `${surveyGroup}::${rootName}`;
-
-      const { data, hash: nextHash } = await getFile(dir, surveyGroup, file);
-      const [lastHash, lastVersion] = versions.active.surveys[name] ||
-        versions.inactive.surveys[name] || [null, null];
-      let nextVersion = lastVersion;
-
-      log.info(`[${name}] Processing`);
-
-      // skip if inactive
-      if (!data.active) {
-        log.warning(`[${name}] Inactive.`);
-        // Write out as inactive. If it's new and inactive, create a new record.
-        // If it's changed an inactive, we don't care. The changes will be picked
-        // up when/if it's moved to active again.
-        nextVersions.inactive.surveys[name] = [
-          lastHash || nextHash,
-          lastVersion || 1,
-        ];
-        return;
-      }
-
-      if (rootName !== data.key) {
-        log.error(`[${name}] Survey key and Filename mismatch.`);
-        return;
-      }
+      const name = `${taskGroup}::${rootName}`;
 
       // If we are using .yml, automatically move to .yaml.
+      const extension = file.split(".").pop();
       if (extension === "yml") {
         try {
           // see if the .yaml file that we want to move it to already exists
@@ -262,260 +228,70 @@ async function processSurveys() {
           );
           return;
         } catch (err) {
-          log.warning(`[${name}] Renaming to ${name}.yaml.`);
+          log.warning(`[${name}] Renaming to ${rootName}.yaml.`);
           // if we get here it means we can rename
           await fs.promises.rename(
             `${groupDir}/${rootName}.yml`,
             `${groupDir}/${rootName}.yaml`
           );
         }
+      }
+
+      const fileContents = await getTaskFile(taskGroup, `${rootName}.yaml`);
+
+      const active = versions.active.tasks;
+      const inactive = versions.inactive.tasks;
+
+      const [lastHash, lastVersion] = active[name] || inactive[name];
+
+      const nextHash = hashFileContents(fileContents);
+      let nextVersion = lastVersion;
+
+      if (rootName !== fileContents.key) {
+        log.error(`[${name}] Task key and Filename mismatch.`);
+        return;
       }
 
       // add this survey to the survey library
-      surveyLibrary.add(name);
+      taskLibrary.add(name);
 
       if (!lastHash || !lastVersion) {
         nextVersion = 1;
         // If this is the first time seeing this file set the version to the
         // existing version in the yaml, or 1.
-        log.info(`[${name}] New Survey. Setting version to 1.`);
-        diffs.get("surveys").add(name);
+        diffs.get("tasks").add(name);
       } else if (lastHash !== nextHash) {
         nextVersion = lastVersion + 1;
         // If we've seen this file, but it has changed, increment the version
-        log.info(
-          `[${name}] Survey modified. Bumping version to ${nextVersion}.`
-        );
-        diffs.get("surveys").add(name);
+        diffs.get("tasks").add(name);
       }
-      log.important(`[${name}] Finished processing. Writing to version.lock.`);
-      // write to the versions file
-      nextVersions.active.surveys[name] = [nextHash, nextVersion];
+
+      // Write to the versions file. Put all tasks in the active group
+      // for now. When we process the studies, we'll move any tasks that
+      // are not included in any active study into the inactive group.
+      nextVersions.active.tasks[name] = [nextHash, nextVersion];
     });
-    return Promise.all(surveyPromises);
+    await waterfall(taskExecutors);
   });
-  return Promise.all(promises);
+
+  await waterfall(groupExecutors);
 }
 
-async function processMultimedia() {
-  log.plain("*****************************************");
-  log.plain("****       Diffing Multimedia        ****");
-  log.plain("*****************************************");
-
-  const dir = path.join(__dirname, "../cfg/multimedia");
-  const multimediaGroups = await fs.promises.readdir(dir);
-
-  const promises = multimediaGroups.map(async (multimediaGroup) => {
-    const groupDir = `${dir}/${multimediaGroup}`;
-    const multimedia = await fs.promises.readdir(groupDir);
-    const multimediaPrefix = multimediaGroup;
-
-    const multimediaPromises = multimedia.map(async (file) => {
-      const rootName = file.replace(/\.yaml$|\.yml$/, "");
-      const extension = file.split(".").pop();
-      const name = `${multimediaPrefix}::${rootName}`;
-
-      const { data, hash: nextHash } = await getFile(
-        dir,
-        multimediaGroup,
-        file
-      );
-      const [lastHash, lastVersion] = versions.active.multimedia[name] ||
-        versions.inactive.multimedia[name] || [null, null];
-      let nextVersion = lastVersion;
-
-      log.info(`[${name}] Processing`);
-
-      // skip if inactive
-      if (!data.active) {
-        log.warning(`[${name}] Inactive.`);
-        // Write out as inactive. If it's new and inactive, create a new record.
-        // If it's changed an inactive, we don't care. The changes will be picked
-        // up when/if it's moved to active again.
-        nextVersions.inactive.multimedia[name] = [
-          lastHash || nextHash,
-          lastVersion || 1,
-        ];
-        return;
-      }
-
-      if (rootName !== data.key) {
-        log.error(`[${name}] Multimedia key and Filename mismatch.`);
-        return;
-      }
-
-      // If we are using .yml, automatically move to .yaml.
-      if (extension === "yml") {
-        try {
-          // see if the .yaml file that we want to move it to already exists
-          await fs.promises.stat(`${groupDir}/${rootName}.yaml`);
-          log.error(
-            `[${name}] Uses a .yml extension and another file with a .yaml extension already exists. Could not automatically rename.`
-          );
-          return;
-        } catch (err) {
-          log.warning(`[${name}] Renaming to ${name}.yaml.`);
-          // if we get here it means we can rename
-          await fs.promises.rename(
-            `${groupDir}/${rootName}.yml`,
-            `${groupDir}/${rootName}.yaml`
-          );
-        }
-      }
-
-      // add this multimedia to the multimedia library
-      multimediaLibrary.add(name);
-
-      if (!lastHash || !lastVersion) {
-        nextVersion = 1;
-        // If this is the first time seeing this file set the version to the
-        // existing version in the yaml, or 1.
-        log.info(`[${name}] New Multimedia. Setting version to 1.`);
-        diffs.get("multimedia").add(name);
-      } else if (lastHash !== nextHash) {
-        nextVersion = lastVersion + 1;
-        // If we've seen this file, but it has changed, increment the version
-        log.info(
-          `[${name}] Multimedia modified. Bumping version to ${nextVersion}.`
-        );
-        diffs.get("multimedia").add(name);
-      }
-      log.important(`[${name}] Finished processing. Writing to version.lock.`);
-      // write to the versions file
-      nextVersions.active.multimedia[name] = [nextHash, nextVersion];
-    });
-    return Promise.all(multimediaPromises);
+async function getStudyFile(file) {
+  const dir = path.join(__dirname, "../cfg/studies");
+  const rawData = await fs.promises.readFile(path.join(dir, file), {
+    encoding: "utf-8",
   });
-  return Promise.all(promises);
-}
-
-async function processInterventions() {
-  log.plain("*****************************************");
-  log.plain("****     Diffing Interventions       ****");
-  log.plain("*****************************************");
-
-  const dir = path.join(__dirname, "../cfg/interventions");
-  const interventionGroups = await fs.promises.readdir(dir);
-
-  const promises = interventionGroups.map(async (interventionGroup) => {
-    const groupDir = `${dir}/${interventionGroup}`;
-    const interventions = await fs.promises.readdir(groupDir);
-    const interventionPrefix = interventionGroup;
-
-    const interventionPromises = interventions.map(async (file) => {
-      const rootName = file.replace(/\.yaml$|\.yml$/, "");
-      const extension = file.split(".").pop();
-      const name = `${interventionPrefix}::${rootName}`;
-
-      const { data, hash: nextHash } = await getFile(
-        dir,
-        interventionGroup,
-        file
-      );
-      const [lastHash, lastVersion] = versions.active.interventions[name] ||
-        versions.inactive.interventions[name] || [null, null];
-      let nextVersion = lastVersion;
-
-      log.info(`[${name}] Processing`);
-
-      // skip if inactive
-      if (!data.active) {
-        log.warning(`[${name}] Inactive.`);
-        // Write out as inactive. If it's new and inactive, create a new record.
-        // If it's changed an inactive, we don't care. The changes will be picked
-        // up when/if it's moved to active again.
-        nextVersions.inactive.interventions[name] = [
-          lastHash || nextHash,
-          lastVersion || 1,
-        ];
-        return;
-      }
-
-      if (rootName !== data.key) {
-        log.error(`[${name}] Intervention key and Filename mismatch.`);
-        return;
-      }
-
-      // If we are using .yml, automatically move to .yaml.
-      if (extension === "yml") {
-        try {
-          // see if the .yaml file that we want to move it to already exists
-          await fs.promises.stat(`${groupDir}/${rootName}.yaml`);
-          log.error(
-            `[${name}] Uses a .yml extension and another file with a .yaml extension already exists. Could not automatically rename.`
-          );
-          return;
-        } catch (err) {
-          log.warning(`[${name}] Renaming to ${name}.yaml.`);
-          // if we get here it means we can rename
-          await fs.promises.rename(
-            `${groupDir}/${rootName}.yml`,
-            `${groupDir}/${rootName}.yaml`
-          );
-        }
-      }
-
-      // add this multimedia to the multimedia library
-      interventionLibrary.add(name);
-
-      if (!lastHash || !lastVersion) {
-        nextVersion = 1;
-        // If this is the first time seeing this file set the version to the
-        // existing version in the yaml, or 1.
-        log.info(`[${name}] New Intervention. Setting version to 1.`);
-        diffs.get("interventions").add(name);
-      } else if (lastHash !== nextHash) {
-        nextVersion = lastVersion + 1;
-        // If we've seen this file, but it has changed, increment the version
-        log.info(
-          `[${name}] Intervention modified. Bumping version to ${nextVersion}.`
-        );
-        diffs.get("interventions").add(name);
-      }
-      log.important(`[${name}] Finished processing. Writing to version.lock.`);
-      // write to the versions file
-      nextVersions.active.interventions[name] = [nextHash, nextVersion];
-    });
-    return Promise.all(interventionPromises);
-  });
-  return Promise.all(promises);
+  return YAML.parse(rawData) || {};
 }
 
 async function processStudies() {
-  log.plain("*****************************************");
-  log.plain("****         Diffing Studies         ****");
-  log.plain("*****************************************");
-
   const dir = path.join(__dirname, "../cfg/studies");
   const files = await fs.promises.readdir(dir);
 
-  const promises = files.map(async (file) => {
-    const name = file.replace(/\.yaml$|\.yml$/, "");
-    const extension = file.split(".").pop();
-    const { data, hash: nextHash } = await getFile(dir, "", file);
-    const [lastHash, lastVersion] = versions.active.studies[name] ||
-      versions.inactive.studies[name] || [null, null];
-    let nextVersion = lastVersion;
-
-    log.info(`[${name}] Processing`);
-
-    // skip if inactive
-    if (!data.active) {
-      log.warning(`[${name}] Inactive.`);
-      // Write out as inactive. If it's new and inactive, create a new record.
-      // If it's changed an inactive, we don't care. The changes will be picked
-      // up when/if it's moved to active again.
-      nextVersions.inactive.studies[name] = [
-        lastHash || nextHash,
-        lastVersion || 1,
-      ];
-      return;
-    }
-
-    if (name !== data.key) {
-      log.error(`[${name}] Study key and Filename mismatch.`);
-      return;
-    }
+  const executors = files.map((fileName) => async () => {
+    const name = fileName.replace(/\.yaml$|\.yml$/, "");
+    const extension = fileName.split(".").pop();
 
     if (name === "library") {
       log.error(`[${name}] Reserved study name.`);
@@ -538,150 +314,106 @@ async function processStudies() {
       }
     }
 
-    // TODO: VALIDATE SCHEMA
-    const schemaErrors = [];
-    // const schemaErrors = validateSchema("study", data);
-    if (schemaErrors.length) {
-      log.error(`[${name}] Schema errors.`);
-      log.error(JSON.stringify(schemaErrors));
+    const fileContents = await getStudyFile(`${name}.yaml`);
+
+    const active = versions.active.studies;
+    const inactive = versions.inactive.studies;
+
+    const [lastHash, lastVersion] = active[name] || inactive[name];
+
+    const nextHash = hashFileContents(fileContents);
+    let nextVersion = lastVersion;
+
+    if (name !== fileContents.key) {
+      log.error(`[${name}] Study key and Filename mismatch.`);
       return;
     }
 
-    // warn if requested survey is not available
-    (data.surveys || []).forEach((s) => {
-      const reqSurveyKey = typeof s === "string" ? s : s.key;
-      if (
-        !surveyLibrary.has(`${name}::${reqSurveyKey}`) &&
-        !surveyLibrary.has(`library::${reqSurveyKey}`) &&
-        !surveyLibrary.has(reqSurveyKey)
-      ) {
-        log.warning(
-          `[${name}] Includes survey "${reqSurveyKey}" which does not exist in the survey library.`
-        );
-      }
-    });
+    if (!fileContents.active) {
+      log.error(
+        `[${name}] Is not active. The study and any associated tasks will be ignored.`
+      );
+      nextVersions.inactive.studies[name] = [
+        nextHash,
+        nextVersion ? nextVersion + 1 : 1,
+      ];
+      return;
+    }
 
-    // warn if requested multimedia is not available
-    (data.multimedia || []).forEach((m) => {
-      const reqMultimediaKey = typeof m === "string" ? m : m.key;
-      if (
-        !multimediaLibrary.has(`${name}::${reqMultimediaKey}`) &&
-        !multimediaLibrary.has(`library::${reqMultimediaKey}`)
-      ) {
-        log.warning(
-          `[${name}] Includes multimedia "${reqMultimediaKey}" which does not exist in the multimedia library.`
-        );
-      }
-    });
+    // Warn if requested survey is not available. Also create a list
+    // of the tasks that are active
+    (fileContents.tasks || []).forEach((task) => {
+      const reqTaskKey = typeof task === "string" ? task : task.key;
 
-    // warn if requested intervention is not available
-    (data.interventions || []).forEach((i) => {
-      const reqInterventionKey = typeof i === "string" ? i : i.key;
-      if (
-        !interventionLibrary.has(`${name}::${reqInterventionKey}`) &&
-        !interventionLibrary.has(`library::${reqInterventionKey}`)
-      ) {
-        log.warning(
-          `[${name}] Includes intervention "${reqInterventionKey}" which does not exist in the intervention library.`
-        );
+      if (taskLibrary.has(`${name}::${reqTaskKey}`)) {
+        activeTasks.add(`${name}::${reqTaskKey}`);
+        return;
       }
+
+      if (taskLibrary.has(`library::${reqTaskKey}`)) {
+        activeTasks.add(`library::${reqTaskKey}`);
+        return;
+      }
+
+      log.error(
+        `[${name}] Includes task "${reqTaskKey}" which does not exist in the task library.`
+      );
     });
 
     if (!lastHash || !lastVersion) {
       nextVersion = 1;
-      // If this is the first time seeing this file set the version to the
-      // existing version in the yaml, or 1.
-      log.info(`[${name}] New Study. Setting version to 1.`);
     } else if (lastHash !== nextHash) {
       nextVersion = lastVersion + 1;
-      // If we've seen this file, but it has changed, increment the version
-      log.info(`[${name}] Study modified. Bumping version to ${nextVersion}.`);
     } else {
-      let surveyModified = false;
-      // If it is a study, and we didn't change the file itself,
-      // check to see if any of the study's surveys have changed.
-      (data.surveys || []).forEach((s) => {
-        const sKey = s.key || s;
+      let taskModified = false;
+      // If the study itself didn't change but one of the tasks it implements
+      // did, then we also need to increment the version.
+      (fileContents.tasks || []).forEach((task) => {
+        const tKey = task.key || task;
         if (
           // study specific
-          (surveyLibrary.has(`${name}::${sKey}`) &&
-            diffs.get("surveys").has(`${name}::${sKey}`)) ||
-          (!surveyLibrary.has(`${name}::${sKey}`) &&
+          (taskLibrary.has(`${name}::${tKey}`) &&
+            diffs.get("tasks").has(`${name}::${tKey}`)) ||
+          (!taskLibrary.has(`${name}::${tKey}`) &&
             // library
-            surveyLibrary.has(`library::${sKey}`) &&
-            diffs.get("surveys").has(`library::${sKey}`))
+            taskLibrary.has(`library::${tKey}`) &&
+            diffs.get("tasks").has(`library::${tKey}`))
         ) {
-          log.info(
-            `[${name}] Contains modified survey ${sKey}. The study version will be bumped.`
-          );
-          surveyModified = true;
+          taskModified = true;
         }
       });
 
-      let multimediaModified = false;
-      // If it is a study, and we didn't change the file itself,
-      // check to see if any of the study's multimedia tasks have changed.
-      (data.multimedia || []).forEach((m) => {
-        const mKey = m.key || m;
-        if (
-          (multimediaLibrary.has(`${name}::${mKey}`) &&
-            diffs.get("multimedia").has(`${name}::${mKey}`)) ||
-          (!multimediaLibrary.has(`${name}::${mKey}`) &&
-            // library
-            multimediaLibrary.has(`library::${mKey}`) &&
-            diffs.get("multimedia").has(`library::${mKey}`))
-        ) {
-          log.info(
-            `[${name}] Contains modified multimedia ${mKey}. The study version will be bumped.`
-          );
-          multimediaModified = true;
-        }
-      });
-
-      let interventionModified = false;
-      // If it is a study, and we didn't change the file itself,
-      // check to see if any of the study's multimedia tasks have changed.
-      (data.interventions || []).forEach((i) => {
-        const iKey = i.key || i;
-        if (
-          (interventionLibrary.has(`${name}::${iKey}`) &&
-            diffs.get("interventions").has(`${name}::${iKey}`)) ||
-          (!interventionLibrary.has(`${name}::${iKey}`) &&
-            // library
-            interventionLibrary.has(`library::${iKey}`) &&
-            diffs.get("interventions").has(`library::${iKey}`))
-        ) {
-          log.info(
-            `[${name}] Contains modified interventions ${iKey}. The study version will be bumped.`
-          );
-          interventionModified = true;
-        }
-      });
-
-      if (surveyModified || multimediaModified || interventionModified) {
+      if (taskModified) {
         nextVersion = lastVersion + 1;
-        // If we've seen this file, but it has changed, increment the version
-        log.info(`[${name}] Study bumped to version ${nextVersion}.`);
       }
     }
-    log.important(`[${name}] Finished processing. Writing to version.lock.`);
 
     // write to the versions file
     nextVersions.active.studies[name] = [nextHash, nextVersion];
   });
 
-  return Promise.all(promises);
+  await waterfall(executors);
 }
 
-async function diff() {
-  await processSurveys();
-  await processMultimedia();
-  await processInterventions();
+function processActiveTasks() {
+  // Move unused tasks to inactive
+  Object.keys(nextVersions.active.tasks).forEach((key) => {
+    if (!activeTasks.has(key)) {
+      nextVersions.inactive.tasks[key] = nextVersions.active.tasks[key];
+      delete nextVersions.active.tasks[key];
+    }
+  });
+}
+
+// Run the diff process
+(async () => {
+  await processTasks();
   await processStudies();
-  // write out the new versions file
+  processActiveTasks();
+
   await fs.promises.writeFile(
     "./version.lock",
     `${YAML.stringify(nextVersions, { sortMapEntries: true })}\n`
   );
-}
-diff();
+  log.important("Diff Complete!");
+})();
