@@ -47,9 +47,6 @@ active:
       - f6900eccf8a6eb4e06d71251f54b10db
       - 3
   studies:
-    baseline:
-      - 373d1e29033ffc5ea60dbff8907d8999
-      - 15
     cppd-1:
       - 47b398d5d9dc33283e05dffc54ed3e7f
       - 3
@@ -75,15 +72,6 @@ active:
       - 9d49109c2dc9e038362cfc845ddc0fa8
       - 2
   surveys:
-    baseline_cd_risc_survey:
-      - 4d9f3393a80ecb9d804462d7e1883247
-      - 8
-    baseline_demographics:
-      - 865543107dd2c4676521ae739d243726
-      - 12
-    baseline_medical_history:
-      - fb15b947a95f5912c4ea9145a8ec522b
-      - 13
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
       - 1
@@ -201,9 +189,6 @@ active:
     digi-ibd-001::which-ibd:
       - 801c7f6198bd7cd61c7d9683652cd89a
       - 4
-    health_care:
-      - b0af74066ce2756e637d40847492cdf7
-      - 8
     hpi-decode-bp::clearance:
       - 55070a882c87f153e87d96e71059ffb0
       - 3
@@ -387,18 +372,6 @@ active:
     library::ucls-ls:
       - fe283fe1757564f080b188b73ac892af
       - 1
-    mood_survey:
-      - 4a881f332b3e4df72a785cfe04d696ed
-      - 7
-    pain:
-      - 9ba3c6ca34e2e8470757cf7e90e494f4
-      - 9
-    pss4:
-      - ed4464296557bd83019e0681775c15bf
-      - 9
-    qol_survey:
-      - f9d8eb9c48db097ba5e5f113dc440d6a
-      - 8
     ra-forecast::baseline_demographics:
       - 6ef561e7892a5d0f18233d3afa438c70
       - 1
@@ -414,18 +387,6 @@ active:
     ra-forecast::new_meds:
       - f813226747fdbb6fef1a83ca5371511e
       - 1
-    satisfaction_survey_final:
-      - 4d052e9733e4791c7cee230cb0170d2f
-      - 10
-    satisfaction_survey_monthly:
-      - 59fb2763b849dc61c9f5464848e48168
-      - 13
-    sleep:
-      - 5edda7e93c1b325640c1c05884823742
-      - 9
-    sleep_stress_pain:
-      - 0449d9f5264968094ea72766c8838186
-      - 9
     warrior-shield::daily-check-in:
       - 961c0e388785c8a2b11609c9b230c349
       - 5
@@ -451,9 +412,6 @@ inactive:
     hpi-decode-bp:
       - 00783e5154ee5312655ba6dd114f7d2e
       - 10
-    pss:
-      - 84df1128bb2a7d0b651651c5907e796f
-      - 11
     warrior-shield:
       - 4bd95befd9f6f05f54ffe72192d3d405
       - 13

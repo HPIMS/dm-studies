@@ -1,5 +1,4 @@
 key: phq-8
-type: task
 scorable: true
 score:
   fn: sum-score
@@ -164,4 +163,3 @@ sections:
           - value: nearly_every_day
             text: Nearly every day
             score: 3
-

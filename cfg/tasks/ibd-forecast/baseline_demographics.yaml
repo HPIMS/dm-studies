@@ -1,5 +1,4 @@
 key: baseline_demographics
-type: task
 scorable: true
 score:
   fn: sum-score
@@ -187,4 +186,3 @@ sections:
       - key: email_address
         question: What is your email address?
         type: EMAIL
-

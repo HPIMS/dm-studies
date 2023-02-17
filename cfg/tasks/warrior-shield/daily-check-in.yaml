@@ -1,5 +1,4 @@
 key: daily-check-in
-type: task
 active: true
 schedule:
   type: PERIOD
@@ -58,4 +57,3 @@ sections:
         question: Over the past 24 hours, did you use the HeartMath technology,
           including the phone App and ear sensor?
         type: YESNO_CHOICE
-

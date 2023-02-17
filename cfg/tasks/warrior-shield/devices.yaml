@@ -1,5 +1,4 @@
 key: devices
-type: task
 active: true
 schedule:
   type: PERIOD
@@ -82,4 +81,3 @@ sections:
       - key: notes
         question: Notes
         type: TEXTAREA
-
