@@ -66,8 +66,8 @@ active:
       - e482364727e98c21b42dafd74ef34af6
       - 7
     cramp:
-      - d7fdb182feaeb822cdf4d403cc318324
-      - 49
+      - 5138148fa61af9097b6c051f0b228b0d
+      - 50
     digi-ibd-001:
       - ff3d5e056e949dccd63bcaaff4989d4a
       - 23
@@ -76,7 +76,7 @@ active:
       - 25
     ra-forecast:
       - 3120b26884297addef66bea320f4912f
-      - 11
+      - 12
   surveys:
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
@@ -149,6 +149,9 @@ active:
       - 1
     cramp::sss-8-pre:
       - da5e9ac0c94e095e46e5b70e15b4825a
+      - 1
+    cramp::test-task:
+      - 35db7d437ae5dddd71b4ccf09015294b
       - 1
     digi-ibd-001::begin-next-phase:
       - fd68b027dcb21d300b4fa0c454873601
@@ -271,11 +274,11 @@ active:
       - 718d227f05480cfadc12e77b85e2fbf9
       - 3
     library::mdhaq:
-      - 7ed0ef9dde8cf8cd7803cb967fd08b0c
-      - 1
+      - 91873a6d6a2ecc81d9975942a5e28d78
+      - 2
     library::mdhaq-bi-weekly:
-      - c06c852fdac5483f28134e6bef3bae03
-      - 1
+      - 13c34ce3c107cc21e3519691fc827901
+      - 2
     library::mpq:
       - fe32b9b074a53a9718d1a6fba16634c4
       - 8
@@ -393,9 +396,6 @@ active:
     library::sss-8:
       - d6f828c61add2b569a341ffc5f6369fc
       - 2
-    library::strain:
-      - 5b705673dcabe47935102d6ca52762c6
-      - 1
     library::ucls-ls:
       - fe283fe1757564f080b188b73ac892af
       - 3
