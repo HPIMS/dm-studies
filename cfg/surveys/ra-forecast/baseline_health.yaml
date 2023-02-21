@@ -15,7 +15,7 @@ outro:
   title: Health Survey Complete
   description: Thank you for completing this survey! Your participation is always valued.
 sections:
-  - key: symptom_history
+  - key: diagnosis_history
     title: ""
     description: ""
     questions:
@@ -39,7 +39,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: symptom_history
+              - section: diagnosis_history
                 question: joint_replacement
                 operator: =
                 value: yes
@@ -60,74 +60,38 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: symptom_history
+              - section: diagnosis_history
                 question: fracture
                 operator: =
                 value: yes
+  - key: pain_swelling_past
+    title: ""
+    description: ""
+    questions:
       - key: affected_joints_past
         question: Which joints HAVE BEEN affected by rheumatoid arthritis with pain and/or swelling in the PAST?
         type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Shoulders
-            inlineQuestion:
-                key: affected_joints_a_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: b
             text: Elbows
-            inlineQuestion:
-                key: affected_joints_b_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: c
             text: Hips
-            inlineQuestion:
-                key: affected_joints_c_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: d
             text: Knees
-            inlineQuestion:
-                key: affected_joints_d_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: e
             text: Ankles
-            inlineQuestion:
-                key: affected_joints_e_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: f
             text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)”
-            inlineQuestion:
-                key: affected_joints_f_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: g
             text: The knuckles of the fingers (not including your thumbs)
-            inlineQuestion:
-                key: affected_joints_g_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: h
             text: The small joint of your thumb not including the knuckle (i.e. not including the joint that connects the thumb to your hand)
-            inlineQuestion:
-                key: affected_joints_h_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: i
             text: The knuckle of your thumb (the joint that connects your thumb to your hand)
-            inlineQuestion:
-                key: affected_joints_i_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: j
             text: Wrists
-            inlineQuestion:
-                key: affected_joints_j_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
           - value: k
             text: Neck
           - value: l
@@ -135,17 +99,1219 @@ sections:
           - value: m
             text: Lower back
           - value: "n"
-            text: The joints that connect your toes to your foot     
-            inlineQuestion:
-                key: affected_joints_n_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
+            text: The joints that connect your toes to your foot
           - value: o
-            text: The joints of the toes (not including the joint that connects your toes to your foot)  
-            inlineQuestion:
-                key: affected_joints_o_description
-                question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA
+            text: The joints of the toes (not including the joint that connects your toes to your foot)
+      - key: affected_a_pain_past
+        question: Which shoulders have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left shoulder
+          - value: right
+            text: Right shoulder
+          - value: both
+            text: Both shoulders
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: a
+      - key: affected_a_swelling_past
+        question: Which shoulders have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left shoulder
+          - value: right
+            text: Right shoulder
+          - value: both
+            text: Both shoulders
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: a
+      - key: affected_b_pain_past
+        question: Which elbows have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left elbow
+          - value: right
+            text: Right elbow
+          - value: both
+            text: Both elbows
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: b
+      - key: affected_b_swelling_past
+        question: Which elbows have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left elbow
+          - value: right
+            text: Right elbow
+          - value: both
+            text: Both elbows
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: b
+      - key: affected_c_pain_past
+        question: Which hips have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hip
+          - value: right
+            text: Right hip
+          - value: both
+            text: Both hips
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: c
+      - key: affected_c_swelling_past
+        question: Which hips have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hip
+          - value: right
+            text: Right hip
+          - value: both
+            text: Both hips
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: c
+      - key: affected_d_pain_past
+        question: Which knees have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left knee
+          - value: right
+            text: Right knee
+          - value: both
+            text: Both knees
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: d
+      - key: affected_d_swelling_past
+        question: Which knees have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left knee
+          - value: right
+            text: Right knee
+          - value: both
+            text: Both knees
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: d
+      - key: affected_e_pain_past
+        question: Which ankles have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left ankle
+          - value: right
+            text: Right ankle
+          - value: both
+            text: Both ankles
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: e
+      - key: affected_e_swelling_past
+        question: Which ankles have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left ankle
+          - value: right
+            text: Right ankle
+          - value: both
+            text: Both ankles
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: e
+      - key: affected_f_pain_past
+        question: Which of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left fingers
+          - value: right
+            text: Right fingers
+          - value: both
+            text: Both fingers
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: f
+      - key: affected_f_pain_past_count
+        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: f
+      - key: affected_f_swelling_past
+        question: Which of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hand
+          - value: right
+            text: Right hand
+          - value: both
+            text: Both hands
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: f
+      - key: affected_f_swelling_past_count
+        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: f
+      - key: affected_g_pain_past
+        question: Which of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hand
+          - value: right
+            text: Right hand
+          - value: both
+            text: Both hands
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: g
+      - key: affected_g_pain_past_count
+        question: How many total of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: g
+      - key: affected_g_swelling_past
+        question: Which of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hand
+          - value: right
+            text: Right hand
+          - value: both
+            text: Both hands
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: g
+      - key: affected_g_swelling_past_count
+        question: How of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: g
+      - key: affected_h_pain_past
+        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: h
+      - key: affected_h_swelling_past
+        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: h
+      - key: affected_i_pain_past
+        question: Which of the knuckle of your thumbs (the joint that connects your thumb to your hand) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: i
+      - key: affected_i_swelling_past
+        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: i
+      - key: affected_j_pain_past
+        question: Which wrists have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left wrist
+          - value: right
+            text: Right wrist
+          - value: both
+            text: Both wrists
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: j
+      - key: affected_j_swelling_past
+        question: Which wrists have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left wrist
+          - value: right
+            text: Right wrist
+          - value: both
+            text: Both wrists
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: j
+      - key: affected_k_pain_past
+        question: Has your neck been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: k
+      - key: affected_k_swelling_past
+        question: Has your neck been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: k
+      - key: affected_l_pain_past
+        question: Has the middle of your back been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: l
+      - key: affected_l_swelling_past
+        question: Has the middle of your back been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: l
+      - key: affected_m_pain_past
+        question: Has your lower back been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: m
+      - key: affected_m_swelling_past
+        question: Has your lower back been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: m
+      - key: affected_n_pain_past
+        question: Which of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: "n"
+      - key: affected_n_pain_past_count
+        question: How many total of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: "n"
+      - key: affected_n_swelling_past
+        question: Which of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: "n"
+      - key: affected_n_swelling_past_count
+        question: How of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: "n"
+      - key: affected_o_pain_past
+        question: Which of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: o
+      - key: affected_o_pain_past_count
+        question: How many total of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: o
+      - key: affected_o_swelling_past
+        question: Which of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: o
+      - key: affected_o_swelling_past_count
+        question: How of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_past
+                question: affected_joints_past
+                operator: INCLUDES
+                value: o
+  - key: pain_swelling_current
+    title: ""
+    description: ""
+    questions:
+      - key: affected_joints_current
+        question: Which joints are CURRENTLY affected by rheumatoid arthritis with pain and/or swelling?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Shoulders
+          - value: b
+            text: Elbows
+          - value: c
+            text: Hips
+          - value: d
+            text: Knees
+          - value: e
+            text: Ankles
+          - value: f
+            text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)”
+          - value: g
+            text: The knuckles of the fingers (not including your thumbs)
+          - value: h
+            text: The small joint of your thumb not including the knuckle (i.e. not including the joint that connects the thumb to your hand)
+          - value: i
+            text: The knuckle of your thumb (the joint that connects your thumb to your hand)
+          - value: j
+            text: Wrists
+          - value: k
+            text: Neck
+          - value: l
+            text: Middle of your back
+          - value: m
+            text: Lower back
+          - value: "n"
+            text: The joints that connect your toes to your foot
+          - value: o
+            text: The joints of the toes (not including the joint that connects your toes to your foot)
+      - key: affected_a_pain_current
+        question: Which shoulders are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left shoulder
+          - value: right
+            text: Right shoulder
+          - value: both
+            text: Both shoulders
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: a
+      - key: affected_a_swelling_current
+        question: Which shoulders are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left shoulder
+          - value: right
+            text: Right shoulder
+          - value: both
+            text: Both shoulders
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: a
+      - key: affected_b_pain_current
+        question: Which elbows are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left elbow
+          - value: right
+            text: Right elbow
+          - value: both
+            text: Both elbows
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: b
+      - key: affected_b_swelling_current
+        question: Which elbows are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left elbow
+          - value: right
+            text: Right elbow
+          - value: both
+            text: Both elbows
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: b
+      - key: affected_c_pain_current
+        question: Which hips are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hip
+          - value: right
+            text: Right hip
+          - value: both
+            text: Both hips
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: c
+      - key: affected_c_swelling_current
+        question: Which hips are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hip
+          - value: right
+            text: Right hip
+          - value: both
+            text: Both hips
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: c
+      - key: affected_d_pain_current
+        question: Which knees are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left knee
+          - value: right
+            text: Right knee
+          - value: both
+            text: Both knees
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: d
+      - key: affected_d_swelling_current
+        question: Which knees are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left knee
+          - value: right
+            text: Right knee
+          - value: both
+            text: Both knees
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: d
+      - key: affected_e_pain_current
+        question: Which ankles are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left ankle
+          - value: right
+            text: Right ankle
+          - value: both
+            text: Both ankles
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: e
+      - key: affected_e_swelling_current
+        question: Which ankles are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left ankle
+          - value: right
+            text: Right ankle
+          - value: both
+            text: Both ankles
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: e
+      - key: affected_f_pain_current
+        question: Which of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left fingers
+          - value: right
+            text: Right fingers
+          - value: both
+            text: Both fingers
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: f
+      - key: affected_f_pain_current_count
+        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: f
+      - key: affected_f_swelling_current
+        question: Which of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hand
+          - value: right
+            text: Right hand
+          - value: both
+            text: Both hands
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: f
+      - key: affected_f_swelling_current_count
+        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: f
+      - key: affected_g_pain_current
+        question: Which of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hand
+          - value: right
+            text: Right hand
+          - value: both
+            text: Both hands
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: g
+      - key: affected_g_pain_current_count
+        question: How many total of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: g
+      - key: affected_g_swelling_current
+        question: Which of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left hand
+          - value: right
+            text: Right hand
+          - value: both
+            text: Both hands
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: g
+      - key: affected_g_swelling_current_count
+        question: How of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: g
+      - key: affected_h_pain_current
+        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: h
+      - key: affected_h_swelling_current
+        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: h
+      - key: affected_i_pain_current
+        question: Which of the knuckle of your thumbs (the joint that connects your thumb to your hand) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: i
+      - key: affected_i_swelling_current
+        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left thumb
+          - value: right
+            text: Right thumb
+          - value: both
+            text: Both thumbs
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: i
+      - key: affected_j_pain_current
+        question: Which wrists are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left wrist
+          - value: right
+            text: Right wrist
+          - value: both
+            text: Both wrists
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: j
+      - key: affected_j_swelling_current
+        question: Which wrists are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left wrist
+          - value: right
+            text: Right wrist
+          - value: both
+            text: Both wrists
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: j
+      - key: affected_k_pain_current
+        question: Is your neck CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: k
+      - key: affected_k_swelling_current
+        question: Is your neck CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: k
+      - key: affected_l_pain_current
+        question: Is the middle of your back CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: l
+      - key: affected_l_swelling_current
+        question: Is the middle of your back CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: l
+      - key: affected_m_pain_current
+        question: Is your lower back CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: m
+      - key: affected_m_swelling_current
+        question: Is your lower back CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: m
+      - key: affected_n_pain_current
+        question: Which of the joints that connect your toes to your foot are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: "n"
+      - key: affected_n_pain_current_count
+        question: How many total of the joints that connect your toes to your foot are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: "n"
+      - key: affected_n_swelling_current
+        question: Which of the joints that connect your toes to your foot are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: "n"
+      - key: affected_n_swelling_current_count
+        question: How of the joints that connect your toes to your foot are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: "n"
+      - key: affected_o_pain_current
+        question: Which of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: o
+      - key: affected_o_pain_current_count
+        question: How many total of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: o
+      - key: affected_o_swelling_current
+        question: Which of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: SINGLE_CHOICE
+        options:
+          - value: left
+            text: Left foot
+          - value: right
+            text: Right foot
+          - value: both
+            text: Both feet
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: o
+      - key: affected_o_swelling_current_count
+        question: How of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_swelling_current
+                question: affected_joints_current
+                operator: INCLUDES
+                value: o
   - key: pain_meds
     title: ""
     description: ""
