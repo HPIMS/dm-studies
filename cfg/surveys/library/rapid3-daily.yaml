@@ -4,9 +4,9 @@ scorable: true
 score:
   fn: rapid3
   args: {}
-  schedule:
-    type: PERIOD
-    period: DAILY
+schedule:
+  type: PERIOD
+  period: DAILY
 timeRequirements: 
   time: 3
   timeUnits: minutes
