@@ -21,7 +21,7 @@ outro:
 sections:
   - key: new_meds
     title: ""
-    description: ""
+    description: Be sure to scroll to the bottom of the screen and answer any follow-up questions after selecting a medication.
     questions:
       - key: new_meds_trigger
         question: I started a new medication
@@ -2606,7 +2606,7 @@ sections:
                 value: other
   - key: stopped_meds
     title: ""
-    description: ""
+    description: Be sure to scroll to the bottom of the screen and answer any follow-up questions after selecting a medication.
     questions:
       - key: stopped_meds_trigger
         question: I stopped a medication
@@ -5191,7 +5191,7 @@ sections:
             value: other
   - key: altered_meds
     title: ""
-    description: ""
+    description: Be sure to scroll to the bottom of the screen and answer any follow-up questions after selecting a medication.
     questions:
       - key: altered_meds_trigger
         question: I changed the dose of a medication I am taking
