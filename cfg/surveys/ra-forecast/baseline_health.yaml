@@ -1314,7 +1314,7 @@ sections:
                 value: o
   - key: pain_meds
     title: ""
-    description: ""
+    description: Be sure to scroll to the bottom of the screen and answer any follow-up questions after selecting a medication.
     questions: 
       - key: pain_meds_trigger
         question: Do you use any medications for pain?
@@ -2237,7 +2237,7 @@ sections:
                 value: pain8
   - key: past_meds
     title: ""
-    description: ""
+    description: Be sure to scroll to the bottom of the screen and answer any follow-up questions after selecting a medication.
     questions:
       - key: past_meds_trigger
         question: Have you taken any medications for your rheumatoid arthritis in the past that you are not currently taking?
@@ -2335,7 +2335,7 @@ sections:
                 value: yes
   - key: current_meds
     title: ""
-    description: ""
+    description: Be sure to scroll to the bottom of the screen and answer any follow-up questions after selecting a medication.
     questions:
       - key: current_meds_trigger
         question: Are you currently taking any medication?
