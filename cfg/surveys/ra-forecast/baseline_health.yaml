@@ -64,8 +64,8 @@ sections:
                 question: fracture
                 operator: =
                 value: yes
-      - key: affected_joints
-        question: Which joints has your rheumatoid arthritis involved?
+      - key: affected_joints_past
+        question: Which joints HAVE BEEN affected by rheumatoid arthritis with pain and/or swelling in the PAST?
         type: MULTIPLE_CHOICE
         options:
           - value: a
@@ -1181,13 +1181,13 @@ sections:
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
-                key: past_meds_corticosteroid_description
+                key: current_meds_corticosteroid_description
                 question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: nsaids
             text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
             inlineQuestion:
-                key: past_meds_nsaids_description
+                key: current_meds_nsaids_description
                 question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: hydroxychloroquine
@@ -1199,7 +1199,7 @@ sections:
           - value: cyclosporine
             text: Cyclosporine (neoral, sandimmune)
             inlineQuestion:
-                key: past_meds_cyclosporine_description
+                key: current_meds_cyclosporine_description
                 question: "Please list which specific medication you were taking."
                 type: TEXTAREA
           - value: cyclophosphamide
@@ -1207,19 +1207,19 @@ sections:
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
             inlineQuestion:
-                key: past_meds_purethinol_description
+                key: current_meds_purethinol_description
                 question: "Please list which specific medication you were taking."
                 type: TEXTAREA                
           - value: methotrexate
             text: Methotrexate (trexall, rheumatrex)
             inlineQuestion:
-                key: past_meds_methotrexate_description
+                key: current_meds_methotrexate_description
                 question: "Please list which specific medication you were taking."
                 type: TEXTAREA                
           - value: remicade
             text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
             inlineQuestion:
-                key: past_meds_remicade_description
+                key: current_meds_remicade_description
                 question: "Please list which specific medication you were taking."
                 type: TEXTAREA                
           - value: humira
