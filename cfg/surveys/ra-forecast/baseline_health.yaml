@@ -15,7 +15,7 @@ outro:
   title: Health Survey Complete
   description: Thank you for completing this survey! Your participation is always valued.
 sections:
-  - key: baseline
+  - key: symptom_history
     title: ""
     description: ""
     questions:
@@ -39,7 +39,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: symptom_history
                 question: joint_replacement
                 operator: =
                 value: yes
@@ -60,7 +60,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: symptom_history
                 question: fracture
                 operator: =
                 value: yes
@@ -145,7 +145,11 @@ sections:
             inlineQuestion:
                 key: affected_joints_o_description
                 question: Which side of the body? (Left/Right/Both)
-                type: TEXTAREA      
+                type: TEXTAREA
+  - key: pain_meds
+    title: ""
+    description: ""
+    questions: 
       - key: pain_meds_trigger
         question: Do you use any medications for pain?
         type: YESNO_CHOICE
@@ -205,7 +209,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds_trigger
                 operator: =
                 value: yes
@@ -241,7 +245,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain1
@@ -271,7 +275,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain1
@@ -283,7 +287,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain1
@@ -301,7 +305,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain1
@@ -312,7 +316,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain1
@@ -348,7 +352,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain2
@@ -378,7 +382,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain2
@@ -390,7 +394,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain2
@@ -408,7 +412,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain2
@@ -419,7 +423,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain2
@@ -455,7 +459,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain3
@@ -485,7 +489,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain3
@@ -497,7 +501,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain3
@@ -515,7 +519,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain3
@@ -526,7 +530,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain3
@@ -562,7 +566,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain4
@@ -592,7 +596,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain4
@@ -604,7 +608,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain4
@@ -622,7 +626,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain4
@@ -633,7 +637,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain4
@@ -669,7 +673,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain5
@@ -699,7 +703,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain5
@@ -711,7 +715,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain5
@@ -729,7 +733,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain5
@@ -740,7 +744,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain5
@@ -776,7 +780,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain6
@@ -806,7 +810,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain6
@@ -818,7 +822,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain6
@@ -836,7 +840,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain6
@@ -847,7 +851,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain6
@@ -883,7 +887,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain7
@@ -913,7 +917,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain7
@@ -925,7 +929,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain7
@@ -943,7 +947,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain7
@@ -954,7 +958,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain7
@@ -990,7 +994,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain8
@@ -1020,7 +1024,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain8
@@ -1032,7 +1036,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain8
@@ -1050,7 +1054,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain8
@@ -1061,10 +1065,14 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: pain_meds
                 question: pain_meds
                 operator: INCLUDES
                 value: pain8
+  - key: past_meds
+    title: ""
+    description: ""
+    questions:
       - key: past_meds_trigger
         question: Have you taken any medications for your rheumatoid arthritis in the past that you are not currently taking?
         type: YESNO_CHOICE
@@ -1144,7 +1152,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: past_meds
                 question: past_meds_trigger
                 operator: =
                 value: yes
@@ -1155,10 +1163,14 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: past_meds
                 question: past_meds_trigger
                 operator: =
                 value: yes
+  - key: current_meds
+    title: ""
+    description: ""
+    questions:
       - key: current_meds_trigger
         question: Are you currently taking any medication?
         type: YESNO_CHOICE
@@ -1286,7 +1298,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds_trigger
                 operator: =
                 value: yes
@@ -1323,7 +1335,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: corticosteroid
@@ -1354,7 +1366,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: corticosteroid
@@ -1367,7 +1379,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: corticosteroid
@@ -1386,7 +1398,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: corticosteroid
@@ -1398,7 +1410,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: corticosteroid
@@ -1438,7 +1450,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: nsaids
@@ -1472,7 +1484,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: nsaids
@@ -1488,7 +1500,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: nsaids
@@ -1510,7 +1522,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: nsaids
@@ -1525,7 +1537,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: nsaids
@@ -1561,7 +1573,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: hydroxychloroquine
@@ -1591,7 +1603,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: hydroxychloroquine
@@ -1604,7 +1616,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: hydroxychloroquine
@@ -1622,7 +1634,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: hydroxychloroquine
@@ -1633,7 +1645,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: hydroxychloroquine
@@ -1669,7 +1681,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: leflunomide
@@ -1699,7 +1711,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: leflunomide
@@ -1711,7 +1723,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: leflunomide
@@ -1729,7 +1741,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: leflunomide
@@ -1740,7 +1752,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: leflunomide
@@ -1776,7 +1788,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: azulfidine
@@ -1806,7 +1818,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: azulfidine
@@ -1818,7 +1830,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: azulfidine
@@ -1836,7 +1848,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: azulfidine
@@ -1847,7 +1859,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: azulfidine
@@ -1883,7 +1895,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclosporine
@@ -1913,7 +1925,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclosporine
@@ -1926,7 +1938,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclosporine
@@ -1944,7 +1956,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclosporine
@@ -1955,7 +1967,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclosporine
@@ -1991,7 +2003,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclophosphamide
@@ -2021,7 +2033,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclophosphamide
@@ -2033,7 +2045,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclophosphamide
@@ -2051,7 +2063,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclophosphamide
@@ -2062,7 +2074,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: cyclophosphamide
@@ -2098,7 +2110,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: purethinol
@@ -2128,7 +2140,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: purethinol
@@ -2141,7 +2153,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: purethinol
@@ -2159,7 +2171,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: purethinol
@@ -2170,7 +2182,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: purethinol
@@ -2206,7 +2218,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: methotrexate
@@ -2236,7 +2248,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: methotrexate
@@ -2249,7 +2261,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: methotrexate
@@ -2267,7 +2279,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: methotrexate
@@ -2278,7 +2290,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: methotrexate
@@ -2315,7 +2327,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: remicade
@@ -2346,7 +2358,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: remicade
@@ -2359,7 +2371,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: remicade
@@ -2378,7 +2390,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: remicade
@@ -2390,7 +2402,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: remicade
@@ -2426,7 +2438,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: humira
@@ -2456,7 +2468,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: humira
@@ -2468,7 +2480,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: humira
@@ -2486,7 +2498,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: humira
@@ -2497,7 +2509,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: humira
@@ -2533,7 +2545,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: etanercept
@@ -2563,7 +2575,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: etanercept
@@ -2575,7 +2587,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: etanercept
@@ -2593,7 +2605,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: etanercept
@@ -2604,7 +2616,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: etanercept
@@ -2640,7 +2652,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: abatacept
@@ -2670,7 +2682,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: abatacept
@@ -2682,7 +2694,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: abatacept
@@ -2700,7 +2712,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: abatacept
@@ -2711,7 +2723,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: abatacept
@@ -2747,7 +2759,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: rituximab
@@ -2777,7 +2789,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: rituximab
@@ -2789,7 +2801,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: rituximab
@@ -2807,7 +2819,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: rituximab
@@ -2818,7 +2830,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: rituximab
@@ -2854,7 +2866,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: anakinra
@@ -2884,7 +2896,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: anakinra
@@ -2896,7 +2908,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: anakinra
@@ -2914,7 +2926,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: anakinra
@@ -2925,7 +2937,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: anakinra
@@ -2961,7 +2973,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tocilizumab
@@ -2991,7 +3003,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tocilizumab
@@ -3003,7 +3015,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tocilizumab
@@ -3021,7 +3033,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tocilizumab
@@ -3032,7 +3044,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tocilizumab
@@ -3068,7 +3080,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: sarilumab
@@ -3098,7 +3110,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: sarilumab
@@ -3110,7 +3122,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: sarilumab
@@ -3128,7 +3140,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: sarilumab
@@ -3139,7 +3151,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: sarilumab
@@ -3175,7 +3187,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: certrolizumab
@@ -3205,7 +3217,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: certrolizumab
@@ -3217,7 +3229,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: certrolizumab
@@ -3235,7 +3247,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: certrolizumab
@@ -3246,7 +3258,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: certrolizumab
@@ -3282,7 +3294,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: goliumumab
@@ -3312,7 +3324,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: goliumumab
@@ -3324,7 +3336,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: goliumumab
@@ -3342,7 +3354,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: goliumumab
@@ -3353,7 +3365,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: goliumumab
@@ -3389,7 +3401,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: baricitinib
@@ -3419,7 +3431,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: baricitinib
@@ -3431,7 +3443,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: baricitinib
@@ -3449,7 +3461,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: baricitinib
@@ -3460,7 +3472,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: baricitinib
@@ -3496,7 +3508,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tofacitinib
@@ -3526,7 +3538,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tofacitinib
@@ -3538,7 +3550,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tofacitinib
@@ -3556,7 +3568,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tofacitinib
@@ -3567,7 +3579,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: tofacitinib
@@ -3603,7 +3615,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: upadacitinib
@@ -3633,7 +3645,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: upadacitinib
@@ -3645,7 +3657,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: upadacitinib
@@ -3663,7 +3675,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: upadacitinib
@@ -3674,7 +3686,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: upadacitinib
@@ -3710,7 +3722,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other1
@@ -3740,7 +3752,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other1
@@ -3752,7 +3764,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other1
@@ -3770,7 +3782,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other1
@@ -3781,7 +3793,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other1
@@ -3817,7 +3829,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other2
@@ -3847,7 +3859,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other2
@@ -3859,7 +3871,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other2
@@ -3877,7 +3889,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other2
@@ -3888,7 +3900,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other2
@@ -3924,7 +3936,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other3
@@ -3954,7 +3966,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other3
@@ -3966,7 +3978,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other3
@@ -3984,7 +3996,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other3
@@ -3995,7 +4007,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other3
@@ -4031,7 +4043,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other4
@@ -4061,7 +4073,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other4
@@ -4073,7 +4085,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other4
@@ -4091,7 +4103,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other4
@@ -4102,7 +4114,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other4
@@ -4138,7 +4150,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other5
@@ -4168,7 +4180,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other5
@@ -4180,7 +4192,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other5
@@ -4198,7 +4210,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other5
@@ -4209,7 +4221,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other5
@@ -4245,7 +4257,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other6
@@ -4275,7 +4287,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other6
@@ -4287,7 +4299,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other6
@@ -4305,7 +4317,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other6
@@ -4316,7 +4328,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other6
@@ -4352,7 +4364,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other7
@@ -4382,7 +4394,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other7
@@ -4394,7 +4406,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other7
@@ -4412,7 +4424,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other7
@@ -4423,7 +4435,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other7
@@ -4459,7 +4471,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other8
@@ -4489,7 +4501,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other8
@@ -4501,7 +4513,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other8
@@ -4519,7 +4531,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other8
@@ -4530,7 +4542,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: baseline
+              - section: current_meds
                 question: current_meds
                 operator: INCLUDES
                 value: other8
