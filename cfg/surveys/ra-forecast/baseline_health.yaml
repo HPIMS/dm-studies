@@ -99,7 +99,7 @@ sections:
                 question: Which side of the body? (Left/Right/Both)
                 type: TEXTAREA
           - value: f
-            text: Any of the two small joints of your fingers not including your knuckes (not including your thumbs)
+            text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)”
             inlineQuestion:
                 key: affected_joints_f_description
                 question: Which side of the body? (Left/Right/Both)
@@ -111,7 +111,7 @@ sections:
                 question: Which side of the body? (Left/Right/Both)
                 type: TEXTAREA
           - value: h
-            text: The small joint of your thumb not including the knuckle (joint that connects the thumb to your hand)
+            text: The small joint of your thumb not including the knuckle (i.e. not including the joint that connects the thumb to your hand)
             inlineQuestion:
                 key: affected_joints_h_description
                 question: Which side of the body? (Left/Right/Both)
@@ -297,8 +297,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -406,8 +404,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -515,8 +511,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -624,8 +618,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -733,8 +725,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -842,8 +832,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -951,8 +939,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -1060,8 +1046,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -1398,8 +1382,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -1524,8 +1506,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -1638,8 +1618,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -1747,8 +1725,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -1856,8 +1832,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -1966,8 +1940,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2075,8 +2047,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2185,8 +2155,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2295,8 +2263,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2408,8 +2374,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2518,8 +2482,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2627,8 +2589,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2736,8 +2696,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2845,8 +2803,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -2954,8 +2910,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3063,8 +3017,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3172,8 +3124,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3281,8 +3231,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3390,8 +3338,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3499,8 +3445,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3608,8 +3552,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3717,8 +3659,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3826,8 +3766,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -3935,8 +3873,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -4044,8 +3980,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -4153,8 +4087,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -4262,8 +4194,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -4371,8 +4301,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -4480,8 +4408,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW
@@ -4589,8 +4515,6 @@ sections:
             text: In an IV (intravenous/in a vein)
           - value: under_skin
             text: Injected under the skin
-          - value: in_rectum
-            text: In the rectum
         triggers:
           - action:
               type: SHOW

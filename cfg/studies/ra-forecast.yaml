@@ -43,11 +43,8 @@ surveys:
   - key: baseline_health
     rank: 2
 
-  - key: rapid3
+  - key: rapid3-daily
     rank: 3
-    schedule:
-      type: PERIOD
-      period: DAILY
     triggers:
       - action: SHOW
         condition:
