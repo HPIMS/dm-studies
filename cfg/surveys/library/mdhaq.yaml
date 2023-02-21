@@ -576,7 +576,7 @@ sections:
           - value: k
             text: Other skin problems
           - value: l
-            text: Loss of hain
+            text: Loss of hair
           - value: m
             text: Dry eyes
           - value: "n"
@@ -620,7 +620,7 @@ sections:
           - value: ag
             text: Diarrhea
           - value: ah
-            text: Dark or blooding stools
+            text: Dark or bloody stools
           - value: ai
             text: Problems with urination
           - value: aj
@@ -828,3 +828,42 @@ sections:
               key: health_matters_m_description
               question: "Please explain"
               type: TEXTAREA
+  - key: group_7
+    title: ""
+    description: ""
+    questions:
+      - key: occupation
+        question: What is your current occupation?
+        type: TEXT
+      - key: work_status
+        question: What is your current work status?
+        type: SINGLE_CHOICE
+        options:
+          - value: full_time
+            text: Full time
+          - value: part_time
+            text: Part time
+          - value: disabled
+            text: Disabled
+          - value: homemaker
+            text: Homemaker
+          - value: self_employed
+            text: Self employed
+          - value: retired
+            text: Retired
+          - value: seeking_work
+            text: Seeking work
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: work_status_other_description
+              question: Please explain
+              type: TEXTAREA
+      - key: years_of_school
+        question: How many years of school have you completed?
+        type: NUMERIC
+        min: 0
+        max: 20
+      - key: weight
+        question: What is your weight?
+        type: WEIGHT
