@@ -69,7 +69,7 @@ sections:
     description: ""
     questions:
       - key: affected_joints_past
-        question: Which joints have been affected by rheumatoid arthritis with pain and/or swelling in the PAST?
+        question: Which joints have been affected by rheumatoid arthritis related pain and/or swelling in the PAST?
         type: MULTIPLE_CHOICE
         options:
           - value: a
@@ -83,7 +83,7 @@ sections:
           - value: e
             text: Ankles
           - value: f
-            text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)”
+            text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)
           - value: g
             text: The knuckles of the fingers (not including your thumbs)
           - value: h
@@ -287,11 +287,11 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: left
-            text: Left fingers
+            text: Left hand
           - value: right
-            text: Right fingers
+            text: Right hand
           - value: both
-            text: Both fingers
+            text: Both hands
         triggers:
           - action:
               type: SHOW
@@ -301,7 +301,7 @@ sections:
                 operator: INCLUDES
                 value: f
       - key: affected_f_pain_past_count
-        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        question: How many of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related PAIN in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -330,7 +330,7 @@ sections:
                 operator: INCLUDES
                 value: f
       - key: affected_f_swelling_past_count
-        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        question: How many of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) have been affected by rheumatoid arthritis related SWELLING in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -359,7 +359,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_pain_past_count
-        question: How many total of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        question: How many of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -388,7 +388,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_swelling_past_count
-        question: How of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        question: How many of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -591,7 +591,7 @@ sections:
                 operator: INCLUDES
                 value: "n"
       - key: affected_n_pain_past_count
-        question: How many total of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related PAIN in the PAST?
+        question: How many of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related PAIN in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -620,7 +620,7 @@ sections:
                 operator: INCLUDES
                 value: "n"
       - key: affected_n_swelling_past_count
-        question: How of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        question: How many of the joints that connect your toes to your foot have been affected by rheumatoid arthritis related SWELLING in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -649,7 +649,7 @@ sections:
                 operator: INCLUDES
                 value: o
       - key: affected_o_pain_past_count
-        question: How many total of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        question: How many of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related PAIN in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -678,7 +678,7 @@ sections:
                 operator: INCLUDES
                 value: o
       - key: affected_o_swelling_past_count
-        question: How of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        question: How many of the joints of the toes (not including the joint that connects your toes to your foot) have been affected by rheumatoid arthritis related SWELLING in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -693,7 +693,7 @@ sections:
     description: ""
     questions:
       - key: affected_joints_current
-        question: Which joints are CURRENTLY affected by rheumatoid arthritis with pain and/or swelling?
+        question: Which joints are CURRENTLY affected by rheumatoid arthritis related pain and/or swelling?
         type: MULTIPLE_CHOICE
         options:
           - value: a
@@ -707,7 +707,7 @@ sections:
           - value: e
             text: Ankles
           - value: f
-            text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)”
+            text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)
           - value: g
             text: The knuckles of the fingers (not including your thumbs)
           - value: h
@@ -911,11 +911,11 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: left
-            text: Left fingers
+            text: Left hand
           - value: right
-            text: Right fingers
+            text: Right hand
           - value: both
-            text: Both fingers
+            text: Both hands
         triggers:
           - action:
               type: SHOW
@@ -925,7 +925,7 @@ sections:
                 operator: INCLUDES
                 value: f
       - key: affected_f_pain_current_count
-        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        question: How many of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related PAIN?
         type: NUMERIC
         triggers:
           - action:
@@ -954,7 +954,7 @@ sections:
                 operator: INCLUDES
                 value: f
       - key: affected_f_swelling_current_count
-        question: How many total of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        question: How many of two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
         type: NUMERIC
         triggers:
           - action:
@@ -983,7 +983,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_pain_current_count
-        question: How many total of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        question: How many of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
         type: NUMERIC
         triggers:
           - action:
@@ -1012,7 +1012,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_swelling_current_count
-        question: How of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        question: How many of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
         type: NUMERIC
         triggers:
           - action:
@@ -1215,7 +1215,7 @@ sections:
                 operator: INCLUDES
                 value: "n"
       - key: affected_n_pain_current_count
-        question: How many total of the joints that connect your toes to your foot are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        question: How many of the joints that connect your toes to your foot are CURRENTLY affected by rheumatoid arthritis related PAIN?
         type: NUMERIC
         triggers:
           - action:
@@ -1273,7 +1273,7 @@ sections:
                 operator: INCLUDES
                 value: o
       - key: affected_o_pain_current_count
-        question: How many total of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        question: How many of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related PAIN?
         type: NUMERIC
         triggers:
           - action:
@@ -1302,7 +1302,7 @@ sections:
                 operator: INCLUDES
                 value: o
       - key: affected_o_swelling_current_count
-        question: How of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        question: How many of the joints of the toes (not including the joint that connects your toes to your foot) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
         type: NUMERIC
         triggers:
           - action:
