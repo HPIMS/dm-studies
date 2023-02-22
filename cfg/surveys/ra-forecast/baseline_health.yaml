@@ -85,7 +85,7 @@ sections:
           - value: f
             text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)
           - value: g
-            text: The knuckles of the fingers (not including your thumbs)
+            text: The knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs)
           - value: h
             text: The small joint of your thumb not including the knuckle (i.e. not including the joint that connects the thumb to your hand)
           - value: i
@@ -112,6 +112,8 @@ sections:
             text: Right shoulder
           - value: both
             text: Both shoulders
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -130,6 +132,8 @@ sections:
             text: Right shoulder
           - value: both
             text: Both shoulders
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -148,6 +152,8 @@ sections:
             text: Right elbow
           - value: both
             text: Both elbows
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -166,6 +172,8 @@ sections:
             text: Right elbow
           - value: both
             text: Both elbows
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -184,6 +192,8 @@ sections:
             text: Right hip
           - value: both
             text: Both hips
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -202,6 +212,8 @@ sections:
             text: Right hip
           - value: both
             text: Both hips
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -220,6 +232,8 @@ sections:
             text: Right knee
           - value: both
             text: Both knees
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -238,6 +252,8 @@ sections:
             text: Right knee
           - value: both
             text: Both knees
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -256,6 +272,8 @@ sections:
             text: Right ankle
           - value: both
             text: Both ankles
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -274,6 +292,8 @@ sections:
             text: Right ankle
           - value: both
             text: Both ankles
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -292,6 +312,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -321,6 +343,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -341,7 +365,7 @@ sections:
                 operator: INCLUDES
                 value: f
       - key: affected_g_pain_past
-        question: Which of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        question: Which of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
         type: SINGLE_CHOICE
         options:
           - value: left
@@ -350,6 +374,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -359,7 +385,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_pain_past_count
-        question: How many of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
+        question: How many of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) have been affected by rheumatoid arthritis related PAIN in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -370,7 +396,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_swelling_past
-        question: Which of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        question: Which of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
         type: SINGLE_CHOICE
         options:
           - value: left
@@ -379,6 +405,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -388,7 +416,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_swelling_past_count
-        question: How many of the knuckles of the fingers (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        question: How many of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) have been affected by rheumatoid arthritis related SWELLING in the PAST?
         type: NUMERIC
         triggers:
           - action:
@@ -408,6 +436,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -426,6 +456,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -444,6 +476,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -453,7 +487,7 @@ sections:
                 operator: INCLUDES
                 value: i
       - key: affected_i_swelling_past
-        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) have been affected by rheumatoid arthritis related SWELLING in the PAST?
+        question: Which of the knuckle of your thumbs (the joint that connects your thumb to your hand) have been affected by rheumatoid arthritis related SWELLING in the PAST?
         type: SINGLE_CHOICE
         options:
           - value: left
@@ -462,6 +496,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -480,6 +516,8 @@ sections:
             text: Right wrist
           - value: both
             text: Both wrists
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -498,6 +536,8 @@ sections:
             text: Right wrist
           - value: both
             text: Both wrists
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -582,6 +622,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -611,6 +653,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -640,6 +684,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -669,6 +715,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -709,7 +757,7 @@ sections:
           - value: f
             text: Any of the two small joints of your fingers not including your knuckles [do not include the joint that connects your fingers to your hand] (not including your thumb)
           - value: g
-            text: The knuckles of the fingers (not including your thumbs)
+            text: The knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs)
           - value: h
             text: The small joint of your thumb not including the knuckle (i.e. not including the joint that connects the thumb to your hand)
           - value: i
@@ -736,6 +784,8 @@ sections:
             text: Right shoulder
           - value: both
             text: Both shoulders
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -754,6 +804,8 @@ sections:
             text: Right shoulder
           - value: both
             text: Both shoulders
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -772,6 +824,8 @@ sections:
             text: Right elbow
           - value: both
             text: Both elbows
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -790,6 +844,8 @@ sections:
             text: Right elbow
           - value: both
             text: Both elbows
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -808,6 +864,8 @@ sections:
             text: Right hip
           - value: both
             text: Both hips
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -826,6 +884,8 @@ sections:
             text: Right hip
           - value: both
             text: Both hips
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -844,6 +904,8 @@ sections:
             text: Right knee
           - value: both
             text: Both knees
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -862,6 +924,8 @@ sections:
             text: Right knee
           - value: both
             text: Both knees
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -880,6 +944,8 @@ sections:
             text: Right ankle
           - value: both
             text: Both ankles
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -898,6 +964,8 @@ sections:
             text: Right ankle
           - value: both
             text: Both ankles
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -916,6 +984,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -945,6 +1015,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -965,7 +1037,7 @@ sections:
                 operator: INCLUDES
                 value: f
       - key: affected_g_pain_current
-        question: Which of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        question: Which of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
         type: SINGLE_CHOICE
         options:
           - value: left
@@ -974,6 +1046,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -983,7 +1057,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_pain_current_count
-        question: How many of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
+        question: How many of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related PAIN?
         type: NUMERIC
         triggers:
           - action:
@@ -994,7 +1068,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_swelling_current
-        question: Which of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        question: Which of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
         type: SINGLE_CHOICE
         options:
           - value: left
@@ -1003,6 +1077,8 @@ sections:
             text: Right hand
           - value: both
             text: Both hands
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1012,7 +1088,7 @@ sections:
                 operator: INCLUDES
                 value: g
       - key: affected_g_swelling_current_count
-        question: How many of the knuckles of the fingers (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        question: How many of the knuckles of your fingers [the joint that connects your fingers to your hand] (not including your thumbs) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
         type: NUMERIC
         triggers:
           - action:
@@ -1032,6 +1108,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1050,6 +1128,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1068,6 +1148,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1077,7 +1159,7 @@ sections:
                 operator: INCLUDES
                 value: i
       - key: affected_i_swelling_current
-        question: Which of the small joint of your thumbs not including the knuckle (i.e. not including the joint that connects the thumb to your hand) are CURRENTLY affected by rheumatoid arthritis related SWELLING?
+        question: Which of the knuckle of your thumbs (the joint that connects your thumb to your hand) are CURRENTLY affected by rheumatoid arthritis related PAIN?
         type: SINGLE_CHOICE
         options:
           - value: left
@@ -1086,6 +1168,8 @@ sections:
             text: Right thumb
           - value: both
             text: Both thumbs
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1104,6 +1188,8 @@ sections:
             text: Right wrist
           - value: both
             text: Both wrists
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1122,6 +1208,8 @@ sections:
             text: Right wrist
           - value: both
             text: Both wrists
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1206,6 +1294,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1235,6 +1325,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1264,6 +1356,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
@@ -1293,6 +1387,8 @@ sections:
             text: Right foot
           - value: both
             text: Both feet
+          - value: neither
+            text: Not applicable
         triggers:
           - action:
               type: SHOW
