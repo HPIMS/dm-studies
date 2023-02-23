@@ -242,7 +242,7 @@ async function processTasks() {
       const active = versions.active.tasks;
       const inactive = versions.inactive.tasks;
 
-      const [lastHash, lastVersion] = active[name] || inactive[name];
+      const [lastHash, lastVersion] = active[name] || inactive[name] || [];
 
       const nextHash = hashFileContents(fileContents);
       let nextVersion = lastVersion;
@@ -319,7 +319,7 @@ async function processStudies() {
     const active = versions.active.studies;
     const inactive = versions.inactive.studies;
 
-    const [lastHash, lastVersion] = active[name] || inactive[name];
+    const [lastHash, lastVersion] = active[name] || inactive[name] || [];
 
     const nextHash = hashFileContents(fileContents);
     let nextVersion = lastVersion;
@@ -333,10 +333,12 @@ async function processStudies() {
       log.error(
         `[${name}] Is not active. The study and any associated tasks will be ignored.`
       );
-      nextVersions.inactive.studies[name] = [
-        nextHash,
-        nextVersion ? nextVersion + 1 : 1,
-      ];
+      if (!lastHash || !lastVersion) {
+        nextVersion = 1;
+      } else if (lastHash !== nextHash) {
+        nextVersion = lastVersion + 1;
+      }
+      nextVersions.inactive.studies[name] = [nextHash, nextVersion];
       return;
     }
 
