@@ -60,9 +60,55 @@ async function processStudies(distDir) {
     const [, version] = versions.active.studies[studyKey];
     const study = await getStudyFile(`${studyKey}.yaml`);
 
+    study.studyKey = studyKey;
     study.version = version;
 
-    // TODO: PROCESS TASK CONFIGURATIONS
+    const tasks = [];
+    // The study defines tasks by string key, or by an object with
+    // a key that matches a task key and any overrides to the default
+    // task schedule.
+    const taskBuilders = study.tasks?.map((task) => async () => {
+      const reqTaskKey = typeof task === "string" ? task : task.key;
+
+      // Find the composite key for the referenced task. If the task
+      // exists in the study specific directory use that one, otherwise
+      // look for it in the library.
+      let compositeTaskKey;
+      if (versions.active.tasks[`${studyKey}::${reqTaskKey}`]) {
+        compositeTaskKey = `${studyKey}::${reqTaskKey}`;
+      } else if (versions.active.tasks[`library::${reqTaskKey}`]) {
+        compositeTaskKey = `library::${reqTaskKey}`;
+      }
+
+      if (compositeTaskKey) {
+        const [, groupKey, taskKey] = compositeTaskKey.match(/^(.*?)::(.*)/);
+        const cfg = await getTaskFile(groupKey, `${taskKey}.yaml`);
+        const [, version] = versions.active.tasks[compositeTaskKey];
+
+        // Pull out any configs for the task that we need at the study level.
+        const taskRec = {
+          key: compositeTaskKey,
+          name: cfg.name,
+          schedule: cfg.schedule,
+          timeEstimate: cfg.timeEstimate,
+          version,
+        };
+        // If we are using an object for the task definition, apply any overrides.
+        if (typeof task !== "string") {
+          Object.assign(taskRec, { ...task });
+        }
+        tasks.push(taskRec);
+      }
+    });
+
+    await waterfall(taskBuilders);
+
+    study.tasks = tasks;
+
+    await fs.promises.writeFile(
+      path.join(distDir, "studies", `${studyKey}.json`),
+      JSON.stringify(study)
+    );
 
     // Build the study index record.
     const indexRec = {
