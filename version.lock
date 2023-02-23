@@ -51,20 +51,20 @@ active:
       - 373d1e29033ffc5ea60dbff8907d8999
       - 15
     cppd-1:
-      - 47b398d5d9dc33283e05dffc54ed3e7f
-      - 3
+      - ec96d17773bef4f20c8339f3191c771f
+      - 4
     cppd-2:
-      - af2b01db653dcf445e91eda0f23b978c
-      - 2
+      - 8395d7da1d611a60e11b989e771d7883
+      - 3
     cppd-2__case:
-      - 18ee85973d1fd6b33fb0ca55c177eca9
-      - 2
+      - c8d11b620f0ed3ea08d9556b52aa2647
+      - 3
     cppd-2__control:
-      - a615343fac5faa3e1bf1b5b198c3b157
-      - 2
+      - e482364727e98c21b42dafd74ef34af6
+      - 3
     cramp:
-      - f7093210061796f6c2f0e420abe20cf4
-      - 1
+      - 6258a5b585bf0378bbfe20b03b4aa7e1
+      - 2
     digi-ibd-001:
       - ff3d5e056e949dccd63bcaaff4989d4a
       - 7
@@ -72,8 +72,8 @@ active:
       - b5ffacab62be68f93d70a5a82eb231d6
       - 20
     ra-forecast:
-      - 9d49109c2dc9e038362cfc845ddc0fa8
-      - 2
+      - e612abf70cf4c634a4f61361870e3e58
+      - 3
   surveys:
     baseline_cd_risc_survey:
       - 4d9f3393a80ecb9d804462d7e1883247
@@ -87,8 +87,26 @@ active:
     cppd-1::bladder-irritants:
       - f8d3f42558cc2a332622be272771643a
       - 1
+    cppd-1::demographics:
+      - 650d61a79851717876fb7ea498d8a154
+      - 1
+    cppd-1::general-health:
+      - 1d83c93165cc5a55e1b16886ebaf579c
+      - 1
     cppd-1::physical-therapy:
       - bc5e43b87b0ed4c4f97de7eb049c1561
+      - 1
+    cppd-2__case::demographics:
+      - 650d61a79851717876fb7ea498d8a154
+      - 1
+    cppd-2__case::general-health:
+      - 1d83c93165cc5a55e1b16886ebaf579c
+      - 1
+    cppd-2__control::demographics:
+      - 650d61a79851717876fb7ea498d8a154
+      - 1
+    cppd-2__control::general-health:
+      - 82db75415c8e6a9bff78acbf2d90a3ef
       - 1
     cramp::daily-check-in:
       - 904ffe7e3d9b9c1147d9d2862bab475f
@@ -139,8 +157,8 @@ active:
       - da5e9ac0c94e095e46e5b70e15b4825a
       - 1
     cramp::test-task:
-      - 0d1b0b05fdc2011dee42ab0dc616c233
-      - 1
+      - 636c7f7e90ab02a0abdb0126aab1fcaf
+      - 2
     digi-ibd-001::begin-next-phase:
       - fd68b027dcb21d300b4fa0c454873601
       - 3
@@ -265,11 +283,11 @@ active:
       - 718d227f05480cfadc12e77b85e2fbf9
       - 1
     library::mdhaq:
-      - 7ed0ef9dde8cf8cd7803cb967fd08b0c
-      - 1
+      - 2ec813df7717d3c27525e5cded9e4a82
+      - 2
     library::mdhaq-bi-weekly:
-      - c06c852fdac5483f28134e6bef3bae03
-      - 1
+      - 95135840b3854484fd437568ac2982c4
+      - 2
     library::mpq:
       - fe32b9b074a53a9718d1a6fba16634c4
       - 1
@@ -348,6 +366,9 @@ active:
     library::promis-social-support-2-item:
       - 48915b8af812dc8a9ada2c7b48f8739d
       - 6
+    library::pseq:
+      - 763648d6ed82241adef3a7fa6dad9403
+      - 1
     library::pss-10:
       - f9f64ccf8b4f86ee83780965e1f8945b
       - 7
@@ -365,6 +386,9 @@ active:
       - 1
     library::rapid3:
       - 94889e3d3bf3896111bf478adf441fd1
+      - 1
+    library::rapid3-daily:
+      - 6e7c2daf1ac4e520c120c81871556058
       - 1
     library::rs-14:
       - 8a42279ca7edb82478ac98ab53291599
@@ -403,8 +427,8 @@ active:
       - 6ef561e7892a5d0f18233d3afa438c70
       - 1
     ra-forecast::baseline_health:
-      - 94151ae5c3a805c8f61d191c9350221b
-      - 1
+      - c0ce2682c17f6a0ae3ab442175e4c67b
+      - 2
     ra-forecast::fatigue_scale:
       - 63bebc5892739f455224b4abeb4ace2e
       - 1
@@ -412,8 +436,8 @@ active:
       - 5697f280cf56d02105fd394603a84fe5
       - 1
     ra-forecast::new_meds:
-      - f813226747fdbb6fef1a83ca5371511e
-      - 1
+      - 3c85431e7a61d5e562a7ec7ee68e6da8
+      - 2
     satisfaction_survey_final:
       - 4d052e9733e4791c7cee230cb0170d2f
       - 10
