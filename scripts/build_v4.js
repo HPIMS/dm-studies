@@ -144,6 +144,7 @@ async function processStudies(distDir) {
 }
 
 (async function build() {
+  log.info("Building V4 ...");
   const distDir = path.join(__dirname, "../dist/v4");
   await mkdir(distDir);
   cleandir(distDir);
