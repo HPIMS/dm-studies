@@ -3,7 +3,7 @@ consentId: ehive-ra-forecast
 
 active: true
 openEnrollment: true
-visibility: private
+visibility: public
 
 irb: STUDY-22-01589
 pi: Robert Hirten MD
@@ -43,11 +43,8 @@ tasks:
   - key: baseline_health
     rank: 2
 
-  - key: rapid3
+  - key: rapid3-daily
     rank: 3
-    schedule:
-      type: PERIOD
-      period: DAILY
     triggers:
       - action: SHOW
         condition:
