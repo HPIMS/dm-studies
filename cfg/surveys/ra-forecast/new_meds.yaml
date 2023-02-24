@@ -3,7 +3,7 @@ active: true
 schedule:
   type: PERIOD
   period: ALWAYS
-timeRequirements: 
+timeRequirements:
   time: 5
   timeUnits: minutes
 name: Report a new, stopped, or altered medication
@@ -33,15 +33,15 @@ sections:
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
-                key: new_meds_corticosteroid_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: new_meds_corticosteroid_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: nsaids
-            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
+            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
             inlineQuestion:
-                key: new_meds_nsaids_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: new_meds_nsaids_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: hydroxychloroquine
             text: Hydroxychloroquine (plaquenil)
           - value: leflunomide
@@ -51,29 +51,29 @@ sections:
           - value: cyclosporine
             text: Cyclosporine (neoral, sandimmune)
             inlineQuestion:
-                key: new_meds_cyclosporine_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: new_meds_cyclosporine_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: cyclophosphamide
             text: Cyclophosphamide
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
             inlineQuestion:
-                key: new_meds_purethinol_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: new_meds_purethinol_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: methotrexate
             text: Methotrexate (trexall, rheumatrex)
             inlineQuestion:
-                key: new_meds_methotrexate_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: new_meds_methotrexate_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: remicade
-            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra
             inlineQuestion:
-                key: new_meds_remicade_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: new_meds_remicade_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: humira
             text: Humira (adalimumab)
           - value: etanercept
@@ -146,7 +146,8 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: new_med_freq_units_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone,
+        question:
+          How often do you take Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -177,7 +178,8 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: new_med_freq_value_corticosteroid
-        question: How many times at the above frequency do you take Corticosteroids
+        question:
+          How many times at the above frequency do you take Corticosteroids
           (prednisone, prednisolone, methylpredninsolone)?
         type: NUMERIC
         minValue: 0
@@ -221,8 +223,9 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: new_med_dose_nsaids
-        question: What is the dose of NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          What is the dose of NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -261,8 +264,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: new_med_freq_units_nsaids
-        question: How often do you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          How often do you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -296,7 +300,7 @@ sections:
                 value: nsaids
       - key: new_med_freq_value_nsaids
         question: How many times at the above frequency do you take NSAIDs (ie.
-          ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac,
+          ibuprofen, advil, motrin, naproxen, aleve,  meloxicam, mobic, etodolac,
           lodine, nabumetone, relafen, sulindac, clinoril, tolementin,
           tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen,
           orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)?
@@ -311,8 +315,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: new_med_route_nsaids
-        question: What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex) are given to you?
@@ -333,8 +338,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: new_med_start_date_nsaids
-        question: When did you start NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          When did you start NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -414,7 +420,8 @@ sections:
                 operator: =
                 value: hydroxychloroquine
       - key: new_med_freq_value_hydroxychloroquine
-        question: How many times at the above frequency do you take Hydroxychloroquine
+        question:
+          How many times at the above frequency do you take Hydroxychloroquine
           (plaquenil)?
         type: NUMERIC
         minValue: 0
@@ -952,7 +959,8 @@ sections:
                 operator: =
                 value: purethinol
       - key: new_med_freq_value_purethinol
-        question: How many times at the above frequency do you take Purethinol (6-MP) /
+        question:
+          How many times at the above frequency do you take Purethinol (6-MP) /
           Imuran (Azathioprine)?
         type: NUMERIC
         minValue: 0
@@ -1102,7 +1110,8 @@ sections:
                 operator: =
                 value: methotrexate
       - key: new_med_dose_remicade
-        question: What is the dose of Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          What is the dose of Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra?
         type: SINGLE_CHOICE
         options:
@@ -1139,7 +1148,8 @@ sections:
                 operator: =
                 value: remicade
       - key: new_med_freq_units_remicade
-        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra?
         type: SINGLE_CHOICE
         options:
@@ -1183,7 +1193,8 @@ sections:
                 operator: =
                 value: remicade
       - key: new_med_route_remicade
-        question: What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra is given to you?
         type: SINGLE_CHOICE
         options:
@@ -1202,7 +1213,8 @@ sections:
                 operator: =
                 value: remicade
       - key: new_med_start_date_remicade
-        question: When did you start Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          When did you start Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra?
         type: DATE
         triggers:
@@ -2496,7 +2508,7 @@ sections:
               - section: new_meds
                 question: new_meds
                 operator: =
-                value: upadacitinib           
+                value: upadacitinib
       - key: new_med_dose_other
         question: What is the dose of Other Medication?
         type: SINGLE_CHOICE
@@ -2618,15 +2630,15 @@ sections:
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
-                key: stopped_meds_corticosteroid_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: stopped_meds_corticosteroid_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: nsaids
-            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
+            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
             inlineQuestion:
-                key: stopped_meds_nsaids_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: stopped_meds_nsaids_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: hydroxychloroquine
             text: Hydroxychloroquine (plaquenil)
           - value: leflunomide
@@ -2636,29 +2648,29 @@ sections:
           - value: cyclosporine
             text: Cyclosporine (neoral, sandimmune)
             inlineQuestion:
-                key: stopped_meds_cyclosporine_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: stopped_meds_cyclosporine_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: cyclophosphamide
             text: Cyclophosphamide
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
             inlineQuestion:
-                key: stopped_meds_purethinol_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: stopped_meds_purethinol_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: methotrexate
             text: Methotrexate (trexall, rheumatrex)
             inlineQuestion:
-                key: stopped_meds_methotrexate_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: stopped_meds_methotrexate_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: remicade
-            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra
             inlineQuestion:
-                key: stopped_meds_remicade_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: stopped_meds_remicade_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: humira
             text: Humira (adalimumab)
           - value: etanercept
@@ -2694,7 +2706,8 @@ sections:
                 operator: =
                 value: yes
       - key: stopped_med_dose_corticosteroid
-        question: What was the dose of Corticosteroids (prednisone, prednisolone,
+        question:
+          What was the dose of Corticosteroids (prednisone, prednisolone,
           methylpredninsolone) at stopping?
         type: SINGLE_CHOICE
         options:
@@ -2731,7 +2744,8 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: stopped_med_freq_units_corticosteroid
-        question: How often did you take Corticosteroids (prednisone, prednisolone,
+        question:
+          How often did you take Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -2762,7 +2776,8 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: stopped_med_freq_value_corticosteroid
-        question: How many times at the above frequency did you take Corticosteroids
+        question:
+          How many times at the above frequency did you take Corticosteroids
           (prednisone, prednisolone, methylpredninsolone)?
         type: NUMERIC
         minValue: 0
@@ -2806,8 +2821,9 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: stopped_med_dose_nsaids
-        question: What was the dose of NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          What was the dose of NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex) at stopping?
@@ -2846,8 +2862,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: stopped_med_freq_units_nsaids
-        question: How often did you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          How often did you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -2881,7 +2898,7 @@ sections:
                 value: nsaids
       - key: stopped_med_freq_value_nsaids
         question: How many times at the above frequency did you take NSAIDs (ie.
-          ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac,
+          ibuprofen, advil, motrin, naproxen, aleve,  meloxicam, mobic, etodolac,
           lodine, nabumetone, relafen, sulindac, clinoril, tolementin,
           tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen,
           orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)?
@@ -2896,8 +2913,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: stopped_med_route_nsaids
-        question: What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex) were given to you?
@@ -2918,8 +2936,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: stopped_med_stop_date_nsaids
-        question: When did you stop NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          When did you stop NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -2999,7 +3018,8 @@ sections:
                 operator: =
                 value: hydroxychloroquine
       - key: stopped_med_freq_value_hydroxychloroquine
-        question: How many times at the above frequency did you take Hydroxychloroquine
+        question:
+          How many times at the above frequency did you take Hydroxychloroquine
           (plaquenil)?
         type: NUMERIC
         minValue: 0
@@ -3322,7 +3342,8 @@ sections:
                 operator: =
                 value: cyclosporine
       - key: stopped_med_freq_value_cyclosporine
-        question: How many times at the above frequency did you take Cyclosporine
+        question:
+          How many times at the above frequency did you take Cyclosporine
           (neoral, sandimmune)?
         type: NUMERIC
         minValue: 0
@@ -3537,7 +3558,8 @@ sections:
                 operator: =
                 value: purethinol
       - key: stopped_med_freq_value_purethinol
-        question: How many times at the above frequency did you take Purethinol (6-MP) /
+        question:
+          How many times at the above frequency did you take Purethinol (6-MP) /
           Imuran (Azathioprine)?
         type: NUMERIC
         minValue: 0
@@ -3645,7 +3667,8 @@ sections:
                 operator: =
                 value: methotrexate
       - key: stopped_med_freq_value_methotrexate
-        question: How many times at the above frequency did you take Methotrexate
+        question:
+          How many times at the above frequency did you take Methotrexate
           (trexall, rheumatrex)?
         type: NUMERIC
         minValue: 0
@@ -3687,7 +3710,8 @@ sections:
                 operator: =
                 value: methotrexate
       - key: stopped_med_dose_remicade
-        question: What was the dose of Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          What was the dose of Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra at stopping?
         type: SINGLE_CHOICE
         options:
@@ -3724,7 +3748,8 @@ sections:
                 operator: =
                 value: remicade
       - key: stopped_med_freq_units_remicade
-        question: How often did you take Remicade (infliximab), Renflexis, Ixifi,
+        question:
+          How often did you take Remicade (infliximab), Renflexis, Ixifi,
           Avsola, Inflectra?
         type: SINGLE_CHOICE
         options:
@@ -3768,7 +3793,8 @@ sections:
                 operator: =
                 value: remicade
       - key: stopped_med_route_remicade
-        question: What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra was given to you?
         type: SINGLE_CHOICE
         options:
@@ -3787,7 +3813,8 @@ sections:
                 operator: =
                 value: remicade
       - key: stopped_med_stop_date_remicade
-        question: When did you stop Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          When did you stop Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra?
         type: DATE
         triggers:
@@ -5203,15 +5230,15 @@ sections:
           - value: corticosteroid
             text: Corticosteroids (prednisone, prednisolone, methylpredninsolone)
             inlineQuestion:
-                key: altered_meds_corticosteroid_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: altered_meds_corticosteroid_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: nsaids
-            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
+            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)
             inlineQuestion:
-                key: altered_meds_nsaids_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: altered_meds_nsaids_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: hydroxychloroquine
             text: Hydroxychloroquine (plaquenil)
           - value: leflunomide
@@ -5221,29 +5248,29 @@ sections:
           - value: cyclosporine
             text: Cyclosporine (neoral, sandimmune)
             inlineQuestion:
-                key: altered_meds_cyclosporine_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA
+              key: altered_meds_cyclosporine_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: cyclophosphamide
             text: Cyclophosphamide
           - value: purethinol
             text: Purethinol (6-MP) / Imuran (Azathioprine)
             inlineQuestion:
-                key: altered_meds_purethinol_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: altered_meds_purethinol_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: methotrexate
             text: Methotrexate (trexall, rheumatrex)
             inlineQuestion:
-                key: altered_meds_methotrexate_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: altered_meds_methotrexate_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: remicade
-            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra 
+            text: Remicade (infliximab), Renflexis, Ixifi, Avsola, Inflectra
             inlineQuestion:
-                key: altered_meds_remicade_description
-                question: "Please list which specific medication you were taking."
-                type: TEXTAREA                
+              key: altered_meds_remicade_description
+              question: "Please list which specific medication you were taking."
+              type: TEXTAREA
           - value: humira
             text: Humira (adalimumab)
           - value: etanercept
@@ -5279,7 +5306,8 @@ sections:
                 operator: =
                 value: yes
       - key: altered_med_dose_corticosteroid
-        question: What is the new dose of Corticosteroids (prednisone, prednisolone,
+        question:
+          What is the new dose of Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -5316,7 +5344,8 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: altered_med_freq_units_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone,
+        question:
+          How often do you take Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -5347,7 +5376,8 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: altered_med_freq_value_corticosteroid
-        question: How many times at the above frequency do you take Corticosteroids
+        question:
+          How many times at the above frequency do you take Corticosteroids
           (prednisone, prednisolone, methylpredninsolone)?
         type: NUMERIC
         minValue: 0
@@ -5379,7 +5409,8 @@ sections:
                 operator: =
                 value: corticosteroid
       - key: altered_med_change_date_corticosteroid
-        question: When did you start the new dose of Corticosteroids (prednisone,
+        question:
+          When did you start the new dose of Corticosteroids (prednisone,
           prednisolone, methylpredninsolone)?
         type: DATE
         triggers:
@@ -5392,7 +5423,7 @@ sections:
                 value: corticosteroid
       - key: altered_med_dose_nsaids
         question: What is the new dose of NSAIDs (ie. ibuprofen, advil, motrin,
-          naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone,
+          naproxen, aleve,  meloxicam, mobic, etodolac, lodine, nabumetone,
           relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -5431,8 +5462,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: altered_med_freq_units_nsaids
-        question: How often do you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          How often do you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -5466,7 +5498,7 @@ sections:
                 value: nsaids
       - key: altered_med_freq_value_nsaids
         question: How many times at the above frequency do you take NSAIDs (ie.
-          ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac,
+          ibuprofen, advil, motrin, naproxen, aleve,  meloxicam, mobic, etodolac,
           lodine, nabumetone, relafen, sulindac, clinoril, tolementin,
           tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen,
           orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)?
@@ -5481,8 +5513,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: altered_med_route_nsaids
-        question: What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+        question:
+          What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
+          aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex) are given to you?
@@ -5503,8 +5536,9 @@ sections:
                 operator: =
                 value: nsaids
       - key: altered_med_change_date_nsaids
-        question: When did you start the new dose of NSAIDs (ie. ibuprofen, advil,
-          motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone,
+        question:
+          When did you start the new dose of NSAIDs (ie. ibuprofen, advil,
+          motrin, naproxen, aleve,  meloxicam, mobic, etodolac, lodine, nabumetone,
           relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -5584,7 +5618,8 @@ sections:
                 operator: =
                 value: hydroxychloroquine
       - key: altered_med_freq_value_hydroxychloroquine
-        question: How many times at the above frequency do you take Hydroxychloroquine
+        question:
+          How many times at the above frequency do you take Hydroxychloroquine
           (plaquenil)?
         type: NUMERIC
         minValue: 0
@@ -6122,7 +6157,8 @@ sections:
                 operator: =
                 value: purethinol
       - key: altered_med_freq_value_purethinol
-        question: How many times at the above frequency do you take Purethinol (6-MP) /
+        question:
+          How many times at the above frequency do you take Purethinol (6-MP) /
           Imuran (Azathioprine)?
         type: NUMERIC
         minValue: 0
@@ -6273,7 +6309,8 @@ sections:
                 operator: =
                 value: methotrexate
       - key: altered_med_dose_remicade
-        question: What is the new dose of Remicade (infliximab), Renflexis, Ixifi,
+        question:
+          What is the new dose of Remicade (infliximab), Renflexis, Ixifi,
           Avsola, Inflectra?
         type: SINGLE_CHOICE
         options:
@@ -6310,7 +6347,8 @@ sections:
                 operator: =
                 value: remicade
       - key: altered_med_freq_units_remicade
-        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra?
         type: SINGLE_CHOICE
         options:
@@ -6354,7 +6392,8 @@ sections:
                 operator: =
                 value: remicade
       - key: altered_med_route_remicade
-        question: What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra is given to you?
         type: SINGLE_CHOICE
         options:
@@ -6373,7 +6412,8 @@ sections:
                 operator: =
                 value: remicade
       - key: altered_med_change_date_remicade
-        question: When did you start the new dose of Remicade (infliximab), Renflexis,
+        question:
+          When did you start the new dose of Remicade (infliximab), Renflexis,
           Ixifi, Avsola, Inflectra?
         type: DATE
         triggers:
