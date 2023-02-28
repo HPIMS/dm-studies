@@ -63,7 +63,7 @@ sections:
         question: Usually, for how many days do you experience pain during menstruation?
         type: AGE
         modes:
-          - units: d
+          - unit: d
             min: 0
             max: 40
       - key: menses_pain_variablity
