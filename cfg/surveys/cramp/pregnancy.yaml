@@ -224,10 +224,10 @@ sections:
         question: Provide total duration of usage for the birth control pill across your life?
         type: AGE
         modes:
-          - units: y
+          - unit: y
             min: 0
             max: 999
-          - units: m
+          - unit: m
             min: 0
             max: 999
         useUnitNames: true
@@ -254,10 +254,10 @@ sections:
         question: Provide total duration of usage for the hormonal IUD (intrauterine device) across your life?
         type: AGE
         modes:
-          - units: y
+          - unit: y
             min: 0
             max: 999
-          - units: m
+          - unit: m
             min: 0
             max: 999
         useUnitNames: true
@@ -284,10 +284,10 @@ sections:
         question: Provide total duration of usage for the hormonal implant (medication rod inserted under the skin of your arm) across your life?
         type: AGE
         modes:
-          - units: y
+          - unit: y
             min: 0
             max: 999
-          - units: m
+          - unit: m
             min: 0
             max: 999
         useUnitNames: true
@@ -314,10 +314,10 @@ sections:
         question: Provide total duration of usage for the hormonal patch across your life?
         type: AGE
         modes:
-          - units: y
+          - unit: y
             min: 0
             max: 999
-          - units: m
+          - unit: m
             min: 0
             max: 999
         useUnitNames: true
@@ -344,10 +344,10 @@ sections:
         question: Provide total duration of usage for the hormonal shot (shot every 3 months)?
         type: AGE
         modes:
-          - units: y
+          - unit: y
             min: 0
             max: 999
-          - units: m
+          - unit: m
             min: 0
             max: 999
         useUnitNames: true
@@ -374,10 +374,10 @@ sections:
         question: Provide total duration of usage for the hormonal vaginal ring?
         type: AGE
         modes:
-          - units: y
+          - unit: y
             min: 0
             max: 999
-          - units: m
+          - unit: m
             min: 0
             max: 999
         useUnitNames: true
