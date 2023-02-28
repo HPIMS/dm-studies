@@ -9,7 +9,7 @@ const drugs = [
   },
   {
     value: "nsaids",
-    text: "NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)",
+    text: "NSAIDs (ie. ibuprofen, advil, motrin, naproxen, aleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)",
   },
   { value: "hydroxychloroquine", text: "Hydroxychloroquine (plaquenil)" },
   { value: "leflunomide", text: "Leflunomide (arava)" },
