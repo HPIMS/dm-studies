@@ -31,15 +31,15 @@ sections:
         question: At what age did you have your first menstrual cycle?
         type: AGE
         modes:
-          - units: y
+          - unit: y
             min: 0
             max: 99
-      - key: cycle_average days
+      - key: cycle_average_days
         question: On average, how many days separate the first day of your menstrual
           cycle with the first day of the following menstrual cycle?
         type: AGE
         modes:
-          - units: d
+          - unit: d
             min: 21
             max: 40
         required: true
@@ -47,7 +47,7 @@ sections:
         question: On average, how many days do you bleed during your menstrual cycle?
         type: AGE
         modes:
-          - units: d
+          - unit: d
             min: 0
             max: 40
         required: true

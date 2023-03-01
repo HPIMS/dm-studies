@@ -2488,7 +2488,7 @@ sections:
               question: Please list which specific medication you were taking.
               type: TEXTAREA
           - value: nsaids
-            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic,
+            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, aleve, meloxicam, mobic,
               etodolac, lodine, nabumetone, relafen, sulindac, clinoril,
               tolementin, tolectin,  diclofenac, voltaren, indomethacin,
               indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib,
@@ -2593,7 +2593,7 @@ sections:
               question: Please list which specific medication you were taking.
               type: TEXTAREA
           - value: nsaids
-            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic,
+            text: NSAIDs (ie. ibuprofen, advil, motrin, naproxen, aleve, meloxicam, mobic,
               etodolac, lodine, nabumetone, relafen, sulindac, clinoril,
               tolementin, tolectin,  diclofenac, voltaren, indomethacin,
               indocin, ketoprofen, orudis, oruvail, meloxicam, mobic, celecoxib,
@@ -2715,7 +2715,8 @@ sections:
                 operator: =
                 value: yes
       - key: current_med_dose_corticosteroid
-        question: What is the current dose of Corticosteroids (prednisone, prednisolone,
+        question:
+          What is the current dose of Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -2752,7 +2753,8 @@ sections:
                 operator: INCLUDES
                 value: corticosteroid
       - key: current_med_freq_units_corticosteroid
-        question: How often do you take Corticosteroids (prednisone, prednisolone,
+        question:
+          How often do you take Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
         type: SINGLE_CHOICE
         options:
@@ -2783,7 +2785,8 @@ sections:
                 operator: INCLUDES
                 value: corticosteroid
       - key: current_med_freq_value_corticosteroid
-        question: How many times at the above frequency do you take Corticosteroids
+        question:
+          How many times at the above frequency do you take Corticosteroids
           (prednisone, prednisolone, methylpredninsolone)?
         type: NUMERIC
         minValue: 0
@@ -2815,7 +2818,8 @@ sections:
                 operator: INCLUDES
                 value: corticosteroid
       - key: current_med_last_dose_date_corticosteroid
-        question: When was your last dose of Corticosteroids (prednisone, prednisolone,
+        question:
+          When was your last dose of Corticosteroids (prednisone, prednisolone,
           methylpredninsolone)?
         type: DATE
         triggers:
@@ -2828,7 +2832,7 @@ sections:
                 value: corticosteroid
       - key: current_med_dose_nsaids
         question: What is the current dose of NSAIDs (ie. ibuprofen, advil, motrin,
-          naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone,
+          naproxen, aleve, meloxicam, mobic, etodolac, lodine, nabumetone,
           relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac,
           voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail,
           meloxicam, mobic, celecoxib, celebrex)?
@@ -2868,7 +2872,7 @@ sections:
                 value: nsaids
       - key: current_med_freq_units_nsaids
         question: How often do you take NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+          aleve, meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex)?
@@ -2902,7 +2906,7 @@ sections:
                 value: nsaids
       - key: current_med_freq_value_nsaids
         question: How many times at the above frequency do you take NSAIDs (ie.
-          ibuprofen, advil, motrin, naproxen, alleve,  meloxicam, mobic,
+          ibuprofen, advil, motrin, naproxen, aleve, meloxicam, mobic,
           etodolac, lodine, nabumetone, relafen, sulindac, clinoril, tolementin,
           tolectin,  diclofenac, voltaren, indomethacin, indocin, ketoprofen,
           orudis, oruvail, meloxicam, mobic, celecoxib, celebrex)?
@@ -2918,7 +2922,7 @@ sections:
                 value: nsaids
       - key: current_med_route_nsaids
         question: What is the way NSAIDs (ie. ibuprofen, advil, motrin, naproxen,
-          alleve,  meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
+          aleve, meloxicam, mobic, etodolac, lodine, nabumetone, relafen,
           sulindac, clinoril, tolementin, tolectin,  diclofenac, voltaren,
           indomethacin, indocin, ketoprofen, orudis, oruvail, meloxicam, mobic,
           celecoxib, celebrex are given to you?
@@ -2940,7 +2944,7 @@ sections:
                 value: nsaids
       - key: current_med_last_dose_date_nsaids
         question: When was your last dose of NSAIDs (ie. ibuprofen, advil, motrin,
-          naproxen, alleve,  meloxicam, mobic, etodolac, lodine, nabumetone,
+          naproxen, aleve, meloxicam, mobic, etodolac, lodine, nabumetone,
           relafen, sulindac, clinoril, tolementin, tolectin,  diclofenac,
           voltaren, indomethacin, indocin, ketoprofen, orudis, oruvail,
           meloxicam, mobic, celecoxib, celebrex)?
@@ -3020,7 +3024,8 @@ sections:
                 operator: INCLUDES
                 value: hydroxychloroquine
       - key: current_med_freq_value_hydroxychloroquine
-        question: How many times at the above frequency do you take Hydroxychloroquine
+        question:
+          How many times at the above frequency do you take Hydroxychloroquine
           (plaquenil)?
         type: NUMERIC
         minValue: 0
@@ -3558,7 +3563,8 @@ sections:
                 operator: INCLUDES
                 value: purethinol
       - key: current_med_freq_value_purethinol
-        question: How many times at the above frequency do you take Purethinol (6-MP) /
+        question:
+          How many times at the above frequency do you take Purethinol (6-MP) /
           Imuran (Azathioprine)?
         type: NUMERIC
         minValue: 0
@@ -3709,7 +3715,8 @@ sections:
                 operator: INCLUDES
                 value: methotrexate
       - key: current_med_dose_remicade
-        question: What is the current dose of Remicade (infliximab), Renflexis, Ixifi,
+        question:
+          What is the current dose of Remicade (infliximab), Renflexis, Ixifi,
           Avsola, Inflectra?
         type: SINGLE_CHOICE
         options:
@@ -3746,7 +3753,8 @@ sections:
                 operator: INCLUDES
                 value: remicade
       - key: current_med_freq_units_remicade
-        question: How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          How often do you take Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra?
         type: SINGLE_CHOICE
         options:
@@ -3790,7 +3798,8 @@ sections:
                 operator: INCLUDES
                 value: remicade
       - key: current_med_route_remicade
-        question: What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
+        question:
+          What is the way Remicade (infliximab), Renflexis, Ixifi, Avsola,
           Inflectra is given to you?
         type: SINGLE_CHOICE
         options:
@@ -3809,7 +3818,8 @@ sections:
                 operator: INCLUDES
                 value: remicade
       - key: current_med_last_dose_date_remicade
-        question: When was your last dose of Remicade (infliximab), Renflexis, Ixifi,
+        question:
+          When was your last dose of Remicade (infliximab), Renflexis, Ixifi,
           Avsola, Inflectra?
         type: DATE
         triggers:
