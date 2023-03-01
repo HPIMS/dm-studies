@@ -20,10 +20,10 @@ active:
       - 24
     ibd-forecast:
       - ed107d0d6af40f2d1004c876e56461b9
-      - 27
+      - 28
     ra-forecast:
       - 74319ae795d7f766d9a6e6d113ea94ea
-      - 25
+      - 26
   tasks:
     cppd-1::bladder-irritants:
       - b206466f439552f221cf210758f4d232
@@ -125,8 +125,8 @@ active:
       - 70134efa58ca4869d7d289c77ec068da
       - 12
     ibd-forecast::bmi_correction:
-      - ffada0c1fb824bed7aee6fd54eae271c
-      - 1
+      - 4c001b617ef21d73a294494f63a0f50e
+      - 2
     ibd-forecast::lab_tests:
       - 6c8594351870599fbecc782158528819
       - 8
@@ -233,8 +233,8 @@ active:
       - ee82e45c6732fc411dc4372ee03a9b78
       - 12
     ra-forecast::bmi_correction:
-      - ffada0c1fb824bed7aee6fd54eae271c
-      - 1
+      - 4c001b617ef21d73a294494f63a0f50e
+      - 2
     ra-forecast::fatigue_scale:
       - 2f749c46ad368fd8ae4d9e3940bbb1c3
       - 4
