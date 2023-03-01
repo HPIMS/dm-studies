@@ -19,7 +19,7 @@ const versions = YAML.parse(
 
 async function processTasks(distDir) {
   const tasks = Object.keys(versions.active.tasks);
-  const index = [];
+  const indexes = { surveys: [], multimedia: [], interventions: [] };
 
   const executors = tasks.map((compositeKey) => async () => {
     const [, groupKey, taskKey] = compositeKey.match(/^(.*?)::(.*)/);
@@ -27,7 +27,13 @@ async function processTasks(distDir) {
     const task = await getTaskFile(groupKey, `${taskKey}.yaml`);
 
     // in v3 videos and interventions are compiled into their own subdirectories.
-    const taskType = task.sections[0].type || "survey";
+    const taskType = task.sections.reduce((typ, sec) => {
+      if (!typ || sec.type === typ) {
+        return sec.type;
+      }
+      return "composite";
+    }, undefined);
+
     if (taskType === "video" || taskType === "intervention") {
       Object.assign(task, { ...task.sections[0] });
       delete task.type;
@@ -41,31 +47,43 @@ async function processTasks(distDir) {
         ? "multimedia"
         : taskType === "intervention"
         ? "interventions"
-        : "tasks";
+        : undefined;
+
+    // If the task type isn't valid for this build version, exit.
+    if (!subdir) return;
 
     task.version = version;
 
     // Write the task JSON
     await fs.promises.writeFile(
       path.join(distDir, subdir, `${compositeKey}.json`),
-      JSON.stringify({ ...task, key: compositeKey })
+      JSON.stringify({ ...task, key: compositeKey, type: taskType })
     );
 
     // Build the task index record.
     const indexRec = {
       key: compositeKey,
+      type: taskType,
       name: task.name,
       version,
     };
-    index.push(indexRec);
+    indexes[subdir].push(indexRec);
   });
 
   await waterfall(executors);
 
   // Write the task index file
   await fs.promises.writeFile(
-    path.join(distDir, "tasks", "index.json"),
-    JSON.stringify(index)
+    path.join(distDir, "surveys", "index.json"),
+    JSON.stringify(indexes.surveys)
+  );
+  await fs.promises.writeFile(
+    path.join(distDir, "multimedia", "index.json"),
+    JSON.stringify(indexes.multimedia)
+  );
+  await fs.promises.writeFile(
+    path.join(distDir, "interventions", "index.json"),
+    JSON.stringify(indexes.interventions)
   );
 }
 
@@ -102,11 +120,17 @@ async function processStudies(distDir) {
         const cfg = await getTaskFile(groupKey, `${taskKey}.yaml`);
         const [, version] = versions.active.tasks[compositeTaskKey];
 
-        const taskType = cfg.sections?.[0] || "survey";
+        const taskType = cfg.sections.reduce((typ, sec) => {
+          if (!typ || sec.type === typ) {
+            return sec.type;
+          }
+          return "composite";
+        }, undefined);
 
         // Pull out any configs for the task that we need at the study level.
         const taskRec = {
           key: compositeTaskKey,
+          type: taskType,
           name: cfg.name,
           schedule: cfg.schedule,
           timeEstimate: cfg.timeEstimate,
@@ -170,7 +194,6 @@ async function processStudies(distDir) {
   cleandir(distDir);
   await mkdir(path.join(distDir, "consents"));
   await mkdir(path.join(distDir, "studies"));
-  await mkdir(path.join(distDir, "tasks"));
   await mkdir(path.join(distDir, "surveys"));
   await mkdir(path.join(distDir, "interventions"));
   await mkdir(path.join(distDir, "multimedia"));

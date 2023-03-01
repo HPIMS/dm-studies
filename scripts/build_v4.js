@@ -28,15 +28,23 @@ async function processTasks(distDir) {
 
     task.version = version;
 
+    const taskType = task.sections.reduce((typ, sec) => {
+      if (!typ || sec.type === typ) {
+        return sec.type;
+      }
+      return "composite";
+    }, undefined);
+
     // Write the task JSON
     await fs.promises.writeFile(
       path.join(distDir, "tasks", `${compositeKey}.json`),
-      JSON.stringify({ ...task, key: compositeKey })
+      JSON.stringify({ ...task, key: compositeKey, type: taskType })
     );
 
     // Build the task index record.
     const indexRec = {
       key: compositeKey,
+      type: taskType,
       name: task.name,
       version,
     };
@@ -85,9 +93,17 @@ async function processStudies(distDir) {
         const cfg = await getTaskFile(groupKey, `${taskKey}.yaml`);
         const [, version] = versions.active.tasks[compositeTaskKey];
 
+        const taskType = cfg.sections.reduce((typ, sec) => {
+          if (!typ || sec.type === typ) {
+            return sec.type;
+          }
+          return "composite";
+        }, undefined);
+
         // Pull out any configs for the task that we need at the study level.
         const taskRec = {
           key: compositeTaskKey,
+          type: taskType,
           name: cfg.name,
           schedule: cfg.schedule,
           timeEstimate: cfg.timeEstimate,
