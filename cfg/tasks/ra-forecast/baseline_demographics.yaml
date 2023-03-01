@@ -1,0 +1,171 @@
+key: baseline_demographics
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Demographics
+intro:
+  title: Demographics
+  description: Tell us about yourself by answering the following questions.
+outro:
+  title: Demographics Complete
+  description: Thank you for completing this survey! Your participation is always valued.
+sections:
+  - type: survey
+    key: baseline
+    title: ""
+    description: ""
+    questions:
+      - key: age
+        question: What is your date of birth?
+        type: DATE
+      - key: state
+        question: What state do you live in?
+        type: TEXT
+      - key: zipcode
+        question: What is your zip code?
+        type: TEXT
+      - key: sex
+        question: What is your sex at birth?
+        type: SINGLE_CHOICE
+        options:
+          - value: female
+            text: Female
+          - value: male
+            text: Male
+      - key: height
+        question: How tall are you?
+        type: HEIGHT
+      - key: weight
+        question: What is your weight?
+        type: WEIGHT
+      - key: race
+        question: What is your race?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: american
+            text: American Indian or Alaska Native
+          - value: asian
+            text: Asian
+          - value: black
+            text: Black, African-American
+          - value: hawaiian
+            text: Native Hawaiian or Other Pacific Islander
+          - value: white
+            text: White
+          - value: unknown
+            text: Unknown
+      - key: ethnicity
+        question: What is your ethnicity?
+        type: SINGLE_CHOICE
+        options:
+          - value: hispanic_or_latino
+            text: Hispanic or Latino
+          - value: not_hispanic_or_latino
+            text: Not Hispanic or Latino
+          - value: unknown
+            text: Unknown
+      - key: smoking
+        question: What best describes your smoking history?
+        type: SINGLE_CHOICE
+        options:
+          - value: current
+            text: Smoker (Smoked the equivalent of more than 100 cigarettes or e-cigarettes
+              in my lifetime and smoked in the past 28 days)
+          - value: past
+            text: Ex-smoker (Smoked the equivalent of more than 100 cigarettes or
+              e-cigarettes in my lifetime but have not smoked in the last 28
+              days)
+          - value: never
+            text: Never smoker (have not smoked more than 100 cigarettes or e-cigarettes in
+              my lifetime and do not currently smoke)
+      - key: education
+        question: What is the highest degree or level of school you have completed?
+        type: SINGLE_CHOICE
+        options:
+          - value: less_than_hs
+            text: Less than high school, no diploma
+          - value: hs_grad
+            text: High school graduate, diploma or the equivalent (e.g. GED)
+          - value: some_college
+            text: Some college credit, no degree
+          - value: trade_vocational
+            text: Trade/technical/vocational training
+          - value: associate_deg
+            text: Associate degree
+          - value: bachelor_deg
+            text: Bachelor's degree
+          - value: masters_deg
+            text: Master's degree
+          - value: prof_deg
+            text: Professional degree
+          - value: doc_deg
+            text: Doctorate degree
+      - key: health_conditions
+        question: Have you been diagnosed with any of the following conditions?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: osteoporosis
+            text: Osteoporosis
+          - value: asthma
+            text: Asthma
+          - value: chronic_lung_disease
+            text: Chronic Lung Disease (e.g. COPD)
+          - value: heart_disease
+            text: Heart Disease
+          - value: cancer
+            text: Cancer
+          - value: diabetes
+            text: Diabetes
+          - value: hypertension
+            text: Hypertension
+          - value: chronic_kidney_disease
+            text: Chronic Kidney Disease
+          - value: pneumonia
+            text: Pneumonia
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: health_conditions_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+          - value: prefer_not_to_say
+            text: Prefer not to say
+          - value: none_of_these
+            text: None of these
+      - key: wearable_device
+        question: Which wearable device(s) are you wearing?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: apple_watch
+            text: Apple Watch
+            inlineQuestion:
+              key: wearable_device_apple_watch_description
+              question: "Please specify model:"
+              type: TEXTAREA
+          - value: fitbit
+            text: Fitbit
+            inlineQuestion:
+              key: wearable_device_fitbit_description
+              question: "Please specify model:"
+              type: TEXTAREA
+          - value: oura
+            text: Oura Ring
+            inlineQuestion:
+              key: wearable_device_oura_description
+              question: "Please specify model:"
+              type: TEXTAREA
+          - value: whoop
+            text: Whoop
+            inlineQuestion:
+              key: wearable_device_whoop_description
+              question: "Please specify model:"
+              type: TEXTAREA
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: wearable_device_other_description
+              question: "Please specify brand and model:"
+              type: TEXTAREA

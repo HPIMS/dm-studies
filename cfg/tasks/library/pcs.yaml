@@ -1,0 +1,281 @@
+key: pcs
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  instrument: Pain Catastrophization Scale (PCS)
+  references:
+    - https://www.apta.org/patient-care/evidence-based-practice-resources/test-measures/pain-catastrophizing-scale-pcs#:~:text=The%20Pain%20Catastrophizing%20Scale%20(PCS,higher%20amounts%20of%20pain%20catastrophizing
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Pain Scale
+intro:
+  title: Pain Scale
+  description: Everyone experiences painful situations at some point in their
+    lives. Such experiences may include headaches, tooth pain, joint or muscle
+    pain. People are often exposed to situations that may cause pain such as
+    illness, injury, dental procedures or surgery. We are interested in the
+    types of thoughts and feelings that you have when you are in pain.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: >-
+      Listed below are thirteen statements describing different thoughts
+      and feelings that may be associated with pain.
+
+
+      Please indicate the degree to which you have these thoughts and feelings when you are experiencing pain.
+    questions:
+      - key: pcs_1
+        question: I worry all the time about whether the pain will end.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_2
+        question: I feel I can't go on.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_3
+        question: It's terrible and I think it's never going to get any better.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_4
+        question: It's awful and I feel that it overwhelms me.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_5
+        question: I feel I can't stand it anymore.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_6
+        question: I become afraid that the pain will get worse.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_7
+        question: I keep thinking of other painful events.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_8
+        question: I anxiously want the pain to go away.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_9
+        question: I can't seem to keep it out of my mind.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_10
+        question: I keep thinking about how much it hurts.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_11
+        question: I keep thinking about how badly I want the pain to stop.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_12
+        question: There's nothing I can do to reduce the intensity of the pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4
+      - key: pcs_13
+        question: I wonder whether something serious may happen.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at All
+            score: 0
+          - value: slight_degree
+            text: To a slight degree
+            score: 1
+          - value: moderate_degree
+            text: To a moderate degree
+            score: 2
+          - value: great_degree
+            text: To a great degree
+            score: 3
+          - value: all_the_time
+            text: All the time
+            score: 4

@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "node scripts/build_v3",
+    "build": "node scripts/build_v3 && node scripts/build_v4",
     "diff": "node scripts/diff"
   },
   "devDependencies": {

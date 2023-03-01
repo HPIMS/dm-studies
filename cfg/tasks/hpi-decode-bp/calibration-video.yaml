@@ -1,0 +1,12 @@
+key: calibration-video
+schedule:
+  type: PERIOD
+  period: NEVER
+timeEstimate: 5
+name: Withings Calibration
+sections:
+  - type: video
+    key: calibration-video
+    videoId: calibration-video
+    rate: 1
+    resizeMode: contain

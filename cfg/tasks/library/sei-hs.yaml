@@ -1,0 +1,169 @@
+key: sei-hs
+scorable: false
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references:
+    - https://pubmed.ncbi.nlm.nih.gov/28288609/
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 3
+  timeUnits: minutes
+name: Social Inclusion
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: Please indicate how often each of the statements below is
+      descriptive of you.
+    questions:
+      - key: sei-hs_1
+        question: How often do you have contact with neighbours or people who live in
+          your street?
+        type: SINGLE_CHOICE
+        options:
+          - value: once_a_week
+            text: At least once a week
+          - value: 3_monthly
+            text: 3 times a month
+          - value: 2_monthly
+            text: 2 times a month
+          - value: 1_monthly
+            text: Once a month
+          - value: less_than_monthly
+            text: Less than once a month
+          - value: never
+            text: Seldom or never
+      - key: sei-hs_2
+        question: There is always someone I can talk to about my day-to-day problems
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: sometimes
+            text: More or less
+          - value: no
+            text: No
+      - key: sei-hs_3
+        question: I experience a general sense of emptiness
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: sometimes
+            text: More or less
+          - value: no
+            text: No
+      - key: sei-hs_4
+        question: There are plenty of people I can lean on when I have problems
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: sometimes
+            text: More or less
+          - value: no
+            text: No
+      - key: sei-hs_5
+        question: I miss the pleasure of the company of others
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: sometimes
+            text: More or less
+          - value: no
+            text: No
+      - key: sei-hs_6
+        question: I often feel rejected
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+          - value: sometimes
+            text: More or less
+          - value: no
+            text: No
+      - key: sei-hs_7
+        question: In the last 12 months, have you had difficulty getting by on your
+          household income?
+        type: SINGLE_CHOICE
+        options:
+          - value: great_difficulty
+            text: Yes, great difficulty
+          - value: some_difficulty
+            text: Yes, some difficulty
+          - value: watch_spending
+            text: No, but I have to watch my spending
+          - value: no_difficulty
+            text: No difficulty
+      - key: sei-hs_8
+        question: Does your household usually have enough money to do the following
+          things?
+        description: "I can afford:"
+        type: MULTIPLE_CHOICE
+        options:
+          - value: sei-hs_8_a
+            text: ... To heat the home properly
+          - value: sei-hs_8_b
+            text: ... A club membership
+          - value: sei-hs_8_c
+            text: ... To visit others
+      - key: sei-hs_9
+        question: People in this neighborhood generally do not get along with each other
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly agree
+          - value: agree
+            text: Agree
+          - value: neither
+            text: Neither agree nor disagree
+          - value: disagree
+            text: Disagree
+          - value: strongly_disagree
+            text: Strongly disagree
+      - key: sei-hs_10
+        question: How satisfied are you with your home?
+        description: Where 1 means not satisfied and 10 means extremely satisfied
+        type: SLIDER
+        min: 1
+        max: 10
+        step: 1
+      - key: sei-hs_11
+        question: Have you or anyone in your household needed medical or dental
+          treatment in the past 12 months, but did not receive them?
+        type: YESNO_CHOICE
+      - key: sei-hs_12
+        question: I give to good causes
+        type: YESNO_CHOICE
+      - key: sei-hs_13
+        question: I sometimes do something for my neighbours
+        type: YESNO_CHOICE
+      - key: sei-hs_14
+        question: I put glass items in the bottle bank
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Yes, always
+          - value: sometimes
+            text: Yes, sometimes
+          - value: never
+            text: No, never
+      - key: sei-hs_15
+        question: Work is just a way of earning money
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly agree
+          - value: agree
+            text: Agree
+          - value: neither
+            text: Neither agree nor disagree
+          - value: disagree
+            text: Disagree
+          - value: strongly_disagree
+            text: Strongly disagree

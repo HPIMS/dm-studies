@@ -1,0 +1,222 @@
+key: pseq
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: PSEQ
+  version: ""
+  references:
+    - https://novopsych.com.au/assessments/health/pain-self-efficacy-questionnaire-pseq/
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Pain Self-Efficacy
+sections:
+  - type: survey
+    key: pseq
+    title: ""
+    description: Please rate how confident you are that you can do the following
+      things at present, despite the pain. To indicate your answer tap one of
+      the options on the scale under each item, from "not at all confident" (0)
+      to "completely confident" (6).
+    questions:
+      - key: pseq_1
+        question: I can enjoy things, despite the pain
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6"
+      - key: pseq_2
+        question: I can do most of the household chores (e.g. tidying-up, washing
+          dishes, etc.), despite the pain.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_3
+        question: I can socialise with my friends or family members as often as I used
+          to do, despite the pain.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_4
+        question: I can cope with my pain in most situations.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_5
+        question: I can do some form of work, despite the pain ('work' includes
+          housework, paid and unpaid work).
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_6
+        question: I can still do many of the things I enjoy doing, such as hobbies or
+          leisure activity, despite pain.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_7
+        question: I can cope with my pain without medication.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_8
+        question: I can still accomplish most of my goals in life, despite the pain.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_9
+        question: I can live a normal lifestyle, despite the pain.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
+      - key: pseq_10
+        question: I can gradually become more active, despite the pain.
+        description: Rate "not at all confident" (0) to "completely confident" (6)
+        type: SINGLE_CHOICE
+        options:
+          - value: "0"
+            text: "0: Not at all confident"
+          - value: "1"
+            text: 1
+          - value: "2"
+            text: 2
+          - value: "3"
+            text: 3
+          - value: "4"
+            text: 4
+          - value: "5"
+            text: 5
+          - value: "6"
+            text: "6: Completely confident"
