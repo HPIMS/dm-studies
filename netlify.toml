@@ -4,7 +4,3 @@ publish = "dist/"
 
 [functions]
 directory = "functions"
-
-[[redirects]]
-from = "/index.json"
-to = "/studies/index.json"
