@@ -1,0 +1,213 @@
+key: bfi-10
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: ""
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Personality Type
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: I see myself as someone who ...
+    questions:
+      - key: bfi-10_1
+        question: ... is reserved
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_2
+        question: ... is generally trusting
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_3
+        question: ... tends to be lazy
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_4
+        question: ... is relaxed, handles stress well
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_5
+        question: ... has few artistic interests
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_6
+        question: ... is outgoing, sociable
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_7
+        question: ... tends to find fault with others
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_8
+        question: ... does a thorough job
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_9
+        question: ... gets nervous easily
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5
+      - key: bfi-10_10
+        question: ... has an active imagination
+        type: SINGLE_CHOICE
+        options:
+          - value: disagree_strongly
+            text: Disagree strongly
+            score: 1
+          - value: disagree_a_little
+            text: Disagree a little
+            score: 2
+          - value: neither_agree_nor_disagree
+            text: Neither agree nor disagree
+            score: 3
+          - value: agree_a_little
+            text: Agree a little
+            score: 4
+          - value: agree_strongly
+            text: Agree strongly
+            score: 5

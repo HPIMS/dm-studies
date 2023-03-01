@@ -16,10 +16,6 @@ platform:
 # minVersion: '2.3' // No min version right now.
 capTo: 30
 
-# Legacy
-wearables:
-  - withings
-
 name: "Decode BP"
 
 shortDescription:
@@ -45,16 +41,7 @@ timeResponsibility:
   timeUnits: minutes
   timePeriod: daily
 
-# Legacy
-withdrawText: |-
-  Thank you for participating in the Decode BP Study! We value your time and effort, and appreciate your contribution to research.
-
-  Please contact us at
-  ehive.decodebp@mssm.edu if you have any further questions about the study or future research on the ehive platform.
-
-baseline: [] # Legacy
-
-surveys:
+tasks:
   - key: demographics
     rank: 1
   - key: fitzpatrick-skin-type
@@ -71,7 +58,8 @@ surveys:
   # NEVER task (need the configuration, but won't show in the task list)
   - key: clearance
     rank: -1
-multimedia:
+
+  # Videos
   - key: intervention-video-always
     triggers:
       - action: SHOW
@@ -87,12 +75,14 @@ multimedia:
             operator: ">"
             score: 6
     rank: 1000
+
   # NEVER tasks (need a configuration for the intervention but don't show in task list)
   - key: calibration-video
     rank: -1
   - key: intervention-video
     rank: -1
-interventions:
+
+  # Interventions
   - key: calibration-measurement
     triggers:
       - action: SHOW

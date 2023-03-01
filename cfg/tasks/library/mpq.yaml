@@ -1,0 +1,308 @@
+key: mpq
+scorable: false
+metadata:
+  instrument: McGill Pain Questionnaire (MPQ)
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Pain Intensity
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: >-
+      Below is a list of words that describe some of the qualities of
+      pain. Please rate the intensity of each of the pain quality you felt
+      during the past week.
+
+
+      Use "none" if the word does not describe your pain. Limit yourself to the description(s) of the pain related to your chronic pelvic pain condition.
+    questions:
+      - key: mpq_1
+        question: Throbbing
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_2
+        question: Shooting
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_3
+        question: Stabbing
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_4
+        question: Sharp
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_5
+        question: Cramping
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_6
+        question: Gnawing
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_7
+        question: Hot-Burning
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_8
+        question: Aching
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_9
+        question: Heavy
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_10
+        question: Tender
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_11
+        question: Splitting
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_12
+        question: Tiring-exhausting
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_13
+        question: Sickening
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_14
+        question: Fearful
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+      - key: mpq_15
+        question: Punishing-cruel
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: moderate
+            text: Moderate
+            score: 2
+          - value: severe
+            text: Severe
+            score: 3
+  - type: survey
+    key: "1"
+    title: ""
+    description: ""
+    questions:
+      - key: mpq_scale
+        question: Your pain right now
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: pain
+        ask: We would like to know how severe your pain is right now.
+        scaleExplanation: 0 means no pain. 100 means the worst pain you can imagine.
+        prompt: Indicate on the scale how severe your pain is right now.
+        minLabel: No pain
+        maxLabel: Worst possible pain
+  - type: survey
+    key: "2"
+    title: ""
+    description: ""
+    questions:
+      - key: mpq_present_pain
+        question: Please select the one descriptor below that best describes your
+          present pain.
+        type: SINGLE_CHOICE
+        options:
+          - value: no_pain
+            text: No Pain
+            score: 0
+          - value: mild
+            text: Mild
+            score: 1
+          - value: discomforting
+            text: Discomforting
+            score: 2
+          - value: distressing
+            text: Distressing
+            score: 3
+          - value: horrible
+            text: Horrible
+            score: 4
+          - value: excruciating
+            text: Excruciating
+            score: 5

@@ -14,9 +14,6 @@ platform:
 # minVersion: '2.2'
 capTo: 500
 
-# Legacy
-wearables: []
-
 name: "Warrior Shield"
 
 shortDescription: The main goal of the Warrior Shield study is to understand
@@ -39,9 +36,7 @@ timeResponsibility:
   timeUnits: minutes
   timePeriod: daily
 
-baseline: [] # Legacy
-
-surveys:
+tasks:
   - key: demographics
     rank: 1
   - key: devices
@@ -165,7 +160,8 @@ surveys:
             operator: =
             score: 2
     rank: 6
-multimedia:
+
+  # Videos
   - key: intro
     rank: 0
   - key: intro-always
@@ -240,21 +236,3 @@ multimedia:
             resource: warrior-shield::start-intervention
             operator: =
             score: 2
-
-# Legacy
-requiredData:
-  ActiveEnergyBurned: HKQuantityTypeIdentifier
-  AppleExerciseTime: HKQuantityTypeIdentifier
-  HeartRate: HKQuantityTypeIdentifier
-  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
-  RestingHeartRate: HKQuantityTypeIdentifier
-  WalkingHeartRateAverage: HKQuantityTypeIdentifier
-  OxygenSaturation: HKQuantityTypeIdentifier
-  StepCount: HKQuantityTypeIdentifier
-  AppleStandTime: HKQuantityTypeIdentifier
-  EnvironmentalAudioExposure: HKQuantityTypeIdentifier
-  SleepAnalysis: HKQuantityTypeIdentifier
-  DietaryEnergyConsumed: HKQuantityTypeIdentifier
-  BloodPressureDiastolic: HKQuantityTypeIdentifier
-  BloodPressureSystolic: HKQuantityTypeIdentifier
-  BloodGlucose: HKQuantityTypeIdentifier
