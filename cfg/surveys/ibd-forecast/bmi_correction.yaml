@@ -1,0 +1,26 @@
+key: bmi_correction
+active: true
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements: 
+  time: 1
+  timeUnits: minutes
+name: Please Update Your Height/Weight
+intro:
+  title: Please Update Your Height/Weight
+  description: Due to an unforseen issue with our system, your height and weight may not have been saved. Please update these values for us.
+outro:
+  title: Finished!
+  description: Thank you! Your participation is greatly valued.
+sections:
+  - key: "bmi"
+    title: ""
+    description: ""
+    questions:
+      - key: height_in_inch
+        question: How tall are you in inches? (5 feet = 60 inches)
+        type: NUMERIC
+      - key: weight
+        question: What is your weight in pounds?
+        type: NUMERIC
