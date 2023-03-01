@@ -139,7 +139,7 @@ async function processStudies(distDir) {
         };
         // If we are using an object for the task definition, apply any overrides.
         if (typeof task !== "string") {
-          Object.assign(taskRec, { ...task });
+          Object.assign(taskRec, { ...task, key: compositeTaskKey });
         }
         tasks.push(taskRec);
       }
