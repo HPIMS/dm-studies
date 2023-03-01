@@ -165,7 +165,7 @@ async function processStudies(distDir) {
 
 (async function build() {
   log.info("Building V3 ...");
-  const distDir = path.join(__dirname, "../dist/v3_2");
+  const distDir = path.join(__dirname, "../dist/v3");
   await mkdir(distDir);
   cleandir(distDir);
   await mkdir(path.join(distDir, "consents"));
