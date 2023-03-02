@@ -63,11 +63,11 @@ active:
       - ff3d5e056e949dccd63bcaaff4989d4a
       - 7
     ibd-forecast:
-      - b5ffacab62be68f93d70a5a82eb231d6
-      - 19
+      - c78f670f5efac6009c01a59fc8a5df78
+      - 21
     ra-forecast:
-      - 28e99db38cce4703c8614fe29b92ad7b
-      - 3
+      - c1e047b0d708459a44a38672bdac4c76
+      - 4
   surveys:
     baseline_cd_risc_survey:
       - 4d9f3393a80ecb9d804462d7e1883247
@@ -186,12 +186,15 @@ active:
     ibd-forecast::baseline_health_uc:
       - 0d92bcbfbf976c336ae16a567faf9875
       - 9
+    ibd-forecast::bmi_correction:
+      - 1ee0c8b3212e918b552dda9985e5c622
+      - 1
     ibd-forecast::lab_tests:
       - 9b8af549e65688ebc2e402db2792a4ad
       - 5
     ibd-forecast::new_meds:
-      - 8e107c8fdb6898b543fbdc5ab455579c
-      - 7
+      - f2624fad6924b2b637198cbbed81667a
+      - 8
     ibd-forecast::pouch:
       - b1215a32d6b43d833c878a7e88b9b033
       - 3
@@ -339,6 +342,9 @@ active:
     ra-forecast::baseline_health:
       - 8f1140dd079056f057eed29324b29ec8
       - 3
+    ra-forecast::bmi_correction:
+      - 1ee0c8b3212e918b552dda9985e5c622
+      - 1
     ra-forecast::fatigue_scale:
       - 63bebc5892739f455224b4abeb4ace2e
       - 1
