@@ -24,9 +24,10 @@ sections:
         type: YESNO_CHOICE
   - type: web
     key: section_1
-    pathname: /publix/1/start
-    search: "?batchId=1&generalMultiple"
-    required: true
+    host: google.com
+    # pathname: /publix/1/start
+    # search: "?batchId=1&generalMultiple"
+    # required: true
   - type: survey
     key: section_2
     title: Questionnaire 1
