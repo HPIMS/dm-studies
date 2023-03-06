@@ -168,6 +168,7 @@ async function processStudies(distDir) {
       name: study.name,
       shortDescription: study.shortDescription,
       visibility: study.visibility,
+      minVersion: study.minVersion,
       openEnrollment: study.openEnrollment,
       timeResponsibility: study.timeResponsibility,
       imageId: study.imageId,
