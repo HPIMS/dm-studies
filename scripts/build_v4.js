@@ -35,6 +35,42 @@ async function processTasks(distDir) {
       return "composite";
     }, undefined);
 
+    // Massage the task configuration to be more usable by the client.
+    task.sections = task.sections.map((section) => {
+      if (section.type !== "survey") return section;
+
+      // We don't need to do anything special for the section types that
+      // are NOT surveys, so only continue if we have a survey type here.
+      const { key: sectionKey, questions = [], ...sectionRest } = section;
+      return {
+        key: sectionKey,
+        ...sectionRest,
+        questions: questions.map((question) => {
+          const {
+            key: questionKey,
+            question: title,
+            options,
+            ...questionRest
+          } = question;
+          // We add the sectionKey and questionKey directly onto the
+          // config for each question so that the questionnaire component
+          // knows exactly which field it's dealing with.
+          return {
+            sectionKey,
+            questionKey,
+            title,
+            ...questionRest,
+            options:
+              options &&
+              options.map((option) => {
+                const { value: key, text: label, ...optionRest } = option;
+                return { key, label, ...optionRest };
+              }),
+          };
+        }),
+      };
+    });
+
     // Write the task JSON
     await fs.promises.writeFile(
       path.join(distDir, "tasks", `${compositeKey}.json`),
