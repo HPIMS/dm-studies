@@ -13,8 +13,8 @@ active:
       - 1de1c55f06a49cbdd15da85184302fb5
       - 9
     cramp:
-      - 5a91c2c15b56a66abe1bcb720ea21e30
-      - 53
+      - 20ba4d992ee1192e2467f2f1245e6307
+      - 54
     digi-ibd-001:
       - 52b35465a4221aefe010ee6475dfb2be
       - 24
@@ -49,9 +49,9 @@ active:
     cppd-2__control::general-health:
       - 2db7e259cbafcbfb64b2eaab417fb187
       - 2
-    cramp::test-task:
-      - df97f3e8d86eb6ba3b9927c496fe6854
-      - 3
+    cramp::dst:
+      - 5495d073c6cd23def3c1620fc5d39399
+      - 1
     digi-ibd-001::begin-next-phase:
       - ea838fab81dbb21fd702158232360582
       - 5
@@ -304,6 +304,9 @@ inactive:
     cramp::sss-8-pre:
       - 17d6e80f9600740a2ea4a361dbb8dd39
       - 2
+    cramp::test-task:
+      - df97f3e8d86eb6ba3b9927c496fe6854
+      - 3
     hpi-decode-bp::bp-measurement:
       - 45359e7a6f7b1d7c35a0c05f66f131b0
       - 6

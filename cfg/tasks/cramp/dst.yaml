@@ -1,0 +1,32 @@
+key: dst
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: DST WIP
+sections:
+  - type: survey
+    key: section_0
+    title: Today's Bleeding
+    description: ""
+    questions:
+      - key: question_1
+        question: Yes or No?
+        type: YESNO_CHOICE
+  - type: web
+    key: section_1
+    title: Today's Bleeding
+    description: ""
+    pathname: /publix/1/start
+    search: "?batchId=1&generalMultiple"
+  - type: survey
+    key: section_2
+    title: Today's Bleeding
+    description: ""
+    questions:
+      - key: question_1
+        question: No or Yes?
+        type: YESNO_CHOICE
