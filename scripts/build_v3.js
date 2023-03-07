@@ -466,6 +466,7 @@ async function processStudies() {
       videoId,
       version: version,
       name: data.name,
+      minVersion: data.minVersion,
     });
 
     log.important(`[${study}] Finished processing. Writing ${study}.json`);
