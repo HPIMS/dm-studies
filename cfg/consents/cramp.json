@@ -504,34 +504,31 @@
   "review": [
     [
       "H3",
-      [
-        "Bold",
-        "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION "
-      ]
+      "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION "
     ],
     ["Display", "Icahn School of Medicine at Mount Sinai"],
     [
       "BodyLarge",
       [
         ["Italic", "Study ID"],
-        ["TEXT", ": STUDY-22-01145 "]
+        ["Text", ": STUDY-22-01145 "]
       ]
     ],
     [
       "BodyLarge",
       [
         ["Italic", "Form Version Date"],
-        ["TEXT", ": February 06, 2023 "]
+        ["Text", ": February 06, 2023 "]
       ]
     ],
     ["BodyLarge", "\n"],
-    ["H3", ["Bold", "STUDY INFORMATION"]],
+    ["H3", "STUDY INFORMATION"],
     [
       "BodyLarge",
       [
         ["Bold", "Study Title: "],
         [
-          "TEXT",
+          "Text",
           "CRAMP Study - Characterizing Resilience and Menstrual Pain Study "
         ]
       ]
@@ -540,14 +537,14 @@
       "BodyLarge",
       [
         ["Bold", "Study site(s): "],
-        ["TEXT", "Icahn School of Medicine at Mount Sinai "]
+        ["Text", "Icahn School of Medicine at Mount Sinai "]
       ]
     ],
     [
       "BodyLarge",
       [
         ["Bold", "Principal Investigator (Lead Researcher): "],
-        ["TEXT", "Erwin Bottinger, MD "]
+        ["Text", "Erwin Bottinger, MD "]
       ]
     ],
     [
@@ -555,7 +552,7 @@
       [
         ["Bold", "Physical Address: "],
         [
-          "TEXT",
+          "Text",
           "Icahn School of Medicine at Mount Sinai, 1468 Madison Ave, Annenberg building, 11th floor, New York, NY 10229 "
         ]
       ]
@@ -563,10 +560,9 @@
     [
       "BodyLarge",
       [
-        ["Bold", "Mailing Address"],
-        ["Italic", ["Bold", ": "]],
+        ["Bold", "Mailing Address: "],
         [
-          "TEXT",
+          "Text",
           "Hasso Plattner Institute for Digital Health at Mount Sinai, 1 Gustave L. Levy Place, NY, NY 10029 "
         ]
       ]
@@ -576,11 +572,11 @@
       [
         ["Bold", "Email: "],
         ["Email", "ehivecramp@mssm.edu"],
-        ["TEXT", " "]
+        ["Text", " "]
       ]
     ],
     ["BodyLarge", "\n"],
-    ["H3", ["Bold", "SUMMARY OF THIS RESEARCH STUDY "]],
+    ["H3", "SUMMARY OF THIS RESEARCH STUDY "],
     [
       "BodyLarge",
       "This document explains a research study you might be interested in joining. Participation in the study is voluntary. You can agree to join or not. Your decision will not limit your ability to receive care at Mount Sinai. You should only agree to take part if you understand the study and if all of your questions about the research study are answered. If you do join the study, the research team must share any new information with you that may change your mind about taking part. "
@@ -656,7 +652,7 @@
       "BodyLarge",
       "You will receive notifications and reminders through the study app to complete surveys. These can be turned off by disabling App notifications. If there are any issues obtaining the data from your surveys or the ehive app, a research coordinator may reach out to you to assist in troubleshooting the issue. Since this study is completely remote, research coordinators may reach out to you to check in on how the study is going. This may occur once a week or not at all. "
     ],
-    ["H4", ["Bold", "Screening and enrollment"]],
+    ["H4", "Screening and enrollment"],
     [
       "BodyLarge",
       "On study day 1, you will download the ehive app and complete an eligibility questionnaire to ensure you qualify to participate in this study. The questionnaire will ask about your demographic information, and medical history. If you are eligible, you will complete the consent process on the app and electronically sign the document to enroll. The study team contact information is in the contacts section of the app. You can pause the consent process at any time and contact the study team for additional information. The signed consent document will be available on the app to view and download. "
@@ -703,7 +699,7 @@
       "BodyLarge",
       "Starting the day after the resilience test, every day for one full menstrual cycle length (number of days between first day of one period to the first day of the next), you will complete surveys on the ehive app 3 times a day at 9 am, 12 pm and 8 pm. The surveys will ask about your mood, pain, and stress. An additional daily symptoms survey asking about your menstrual symptoms will be included at the 8 pm survey. "
     ],
-    ["H4", ["Bold", "Post-menstruation survey"]],
+    ["H4", "Post-menstruation survey"],
     [
       "BodyLarge",
       "The first day without bleeding after your menstruation, we will ask you to answer a short questionnaire regarding the stress, depression, anxiety, symptom burden and interference of pain with your daily life activities you experienced over the last seven days."
@@ -765,12 +761,12 @@
       "BodyLarge",
       [
         [
-          "TEXT",
+          "Text",
           "If you are a Mount Sinai Participant with an iPhone but no Apple watch, email the study team at "
         ],
         ["Email", "ehivecramp@mssm.edu"],
         [
-          "TEXT",
+          "Text",
           " to request a device. You will receive a return label to ship the Apple watch back at the end of your participation."
         ]
       ]
@@ -785,7 +781,7 @@
       ]
     ],
     ["BodyLarge", "\n"],
-    ["H3", ["Bold", "POSSIBLE BENEFITS "]],
+    ["H3", "POSSIBLE BENEFITS "],
     [
       "BodyLarge",
       "This study is not designed to benefit you personally. However, the data generated from this study will be used to support development of stress resilience interventions to improve symptoms in patients with dysmenorrhea (menstruation related pain)."
@@ -852,12 +848,12 @@
       "BodyLarge",
       [
         [
-          "TEXT",
+          "Text",
           "You may also withdraw your permission for the researchers to use and share any of your protected information for research, but "
         ],
         ["Underline", "you must do so in writing"],
         [
-          "TEXT",
+          "Text",
           " to the Lead Researcher at the address on the first page. Even if you withdraw your permission, the Lead Researcher may still use the information that was already collected if that information is necessary to complete the research study. Your health information may still be used or shared after you withdraw your authorization if you have an adverse event (a bad effect) from taking part in the research study. "
         ]
       ]
@@ -875,7 +871,7 @@
       [
         ["Underline", "Withdrawal without your consent"],
         [
-          "TEXT",
+          "Text",
           ": The Lead Researcher, the funder or Mount Sinai may stop your involvement in this research study at any time without your consent. This may be because the research study is being stopped, the instructions of the research team have not been followed, the Lead Researcher believes it is in your best interest, or for any other reason. If data and/or samples have been stored as part of the research study, they too can be destroyed without your consent. "
         ]
       ]
@@ -886,11 +882,11 @@
       "BodyLarge",
       [
         [
-          "TEXT",
+          "Text",
           "If you have any questions, concerns or complaints at any time about this research, or you think the research has harmed you, please contact the office of the research team and/or the Lead Researcher at "
         ],
         ["Email", "ehivecramp@mssm.edu"],
-        ["TEXT", "."]
+        ["Text", "."]
       ]
     ],
     ["BodyLarge", "\n"],
@@ -899,12 +895,12 @@
       "BodyLarge",
       [
         [
-          "TEXT",
+          "Text",
           "Researchers sometimes get paid for consulting or doing work for companies that produce drugs, biologics or medical devices. If you have questions regarding industry relationships, you are encouraged to talk to the Lead Researcher or visit our website at "
         ],
         ["Hyperlink", "http://icahn.mssm.edu/"],
         [
-          "TEXT",
+          "Text",
           " where Mount Sinai publicly discloses the industry relationships of our faculty. "
         ]
       ]
@@ -937,7 +933,7 @@
           "What PHI is collected and used in this research study, and might also be shared with others? "
         ],
         [
-          "TEXT",
+          "Text",
           "As part of this study, the research team at the hospital(s) involved in the research will collect your: Name, date of birth, e-mail address, medical records number. "
         ]
       ]
@@ -970,7 +966,7 @@
         ["Underline", "Why is your PHI being used?"],
         ["BodyLarge", "\n"],
         [
-          "TEXT",
+          "Text",
           "Researchers need the information that identifies you so they can contact you during the study. They need your health information and the results of any tests and procedures being collected as part of this study to answer the questions posed in the study. The purpose of the study is discussed earlier in this consent form. Before researchers analyze the data, they remove any information that would let others know who you are or that you took part in the study. If researchers publish or present study results at scientific meetings, lectures, or other events, their presentations would not include any information that would let others know who you are, unless you give separate permission to do so. "
         ]
       ]
@@ -981,7 +977,7 @@
         ["Underline", "Who, outside Mount Sinai, might receive your PHI?"],
         ["BodyLarge", "\n"],
         [
-          "TEXT",
+          "Text",
           "As part of the study, the Lead Researcher, research team and others in the Mount Sinai workforce may disclose your PHI, including the results of the research study tests and procedures, to the following people or organizations: (It is possible that there may be changes to the list during this research study; you may request an up-to-date list at any time by contacting the Lead Researcher.) "
         ]
       ]
@@ -997,7 +993,7 @@
       "BodyLarge",
       [
         [
-          "TEXT",
+          "Text",
           "In almost all disclosures outside of Mount Sinai, you will not be identified by name, social security number, address, telephone number, or any other direct personal identifier. Some records and information disclosed may be identified with a unique code number. The Lead Researcher will ensure that the key to the code will be kept in a locked file or will be securely stored electronically. The code will not be used to link the information back to you without your permission, unless the Institutional Review Board (IRB) allows it after determining that there would be minimal risk to your privacy. The Certificate of Confidentiality obtained from the Department of Health and Human Services will not be used to prevent disclosure to local authorities of child abuse and neglect, or harm to self or others. It is possible that a sponsor or their representatives, a data coordinating office, a contract research organization, may come to inspect your records. Even if those records are identifiable when inspected, the information leaving the institution will be stripped of direct identifiers. Additionally, "
         ],
         [
@@ -1005,7 +1001,7 @@
           "OHRP, as well as the Food and Drug Administration (FDA) will be granted direct access to your medical records for verification of the research procedures and data. OHRP and FDA are authorized to remove information with identifiers if necessary to complete their task. By signing this document, you are authorizing this access. "
         ],
         [
-          "TEXT",
+          "Text",
           "The results of this research may be published. However, your name and other identifying information will be kept confidential. "
         ]
       ]
@@ -1019,7 +1015,7 @@
         ],
         ["BodyLarge", "\n"],
         [
-          "TEXT",
+          "Text",
           "Your authorization for use of your PHI for this specific study does not expire. "
         ]
       ]
@@ -1030,7 +1026,7 @@
         ["Underline", "Will you be able to access your records?"],
         ["BodyLarge", "\n"],
         [
-          "TEXT",
+          "Text",
           "During your participation in this study, you will have access to your medical record and any study information that is part of that record. The research team is not required to release research information to you that is not part of your medical record. "
         ]
       ]
@@ -1044,7 +1040,7 @@
         ],
         ["BodyLarge", "\n"],
         [
-          "TEXT",
+          "Text",
           "NO! If you decide not to let the research team obtain, use or share your PHI, you should not sign this form, and you will not be allowed to volunteer in the research study. "
         ],
         [
@@ -1059,16 +1055,16 @@
         ["Underline", "Can you change your mind?"],
         ["BodyLarge", "\n"],
         [
-          "TEXT",
+          "Text",
           "If you decide to stop being in the study, please contact the Lead Researcher or the research staff."
         ],
         ["BodyLarge", "\n"],
         [
-          "TEXT",
+          "Text",
           " The research team may ask you whether they can continue to collect information from your medical record. You will also have to decide if you wish to limit the continued use of the information collected during the study. Under US privacy laws you may also withdraw your permission for the researchers to use and share any of your protected information for research, "
         ],
         ["Underline", "but you must do so in writing"],
-        ["TEXT", " to the Lead Researcher at the address on the first page. "]
+        ["Text", " to the Lead Researcher at the address on the first page. "]
       ]
     ],
     [
@@ -1088,14 +1084,14 @@
       "BodyLarge",
       [
         [
-          "TEXT",
+          "Text",
           "If you are authorizing the release of HIV-related information, you should be aware that the recipient(s) is (are) prohibited from re-disclosing any HIV-related information without your authorization unless permitted to do so under federal or state law. You also have a right to request a list of people who may receive or use your HIV-related information without authorization. If you experience discrimination because of the release or disclosure of HIV-related information, you may contact the New York State Division of Human Rights at "
         ],
         ["Telephone", "(888) 392-3644"],
-        ["TEXT", " or the New York City Commission on Human Rights at "],
+        ["Text", " or the New York City Commission on Human Rights at "],
         ["Telephone", "(212) 306-5070"],
         [
-          "TEXT",
+          "Text",
           ". These agencies are responsible for protecting your rights. "
         ]
       ]
@@ -1105,7 +1101,7 @@
       [
         ["Underline", "Certificate of Confidentiality"],
         [
-          "TEXT",
+          "Text",
           ": To further protect your privacy, the researchers have obtained a Certificate of Confidentiality from the Department of Health and Human Services. This is intended to ensure that your identity as a participant in this research study will not have to be disclosed as a result from a subpoena, for the purpose of identifying you in any federal, state, or local civil, criminal, administrative, legislative, or other proceedings other than to the FDA or OHRP as identified above. "
         ]
       ]
@@ -1119,12 +1115,12 @@
       "BodyLarge",
       [
         [
-          "TEXT",
+          "Text",
           "This research has been reviewed and approved by an Institutional Review Board (IRB). You may reach a representative of the Mount Sinai Program for Protection of Human Subjects at telephone number "
         ],
         ["Telephone", "(212) 824-8200"],
         [
-          "TEXT",
+          "Text",
           " during regular work hours (Monday-Friday, 9am-5pm, excluding holidays) for any of the reasons listed below. This office will direct your call to the right person within the Mount Sinai Health System: "
         ]
       ]
