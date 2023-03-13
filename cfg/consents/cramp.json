@@ -509,7 +509,13 @@
         "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION "
       ]
     ],
-    ["Display", [["TEXT", "Icahn School of Medicine at Mount Sinai"]]],
+    [
+      "Display",
+      [
+        ["TEXT", "Icahn School of Medicine at Mount Sinai"],
+        ["BodyLarge", "\n"]
+      ]
+    ],
     [
       "BodyLarge",
       [
@@ -521,7 +527,8 @@
       "BodyLarge",
       [
         ["Italic", "Form Version Date"],
-        ["TEXT", ": February 06, 2023 "]
+        ["TEXT", ": February 06, 2023 "],
+        ["BodyLarge", "\n"]
       ]
     ],
     ["H3", ["Bold", "STUDY INFORMATION"]],
@@ -575,7 +582,8 @@
       [
         ["Bold", "Email: "],
         ["Email", "ehivecramp@mssm.edu"],
-        ["TEXT", " "]
+        ["TEXT", " "],
+        ["BodyLarge", "\n"]
       ]
     ],
     ["H3", ["Bold", "SUMMARY OF THIS RESEARCH STUDY "]],
@@ -605,7 +613,8 @@
         [
           "TEXT",
           "If you are interested in learning more about this study, please continue to read below. "
-        ]
+        ],
+        ["BodyLarge", "\n"]
       ]
     ],
     ["H3", "STUDY PARTICIPATION"],
@@ -771,7 +780,8 @@
         [
           "TEXT",
           " to request a device. You will receive a return label to ship the Apple watch back at the end of your participation."
-        ]
+        ],
+        ["BodyLarge", "\n"]
       ]
     ],
     ["H3", "COSTS OR PAYMENTS THAT MAY RESULT FROM PARTICIPATION"],
@@ -958,6 +968,7 @@
       "BodyLarge",
       [
         ["Underline", "Why is your PHI being used?"],
+        ["BodyLarge", "\n"],
         [
           "TEXT",
           "Researchers need the information that identifies you so they can contact you during the study. They need your health information and the results of any tests and procedures being collected as part of this study to answer the questions posed in the study. The purpose of the study is discussed earlier in this consent form. Before researchers analyze the data, they remove any information that would let others know who you are or that you took part in the study. If researchers publish or present study results at scientific meetings, lectures, or other events, their presentations would not include any information that would let others know who you are, unless you give separate permission to do so. "
@@ -968,6 +979,7 @@
       "BodyLarge",
       [
         ["Underline", "Who, outside Mount Sinai, might receive your PHI?"],
+        ["BodyLarge", "\n"],
         [
           "TEXT",
           "As part of the study, the Lead Researcher, research team and others in the Mount Sinai workforce may disclose your PHI, including the results of the research study tests and procedures, to the following people or organizations: (It is possible that there may be changes to the list during this research study; you may request an up-to-date list at any time by contacting the Lead Researcher.) "
@@ -1005,6 +1017,7 @@
           "Underline",
           "For how long will Mount Sinai be able to use or disclose your PHI?"
         ],
+        ["BodyLarge", "\n"],
         [
           "TEXT",
           "Your authorization for use of your PHI for this specific study does not expire. "
@@ -1015,6 +1028,7 @@
       "BodyLarge",
       [
         ["Underline", "Will you be able to access your records?"],
+        ["BodyLarge", "\n"],
         [
           "TEXT",
           "During your participation in this study, you will have access to your medical record and any study information that is part of that record. The research team is not required to release research information to you that is not part of your medical record. "
@@ -1028,6 +1042,7 @@
           "Underline",
           "Do you need to give the researchers permission to obtain, use or share your PHI?"
         ],
+        ["BodyLarge", "\n"],
         [
           "TEXT",
           "NO! If you decide not to let the research team obtain, use or share your PHI, you should not sign this form, and you will not be allowed to volunteer in the research study. "
@@ -1042,10 +1057,12 @@
       "BodyLarge",
       [
         ["Underline", "Can you change your mind?"],
+        ["BodyLarge", "\n"],
         [
           "TEXT",
           "If you decide to stop being in the study, please contact the Lead Researcher or the research staff."
         ],
+        ["BodyLarge", "\n"],
         [
           "TEXT",
           " The research team may ask you whether they can continue to collect information from your medical record. You will also have to decide if you wish to limit the continued use of the information collected during the study. Under US privacy laws you may also withdraw your permission for the researchers to use and share any of your protected information for research, "
