@@ -323,6 +323,8 @@ sections:
     pathname: /publix/1/start
     search: "?batchId=1&generalMultiple"
     required: true
+    headerShown: false
+    backMode: close
   - type: document
     key: hrv_session_1
     content: [
