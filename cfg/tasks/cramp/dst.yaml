@@ -6,14 +6,55 @@ schedule:
 timeRequirements:
   time: 5
   timeUnits: minutes
-name: DST WIP
+name: Stress Test
 intro:
-  title: DST WIP
-  description: This is the placeholder, work in progress task for the Digital Stress Test!
+  title: Test Procedure
+  description: >-
+    You will perform a cognitive and verbal test consisting of two different tasks.
+
+
+    We will use your front camera to record you. The recordings will be used to analyse your resilience.
+
+
+    For this test, please make sure that you have at least 15 minutes where you will not be disturbed. 
+    Please make sure you are in front of a neutral background for video recording. 
+
+
+    Before and after the test, we will ask a few questions.
+
+
+    If you feel uncomfortable or overstrained, you can cancel this test at any time by closing the app. 
 outro:
-  title: Thank you!
-  description: We appreciate your participation in this important study.
+  title: Clarification
+  description: >-
+    Thank you for performing this test. 
+
+
+    We would like to clarify a few things. 
+
+
+    The purpose of this test was to induce and anlayse individual stress response only. 
+    It was NOT intedend to evaluate your cognitive and verbal performance. 
+    Therefore, the difficulty of the calculation tasks intentionally increased with time to make you fail. 
+    The comparison with other users was FAKED in order to induce social stress. 
+    The videos have NOT been analysed by any algorithm.
 sections:
+  - type: document
+    content: [
+      ["H3", "Heart Rate Variability"],
+      ["BodyLarge", [
+        ["Text", "We want to measure you heart rate variability before and after the tasks. This is a very important measure to assess resilience. Unfortunately Apple does not allow us to start recording heart rate variability whenever we want.  We will therefore ask you to use the "],
+        ["Italic", ["Bold", "Breathe"]],
+        ["Text", " function within the "],
+        ["Italic", ["Bold", "Mindfulness App"]],
+        ["Text", " on your Apple Watch.  Activating the breathing app will allow us to record your heart rate variability."]
+      ]],
+      ["Text", "\n"],
+      ["BodyLarge", [
+        ["Text", "The breathing task on you apple watch will ask you to inhale and exhale at specific times. Please, "],
+        ["Bold", "DO NOT FOLLOW THE APPLE WATCH INSTRUCTIONS SINCE THIS WILL CAUSE THE RECORDING TO BE USELESS."]
+      ]]
+    ]
   - type: survey
     key: section_0
     title: Questionnaire 0
