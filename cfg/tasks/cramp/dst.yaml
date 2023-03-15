@@ -42,23 +42,37 @@ sections:
   - type: document
     key: hrv_intro
     content: [
-      ["H3", "Heart Rate Variability"],
+      ["H3", ["Underline", "Heart Rate Variability"]],
       ["BodyLarge", [
         ["Text", "We want to measure you heart rate variability before and after the tasks. This is a very important measure to assess resilience. Unfortunately Apple does not allow us to start recording heart rate variability whenever we want.  We will therefore ask you to use the "],
         ["Italic", ["Bold", "Breathe"]],
         ["Text", " function within the "],
-        ["Italic", ["Bold", "Mindfulness App"]],
-        ["Text", " on your Apple Watch.  Activating the breathing app will allow us to record your heart rate variability."]
+        ["Italic", ["Bold", "Mindfulness"]],
+        ["Text", " app on your Apple Watch. Activating the breathing app will allow us to record your heart rate variability."]
       ]],
-      ["Text", "\n"],
       ["BodyLarge", [
         ["Text", "The breathing task on you apple watch will ask you to inhale and exhale at specific times. Please, "],
         ["Bold", "DO NOT FOLLOW THE APPLE WATCH INSTRUCTIONS SINCE THIS WILL CAUSE THE RECORDING TO BE USELESS."]
+      ]],
+      ["BodyLarge", "Before you begin, please follow the instructions in the following video to off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task."]
+    ]
+  - type: document
+    key: hrv_session_0
+    content: [
+      ["H3", ["Underline", "Breathe Session"]],
+      ["BodyLarge", [
+        ["Text", "Please, start a "],
+        ["Italic", "1-minute"],
+        ["Text", " breathing session from your apple watch. Remember to "],
+        ["Bold", "NOT FOLLOW THE INHALE/EXHALE INSTRUCTIONS"],
+        ["Text", " displayed on your watch. Press "],
+        ["Bold", "NEXT"],
+        ["Text", " only once you have finished your recording."]
       ]]
     ]
   - type: survey
     key: section_0
-    title: Today's Bleeding
+    title: Questionnaire 0
     description: ""
     questions:
       - key: question_1
@@ -66,13 +80,26 @@ sections:
         type: YESNO_CHOICE
   - type: web
     key: section_1
-    title: Today's Bleeding
-    description: ""
     pathname: /publix/1/start
     search: "?batchId=1&generalMultiple"
+    required: true
+  - type: document
+    key: hrv_session_1
+    content: [
+      ["H3", ["Underline", "Breathe Session"]],
+      ["BodyLarge", [
+        ["Text", "Please, start a "],
+        ["Italic", "1-minute"],
+        ["Text", " breathing session from your apple watch. Remember to "],
+        ["Bold", "NOT FOLLOW THE INHALE/EXHALE INSTRUCTIONS"],
+        ["Text", " displayed on your watch. Press "],
+        ["Bold", "NEXT"],
+        ["Text", " only once you have finished your recording."]
+      ]]
+    ]
   - type: survey
     key: section_2
-    title: Today's Bleeding
+    title: Questionnaire 1
     description: ""
     questions:
       - key: question_1
