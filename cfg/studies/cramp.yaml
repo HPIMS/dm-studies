@@ -152,6 +152,14 @@ tasks:
       period: ALWAYS
     # TODO: END
     rank: 70
+
+  - key: social
+    # TODO: REMOVE ME!
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # TODO: END
+    rank: 80
     # schedule:
     #   type: PERIOD
     #   period: ONCE

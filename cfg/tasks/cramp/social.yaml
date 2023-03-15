@@ -1,0 +1,23 @@
+key: social
+_extends:
+  - lsns
+  - ucls-ls
+  - sei-hs
+scorable: false
+score:
+  fn: null
+  args: {}
+metadata: {}
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: TITLE FOR THIS?
+intro:
+  title: INTRO TITLE
+  description: INTRO TEXT
+outro:
+  title: Thank you for your continued participation
+  description: You are a valued member of our study!
