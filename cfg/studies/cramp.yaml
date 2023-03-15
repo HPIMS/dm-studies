@@ -41,8 +41,6 @@ tasks:
     # TODO: END
     rank: 0
 
-  - dst
-
   - key: demographics
     # TODO: REMOVE ME!
     schedule:
@@ -160,6 +158,7 @@ tasks:
       period: ALWAYS
     # TODO: END
     rank: 80
+    # TODO: END
     # schedule:
     #   type: PERIOD
     #   period: ONCE
@@ -225,164 +224,23 @@ tasks:
     #           operator: ">"
     #           score: 0
 
-  # - key: lsns
-  #   # TODO: REMOVE ME!
-  #   schedule:
-  #     type: PERIOD
-  #     period: ALWAYS
-  #   # TODO: END
-  #   rank: 90
-  #   # schedule:
-  #   #   type: PERIOD
-  #   #   period: ONCE
-  #   #   delay: 4
-  #   #   delayUnits: DAYS
-  #   # triggers:
-  #   #   - action: SHOW
-  #   #     condition:
-  #   #       type: AND
-  #   #       tasks:
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::demographics
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::general-health
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::menstrual-health
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: library::psst
-  #   #           operator: ">"
-  #   #           score: 0    
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::pregnancy
-  #   #           operator: ">"
-  #   #           score: 0
 
-  # - key: ucls-ls
-  #   # TODO: REMOVE ME!
-  #   schedule:
-  #     type: PERIOD
-  #     period: ALWAYS
-  #   # TODO: END
-  #   rank: 100
-  #   # schedule:
-  #   #   type: PERIOD
-  #   #   period: ONCE
-  #   #   delay: 4
-  #   #   delayUnits: DAYS
-  #   # triggers:
-  #   #   - action: SHOW
-  #   #     condition:
-  #   #       type: AND
-  #   #       tasks:
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::demographics
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::general-health
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::menstrual-health
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: library::psst
-  #   #           operator: ">"
-  #   #           score: 0    
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::pregnancy
-  #   #           operator: ">"
-  #   #           score: 0
+  - key: pre-dst
+    # TODO: REMOVE ME!
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # TODO: END
+    rank: 90
 
-  # - key: sei-hs
-  #   # TODO: REMOVE ME!
-  #   schedule:
-  #     type: PERIOD
-  #     period: ALWAYS
-  #   # TODO: END
-  #   rank: 110
-  #   # schedule:
-  #   #   type: PERIOD
-  #   #   period: ONCE
-  #   #   delay: 4
-  #   #   delayUnits: DAYS
-  #   # triggers:
-  #   #   - action: SHOW
-  #   #     condition:
-  #   #       type: AND
-  #   #       tasks:
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::demographics
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::general-health
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::menstrual-health
-  #   #           operator: ">"
-  #   #           score: 0
-  #   #         - type: COMPLETED
-  #   #           resource: library::psst
-  #   #           operator: ">"
-  #   #           score: 0    
-  #   #         - type: COMPLETED
-  #   #           resource: cramp::pregnancy
-  #   #           operator: ">"
-  #   #           score: 0
+  - dst
 
-  # - key: pss-10-pre
-  #   # TODO: REMOVE ME!
-  #   schedule:
-  #     type: PERIOD
-  #     period: ALWAYS
-  #   # TODO: END
-  #   rank: 120
-  # #   triggers:
-  # #   - action: SHOW
-  # #     condition:
-  # #       - type: CALCULATION
-  # #         Today in m + L - 14 : m + L - 7;
-  # #         fn: cramp::ovulation-phase
-  # #         args: {}
+  - key: post-menstruation
+    # TODO: REMOVE ME!
+    schedule:
+      type: PERIOD
+      period: ALWAYS
 
-  # - key: dass-21-pre
-  #   # TODO: REMOVE ME!
-  #   schedule:
-  #     type: PERIOD
-  #     period: ALWAYS
-  #   # TODO: END
-  #   rank: 130
-  # #   triggers:
-  # #   - action: SHOW
-  # #     condition:
-  # #       - type: CALCULATION
-  # #         Today in m + L - 14 : m + L - 7;
-  # #         fn: cramp::ovulation-phase
-  # #         args: {}
-
-  # - key: sss-8-pre
-  #   # TODO: REMOVE ME!
-  #   schedule:
-  #     type: PERIOD
-  #     period: ALWAYS
-  #   # TODO: END
-  #   rank: 140
-  # #   triggers:
-  # #   - action: SHOW
-  # #     condition:
-  # #       - type: CALCULATION
-  # #         Today in m + L - 14 : m + L - 7;
-  # #         fn: cramp::ovulation-phase
-  # #         args: {}
 
   # # - key: dst
   # #   rank: 150
