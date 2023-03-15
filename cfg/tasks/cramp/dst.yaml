@@ -325,6 +325,22 @@ sections:
     required: true
     headerShown: false
     backMode: close
+    doneContent: [
+      ["H3", ["Underline", "Resilience Test Complete"]],
+      ["BodyLarge", [
+        ["Text", "Thank you for completing the resilience test. Press "],
+        ["Bold", "NEXT"],
+        ["Text", " to continue with the post-test questionnaire."]
+      ]]
+    ]
+    cancelContent: [
+      ["H3", ["Underline", "Resilience Test Canceled"]],
+      ["BodyLarge", [
+        ["Text", "The resilience test has been canceled. Please close this window by pressing the "],
+        ["Bold", "X"],
+        ["Text", " in the upper left corner. You may come back to this task later."]
+      ]]
+    ]
   - type: document
     key: hrv_session_1
     content: [
