@@ -326,15 +326,15 @@ sections:
     headerShown: false
     backMode: close
     doneContent: [
-      ["H3", ["Underline", "Resilience Test Complete"]],
+      ["H2", "Resilience Test Complete!"],
       ["BodyLarge", [
         ["Text", "Thank you for completing the resilience test. Press "],
         ["Bold", "NEXT"],
-        ["Text", " to continue with the post-test questionnaire."]
+        ["Text", " to continue with the post-test breathe session and questionnaire."]
       ]]
     ]
     cancelContent: [
-      ["H3", ["Underline", "Resilience Test Canceled"]],
+      ["H2", "Resilience Test Canceled"],
       ["BodyLarge", [
         ["Text", "The resilience test has been canceled. Please close this window by pressing the "],
         ["Bold", "X"],
