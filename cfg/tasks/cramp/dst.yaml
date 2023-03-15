@@ -4,41 +4,33 @@ schedule:
   type: PERIOD
   period: ALWAYS
 timeRequirements:
-  time: 5
+  time: 10
   timeUnits: minutes
-name: Stress Test
+name: Resilience Test
 intro:
-  title: Test Procedure
+  title: Intro
   description: >-
-    You will perform a cognitive and verbal test consisting of two different tasks.
+    In this task we will ask you to perform a short resilience test.
 
 
-    We will use your front camera to record you. The recordings will be used to analyse your resilience.
+    Why should I perform this test?
 
 
-    For this test, please make sure that you have at least 15 minutes where you will not be disturbed. 
-    Please make sure you are in front of a neutral background for video recording. 
-
-
-    Before and after the test, we will ask a few questions.
-
-
-    If you feel uncomfortable or overstrained, you can cancel this test at any time by closing the app. 
+    The CRAMP study aims to characterize the relationship between resilience and menstrual pain. This brief cognitive test is a crucial part of our study, since these results will enable us to measure your resilience. 
 outro:
-  title: Clarification
-  description: >-
-    Thank you for performing this test. 
-
-
-    We would like to clarify a few things. 
-
-
-    The purpose of this test was to induce and anlayse individual stress response only. 
-    It was NOT intedend to evaluate your cognitive and verbal performance. 
-    Therefore, the difficulty of the calculation tasks intentionally increased with time to make you fail. 
-    The comparison with other users was FAKED in order to induce social stress. 
-    The videos have NOT been analysed by any algorithm.
+  title: Thank you!
+  description: Thank you for completing the resilience test.
 sections:
+  - type: document
+    key: test_procedure
+    content: [
+      ["H3", ["Underline", "Test Procedure"]],
+      ["BodyLarge", "You will perform a cognitive and verbal test consisting of two different tasks."],
+      ["BodyLarge", "We will use your front camera to record you. The recordings will be used to analyse your resilience."],
+      ["BodyLarge", "For this test, please make sure that you have at least 15 minutes where you will not be disturbed. Please make sure you are in front of a neutral background for video recording."],
+      ["BodyLarge", "Before and after the test, we will ask a few questions."],
+      ["BodyLarge", "If you feel uncomfortable or overstrained, you can cancel this test at any time by closing the app. "]
+    ]
   - type: document
     key: hrv_intro
     content: [
@@ -81,15 +73,253 @@ sections:
       ]]
     ]
   - type: survey
-    key: section_0
-    title: Questionnaire 0
+    key: mood_happy_pre
+    title: ""
     description: ""
     questions:
-      - key: question_1
-        question: Yes or No?
-        type: YESNO_CHOICE
+      - key: vas
+        question: Your mood (happiness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (happiness)
+        ask: Please think about your mood right now.
+        scaleExplanation: 0 is unhappy, 100 is happy.
+        prompt: Rate your mood (happiness).
+        minLabel: Unhappy
+        maxLabel: Happy
+  - type: survey
+    key: mood_calm_pre
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (calmness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (calmness)
+        ask: Please think about your mood right now.
+        scaleExplanation: 0 is excited, 100 is calm.
+        prompt: Rate your mood (calmness).
+        minLabel: Excited
+        maxLabel: Calm
+  - type: survey
+    key: stress_pre
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your stress
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: stress
+        ask: Please think about your stress right now.
+        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
+        prompt: Rate your stress.
+        minLabel: No stress
+        maxLabel: The worst stress imaginable
+  - type: survey
+    key: panas-10-pre
+    title: ""
+    description: This scale consists of a number of words that describe different feelings and emotions. Read each item and mark the appropriate answer. Indicate to what extent you feel this way RIGHT NOW, that is, at the present moment.
+    questions:
+      - key: panas_1
+        question: Upset
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_2
+        question: Hostile
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_3
+        question: Alert
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_4
+        question: Ashamed
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_5
+        question: Inspired
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_6
+        question: Nervous
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_7
+        question: Determined
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_8
+        question: Attentive
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_9
+        question: Active
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_10
+        question: Afraid
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
   - type: web
-    key: section_1
+    key: web_dst
     pathname: /publix/1/start
     search: "?batchId=1&generalMultiple"
     required: true
@@ -108,10 +338,274 @@ sections:
       ]]
     ]
   - type: survey
-    key: section_2
-    title: Questionnaire 1
+    key: mood_happy_post
+    title: ""
     description: ""
     questions:
-      - key: question_1
-        question: No or Yes?
-        type: YESNO_CHOICE
+      - key: vas
+        question: Your mood (happiness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (happiness)
+        ask: Please think about your mood right now.
+        scaleExplanation: 0 is unhappy, 100 is happy.
+        prompt: Rate your mood (happiness).
+        minLabel: Unhappy
+        maxLabel: Happy
+  - type: survey
+    key: mood_calm_post
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (calmness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (calmness)
+        ask: Please think about your mood right now.
+        scaleExplanation: 0 is excited, 100 is calm.
+        prompt: Rate your mood (calmness).
+        minLabel: Excited
+        maxLabel: Calm
+  - type: survey
+    key: stress_post
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your stress
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: stress
+        ask: Please think about your stress right now.
+        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
+        prompt: Rate your stress.
+        minLabel: No stress
+        maxLabel: The worst stress imaginable
+  - type: survey
+    key: panas-10-post
+    title: ""
+    description: This scale consists of a number of words that describe different feelings and emotions. Read each item and mark the appropriate answer. Indicate to what extent you feel this way RIGHT NOW, that is, at the present moment.
+    questions:
+      - key: panas_1
+        question: Upset
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_2
+        question: Hostile
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_3
+        question: Alert
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_4
+        question: Ashamed
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_5
+        question: Inspired
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_6
+        question: Nervous
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_7
+        question: Determined
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_8
+        question: Attentive
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_9
+        question: Active
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+      - key: panas_10
+        question: Afraid
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Very slightly or not at all
+            score: 1
+          - value: little
+            text: A little
+            score: 2
+          - value: moderate
+            text: Moderately
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extreme
+            text: Extremely
+            score: 5
+  - type: document
+    key: clarification
+    content: [
+      ["H3", ["Underline", "Clarification"]],
+      ["BodyLarge", "Thank you for performing this test."],
+      ["BodyLarge", "We would like to clarify a few things: "],
+      ["UnorderedList", [
+        ["BodyLarge", "The purpose of this test was to induce and anlayse individual stress response only.  "],
+        ["BodyLarge", [
+          ["Text", "It was "],
+          ["Bold", "NOT"],
+          ["Text", " intedend to evaluate your cognitive and verbal performance.     "]
+        ]],
+        ["BodyLarge", "Therefore, the difficulty of the calculation tasks intentionally increased with time to make you fail."],
+        ["BodyLarge", [
+          ["Text", "The comparison with other users was "],
+          ["Bold", "FAKED"],
+          ["Text", " in order to induce social stress."]
+        ]],
+        ["BodyLarge", [
+          ["Text", "The videos have "],
+          ["Bold", "NOT"],
+          ["Text", " been analysed by any algorithm."]
+        ]]
+      ]]
+    ]
