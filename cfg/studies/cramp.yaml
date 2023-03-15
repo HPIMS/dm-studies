@@ -33,15 +33,13 @@ timeResponsibility:
   timePeriod: daily
 
 tasks:
-  - dst
-  # # THIS WILL BECOME THE INTRO VIDEO!
-  # - key: intro
-  #   # TODO: REMOVE ME!
-  #   schedule:
-  #     type: PERIOD
-  #     period: ALWAYS
-  #   # TODO: END
-  #   rank: 0
+  - key: intro
+    # TODO: REMOVE ME!
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # TODO: END
+    rank: 0
 
   # - key: demographics
   #   # TODO: REMOVE ME!

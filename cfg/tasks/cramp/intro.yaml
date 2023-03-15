@@ -6,15 +6,29 @@ schedule:
 timeRequirements:
   time: 5
   timeUnits: seconds
-name: Intro
+name: Welcome to CRAMP
+outro: 
+  title: Thank You!
+  description: Thank you for participating in the CRAMP study!
 sections:
-  - type: survey
-    key: "0"
-    title: INTRO
-    description: This is a placeholder for the intro video. Answer yes or no, it
-      doesn't matter. Completing this task will trigger the next phase in the
-      study.
-    questions:
-      - key: anything
-        question: Maybe?
-        type: YESNO_CHOICE
+  - type: video
+    key: intro_video
+    videoId: ehive_intro
+    autoplay: true
+    beginMuted: false
+    minimumWatchThreshold: 1
+  - type: document
+    key: apple_health
+    content: [
+      ["H2", "Apple Health"],
+      ["BodyLarge", [
+        ["Text", "Please connect Apple Health if you haven't done so already. It is a study requirement and it's important because it allows us to obtain measurements such as your step count and sleep cycles that are critical in understanding the relationship between stress and menstrual pain. To connect Apple Health, visit the study page and press "],
+        ["Bold", "START"],
+        ["Text", " on the "],
+        ["Italic", "Connect App or Device"],
+        ["Text", " card."]
+      ]],
+      ["BodyLarge", "We take your privacy seriously! We have obtained a Certificate of Confidentiality that keeps your data extra-secure. This ensures your data can never be shared with anyone outside our research team, including any law enforcement."]
+    ]
+
+      
