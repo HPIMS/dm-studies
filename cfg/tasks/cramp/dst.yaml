@@ -56,6 +56,15 @@ sections:
       ]],
       ["BodyLarge", "Before you begin, please follow the instructions in the following video to off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task."]
     ]
+  - type: video
+    videoId: warrior-shield::intro
+    autoplay: true
+    beginMuted: true
+    controls:
+      - PlayPause
+      - MuteUnmute
+      - Rewind
+      - Forward
   - type: document
     key: hrv_session_0
     content: [
