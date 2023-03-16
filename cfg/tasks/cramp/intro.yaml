@@ -17,8 +17,10 @@ sections:
     autoplay: true
     beginMuted: false
     minimumWatchThreshold: 1
+    headerShown: false
   - type: document
     key: apple_health
+    headerShown: false
     content: [
       ["H2", "Apple Health"],
       ["BodyLarge", [
