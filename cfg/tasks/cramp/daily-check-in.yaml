@@ -41,98 +41,38 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: pain_today_lower_belly_intensity_vas
-        question: Your lower belly pain
+      - key: vas
+        question: Your pain today
         type: V_SCALE
         hideHeader: true
         min: 0
         max: 1000
-        category: Lower belly pain
-        ask: Please think about your lower belly pain today.
+        category: Pain
+        ask: Please think about your pain today.
         scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - type: survey
     key: pain_2
-    title: ""
+    title: "Pain Continued"
     description: ""
     questions:
-      - key: pain_today_lower_back_intensity_vas
-        question: Your lower back pain
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: Lower back pain
-        ask: Please think about your lower back pain today.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Rate the pain intensity.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
-  - type: survey
-    key: pain_3
-    title: ""
-    description: ""
-    questions:
-      - key: pain_today_upper_thighs_intensity_vas
-        question: Your upper thigh pain
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: upper thigh pain
-        ask: Please think about your upper thigh pain today.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Rate the pain intensity.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
-  - type: survey
-    key: pain_4
-    title: Today's Pain
-    description: For each of the following body locations, please rate today's pain,
-      with 0 being no pain and 10 being the worst pain imaginable.
-    questions:
-      - key: pain_today_lower_belly_intensity
-        question: Rate today's lower belly pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-      - key: pain_today_lower_back_intensity
-        question: Rate today's lower back pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-      - key: pain_today_upper_thighs_intensity
-        question: Rate today's upper thigh pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-  - type: survey
-    key: pain_5
-    title: Today's Pain Continued
-    description: ""
-    questions:
-      - key: pain_today_other
-        question: Do you feel pain in any other body part?
-        type: YESNO_CHOICE
-      - key: pain_today_other_location
-        question: Where else do you feel pain?
+      - key: pain_location_today
+        question: If you experienced pain, where was the pain located?
         descritpion: Select all that apply
         type: MULTIPLE_CHOICE
         options:
+          - value: lower_belly
+            text: Lower belly
+          - value: lower_back
+            text: Lower back
+          - value: upper_thighs
+            text: Upper thighs
           - value: stomach
             text: Stomach / upper abdomen
           - value: upper_back
             text: Upper back, neck, or shoulders
-          - value: upper_legs
-            text: Upper legs
           - value: lower_legs
             text: Lower legs
           - value: arms
@@ -142,144 +82,9 @@ sections:
           - value: other
             text: Other
             inlineQuestion:
-              key: pain_today_other_description
+              key: pain_location_today_other_description
               question: "Please specify:"
               type: TEXTAREA
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other
-                operator: =
-                value: yes
-      - key: pain_today_stomach_intensity
-        question: Rate today's stomach pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other_location
-                operator: INCLUDES
-                value: stomach
-      - key: pain_today_upper_back_intensity
-        question: Rate today's upper back, neck, or shoulder pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other_location
-                operator: INCLUDES
-                value: upper_back
-      - key: pain_today_upper_legs_intensity
-        question: Rate today's upper leg pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other_location
-                operator: INCLUDES
-                value: upper_legs
-      - key: pain_today_lower_legs_intensity
-        question: Rate today's lower leg pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other_location
-                operator: INCLUDES
-                value: lower_legs
-      - key: pain_today_arms_intensity
-        question: Rate today's arm pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other_location
-                operator: INCLUDES
-                value: arms
-      - key: pain_today_head_intensity
-        question: Rate today's head pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other_location
-                operator: INCLUDES
-                value: head
-      - key: pain_today_other_intensity
-        question: Rate today's other pain
-        description: 0 means no pain and 10 means the worst pain imaginable.
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pain_5
-                question: pain_today_other_location
-                operator: INCLUDES
-                value: other
-  - type: survey
-    key: symptoms
-    title: Today's Symptoms
-    description: ""
-    questions:
-      - key: symptoms_today
-        question: Did you have any of the following today?
-        type: MULTIPLE_CHOICE
-        description: Select all that apply
-        options:
-          - value: diarrhea
-            text: Diarrhea
-          - value: nausea
-            text: Nausea/Vomiting
-          - value: constipation
-            text: Constipation
-          - value: fatigue
-            text: Fatigue
-          - value: dizziness
-            text: Dizziness
-          - value: headache
-            text: Headache
   - type: survey
     key: medications
     title: Today's Medications
@@ -347,16 +152,16 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: mood_today_happy_vas
-        question: Your happiness
+      - key: vas
+        question: Your mood (happiness)
         type: V_SCALE
         hideHeader: true
         min: 0
         max: 100
-        category: happiness
-        ask: Please think about your happiness today.
+        category: mood (happiness)
+        ask: Please think about your overall mood today.
         scaleExplanation: 0 is unhappy, 100 is happy.
-        prompt: Rate your mood.
+        prompt: Rate your mood (happiness).
         minLabel: Unhappy
         maxLabel: Happy
   - type: survey
@@ -364,41 +169,41 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: mood_today_calm_vas
-        question: Your calmness
+      - key: vas
+        question: Your mood (calmness)
         type: V_SCALE
         hideHeader: true
         min: 0
         max: 100
-        category: calmness
-        ask: Please think about your calmness today.
+        category: mood (calmness)
+        ask: Please think about your overall mood today.
         scaleExplanation: 0 is excited, 100 is calm.
-        prompt: Rate your mood.
+        prompt: Rate your mood (calmness).
         minLabel: Excited
         maxLabel: Calm
   - type: survey
-    key: mood_3
+    key: stress
     title: ""
     description: ""
     questions:
-      - key: stress_today_vas
+      - key: vas
         question: Your stress
         type: V_SCALE
         hideHeader: true
         min: 0
         max: 100
         category: stress
-        ask: Please think about your overall stress level today.
-        scaleExplanation: 0 is no stress, 100 is excited.
-        prompt: Rate your mood.
+        ask: Please think about your overall stress today.
+        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
+        prompt: Rate your stress.
         minLabel: No stress
         maxLabel: The worst stress imaginable
   - type: survey
-    key: mood_4
+    key: productivity
     title: ""
     description: ""
     questions:
-      - key: productivity_today_vas
+      - key: vas
         question: Your productivity
         type: V_SCALE
         hideHeader: true
@@ -407,42 +212,9 @@ sections:
         category: stress
         ask: Please think about your overall work/school productivity today.
         scaleExplanation: 0 is not productive, 100 is highly productive.
-        prompt: Rate your mood.
+        prompt: Rate your productivity.
         minLabel: Not productive
         maxLabel: Highly productive
-  - type: survey
-    key: mood
-    title: Today's Mood
-    description: ""
-    questions:
-      - key: mood_today_happy
-        question: How would you rate your overall mood today (happiness)?
-        description: 0 means unhappy, 5 means happy
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-      - key: mood_today_calm
-        question: How would you rate your overall mood today (calmness)?
-        description: 0 means calm, 5 means excited
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-      - key: stress_today
-        question: How would you rate your overall stress level today?
-        description: 0 means no stress, 5 means worst stress imaginable
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
-      - key: productivity_today
-        question: How would you rate your overall work/school productivity today?
-        description: 0 means not productive, 5 means highly productive
-        type: SLIDER
-        min: 0
-        max: 10
-        step: 1
   - type: survey
     key: activity
     title: Today's Activity
@@ -475,5 +247,41 @@ sections:
             condition:
               - section: activity
                 question: skip_today_other
+                operator: =
+                value: yes
+  - type: survey
+    key: symptoms
+    title: Today's Symptoms
+    description: ""
+    questions:
+      - key: symptoms_today
+        question: Did you have any of the following today?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply
+        options:
+          - value: diarrhea
+            text: Diarrhea
+          - value: nausea
+            text: Nausea/Vomiting
+          - value: constipation
+            text: Constipation
+          - value: fatigue
+            text: Fatigue
+          - value: dizziness
+            text: Dizziness
+          - value: headache
+            text: Headache
+      - key: illness_today
+        question: Did you get sick today (e.g. Flu)?
+        type: YESNO_CHOICE
+      - key: illness_today_description
+        question: Please describe your illness
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: symptoms
+                question: illness_today
                 operator: =
                 value: yes
