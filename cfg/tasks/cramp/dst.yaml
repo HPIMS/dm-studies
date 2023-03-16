@@ -2,7 +2,7 @@ key: dst
 scorable: false
 schedule:
   type: PERIOD
-  period: ALWAYS
+  period: ONCE
 timeRequirements:
   time: 15
   timeUnits: minutes

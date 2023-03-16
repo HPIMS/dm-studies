@@ -10,7 +10,7 @@ score:
 metadata: {}
 schedule:
   type: PERIOD
-  period: ALWAYS
+  period: ONCE
 timeRequirements:
   time: 5
   timeUnits: minutes
