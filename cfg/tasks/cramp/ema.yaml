@@ -11,8 +11,8 @@ schedule:
     - - "1800"
       - "2359"
 timeRequirements:
-  time: 2
-  timeUnits: minutes
+  time: 30
+  timeUnits: seconds
 name: Pain, Stress, Mood
 sections:
   - type: survey

@@ -32,20 +32,6 @@ sections:
       - key: weight
         question: What is your weight?
         type: WEIGHT
-      - key: medication_current
-        question: Do you currently take medications?
-        type: YESNO_CHOICE
-      - key: medication_text
-        question: Which medications are you currently taking?
-        type: TEXTAREA
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: general
-                question: medication_current
-                operator: =
-                value: yes
   - type: survey
     key: substance
     title: ""
@@ -106,6 +92,25 @@ sections:
       - key: coffee_count
         question: On average, how many cups of coffee do you drink per day?
         type: NUMERIC
+  - type: survey
+    key: medications
+    title: ""
+    description: ""
+    questions:
+      - key: medication_current
+        question: Do you currently take medications?
+        type: YESNO_CHOICE
+      - key: medication_text
+        question: Which medications are you currently taking?
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: medications
+                question: medication_current
+                operator: =
+                value: yes
   - type: survey
     key: pain
     title: ""
@@ -484,6 +489,11 @@ sections:
                 question: diagnosis_chronic
                 operator: =
                 value: yes
+  - type: survey
+    key: surgery
+    title: ""
+    description: ""
+    questions:
       - key: surgery
         question: Have you had any surgeries?
         description: Select all that apply
@@ -519,6 +529,11 @@ sections:
             text: Removal of an ovary
           - value: surgery_15
             text: Removal or ligation of fallopian tubes
+  - type: survey
+    key: cancer
+    title: ""
+    description: ""
+    questions:
       - key: cancer
         question: Have you ever been diagnosed with cancer?
         type: YESNO_CHOICE
@@ -557,7 +572,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: diagnosis
+              - section: diagnosis_cancer
                 question: cancer
                 operator: =
                 value: yes
@@ -568,7 +583,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: diagnosis
+              - section: diagnosis_cancer
                 question: cancer
                 operator: =
                 value: yes
@@ -579,7 +594,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: diagnosis
+              - section: diagnosis_cancer
                 question: cancer
                 operator: =
                 value: yes
@@ -590,7 +605,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: diagnosis
+              - section: diagnosis_cancer
                 question: cancer
                 operator: =
                 value: yes

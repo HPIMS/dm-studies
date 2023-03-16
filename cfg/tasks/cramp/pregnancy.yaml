@@ -22,7 +22,7 @@ intro:
     You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
 sections:
   - type: survey
-    key: "0"
+    key: pregnancy
     title: ""
     description: ""
     questions:
@@ -36,7 +36,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: pregnancy
                 question: pregnancy
                 operator: =
                 value: yes
@@ -48,7 +48,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: pregnancy
                 question: pregnancy
                 operator: =
                 value: yes
@@ -60,7 +60,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: pregnancy
                 question: pregnancy
                 operator: =
                 value: yes
@@ -71,7 +71,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: pregnancy
                 question: pregnancy
                 operator: =
                 value: yes
@@ -82,7 +82,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: pregnancy
                 question: pregnancy
                 operator: =
                 value: yes
@@ -93,7 +93,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: pregnancy
                 question: pregnancy
                 operator: =
                 value: yes
@@ -132,10 +132,29 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: pregnancy
                 question: preg_complication
                 operator: =
                 value: yes
+      - key: preg_seeking
+        question: Are you currently seeking a pregnancy?
+        type: YESNO_CHOICE
+      - key: preg_seeking_month
+        question: How many months have you been seeking the pregnancy?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pregnancy
+                question: preg_seeking
+                operator: =
+                value: yes
+  - type: survey
+    key: sexuality
+    title: ""
+    description: ""
+    questions:
       - key: sexual_active
         question: Are you currently sexually active?
         type: YESNO_CHOICE
@@ -155,20 +174,11 @@ sections:
             text: Straight/heterosexual
           - value: other
             text: Another sexual orientation
-      - key: preg_seeking
-        question: Are you currently seeking a pregnancy?
-        type: YESNO_CHOICE
-      - key: preg_seeking_month
-        question: How many months have you been seeking the pregnancy?
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: "0"
-                question: preg_seeking
-                operator: =
-                value: yes
+  - type: survey
+    key: hormones
+    title: ""
+    description: ""
+    questions:
       - key: hormone_reason
         question: Have you ever taken hormones for any of the following reasons?
         descritpion: Select all that apply
@@ -220,7 +230,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_1
@@ -240,7 +250,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_1
@@ -251,7 +261,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_2
@@ -271,7 +281,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_2
@@ -283,7 +293,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_3
@@ -303,7 +313,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_3
@@ -314,7 +324,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_4
@@ -334,7 +344,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_4
@@ -345,7 +355,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_5
@@ -365,7 +375,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_5
@@ -376,7 +386,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_6
@@ -395,7 +405,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: "0"
+              - section: hormones
                 question: hormone_meds
                 operator: INCLUDES
                 value: hormone_6
