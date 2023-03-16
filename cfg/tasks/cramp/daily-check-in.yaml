@@ -46,10 +46,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 1000
         category: Lower belly pain
         ask: Please think about your lower belly pain today.
-        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
@@ -63,10 +63,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: Lower back pain
         ask: Please think about your lower back pain today.
-        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
@@ -80,10 +80,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: upper thigh pain
         ask: Please think about your upper thigh pain today.
-        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
@@ -352,10 +352,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: happiness
         ask: Please think about your happiness today.
-        scaleExplanation: 0 is unhappy, 10 is happy.
+        scaleExplanation: 0 is unhappy, 100 is happy.
         prompt: Rate your mood.
         minLabel: Unhappy
         maxLabel: Happy
@@ -369,10 +369,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: calmness
         ask: Please think about your calmness today.
-        scaleExplanation: 0 is excited, 10 is calm.
+        scaleExplanation: 0 is excited, 100 is calm.
         prompt: Rate your mood.
         minLabel: Excited
         maxLabel: Calm
@@ -386,10 +386,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: stress
         ask: Please think about your overall stress level today.
-        scaleExplanation: 0 is no stress, 10 is excited.
+        scaleExplanation: 0 is no stress, 100 is excited.
         prompt: Rate your mood.
         minLabel: No stress
         maxLabel: The worst stress imaginable
@@ -403,10 +403,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: stress
         ask: Please think about your overall work/school productivity today.
-        scaleExplanation: 0 is not productive, 10 is highly productive.
+        scaleExplanation: 0 is not productive, 100 is highly productive.
         prompt: Rate your mood.
         minLabel: Not productive
         maxLabel: Highly productive

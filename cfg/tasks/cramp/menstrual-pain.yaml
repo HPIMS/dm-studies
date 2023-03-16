@@ -138,10 +138,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: menstrual pain
         ask: Please think about the most painful menstruation you have experienced.
-        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
@@ -177,10 +177,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: menstrual pain
         ask: Please think about the least painful menstruation you have experienced.
-        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
@@ -216,10 +216,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: menstrual pain
         ask: Please think about your usual menstural pain.
-        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
@@ -255,10 +255,10 @@ sections:
         type: V_SCALE
         hideHeader: true
         min: 0
-        max: 10
+        max: 100
         category: menstrual pain
         ask: Please think about your most recent menstrual pain.
-        scaleExplanation: 0 is no pain, 10 is worst pain you can imagine.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
