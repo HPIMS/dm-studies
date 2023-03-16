@@ -3,10 +3,9 @@ scorable: false
 schedule:
   type: PERIOD
   period: ONCE
-# TODO: REAL TIME REQUIREMENTS!
 timeRequirements:
   time: 5
-  timeUnits: seconds
+  timeUnits: minutes
 name: Welcome to CRAMP
 outro: 
   title: Thank You!

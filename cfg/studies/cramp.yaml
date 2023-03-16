@@ -34,253 +34,151 @@ timeResponsibility:
 
 tasks:
   - key: intro
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 0
 
   - key: demographics
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 10
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::intro
-    #         operator: ">"
-    #         score: 0
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
   - key: general-health
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 20
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::intro
-    #         operator: ">"
-    #         score: 0
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
   - key: menstrual-health
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 30
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::intro
-    #         operator: ">"
-    #         score: 0
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
   - key: psst
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 40
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::intro
-    #         operator: ">"
-    #         score: 0
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
   - key: pregnancy
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 50
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::intro
-    #         operator: ">"
-    #         score: 0
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
   - key: menstrual-pain
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 60
+    # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
     #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::intro
-    #         operator: ">"
-    #         score: 0
-  # TODO: USE CALCULATION TRIGGER!
-  #   triggers:
-  #   - action: SHOW
-  #     condition:
-  #       - type: CALCULATION
-  #         fn: questionnaire-response-value
-  #         args:
-  #           questionnaire: cramp::menstrual-health
-  #           section: health
-  #           question: menses_pain
-  #           operator: =
-  #           value: yes
+    #       - type: CALCULATION
+    #         fn: questionnaire-response-value
+    #         args:
+    #           questionnaire: cramp::menstrual-health
+    #           section: health
+    #           question: menses_pain
+    #           operator: =
+    #           value: yes
 
   - key: rsa
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
     rank: 70
-
-  - key: social
-    # TODO: REMOVE ME!
     schedule:
       type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 80
-    # TODO: END
-    # schedule:
-    #   type: PERIOD
-    #   period: ONCE
-    #   delay: 2
-    #   delayUnits: DAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: COMPLETED
-    #           resource: cramp::demographics
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::general-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::menstrual-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::pregnancy
-    #           operator: ">"
-    #           score: 0
+      period: ONCE
+      delay: 1
+      delayUnits: DAYS
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
   - key: bfi-10
-    # TODO: REMOVE ME!
+    rank: 80
     schedule:
       type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 80
-    # schedule:
-    #   type: PERIOD
-    #   period: ONCE
-    #   delay: 3
-    #   delayUnits: DAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: COMPLETED
-    #           resource: cramp::demographics
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::general-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: cramp::menstrual-health
-    #           operator: ">"
-    #           score: 0
-    #         - type: COMPLETED
-    #           resource: library::psst
-    #           operator: ">"
-    #           score: 0    
-    #         - type: COMPLETED
-    #           resource: cramp::pregnancy
-    #           operator: ">"
-    #           score: 0
+      period: ONCE
+      delay: 2
+      delayUnits: DAYS
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
+
+  - key: social
+    rank: 90
+    schedule:
+      type: PERIOD
+      period: ONCE
+      delay: 3
+      delayUnits: DAYS
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
 
   - key: pre-dst
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 90
+    rank: 100
+    # TODO: CALCULATION TRIGGER!
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         # Today in m + L - 14 : m + L - 7;
+    #         fn: cramp::ovulation-phase
+    #         args: {}
+
 
   - key: dst
-  # #   schedule:
-  # #     type: PERIOD
-  # #     period: ONCE
-  # #     delay: 1
-  # #     delayUnits: DAYS
-  # #   triggers:
-  # #     - action: SHOW
-  # #       condition:
-  # #         type: AND
-  # #         tasks:
-  # #           - type: CALCULATION
-  # #             Today in m + L - 14 : m + L - 7;
-  # #             fn: cramp::ovulation-phase
-  # #             args: {}
-  # #           - type: COMPLETED
-  # #             resource: cramp::pss-10-pre
-  # #             operator: ">"
-  # #             score: 0
-  # #           - type: COMPLETED
-  # #             resource: cramp::dass-21-pre
-  # #             operator: ">"
-  # #             score: 0
-  # #           - type: COMPLETED
-  # #             resource: cramp::sss-8-pre
-  # #             operator: ">"
-  # #             score: 0
-
-  - key: post-menstruation
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-  #   # triggers:
-  #   #   - action: SHOW
-  #   #     condition:
-  #   #       - type: CALCULATION
-  #   #         fn: bleeding-done // TODO: REAL NAME
-  #   #         args: {}
-
+    rank: 110
+    # TODO: CALCULATION TRIGGER!
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       type: AND
+    #       tasks:
+    #         - type: CALCULATION
+    #           # Today in m + L - 14 : m + L - 7;
+    #           fn: cramp::ovulation-phase
+    #           args: {}
+    #         - type: COMPLETED
+    #           resource: pre-dst
+    #           operator: ">"
+    #           score: 0
 
   - key: daily-check-in
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 160
+    rank: 120
+    # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -288,19 +186,15 @@ tasks:
     #         resource: cramp::dst
     #         operator: ">"
     #         score: 0
-      # - action: HIDE
-      #   condition:
-      #     - type: CALCULATION
-      #       fn: cramp::cycle-complete
-      #       args: {}
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
 
   - key: ema
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 170
+    rank: 130
+    # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -308,22 +202,25 @@ tasks:
     #         resource: cramp::dst
     #         operator: ">"
     #         score: 0
-      # - action: HIDE
-      #   condition:
-      #     - type: CALCULATION
-      #       fn: cramp::cycle-complete
-      #       args: {}
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
+
+  - key: post-menstruation
+    rank: 140
+    # TODO: CALCULATION TRIGGER!
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::bleeing-complete
+    #         args: {}
 
   - key: final-check-in
-    # TODO: REMOVE ME!
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # TODO: END
-    rank: 220
-
-  - dona-facebook
-  - dona-whatsapp
+    rank: 150
+    # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -331,11 +228,42 @@ tasks:
     #         fn: cramp::cycle-complete
     #         args: {}
 
-  # # - key: dona
-  # #   rank: 230
-  # #   triggers:
-  # #     - action: SHOW
-  # #       condition:
-  # #         - type: CALCULATION
-  # #           fn: cramp::cycle-complete
-  # #           args: {}
+  - key: dona-facebook
+    rank: 160
+    # TODO: CALCULATION TRIGGER!
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       type: AND
+    #       tasks:
+    #         - type: CALCULATION
+    #           fn: cramp::cycle-complete
+    #           args: {}
+    #         - type: CALCULATION
+    #           fn: questionnaire-response-value
+    #           args:
+    #             questionnaire: cramp::demographics
+    #             section: sdh
+    #             question: fb_messenger
+    #             operator: =
+    #             value: yes
+
+  - key: dona-whatsapp
+    rank: 170
+    # TODO: CALCULATION TRIGGER!
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       type: AND
+    #       tasks:
+    #         - type: CALCULATION
+    #           fn: cramp::cycle-complete
+    #           args: {}
+    #         - type: CALCULATION
+    #           fn: questionnaire-response-value
+    #           args:
+    #             questionnaire: cramp::demographics
+    #             section: sdh
+    #             question: whatsapp
+    #             operator: =
+    #             value: yes
