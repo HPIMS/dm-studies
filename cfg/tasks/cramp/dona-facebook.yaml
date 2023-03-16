@@ -1,0 +1,76 @@
+key: dona-facebook
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Anonymized Facebook Messenger Data Donation
+intro:
+  title: Intro
+  description: >-
+    In this task we will ask you to share with us anonymized data regarding your social interactions on Facebook Messenger (if you use it).
+
+
+    Why do we want this data?
+    Having tight social bonds and a network of people that support you through hard times can be a very big help. The secondary aim of the CRAMP Study is to investigate if social interactions mediate the relationship between resilience and menstrual cramps.
+    Using our data donation platform you will share Facebook Messenger data in a completely anonymous way. We will never be able to read the content of your messages or any information regarding whom you interacted with. However, we will be able to assess some measures of your social interactions, such as the amount of messages you sent per day. This will help us understand if social interactions can improve the wellbeing of menstruating women. 
+outro:
+  title: Thank you!
+  description: Thank you for sharing your data. 
+sections:
+  - type: document
+    key: anonymization
+    content: [
+      ["H4", ["Underline", "How does anonymization work?"]],
+      ["BodyLarge", "We will remove all content from your data and limit it to metadata (e.g. length and timestamp of message). Your name, as well as the names of other participants, will get replaced by random pseudonyms (eg. \"James\" → \"anonymous13\"). You may examine the anonymization of your data before uploading it to our servers."]
+    ]
+  - type: document
+    key: can_continue
+    backMode: close
+    content: [
+      ["H2", "Continue?"],
+      ["BodyLarge", [
+        ["Text", "Press "],
+        ["Bold", "NEXT"],
+        ["Text", " if you would like to continue with donating your anonymized Facebook Messenger data? On the next screen we will show you a video on how to extract and upload your data."]
+      ]],
+      ["BodyLarge", [
+        ["Text", "This task is completely optional. If you do not wish to proceed, press the "],
+        ["Bold", "X"],
+        ["Text", " in the upper left corner."]
+      ]]
+    ]
+  - type: video
+    key: setup_video
+    videoId: ehive_intro
+    autoplay: true
+    beginMuted: true
+    controls:
+      - PlayPause
+      - MuteUnmute
+      - Rewind
+      - Forward
+  - type: web
+    key: web_dona
+    pathname: /dona/data-donation?mode=facebook
+    required: true
+    headerShown: false
+    backMode: close
+    doneContent: [
+      ["H2", "Uploaded!"],
+      ["BodyLarge", [
+        ["Text", "Please press "],
+        ["Bold", "NEXT"],
+        ["Text", " to continue."]
+      ]]
+    ]
+    cancelContent: [
+      ["H2", "Upload Canceled!"],
+      ["BodyLarge", [
+        ["Text", "No Problem. Contribution is completely optional. Please press the "],
+        ["Bold", "X"],
+        ["Text", " in the upper left to close this task."]
+      ]]
+    ]
