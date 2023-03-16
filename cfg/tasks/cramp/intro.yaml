@@ -7,9 +7,6 @@ timeRequirements:
   time: 5
   timeUnits: minutes
 name: Welcome to CRAMP
-outro: 
-  title: Thank You!
-  description: Thank you for participating in the CRAMP study!
 sections:
   - type: video
     key: intro_video
@@ -32,5 +29,14 @@ sections:
       ]],
       ["BodyLarge", "We take your privacy seriously! We have obtained a Certificate of Confidentiality that keeps your data extra-secure. This ensures your data can never be shared with anyone outside our research team, including any law enforcement."]
     ]
-
-      
+  - type: document
+    key: outro
+    headerShown: false
+    content: [
+      ["H2", "Thank You!"],
+      ["BodyLarge", [
+        ["Text", "Thank you for participating in the "],
+        ["Bold", "CRAMP: Characterizing Resilience and Menstrual Pain"],
+        ["Text", " study! Your contributions to research are greatly valued."]
+      ]]
+    ]
