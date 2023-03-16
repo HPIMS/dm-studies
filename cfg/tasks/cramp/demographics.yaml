@@ -227,3 +227,11 @@ sections:
             text: Separated or divorced
           - value: widowed
             text: Widowed
+      - key: fb_messenger
+        question: Do you regularly use Facebook Messenger?
+        description: Why do we ask? At the conclusion of this study you will have the OPTION to upload ANONYMIZED data regarding your social interactions on Facebook Messenger. 
+        type: YESNO_CHOICE
+      - key: whatsapp
+        question: Do you regularly use WhatsApp?
+        description: Why do we ask? At the conclusion of this study you will have the OPTION to upload ANONYMIZED data regarding your social interactions on WhatsApp. 
+        type: YESNO_CHOICE
