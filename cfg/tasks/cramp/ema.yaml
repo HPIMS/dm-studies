@@ -64,7 +64,7 @@ sections:
         min: 0
         max: 100
         category: mood (happiness)
-        ask: Please think about your mood right now.
+        ask: Please think about your mood (happiness) right now.
         scaleExplanation: 0 is unhappy, 100 is happy.
         prompt: Rate your mood (happiness).
         minLabel: Unhappy
@@ -81,7 +81,7 @@ sections:
         min: 0
         max: 100
         category: mood (calmness)
-        ask: Please think about your mood right now.
+        ask: Please think about your mood (calmness) right now.
         scaleExplanation: 0 is excited, 100 is calm.
         prompt: Rate your mood (calmness).
         minLabel: Excited
