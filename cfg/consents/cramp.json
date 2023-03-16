@@ -206,19 +206,19 @@
           "prompt": "The main purpose of this study is to",
           "options": [
             {
-              "text": "To understand if stress resilience and social interaction affects symptoms of menstruation related pain",
+              "text": "Provide you with genetic information from the data you share",
+              "isCorrect": false
+            },
+            {
+              "text": "Understand if stress resilience and social interaction affects symptoms of menstruation related pain",
               "isCorrect": true
             },
             {
-              "text": "To provide you with genetic information from the information you provide",
+              "text": "Provide your doctor with medical information obtained from you through the app",
               "isCorrect": false
             },
             {
-              "text": "To provide your doctor with medical information obtained from all the information you provide us through the app",
-              "isCorrect": false
-            },
-            {
-              "text": "To provide your health insurer with medical information obtained from your data and family/medical history questionnaires",
+              "text": "Provide your health insurer with medical information obtained from your data and family/medical history questionnaires",
               "isCorrect": false
             }
           ]
@@ -283,19 +283,19 @@
           "prompt": "Regarding the potential benefits of this study, mark the right statement",
           "options": [
             {
-              "text": "While we don't expect any direct benefits for you or others in participating in this study, the data generated from this study will be used to support development of interventions to improve symptoms in patients with dysmenorrhea (menstruation related pain)",
+              "text": "While we don’t expect any direct benefits to you or others from this study , the data generated will be used to support development of interventions to improve symptoms in patients with dysmenorrhea (menstruation related pain).",
               "isCorrect": true
             },
             {
-              "text": "We expect a very high benefit for you in participating in this study",
+              "text": "We expect significant benefits to you from participating in this study.",
               "isCorrect": false
             },
             {
-              "text": "We expect a very high benefit for others in participating in this study",
+              "text": "We expect significant benefits to others from your study participation.",
               "isCorrect": false
             },
             {
-              "text": "No one will ever benefit from this study",
+              "text": "No one will ever benefit from this study.",
               "isCorrect": false
             }
           ]
@@ -355,7 +355,7 @@
           "short": [
             [
               "BodyLarge",
-              "Some information from the analysis of your coded samples and your coded medical information like your age, sex, ethnic background, diagnosis and disease history, may be entered into one or more scientific databases available to other researchers inside and outside of Mount SInai Health System. Your identifiable information (e.g. name, phone number, medical record number) will never be added to a scientific database without your approval."
+              "Some information from the analysis of your coded samples and your coded medical information like your age, sex, ethnic background, diagnosis and disease history, may be entered into one or more scientific databases available to other researchers inside and outside of Mount Sinai Health System. Your identifiable information (e.g. name, phone number, medical record number) will never be added to a scientific database without your approval."
             ]
           ]
         },
@@ -423,7 +423,7 @@
               "isCorrect": false
             },
             {
-              "text": "The results of this study will include any information that would let others know who you are",
+              "text": "The results of this study will include information that would let others know who you are",
               "isCorrect": false
             },
             {
@@ -440,7 +440,7 @@
               "isCorrect": true
             },
             {
-              "text": "If you withdraw your consent and discontinue participation you will have to pay a small penalty",
+              "text": "If you withdraw your consent and discontinue participation, you will have to pay a small penalty",
               "isCorrect": false
             },
             {
@@ -465,7 +465,7 @@
               "isCorrect": true
             },
             {
-              "text": "Your data is completely anonymous, and researchers cannot link the sample back to you",
+              "text": "Your data is completely anonymous, and researchers cannot link the data back to you",
               "isCorrect": false
             },
             {
