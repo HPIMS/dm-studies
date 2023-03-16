@@ -11,62 +11,78 @@ schedule:
     - - "1800"
       - "2359"
 timeRequirements:
-  time: 30
-  timeUnits: seconds
+  time: 1
+  timeUnits: minute
 name: Pain, Stress, Mood
+intro:
+  title: Pain, Stress, Mood
+  description: Please think about the last 10 minutes and complete the following survey.
 sections:
   - type: survey
     key: pain
     title: ""
-    description: "Please think about the last 10 minutes:"
+    description: ""
     questions:
-      - key: pain_intensity
-        question: "Rate your current pain intensity:"
-        type: SINGLE_CHOICE
-        options:
-          - value: none
-            text: No pain
-          - value: mild
-            text: Mild menstrual pain
-          - value: moderate
-            text: Moderate menstrual pain
-          - value: severe
-            text: Severe menstrual pain
-          - value: other
-            text: Other non-menstrual pain
-      - key: stress_level
-        question: "Rate your current stress level:"
-        type: SINGLE_CHOICE
-        options:
-          - value: none
-            text: No stress
-          - value: mild
-            text: Mild stress
-          - value: moderate
-            text: Moderate stress
-          - value: severe
-            text: Severe stress
-      - key: mood_calm
-        question: You currently feel
-        type: SINGLE_CHOICE
-        options:
-          - value: calm
-            text: Calm
-          - value: mostly_calm
-            text: More calm then excited
-          - value: mostly_excited
-            text: More excited then calm
-          - value: excited
-            text: Excited
-      - key: mood_happy
-        question: You currently feel
-        type: SINGLE_CHOICE
-        options:
-          - value: calm
-            text: Calm
-          - value: mostly_calm
-            text: More calm then excited
-          - value: mostly_excited
-            text: More excited then calm
-          - value: excited
-            text: Excited
+      - key: vas
+        question: Your pain intensity
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: pain intensity
+        ask: Please think about your pain intensity right now.
+        scaleExplanation: 0 is no pain, 100 is the worst pain imaginable.
+        prompt: Rate your pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain imaginable
+  - type: survey
+    key: stress
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your stress
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: stress
+        ask: Please think about your stress right now.
+        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
+        prompt: Rate your stress.
+        minLabel: No stress
+        maxLabel: The worst stress imaginable
+  - type: survey
+    key: mood_1
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (happiness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (happiness)
+        ask: Please think about your mood right now.
+        scaleExplanation: 0 is unhappy, 100 is happy.
+        prompt: Rate your mood (happiness).
+        minLabel: Unhappy
+        maxLabel: Happy
+  - type: survey
+    key: mood_2
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (calmness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (calmness)
+        ask: Please think about your mood right now.
+        scaleExplanation: 0 is excited, 100 is calm.
+        prompt: Rate your mood (calmness).
+        minLabel: Excited
+        maxLabel: Calm
