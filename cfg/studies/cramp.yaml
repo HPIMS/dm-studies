@@ -88,18 +88,17 @@ tasks:
 
   - key: menstrual-pain
     rank: 60
-    # TODO: CALCULATION TRIGGER!
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: cramp::menstrual-health
-    #           section: health
-    #           question: menses_pain
-    #           operator: =
-    #           value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: cramp::menstrual-health
+              section: health
+              question: menses_pain
+              operator: =
+              value: yes
 
   - key: rsa
     rank: 70
