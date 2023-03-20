@@ -148,32 +148,30 @@ tasks:
 
   - key: pre-dst
     rank: 100
-    # TODO: CALCULATION TRIGGER!
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         # Today in m + L - 14 : m + L - 7;
-    #         fn: cramp::ovulation-phase
-    #         args: {}
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            # Today in m + L - 14 : m + L - 7;
+            fn: cramp::ovulation-phase
+            args: {}
 
 
   - key: dst
     rank: 110
-    # TODO: CALCULATION TRIGGER!
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: CALCULATION
-    #           # Today in m + L - 14 : m + L - 7;
-    #           fn: cramp::ovulation-phase
-    #           args: {}
-    #         - type: COMPLETED
-    #           resource: pre-dst
-    #           operator: ">"
-    #           score: 0
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: CALCULATION
+              # Today in m + L - 14 : m + L - 7;
+              fn: cramp::ovulation-phase
+              args: {}
+            - type: COMPLETED
+              resource: pre-dst
+              operator: ">"
+              score: 0
 
   - key: daily-check-in
     rank: 120
