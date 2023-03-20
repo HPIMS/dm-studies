@@ -1,0 +1,9 @@
+key: ema-evening
+scorable: false
+schedule:
+  type: PERIOD
+  period: DAILY
+  timeOfDay:
+    - - "1800"
+      - "2359"
+_extends: ema 

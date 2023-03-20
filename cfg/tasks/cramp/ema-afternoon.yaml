@@ -1,0 +1,9 @@
+key: ema-afternoon
+scorable: false
+schedule:
+  type: PERIOD
+  period: DAILY
+  timeOfDay:
+    - - "1200"
+      - "1759"
+_extends: ema 

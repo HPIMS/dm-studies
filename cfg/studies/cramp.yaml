@@ -191,7 +191,7 @@ tasks:
     #         fn: cramp::cycle-complete
     #         args: {}
 
-  - key: ema
+  - key: ema-morning
     rank: 130
     # TODO: CALCULATION TRIGGER!
     # triggers:
@@ -207,8 +207,40 @@ tasks:
     #         fn: cramp::cycle-complete
     #         args: {}
 
-  - key: post-menstruation
+  - key: ema-afternoon
     rank: 140
+    # TODO: CALCULATION TRIGGER!
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::dst
+    #         operator: ">"
+    #         score: 0
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
+
+  - key: ema-evening
+    rank: 150
+    # TODO: CALCULATION TRIGGER!
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::dst
+    #         operator: ">"
+    #         score: 0
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
+
+  - key: post-menstruation
+    rank: 160
     # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
@@ -218,7 +250,7 @@ tasks:
     #         args: {}
 
   - key: final-check-in
-    rank: 150
+    rank: 170
     # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
@@ -228,7 +260,7 @@ tasks:
     #         args: {}
 
   - key: dona-facebook
-    rank: 160
+    rank: 180
     # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
@@ -248,7 +280,7 @@ tasks:
     #             value: yes
 
   - key: dona-whatsapp
-    rank: 170
+    rank: 190
     # TODO: CALCULATION TRIGGER!
     # triggers:
     #   - action: SHOW
