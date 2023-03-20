@@ -13,8 +13,8 @@ active:
       - 1de1c55f06a49cbdd15da85184302fb5
       - 9
     cramp:
-      - beb71a8d62cf1db95a793e0501422447
-      - 89
+      - ec55ec8db01f86843af7f94ee495065d
+      - 90
     digi-ibd-001:
       - 52b35465a4221aefe010ee6475dfb2be
       - 24
@@ -64,9 +64,15 @@ active:
     cramp::dst:
       - f4488a3602712176d8069f76485c3469
       - 17
-    cramp::ema:
-      - 6945218b7aad53d493c8b2673a8d2170
-      - 10
+    cramp::ema-afternoon:
+      - 24229d4b7ec9176cc504dadff79281ff
+      - 1
+    cramp::ema-evening:
+      - fc89869bb4a9c07e35a1bc818c01556e
+      - 1
+    cramp::ema-morning:
+      - c6ae2507b14331b6df0587230eafda8b
+      - 1
     cramp::final-check-in:
       - 2a7ef81388dcccb7fd07871d06766e13
       - 2
@@ -307,6 +313,9 @@ inactive:
       - 5e3ff12972361771e83d4d7be2845b1a
       - 19
   tasks:
+    cramp::ema:
+      - 6945218b7aad53d493c8b2673a8d2170
+      - 10
     hpi-decode-bp::bp-measurement:
       - 45359e7a6f7b1d7c35a0c05f66f131b0
       - 6
