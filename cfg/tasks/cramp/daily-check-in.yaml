@@ -16,6 +16,7 @@ sections:
       - key: menses_today
         question: Did you have menstrual bleeding today?
         type: YESNO_CHOICE
+        required: true
       - key: menses_today_flow
         question: How would you rate your menstrual flow?
         type: SINGLE_CHOICE
