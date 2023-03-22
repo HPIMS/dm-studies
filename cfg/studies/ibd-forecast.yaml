@@ -36,6 +36,9 @@ timeResponsibility:
   timePeriod: daily
 
 tasks:
+  - key: bmi_correction
+    rank: -1
+
   - key: baseline_demographics
     rank: 1
   - key: baseline_health_crohn
