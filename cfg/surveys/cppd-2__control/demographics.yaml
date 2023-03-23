@@ -167,7 +167,7 @@ sections:
                 operator: ">"
                 value: 1
       - key: employment
-        question: What is your emplyment status?
+        question: What is your employment status?
         type: SINGLE_CHOICE
         options:
           - value: employed
