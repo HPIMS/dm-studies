@@ -35,256 +35,336 @@ timeResponsibility:
 tasks:
   - key: intro
     rank: 0
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
 
   - key: demographics
     rank: 10
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: general-health
     rank: 20
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: menstrual-health
     rank: 30
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: psst
     rank: 40
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: pregnancy
     rank: 50
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: menstrual-pain
     rank: 60
-    triggers:
-      - action: SHOW
-        condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: cramp::menstrual-health
-              section: health
-              question: menses_pain
-              operator: =
-              value: yes
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: questionnaire-response-value
+    #         args:
+    #           questionnaire: cramp::menstrual-health
+    #           section: health
+    #           question: menses_pain
+    #           operator: =
+    #           value: yes
 
   - key: rsa
     rank: 70
+    # TODO: REMOVE
     schedule:
       type: PERIOD
-      period: ONCE
-      delay: 1
-      delayUnits: DAYS
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+      period: ALWAYS
+    # schedule:
+    #   type: PERIOD
+    #   period: ONCE
+    #   delay: 1
+    #   delayUnits: DAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: bfi-10
     rank: 80
+    # TODO: REMOVE
     schedule:
       type: PERIOD
-      period: ONCE
-      delay: 2
-      delayUnits: DAYS
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+      period: ALWAYS
+    # schedule:
+    #   type: PERIOD
+    #   period: ONCE
+    #   delay: 2
+    #   delayUnits: DAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: social
     rank: 90
+    # TODO: REMOVE
     schedule:
       type: PERIOD
-      period: ONCE
-      delay: 3
-      delayUnits: DAYS
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::intro
-            operator: ">"
-            score: 0
+      period: ALWAYS
+    # schedule:
+    #   type: PERIOD
+    #   period: ONCE
+    #   delay: 3
+    #   delayUnits: DAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
 
   - key: pre-dst
     rank: 100
-    triggers:
-      - action: SHOW
-        condition:
-          - type: CALCULATION
-            # Today in m + L - 14 : m + L - 7;
-            fn: cramp::ovulation-phase
-            args: {}
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         # Today in m + L - 14 : m + L - 7;
+    #         fn: cramp::ovulation-phase
+    #         args: {}
 
 
   - key: dst
     rank: 110
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: CALCULATION
-              # Today in m + L - 14 : m + L - 7;
-              fn: cramp::ovulation-phase
-              args: {}
-            - type: COMPLETED
-              resource: pre-dst
-              operator: ">"
-              score: 0
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       type: AND
+    #       tasks:
+    #         - type: CALCULATION
+    #           # Today in m + L - 14 : m + L - 7;
+    #           fn: cramp::ovulation-phase
+    #           args: {}
+    #         - type: COMPLETED
+    #           resource: pre-dst
+    #           operator: ">"
+    #           score: 0
 
   - key: daily-check-in
     rank: 120
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::dst
-            operator: ">"
-            score: 0
-      - action: HIDE
-        condition:
-          - type: CALCULATION
-            fn: cramp::cycle-complete
-            args: {}
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::dst
+    #         operator: ">"
+    #         score: 0
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
 
   - key: ema-morning
     rank: 130
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::dst
-            operator: ">"
-            score: 0
-      - action: HIDE
-        condition:
-          - type: CALCULATION
-            fn: cramp::cycle-complete
-            args: {}
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::dst
+    #         operator: ">"
+    #         score: 0
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
 
   - key: ema-afternoon
     rank: 140
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::dst
-            operator: ">"
-            score: 0
-      - action: HIDE
-        condition:
-          - type: CALCULATION
-            fn: cramp::cycle-complete
-            args: {}
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::dst
+    #         operator: ">"
+    #         score: 0
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
 
   - key: ema-evening
     rank: 150
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::dst
-            operator: ">"
-            score: 0
-      - action: HIDE
-        condition:
-          - type: CALCULATION
-            fn: cramp::cycle-complete
-            args: {}
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::dst
+    #         operator: ">"
+    #         score: 0
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
 
   - key: post-menstruation
     rank: 160
-    triggers:
-      - action: SHOW
-        condition:
-          - type: CALCULATION
-            fn: cramp::bleeing-complete
-            args: {}
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::bleeing-complete
+    #         args: {}
 
   - key: final-check-in
     rank: 170
-    triggers:
-      - action: SHOW
-        condition:
-          - type: CALCULATION
-            fn: cramp::cycle-complete
-            args: {}
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
 
   - key: dona-facebook
     rank: 180
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: CALCULATION
-              fn: cramp::cycle-complete
-              args: {}
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: cramp::demographics
-                section: sdh
-                question: fb_messenger
-                operator: =
-                value: yes
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       type: AND
+    #       tasks:
+    #         - type: CALCULATION
+    #           fn: cramp::cycle-complete
+    #           args: {}
+    #         - type: CALCULATION
+    #           fn: questionnaire-response-value
+    #           args:
+    #             questionnaire: cramp::demographics
+    #             section: sdh
+    #             question: fb_messenger
+    #             operator: =
+    #             value: yes
 
   - key: dona-whatsapp
     rank: 190
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: CALCULATION
-              fn: cramp::cycle-complete
-              args: {}
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: cramp::demographics
-                section: sdh
-                question: whatsapp
-                operator: =
-                value: yes
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       type: AND
+    #       tasks:
+    #         - type: CALCULATION
+    #           fn: cramp::cycle-complete
+    #           args: {}
+    #         - type: CALCULATION
+    #           fn: questionnaire-response-value
+    #           args:
+    #             questionnaire: cramp::demographics
+    #             section: sdh
+    #             question: whatsapp
+    #             operator: =
+    #             value: yes
