@@ -4,7 +4,7 @@ consentId: ehive-cramp
 active: true
 openEnrollment: true
 visibility: public
-minVersion: "2.4"
+minVersion: "2.5"
 
 irb: STUDY-22-01145
 pi: Erwin Bottinger MD
@@ -100,7 +100,7 @@ tasks:
               operator: =
               value: yes
 
-  - key: rsa
+  - key: strain
     rank: 70
     schedule:
       type: PERIOD
@@ -115,7 +115,7 @@ tasks:
             operator: ">"
             score: 0
 
-  - key: bfi-10
+  - key: rsa
     rank: 80
     schedule:
       type: PERIOD
@@ -130,7 +130,7 @@ tasks:
             operator: ">"
             score: 0
 
-  - key: social
+  - key: bfi-10
     rank: 90
     schedule:
       type: PERIOD
@@ -145,9 +145,23 @@ tasks:
             operator: ">"
             score: 0
 
+  - key: social
+    rank: 100
+    schedule:
+      type: PERIOD
+      period: ONCE
+      delay: 4
+      delayUnits: DAYS
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::intro
+            operator: ">"
+            score: 0
 
   - key: pre-dst
-    rank: 100
+    rank: 110
     triggers:
       - action: SHOW
         condition:
@@ -156,9 +170,13 @@ tasks:
             fn: cramp::ovulation-phase
             args: {}
 
-
   - key: dst
-    rank: 110
+    rank: 120
+    schedule:
+      type: PERIOD
+      period: ONCE
+      delay: 1
+      delayUnits: DAYS
     triggers:
       - action: SHOW
         condition:
@@ -174,21 +192,6 @@ tasks:
               score: 0
 
   - key: daily-check-in
-    rank: 120
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: cramp::dst
-            operator: ">"
-            score: 0
-      - action: HIDE
-        condition:
-          - type: CALCULATION
-            fn: cramp::cycle-complete
-            args: {}
-
-  - key: ema-morning
     rank: 130
     triggers:
       - action: SHOW
@@ -203,7 +206,7 @@ tasks:
             fn: cramp::cycle-complete
             args: {}
 
-  - key: ema-afternoon
+  - key: ema-morning
     rank: 140
     triggers:
       - action: SHOW
@@ -218,7 +221,7 @@ tasks:
             fn: cramp::cycle-complete
             args: {}
 
-  - key: ema-evening
+  - key: ema-afternoon
     rank: 150
     triggers:
       - action: SHOW
@@ -233,8 +236,23 @@ tasks:
             fn: cramp::cycle-complete
             args: {}
 
-  - key: post-menstruation
+  - key: ema-evening
     rank: 160
+    triggers:
+      - action: SHOW
+        condition:
+          - type: COMPLETED
+            resource: cramp::dst
+            operator: ">"
+            score: 0
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: cramp::cycle-complete
+            args: {}
+
+  - key: post-menstruation
+    rank: 170
     triggers:
       - action: SHOW
         condition:
@@ -243,7 +261,7 @@ tasks:
             args: {}
 
   - key: final-check-in
-    rank: 170
+    rank: 180
     triggers:
       - action: SHOW
         condition:
@@ -252,7 +270,7 @@ tasks:
             args: {}
 
   - key: dona-facebook
-    rank: 180
+    rank: 190
     triggers:
       - action: SHOW
         condition:
@@ -271,7 +289,7 @@ tasks:
                 value: yes
 
   - key: dona-whatsapp
-    rank: 190
+    rank: 200
     triggers:
       - action: SHOW
         condition:

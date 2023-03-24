@@ -9,14 +9,23 @@ timeRequirements:
 name: Resilience Test
 intro:
   title: Intro
-  description: >-
-    In this task we will ask you to perform a short resilience test.
-
-
-    Why should I perform this test?
-
-
-    The CRAMP study aims to characterize the relationship between resilience and menstrual pain. This brief cognitive test is a crucial part of our study, since these results will enable us to measure your resilience. 
+  description: [
+    [
+      "BodyLarge",
+      "In this task we will ask you to perform a short resilience test."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is it important to perform this resilience test?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "The CRAMP study aims to characterize the relationship between resilience and menstrual pain. This brief cognitive test is a crucial part of our study, since these results will enable us to measure your resilience."
+    ]
+  ]
 outro:
   title: Thank you!
   description: Thank you for completing the resilience test.
@@ -26,7 +35,7 @@ sections:
     content: [
       ["H3", ["Underline", "Test Procedure"]],
       ["BodyLarge", "You will perform a cognitive and verbal test consisting of two different tasks."],
-      ["BodyLarge", "We will use your front camera to record you. The recordings will be used to analyse your resilience."],
+      ["BodyLarge", "We will use your front camera to record you. The recordings will be used to analyze your resilience."],
       ["BodyLarge", "For this test, please make sure that you have at least 15 minutes where you will not be disturbed. Please make sure you are in front of a neutral background for video recording."],
       ["BodyLarge", "Before and after the test, we will ask a few questions."],
       ["BodyLarge", "If you feel uncomfortable or overstrained, you can cancel this test at any time by closing the app. "]
@@ -46,7 +55,7 @@ sections:
         ["Text", "The breathing task on you apple watch will ask you to inhale and exhale at specific times. Please, "],
         ["Bold", "DO NOT FOLLOW THE APPLE WATCH INSTRUCTIONS SINCE THIS WILL CAUSE THE RECORDING TO BE USELESS."]
       ]],
-      ["BodyLarge", "Before you begin, please follow the instructions in the following video to off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task."]
+      ["BodyLarge", "Before you begin, please follow the instructions in the following video to turn off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task."]
     ]
   - type: video
     key: setup_video
@@ -623,7 +632,7 @@ sections:
         ["BodyLarge", [
           ["Text", "The videos have "],
           ["Bold", "NOT"],
-          ["Text", " been analysed by any algorithm."]
+          ["Text", " been analyzed by any algorithm."]
         ]]
       ]]
     ]

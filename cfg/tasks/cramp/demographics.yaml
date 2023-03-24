@@ -8,17 +8,27 @@ timeRequirements:
   timeUnits: minutes
 intro:
   title: Demographics
-  description: >-
-    In this survey we ask you to answer some questions regarding your
-    ethnical/racial, social and economical background. 
-
-
-    Why is completing this survey important?
-
-    Health and disease is not only about biology. Social and economical factors can play a big role in your health. We want to account for this in our analyses and assess the impact of socioeconomical factors in the development of dysmenorrhea. 
-
-
-    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
+  description: [
+    [
+      "BodyLarge",
+      "In this survey we ask you to answer some questions regarding your ethnical/racial, social and economic background."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "Health and disease is not only about biology. Social and economic factors can play a big role in your health. We want to account for this in our analyses and assess the impact of socioeconomic factors in the development of dysmenorrhea."
+    ],
+    [
+      "BodyLarge",
+      "You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable."
+    ]
+  ]
 name: Demographics
 sections:
   - type: survey

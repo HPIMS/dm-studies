@@ -14,10 +14,26 @@ schedule:
 timeRequirements:
   time: 5
   timeUnits: minutes
-name: TITLE FOR THIS?
+name: Social Interactions
 intro:
-  title: INTRO TITLE
-  description: INTRO TEXT
+  title: Social Interactions
+  description: [
+    [
+      "BodyLarge",
+      "In this survey, we will ask you to answer a few questions regarding your social interactions."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "Having tight social bonds and a network of people that support you through hard times can be a very big help. The secondary aim of the CRAMP Study is to investigate if social interactions mediate the relationship between resilience and menstrual cramps. We will therefore ask you to answer a few questions to assess your experiences of loneliness, social exclusion and social bonds. These, together with the rest of the data we will collect on digital social interactions, will enable us to have test how much social bonds influence menstrual cramps and stress."
+    ]
+  ]
 outro:
   title: Thank you for your continued participation
   description: You are a valued member of our study!

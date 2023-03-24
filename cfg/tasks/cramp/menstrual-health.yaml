@@ -9,18 +9,27 @@ timeRequirements:
 name: Menstrual Health
 intro:
   title: Menstrual Health
-  description: >-
-    In this survey we ask you to answer some questions regarding your
-    menstruation patterns and the symptoms you might experience right before
-    menstruation. 
-
-
-    Why is completing this survey important?
-
-    The CRAMP study is synchronized to your menstrual cycle. We will therefore ask you several questions regarding your usual menstrual pattern. Answering this survey will enable us to ask you the right questions at the right time. Moreover, menstruation is not only bleeding. The menstrual cycle is a complex cyclical process, with hormones fluctuating and influencing several systems in our bodies. It is common to many women to experience symptoms right before menstruation, sometimes so debilitating that they are described as premenstrual syndrome. This condition has been linked to more severe stress and menstrual cramps. We will therefore also ask you to complete a questionnaire that has been developed specifically to assess premenstrual symptoms. Answering these questions will enable us to take into account these factors when we characterize stress and menstrual pain. 
-
-
-    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
+  description: [
+    [
+      "BodyLarge",
+      "In this survey we ask you to answer some questions regarding your menstruation patterns and the symptoms you might experience right before menstruation."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "The CRAMP study is synchronized to your menstrual cycle. We will therefore ask you several questions regarding your usual menstrual pattern. Answering this survey will enable us to ask you the right questions at the right time."
+    ],
+    [
+      "BodyLarge",
+      "You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable."
+    ]
+  ]
 sections:
   - type: survey
     key: health
