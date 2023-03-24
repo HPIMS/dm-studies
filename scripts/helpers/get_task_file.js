@@ -52,7 +52,9 @@ async function getTaskFile(group, file) {
     const inheritanceChain = Array.isArray(_extends) ? _extends : [_extends];
     const fileDefinitions = inheritanceChain.map((f) => ({
       dir,
-      group,
+      // If the task we're extending has the same key as the task we are building,
+      // then skip the current group and look right in library.
+      group: f === data.key ? "library" : group,
       file: `${f}.yaml`,
     }));
     const inheritanceFiles = await getInheritedTaskFiles(fileDefinitions);
