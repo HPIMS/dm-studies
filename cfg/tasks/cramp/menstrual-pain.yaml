@@ -9,18 +9,27 @@ timeRequirements:
 name: Menstrual Pain
 intro:
   title: Menstrual Pain
-  description: >-
-    In this survey we ask you to answer some questions regarding how
-    you usually experience menstrual cramps. 
-
-
-    Why is completing this survey important?
-
-    The CRAMP study is all about menstrual pain. We will ask you questions regarding your menstrual pain throughout the study. But we can’t make sure that what you will report during the study will be what your usual experience is. We therefore designed this survey to collect information regarding your usual experience with menstrual pain. We don’t only want to know how intense the pain is, but also how you experience the pain. We will therefore include two sets of questions, one regarding your thoughts and feelings during pain, and the other one regarding how your daily activities are affected by your pain. Answering these questions is important to help us characterize pain beyond a mere score on a piece of paper and unravel its complexity
-
-
-
-    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
+  description: [
+    [
+      "BodyLarge",
+      "In this survey we ask you to answer some questions regarding how you usually experience menstrual cramps."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "The CRAMP study is all about menstrual pain. We will ask you questions regarding your menstrual pain throughout the study. But we can’t make sure that what you will report during the study will be what your usual experience is. We therefore designed this survey to collect information regarding your usual experience with menstrual pain. We don’t only want to know how intense the pain is, but also how you experience the pain. We will therefore include two sets of questions, one regarding your thoughts and feelings during pain, and the other one regarding how your daily activities are affected by your pain. Answering these questions is important to help us characterize pain beyond a mere score on a piece of paper and unravel its complexity."
+    ],
+    [
+      "BodyLarge",
+      "You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable."
+    ]
+  ]
 sections:
   - type: survey
     key: pain-1
@@ -51,6 +60,23 @@ sections:
             text: Moderate pain
           - value: severe
             text: Severe pain
+      - key: menses_pain_location
+        question: Usually, during menstruation, where do you feel pain?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: lower_back
+            text: Lower back
+          - value: lower_belly
+            text: Lower belly
+          - value: upper_legs
+            text: Upper legs
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: menses_pain_location_other_description
+              question: "Please specify:"
+              type: TEXTAREA
       - key: menses_pain_start
         question: When you experience menstrual pain, when does it usually start?
         type: SINGLE_CHOICE
@@ -129,7 +155,7 @@ sections:
                 operator: =
                 value: often_required
   - type: survey
-    key: worst_period_1
+    key: worst_period
     title: ""
     description: ""
     questions:
@@ -146,29 +172,7 @@ sections:
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - type: survey
-    key: worst_period_2
-    title: ""
-    description: Please think about the most painful menstruation you have experienced.
-    questions:
-      - key: menses_pain_location_worst
-        question: Where was your pain located?
-        descritpion: Select all that apply
-        type: MULTIPLE_CHOICE
-        options:
-          - value: lower_back
-            text: Lower back
-          - value: lower_belly
-            text: Lower belly
-          - value: upper_legs
-            text: Upper legs
-          - value: other
-            text: Other
-            inlineQuestion:
-              key: menses_pain_location_worst_other_description
-              question: "Please specify:"
-              type: TEXTAREA
-  - type: survey
-    key: best_period_1
+    key: best_period
     title: ""
     description: ""
     questions:
@@ -185,29 +189,7 @@ sections:
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - type: survey
-    key: best_period_2
-    title: ""
-    description: Please think about the least painful menstruation you have experienced.
-    questions:
-      - key: menses_pain_location_best
-        question: Where was your pain located?
-        descritpion: Select all that apply
-        type: MULTIPLE_CHOICE
-        options:
-          - value: lower_back
-            text: Lower back
-          - value: lower_belly
-            text: Lower belly
-          - value: upper_legs
-            text: Upper legs
-          - value: other
-            text: Other
-            inlineQuestion:
-              key: menses_pain_location_best_other_description
-              question: "Please specify:"
-              type: TEXTAREA
-  - type: survey
-    key: average_period_1
+    key: average_period
     title: ""
     description: ""
     questions:
@@ -224,29 +206,7 @@ sections:
         minLabel: No pain
         maxLabel: The worst pain you can imagine
   - type: survey
-    key: average_period_2
-    title: ""
-    description: Please think about your usual menstrual pain.
-    questions:
-      - key: menses_pain_location_average
-        question: Where was your pain located?
-        descritpion: Select all that apply
-        type: MULTIPLE_CHOICE
-        options:
-          - value: lower_back
-            text: Lower back
-          - value: lower_belly
-            text: Lower belly
-          - value: upper_legs
-            text: Upper legs
-          - value: other
-            text: Other
-            inlineQuestion:
-              key: menses_pain_location_average_other_description
-              question: "Please specify:"
-              type: TEXTAREA
-  - type: survey
-    key: last_period_1
+    key: last_period
     title: ""
     description: ""
     questions:
@@ -262,28 +222,6 @@ sections:
         prompt: Rate the pain intensity.
         minLabel: No pain
         maxLabel: The worst pain you can imagine
-  - type: survey
-    key: last_period_2
-    title: ""
-    description: Please think about your most recent menstrual pain.
-    questions:
-      - key: menses_pain_location_last
-        question: Where was your pain located?
-        descritpion: Select all that apply
-        type: MULTIPLE_CHOICE
-        options:
-          - value: lower_back
-            text: Lower back
-          - value: lower_belly
-            text: Lower belly
-          - value: upper_legs
-            text: Upper legs
-          - value: other
-            text: Other
-            inlineQuestion:
-              key: menses_pain_location_last_other_description
-              question: "Please specify:"
-              type: TEXTAREA
   - type: survey
     key: pcs
     title: ""

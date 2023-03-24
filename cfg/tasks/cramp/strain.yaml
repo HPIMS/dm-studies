@@ -1,0 +1,242 @@
+key: strain
+active: true
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata: 
+  author: ""
+  instrument: ""
+  version: ""
+  references: ['https://www.uclastresslab.org/pubs/STRAIN-Screener-for-Adults-20-item-v1.0-Released-1-24-2022.pdf']
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements: 
+  time: 3
+  timeUnits: minutes
+name: Past Stress
+intro:
+  title: Past Stress
+  description: [
+    [
+      "BodyLarge",
+      "In this survey we will ask you to answer a few questions regarding past stressful situations you might have experienced."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "Stress and its effects can accumulate over time and influence the resilience and reaction to new stressful situations. This is why in this survey we will ask you to answer a few brief questions about stressful past events that might influence how you behave and perceive things today. This information will ultimately enable us to understand not only the short-term, but also the long-term effects of stress on menstrual pain intensity."
+    ]
+  ]
+sections:
+  - key: "0"
+    title: ""
+    description: Below is a list of stressful life events or circumstances that you may have experienced. Please indicate whether you experienced the situation at any point during your lifetime...
+    questions:
+      - key: strain_1
+        question: You experienced a difficult move that disrupted your daily life?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_2
+        question: You lived without enough space or privacy?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_3
+        question: You had difficulty paying for basic things in adulthood, such as food or rent?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_4
+        question: You were laid off or fired from a full-time job?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_5
+        question: You had difficulty caring for a child (e.g., problems with childcare or paying for basic needs)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_6
+        question: You had a child move out of the house for an upsetting reason?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_7
+        question: You experienced bullying (e.g., name calling, humiliation, rejection) during childhood?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_8
+        question: You separated from parent or caregiver for at least one month during childhood?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_9
+        question: You found out that a partner was unfaithful to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_10
+        question: You went through a divorce or serious relationship break-up?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_11
+        question: You had major legal problems with a partner or spouse (e.g., financial, custody issues)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_12
+        question: You provided care for a close friend or family member who had a major health problem?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_13
+        question: You had a loved one with a mental illness (e.g., severe anxiety, depression, drug problem)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_14
+        question: You had a friend or loved one who was abused (e.g., emotional, physical, or sexual abuse)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_15
+        question: A close friend or loved one passed away?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_16
+        question: Your father passed away?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_17
+        question: You experienced emotional abuse (e.g., invalidated, blamed, threatened, or humiliated)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_18
+        question: You experienced physical abuse (e.g., bruised, hit, restrained, or physically harmed)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_19
+        question: You were assaulted or attacked (e.g., someone tried to hurt, molest, or rape you)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: strain_20
+        question: You experienced ongoing sexual abuse (e.g., raped, molested, or unwanted sexual contact)?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0

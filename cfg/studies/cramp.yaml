@@ -4,7 +4,7 @@ consentId: ehive-cramp
 active: true
 openEnrollment: true
 visibility: public
-minVersion: "2.4"
+minVersion: "2.5"
 
 irb: STUDY-22-01145
 pi: Erwin Bottinger MD
@@ -128,7 +128,7 @@ tasks:
     #           operator: =
     #           value: yes
 
-  - key: rsa
+  - key: strain
     rank: 70
     # TODO: REMOVE
     schedule:
@@ -147,7 +147,7 @@ tasks:
     #         operator: ">"
     #         score: 0
 
-  - key: bfi-10
+  - key: rsa
     rank: 80
     # TODO: REMOVE
     schedule:
@@ -166,7 +166,7 @@ tasks:
     #         operator: ">"
     #         score: 0
 
-  - key: social
+  - key: bfi-10
     rank: 90
     # TODO: REMOVE
     schedule:
@@ -185,9 +185,27 @@ tasks:
     #         operator: ">"
     #         score: 0
 
+  - key: social
+    rank: 100
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # schedule:
+    #   type: PERIOD
+    #   period: ONCE
+    #   delay: 4
+    #   delayUnits: DAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::intro
+    #         operator: ">"
+    #         score: 0
 
   - key: pre-dst
-    rank: 100
+    rank: 110
     # TODO: REMOVE
     schedule:
       type: PERIOD
@@ -200,13 +218,17 @@ tasks:
     #         fn: cramp::ovulation-phase
     #         args: {}
 
-
   - key: dst
-    rank: 110
-    # TODO: REMOVE
+    rank: 120
+      # TODO: REMOVE
     schedule:
       type: PERIOD
       period: ALWAYS
+    # schedule:
+    #   type: PERIOD
+    #   period: ONCE
+    #   delay: 1
+    #   delayUnits: DAYS
     # triggers:
     #   - action: SHOW
     #     condition:
@@ -222,25 +244,6 @@ tasks:
     #           score: 0
 
   - key: daily-check-in
-    rank: 120
-    # TODO: REMOVE
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: COMPLETED
-    #         resource: cramp::dst
-    #         operator: ">"
-    #         score: 0
-    #   - action: HIDE
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: cramp::cycle-complete
-    #         args: {}
-
-  - key: ema-morning
     rank: 130
     # TODO: REMOVE
     schedule:
@@ -259,7 +262,7 @@ tasks:
     #         fn: cramp::cycle-complete
     #         args: {}
 
-  - key: ema-afternoon
+  - key: ema-morning
     rank: 140
     # TODO: REMOVE
     schedule:
@@ -278,7 +281,7 @@ tasks:
     #         fn: cramp::cycle-complete
     #         args: {}
 
-  - key: ema-evening
+  - key: ema-afternoon
     rank: 150
     # TODO: REMOVE
     schedule:
@@ -297,8 +300,27 @@ tasks:
     #         fn: cramp::cycle-complete
     #         args: {}
 
-  - key: post-menstruation
+  - key: ema-evening
     rank: 160
+    # TODO: REMOVE
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+    # triggers:
+    #   - action: SHOW
+    #     condition:
+    #       - type: COMPLETED
+    #         resource: cramp::dst
+    #         operator: ">"
+    #         score: 0
+    #   - action: HIDE
+    #     condition:
+    #       - type: CALCULATION
+    #         fn: cramp::cycle-complete
+    #         args: {}
+
+  - key: post-menstruation
+    rank: 170
     # TODO: REMOVE
     schedule:
       type: PERIOD
@@ -311,7 +333,7 @@ tasks:
     #         args: {}
 
   - key: final-check-in
-    rank: 170
+    rank: 180
     # TODO: REMOVE
     schedule:
       type: PERIOD
@@ -324,7 +346,7 @@ tasks:
     #         args: {}
 
   - key: dona-facebook
-    rank: 180
+    rank: 190
     # TODO: REMOVE
     schedule:
       type: PERIOD
@@ -347,7 +369,7 @@ tasks:
     #             value: yes
 
   - key: dona-whatsapp
-    rank: 190
+    rank: 200
     # TODO: REMOVE
     schedule:
       type: PERIOD

@@ -19,7 +19,11 @@ sections:
   - type: survey
     key: "0"
     title: ""
-    description: I see myself as someone who ...
+    description: >-
+      Please, tell us how well the following statements describe your personality.
+
+
+      I see myself as someone who ...
     questions:
       - key: bfi-10_1
         question: ... is reserved

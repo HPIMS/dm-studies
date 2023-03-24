@@ -9,17 +9,27 @@ timeRequirements:
 name: General Health
 intro:
   title: General Health
-  description: >-
-    In this survey we ask you to answer some questions regarding your
-    general health.
-
-
-    Why is completing this survey important?
-
-    Menstruation is a complex process involving several body systems. It is therefore not surprising that pre-existing health conditions influence menstruation and menstrual cramps. We will ask you several questions regarding your general health. We will also ask you to share your Apple Health app data with us. This will enable us to account for pre-existing health conditions in our analyses. Doing so will ensure that we can look at menstrual cramps-specific processes rather than other disorders that might influence your cramps. 
-
-
-    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable.
+  description: [
+    [
+      "BodyLarge",
+      "In this survey we ask you to answer some questions regarding your general health."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "Menstruation is a complex process involving several body systems. It is therefore not surprising that pre-existing health conditions influence menstruation and menstrual cramps. We will ask you several questions regarding your general health. We will also ask you to share your Apple Health app data with us. This will enable us to account for pre-existing health conditions in our analyses. Doing so will ensure that we can look at menstrual cramps-specific processes rather than other disorders that might influence your cramps."
+    ],
+    [
+      "BodyLarge",
+      "You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable."
+    ]
+  ]
 sections:
   - type: survey
     key: general
@@ -32,6 +42,20 @@ sections:
       - key: weight
         question: What is your weight?
         type: WEIGHT
+      - key: medication_current
+        question: Do you currently take medications?
+        type: YESNO_CHOICE
+      - key: medication_text
+        question: Which medications are you currently taking?
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: general
+                question: medication_current
+                operator: =
+                value: yes
   - type: survey
     key: substance
     title: ""
@@ -92,25 +116,6 @@ sections:
       - key: coffee_count
         question: On average, how many cups of coffee do you drink per day?
         type: NUMERIC
-  - type: survey
-    key: medications
-    title: ""
-    description: ""
-    questions:
-      - key: medication_current
-        question: Do you currently take medications?
-        type: YESNO_CHOICE
-      - key: medication_text
-        question: Which medications are you currently taking?
-        type: TEXTAREA
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: medications
-                question: medication_current
-                operator: =
-                value: yes
   - type: survey
     key: pain
     title: ""
@@ -202,7 +207,7 @@ sections:
     description: ""
     questions:
       - key: diagnosis_chronic
-        question: Have you been diagnosed by a doctor of other healthcare provider with
+        question: Have you been diagnosed by a doctor or other healthcare provider with
           a chronic condition (i.e. a condition that will last for a long period
           of time and you are currently having or taking medications for),
           excluding pelvic and gynecological conditions?
@@ -296,7 +301,7 @@ sections:
         type: SINGLE_CHOICE
         options:
           - value: prediabetes
-            text: prediabetes
+            text: Prediabetes
           - value: diabetes_1
             text: Type I diabetes
           - value: diabetes_2

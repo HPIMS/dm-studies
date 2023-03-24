@@ -15,10 +15,33 @@ schedule:
 timeRequirements:
   time: 5
   timeUnits: minutes
-name: POST MENSTRUATION TITLE
+name: Mind-Body Wellbeing
 intro:
-  title: INTRO TITLE
-  description: INTRO TEXT
+  title: Mind-Body Wellbeing
+  description: [
+    [
+      "BodyLarge",
+      "In this survey, we will ask you to answer some questions regarding your mental and physical health in the past 7 days."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Bold",
+        "This is a time-dependent survey! Completing this survey today will improve the quality of the CRAMP study results."
+      ]
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "The day before the digital resilience test as well as one week after the start of you menstruation, we will ask you to answer some questions regarding your mood, stress and presence of symptoms. We will use your answers to compare how your mood, stress and symptoms change from a week with and without menstruation. It is important that you answer the questionnaire the day we unlock this task so that we can compare different menstrual phases."
+    ]
+  ]
 outro:
   title: Thank you for your continued participation
   description: You are a valued member of our study!

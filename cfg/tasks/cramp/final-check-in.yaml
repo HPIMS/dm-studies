@@ -7,6 +7,22 @@ timeRequirements:
   time: 2
   timeUnits: minutes
 name: Final Check-in
+intro:
+  title: Final Check-in
+  description: [
+    [
+      "BodyLarge",
+      "You are almost done with the CRAMP Study!"
+    ],
+    [
+      "BodyLarge",
+      "We want to understand how the menstrual cycle you had during the CRAMP study was comparable to what usually happens to you. Please, answer the following last few questions before your leave the study."
+    ],
+    [
+      "BodyLarge",
+      "THANK YOU for participating and contributing to understanding how menstrual pain and stress are related to each other!"
+    ]
+  ]
 sections:
   - type: survey
     key: "0"

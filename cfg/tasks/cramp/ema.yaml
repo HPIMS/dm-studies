@@ -13,10 +13,33 @@ schedule:
 timeRequirements:
   time: 1
   timeUnits: minutes
-name: How Do You Feel Right now?
+name: How Do You Feel?
 intro:
-  title: Pain, Stress, Mood
-  description: Please think about the last 10 minutes and complete the following survey.
+  title: How do you feel?
+  description: [
+    [
+      "BodyLarge",
+      "Please think about the last 10 minutes and complete the following survey."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Bold",
+        "This is a time-dependent survey! Answering this survey as soon as possible will improve the CRAMP study results!"
+      ]
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is answering this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "In the CRAMP Study, we want to closely characterize the relationship between stress, resilience and menstrual cramps and symptoms. Since stress and pain usually come and go, it is of uttermost importance that we assess how they change not only day by day, but also during the day. Ultimately, this will enable us to look for temporal patterns of pain, stress and their relationship and unlock these complex interactions. We will therefore ask you  to answer 4 very short questions – 3 times a day. This is called a ecologic momentary assessment, because we want to know how you are feeling exactly in that moment. Answering these momentary assessments will enable us to have a more precise picture of how stress and pain change."
+    ]
+  ]
 sections:
   - type: survey
     key: pain
