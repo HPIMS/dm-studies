@@ -1,0 +1,69 @@
+{
+  "key": "ehive-playground",
+  "title": "Playground Study",
+  "timeEstimate": { "time": 15, "timeUnits": "minutes" },
+  "contact": {
+    "pi": "Kyle Landell",
+    "email": "kyle.landell@mssm.edu"
+  },
+  "dates": {
+    "effectiveAt": "1900-01-01T00:00:00.000Z",
+    "effectiveUntil": "2099-12-31T23:59:59.0Z"
+  },
+  "intro": [
+    [
+      "Section",
+      [
+        [
+          "BodyLarge",
+          "To participate, you must complete the Informed Consent Process."
+        ],
+        [
+          "BodyLarge",
+          "The following screens will contain a detailed description of the study. Research staff will explain the purpose of the study and what participation will entail. Please take the time you need to review the study information before you decide to participate."
+        ],
+        [
+          "BodyLarge",
+          "If you have any questions, please ask the research staff during the consent process or email the study mailbox by tapping the help button."
+        ],
+        [
+          "BodyLarge",
+          "Please read through each section carefully and make sure you understand what is being asked of you before signing."
+        ]
+      ]
+    ]
+  ],
+  "options": [
+    {
+      "type": "single",
+      "title": "Future Contact",
+      "summary": "The researchers may wish to use your personal contact information to contact you in the future. Do you give the researchers permission to contact you in the future to request the collection of additional information about you, discuss how your private information, study data and/or samples might be used, or discuss possible participation in another research study?",
+      "required": true,
+      "accept": "Yes, I consent",
+      "reject": "No, I do not consent"
+    },
+    {
+      "type": "single",
+      "title": "Email",
+      "summary": "If you consent to future contact, do you agree to being contacted by email?",
+      "required": true,
+      "accept": "Yes",
+      "reject": "No or N/A"
+    },
+    {
+      "type": "single",
+      "title": "Phone",
+      "summary": "If you consent to future contact, do you agree to being contacted by phone?",
+      "required": true,
+      "accept": "Yes",
+      "reject": "No or N/A"
+    }
+  ],
+  "review": [
+    [
+      "H3",
+      "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION"
+    ],
+    ["Display", "Icahn School of Medicine at Mount Sinai"]
+  ]
+}

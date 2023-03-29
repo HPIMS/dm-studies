@@ -1,0 +1,35 @@
+key: playground
+consentId: ehive-playground
+
+active: true
+openEnrollment: true
+visibility: public
+
+irb: N/A
+pi: Kyle Landell
+studyEmail: kyle.landell@mssm.edu
+
+platform:
+  - ios
+  - android
+
+minVersion: "2.6"
+capTo: 5
+
+name: Playground
+
+shortDescription: This is a study to build and test various ehive features.
+longDescription: This is a study to build and test various ehive features. This study is not intended only for development and QA use.
+
+notes: []
+
+imageId: study-playground
+animationId: ""
+videoId: ""
+
+timeResponsibility:
+  time: 30
+  timeUnits: seconds
+  timePeriod: daily
+
+tasks: []
