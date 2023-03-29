@@ -1,0 +1,42 @@
+key: showcase-reorderable
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Showcase Reorderable
+intro:
+  title: About
+  description: [
+    [
+      "BodyLarge",
+      "This task showcases the reorderable component."
+    ],
+    [
+      "BodyLarge",
+      "This component allows items to be ranked in order from 1 to n. Items are dragged and dropped into the drop zone, and can then be moved according to preference."
+    ],
+  ]
+sections:
+  - type: survey
+    key: showcase
+    title: ""
+    description: ""
+    questions:
+      - key: favorite_foods
+        question: Rate your favorite foods.
+        description: Drag and drop the options in the box below to tell us which foods you enjoy the most. \#1 is your favorite. 
+        type: REORDERABLE
+        options:
+          - value: pizza
+            text: Pizza
+          - value: tacos
+            text: Tacos
+          - value: ramen
+            text: Ramen
+          - value: burgers
+            text: Burgers
+          - value: chicken_tikka_masala
+            text: Chicken tikka masala
