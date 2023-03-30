@@ -1,4 +1,4 @@
-key: showcase-slider
+key: showcase-h-scale
 scorable: false
 schedule:
   type: PERIOD
@@ -6,7 +6,7 @@ schedule:
 timeRequirements:
   time: 1
   timeUnits: minutes
-name: Reorderable
+name: Horizontal Scale
 intro:
   title: About
   description: [
@@ -28,7 +28,7 @@ sections:
       - key: quantitative_no_label
         question: How happy are you on a scale of 1 to 10.
         description: This scale is numeric only.
-        type: SLIDER
+        type: H_SCALE
         min: 1
         minLabel: ""
         max: 10
@@ -37,7 +37,7 @@ sections:
       - key: quantitative_with_label
         question: How happy are you on a scale of 1 to 10.
         description: This scale is numeric with labels.
-        type: SLIDER
+        type: H_SCALE
         min: 1
         minLabel: "Unhappy"
         max: 10
