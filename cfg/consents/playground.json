@@ -15,9 +15,9 @@
       "type": "option",
       "text": "Are you 18 years of age or older?",
       "options": [
-        { "value": "yes", "text": "Yes", "isEligible": true },
-        { "value": "no", "text": "No", "isEligible": false },
-        { "value": "unsure", "text": "Unsure", "isEligible": true }
+        { "text": "Yes", "isEligible": true },
+        { "text": "No", "isEligible": false },
+        { "text": "Unsure", "isEligible": true }
       ],
       "ineligibleText": "You must be 18 or older."
     },
