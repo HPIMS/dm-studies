@@ -1,0 +1,45 @@
+key: showcase-slider
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Reorderable
+intro:
+  title: About
+  description: [
+    [
+      "BodyLarge",
+      "This task showcases the horizontal VAS component."
+    ],
+    [
+      "BodyLarge",
+      "This component allows a participant to choose a value on a horizontal line that represents a range between two states."
+    ],
+  ]
+sections:
+  - type: survey
+    key: showcase
+    title: ""
+    description: ""
+    questions:
+      - key: quantitative_no_label
+        question: How happy are you on a scale of 1 to 10.
+        description: This scale is numeric only.
+        type: SLIDER
+        min: 1
+        minLabel: ""
+        max: 10
+        maxLabel: ""
+        step: 1
+      - key: quantitative_with_label
+        question: How happy are you on a scale of 1 to 10.
+        description: This scale is numeric with labels.
+        type: SLIDER
+        min: 1
+        minLabel: "Unhappy"
+        max: 10
+        maxLabel: "Happy"
+        step: 1
