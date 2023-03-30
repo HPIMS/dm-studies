@@ -30,36 +30,43 @@
   ],
   "eligibility": [
     {
+      "type": "yesno",
       "text": "I am 18 or older.",
       "isEligible": true,
       "ineligibleText": "You must be 18 or older."
     },
     {
+      "type": "yesno",
       "text": "I am a healthcare worker in the Mount Sinai Hospital System (i.e. nurse, resident, PA, hospital maintenance, security etc.).",
       "isEligible": true,
       "ineligibleText": "You must be a healthcare worker in the Mount Sinai Hospital System."
     },
     {
+      "type": "yesno",
       "text": "I can read and comprehend English.",
       "isEligible": true,
       "ineligibleText": "You must be able to read and comprehend English"
     },
     {
+      "type": "yesno",
       "text": "I have a personal cell phone that is an iPhone 6s or newer.",
       "isEligible": true,
       "ineligibleText": "You must have a personal cell phone that is an iPhone 6s or newer.."
     },
     {
+      "type": "yesno",
       "text": "I have an Apple Watch Series 4 or newer or am willing to wear an Apple Watch for the duration of the study.",
       "isEligible": true,
       "ineligibleText": "You must have or be willing to wear an Apple Watch Series 4 or newer."
     },
     {
+      "type": "yesno",
       "text": "I have an autoimmune disease such as rheumatoid arthritis, inflammatory bowel disease or lupus.",
       "isEligible": false,
       "ineligibleText": "You must not have an autoimmune disease."
     },
     {
+      "type": "yesno",
       "text": "I use medications that impact how my heart beats such as beta blockers (i.e. atenolol, carvedilol, metoprolol, Coreg, Tenormin, Normodyne, Trandate), digoxin, calcium channel blockers (i.e. Novasc, amlodipine, Cardene, nicrdipine, Procrdia, nifedipine, Cardizem, diltiazem), regularly used benzodiazepines.",
       "isEligible": false,
       "ineligibleText": "You must not be using medications that impact how your heart beats."

@@ -38,41 +38,49 @@
 
   "eligibility": [
     {
+      "type": "yesno",
       "text": "I am a female 18 – 40 years of age",
       "isEligible": true,
       "ineligibleText": "You must be 18 and 40 years of age"
     },
     {
+      "type": "yesno",
       "text": "My menstrual cycle length (first day of one period to the first day of the next) is between 21 and 40 days",
       "isEligible": true,
       "ineligibleText": "Your menstrual cycle length must be between 21 and 40 days"
     },
     {
+      "type": "yesno",
       "text": "I own an Apple iPhone",
       "isEligible": true,
       "ineligibleText": "Due to technical limitations, this study is only available on iPhones"
     },
     {
+      "type": "yesno",
       "text": "I can read and understand English",
       "isEligible": true,
       "ineligibleText": "You must be able to read and understand English"
     },
     {
+      "type": "yesno",
       "text": "I currently take hormonal contraception or have used hormonal contraception in the past 3 months",
       "isEligible": false,
       "ineligibleText": "You must not have taken hormonal contraceptions within the past 3 months"
     },
     {
+      "type": "yesno",
       "text": "I am currently pregnant or breastfeeding",
       "isEligible": false,
       "ineligibleText": "You must not currently be breastfeeding"
     },
     {
+      "type": "yesno",
       "text": "I currently have an acute illness (short-term illness like cold, cough etc.)",
       "isEligible": false,
       "ineligibleText": "You must not currently have an acute illness"
     },
     {
+      "type": "yesno",
       "text": "I have had surgery in the past 3 months",
       "isEligible": false,
       "ineligibleText": "You must not currently have had surgery within the apst 3 months"

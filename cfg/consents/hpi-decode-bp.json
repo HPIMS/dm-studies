@@ -30,26 +30,31 @@
   ],
   "eligibility": [
     {
+      "type": "yesno",
       "text": "I am older than 18 years old.",
       "isEligible": true,
       "ineligibleText": "You must be 18 or older."
     },
     {
+      "type": "yesno",
       "text": "I have normal or high-normal blood pressure (I am not diagnosed with hypertension and  the average of my 2 last blood pressure readings at two different doctor's encounters is lesser than (<) 140/90 mmHg). (If you have questions about this please contact our study email address).",
       "isEligible": true,
       "ineligibleText": "You must have normal or high-normal blood pressure."
     },
     {
+      "type": "yesno",
       "text": "I am currently taking anti-hypertensive medication.",
       "isEligible": false,
       "ineligibleText": "You not be currently taking any anti-hypertensive medication."
     },
     {
+      "type": "yesno",
       "text": "I can provide informed consent in English.",
       "isEligible": true,
       "ineligibleText": "You must be able to provide informed consent in English."
     },
     {
+      "type": "yesno",
       "text": "I have a personal cell phone that has either iOS 13 or greater, or Android 7 (Nougat) or greater.",
       "isEligible": true,
       "ineligibleText": "You must have a personal cell phone that meets these minimum requirements."

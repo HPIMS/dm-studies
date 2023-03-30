@@ -30,36 +30,43 @@
   ],
   "eligibility": [
     {
+      "type": "yesno",
       "text": "Are you 18 years of age or older?",
       "isEligible": true,
       "ineligibleText": "You must be 18 or older."
     },
     {
+      "type": "yesno",
       "text": "Have you been diagnosed with rheumatoid arthritis?",
       "isEligible": true,
       "ineligibleText": "You must have a diagnosis of rheumatoid arthritis."
     },
     {
+      "type": "yesno",
       "text": "Are you on a medication to treat rheumatoid arthritis such as NSAIDs (ibuprofen, diclofenac, meloxicam, indomethacin), a biologic medication (infliximab, remicade, inflectra, renflexis, avsola, adalimumab, humira, certrolizumab, cimzia, tocilizumab, actemra, sarilumab, kevzara, golimumab, simponi, etanercept, Enbrel, abatacept, Orencia, rituximab, rituxan), or another type (rinvoq, upadacitinib, tofacitinib, xeljanz, baricitinib, olumiant, azathioprine, methotrexate, sulfasalazine, leflunomide, etc)?",
       "isEligible": true,
       "ineligibleText": "You must be on a medication to treat rheumatoid arthritis."
     },
     {
+      "type": "yesno",
       "text": "Are you currently pregnant?",
       "isEligible": false,
       "ineligibleText": "You must not be currently pregnant."
     },
     {
+      "type": "yesno",
       "text": "Do you currently have cancer or other significant medical problems such as a recent heart attack, recent stroke, significant kidney disease, or an infection?",
       "isEligible": false,
       "ineligibleText": "You must not be currently have cancer or other significant medical problems."
     },
     {
+      "type": "yesno",
       "text": "Do you have a pacemaker or defibrillator?",
       "isEligible": false,
       "ineligibleText": "You must not have a pacemaker or defibrillator."
     },
     {
+      "type": "yesno",
       "text": "I use medications that impact how my heart beats such as beta blockers (ie. atenolol, carvedilol, metoprolol, Coreg, Tenormin, Normodyne, Trandate), digoxin, calcium channel blockers (ie. Novasc, amlodipine, Cardene, nicrdipine, Procrdia, nifedipine, Cardizem, diltiazem), or regularly used benzodiazepines.",
       "isEligible": false,
       "ineligibleText": "You must not use medications that impact how your heart beats."

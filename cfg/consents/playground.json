@@ -10,6 +10,24 @@
     "effectiveAt": "1900-01-01T00:00:00.000Z",
     "effectiveUntil": "2099-12-31T23:59:59.0Z"
   },
+  "eligibility": [
+    {
+      "type": "option",
+      "text": "Are you 18 years of age or older?",
+      "options": [
+        { "value": "yes", "text": "Yes", "isEligible": true },
+        { "value": "no", "text": "No", "isEligible": false },
+        { "value": "unsure", "text": "Unsure", "isEligible": true }
+      ],
+      "ineligibleText": "You must be 18 or older."
+    },
+    {
+      "type": "yesno",
+      "text": "I can read and comprehend English.",
+      "isEligible": true,
+      "ineligibleText": "You must be able to read and comprehend English"
+    }
+  ],
   "intro": [
     [
       "Section",
