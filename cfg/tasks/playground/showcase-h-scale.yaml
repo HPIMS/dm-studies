@@ -25,21 +25,30 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: quantitative_no_label
+      - key: integer_no_label
         question: How happy are you on a scale of 1 to 10.
-        description: This scale is numeric only.
+        description: This scale is integer only.
         type: H_SCALE
         min: 1
         minLabel: ""
         max: 10
         maxLabel: ""
         step: 1
-      - key: quantitative_with_label
+      - key: integer_with_label
         question: How happy are you on a scale of 1 to 10.
-        description: This scale is numeric with labels.
+        description: This scale is integer with labels.
         type: H_SCALE
         min: 1
         minLabel: "Unhappy"
         max: 10
         maxLabel: "Happy"
         step: 1
+      - key: decimal_with_label
+        question: How happy are you on a scale of 0 to 1.
+        description: This scale is decimal with labels.
+        type: H_SCALE
+        min: 0
+        minLabel: "Unhappy"
+        max: 1
+        maxLabel: "Happy"
+        step: 0.1
