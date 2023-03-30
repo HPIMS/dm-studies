@@ -1,0 +1,32 @@
+key: showcase-rate
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Rate
+intro:
+  title: About
+  description: [
+    [
+      "BodyLarge",
+      "This task showcases the rate component."
+    ],
+    [
+      "BodyLarge",
+      "This component allows a participant to give a rating of a number of stars."
+    ],
+  ]
+sections:
+  - type: survey
+    key: showcase
+    title: ""
+    description: ""
+    questions:
+      - key: rate
+        question: What is your overall rating of ehive?
+        type: RATE
+        min: 1
+        max: 5
