@@ -196,219 +196,193 @@ sections:
             text: To help motivate myself to keep up with treatment plans
   - type: survey
     key: group_8
-    title: "Corsano"
+    title: Corsano
     description: "Wearable devices, like the ones that were included for this study, may help researchers and health care providers better understand how IBD impacts patients. The researchers on this study would like to know about your experiences with the devices to inform potential use of these devices in future IBD studies."
     questions:
       - key: corsano_1
-        question: I thought it was easy putting the device on and taking it off.
+        question: (Corsano) I thought it was easy putting the device on and taking it off.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_2
-        question: I experienced discomfort wearing the device.
+        question: (Corsano) I experienced discomfort wearing the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_3
-        question: I experienced trouble sleeping due to the device.
+        question: (Corsano) I experienced trouble sleeping due to the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_4
-        question: My device stayed in place.
+        question: (Corsano) My device stayed in place.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_5
-        question: I would like to use the device frequently.
+        question: (Corsano) I would like to use the device frequently.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_6
-        question: I found the device easy to use.
+        question: (Corsano) I found the device easy to use.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_7
-        question: I needed support of a technical person to be able to use the device.
+        question: (Corsano) I needed support of a technical person to be able to use the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_8
-        question: I experienced restrictions in my daily activities due to device.
+        question: (Corsano) I experienced restrictions in my daily activities due to device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_9
-        question: I felt confident wearing the device.
+        question: (Corsano) I felt confident wearing the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_10
-        question: I needed to learn a lot of things before I could start using the device.
+        question: (Corsano) I needed to learn a lot of things before I could start using the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_11
-        question: I found various functions of the device were well integrated (wearing, charging, application features etc.)
+        question: (Corsano) I found various functions of the device were well integrated (wearing, charging, application features etc.)
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_12
-        question: I found the device very cumbersome to use.
+        question: (Corsano) I found the device very cumbersome to use.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: corsano_13
-        question: I experienced skin irritation wearing the device.
+        question: (Corsano) I experienced skin irritation wearing the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
   - type: survey
     key: group_9
     title: "Oura"
     description: "Wearable devices, like the ones that were included for this study, may help researchers and health care providers better understand how IBD impacts patients. The researchers on this study would like to know about your experiences with the devices to inform potential use of these devices in future IBD studies."
     questions:
       - key: oura_1
-        question: I thought it was easy putting the device on and taking it off.
+        question: (Oura) I thought it was easy putting the device on and taking it off.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_2
-        question: I experienced discomfort wearing the device.
+        question: (Oura) I experienced discomfort wearing the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_3
-        question: I experienced trouble sleeping due to the device.
+        question: (Oura) I experienced trouble sleeping due to the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_4
-        question: My device stayed in place.
+        question: (Oura) My device stayed in place.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_5
-        question: I would like to use the device frequently.
+        question: (Oura) I would like to use the device frequently.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_6
-        question: I found the device easy to use.
+        question: (Oura) I found the device easy to use.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_7
-        question: I needed support of a technical person to be able to use the device.
+        question: (Oura) I needed support of a technical person to be able to use the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_8
-        question: I experienced restrictions in my daily activities due to device.
+        question: (Oura) I experienced restrictions in my daily activities due to device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_9
-        question: I felt confident wearing the device.
+        question: (Oura) I felt confident wearing the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_10
-        question: I needed to learn a lot of things before I could start using the device.
+        question: (Oura) I needed to learn a lot of things before I could start using the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_11
-        question: I found various functions of the device were well integrated (wearing, charging, application features etc.)
+        question: (Oura) I found various functions of the device were well integrated (wearing, charging, application features etc.)
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_12
-        question: I found the device very cumbersome to use.
+        question: (Oura) I found the device very cumbersome to use.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
       - key: oura_13
-        question: I experienced skin irritation wearing the device.
+        question: (Oura) I experienced skin irritation wearing the device.
         type: H_SCALE
         min: 1
-        minLabel: "Strongly Disagree "
+        minLabel: Strongly Disagree
         max: 5
-        maxLabel: "Strongly Agree"
-        step: 1
+        maxLabel: Strongly Agree
