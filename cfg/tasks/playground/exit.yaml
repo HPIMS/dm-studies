@@ -18,7 +18,7 @@ sections:
     questions:
       - key: exit_1
         question: 1. Rank the following symptoms connected to your experience with IBD, from most to least burdensome. Please start with the most burdensome at the top.
-        description: (Drag and drop into position)
+        description: (Drag and drop into position by using the icon)
         type: REORDERABLE
         options:
           - value: a
@@ -36,7 +36,7 @@ sections:
     questions:
       - key: exit_2
         question: 2. Rank the following ways IBD has affected your sleep, from most impacted to least impacted. Please start with the most impactful at the top.
-        description: (Drag and drop into position)
+        description: (Drag and drop into position by using the icon)
         type: REORDERABLE
         options:
           - value: a
@@ -64,7 +64,7 @@ sections:
     questions:
       - key: exit_4
         question: 4. How has your physical activity been affected by your IBD? Rank the following from most impacted to least impacted for you.
-        description: (Drag and drop into position)
+        description: (Drag and drop into position by using the icon)
         type: REORDERABLE
         options:
           - value: a
@@ -92,7 +92,7 @@ sections:
     questions:
       - key: exit_6
         question: 6. What changes or impact from your IBD treatment would be most important to you? Rank from most to least important. 
-        description: (Drag and drop into position)
+        description: (Drag and drop into position by using the icon)
         type: REORDERABLE
         options:
           - value: a
