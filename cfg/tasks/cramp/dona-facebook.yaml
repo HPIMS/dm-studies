@@ -76,6 +76,7 @@ sections:
       - MuteUnmute
       - Rewind
       - Forward
+    resizeMode: contain
   - type: web
     key: web_dona
     pathname: /dona/data-donation?mode=facebook
