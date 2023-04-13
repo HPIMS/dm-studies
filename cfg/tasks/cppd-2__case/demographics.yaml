@@ -28,6 +28,9 @@ sections:
       - key: age
         question: When is your birthday?
         type: DATE
+      - key: age_numeric
+        question: "OR: How old are you?"
+        type: NUMERIC
       - key: ethnicity
         question: What is your ethnicity?
         type: SINGLE_CHOICE
