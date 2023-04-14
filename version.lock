@@ -16,8 +16,8 @@ active:
       - d28a36905862b41d1731077166b5290a
       - 102
     digi-ibd-001:
-      - 52b35465a4221aefe010ee6475dfb2be
-      - 24
+      - 4f1100f907d3f6259ddc7ee5aa544ae9
+      - 25
     ibd-forecast:
       - ed107d0d6af40f2d1004c876e56461b9
       - 30
@@ -118,6 +118,9 @@ active:
     digi-ibd-001::begin-next-phase:
       - ea838fab81dbb21fd702158232360582
       - 5
+    digi-ibd-001::exit:
+      - 338da5d11685d5e3ce6749ec6039869a
+      - 1
     digi-ibd-001::patient-global-impression-crohns-change:
       - 472986df2301740493af263e733be186
       - 6
