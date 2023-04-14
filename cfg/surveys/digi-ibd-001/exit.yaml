@@ -1,0 +1,388 @@
+key: exit
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Exit Survey
+intro:
+  title: About
+  description: The questions in this exit survey may help researchers understand how to focus the development of future digital health measures for patients who live with IBD.  Thank you for taking the time to answer the following questions.
+sections:
+  - type: survey
+    key: group_0
+    title: ""
+    description: ""
+    questions:
+      - key: exit_1
+        question: 1. Rank the following symptoms connected to your experience with IBD, from most to least burdensome. Please start with the most burdensome at the top.
+        description: (Drag and drop into position by using the icon)
+        type: REORDERABLE
+        options:
+          - value: a
+            text: Issues with sleep
+          - value: b
+            text: Issues with physically moving about during my daily schedule
+          - value: c
+            text: Issues with reduced energy or tiredness in conducting daily activities
+          - value: d
+            text: Issues with exercising regularly
+  - type: survey
+    key: group_1
+    title: ""
+    description: ""
+    questions:
+      - key: exit_2
+        question: 2. Rank the following ways IBD has affected your sleep, from most impacted to least impacted. Please start with the most impactful at the top.
+        description: (Drag and drop into position by using the icon)
+        type: REORDERABLE
+        options:
+          - value: a
+            text: Difficulty initiating sleep 
+          - value: b
+            text: Reduction of total time sleeping at night
+          - value: c
+            text: Frequent episodes of awakenings during the night
+          - value: d
+            text: Difficulty falling back to sleep once awakened at night
+          - value: e
+            text: Not feeling refreshed upon getting up in the morning
+  - type: survey
+    key: group_2
+    title: ""
+    description: ""
+    questions:
+      - key: exit_3
+        question: 3. Describe how your sleep has been impacted as a result of IBD, if it has been impacted in different ways than have been listed in question 2.
+        type: TEXTAREA
+  - type: survey
+    key: group_3
+    title: ""
+    description: ""
+    questions:
+      - key: exit_4
+        question: 4. How has your physical activity been affected by your IBD? Rank the following from most impacted to least impacted for you.
+        description: (Drag and drop into position by using the icon)
+        type: REORDERABLE
+        options:
+          - value: a
+            text: I spend more time in sedentary activity
+          - value: b
+            text: I spend less time in moderate and/or vigorous physical activity
+          - value: c
+            text: I feel tired when performing light physical activity
+          - value: d
+            text: I feel of tired when performing moderate physical activity
+          - value: e
+            text: I have difficulty walking for long periods of time
+  - type: survey
+    key: group_4
+    title: ""
+    description: ""
+    questions:
+      - key: exit_5
+        question: 5. Describe how your activity has been affected as a result of IBD.
+        type: TEXTAREA
+  - type: survey
+    key: group_5
+    title: ""
+    description: ""
+    questions:
+      - key: exit_6
+        question: 6. What changes or impact from your IBD treatment would be most important to you? Rank from most to least important. 
+        description: (Drag and drop into position by using the icon)
+        type: REORDERABLE
+        options:
+          - value: a
+            text: Falling asleep more easily
+          - value: b
+            text: Having better sleep quality in general
+          - value: c
+            text: Having increased total sleep time
+          - value: d
+            text: Waking up less often during the night
+          - value: e
+            text: Spending less time in sedentary activity
+          - value: f
+            text: Spending more time in moderate and/or vigorous physical activity
+          - value: g
+            text: Ability to walk longer distances
+          - value: h
+            text: Feeling less tired when performing light or moderate physical activity
+  - type: survey
+    key: group_6
+    title: ""
+    description: ""
+    questions:
+      - key: exit_7
+        question: 7. If not listed above in question 6, what changes from your IBD treatment that impact sleep or activity, would be most important to you?
+        type: TEXTAREA
+  - type: survey
+    key: group_7
+    title: ""
+    description: ""
+    questions:
+      - key: exit_8
+        question: 8. In general, how valuable would it be to measure your overall sleep quality?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+      - key: exit_9
+        question: 9. In general, how valuable would it be to measure your overall physical activity?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+      - key: exit_10
+        question: 10. Would you be willing to use technology (for example, a wearable device or bed-mounted device) to measure your sleep quality?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Yes
+          - value: b
+            text: No
+          - value: c
+            text: I don't know
+      - key: exit_11
+        question: 11. Would you be willing to use technology (for example, a wearable device) to measure your physical activity in the future?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Yes
+          - value: b
+            text: No
+          - value: c
+            text: I don't know
+      - key: exit_12
+        question: 12. Would you be willing to use technology (for example, a wearable device) to measure your overall energy level during the day or night?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Yes
+          - value: b
+            text: No
+          - value: c
+            text: I don't know
+      - key: exit_13
+        question: 13. Which uses of the information collected by wearable technology, about your sleep, energy level, physical activity or other activities of daily living, would you find most valuable?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: To help me talk to my doctor about my symptoms or changes in symptoms of IBD
+          - value: b
+            text: To help my doctor better understand my symptoms or changes in symptoms of IBD
+          - value: c
+            text: To help me compare my symptoms or changes in symptoms of IBD to those of other people with IBD
+          - value: d
+            text: To help motivate myself to keep up with treatment plans
+  - type: survey
+    key: group_8
+    title: Corsano
+    description: "Wearable devices, like the ones that were included for this study, may help researchers and health care providers better understand how IBD impacts patients. The researchers on this study would like to know about your experiences with the devices to inform potential use of these devices in future IBD studies."
+    questions:
+      - key: corsano_1
+        question: (Corsano) I thought it was easy putting the device on and taking it off.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_2
+        question: (Corsano) I experienced discomfort wearing the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_3
+        question: (Corsano) I experienced trouble sleeping due to the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_4
+        question: (Corsano) My device stayed in place.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_5
+        question: (Corsano) I would like to use the device frequently.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_6
+        question: (Corsano) I found the device easy to use.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_7
+        question: (Corsano) I needed support of a technical person to be able to use the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_8
+        question: (Corsano) I experienced restrictions in my daily activities due to device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_9
+        question: (Corsano) I felt confident wearing the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_10
+        question: (Corsano) I needed to learn a lot of things before I could start using the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_11
+        question: (Corsano) I found various functions of the device were well integrated (wearing, charging, application features etc.)
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_12
+        question: (Corsano) I found the device very cumbersome to use.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: corsano_13
+        question: (Corsano) I experienced skin irritation wearing the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+  - type: survey
+    key: group_9
+    title: "Oura"
+    description: "Wearable devices, like the ones that were included for this study, may help researchers and health care providers better understand how IBD impacts patients. The researchers on this study would like to know about your experiences with the devices to inform potential use of these devices in future IBD studies."
+    questions:
+      - key: oura_1
+        question: (Oura) I thought it was easy putting the device on and taking it off.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_2
+        question: (Oura) I experienced discomfort wearing the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_3
+        question: (Oura) I experienced trouble sleeping due to the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_4
+        question: (Oura) My device stayed in place.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_5
+        question: (Oura) I would like to use the device frequently.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_6
+        question: (Oura) I found the device easy to use.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_7
+        question: (Oura) I needed support of a technical person to be able to use the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_8
+        question: (Oura) I experienced restrictions in my daily activities due to device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_9
+        question: (Oura) I felt confident wearing the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_10
+        question: (Oura) I needed to learn a lot of things before I could start using the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_11
+        question: (Oura) I found various functions of the device were well integrated (wearing, charging, application features etc.)
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_12
+        question: (Oura) I found the device very cumbersome to use.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: oura_13
+        question: (Oura) I experienced skin irritation wearing the device.
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
