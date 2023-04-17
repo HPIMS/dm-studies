@@ -11,6 +11,7 @@ const defaultGracePeriod = {
   WEEKLY: 1,
   BI_WEEKLY: 2,
   MONTHLY: 4,
+  QUARTERLY: 4,
 };
 
 async function getInheritedTaskFiles(fileDefinitions) {
