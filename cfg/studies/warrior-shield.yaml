@@ -81,7 +81,7 @@ tasks:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -95,7 +95,7 @@ tasks:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -109,7 +109,7 @@ tasks:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -123,7 +123,7 @@ tasks:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -137,7 +137,7 @@ tasks:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -151,7 +151,7 @@ tasks:
       type: TIMETABLE
       timetable: [0, 6, 8, 18]
       timetableUnits: WEEKS
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
