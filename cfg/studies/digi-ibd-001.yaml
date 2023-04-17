@@ -107,7 +107,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 8, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -141,7 +141,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 8, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -175,7 +175,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -203,7 +203,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -231,7 +231,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -259,7 +259,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -287,7 +287,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -315,7 +315,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 2, 4, 6, 10, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -343,7 +343,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:
@@ -371,7 +371,7 @@ surveys:
       type: TIMETABLE
       timetable: [0, 14]
       timetableUnits: WEEKS
-      graceDays: 3
+      gracePeriod: 3
     triggers:
       - action: SHOW
         condition:

@@ -74,13 +74,14 @@ const dftSurveyCfg = {};
 const dftMultimediaCfg = {};
 const dftInterventionCfg = {};
 
-const defaultGraceDays = {
+const defaultGracePeriod = {
   ALWAYS: 0,
   ONCE: 0,
   DAILY: 0,
   WEEKLY: 1,
   BI_WEEKLY: 2,
   MONTHLY: 4,
+  QUARTERLY: 4,
 };
 
 async function processSurveys() {
@@ -118,8 +119,8 @@ async function processSurveys() {
     data.version = version;
 
     // add default grace days to the schedule for "PERIOD" schedules
-    if (schedule.type === "PERIOD" && !schedule.graceDays) {
-      schedule.graceDays = defaultGraceDays[schedule.period];
+    if (schedule.type === "PERIOD" && !schedule.gracePeriod) {
+      schedule.gracePeriod = defaultGracePeriod[schedule.period];
     }
 
     const surveyCfg = {
@@ -184,8 +185,8 @@ async function processMultimedia() {
     data.version = version;
 
     // add default grace days to the schedule for "PERIOD" schedules
-    if (schedule.type === "PERIOD" && !schedule.graceDays) {
-      schedule.graceDays = defaultGraceDays[schedule.period];
+    if (schedule.type === "PERIOD" && !schedule.gracePeriod) {
+      schedule.gracePeriod = defaultGracePeriod[schedule.period];
     }
 
     const multimediaCfg = {
@@ -251,8 +252,8 @@ async function processInterventions() {
     data.version = version;
 
     // add default grace days to the schedule for "PERIOD" schedules
-    if (schedule.type === "PERIOD" && !schedule.graceDays) {
-      schedule.graceDays = defaultGraceDays[schedule.period];
+    if (schedule.type === "PERIOD" && !schedule.gracePeriod) {
+      schedule.gracePeriod = defaultGracePeriod[schedule.period];
     }
 
     const interventionCfg = {
