@@ -148,7 +148,7 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -171,7 +171,7 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -213,7 +213,7 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
-      graceDays: 7
+      gracePeriod: 7
       delay: 2
       delayUnits: WEEKS
     triggers:

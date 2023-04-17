@@ -8,7 +8,7 @@ schedule:
   type: TIMETABLE
   timetable: [0, 2, 4, 6, 8, 14]
   timetableUnits: WEEKS
-  graceDays: 3
+  gracePeriod: 3
 timeRequirements: 
   time: 30
   timeUnits: seconds
