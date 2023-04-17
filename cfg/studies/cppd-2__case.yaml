@@ -56,44 +56,53 @@ tasks:
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: promis-fatigue-4a-v1.0
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: promis-physical-function-4a-v1.0
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: promis-sleep-disturbance-4a-v1.0
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: mpq
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: pseq
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: promis-global-mental-health-2a-v1.2
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: euro-qol-eq-5d-5l
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3
   - key: ipaq
     schedule:
       type: PERIOD
       period: WEEKLY
+      gracePeriod: 1
       initialGracePeriod: 3

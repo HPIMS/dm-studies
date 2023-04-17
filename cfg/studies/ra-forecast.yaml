@@ -84,6 +84,7 @@ tasks:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
+      gracePeriod: 2
       delay: 2
       delayUnits: WEEKS
     triggers:

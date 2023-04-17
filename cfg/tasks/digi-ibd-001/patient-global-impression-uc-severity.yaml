@@ -13,8 +13,8 @@ schedule:
     - 8
     - 14
   timetableUnits: WEEKS
-  graceDays: 3
-timeRequirements:
+  gracePeriod: 3
+timeRequirements: 
   time: 30
   timeUnits: seconds
 name: Ulcerative colitis severity

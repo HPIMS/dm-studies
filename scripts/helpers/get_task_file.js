@@ -4,13 +4,14 @@ const YAML = require("yaml");
 
 const log = require("./log");
 
-const defaultGraceDays = {
+const defaultGracePeriod = {
   ALWAYS: 0,
   ONCE: 0,
   DAILY: 0,
   WEEKLY: 1,
   BI_WEEKLY: 2,
   MONTHLY: 4,
+  QUARTERLY: 4,
 };
 
 async function getInheritedTaskFiles(fileDefinitions) {
@@ -181,10 +182,10 @@ async function getTaskFile(group, file) {
   // add default grace days to the schedule for "PERIOD" schedules
   if (
     taskDefinition.schedule.type === "PERIOD" &&
-    !taskDefinition.schedule.graceDays
+    !taskDefinition.schedule.gracePeriod
   ) {
-    taskDefinition.schedule.graceDays =
-      defaultGraceDays[taskDefinition.schedule.period];
+    taskDefinition.schedule.gracePeriod =
+      defaultGracePeriod[taskDefinition.schedule.period];
   }
 
   return taskDefinition;
