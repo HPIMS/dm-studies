@@ -373,7 +373,7 @@ sections:
       ]]
     ]
   - type: video
-    key: setup-video-2-pre
+    key: setup-video-2-post
     videoId: dst-2
     autoplay: true
     beginMuted: true
@@ -384,7 +384,7 @@ sections:
       - Forward
     resizeMode: contain
   - type: document
-    key: hrv-outro-pre
+    key: hrv-outro-post
     content: [
       ["H3", ["Underline", "Heart Rate Variability"]],
       ["BodyLarge", "Did you do a 1 min Breath session as explained in the last video?"],
