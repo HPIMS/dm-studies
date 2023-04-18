@@ -67,8 +67,19 @@ sections:
       ]]
     ]
   - type: video
-    key: setup_video
-    videoId: dona_fb_messenger
+    key: setup-video-1
+    videoId: dona-fb-messenger-1
+    autoplay: true
+    beginMuted: true
+    controls:
+      - PlayPause
+      - MuteUnmute
+      - Rewind
+      - Forward
+    resizeMode: contain
+  - type: video
+    key: setup-video-2
+    videoId: dona-fb-messenger-2
     autoplay: true
     beginMuted: true
     controls:
