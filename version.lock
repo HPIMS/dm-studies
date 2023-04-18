@@ -1,30 +1,36 @@
 active:
   studies:
     cppd-1:
-      - c086fbc8d05a256f312c2fdb866a269e
-      - 5
+      - 83f6522275530728a98d90871aa07bee
+      - 6
     cppd-2:
       - fcb31d5f6c8ee5ec42ba6ac78636bb02
       - 4
     cppd-2__case:
-      - 3324a090f34eece3784d62b09f363086
-      - 4
+      - d90fa1f2372035417ce56d2ba0d182ec
+      - 6
     cppd-2__control:
-      - 8357b6eb9182902471d40cf0cc7ec99c
-      - 4
-    cramp:
-      - 20ba4d992ee1192e2467f2f1245e6307
-      - 2
+      - a4daae78b9da7beb71bf2b3ee2e81c20
+      - 6
     digi-ibd-001:
-      - 52b35465a4221aefe010ee6475dfb2be
-      - 9
+      - 4d5eac599a22d3092e48ce7279585755
+      - 8
     ibd-forecast:
-      - 7f5e027b6ee658063cc3156812d70b14
-      - 21
+      - ca5533628af85798c4c36c3ddf07f4c5
+      - 22
     ra-forecast:
-      - a880679882962b5c62e8eeb62bf58b2f
-      - 4
-  tasks:
+      - 31e411db7531ea864b6f0f799a590152
+      - 5
+  surveys:
+    baseline_cd_risc_survey:
+      - 4d9f3393a80ecb9d804462d7e1883247
+      - 8
+    baseline_demographics:
+      - 865543107dd2c4676521ae739d243726
+      - 12
+    baseline_medical_history:
+      - fb15b947a95f5912c4ea9145a8ec522b
+      - 13
     cppd-1::bladder-irritants:
       - b206466f439552f221cf210758f4d232
       - 3
@@ -56,28 +62,28 @@ active:
       - ea838fab81dbb21fd702158232360582
       - 5
     digi-ibd-001::patient-global-impression-crohns-change:
-      - 472986df2301740493af263e733be186
+      - 47d1ac62c9dd9f7fedba23069af355cd
       - 5
     digi-ibd-001::patient-global-impression-crohns-severity:
-      - ce84af7b43c77c67aa2e81edd8033ba1
+      - 10f558f193f841bca8aa0d5e42ff44b5
       - 5
     digi-ibd-001::patient-global-impression-fatigue-change:
-      - 284f25a5c35596b6ee7eda76e75eb842
+      - fcdafd8ef75ba40e43e12ed022c327cd
       - 5
     digi-ibd-001::patient-global-impression-fatigue-severity:
-      - 9f6f772eb2718f18ee9254cf12ddc1ac
+      - e6a01088f867fd6e9aa8a0bf5ac725a8
       - 5
     digi-ibd-001::patient-global-impression-sleep-disturbance-change:
-      - 3ca580fdb7b5f32552524565fc539821
+      - 4b8f8f163ea1b4cf0e0dad11966d1b9a
       - 5
     digi-ibd-001::patient-global-impression-sleep-disturbance-severity:
-      - 763fb9a043b5ef6bc80f9dba4941dc58
+      - f619d5914327139397634aec646b1aaa
       - 5
     digi-ibd-001::patient-global-impression-uc-change:
-      - a1bada44f18f0ae9de45e492eaea5c8c
+      - 18e8606d4d722cfe40c0ea1e9e2ddda0
       - 5
     digi-ibd-001::patient-global-impression-uc-severity:
-      - ff3dcc4cbe66eb96314d6745466d37d3
+      - 13433a9d232361edfd5b966296994089
       - 5
     digi-ibd-001::pro-3-screening:
       - b78efc2dfed19fc1f374f9213e2b6346
