@@ -172,28 +172,24 @@ tasks:
 
   - key: dst
     rank: 120
-    # TODO: REMOVE
     schedule:
       type: PERIOD
-      period: ALWAYS
-    # schedule:
-    #   type: PERIOD
-    #   period: ONCE
-    #   delay: 1
-    #   delayUnits: DAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: CALCULATION
-    #           # Today in m + L - 14 : m + L - 7;
-    #           fn: cramp::ovulation-phase
-    #           args: {}
-    #         - type: COMPLETED
-    #           resource: pre-dst
-    #           operator: ">"
-    #           score: 0
+      period: ONCE
+      delay: 1
+      delayUnits: DAYS
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: CALCULATION
+              # Today in m + L - 14 : m + L - 7;
+              fn: cramp::ovulation-phase
+              args: {}
+            - type: COMPLETED
+              resource: pre-dst
+              operator: ">"
+              score: 0
 
   - key: daily-check-in
     rank: 130
@@ -275,46 +271,38 @@ tasks:
 
   - key: dona-facebook
     rank: 190
-    # TODO: REMOVE
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: CALCULATION
-    #           fn: cramp::cycle-complete
-    #           args: {}
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: cramp::demographics
-    #             section: sdh
-    #             question: fb_messenger
-    #             operator: =
-    #             value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: CALCULATION
+              fn: cramp::cycle-complete
+              args: {}
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: cramp::demographics
+                section: sdh
+                question: fb_messenger
+                operator: =
+                value: yes
 
   - key: dona-whatsapp
     rank: 200
-    # TODO: REMOVE
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: AND
-    #       tasks:
-    #         - type: CALCULATION
-    #           fn: cramp::cycle-complete
-    #           args: {}
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: cramp::demographics
-    #             section: sdh
-    #             question: whatsapp
-    #             operator: =
-    #             value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          type: AND
+          tasks:
+            - type: CALCULATION
+              fn: cramp::cycle-complete
+              args: {}
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: cramp::demographics
+                section: sdh
+                question: whatsapp
+                operator: =
+                value: yes
