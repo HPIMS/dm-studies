@@ -1,0 +1,10 @@
+key: ema-morning
+scorable: false
+schedule:
+  type: PERIOD
+  period: DAILY
+  timeOfDay:
+    - - "0600"
+      - "1159"
+name: How Do You Feel? (Morning)
+_extends: ema 

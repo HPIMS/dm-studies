@@ -1,0 +1,104 @@
+key: clearance
+scorable: true
+schedule:
+  type: PERIOD
+  period: NEVER
+repeat: 0
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: BP Clearance
+intro:
+  title: ""
+  description: ""
+outro:
+  title: ""
+  description: ""
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: "Please make sure that you comply with the checklist:"
+    questions:
+      - key: smoked
+        required: true
+        question: Have you smoked in the last 30 minutes?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: caffeine
+        required: true
+        question: Have you drunk caffeine in the last 30 minutes?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: exercised
+        required: true
+        question: Have you exercised in the last 30 minutes?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: medication
+        required: true
+        question: Have you taken any medications in the last 30 minutes that could alter
+          your blood pressure?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
+      - key: quiet
+        required: true
+        question: Are you in a quiet room, with a comfortable temperature that has a
+          table and a chair?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 0
+          - value: no
+            text: No
+            score: 1
+      - key: bladder
+        required: true
+        question: Is your bladder empty?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 0
+          - value: no
+            text: No
+            score: 1
+      - key: stress
+        required: true
+        question: What is your current stress level?
+        type: SINGLE_CHOICE
+        options:
+          - value: low
+            text: No Stress
+            score: 0
+          - value: medium
+            text: Some Stress
+            score: 0
+          - value: high
+            text: Very Stressed
+            score: 0

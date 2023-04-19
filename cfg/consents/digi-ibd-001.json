@@ -31,9 +31,10 @@
   ],
   "options": [
     {
+      "type": "single",
       "title": "Genenetic and protein testing.",
       "summary": "Do you agree to have your blood collected for genetic and protein testing? These stored samples may be used for future research.",
-      "required": false,
+      "required": true,
       "accept": "Yes, I consent",
       "reject": "No, I do not consent"
     }

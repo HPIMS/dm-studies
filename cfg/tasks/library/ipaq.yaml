@@ -1,0 +1,168 @@
+key: ipaq
+scorable: false
+metadata:
+  instrument: International Physical Activity Questionnaire (IPAQ)
+  references:
+    - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5934936/
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 3
+  timeUnits: minutes
+name: Physical Activity
+sections:
+  - type: survey
+    key: vigorous_activity
+    title: ""
+    description: Think about all the vigorous activities that you did in the last 7
+      days. Vigorous physical activities refer to activities that take hard
+      physical effort and make you breathe much harder than normal. Think only
+      about those physical activities that you did for at least 10 minutes at a
+      time.
+    questions:
+      - key: vigorous_trigger
+        question: During the last 7 days, did you do any vigorous physical activities
+          like heavy lifting, digging, aerobics, or fast bicycling?
+        required: true
+        type: YESNO_CHOICE
+      - key: vigorous_days
+        question: On how many days did you do vigorous physical activities?
+        placeholder: e.g. 2
+        type: NUMERIC
+        minValue: 0
+        maxValue: 7
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: vigorous_activity
+                question: vigorous_trigger
+                operator: =
+                value: yes
+      - key: vigorous_time
+        question: How much time did you usually spend doing vigorous physical activities
+          on one of those days?
+        description: Leave blank if unsure
+        type: DURATION
+        hours: true
+        maxHours: 12
+        minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: vigorous_activity
+                question: vigorous_trigger
+                operator: =
+                value: yes
+  - type: survey
+    key: moderate_activity
+    title: ""
+    description: Think about all the moderate activities that you did in the last 7
+      days. Moderate activities refer to activities that take moderate physical
+      effort and make you breathe somewhat harder than normal. Think only about
+      those physical activities that you did for at least 10 minutes at a time.
+    questions:
+      - key: moderate_trigger
+        question: During the last 7 days, did you do any moderate physical activities
+          like carrying light loads, bicycling at a regular pace, or doubles
+          tennis? Do not include walking.
+        required: true
+        type: YESNO_CHOICE
+      - key: moderate_days
+        question: On how many days did you do moderate physical activities?
+        placeholder: e.g. 2
+        type: NUMERIC
+        minValue: 0
+        maxValue: 7
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: moderate_activity
+                question: moderate_trigger
+                operator: =
+                value: yes
+      - key: moderate_time
+        question: How much time did you usually spend doing moderate physical activities
+          on one of those days?
+        description: Leave blank if unsure
+        type: DURATION
+        hours: true
+        maxHours: 12
+        minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: moderate_activity
+                question: moderate_trigger
+                operator: =
+                value: yes
+  - type: survey
+    key: walking
+    title: ""
+    description: Think about the time you spent walking in the last 7 days. This
+      includes at work and at home, walking to travel from place to place, and
+      any other walking that you have done solely for recreation, sport,
+      exercise, or leisure.
+    questions:
+      - key: walking_trigger
+        question: During the last 7 days, did you do any walking?
+        required: true
+        type: YESNO_CHOICE
+      - key: walking_days
+        question: On how many days did you walk?
+        placeholder: e.g. 2
+        type: NUMERIC
+        minValue: 0
+        maxValue: 7
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: walking
+                question: walking_trigger
+                operator: =
+                value: yes
+      - key: moderate_time
+        question: How much time did you usually spend walking on one of those days?
+        description: Leave blank if unsure
+        type: DURATION
+        hours: true
+        maxHours: 12
+        minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: walking
+                question: walking_trigger
+                operator: =
+                value: yes
+  - type: survey
+    key: sitting
+    title: ""
+    description: The last question is about the time you spent sitting on weekdays
+      during the last 7 days. Include time spent at work, at home, while doing
+      course work and during leisure time. This may include time spent sitting
+      at a desk, visiting friends, reading, or sitting or lying down to watch
+      television.
+    questions:
+      - key: sitting_time
+        question: During the last 7 days, how much time did you spend sitting on a week
+          day?
+        description: Leave blank if unsure
+        type: DURATION
+        hours: true
+        maxHours: 24
+        minutes: true
+        hoursPlaceholder: hours per day
+        minutesPlaceholder: minutes per day

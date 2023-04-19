@@ -1,0 +1,111 @@
+key: ema
+scorable: false
+schedule:
+  type: PERIOD
+  period: DAILY
+  timeOfDay:
+    - - "0600"
+      - "1159"
+    - - "1200"
+      - "1759"
+    - - "1800"
+      - "2359"
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: How Do You Feel?
+intro:
+  title: How do you feel?
+  description: [
+    [
+      "BodyLarge",
+      "Please think about the last 10 minutes and complete the following survey."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Bold",
+        "This is a time-dependent survey! Answering this survey as soon as possible will improve the CRAMP study results!"
+      ]
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is answering this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "In the CRAMP Study, we want to closely characterize the relationship between stress, resilience and menstrual cramps and symptoms. Since stress and pain usually come and go, it is of uttermost importance that we assess how they change not only day by day, but also during the day. Ultimately, this will enable us to look for temporal patterns of pain, stress and their relationship and unlock these complex interactions. We will therefore ask you  to answer 4 very short questions – 3 times a day. This is called a ecologic momentary assessment, because we want to know how you are feeling exactly in that moment. Answering these momentary assessments will enable us to have a more precise picture of how stress and pain change."
+    ]
+  ]
+sections:
+  - type: survey
+    key: pain
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your pain intensity
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: pain intensity
+        ask: Please think about your pain intensity right now.
+        scaleExplanation: 0 is no pain, 100 is the worst pain imaginable.
+        prompt: Rate your pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain imaginable
+  - type: survey
+    key: stress
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your stress
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: stress
+        ask: Please think about your stress right now.
+        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
+        prompt: Rate your stress.
+        minLabel: No stress
+        maxLabel: The worst stress imaginable
+  - type: survey
+    key: mood_1
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (happiness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (happiness)
+        ask: Please think about your mood (happiness) right now.
+        scaleExplanation: 0 is unhappy, 100 is happy.
+        prompt: Rate your mood (happiness).
+        minLabel: Unhappy
+        maxLabel: Happy
+  - type: survey
+    key: mood_2
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (calmness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (calmness)
+        ask: Please think about your mood (calmness) right now.
+        scaleExplanation: 0 is excited, 100 is calm.
+        prompt: Rate your mood (calmness).
+        minLabel: Excited
+        maxLabel: Calm

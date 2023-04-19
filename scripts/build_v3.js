@@ -1,508 +1,204 @@
+// TODO: make sync instead of using waterfall everywhere.
 const fs = require("fs");
 const path = require("path");
 const YAML = require("yaml");
-const chalk = require("chalk");
 
-const log = {
-  error: (t) => console.log(chalk.red(t)),
-  warning: (t) => console.log(chalk.yellow(t)),
-  info: (t) => console.log(chalk.cyan(t)),
-  important: (t) => console.log(chalk.green(t)),
-};
+const log = require("./helpers/log");
+const cleandir = require("./helpers/cleandir");
+const mkdir = require("./helpers/mkdir");
+const waterfall = require("./helpers/waterfall");
+const getConsentFile = require("./helpers/get_consent_file");
+const getStudyFile = require("./helpers/get_study_file");
+const getTaskFile = require("./helpers/get_task_file");
 
 const versions = YAML.parse(
-  fs.readFileSync("./version.lock", { encoding: "utf-8" })
+  fs.readFileSync(path.join(__dirname, "../version.lock"), {
+    encoding: "utf-8",
+  })
 );
 
-async function mkdir(path) {
-  try {
-    await fs.promises.stat(path);
-  } catch (err) {
-    await fs.promises.mkdir(path, { recursive: true });
-  }
-}
+async function processTasks(distDir) {
+  const tasks = Object.keys(versions.active.tasks);
+  const indexes = { surveys: [], multimedia: [], interventions: [] };
 
-async function getFile(dir, group, file) {
-  let rawBaseData = "";
-  const rawData = await fs.promises.readFile(path.join(dir, group, file), {
-    encoding: "utf-8",
+  const executors = tasks.map((compositeKey) => async () => {
+    const [, groupKey, taskKey] = compositeKey.match(/^(.*?)::(.*)/);
+    const [, version] = versions.active.tasks[compositeKey];
+    const task = await getTaskFile(groupKey, `${taskKey}.yaml`);
+
+    // in v3 videos and interventions are compiled into their own subdirectories.
+    const taskType = task.sections.reduce((typ, sec) => {
+      if (!typ || sec.type === typ) {
+        return sec.type;
+      }
+      return "composite";
+    }, undefined);
+
+    if (taskType === "video" || taskType === "intervention") {
+      Object.assign(task, { ...task.sections[0] });
+      delete task.type;
+      delete task.sections;
+    }
+
+    const subdir =
+      taskType === "survey"
+        ? "surveys"
+        : taskType === "video"
+        ? "multimedia"
+        : taskType === "intervention"
+        ? "interventions"
+        : undefined;
+
+    // If the task type isn't valid for this build version, exit.
+    if (!subdir) return;
+
+    task.version = version;
+
+    // Write the task JSON
+    await fs.promises.writeFile(
+      path.join(distDir, subdir, `${compositeKey}.json`),
+      JSON.stringify({ ...task, key: compositeKey, type: taskType })
+    );
+
+    // Build the task index record.
+    const indexRec = {
+      key: compositeKey,
+      type: taskType,
+      name: task.name,
+      version,
+    };
+    indexes[subdir].push(indexRec);
   });
 
-  const data = YAML.parse(rawData) || {};
-  const { _extends } = data;
+  await waterfall(executors);
 
-  if (_extends) {
-    const extendsFile = `${_extends}.yaml`;
-    // Try the current group first. If that fails, try the library.
-    try {
-      rawBaseData = await fs.promises.readFile(
-        path.join(dir, group, extendsFile),
-        {
-          encoding: "utf-8",
-        }
-      );
-    } catch (err) {
-      log.warning(
-        `Could not find ${extendsFile} in ${group}. Checking library.`
-      );
-      try {
-        rawBaseData = await fs.promises.readFile(
-          path.join(dir, "library", extendsFile),
-          {
-            encoding: "utf-8",
+  // Write the task index file
+  await fs.promises.writeFile(
+    path.join(distDir, "surveys", "index.json"),
+    JSON.stringify(indexes.surveys)
+  );
+  await fs.promises.writeFile(
+    path.join(distDir, "multimedia", "index.json"),
+    JSON.stringify(indexes.multimedia)
+  );
+  await fs.promises.writeFile(
+    path.join(distDir, "interventions", "index.json"),
+    JSON.stringify(indexes.interventions)
+  );
+}
+
+async function processStudies(distDir) {
+  const studies = Object.keys(versions.active.studies);
+  const index = [];
+
+  const executors = studies.map((studyKey) => async () => {
+    const [, version] = versions.active.studies[studyKey];
+    const study = await getStudyFile(`${studyKey}.yaml`);
+
+    study.studyKey = studyKey;
+    study.version = version;
+
+    const tasks = [];
+    // The study defines tasks by string key, or by an object with
+    // a key that matches a task key and any overrides to the default
+    // task schedule.
+    const taskBuilders = study.tasks?.map((task) => async () => {
+      const reqTaskKey = typeof task === "string" ? task : task.key;
+
+      // Find the composite key for the referenced task. If the task
+      // exists in the study specific directory use that one, otherwise
+      // look for it in the library.
+      let compositeTaskKey;
+      if (versions.active.tasks[`${studyKey}::${reqTaskKey}`]) {
+        compositeTaskKey = `${studyKey}::${reqTaskKey}`;
+      } else if (versions.active.tasks[`library::${reqTaskKey}`]) {
+        compositeTaskKey = `library::${reqTaskKey}`;
+      }
+
+      if (compositeTaskKey) {
+        const [, groupKey, taskKey] = compositeTaskKey.match(/^(.*?)::(.*)/);
+        const cfg = await getTaskFile(groupKey, `${taskKey}.yaml`);
+        const [, version] = versions.active.tasks[compositeTaskKey];
+
+        const taskType = cfg.sections.reduce((typ, sec) => {
+          if (!typ || sec.type === typ) {
+            return sec.type;
           }
-        );
-      } catch (err) {
-        log.error(`Could not find ${extendsFile} in library. Skipping.`);
-      }
-    }
-  }
-  return { ...(YAML.parse(rawBaseData) || {}), ...data };
-}
+          return "composite";
+        }, undefined);
 
-const dftSurveyCfg = {};
-const dftMultimediaCfg = {};
-const dftInterventionCfg = {};
-
-const defaultGracePeriod = {
-  ALWAYS: 0,
-  ONCE: 0,
-  DAILY: 0,
-  WEEKLY: 1,
-  BI_WEEKLY: 2,
-  MONTHLY: 4,
-  QUARTERLY: 4,
-};
-
-async function processSurveys() {
-  log.info("*****************************************");
-  log.info("****        Building Surveys         ****");
-  log.info("*****************************************");
-  const index = [];
-
-  const surveyDir = path.join(__dirname, "../cfg/surveys");
-  const distDir = path.join(__dirname, "../dist/v3");
-
-  const surveys = Object.keys(versions.active.surveys);
-
-  const promises = surveys.map(async (surveyKey) => {
-    let study;
-    [, study, survey] = surveyKey.match(/^(.*?)::(.*)/) || [, null, surveyKey];
-    let cfg;
-    if (study) {
-      cfg = await getFile(surveyDir, study, `${survey}.yaml`);
-    } else {
-      // this is a fallback for 'legacy' surveys
-      cfg = await getFile(surveyDir, "legacy", `${survey}.yaml`);
-    }
-
-    const version = versions.active.surveys[surveyKey][1];
-
-    log.info(`[${surveyKey}] Processing`);
-
-    const { name, short, schedule, timeEstimate, ...data } = cfg;
-
-    // Remove configs we don't need
-    delete data.active;
-
-    // set additional configs
-    data.version = version;
-
-    // add default grace days to the schedule for "PERIOD" schedules
-    if (schedule.type === "PERIOD" && !schedule.gracePeriod) {
-      schedule.gracePeriod = defaultGracePeriod[schedule.period];
-    }
-
-    const surveyCfg = {
-      version,
-      schedule,
-      timeEstimate,
-      name,
-      short,
-      editable: data.editable,
-    };
-    dftSurveyCfg[surveyKey] = surveyCfg;
-
-    log.info(`[${surveyKey}] Adding to survey index.`);
-    index.push({ key: surveyKey, version, name, description: short });
-
-    log.important(
-      `[${surveyKey}] Finished processing. Writing ${surveyKey}.json`
-    );
-    await fs.promises.writeFile(
-      `${distDir}/surveys/${surveyKey}.json`,
-      JSON.stringify({ ...data, key: surveyKey })
-    );
-  });
-
-  await Promise.all(promises);
-  await fs.promises.writeFile(
-    `${distDir}/surveys/index.json`,
-    JSON.stringify(index)
-  );
-}
-
-async function processMultimedia() {
-  log.info("*****************************************");
-  log.info("****      Building Multimedia        ****");
-  log.info("*****************************************");
-  const index = [];
-
-  const multimediaDir = path.join(__dirname, "../cfg/multimedia");
-  const distDir = path.join(__dirname, "../dist/v3");
-
-  const multimedia = Object.keys(versions.active.multimedia);
-
-  const promises = multimedia.map(async (multimediaKey) => {
-    let study;
-    [, study, media] = multimediaKey.match(/^(.*?)::(.*)/) || [
-      ,
-      null,
-      multimediaKey,
-    ];
-    const cfg = await getFile(multimediaDir, study, `${media}.yaml`);
-    const version = versions.active.multimedia[multimediaKey][1];
-
-    log.info(`[${multimediaKey}] Processing`);
-
-    const { name, short, schedule, timeEstimate, type, ...data } = cfg;
-
-    // Remove configs we don't need
-    delete data.active;
-
-    // set additional configs
-    data.version = version;
-
-    // add default grace days to the schedule for "PERIOD" schedules
-    if (schedule.type === "PERIOD" && !schedule.gracePeriod) {
-      schedule.gracePeriod = defaultGracePeriod[schedule.period];
-    }
-
-    const multimediaCfg = {
-      version,
-      type,
-      schedule,
-      timeEstimate,
-      name,
-      short,
-      editable: data.editable,
-    };
-    dftMultimediaCfg[multimediaKey] = multimediaCfg;
-
-    log.info(`[${multimediaKey}] Adding to multimedia index.`);
-    index.push({ key: multimediaKey, type, version, name, description: short });
-
-    log.important(
-      `[${multimediaKey}] Finished processing. Writing ${multimediaKey}.json`
-    );
-    await fs.promises.writeFile(
-      `${distDir}/multimedia/${multimediaKey}.json`,
-      JSON.stringify({ ...data, key: multimediaKey })
-    );
-  });
-
-  await Promise.all(promises);
-  await fs.promises.writeFile(
-    `${distDir}/multimedia/index.json`,
-    JSON.stringify(index)
-  );
-}
-
-async function processInterventions() {
-  log.info("*****************************************");
-  log.info("****    Building Interventions       ****");
-  log.info("*****************************************");
-  const index = [];
-
-  const interventionsDir = path.join(__dirname, "../cfg/interventions");
-  const distDir = path.join(__dirname, "../dist/v3");
-
-  const interventions = Object.keys(versions.active.interventions);
-
-  const promises = interventions.map(async (interventionKey) => {
-    let study;
-    [, study, intervention] = interventionKey.match(/^(.*?)::(.*)/) || [
-      ,
-      null,
-      interventionKey,
-    ];
-    const cfg = await getFile(interventionsDir, study, `${intervention}.yaml`);
-    const version = versions.active.interventions[interventionKey][1];
-
-    log.info(`[${interventionKey}] Processing`);
-
-    const { name, short, schedule, timeEstimate, type, ...data } = cfg;
-
-    // Remove configs we don't need
-    delete data.active;
-
-    // set additional configs
-    data.version = version;
-
-    // add default grace days to the schedule for "PERIOD" schedules
-    if (schedule.type === "PERIOD" && !schedule.gracePeriod) {
-      schedule.gracePeriod = defaultGracePeriod[schedule.period];
-    }
-
-    const interventionCfg = {
-      version,
-      type,
-      schedule,
-      timeEstimate,
-      name,
-      short,
-      editable: data.editable,
-    };
-    dftInterventionCfg[interventionKey] = interventionCfg;
-
-    log.info(`[${interventionKey}] Adding to interventions index.`);
-    index.push({
-      key: interventionKey,
-      type,
-      version,
-      name,
-      description: short,
-    });
-
-    log.important(
-      `[${interventionKey}] Finished processing. Writing ${interventionKey}.json`
-    );
-    await fs.promises.writeFile(
-      `${distDir}/interventions/${interventionKey}.json`,
-      JSON.stringify({ ...data, key: interventionKey })
-    );
-  });
-
-  await Promise.all(promises);
-  await fs.promises.writeFile(
-    `${distDir}/interventions/index.json`,
-    JSON.stringify(index)
-  );
-}
-
-async function processConsents() {
-  log.info("*****************************************");
-  log.info("****        Building Consents        ****");
-  log.info("*****************************************");
-
-  const consentDir = path.join(__dirname, "../cfg/consents");
-  const distDir = path.join(__dirname, "../dist/v3");
-
-  const studies = Object.keys(versions.active.studies);
-
-  const promises = studies.map(async (study) => {
-    if (study === "baseline") {
-      return;
-    }
-    try {
-      const file = await fs.promises.readFile(
-        path.join(consentDir, `${study}.json`),
-        { encoding: "utf-8" }
-      );
-      await fs.promises.writeFile(`${distDir}/consents/${study}.json`, file);
-    } catch (err) {
-      log.error(err);
-    }
-  });
-  await Promise.all(promises);
-}
-
-async function processStudies() {
-  log.info("*****************************************");
-  log.info("****        Building Studies         ****");
-  log.info("*****************************************");
-  const index = [];
-
-  const studyDir = path.join(__dirname, "../cfg/studies");
-  const distDir = path.join(__dirname, "../dist/v3");
-
-  const studies = Object.keys(versions.active.studies);
-
-  const promises = studies.map(async (study) => {
-    if (study === "baseline") {
-      return;
-    }
-    const data = await getFile(studyDir, "", `${study}.yaml`);
-
-    const {
-      key: studyKey,
-      visibility,
-      irb,
-      openEnrollment,
-      shortDescription,
-      timeResponsibility,
-      imageId,
-      animationId,
-      videoId,
-    } = data;
-
-    const version = versions.active.studies[study][1];
-
-    // Remove configs we don't need
-    delete data.visibility;
-    delete data.shortDescription;
-    // set additional configs
-    data.version = version;
-
-    log.info(`[${study}] Processing`);
-
-    log.info(`[${study}] Setting survey configs.`);
-    // Pull in the real config object for the study's survey definitions
-    const surveyTasks = [...(data.surveys || []), ...(data.baseline || [])].map(
-      (survey) => {
-        const reqSurveyKey = typeof survey === "string" ? survey : survey.key;
-
-        let actualSurveyKey;
-        if (versions.active.surveys[`${study}::${reqSurveyKey}`]) {
-          actualSurveyKey = `${study}::${reqSurveyKey}`;
-        } else if (versions.active.surveys[`library::${reqSurveyKey}`]) {
-          actualSurveyKey = `library::${reqSurveyKey}`;
-        } else if (versions.active.surveys[reqSurveyKey]) {
-          actualSurveyKey = reqSurveyKey;
-        } else {
-          return undefined;
+        // Pull out any configs for the task that we need at the study level.
+        const taskRec = {
+          key: compositeTaskKey,
+          type: taskType,
+          name: cfg.name,
+          schedule: cfg.schedule,
+          timeEstimate: cfg.timeEstimate,
+          taskType,
+          version,
+        };
+        // If we are using an object for the task definition, apply any overrides.
+        if (typeof task !== "string") {
+          Object.assign(taskRec, { ...task, key: compositeTaskKey });
         }
-
-        // If we've defined the survey in the study config as a string
-        // it means we just want to take all defaults.
-        if (typeof survey === "string") {
-          return {
-            key: actualSurveyKey,
-            type: "survey",
-            ...dftSurveyCfg[actualSurveyKey],
-          };
-        }
-        // Otherwise, we'll override the default with our custom configs
-        return {
-          ...dftSurveyCfg[actualSurveyKey],
-          ...survey,
-          key: actualSurveyKey,
-          type: "survey",
-        };
+        tasks.push(taskRec);
       }
+    });
+
+    await waterfall(taskBuilders);
+
+    study.tasks = tasks;
+
+    await fs.promises.writeFile(
+      path.join(distDir, "studies", `${studyKey}.json`),
+      JSON.stringify(study)
     );
 
-    const multimediaTasks = (data.multimedia || []).map((multimedia) => {
-      const reqMultimediaKey =
-        typeof multimedia === "string" ? multimedia : multimedia.key;
-
-      let actualMultimediaKey;
-      if (versions.active.multimedia[`${study}::${reqMultimediaKey}`]) {
-        actualMultimediaKey = `${study}::${reqMultimediaKey}`;
-      } else if (versions.active.multimedia[`library::${reqMultimediaKey}`]) {
-        actualMultimediaKey = `library::${reqMultimediaKey}`;
-      } else {
-        return undefined;
-      }
-
-      // If we've defined the survey in the study config as a string
-      // it means we just want to take all defaults.
-      if (typeof multimedia === "string") {
-        return {
-          key: actualMultimediaKey,
-          ...dftMultimediaCfg[actualMultimediaKey],
-        };
-      }
-      // Otherwise, we'll override the default with our custom configs
-      return {
-        ...dftMultimediaCfg[actualMultimediaKey],
-        ...multimedia,
-        key: actualMultimediaKey,
-      };
-    });
-
-    const interventionTasks = (data.interventions || []).map((intervention) => {
-      const reqInterventionKey =
-        typeof intervention === "string" ? intervention : intervention.key;
-
-      let actualInterventionKey;
-      if (versions.active.interventions[`${study}::${reqInterventionKey}`]) {
-        actualInterventionKey = `${study}::${reqInterventionKey}`;
-      } else if (
-        versions.active.interventions[`library::${reqInterventionKey}`]
-      ) {
-        actualInterventionKey = `library::${reqInterventionKey}`;
-      } else {
-        return undefined;
-      }
-
-      // If we've defined the survey in the study config as a string
-      // it means we just want to take all defaults.
-      if (typeof intervention === "string") {
-        return {
-          key: actualInterventionKey,
-          ...dftInterventionCfg[actualInterventionKey],
-          type: "intervention",
-        };
-      }
-      // Otherwise, we'll override the default with our custom configs
-      return {
-        ...dftInterventionCfg[actualInterventionKey],
-        ...intervention,
-        key: actualInterventionKey,
-        type: "intervention",
-      };
-    });
-
-    delete data.baseline;
-    delete data.surveys;
-    delete data.multimedia;
-    delete data.interventions;
-
-    data.tasks = [
-      ...surveyTasks,
-      ...multimediaTasks,
-      ...interventionTasks,
-    ].filter((o) => o !== undefined);
-
-    log.info(`[${study}] Adding to study index.`);
-    index.push({
+    // Build the study index record.
+    const indexRec = {
       studyKey,
-      visibility,
-      openEnrollment,
-      shortDescription,
-      timeResponsibility,
-      imageId,
-      animationId,
-      videoId,
-      version: version,
-      name: data.name,
-      minVersion: data.minVersion,
-    });
+      name: study.name,
+      shortDescription: study.shortDescription,
+      visibility: study.visibility,
+      openEnrollment: study.openEnrollment,
+      minVersion: study.minVersion,
+      timeResponsibility: study.timeResponsibility,
+      imageId: study.imageId,
+      version: study.version,
+    };
+    if (study.animationId) indexRec.animationId = study.animationId;
+    if (study.videoId) indexRec.videoId = study.videoId;
 
-    log.important(`[${study}] Finished processing. Writing ${study}.json`);
+    index.push(indexRec);
+
+    // Move the consent to dist
+    const consent = await getConsentFile(`${studyKey}.json`);
     await fs.promises.writeFile(
-      `${distDir}/studies/${study}.json`,
-      JSON.stringify({ studyKey, ...data })
+      path.join(distDir, "consents", `${studyKey}.json`),
+      JSON.stringify(consent)
     );
   });
 
-  await Promise.all(promises);
+  await waterfall(executors);
+
+  // Write the study index file
   await fs.promises.writeFile(
-    `${distDir}/studies/index.json`,
+    path.join(distDir, "studies", "index.json"),
     JSON.stringify(index)
   );
 }
 
-async function build() {
+(async function build() {
+  log.info("Building V3 ...");
   const distDir = path.join(__dirname, "../dist/v3");
-  await Promise.all([
-    mkdir(path.resolve(distDir, "..")),
-    mkdir(distDir),
-    mkdir(`${distDir}/studies`),
-    mkdir(`${distDir}/consents`),
-    mkdir(`${distDir}/surveys`),
-    mkdir(`${distDir}/multimedia`),
-    mkdir(`${distDir}/interventions`),
-  ]);
-  await processSurveys();
-  await processMultimedia();
-  await processInterventions();
-  await processConsents();
-  await processStudies();
-  await fs.promises.writeFile(
-    `${distDir}/versions.json`,
-    JSON.stringify(versions)
-  );
-}
-build();
+  await mkdir(distDir);
+  cleandir(distDir);
+  await mkdir(path.join(distDir, "consents"));
+  await mkdir(path.join(distDir, "studies"));
+  await mkdir(path.join(distDir, "surveys"));
+  await mkdir(path.join(distDir, "interventions"));
+  await mkdir(path.join(distDir, "multimedia"));
+
+  await processTasks(distDir);
+  await processStudies(distDir);
+})();

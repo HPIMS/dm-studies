@@ -50,23 +50,26 @@
   },
   "options": [
     {
+      "type": "single",
       "title": "Future Contact",
       "summary": "The researchers may wish to use your personal contact information to contact you in the future. Do you give the researchers permission to contact you in the future to request the collection of additional information about you, discuss how your private information, study data and/or samples might be used, or discuss possible participation in another research study?",
-      "required": false,
+      "required": true,
       "accept": "Yes, I consent",
       "reject": "No, I do not consent"
     },
     {
+      "type": "single",
       "title": "Email",
       "summary": "If you consent to future contact, do you agree to being contacted by email?",
-      "required": false,
+      "required": true,
       "accept": "Yes",
       "reject": "No or N/A"
     },
     {
+      "type": "single",
       "title": "Phone",
       "summary": "If you consent to future contact, do you agree to being contacted by phone?",
-      "required": false,
+      "required": true,
       "accept": "Yes",
       "reject": "No or N/A"
     }
