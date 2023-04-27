@@ -42,7 +42,7 @@ tasks:
       - action: HIDE
         condition:
           - type: COMPLETED
-            resource: which-ibd
+            resource: digi-ibd-001::which-ibd
             operator: ">"
             score: 0
     rank: 1
@@ -57,42 +57,30 @@ tasks:
             score: 0
       - action: HIDE
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 999
 
   - key: pro-2-crohns
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::which-ibd
-              section: "0"
-              question: ibd_type
-              operator: =
-              value: crohns
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 0 # crohns
     rank: 1
 
   - key: pro-2-uc
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::which-ibd
-              section: "0"
-              question: ibd_type
-              operator: =
-              value: ulcerative_colitis
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 1 # uc
     rank: 1
 
   - key: pro-3-screening
@@ -102,14 +90,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::which-ibd
-              section: "0"
-              question: ibd_type
-              operator: =
-              value: crohns
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 0 # crohns
     rank: 2
 
   - key: pro-3
@@ -123,22 +107,14 @@ tasks:
         condition:
           type: AND
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::which-ibd
-                section: "0"
-                question: ibd_type
-                operator: =
-                value: crohns
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::begin-next-phase
-                section: "0"
-                question: received_biologic
-                operator: =
-                value: yes
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 2
 
   - key: sccai-screening
@@ -148,14 +124,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::which-ibd
-              section: "0"
-              question: ibd_type
-              operator: =
-              value: ulcerative_colitis
+          - type: SCORE
+            resource: digi-ibd-001::which-ibd
+            operator: "="
+            score: 1 # uc
     rank: 2
 
   - key: sccai
@@ -169,22 +141,14 @@ tasks:
         condition:
           type: AND
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::which-ibd
-                section: "0"
-                question: ibd_type
-                operator: =
-                value: ulcerative_colitis
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::begin-next-phase
-                section: "0"
-                question: received_biologic
-                operator: =
-                value: yes
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 2
 
   - key: sibdq-screening
@@ -209,14 +173,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 3
 
   - key: promis-fatigue-7a-screening
@@ -241,14 +201,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 4
 
   - key: promis-gi-diarrhea-screening
@@ -273,14 +229,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 5
 
   - key: promis-gi-belly-pain-screening
@@ -305,14 +257,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 6
 
   - key: promis-sleep-disturbance-8a-v1.0-screening
@@ -337,14 +285,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 7
 
   - key: promis-sleep-related-impairment-screening
@@ -369,14 +313,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 8
 
   - key: promis-emotional-distress-depression-screening
@@ -401,14 +341,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 9
 
   - key: promis-emotional-distress-anxiety-screening
@@ -433,14 +369,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 10
 
   - key: patient-global-impression-crohns-severity
@@ -449,22 +381,14 @@ tasks:
         condition:
           type: AND
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::which-ibd
-                section: "0"
-                question: ibd_type
-                operator: =
-                value: crohns
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::begin-next-phase
-                section: "0"
-                question: received_biologic
-                operator: =
-                value: yes
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 11
 
   - key: patient-global-impression-crohns-change
@@ -473,22 +397,14 @@ tasks:
         condition:
           type: AND
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::which-ibd
-                section: "0"
-                question: ibd_type
-                operator: =
-                value: crohns
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::begin-next-phase
-                section: "0"
-                question: received_biologic
-                operator: =
-                value: yes
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 0 # crohns
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 12
 
   - key: patient-global-impression-uc-severity
@@ -497,22 +413,14 @@ tasks:
         condition:
           type: AND
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::which-ibd
-                section: "0"
-                question: ibd_type
-                operator: =
-                value: ulcerative_colitis
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::begin-next-phase
-                section: "0"
-                question: received_biologic
-                operator: =
-                value: yes
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 11
 
   - key: patient-global-impression-uc-change
@@ -521,79 +429,52 @@ tasks:
         condition:
           type: AND
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::which-ibd
-                section: "0"
-                question: ibd_type
-                operator: =
-                value: ulcerative_colitis
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: digi-ibd-001::begin-next-phase
-                section: "0"
-                question: received_biologic
-                operator: =
-                value: yes
+            - type: SCORE
+              resource: digi-ibd-001::which-ibd
+              operator: "="
+              score: 1 # uc
+            - type: SCORE
+              resource: digi-ibd-001::begin-next-phase
+              operator: "="
+              score: 1
     rank: 12
 
   - key: patient-global-impression-fatigue-severity
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 13
 
   - key: patient-global-impression-fatigue-change
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 14
 
   - key: patient-global-impression-sleep-disturbance-severity
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 15
 
   - key: patient-global-impression-sleep-disturbance-change
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::begin-next-phase
-              section: "0"
-              question: received_biologic
-              operator: =
-              value: yes
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
     rank: 16
-
-  - key: exit
-    rank: 17

@@ -1,5 +1,8 @@
 key: begin-next-phase
 scorable: true
+score:
+  fn: sum-score
+  args: {}
 schedule:
   type: PERIOD
   period: ALWAYS
@@ -25,4 +28,11 @@ sections:
     questions:
       - key: received_biologic
         question: Have your received your first injection or infusion?
-        type: YESNO_CHOICE
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
