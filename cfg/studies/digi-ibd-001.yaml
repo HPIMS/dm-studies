@@ -42,7 +42,7 @@ tasks:
       - action: HIDE
         condition:
           - type: COMPLETED
-            resource: which-ibd
+            resource: digi-ibd-001::which-ibd
             operator: ">"
             score: 0
     rank: 1
