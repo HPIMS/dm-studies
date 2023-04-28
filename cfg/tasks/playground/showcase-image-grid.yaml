@@ -1,0 +1,77 @@
+key: showcase-image-grid
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Image Grid
+intro:
+  title: About
+  description: [
+    [
+      "BodyLarge",
+      "This task showcases the image grid component."
+    ],
+    [
+      "BodyLarge",
+      "This component allows a participant to choose single or multi select images in a grid."
+    ],
+  ]
+sections:
+  - type: survey
+    key: showcase
+    title: ""
+    description: ""
+    questions:
+      - key: single_select
+        question: Select one image.
+        description: ""
+        type: IMAGE_GRID
+        columns: 3
+        multipleSelect: false
+        options:
+          - value: a
+            imageId: study-playground
+          - value: b
+            imageId: study-playground
+          - value: c
+            imageId: study-playground
+          - value: d
+            imageId: study-playground
+          - value: e
+            imageId: study-playground
+          - value: f
+            imageId: study-playground
+          - value: g
+            imageId: study-playground
+          - value: h
+            imageId: study-playground
+          - value: i
+            imageId: study-playground
+      - key: multi_select
+        question: Select one image.
+        description: ""
+        type: IMAGE_GRID
+        columns: 2
+        multipleSelect: true
+        options:
+          - value: a
+            imageId: study-playground
+          - value: b
+            imageId: study-playground
+          - value: c
+            imageId: study-playground
+          - value: d
+            imageId: study-playground
+          - value: e
+            imageId: study-playground
+          - value: f
+            imageId: study-playground
+          - value: g
+            imageId: study-playground
+          - value: h
+            imageId: study-playground
+          - value: i
+            imageId: study-playground
