@@ -257,7 +257,7 @@ tasks:
       - action: SHOW
         condition:
           - type: CALCULATION
-            fn: cramp::bleeing-complete
+            fn: cramp::bleeding-complete
             args: {}
 
   - key: final-check-in
