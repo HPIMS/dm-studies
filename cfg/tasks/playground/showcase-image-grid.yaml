@@ -33,45 +33,60 @@ sections:
         multipleSelect: false
         options:
           - value: a
+            text: image 1
             imageId: study-playground
           - value: b
+            text: image 2
             imageId: study-playground
           - value: c
+            text: image 3
             imageId: study-playground
           - value: d
+            text: image 4
             imageId: study-playground
           - value: e
+            text: image 5
             imageId: study-playground
           - value: f
+            text: image 6
             imageId: study-playground
           - value: g
+            text: image 7
             imageId: study-playground
           - value: h
+            text: image 8
             imageId: study-playground
           - value: i
+            text: image 9
             imageId: study-playground
       - key: multi_select
-        question: Select one image.
-        description: ""
+        question: Select multiple images.
+        description: "Select all that apply."
         type: IMAGE_GRID
         columns: 2
         multipleSelect: true
         options:
           - value: a
+            text: image 1
             imageId: study-playground
           - value: b
+            text: image 2
             imageId: study-playground
           - value: c
+            text: image 3
             imageId: study-playground
           - value: d
+            text: image 4
             imageId: study-playground
           - value: e
+            text: image 5
             imageId: study-playground
           - value: f
+            text: image 6
             imageId: study-playground
           - value: g
+            text: image 7
             imageId: study-playground
           - value: h
-            imageId: study-playground
-          - value: i
+            text: image 8
             imageId: study-playground
