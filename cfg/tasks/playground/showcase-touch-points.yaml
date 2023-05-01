@@ -1,0 +1,39 @@
+key: showcase-touch-points
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Touch Points
+intro:
+  title: About
+  description: [
+    [
+      "BodyLarge",
+      "This task showcases the touch points component."
+    ],
+    [
+      "BodyLarge",
+      "This component allows a user to touch an image and have their tap locations recorded. This is especially useful for recording pain location."
+    ],
+  ]
+sections:
+  - type: survey
+    key: showcase
+    title: ""
+    description: ""
+    questions:
+      - key: male_front
+        question: Tap where it hurts.
+        description: ""
+        type: TOUCH_POINTS
+        imageId: male_front
+        pointRadius: 10
+      - key: male_back
+        question: Tap where it hurts.
+        description: ""
+        type: TOUCH_POINTS
+        imageId: male_back
+        pointRadius: 10
