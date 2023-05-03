@@ -1,0 +1,314 @@
+key: daily-check-in
+scorable: false
+schedule:
+  type: PERIOD
+  period: DAILY
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Daily Check-in
+intro:
+  title: Daily Check-in
+  description: [
+    [
+      "BodyLarge",
+      "In this suvery, we will ask you to answer a few questions about how you felt today."
+    ],
+    [
+      "BodyLarge",
+      [
+        "Bold",
+        "This is a time-dependent survey! Answering these questions today will improve the quality of the CRAMP Study results!"
+      ]
+    ],
+    [
+      "BodyLarge",
+      [
+        "Italic",
+        "Why is completing this survey important?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "In the CRAMP Study, we want to closely characterize the relationship between stress, resilience and menstrual cramps and symptoms. Since stress and pain usually come and go, it is of uttermost importance that we assess how they change not only day by day, but also during the day. Ultimately, this will enable us to look for temporal patterns of pain, stress and their relationship and unlock these complex interactions. We therefore ask you to complete this brief daily survey to tell us how your day was. "
+    ]
+  ]
+sections:
+  - type: survey
+    key: bleeding
+    title: Today's Bleeding
+    description: ""
+    questions:
+      - key: menses_today
+        question: Did you have menstrual bleeding today?
+        type: YESNO_CHOICE
+        required: true
+      - key: menses_today_flow
+        question: How would you rate your menstrual flow?
+        type: SINGLE_CHOICE
+        options:
+          - value: scant
+            text: Scant amount
+          - value: light
+            text: Light amount
+          - value: moderate
+            text: Moderate amount
+          - value: heavy
+            text: Heavy amount
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: bleeding
+                question: menses_today
+                operator: =
+                value: yes
+  - type: survey
+    key: pain_1
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your pain today
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: Pain
+        ask: Please think about your pain today.
+        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
+        prompt: Rate the pain intensity.
+        minLabel: No pain
+        maxLabel: The worst pain you can imagine
+  - type: survey
+    key: pain_2
+    title: "Pain Continued"
+    description: ""
+    questions:
+      - key: pain_location_today
+        question: If you experienced pain, where was the pain located?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: lower_belly
+            text: Lower belly
+          - value: lower_back
+            text: Lower back
+          - value: upper_thighs
+            text: Upper thighs
+          - value: stomach
+            text: Stomach / upper abdomen
+          - value: upper_back
+            text: Upper back, neck, or shoulders
+          - value: lower_legs
+            text: Lower legs
+          - value: arms
+            text: Arms
+          - value: head
+            text: Head
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: pain_location_today_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+  - type: survey
+    key: medications
+    title: Today's Medications
+    description: ""
+    questions:
+      - key: pain_meds_today
+        question: Did you use any pain medication today?
+        type: YESNO_CHOICE
+      - key: which_pain_meds_today
+        question: Which pain medication/s did you use?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: acetaminophen
+            text: Acetaminophen (Tylenol)
+          - value: ibuprofen
+            text: Ibuprofen (Advil, Motrin IB, others)
+          - value: naproxen
+            text: Naproxen (Aleve)
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: which_pain_meds_today_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: medications
+                question: pain_meds_today
+                operator: =
+                value: yes
+      - key: pain_meds_frequency_today
+        question: How many times did you take them today?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: medications
+                question: pain_meds_today
+                operator: =
+                value: yes
+      - key: pain_meds_effectiveness_today
+        question: How effective were the pain medications?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_effective
+            text: Not effective
+          - value: somewhat_effective
+            text: Somewhat effective
+          - value: very_effective
+            text: Very effective
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: medications
+                question: pain_meds_today
+                operator: =
+                value: yes
+  - type: survey
+    key: mood_1
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (happiness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (happiness)
+        ask: Please think about your overall mood (happiness) today.
+        scaleExplanation: 0 is unhappy, 100 is happy.
+        prompt: Rate your mood (happiness).
+        minLabel: Unhappy
+        maxLabel: Happy
+  - type: survey
+    key: mood_2
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your mood (calmness)
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: mood (calmness)
+        ask: Please think about your overall (calmness) mood today.
+        scaleExplanation: 0 is excited, 100 is calm.
+        prompt: Rate your mood (calmness).
+        minLabel: Excited
+        maxLabel: Calm
+  - type: survey
+    key: stress
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your stress
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: stress
+        ask: Please think about your overall stress today.
+        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
+        prompt: Rate your stress.
+        minLabel: No stress
+        maxLabel: The worst stress imaginable
+  - type: survey
+    key: productivity
+    title: ""
+    description: ""
+    questions:
+      - key: vas
+        question: Your productivity
+        type: V_SCALE
+        hideHeader: true
+        min: 0
+        max: 100
+        category: stress
+        ask: Please think about your overall work/school productivity today.
+        scaleExplanation: 0 is not productive, 100 is highly productive.
+        prompt: Rate your productivity.
+        minLabel: Not productive
+        maxLabel: Highly productive
+  - type: survey
+    key: activity
+    title: Today's Activity
+    description: ""
+    questions:
+      - key: skip_today
+        question: Did you skip any hours of work/school because of your pain today?
+        type: YESNO_CHOICE
+      - key: skip_today_hours
+        question: How many hours did you skip?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: activity
+                question: skip_today
+                operator: =
+                value: yes
+      - key: skip_today_other
+        question: Did you skip any hours of work/school because of any other physical or
+          mental condition today?
+        type: YESNO_CHOICE
+      - key: skip_today_other_hours
+        question: How many hours did you skip?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: activity
+                question: skip_today_other
+                operator: =
+                value: yes
+  - type: survey
+    key: symptoms
+    title: Today's Symptoms
+    description: ""
+    questions:
+      - key: symptoms_today
+        question: Did you have any of the following today?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply
+        options:
+          - value: diarrhea
+            text: Diarrhea
+          - value: nausea
+            text: Nausea/Vomiting
+          - value: constipation
+            text: Constipation
+          - value: fatigue
+            text: Fatigue
+          - value: dizziness
+            text: Dizziness
+          - value: headache
+            text: Headache
+      - key: illness_today
+        question: Did you get sick today (e.g. Flu)?
+        type: YESNO_CHOICE
+      - key: illness_today_description
+        question: Please describe your illness
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: symptoms
+                question: illness_today
+                operator: =
+                value: yes

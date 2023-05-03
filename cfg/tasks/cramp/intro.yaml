@@ -1,0 +1,42 @@
+key: intro
+scorable: false
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Welcome to CRAMP
+sections:
+  - type: video
+    key: intro_video
+    videoId: ehive_intro
+    autoplay: true
+    beginMuted: false
+    minimumWatchThreshold: 1
+    headerShown: false
+  - type: document
+    key: apple_health
+    headerShown: false
+    content: [
+      ["H2", "Apple Health"],
+      ["BodyLarge", [
+        ["Text", "Please connect Apple Health if you haven't done so already. It is a study requirement and it's important because it allows us to obtain measurements such as your step count and sleep cycles that are critical in understanding the relationship between stress and menstrual pain. To connect Apple Health, visit the study page and press "],
+        ["Bold", "START"],
+        ["Text", " on the "],
+        ["Italic", "Connect App or Device"],
+        ["Text", " card."]
+      ]],
+      ["BodyLarge", "We take your privacy seriously! We have obtained a Certificate of Confidentiality that keeps your data extra-secure. This ensures your data can never be shared with anyone outside our research team, including any law enforcement."]
+    ]
+  - type: document
+    key: outro
+    headerShown: false
+    content: [
+      ["H1", "Thank You!"],
+      ["BodyLarge", [
+        ["Text", "Thank you for participating in the "],
+        ["Bold", "CRAMP: Characterizing Resilience and Menstrual Pain"],
+        ["Text", " study! Your contributions to research are greatly valued."]
+      ]]
+    ]

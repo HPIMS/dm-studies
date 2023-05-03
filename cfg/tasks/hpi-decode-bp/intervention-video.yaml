@@ -1,0 +1,12 @@
+key: intervention-video
+schedule:
+  type: PERIOD
+  period: NEVER
+timeEstimate: 5
+name: Intervention Help
+sections:
+  - type: video
+    key: intervention-video
+    videoId: intervention-video
+    rate: 1
+    resizeMode: contain

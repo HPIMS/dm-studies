@@ -1,0 +1,58 @@
+key: daily-check-in
+schedule:
+  type: PERIOD
+  period: DAILY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Daily Check-in
+intro:
+  title: Daily Check-in
+  description: Report how you are feeling today.
+outro:
+  title: Daily Check-in Complete
+  description: Thank you for completing this task! Your participation is always valued.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: work
+        question: How would you grade your healthcare related work for the past 24-hours
+        type: SINGLE_CHOICE
+        options:
+          - value: "1"
+            text: 1. Exposed to areas WITH patients confirmed to have COVID-19 or people
+              being investigated for COVID-19 infection.
+          - value: "2"
+            text: 2. Exposed to areas with patients but without patients diagnosed with
+              COVID-19 or those being evaluated for COVID-19.
+          - value: "3"
+            text: 3. Worked in a healthcare setting without exposure to patient areas.
+          - value: "4"
+            text: 4. I worked remotely, not in a healthcare location, without any patient
+              exposure.
+          - value: "5"
+            text: 5. I did not work today.
+      - key: stress
+        question: How would you rate your stress today on a scale of 1 to 7?
+        type: SLIDER
+        min: 1
+        minLabel: No Stress
+        max: 7
+        maxLabel: High Stress
+        step: 1
+      - key: heartmath_skills
+        question: Over the past 24 hours, to what extent did you apply the HeartMath
+          skills you have learned?
+        type: SLIDER
+        min: 1
+        minLabel: Rarely
+        max: 7
+        maxLabel: Very Often
+        step: 1
+      - key: heartmath_use
+        question: Over the past 24 hours, did you use the HeartMath technology,
+          including the phone App and ear sensor?
+        type: YESNO_CHOICE

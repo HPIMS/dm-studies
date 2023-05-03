@@ -1,0 +1,100 @@
+key: phq-4
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: ""
+  instrument: PHQ-4
+  version: ""
+  references: []
+schedule:
+  type: PERIOD
+  period: BI_WEEKLY
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Health Questionnaire
+intro:
+  title: Health Questionnaire
+  description: >-
+    Over the last 2 weeks, how often have you been bothered by the
+    following problems? Please fill out this survey and let us know. You may
+    skip any questions that you are not comfortable answering.
+
+
+    The surveys in this app are NOT a replacement or substitute for medical care. The answers you provide will not be used for clinical care. For any health concerns you may have, please contact your regular healthcare provider.
+outro:
+  title: Thank you!
+  description: We appreciate your participation.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: Over the last 2 weeks, how often have you been bothered by the
+      following problems?
+    questions:
+      - key: nervous
+        question: Feeling nervous, anxious or on edge?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_days
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: worry
+        question: Not being able to stop or control worrying?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_days
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: motivation
+        question: Little interest or pleasure in doing things?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_days
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3
+      - key: depression
+        question: Feeling down, depressed, or hopeless?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: several_days
+            text: Several days
+            score: 1
+          - value: more_than_half_days
+            text: More than half the days
+            score: 2
+          - value: nearly_every_day
+            text: Nearly every day
+            score: 3

@@ -1,0 +1,47 @@
+key: patient-global-impression-crohns-severity
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+schedule:
+  type: TIMETABLE
+  timetable:
+    - 0
+    - 2
+    - 4
+    - 6
+    - 8
+    - 14
+  timetableUnits: WEEKS
+  gracePeriod: 3
+timeRequirements: 
+  time: 30
+  timeUnits: seconds
+name: Crohn's severity
+intro:
+  title: Crohn's severity
+  description: We want to understand more about how your Crohn's disease is
+    feeling. Please fill out this survey and let us know.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: severity
+        question: Overall, how would you rate the severity of your Chrohn's diease
+          currently?
+        type: SINGLE_CHOICE
+        options:
+          - value: none
+            text: None
+            score: 1
+          - value: mild
+            text: Mild
+            score: 2
+          - value: moderate
+            text: Moderate
+            score: 3
+          - value: severe
+            text: Severe
+            score: 4

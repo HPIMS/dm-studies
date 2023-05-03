@@ -1,0 +1,100 @@
+key: promis-physical-function-4a-v1.0
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: PROMIS
+  instrument: Physical Function - Short Form 4a
+  version: "1.0"
+  references:
+    - https://www.sralab.org/rehabilitation-measures/promis-physical-function
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Physical Function
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: physical_function_1
+        question: Are you able to do chores such as vacuuming or yard work?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 5
+          - value: little_difficulty
+            text: With a little difficulty
+            score: 4
+          - value: some_difficulty
+            text: With some difficulty
+            score: 3
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 1
+      - key: physical_function_2
+        question: Are you able to go up and down stairs at a normal pace?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 5
+          - value: little_difficulty
+            text: With a little difficulty
+            score: 4
+          - value: some_difficulty
+            text: With some difficulty
+            score: 3
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 1
+      - key: physical_function_3
+        question: Are you able to go for a walk of at least 15 minutes?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 5
+          - value: little_difficulty
+            text: With a little difficulty
+            score: 4
+          - value: some_difficulty
+            text: With some difficulty
+            score: 3
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 1
+      - key: physical_function_4
+        question: Are you able to run errands and shop?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_difficulty
+            text: Without any difficulty
+            score: 5
+          - value: little_difficulty
+            text: With a little difficulty
+            score: 4
+          - value: some_difficulty
+            text: With some difficulty
+            score: 3
+          - value: much_difficulty
+            text: With much difficulty
+            score: 2
+          - value: unable_to_do
+            text: Unable to do
+            score: 1

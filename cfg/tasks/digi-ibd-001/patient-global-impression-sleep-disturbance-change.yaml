@@ -1,0 +1,49 @@
+key: patient-global-impression-sleep-disturbance-change
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+schedule:
+  type: TIMETABLE
+  timetable:
+    - 2
+    - 4
+    - 6
+    - 8
+    - 14
+  timetableUnits: WEEKS
+  gracePeriod: 3
+timeRequirements: 
+  time: 30
+  timeUnits: seconds
+name: Sleep response
+intro:
+  title: Sleep response
+  description: We want to understand more about how your sleep is doing since
+    starting treatment.  Please fill out this survey and let us know.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    questions:
+      - key: change
+        question: Compared to when you received the first treatment in this study, how
+          has your sleep disturbance changed?
+        type: SINGLE_CHOICE
+        options:
+          - value: much_better
+            text: Much better
+            score: 1
+          - value: a_little_better
+            text: A little better
+            score: 2
+          - value: no_change
+            text: No change
+            score: 3
+          - value: a_little_worse
+            text: A little worse
+            score: 4
+          - value: much_worse
+            text: Much worse
+            score: 5

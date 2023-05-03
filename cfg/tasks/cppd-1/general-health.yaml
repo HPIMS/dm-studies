@@ -1,0 +1,594 @@
+key: general-health
+active: true
+scorable: false
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: General Health
+intro:
+  title: General Health
+  description: Chronic pelvic pain (CPP) disorders are complex and often interact
+    with several body systems. We will ask you several questions regarding your
+    general health. This will enable us to account for pre-existing health
+    conditions in our analyses for the study. Doing so will ensure that we can
+    look at CPP processes rather than other disorders that might influence your
+    daily symptoms and well-being.
+sections:
+  - type: survey
+    key: general
+    title: ""
+    description: ""
+    questions:
+      - key: height
+        question: What is your height?
+        type: HEIGHT
+      - key: weight
+        question: What is your weight?
+        type: WEIGHT
+      - key: medication_current
+        question: Do you currently take medications?
+        type: YESNO_CHOICE
+      - key: medication_text
+        question: Which medications are you currently taking?
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: general
+                question: medication_current
+                operator: =
+                value: yes
+  - type: survey
+    key: substance
+    title: ""
+    description: ""
+    questions:
+      - key: drink_freq
+        question: How often do you have a drink containing alcohol?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+          - value: monthly
+            text: Monthly or less
+          - value: 2_4_month
+            text: 2-4 times per month
+          - value: 2_3_week
+            text: 2-3 times per week
+          - value: 4_week
+            text: 4+ times per week
+      - key: drink_count
+        question: How many drinks containing alcohol do you have on a typical day when
+          you are drinking?
+        type: NUMERIC
+        minValue: 1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: substance
+                question: drink_freq
+                operator: <>
+                value: never
+      - key: smoke_100
+        question: Have you smoked at least 100 cigarettes in your entire life?
+        type: YESNO_CHOICE
+      - key: smoking
+        question: Do you currently smoke cigarettes?
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No
+          - value: sometimes
+            text: Sometimes
+          - value: daily
+            text: Every day
+      - key: cigarette_count
+        question: On average, how many cigarettes do you smoke per day?
+        type: NUMERIC
+        minValue: 1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: substance
+                question: smoking
+                operator: <>
+                value: no
+      - key: coffee_count
+        question: On average, how many cups of coffee do you drink per day?
+        type: NUMERIC
+  - type: survey
+    key: pain
+    title: ""
+    description: ""
+    questions:
+      - key: pain_other
+        question: Aside from chronic pelvic pain, do you experience pain on a regular
+          basis?
+        type: YESNO_CHOICE
+      - key: pain_diagnosis
+        question: Is your pain associated to any diagnosis you received by a doctor or
+          healthcare practitioner?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: pain_other
+                operator: =
+                value: yes
+      - key: pain_diagnosis_specify
+        question: Please specify the condition.
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: pain_diagnosis
+                operator: =
+                value: yes
+      - key: pain_location
+        question: Where do you feel pain?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: pelvis
+            text: Pelvis and/or lower abdomen
+          - value: stomach
+            text: Stomach / upper abdomen
+          - value: lower_back
+            text: Lower back
+          - value: upper_back
+            text: Upper back, neck, or shoulders
+          - value: upper_legs
+            text: Upper legs
+          - value: lower_legs
+            text: Lower legs
+          - value: arms
+            text: Arms
+          - value: head
+            text: Head
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: pain_location_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: pain_other
+                operator: =
+                value: yes
+      - key: pain_freq
+        question: How often do you feel pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: daily
+            text: Daily
+          - value: weekly
+            text: Weekly
+          - value: monthly
+            text: Monthly
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: pain_other
+                operator: =
+                value: yes
+  - type: survey
+    key: diagnosis
+    title: ""
+    description: ""
+    questions:
+      - key: diagnosis_chronic
+        question: Have you been diagnosed by a doctor of other healthcare provider with
+          a chronic condition (i.e. a condition that will last for a long period
+          of time and you are currently having or taking medications for),
+          excluding pelvic and gynecological conditions?
+        type: YESNO_CHOICE
+      - key: diagnosis_psychiatric
+        question: Have you been diagnosed with any of the following psychiatric
+          conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Generalized anxiety disorder
+          - value: diagnosis_2
+            text: Panic attack/panic disorder
+          - value: diagnosis_3
+            text: Other anxiety disorders
+          - value: diagnosis_4
+            text: Major depression disorder
+          - value: diagnosis_5
+            text: Obsessive compulsive disorder
+          - value: diagnosis_6
+            text: Post-traumatic stress disorder
+          - value: diagnosis_7
+            text: Bipolar disorder
+          - value: diagnosis_8
+            text: Eating disorder, including anorexia nervosa or bulimia
+          - value: diagnosis_9
+            text: Schizophrenia
+          - value: diagnosis_10
+            text: Psychosis or other psychotic disorders beyond schizophrenia
+          - value: diagnosis_other
+            text: Other psychiatric conditions not listed above
+            inlineQuestion:
+              key: diagnosis_psychiatric_diagnosis_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_endocrinological
+        question: Have you been diagnosed with any of the following endocrinological
+          conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Hyperprolactinemia (high prolactin levels)
+          - value: diagnosis_2
+            text: Some thyroid condition
+          - value: diagnosis_3
+            text: Some diabetic condition
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_endocrinological_which_thyroid
+        question: Which thyroid condition have you been diagnosed with?
+        type: SINGLE_CHOICE
+        options:
+          - value: hyperthyroidism
+            text: Hyperthyroidism (high thyroid levels)
+          - value: hypothyroidism
+            text: Hypothyroidism (low thyroid levels)
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: diagnosis_endocrinological_which_thyroid_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+          - value: unsure
+            text: Unsure
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_endocrinological
+                operator: INCLUDES
+                value: diagnosis_2
+      - key: diagnosis_endocrinological_which_diabetic
+        question: Which diabetic condition have you been diagnosed with?
+        type: SINGLE_CHOICE
+        options:
+          - value: prediabetes
+            text: Prediabetes
+          - value: diabetes_1
+            text: Type I diabetes
+          - value: diabetes_2
+            text: Type II diabetes
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: diagnosis_endocrinological_which_diabetic_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+          - value: unsure
+            text: Unsure
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_endocrinological
+                operator: INCLUDES
+                value: diagnosis_3
+      - key: diagnosis_cardiovascular
+        question: Have you been diagnosed with any of the following cardiovascular
+          conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Arrhythmia (irregular heart beat)
+          - value: diagnosis_2
+            text: Congential heart disease
+          - value: diagnosis_3
+            text: Heart valve disease
+          - value: diagnosis_4
+            text: Coronary artery disease (narrow heart vessels)
+          - value: diagnosis_5
+            text: Congestive heart failure
+          - value: diagnosis_6
+            text: High cholesterol
+          - value: diagnosis_7
+            text: High blood pressure (hypertension)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_hematological
+        question: Have you been diagnosed with any of the following hematological
+          conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Anemia (low blood count)
+          - value: diagnosis_2
+            text: Hemophilia (easy bleeding and bruising)
+          - value: diagnosis_3
+            text: Thrombophilia (frequent blot clots)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_renal
+        question: Have you been diagnosed with any of the following renal conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Kidney disease
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_pulmonary
+        question: Have you been diagnosed with any of the following pulmonary conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Sleep apnea
+          - value: diagnosis_2
+            text: Asthma
+          - value: diagnosis_3
+            text: Chronic obstructive pulmonary disease
+          - value: diagnosis_4
+            text: Cystic fibrosis
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_gastrointestinal
+        question: Have you been diagnosed with any of the following gastrointestinal
+          conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Acid reflux
+          - value: diagnosis_2
+            text: Crohn's disease or ulcerative colitis
+          - value: diagnosis_3
+            text: Celiac disease
+          - value: diagnosis_4
+            text: Irritable bowel syndrome
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_connective_tissue
+        question: Have you been diagnosed with any of the following connective tissue
+          conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Arthritis
+          - value: diagnosis_2
+            text: Fibromyalgia
+          - value: diagnosis_3
+            text: Lupus
+          - value: diagnosis_4
+            text: Osteoporosis
+          - value: diagnosis_5
+            text: Sarcoidosis
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_neurological
+        question: Have you been diagnosed with any of the following neurological
+          conditions?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: diagnosis_1
+            text: Chronic fatigue syndrome
+          - value: diagnosis_2
+            text: Epilepsy (seizures)
+          - value: diagnosis_3
+            text: Migraines
+          - value: diagnosis_4
+            text: Other types of chronic headaches
+          - value: diagnosis_5
+            text: Multiple sclerosis
+          - value: diagnosis_other
+            text: Other neurological conditions not listed above
+            inlineQuestion:
+              key: diagnosis_neurological_diagnosis_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: diagnosis_other
+        question: Please specify any other conditions you have been diagnosed with that
+          are not listed above.
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: diagnosis_chronic
+                operator: =
+                value: yes
+      - key: surgery
+        question: Have you had any surgeries?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: surgery_1
+            text: Bone
+          - value: surgery_2
+            text: Breast
+          - value: surgery_3
+            text: Gallbladder
+          - value: surgery_4
+            text: Heart
+          - value: surgery_5
+            text: Stomach
+          - value: surgery_6
+            text: Colon or rectum
+          - value: surgery_7
+            text: Intestine
+          - value: surgery_8
+            text: Appendix
+          - value: surgery_9
+            text: Vascular
+          - value: surgery_10
+            text: C-section
+          - value: surgery_11
+            text: Uterine cervical surgery
+          - value: surgery_12
+            text: "Surgery on uterus: removal of fibroid"
+          - value: surgery_13
+            text: "Surgery on uterus: removal of endometrial polyp"
+          - value: surgery_14
+            text: Removal of an ovary
+          - value: surgery_15
+            text: Removal or ligation of fallopian tubes
+      - key: cancer
+        question: Have you ever been diagnosed with cancer?
+        type: YESNO_CHOICE
+      - key: cancer_select
+        question: Which type of cancer have you been diagnosed with?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: cancer_1
+            text: Breast
+          - value: cancer_2
+            text: Colon or rectum
+          - value: cancer_3
+            text: Stomach
+          - value: cancer_4
+            text: Blood (lymphoma or leukemia)
+          - value: cancer_5
+            text: Bone
+          - value: cancer_6
+            text: Skin
+          - value: cancer_7
+            text: Uterus or endometrial
+          - value: cancer_8
+            text: Ovarian
+          - value: cancer_9
+            text: Cervical (uterine cervix)
+          - value: cancer_10
+            text: Pulmonary
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: cancer_select_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: cancer
+                operator: =
+                value: yes
+      - key: cancer_date
+        question: When were you first diagnosed with cancer?
+        placeholder: MM/YYYY
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: cancer
+                operator: =
+                value: yes
+      - key: cancer_treat
+        question: When did you last receive treatment for your cancer?
+        placeholder: MM/YYYY
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: cancer
+                operator: =
+                value: yes
+      - key: cancer_status
+        question: Are you currently cancer free?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: cancer
+                operator: =
+                value: yes

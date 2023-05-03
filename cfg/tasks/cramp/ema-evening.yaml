@@ -1,0 +1,10 @@
+key: ema-evening
+scorable: false
+schedule:
+  type: PERIOD
+  period: DAILY
+  timeOfDay:
+    - - "1800"
+      - "2359"
+name: How Do You Feel? (Evening)
+_extends: ema 

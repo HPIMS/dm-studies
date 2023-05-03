@@ -49,20 +49,75 @@ timeResponsibility:
   timeUnits: minutes
   timePeriod: daily
 
-surveys:
+tasks:
   - demographics
   - general-health
-  - physical-therapy
-  - promis-pain-interference-6b-v1.1
-  - promis-fatigue-4a-v1.0
-  - promis-physical-function-4a-v1.0
-  - promis-sleep-disturbance-4a-v1.0
-  - mpq
   - pcs
-  - pseq
-  - promis-global-mental-health-2a-v1.2
-  - euro-qol-eq-5d-5l
-  - ipaq
-  - pelvic-floor-distress-inventory-sf20
-  - nih-cpsi
+  - physical-therapy
+  - key: promis-pain-interference-6b-v1.1
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: promis-fatigue-4a-v1.0
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: promis-physical-function-4a-v1.0
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: promis-sleep-disturbance-4a-v1.0
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: mpq
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: pseq
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: promis-global-mental-health-2a-v1.2
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: euro-qol-eq-5d-5l
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: ipaq
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: pelvic-floor-distress-inventory-sf20
+    schedule:
+      type: PERIOD
+      period: QUARTERLY
+      gracePeriod: 4
+      initialGracePeriod: 3
+  - key: nih-cpsi
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
   - bladder-irritants

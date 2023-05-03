@@ -1,0 +1,107 @@
+key: promis-fatigue-4a-v1.0
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: PROMIS
+  instrument: PROMIS Fatigue Scale - 4a
+  version: "1.0"
+  references:
+    - https://www.fda.gov/media/137977/download
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Fatigue Assessment
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: |-
+      We want to understand more about how fatigue is impacting your life.
+
+      During the past 7 days:
+    questions:
+      - key: fatigue_1
+        question: I felt fatigued
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: a_little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+      - key: fatigue_2
+        question: I had trouble starting things because I am tired
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: a_little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+  - type: survey
+    key: "1"
+    title: ""
+    description: "In the past 7 days:"
+    questions:
+      - key: fatigue_3
+        question: How run-down did you feel on average?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: a_little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5
+      - key: fatigue_4
+        question: How fatigued were you on average?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: a_little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: very_much
+            text: Very much
+            score: 5

@@ -36,10 +36,10 @@ timeResponsibility:
   timeUnits: minutes
   timePeriod: daily
 
-surveys:
+tasks:
   - key: bmi_correction
     rank: -1
-    
+
   - key: baseline_demographics
     rank: 1
 
@@ -84,6 +84,7 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
+      gracePeriod: 2
       delay: 2
       delayUnits: WEEKS
     triggers:

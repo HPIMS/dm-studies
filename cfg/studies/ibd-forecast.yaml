@@ -13,11 +13,6 @@ platform:
   - ios
   - android
 
-# Legacy
-wearables:
-  - fitbit
-  - oura
-
 minVersion: '2.2'
 capTo: 10000
 
@@ -40,15 +35,10 @@ timeResponsibility:
   timeUnits: minutes
   timePeriod: daily
 
-# Legacy
-withdrawText: |-
-  Thank you for participating in the IBD Forecast study! We value your time and effort, and appreciate your contribution to IBD research.
-
-baseline: [] # Legacy
-
-surveys:
+tasks:
   - key: bmi_correction
     rank: -1
+
   - key: baseline_demographics
     rank: 1
   - key: baseline_health_crohn
@@ -148,7 +138,7 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -171,7 +161,7 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
-      graceDays: 7
+      gracePeriod: 7
     triggers:
       - action: SHOW
         condition:
@@ -213,7 +203,7 @@ surveys:
     schedule:
       type: PERIOD
       period: BI_WEEKLY
-      graceDays: 7
+      gracePeriod: 7
       delay: 2
       delayUnits: WEEKS
     triggers:
@@ -242,31 +232,3 @@ surveys:
             resource: ibd-forecast::baseline_health_pouch
             operator: ">"
             score: 0
-
-# Legacy
-requiredHealthRecords:
-  AllergyRecord: HKClinicalTypeIdentifier
-  ConditionRecord: HKClinicalTypeIdentifier
-  ImmunizationRecord: HKClinicalTypeIdentifier
-  LabResultRecord: HKClinicalTypeIdentifier
-  MedicationRecord: HKClinicalTypeIdentifier
-  ProcedureRecord: HKClinicalTypeIdentifier
-  VitalSignRecord: HKClinicalTypeIdentifier
-
-# Legacy
-requiredData:
-  ActiveEnergyBurned: HKQuantityTypeIdentifier
-  AppleExerciseTime: HKQuantityTypeIdentifier
-  HeartRate: HKQuantityTypeIdentifier
-  HeartRateVariabilitySDNN: HKQuantityTypeIdentifier
-  RestingHeartRate: HKQuantityTypeIdentifier
-  WalkingHeartRateAverage: HKQuantityTypeIdentifier
-  OxygenSaturation: HKQuantityTypeIdentifier
-  StepCount: HKQuantityTypeIdentifier
-  AppleStandTime: HKQuantityTypeIdentifier
-  EnvironmentalAudioExposure: HKQuantityTypeIdentifier
-  SleepAnalysis: HKQuantityTypeIdentifier
-  DietaryEnergyConsumed: HKQuantityTypeIdentifier
-  BloodPressureDiastolic: HKQuantityTypeIdentifier
-  BloodPressureSystolic: HKQuantityTypeIdentifier
-  BloodGlucose: HKQuantityTypeIdentifier
