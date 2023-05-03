@@ -38,6 +38,13 @@ timeResponsibility:
 
 tasks:
   - key: which-ibd
+    triggers:
+      - action: HIDE
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
     rank: 1
 
   - key: begin-next-phase
