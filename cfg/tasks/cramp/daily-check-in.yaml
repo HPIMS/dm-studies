@@ -4,8 +4,8 @@ schedule:
   type: PERIOD
   period: DAILY
   timeOfDay:
-    - - "1800"
-      - "2359"
+     - - "1800"
+       - "2359"
 timeRequirements:
   time: 5
   timeUnits: minutes
