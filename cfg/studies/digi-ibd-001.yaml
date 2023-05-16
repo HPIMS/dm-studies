@@ -481,3 +481,10 @@ tasks:
 
   - key: exit
     rank: 17
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
