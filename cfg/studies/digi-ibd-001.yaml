@@ -13,6 +13,12 @@ platform:
   - ios
   - android
 
+
+exclusivity:
+  blacklist:
+    - ibd-forecast
+    - ra-forecast
+
 minVersion: '2.3'
 capTo: 1000
 
