@@ -7,11 +7,17 @@ visibility: private
 
 irb: STUDY-22-00083
 pi: Robert Hirten MD
-studyEmail: robert.hirten@mountsinai.org
+studyEmail: digitalibd@mssm.edu
 
 platform:
   - ios
   - android
+
+
+exclusivity:
+  blacklist:
+    - ibd-forecast
+    - ra-forecast
 
 minVersion: '2.3'
 capTo: 1000
@@ -38,6 +44,13 @@ timeResponsibility:
 
 tasks:
   - key: which-ibd
+    triggers:
+      - action: HIDE
+        condition:
+          - type: COMPLETED
+            resource: digi-ibd-001::which-ibd
+            operator: ">"
+            score: 0
     rank: 1
 
   - key: begin-next-phase
@@ -471,3 +484,13 @@ tasks:
             operator: "="
             score: 1
     rank: 16
+
+  - key: exit
+    rank: 17
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
