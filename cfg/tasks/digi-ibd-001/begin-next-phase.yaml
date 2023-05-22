@@ -10,22 +10,21 @@ timeRequirements:
   time: 30
   timeUnits: seconds
 name: Stop! Click Here Only When Instructed.
+intro:
+  title: Stop! Only continue when instructed.
+  description: [
+    ["H4", "Begin the next study phase."],
+    [
+      "BodyLarge",
+      "In order to begin the next phase of the study you must be receiving your first injection or infusion. Please continue with this survey once you have been instructed by the study coordinator."
+    ]
+  ]
 outro:
   title: Finished
   description: Thank you for sharing. If you have received your first injection or
     infusion, you can begin the next phase of the study. If you have not, this
     survey will remain on your task list until you are ready to start.
 sections:
-  - type: document
-    key: intro
-    content: [
-      ["H3", "Stop! Only continue when instructed."],
-      ["H4", "Begin the next study phase."],
-      [
-        "BodyLarge",
-        "In order to begin the next phase of the study you must be receiving your first injection or infusion. Please continue with this survey once you have been instructed by the study coordinator."
-      ]
-    ]
   - type: survey
     key: "0"
     title: "Stop! Continue Only When Instructed."
