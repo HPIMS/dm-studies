@@ -9,25 +9,30 @@ schedule:
 timeRequirements:
   time: 30
   timeUnits: seconds
-name: Begin the Next Study Phase
-intro:
-  title: Begin the Next Study Phase
-  description: In order to begin the next phase of the study you must have
-    received your first injection or infusion. Please continue with this survey
-    once you have done so.
+name: Stop! Click Here Only When Instructed.
 outro:
   title: Finished
   description: Thank you for sharing. If you have received your first injection or
     infusion, you can begin the next phase of the study. If you have not, this
     survey will remain on your task list until you are ready to start.
 sections:
+  - type: document
+    key: intro
+    content: [
+      ["H3", "Stop! Only continue when instructed."],
+      ["H4", "Begin the next study phase."],
+      [
+        "BodyLarge",
+        "In order to begin the next phase of the study you must be receiving your first injection or infusion. Please continue with this survey once you have been instructed by the study coordinator."
+      ]
+    ]
   - type: survey
     key: "0"
-    title: ""
-    description: Answer this questions to begin the next phase of the study.
+    title: "Stop! Continue Only When Instructed."
+    description: Answer this question to begin the next phase of the study.
     questions:
       - key: received_biologic
-        question: Have your received your first injection or infusion?
+        question: Have you received your first injection or infusion?
         type: SINGLE_CHOICE
         options:
           - value: yes

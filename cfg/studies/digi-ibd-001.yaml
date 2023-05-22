@@ -485,8 +485,7 @@ tasks:
             score: 1
     rank: 16
 
-  - key: exit
-    rank: 17
+  - key: schedule-labs-1
     triggers:
       - action: SHOW
         condition:
@@ -494,3 +493,84 @@ tasks:
             resource: digi-ibd-001::begin-next-phase
             operator: "="
             score: 1
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: digi-ibd-001::schedule-labs-1
+              section: info
+              question: schedule_labs
+              operator: =
+              value: yes
+    rank: 17
+
+  - key: schedule-labs-2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: digi-ibd-001::schedule-labs-2
+              section: info
+              question: schedule_labs
+              operator: =
+              value: yes
+    rank: 18
+
+  - key: schedule-labs-3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: digi-ibd-001::schedule-labs-3
+              section: info
+              question: schedule_labs
+              operator: =
+              value: yes
+    rank: 19
+
+  - key: schedule-labs-4
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: digi-ibd-001::schedule-labs-4
+              section: info
+              question: schedule_labs
+              operator: =
+              value: yes
+    rank: 20
+
+  - key: exit
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 21
