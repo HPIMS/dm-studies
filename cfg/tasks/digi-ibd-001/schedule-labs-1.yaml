@@ -1,0 +1,6 @@
+key: schedule-labs-1
+_extends: schedule-labs
+schedule:
+  type: PERIOD
+  period: ALWAYS
+  gracePeriod: 4
