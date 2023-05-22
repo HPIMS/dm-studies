@@ -11,8 +11,9 @@ timeRequirements:
   timeUnits: seconds
 name: Stop! Click Here Only When Instructed.
 intro:
-  title: Stop! Only continue when instructed.
+  title: Stop!
   description: [
+    ["BodyLarge", "You should only continue with this task when instructed to do so."],
     ["H4", "Begin the next study phase."],
     [
       "BodyLarge",
@@ -27,7 +28,7 @@ outro:
 sections:
   - type: survey
     key: "0"
-    title: "Stop! Continue Only When Instructed."
+    title: "Stop! Only continue when instructed to do so."
     description: Answer this question to begin the next phase of the study.
     questions:
       - key: received_biologic
