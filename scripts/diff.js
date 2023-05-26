@@ -152,7 +152,7 @@ async function processStudies() {
     }
 
     if (!fileContents.active) {
-      log.error(
+      log.warning(
         `[${name}] Is not active. The study and any associated tasks will be ignored.`
       );
       if (!lastHash || !lastVersion) {
