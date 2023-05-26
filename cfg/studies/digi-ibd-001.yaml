@@ -89,74 +89,6 @@ tasks:
             score: 1 # uc
     rank: 1
 
-  - key: pro-3-screening
-    schedule:
-      type: PERIOD
-      period: ONCE
-    triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: digi-ibd-001::which-ibd
-            operator: "="
-            score: 0 # crohns
-    rank: 2
-
-  - key: pro-3
-    schedule:
-      type: TIMETABLE
-      timetable: [0, 2, 4, 6, 8, 10, 14]
-      timetableUnits: WEEKS
-      gracePeriod: 3
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: SCORE
-              resource: digi-ibd-001::which-ibd
-              operator: "="
-              score: 0 # crohns
-            - type: SCORE
-              resource: digi-ibd-001::begin-next-phase
-              operator: "="
-              score: 1
-    rank: 2
-
-  - key: sccai-screening
-    schedule:
-      type: PERIOD
-      period: ONCE
-    triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: digi-ibd-001::which-ibd
-            operator: "="
-            score: 1 # uc
-    rank: 2
-
-  - key: sccai
-    schedule:
-      type: TIMETABLE
-      timetable: [0, 2, 4, 6, 8, 10, 14]
-      timetableUnits: WEEKS
-      gracePeriod: 3
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: SCORE
-              resource: digi-ibd-001::which-ibd
-              operator: "="
-              score: 1 # uc
-            - type: SCORE
-              resource: digi-ibd-001::begin-next-phase
-              operator: "="
-              score: 1
-    rank: 2
-
   - key: sibdq-screening
     schedule:
       type: PERIOD
@@ -544,26 +476,6 @@ tasks:
               operator: =
               value: yes
     rank: 19
-
-  - key: schedule-labs-4
-    triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: digi-ibd-001::begin-next-phase
-            operator: "="
-            score: 1
-      - action: HIDE
-        condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: digi-ibd-001::schedule-labs-4
-              section: info
-              question: schedule_labs
-              operator: =
-              value: yes
-    rank: 20
 
   - key: exit
     triggers:

@@ -31,7 +31,6 @@ sections:
       - key: stool_freq
         question: 1. Indicate your stool frequency (based on yesterday)
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: normal
             text: Normal number of stools
@@ -45,14 +44,10 @@ sections:
           - value: over_4_stools
             text: Over 4 stools more than normal
             score: 3
-          - value: no_answer
-            text: Prefer not to answer
-            score: -999
       - key: bleeding_severity
         question: 2. Please indicate the severity of your rectal bleeding (based on
           yesterday)
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: no_blood
             text: No blood seen
@@ -66,6 +61,3 @@ sections:
           - value: blood_alone
             text: Passing blood alone (bowel movements with blood alone without stool)
             score: 3
-          - value: no_answer
-            text: Prefer not to answer
-            score: -999
