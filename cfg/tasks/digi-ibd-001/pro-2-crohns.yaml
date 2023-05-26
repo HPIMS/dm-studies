@@ -1,13 +1,5 @@
 key: pro-2-crohns
-scorable: true
-score:
-  fn: pro-2-crohns
-  args: {}
-metadata:
-  author: ""
-  instrument: ""
-  version: ""
-  references: []
+scorable: false
 schedule:
   type: PERIOD
   period: DAILY
@@ -50,4 +42,22 @@ sections:
           - value: severe
             text: Severe
             score: 3
-
+      - key: well_being
+        question: 3. Please rate your well-being yesterday.
+        type: SINGLE_CHOICE
+        options:
+          - value: generally_well
+            text: Generally well
+            score: 0
+          - value: slightly_unwell
+            text: Slightly under par
+            score: 1
+          - value: poor
+            text: Poor
+            score: 2
+          - value: very_poor
+            text: Very poor
+            score: 3
+          - value: terrible
+            text: Terrible
+            score: 4
