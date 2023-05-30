@@ -28,8 +28,7 @@ sections:
     description: ""
     questions:
       - key: change
-        question: Compared to when you received the first treatment in this study, how
-          has your fatigue changed?
+        question: Please choose the response below that best describes the overall change in your fatigue since you started taking the biologic medication at the beginning of this study.
         type: SINGLE_CHOICE
         options:
           - value: much_better
