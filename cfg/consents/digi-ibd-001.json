@@ -7,7 +7,7 @@
     "email": "digitalibd@mssm.edu",
     "physicalAddress": "17 E 102nd Street, 5th Floor. New York, NY, 10029",
     "mailingAddress": "17 E 102nd Street, 5th Floor. New York, NY, 10029",
-    "phone": "(212) 241-4500"
+    "phone": "(212) 241-8100"
   },
   "dates": {
     "effectiveAt": "2023-05-16T00:00:00.000Z",
@@ -32,8 +32,8 @@
   "options": [
     {
       "type": "single",
-      "title": "Genenetic and protein testing.",
-      "summary": "Do you agree to have your blood collected for genetic and protein testing? These stored samples may be used for future research.",
+      "title": "Genetic and protein testing.",
+      "summary": "- If you consent for genetic testing as part of this study the samples will be stored as long as deemed useful for research purposes. All samples will be kept secure and only include your study identification number.\n\n- Genetic testing results will not be shared with you. The research will not include whole genome sequencing or sequencing all your genes.\n\nDo you agree to have your blood collected for genetic and protein testing? These stored samples may be used for future research.",
       "required": true,
       "accept": "Yes, I consent",
       "reject": "No, I do not consent"
@@ -98,7 +98,7 @@
       "BodyLarge",
       [
         ["Italic", "Phone: "],
-        ["Telephone", "(212) 241-4500"]
+        ["Telephone", "(212) 241-8100"]
       ]
     ],
     ["H3", "SUMMARY OF THIS RESEARCH STUDY"],
@@ -278,10 +278,10 @@
               "Text",
               "Wearable device - In addition, it is important to remember that companies who produce the monitors and the accompanying software for those devices will have access to identifiable information about you: including name, email address, GPS coordinates, and other personal data learned from the monitor. The data that these companies collect may be sold without researcher or participant knowledge. These risks are the same as if you were to purchase and use the device outside of the research trial. Additionally, you may experience redness or skin irritation on your finger or wrist. If so, remove it immediately. We recommend you review the Oura Ring terms of use agreement. This can be found online or at "
             ],
-            ["Hyperlink", "https://ouraring.com/terms-and-conditions."],
+            ["Hyperlink", "https://ouraring.com/terms-and-conditions"],
             [
               "Text",
-              " Additionally, we recommend you review the attached Oura Teams agreement which will have to be electronically signed to start using the Oura Ring. No personal identifying information will be provided with the signing of this consent, however we recommend you review it prior to consenting to the study."
+              ". Additionally, we recommend you review the attached Oura Teams agreement which will have to be electronically signed to start using the Oura Ring. No personal identifying information will be provided with the signing of this consent, however we recommend you review it prior to consenting to the study."
             ]
           ]
         ]
@@ -342,7 +342,7 @@
           "Text",
           "If you have any questions, concerns or complaints at any time about this research, or you think the research has harmed you, please contact the office of the research team and/or the Lead Researcher at phone number "
         ],
-        ["Telephone", "212-241-4500"],
+        ["Telephone", "212-241-8100"],
         ["Text", "."]
       ]
     ],
@@ -353,7 +353,7 @@
           "Text",
           "If you experience an emergency during your participation in this research, contact "
         ],
-        ["Telephone", "212-241-4500"],
+        ["Telephone", "212-241-8100"],
         ["Text", "."]
       ]
     ],
@@ -585,6 +585,11 @@
       ]
     ],
     ["Text", "\n"],
+    ["H3", "Additional consent terms"],
+    [
+      "BodyLarge",
+      "In this study you will be using the Oura Ring. To use the Oura Ring, you will need to agree to the below terms with Oura. Please review this now to assure you are comfortable with it before consenting to the study."
+    ],
     ["H1", "Oura Teams Consent"],
     ["H3", "Share your Oura data"],
     [

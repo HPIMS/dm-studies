@@ -1,0 +1,8 @@
+key: schedule-labs-3
+_extends: schedule-labs
+schedule:
+  type: PERIOD
+  period: ALWAYS
+  delay: 94
+  delayUnits: DAYS
+  gracePeriod: 4

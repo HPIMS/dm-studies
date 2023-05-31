@@ -96,7 +96,7 @@ sections:
             text: Hardly any difficulty
             score: 6
           - value: no_difficulty
-            text: None difficulty; the bowel problems did not limit sports or leisure
+            text: No difficulty; the bowel problems did not limit sports or leisure
               activities
             score: 7
       - key: abdominal_pain
@@ -204,26 +204,26 @@ sections:
         question: How often have you felt relaxed and free of tension?
         type: SINGLE_CHOICE
         options:
-          - value: all_of_the_time
-            text: All of the time
-            score: 1
-          - value: most_of_the_time
-            text: Most of the time
-            score: 2
-          - value: a_good_bit_of_the_time
-            text: A good bit of the time
-            score: 3
-          - value: some_of_the_time
-            text: Some of the time
-            score: 4
-          - value: a_little_bit_of_the_time
-            text: A little bit of the time
-            score: 5
-          - value: hardly_any_of_the_time
-            text: Hardly any of the time
-            score: 6
           - value: none_of_the_time
             text: None of the time
+            score: 1
+          - value: a_little_of_the_time
+            text: A little of the time
+            score: 2
+          - value: some_of_the_time
+            text: Some of the time
+            score: 3
+          - value: a_good_bit_of_the_time
+            text: A good bit of the time
+            score: 4
+          - value: most_of_the_time
+            text: Most of the time
+            score: 5
+          - value: almost_all_of_the_time
+            text: Almost all of the time
+            score: 6           
+          - value: all_of_the_time
+            text: All of the time
             score: 7
       - key: tenesmus
         question: How much of the time have your been troubled by a feeling of having to

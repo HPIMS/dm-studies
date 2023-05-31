@@ -17,9 +17,9 @@ schedule:
 timeRequirements: 
   time: 30
   timeUnits: seconds
-name: Crohn's severity
+name: Crohn's Severity
 intro:
-  title: Crohn's severity
+  title: Crohn's Severity
   description: We want to understand more about how your Crohn's disease is
     feeling. Please fill out this survey and let us know.
 sections:
@@ -29,7 +29,7 @@ sections:
     description: ""
     questions:
       - key: severity
-        question: Overall, how would you rate the severity of your Chrohn's diease
+        question: Overall, how would you rate the severity of your Crohn's diease
           currently?
         type: SINGLE_CHOICE
         options:

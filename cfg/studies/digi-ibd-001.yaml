@@ -13,14 +13,13 @@ platform:
   - ios
   - android
 
-
 exclusivity:
   blacklist:
     - ibd-forecast
     - ra-forecast
 
 minVersion: '2.5'
-capTo: 200
+capTo: 236
 
 name: Digital Signatures of Drug Response in IBD
 
@@ -88,74 +87,6 @@ tasks:
             operator: "="
             score: 1 # uc
     rank: 1
-
-  - key: pro-3-screening
-    schedule:
-      type: PERIOD
-      period: ONCE
-    triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: digi-ibd-001::which-ibd
-            operator: "="
-            score: 0 # crohns
-    rank: 2
-
-  - key: pro-3
-    schedule:
-      type: TIMETABLE
-      timetable: [0, 2, 4, 6, 8, 10, 14]
-      timetableUnits: WEEKS
-      gracePeriod: 3
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: SCORE
-              resource: digi-ibd-001::which-ibd
-              operator: "="
-              score: 0 # crohns
-            - type: SCORE
-              resource: digi-ibd-001::begin-next-phase
-              operator: "="
-              score: 1
-    rank: 2
-
-  - key: sccai-screening
-    schedule:
-      type: PERIOD
-      period: ONCE
-    triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: digi-ibd-001::which-ibd
-            operator: "="
-            score: 1 # uc
-    rank: 2
-
-  - key: sccai
-    schedule:
-      type: TIMETABLE
-      timetable: [0, 2, 4, 6, 8, 10, 14]
-      timetableUnits: WEEKS
-      gracePeriod: 3
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: SCORE
-              resource: digi-ibd-001::which-ibd
-              operator: "="
-              score: 1 # uc
-            - type: SCORE
-              resource: digi-ibd-001::begin-next-phase
-              operator: "="
-              score: 1
-    rank: 2
 
   - key: sibdq-screening
     schedule:
@@ -485,8 +416,7 @@ tasks:
             score: 1
     rank: 16
 
-  - key: exit
-    rank: 17
+  - key: schedule-labs-1
     triggers:
       - action: SHOW
         condition:
@@ -494,3 +424,64 @@ tasks:
             resource: digi-ibd-001::begin-next-phase
             operator: "="
             score: 1
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: digi-ibd-001::schedule-labs-1
+              section: info
+              question: schedule_labs
+              operator: =
+              value: yes
+    rank: 17
+
+  - key: schedule-labs-2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: digi-ibd-001::schedule-labs-2
+              section: info
+              question: schedule_labs
+              operator: =
+              value: yes
+    rank: 18
+
+  - key: schedule-labs-3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+      - action: HIDE
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: digi-ibd-001::schedule-labs-3
+              section: info
+              question: schedule_labs
+              operator: =
+              value: yes
+    rank: 19
+
+  - key: exit
+    triggers:
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: digi-ibd-001::begin-next-phase
+            operator: "="
+            score: 1
+    rank: 21
