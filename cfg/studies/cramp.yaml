@@ -174,22 +174,7 @@ tasks:
     rank: 120
     schedule:
       type: PERIOD
-      period: ONCE
-      delay: 1
-      delayUnits: DAYS
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: CALCULATION
-              # Today in m + L - 14 : m + L - 7;
-              fn: cramp::ovulation-phase
-              args: {}
-            - type: COMPLETED
-              resource: pre-dst
-              operator: ">"
-              score: 0
+      period: ALWAYS
 
   - key: daily-check-in
     rank: 130
@@ -271,38 +256,12 @@ tasks:
 
   - key: dona-facebook
     rank: 190
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: CALCULATION
-              fn: cramp::cycle-complete
-              args: {}
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: cramp::demographics
-                section: sdh
-                question: fb_messenger
-                operator: =
-                value: yes
+    schedule:
+      type: PERIOD
+      period: ALWAYS
 
   - key: dona-whatsapp
     rank: 200
-    triggers:
-      - action: SHOW
-        condition:
-          type: AND
-          tasks:
-            - type: CALCULATION
-              fn: cramp::cycle-complete
-              args: {}
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: cramp::demographics
-                section: sdh
-                question: whatsapp
-                operator: =
-                value: yes
+    schedule:
+      type: PERIOD
+      period: ALWAYS
