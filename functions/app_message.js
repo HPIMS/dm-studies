@@ -10,14 +10,13 @@ const messageTypes = {
  */
 
 // Set to true / false to display the app message.
-const showMessage = true;
+const showMessage = false;
 
 // Set a message type using the message types object.
 const messageType = messageTypes.error;
 
 // Set message text
-const messageText =
-  "Notice! ehive is currently down for maintenance. Please come back later.";
+const messageText = "";
 
 /**
  * CONFIGURATION END
