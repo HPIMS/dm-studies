@@ -77,3 +77,18 @@ tasks:
     schedule:
       type: PERIOD
       period: ALWAYS
+
+  - key: knowledge
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: comprehension-app
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: comprehension-counseling
+    schedule:
+      type: PERIOD
+      period: ALWAYS
