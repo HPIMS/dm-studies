@@ -47,26 +47,32 @@ tasks:
     schedule:
       type: PERIOD
       period: ALWAYS
+
   - key: brief
     schedule:
       type: PERIOD
       period: ALWAYS
+
   - key: factor-adapted
     schedule:
       type: PERIOD
       period: ALWAYS
+
   - key: satisfaction-app
     schedule:
       type: PERIOD
       period: ALWAYS
+
   - key: satisfaction-counseling
     schedule:
       type: PERIOD
       period: ALWAYS
+
   - key: attitudes
     schedule:
       type: PERIOD
       period: ALWAYS
+
   - key: actions-taken
     schedule:
       type: PERIOD
