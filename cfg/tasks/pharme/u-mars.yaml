@@ -542,9 +542,11 @@ sections:
         maxLabel: Definitely Yes
       - key: '20'
         question: What is your overall (star) rating of the app?
-        description: >-
-          Where 1 star is one of the worst apps you've used. 3 stars is average.
-          And 5 stars is one of the best apps you've used.
+        description: |-
+          Where:
+          1 star is one of the worst apps you've used.
+          3 stars is average.
+          5 stars is one of the best apps you've used.
         type: RATE
         max: 5
   - type: survey
