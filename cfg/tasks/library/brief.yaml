@@ -1,0 +1,101 @@
+key: brief
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: "Haun et al."
+  instrument: "BRIEF: Health Literacy Screening Tool"
+  version: "1"
+  references:
+    - "Haun, J., Luther, S., Dodd, V., & Donaldson, P. (2012). Measurement variation across health literacy assessments: Implications for assessment selection in research and practice. Journal of Health Communication, 17 Suppl 3, 141–159. https://doi.org/10.1080/10810730.2012.712615"
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 1
+  timeUnits: minutes
+name: Health Literacy
+sections:
+  - type: survey
+    key: health-literacy
+    title: ""
+    description: ""
+    questions:
+      - key: '1'
+        question: How often do you have someone help you read hospital materials?
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+            score: 1
+          - value: often
+            text: Often
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: occasionally
+            text: Occasionally
+            score: 4
+          - value: never
+            text: Never
+            score: 5
+      - key: '2'
+        question: How often do you have problems learning about your medical condition because of difficulty understanding written information?
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+            score: 1
+          - value: often
+            text: Often
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: occasionally
+            text: Occasionally
+            score: 4
+          - value: never
+            text: Never
+            score: 5
+      - key: '3'
+        question: How often do you have a problem understanding what is told to you about your medical condition?
+        type: SINGLE_CHOICE
+        options:
+          - value: always
+            text: Always
+            score: 1
+          - value: often
+            text: Often
+            score: 2
+          - value: sometimes
+            text: Sometimes
+            score: 3
+          - value: occasionally
+            text: Occasionally
+            score: 4
+          - value: never
+            text: Never
+            score: 5
+
+      - key: '4'
+        question: How confident are you filling out medical forms by yourself?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 1
+          - value: a_little_bit
+            text: A little bit
+            score: 2
+          - value: somewhat
+            text: Somewhat
+            score: 3
+          - value: quite_a_bit
+            text: Quite a bit
+            score: 4
+          - value: extremely
+            text: Extremely
+            score: 5
