@@ -1,0 +1,95 @@
+key: knowledge
+scorable: false
+metadata:
+  author: Truong et al. (subset)
+  instrument: Subset of self-developed questionnaire by Truong et al., 2020
+  version: "1"
+  references:
+    - "Truong, T. M., Lipschultz, E., Danahey, K., Schierer, E., Ratain, M. J., & O’Donnell, P. H. (2020). Assessment of Patient Knowledge and Perceptions of Pharmacogenomics Before and After Using a Mock Results Patient Web Portal. Clinical and Translational Science, 13(1), 78–87. https://doi.org/10.1111/cts.12681"
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Genetics & PGx knowledge
+sections: 
+  - type: survey
+    key: knowledge
+    title: ""
+    description: ""
+    questions:
+      - key: '1'
+        question: "Factors that can affect how a person responds to a medication include:"
+        type: SINGLE_CHOICE
+        options:
+          - value: age
+            text: Age
+          - value: sex
+            text: Sex
+          - value: lifestyle
+            text: Lifestyle
+          - value: genetics
+            text: Genetics
+          - value: other_drugs
+            text: Other drugs
+          - value: All of the above
+            text: all_of_the_above drugs
+          - value: I don’t know
+            text: i_dont_know drugs
+      - key: '2'
+        question: "Your DNA is passed down from:"
+        type: SINGLE_CHOICE
+        options:
+          - value: mother
+            text: Your mother
+          - value: father
+            text: Your father
+          - value: both
+            text: Both your mother and your father
+          - value: neither
+            text: Neither your mother nor your father
+          - value: i_dont_know
+            text: I don’t know
+      - key: '3'
+        question: "Your DNA contains instructions for:"
+        type: SINGLE_CHOICE
+        options:
+          - value: eyes
+            text: The color of your eyes
+          - value: blood_type
+            text: Your blood type
+          - value: medication_response
+            text: How you respond to medications
+          - value: all_of_the_above
+            text: All of the above
+          - value: i_dont_know
+            text: I don’t know
+      - key: '4'
+        question: "Pharmacogenetics is the study of:"
+        type: SINGLE_CHOICE
+        options:
+          - value: side_effects
+            text: Drug side effects
+          - value: medication_response
+            text: How your DNA affect your responses to medications
+          - value: medication_dna
+            text: How medications can change your DNA
+          - value: prescription
+            text: How drugs are prescribed
+          - value: i_dont_know
+            text: I don’t know
+      - key: '5'
+        question: "Pharmacogenetic testing can:"
+        type: SINGLE_CHOICE
+        options:
+          - value: effective_medication
+            text: Help find the most effective medication
+          - value: avoid_sideeffect
+            text: Help avoid side effects
+          - value: best_dose
+            text: Help find the best dose of a medication
+          - value: all_of_the_above
+            text: All of the above
+          - value: i_dont_know
+            text: I don’t know
