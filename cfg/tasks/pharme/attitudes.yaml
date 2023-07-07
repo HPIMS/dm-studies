@@ -21,45 +21,45 @@ sections:
   - type: survey
     key: group_1
     title: ""
-    description: "On a scale of 1 to 7, please indicate your response for the following statements:"
+    description: "On a scale of 1 to 7, please indicate your response for the following statements.\n\nFor me, receiving my PGx test results was:"
     questions:
       - key: attitudes_1
-        question: For me, receiving my PGx test results was a bad thing (1) ↔ not a bad thing (7).
+        question: A bad thing (1) ↔ Not a bad thing (7).
         type: H_SCALE
         min: 1
         minLabel: A Bad Thing
         max: 7
         maxLabel: Not a Bad Thing
       - key: attitudes_2
-        question: For me, receiving my PGx test results was not beneficial (1) ↔ beneficial (7).
+        question: Not beneficial (1) ↔ Beneficial (7).
         type: H_SCALE
         min: 1
         minLabel: Not Beneficial
         max: 7
         maxLabel: Beneficial
       - key: attitudes_3
-        question: For me, receiving my PGx test results was harmful (1) ↔ not harmful (7).
+        question: Harmful (1) ↔ Not harmful (7).
         type: H_SCALE
         min: 1
         minLabel: Harmful
         max: 7
         maxLabel: Not Harmful
       - key: attitudes_4
-        question: For me, receiving my PGx test results was a not a good thing (1) ↔ a good thing (7).
+        question: Not a good thing (1) ↔ A good thing (7).
         type: H_SCALE
         min: 1
         minLabel: Not a Good Thing
         max: 7
         maxLabel: A Good Thing
       - key: attitudes_5
-        question: For me, receiving my PGx test results was not worthwhile (1) ↔ worthwhile (7).
+        question: Not worthwhile (1) ↔ Worthwhile (7).
         type: H_SCALE
         min: 1
         minLabel: Not Worthwhile
         max: 7
         maxLabel: Worthwhile
       - key: attitudes_6
-        question: For me, receiving my PGx test results was unimportant (1) ↔ important (7).
+        question: Unimportant (1) ↔ Important (7).
         type: H_SCALE
         min: 1
         minLabel: Unimportant
