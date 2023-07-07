@@ -1,0 +1,603 @@
+key: u-mars
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: Stoyanov et al. (slightly adapted)
+  instrument: >-
+    Mobile Application Rating Scale: user version (uMARS); adapted "app" to
+    "PharMe app" or "PharMe" and "health behavior" to relevant aspects of PGx
+    testing and its impact on user's response to certain medications
+  version: '1'
+  references:
+    - >-
+      Stoyanov, S. R., Hides, L., Kavanagh, D. J., & Wilson, H. (2016).
+      Development and Validation of the User Version of the Mobile Application
+      Rating Scale (uMARS). JMIR MHealth and UHealth, 4(2), e5849.
+      https://doi.org/10.2196/mhealth.5849
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+intro:
+  title: App Rating
+  description: >-
+    If not done so yet, please use the app thoroughly for at least 10 minutes to
+    determine how easy it is to use, how well it functions and does it do what
+    it purports to do. Also review app settings, developer information, external
+    links, security features, etc.
+
+
+    In the survey, please select the answer that most accurately represents the
+    quality of the app you are rating. All items are rated on a 5-point scale
+    from “1 Inadequate” to “5 Excellent”. Select N/A if the app component is
+    irrelevant.
+name: App rating
+sections:
+  - type: survey
+    key: a
+    title: 'Section A: Engagement'
+    description: >-
+      Engagement – fun, interesting, customisable, interactive, has prompts
+      (e.g. sends alerts, messages, reminders, feedback, enables sharing)
+    questions:
+      - key: '1'
+        question: >-
+          Entertainment: Is the app fun/entertaining to use? Does it have
+          components that make it more fun than other similar apps?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: '1: Dull, not fun or entertaining at all'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Mostly boring'
+            score: 2
+          - value: neutral
+            text: '3: OK, fun enough to entertain user for a brief time (< 5 minutes)'
+            score: 3
+          - value: adequate
+            text: >-
+              4: Moderately fun and entertaining, would entertain user for some
+              time (5-10 minutes total)
+            score: 4
+          - value: excellent
+            text: '5: Highly entertaining and fun, would stimulate repeat use'
+            score: 5
+      - key: '2'
+        question: >-
+          Interest: Is the app interesting to use? Does it present its
+          information in an interesting way compared to other similar apps?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: '1: Not interesting at all'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Mostly uninteresting'
+            score: 2
+          - value: neutral
+            text: >-
+              3: OK, neither interesting nor uninteresting; would engage user
+              for a brief time (< 5 minutes)
+            score: 3
+          - value: adequate
+            text: >-
+              4: Moderately interesting; would engage user for some time (5-10
+              minutes total)
+            score: 4
+          - value: excellent
+            text: '5: Very interesting, would engage user in repeat use'
+            score: 5
+      - key: '3'
+        question: >-
+          Customisation: Does it allow you to customise the settings and
+          preferences that you would like to (e.g. sound, content and
+          notifications)?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: >-
+              1: Does not allow any customisation or requires setting to be
+              input every time
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Allows little customisation and that limits app’s functions'
+            score: 2
+          - value: neutral
+            text: '3: Basic customisation to function adequately'
+            score: 3
+          - value: adequate
+            text: '4: Allows numerous options for customisation'
+            score: 4
+          - value: excellent
+            text: >-
+              5: Allows complete tailoring the user’s
+              characteristics/preferences, remembers all settings
+            score: 5
+      - key: '4'
+        question: >-
+          Interactivity: Does it allow user input, provide feedback, contain
+          prompts (reminders, sharing options, notifications, etc.)?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: '1: No interactive features and/or no response to user input'
+            score: 1
+          - value: mostly_inadequate
+            text: >-
+              2: Some, but not enough interactive features which limits app’s
+              functions
+            score: 2
+          - value: neutral
+            text: '3: Basic interactive features to function adequately'
+            score: 3
+          - value: adequate
+            text: >-
+              4: Offers a variety of interactive features, feedback and user
+              input options
+            score: 4
+          - value: excellent
+            text: >-
+              5: Very high level of responsiveness through interactive features,
+              feedback and user input options
+            score: 5
+      - key: '5'
+        question: >-
+          Target group: Is the app content (visuals, language, design)
+          appropriate for the target audience?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: '1: Completely inappropriate, unclear or confusing'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Mostly inappropriate, unclear or confusing'
+            score: 2
+          - value: neutral
+            text: >-
+              3: Acceptable but not specifically designed for the target
+              audience. May be inappropriate/unclear/confusing at times
+            score: 3
+          - value: adequate
+            text: '4: Designed for the target audience, with minor issues'
+            score: 4
+          - value: excellent
+            text: '5: Designed specifically for the target audience, no issues found'
+            score: 5
+  - type: survey
+    key: b
+    title: 'Section B: Functionality'
+    description: >-
+      Functionality – app functioning, easy to learn, navigation, flow logic,
+      and gestural design of app"
+    questions:
+      - key: '6'
+        question: >-
+          Performance: How accurately/fast do the app features (functions) and
+          components (buttons/menus) work?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: >-
+              1: App is broken; no/insufficient/inaccurate response (e.g.
+              crashes/bugs/broken features, etc.)
+            score: 1
+          - value: mostly_inadequate
+            text: >-
+              2: Some functions work, but lagging or contains major technical
+              problems
+            score: 2
+          - value: neutral
+            text: >-
+              3: App works overall. Some technical problems need fixing, or is
+              slow at times
+            score: 3
+          - value: adequate
+            text: '4: Mostly functional with minor/negligible problems'
+            score: 4
+          - value: excellent
+            text: >-
+              5: Perfect/timely response; no technical bugs found, or contains a
+              ‘loading time left’ indicator (if relevant)
+            score: 5
+      - key: '7'
+        question: >-
+          Ease of use: How easy is it to learn how to use the app; how clear are
+          the menu labels, icons and instructions?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: >-
+              1: No/limited instructions; menu labels, icons are confusing;
+              complicated
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Takes a lot of time or effort'
+            score: 2
+          - value: neutral
+            text: '3: Takes some time or effort'
+            score: 3
+          - value: adequate
+            text: '4: Easy to learn (or has clear instructions)'
+            score: 4
+          - value: excellent
+            text: >-
+              5: Able to use app immediately; intuitive; simple (no instructions
+              needed)
+            score: 5
+      - key: '8'
+        question: >-
+          Navigation: Does moving between screens make sense; Does PharMe have
+          all necessary links between screens?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: >-
+              1: No logical connection between screens at all /navigation is
+              difficult
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Understandable after a lot of time/effort'
+            score: 2
+          - value: neutral
+            text: '3: Understandable after some time/effort'
+            score: 3
+          - value: adequate
+            text: '4: Easy to understand/navigate'
+            score: 4
+          - value: excellent
+            text: >-
+              5: Perfectly logical, easy, clear and intuitive screen flow
+              throughout, and/or has shortcuts
+            score: 5
+      - key: '9'
+        question: >-
+          Gestural design: Do taps/swipes/pinches/scrolls make sense? Are they
+          consistent across all components/screens?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: '1: Completely inconsistent/confusing'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Often inconsistent/confusing'
+            score: 2
+          - value: neutral
+            text: '3: OK with some inconsistencies/confusing elements'
+            score: 3
+          - value: adequate
+            text: '4: Mostly consistent/intuitive with negligible problems'
+            score: 4
+          - value: excellent
+            text: '5: Perfectly consistent and intuitive'
+            score: 5
+  - type: survey
+    key: c
+    title: 'Section C: Aesthetics'
+    description: >-
+      Aesthetics – graphic design, overall visual appeal, colour scheme, and
+      stylistic consistency
+    questions:
+      - key: '10'
+        question: >-
+          Layout: Is arrangement and size of buttons, icons, menus and content
+          on the screen appropriate?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: >-
+              1: Very bad design, cluttered, some options impossible to select,
+              locate, see or read
+            score: 1
+          - value: mostly_inadequate
+            text: >-
+              2: Bad design, random, unclear, some options difficult to
+              select/locate/see/read
+            score: 2
+          - value: neutral
+            text: >-
+              3: Satisfactory, few problems with
+              selecting/locating/seeing/reading items
+            score: 3
+          - value: adequate
+            text: '4: Mostly clear, able to select/locate/see/read items'
+            score: 4
+          - value: excellent
+            text: '5: Professional, simple, clear, orderly, logically organised'
+            score: 5
+      - key: '11'
+        question: >-
+          Graphics: How high is the quality/resolution of graphics used for
+          buttons, icons, menus and content?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: >-
+              1: Graphics appear amateur, very poor visual design -
+              disproportionate, stylistically inconsistent
+            score: 1
+          - value: mostly_inadequate
+            text: >-
+              2: Low quality/low resolution graphics; low quality visual design
+              – disproportionate
+            score: 2
+          - value: neutral
+            text: >-
+              3: Moderate quality graphics and visual design (generally
+              consistent in style)
+            score: 3
+          - value: adequate
+            text: >-
+              4: High quality/resolution graphics and visual design – mostly
+              proportionate, consistent in style
+            score: 4
+          - value: excellent
+            text: >-
+              5: Very high quality/resolution graphics and visual design -
+              proportionate, consistent in style throughout
+            score: 5
+      - key: '12'
+        question: 'Visual appeal: How good does the app look?'
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: >-
+              1: Ugly, unpleasant to look at, poorly designed, clashing,
+              mismatched colours
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Bad – poorly designed, bad use of colour, visually boring'
+            score: 2
+          - value: neutral
+            text: '3: OK – average, neither pleasant, nor unpleasant'
+            score: 3
+          - value: adequate
+            text: >-
+              4: Pleasant – seamless graphics – consistent and professionally
+              designed
+            score: 4
+          - value: excellent
+            text: >-
+              5: Beautiful – very attractive, memorable, stands out; use of
+              colour enhances app features/menus
+            score: 5
+  - type: survey
+    key: d
+    title: 'Section D: Informatione'
+    description: >-
+      Information – Contains high quality information (e.g. text, feedback,
+      measures, references) from a credible source
+    questions:
+      - key: '13'
+        question: >-
+          Quality of information: Is app content correct, well written, and
+          relevant to the goal/topic of the app?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_applicable
+            text: 'N/A: There is no information within the app'
+            score: 0
+          - value: inadequate
+            text: '1: Irrelevant/inappropriate/incoherent/incorrect'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Poor. Barely relevant/appropriate/coherent/may be incorrect'
+            score: 2
+          - value: neutral
+            text: '3: Moderately relevant/appropriate/coherent/and appears correct'
+            score: 3
+          - value: adequate
+            text: '4: Relevant/appropriate/coherent/correct'
+            score: 4
+          - value: excellent
+            text: '5: Highly relevant, appropriate, coherent, and correct'
+            score: 5
+      - key: '14'
+        question: >-
+          Quantity of information: Is the information within the app
+          comprehensive but concise?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_applicable
+            text: 'N/A: There is no information within the app'
+            score: 0
+          - value: inadequate
+            text: '1: Minimal or overwhelming'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Insufficient or possibly overwhelming'
+            score: 2
+          - value: neutral
+            text: '3: OK but not comprehensive or concise'
+            score: 3
+          - value: adequate
+            text: >-
+              4: Offers a broad range of information, has some gaps or
+              unnecessary detail; or has no links to more information and
+              resources
+            score: 4
+          - value: excellent
+            text: >-
+              5: Comprehensive and concise; contains links to more information
+              and resources
+            score: 5
+      - key: '15'
+        question: >-
+          Visual information: Is visual explanation of concepts – through
+          charts/graphs/images/videos, etc. – clear, logical, correct?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_applicable
+            text: >-
+              N/A: There is no visual information within the app (e.g. it only
+              contains audio, or text)
+            score: 0
+          - value: inadequate
+            text: '1: Completely unclear/confusing/wrong or necessary but missing'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Mostly unclear/confusing/wrong'
+            score: 2
+          - value: neutral
+            text: '3: OK but often unclear/confusing/wrong'
+            score: 3
+          - value: adequate
+            text: '4: Mostly clear/logical/correct with negligible issues'
+            score: 4
+          - value: excellent
+            text: '5: Perfectly clear/logical/correct'
+            score: 5
+      - key: '16'
+        question: >-
+          Credibility of source: does the information within the app seem to
+          come from a credible source?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_applicable
+            text: 'N/A: There is no information within the app'
+            score: 0
+          - value: inadequate
+            text: '1: Suspicious source'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: Lacks credibility'
+            score: 2
+          - value: neutral
+            text: '3: Not suspicious but legitimacy of source is unclear'
+            score: 3
+          - value: adequate
+            text: '4: Possibly comes from a legitimate source'
+            score: 4
+          - value: excellent
+            text: '5: Definitely comes from a legitimate/specialised source'
+            score: 5
+  - type: survey
+    key: e
+    title: 'Section E: App subjective quality'
+    description: ''
+    questions:
+      - key: '17'
+        question: Would you recommend this app to people who might benefit from it?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: '1: Not at all. I would not recommend this app to anyone'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: There are very few people I would recommend this app to'
+            score: 2
+          - value: neutral
+            text: '3: Maybe. There are several people I would recommend this app to'
+            score: 3
+          - value: adequate
+            text: '4: There are many people I would recommend this app to'
+            score: 4
+          - value: excellent
+            text: '5: Definitely. I would recommend this app to everyone'
+            score: 5
+      - key: '18'
+        question: >-
+          How many times do you think you would use this app in the next 12
+          months if it was relevant to you?
+        type: SINGLE_CHOICE
+        options:
+          - value: inadequate
+            text: '1: None'
+            score: 1
+          - value: mostly_inadequate
+            text: '2: 1-2'
+            score: 2
+          - value: neutral
+            text: '3: 3-10'
+            score: 3
+          - value: adequate
+            text: '4: 10-50'
+            score: 4
+          - value: excellent
+            text: '5: >50'
+            score: 5
+      - key: '19'
+        question: Would you pay for this app?
+        type: H_SCALE
+        min: 1
+        minLabel: Definitely Not
+        max: 5
+        maxLabel: Definitely Yes
+      - key: '20'
+        question: What is your overall (star) rating of the app?
+        description: >-
+          Where 1 star is one of the worst apps you've used. 3 stars is average.
+          And 5 stars is one of the best apps you've used.
+        type: RATE
+        max: 5
+  - type: survey
+    key: f
+    title: 'Section F: Perceived impact'
+    description: ''
+    questions:
+      - key: '21'
+        question: >-
+          Awareness: This app has increased my awareness of the importance of
+          addressing the health behaviour
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: '22'
+        question: >-
+          Knowledge: This app has increased my knowledge/understanding of the
+          health behaviour
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: '23'
+        question: >-
+          Attitudes: The app has changed my attitudes toward improving this
+          health behaviour
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: '24'
+        question: >-
+          Intention to change: The app has increased my intentions/motivation to
+          address this health behaviour
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: '25'
+        question: >-
+          Help seeking: This app would encourage me to seek further help to
+          address the health behaviour (if I needed it)
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+      - key: '26'
+        question: >-
+          Behaviour change: Use of this app will increase/decrease the health
+          behaviour
+        type: H_SCALE
+        min: 1
+        minLabel: Strongly Disagree
+        max: 5
+        maxLabel: Strongly Agree
+  - type: survey
+    key: g
+    title: Further comments
+    description: ''
+    questions:
+      - key: '27'
+        question: Further comments about the app?
+        type: TEXTAREA

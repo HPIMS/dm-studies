@@ -92,3 +92,8 @@ tasks:
     schedule:
       type: PERIOD
       period: ALWAYS
+
+  - key: u-mars
+    schedule:
+      type: PERIOD
+      period: ALWAYS
