@@ -45,9 +45,10 @@ sections:
       (e.g. sends alerts, messages, reminders, feedback, enables sharing)
     questions:
       - key: '1'
-        question: >-
-          Entertainment: Is the app fun/entertaining to use? Does it have
-          components that make it more fun than other similar apps?
+        question: Entertainment
+        description: >-
+          Is the app fun/entertaining to use? Does it have components that make
+          it more fun than other similar apps?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -68,9 +69,10 @@ sections:
             text: '5: Highly entertaining and fun, would stimulate repeat use'
             score: 5
       - key: '2'
-        question: >-
-          Interest: Is the app interesting to use? Does it present its
-          information in an interesting way compared to other similar apps?
+        question: Interest
+        description: >-
+          Is the app interesting to use? Does it present its information in an
+          interesting way compared to other similar apps?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -93,10 +95,10 @@ sections:
             text: '5: Very interesting, would engage user in repeat use'
             score: 5
       - key: '3'
-        question: >-
-          Customisation: Does it allow you to customise the settings and
-          preferences that you would like to (e.g. sound, content and
-          notifications)?
+        question: Customisation
+        description: >-
+          Does it allow you to customise the settings and preferences that you
+          would like to (e.g. sound, content and notifications)?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -119,9 +121,10 @@ sections:
               characteristics/preferences, remembers all settings
             score: 5
       - key: '4'
-        question: >-
-          Interactivity: Does it allow user input, provide feedback, contain
-          prompts (reminders, sharing options, notifications, etc.)?
+        question: Interactivity
+        description: >-
+          Does it allow user input, provide feedback, contain prompts
+          (reminders, sharing options, notifications, etc.)?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -146,9 +149,10 @@ sections:
               feedback and user input options
             score: 5
       - key: '5'
-        question: >-
-          Target group: Is the app content (visuals, language, design)
-          appropriate for the target audience?
+        question: Target group
+        description: >-
+          Is the app content (visuals, language, design) appropriate for the
+          target audience?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -176,9 +180,10 @@ sections:
       and gestural design of app"
     questions:
       - key: '6'
-        question: >-
-          Performance: How accurately/fast do the app features (functions) and
-          components (buttons/menus) work?
+        question: Performance
+        description: >-
+          How accurately/fast do the app features (functions) and components
+          (buttons/menus) work?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -205,9 +210,10 @@ sections:
               ‘loading time left’ indicator (if relevant)
             score: 5
       - key: '7'
-        question: >-
-          Ease of use: How easy is it to learn how to use the app; how clear are
-          the menu labels, icons and instructions?
+        question: Ease of use
+        description: >-
+          How easy is it to learn how to use the app; how clear are the menu
+          labels, icons and instructions?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -230,9 +236,10 @@ sections:
               needed)
             score: 5
       - key: '8'
-        question: >-
-          Navigation: Does moving between screens make sense; Does PharMe have
-          all necessary links between screens?
+        question: Navigation
+        description: >-
+          Does moving between screens make sense; Does PharMe have all necessary
+          links between screens?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -255,9 +262,10 @@ sections:
               throughout, and/or has shortcuts
             score: 5
       - key: '9'
-        question: >-
-          Gestural design: Do taps/swipes/pinches/scrolls make sense? Are they
-          consistent across all components/screens?
+        question: Gestural design
+        description: >-
+          Do taps/swipes/pinches/scrolls make sense? Are they consistent across
+          all components/screens?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -283,9 +291,10 @@ sections:
       stylistic consistency
     questions:
       - key: '10'
-        question: >-
-          Layout: Is arrangement and size of buttons, icons, menus and content
-          on the screen appropriate?
+        question: Layout
+        description: >-
+          Is arrangement and size of buttons, icons, menus and content on the
+          screen appropriate?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -310,9 +319,10 @@ sections:
             text: '5: Professional, simple, clear, orderly, logically organised'
             score: 5
       - key: '11'
-        question: >-
-          Graphics: How high is the quality/resolution of graphics used for
-          buttons, icons, menus and content?
+        question: Graphics
+        description: >-
+          How high is the quality/resolution of graphics used for buttons,
+          icons, menus and content?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -341,7 +351,8 @@ sections:
               proportionate, consistent in style throughout
             score: 5
       - key: '12'
-        question: 'Visual appeal: How good does the app look?'
+        question: Visual appeal
+        description: How good does the app look?
         type: SINGLE_CHOICE
         options:
           - value: inadequate
@@ -373,9 +384,10 @@ sections:
       measures, references) from a credible source
     questions:
       - key: '13'
-        question: >-
-          Quality of information: Is app content correct, well written, and
-          relevant to the goal/topic of the app?
+        question: Quality of information
+        description: >-
+          Is app content correct, well written, and relevant to the goal/topic
+          of the app?
         type: SINGLE_CHOICE
         options:
           - value: not_applicable
@@ -397,9 +409,8 @@ sections:
             text: '5: Highly relevant, appropriate, coherent, and correct'
             score: 5
       - key: '14'
-        question: >-
-          Quantity of information: Is the information within the app
-          comprehensive but concise?
+        question: Quantity of information
+        description: Is the information within the app comprehensive but concise?
         type: SINGLE_CHOICE
         options:
           - value: not_applicable
@@ -426,8 +437,9 @@ sections:
               and resources
             score: 5
       - key: '15'
-        question: >-
-          Visual information: Is visual explanation of concepts – through
+        question: Visual information
+        description: >-
+          Is visual explanation of concepts – through
           charts/graphs/images/videos, etc. – clear, logical, correct?
         type: SINGLE_CHOICE
         options:
@@ -452,9 +464,10 @@ sections:
             text: '5: Perfectly clear/logical/correct'
             score: 5
       - key: '16'
-        question: >-
-          Credibility of source: does the information within the app seem to
-          come from a credible source?
+        question: Credibility of source
+        description: >-
+          does the information within the app seem to come from a credible
+          source?
         type: SINGLE_CHOICE
         options:
           - value: not_applicable
@@ -540,54 +553,58 @@ sections:
     description: ''
     questions:
       - key: '21'
-        question: >-
-          Awareness: This app has increased my awareness of the importance of
-          addressing the health behaviour
+        question: Awareness
+        description: >-
+          This app has increased my awareness of the importance of addressing
+          the health behaviour
         type: H_SCALE
         min: 1
         minLabel: Strongly Disagree
         max: 5
         maxLabel: Strongly Agree
       - key: '22'
-        question: >-
-          Knowledge: This app has increased my knowledge/understanding of the
-          health behaviour
+        question: Knowledge
+        description: >-
+          This app has increased my knowledge/understanding of the health
+          behaviour
         type: H_SCALE
         min: 1
         minLabel: Strongly Disagree
         max: 5
         maxLabel: Strongly Agree
       - key: '23'
-        question: >-
-          Attitudes: The app has changed my attitudes toward improving this
-          health behaviour
+        question: Attitudes
+        description: >-
+          The app has changed my attitudes toward improving this health
+          behaviour
         type: H_SCALE
         min: 1
         minLabel: Strongly Disagree
         max: 5
         maxLabel: Strongly Agree
       - key: '24'
-        question: >-
-          Intention to change: The app has increased my intentions/motivation to
-          address this health behaviour
+        question: Intention to change
+        description: >-
+          The app has increased my intentions/motivation to address this health
+          behaviour
         type: H_SCALE
         min: 1
         minLabel: Strongly Disagree
         max: 5
         maxLabel: Strongly Agree
       - key: '25'
-        question: >-
-          Help seeking: This app would encourage me to seek further help to
-          address the health behaviour (if I needed it)
+        question: Help seeking
+        description: >-
+          This app would encourage me to seek further help to address the health
+          behaviour (if I needed it)
         type: H_SCALE
         min: 1
         minLabel: Strongly Disagree
         max: 5
         maxLabel: Strongly Agree
       - key: '26'
-        question: >-
-          Behaviour change: Use of this app will increase/decrease the health
-          behaviour
+        question: Behaviour change
+        description: Use of this app will increase/decrease the health behaviour
         type: H_SCALE
         min: 1
         minLabel: Strongly Disagree
