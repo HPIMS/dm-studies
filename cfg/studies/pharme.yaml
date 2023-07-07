@@ -1,0 +1,73 @@
+key: pharme
+consentId: ehive-pharme
+
+active: true
+openEnrollment: true
+visibility: private
+
+irb: STUDY-22-01404
+pi: Aniwaa Owusu-Obeng
+studyEmail: ehivepgx@mssm.
+
+platform:
+  - ios
+  - android
+minVersion: 2.5
+
+name: PGx App Validation Study
+
+shortDescription: >-
+  Patient Comprehension of Pharmacogenetic (PGx) Test Results Delivered by a
+  Mobile Application vs. Pharmacist-Led Counseling.
+
+longDescription: >-
+  A pharmacogenetic test investigates how your genes affect your response to
+  medications. It determines whether a medication could be an effective
+  treatment or whether it may cause side effects. In this research study, we are
+  testing a mobile app, PharMe, to share PGx results.
+
+
+  The main goal of the study is to compare patients' understanding of their
+  pharmacogenetic (PGx) test results shared through a mobile app vs.
+  pharmacist-led counseling.
+
+notes: []
+
+imageId: study-pharme
+animationId: ''
+videoId: ''
+
+timeResponsibility:
+  time: 0
+  timeUnits: minutes
+  timePeriod: daily
+  
+tasks:
+  - key: demographics
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+  - key: brief
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+  - key: factor-adapted
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+  - key: satisfaction-app
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+  - key: satisfaction-counseling
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+  - key: attitudes
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+  - key: actions-taken
+    schedule:
+      type: PERIOD
+      period: ALWAYS

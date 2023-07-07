@@ -1,0 +1,109 @@
+key: demographics
+scorable: false
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+intro:
+  title: Demographics
+  description: [
+    [
+      "BodyLarge",
+      "Please answer a few questions about yourself. These questions help researchers understand how details about who you are relate to other data you may contribute to the study."
+    ],
+    [
+      "BodyLarge",
+      "You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable."
+    ],
+    [
+      "BodyLarge",
+      [
+        [
+          "Text",
+          "The surveys in this app are "
+        ],
+        [
+          "Bold",
+          "NOT"
+        ],
+        [
+          "Text",
+          " a replacement or substitute for medical care. The answers you provide will not be used for clinical care. For any health concerns you may have, please contact your regular healthcare provider."
+        ]
+      ]
+    ]
+  ]
+name: Demographics
+sections:
+  - type: survey
+    key: general
+    title: "About You"
+    description: ""
+    questions:
+      - key: age
+        question: What is your age?
+        type: SINGLE_CHOICE
+        options:
+          - value: 18_30
+            text: 18 - 30 years old
+          - value: 31_45
+            text: 31 - 45 years old
+          - value: 46_60
+            text: 46 - 60 years old
+          - value: over_60
+            text: Over 60
+      - key: gender
+        question: What gender do you identify as?
+        type: SINGLE_CHOICE
+        options:
+          - value: male
+            text: Male
+          - value: female
+            text: Female
+          - value: other
+            text: Other
+      - key: ethnicity
+        question: Please specify your ethnicity.
+        type: SINGLE_CHOICE
+        options:
+          - value: hispanic_or_latino
+            text: Hispanic or Latino
+          - value: not_hispanic_or_latino
+            text: Not Hispanic or Latino
+          - value: unknown
+            text: Unknown
+      - key: race
+        question: What is your race?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: american
+            text: American Indian or Alaska Native
+          - value: asian
+            text: Asian
+          - value: black
+            text: Black, African-American
+          - value: hawaiian
+            text: Native Hawaiian or Other Pacific Islander
+          - value: white
+            text: White
+          - value: unknown
+            text: Unknown
+      - key: education
+        question: What is your highest level of education?
+        type: SINGLE_CHOICE
+        options:
+          - value: no_diploma
+            text: No high school diploma
+          - value: high_school
+            text: High school graduate
+          - value: ged
+            text: GED or equivalent
+          - value: some_college
+            text: Some college/No degree
+          - value: college_degree
+            text: College degree or higher
+          - value: occupational
+            text: Occupational, technical, or vocational program
