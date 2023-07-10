@@ -13,9 +13,6 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
-timeRequirements:
-  time: 2
-  timeUnits: minutes
 name: Attitudes Towards PGx Testing
 sections:
   - type: survey

@@ -6,9 +6,6 @@ schedule:
   timetableUnits: DAYS
   gracePeriod: 6 # Available Day + 6 Grace Days == 1 Week available
   initialGracePeriod: 2 # Available Day + 2 Grace Days == 72 hrs available initially
-timeRequirements:
-  time: 2
-  timeUnits: minutes
 name: Actions Taken After PGx Testing
 sections:
   - type: survey

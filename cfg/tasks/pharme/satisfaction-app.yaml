@@ -13,9 +13,6 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
-timeRequirements:
-  time: 2
-  timeUnits: minutes
 name: Satisfaction with Test Result Communication
 sections:
   - type: survey
