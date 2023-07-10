@@ -11,8 +11,11 @@ metadata:
     - "Li, M., Bennette, C. S., Amendola, L. M., Ragan Hart, M., Heagerty, P., Comstock, B., Tarczy-Hornoch, P., Fullerton, S. M., Regier, D. A., Burke, W., Trinidad, S. B., Jarvik, G. P., Veenstra, D. L., & Patrick, D. L. (2019). The Feelings About genomiC Testing Results (FACToR) Questionnaire: Development and Preliminary Validation. Journal of Genetic Counseling, 28(2), 477–490. https://doi.org/10.1007/s10897-018-0286-9"
     - "Haga, S. B., Moaddeb, J., Mills, R., & Voora, D. (2017). Assessing feasibility of delivering pharmacogenetic testing in a community pharmacy setting. Pharmacogenomics, 18(4), 327–335. https://doi.org/10.2217/pgs-2016-0175"
 schedule:
-  type: PERIOD
-  period: ONCE
+  type: TIMETABLE
+  timetable: [0, 30, 90]
+  timetableUnits: DAYS
+  gracePeriod: 6 # Available Day + 6 Grace Days == 1 Week available
+  initialGracePeriod: 2 # Available Day + 2 Grace Days == 72 hrs available initially
 timeRequirements:
   time: 3
   timeUnits: minutes
