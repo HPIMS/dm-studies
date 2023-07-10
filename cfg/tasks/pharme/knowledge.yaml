@@ -12,9 +12,6 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
-timeRequirements:
-  time: 2
-  timeUnits: minutes
 name: Genetics & PGx Knowledge
 sections: 
   - type: survey

@@ -12,9 +12,6 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
-timeRequirements:
-  time: 1
-  timeUnits: minutes
 name: Health Literacy
 sections:
   - type: survey
