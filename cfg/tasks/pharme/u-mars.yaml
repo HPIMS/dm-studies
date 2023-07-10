@@ -1,8 +1,5 @@
 key: u-mars
-scorable: true
-score:
-  fn: sum-score
-  args: {}
+scorable: false
 metadata:
   author: Stoyanov et al. (slightly adapted)
   instrument: >-
@@ -390,7 +387,7 @@ sections:
         options:
           - value: not_applicable
             text: 'N/A: There is no information within the app'
-            score: 0
+            score: N/A
           - value: inadequate
             text: Irrelevant/inappropriate/incoherent/incorrect
             score: 1
@@ -413,7 +410,7 @@ sections:
         options:
           - value: not_applicable
             text: 'N/A: There is no information within the app'
-            score: 0
+            score: N/A
           - value: inadequate
             text: Minimal or overwhelming
             score: 1
@@ -444,7 +441,7 @@ sections:
             text: >-
               N/A: There is no visual information within the app (e.g. it only
               contains audio, or text)
-            score: 0
+            score: N/A
           - value: inadequate
             text: Completely unclear/confusing/wrong or necessary but missing
             score: 1
@@ -469,7 +466,7 @@ sections:
         options:
           - value: not_applicable
             text: 'N/A: There is no information within the app'
-            score: 0
+            score: N/A
           - value: inadequate
             text: Suspicious source
             score: 1
