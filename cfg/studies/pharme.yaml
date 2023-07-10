@@ -97,3 +97,18 @@ tasks:
     schedule:
       type: PERIOD
       period: ALWAYS
+
+  - key: arm
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: begin-next-phase-app
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: begin-next-phase-counseling
+    schedule:
+      type: PERIOD
+      period: ALWAYS
