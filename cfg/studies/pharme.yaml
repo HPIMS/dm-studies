@@ -44,71 +44,91 @@ timeResponsibility:
   
 tasks:
   - key: demographics
+    rank: 10
     schedule:
       type: PERIOD
       period: ALWAYS
 
   - key: brief
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-
-  - key: factor-adapted
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-
-  - key: satisfaction-app
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-
-  - key: satisfaction-counseling
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-
-  - key: attitudes
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-
-  - key: actions-taken
+    rank: 20
     schedule:
       type: PERIOD
       period: ALWAYS
 
   - key: knowledge
+    rank: 30
     schedule:
       type: PERIOD
       period: ALWAYS
 
-  - key: comprehension-app
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-
-  - key: comprehension-counseling
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-
-  - key: u-mars
+  - key: knowledge-followup
+    rank: 30
     schedule:
       type: PERIOD
       period: ALWAYS
 
   - key: arm
+    rank: 40
     schedule:
       type: PERIOD
       period: ALWAYS
 
   - key: begin-next-phase-app
+    rank: 50
     schedule:
       type: PERIOD
       period: ALWAYS
 
   - key: begin-next-phase-counseling
+    rank: 50
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: comprehension-app
+    rank: 60
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: comprehension-counseling
+    rank: 60
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: factor-adapted
+    rank: 70
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: satisfaction-app
+    rank: 80
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: satisfaction-counseling
+    rank: 80
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: attitudes
+    rank: 90
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: actions-taken
+    rank: 100
+    schedule:
+      type: PERIOD
+      period: ALWAYS
+
+  - key: u-mars
+    rank: 110
     schedule:
       type: PERIOD
       period: ALWAYS
