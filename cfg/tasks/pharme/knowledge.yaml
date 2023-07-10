@@ -1,5 +1,8 @@
 key: knowledge
-scorable: false
+scorable: true
+score:
+  fn: sum-score
+  args: {}
 metadata:
   author: Truong et al. (subset)
   instrument: Subset of self-developed questionnaire by Truong et al., 2020
@@ -25,71 +28,99 @@ sections:
         options:
           - value: age
             text: Age
+            score: 0
           - value: sex
             text: Sex
+            score: 0
           - value: lifestyle
             text: Lifestyle
+            score: 0
           - value: genetics
             text: Genetics
+            score: 0
           - value: other_drugs
             text: Other drugs
-          - value: All of the above
-            text: all_of_the_above drugs
-          - value: I don’t know
-            text: i_dont_know drugs
+            score: 0
+          - value: all_of_the_above
+            text: All of the above
+            score: 1
+          - value: i_dont_know
+            text: I don’t know
+            score: 0
       - key: '2'
         question: "Your DNA is passed down from:"
         type: SINGLE_CHOICE
         options:
           - value: mother
             text: Your mother
+            score: 0
           - value: father
             text: Your father
+            score: 0
           - value: both
             text: Both your mother and your father
+            score: 1
           - value: neither
             text: Neither your mother nor your father
+            score: 0
           - value: i_dont_know
             text: I don’t know
+            score: 0
       - key: '3'
         question: "Your DNA contains instructions for:"
         type: SINGLE_CHOICE
         options:
           - value: eyes
             text: The color of your eyes
+            score: 0
           - value: blood_type
             text: Your blood type
+            score: 0
           - value: medication_response
             text: How you respond to medications
+            score: 0
           - value: all_of_the_above
             text: All of the above
+            score: 1
           - value: i_dont_know
             text: I don’t know
+            score: 0
       - key: '4'
         question: "Pharmacogenetics is the study of:"
         type: SINGLE_CHOICE
         options:
           - value: side_effects
             text: Drug side effects
+            score: 0
           - value: medication_response
             text: How your DNA affect your responses to medications
+            score: 1
           - value: medication_dna
             text: How medications can change your DNA
+            score: 0
           - value: prescription
             text: How drugs are prescribed
+            score: 0
           - value: i_dont_know
             text: I don’t know
+            score: 0
       - key: '5'
         question: "Pharmacogenetic testing can:"
         type: SINGLE_CHOICE
         options:
           - value: effective_medication
             text: Help find the most effective medication
+            score: 0
           - value: avoid_sideeffect
             text: Help avoid side effects
+            score: 0
           - value: best_dose
             text: Help find the best dose of a medication
+            score: 0
           - value: all_of_the_above
             text: All of the above
+            score: 1
           - value: i_dont_know
             text: I don’t know
+            score: 0
+

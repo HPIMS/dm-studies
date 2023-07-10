@@ -13,7 +13,7 @@ sections:
     title: Overall Comprehension
     description: ""
     questions:
-      - key: comprehension_subjective
+      - key: subjective_app
         question: The information conveyed in the PharMe app was easy to understand
         type: SINGLE_CHOICE
         options:
@@ -33,7 +33,7 @@ sections:
             text: Yes, additional factors and my genetics should be considered
           - value: no
             text: No, only my genetics should be considered
-      - key: objective_2
+      - key: objective_2_app
         question: Based on your PGx test results from the PharMe app; should you consult your care provider before making changes to your medication?
         type: SINGLE_CHOICE
         options:
@@ -56,7 +56,7 @@ sections:
           - value: DPYD
             text: DPYD
   - type: survey
-    key: group_1
+    key: group_2
     title: Comprehension of Specific Results
     description: ""
     questions:
