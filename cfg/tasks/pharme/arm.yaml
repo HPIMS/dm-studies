@@ -1,5 +1,8 @@
 key: arm
-scorable: false
+scorable: true
+score:
+  fn: sum-score
+  args: {}
 schedule:
   type: PERIOD
   period: ONCE
@@ -16,5 +19,7 @@ sections:
         options:
           - value: case
             text: Case
+            score: 1
           - value: control
             text: Control
+            score: 0

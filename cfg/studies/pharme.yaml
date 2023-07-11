@@ -60,28 +60,20 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: pharme::arm
-              section: "0"
-              question: arm_selection
-              operator: =
-              value: case
+          - type: SCORE
+            resource: pharme::arm
+            operator: "="
+            score: 1 # case
 
   - key: begin-next-phase-counseling
     rank: 50
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: pharme::arm
-              section: "0"
-              question: arm_selection
-              operator: =
-              value: control
+          - type: SCORE
+            resource: pharme::arm
+            operator: "="
+            score: 0 # control
 
   - key: knowledge-followup
     rank: 60
@@ -90,50 +82,38 @@ tasks:
         condition:
           type: OR
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-app
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-counseling
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
+            # begin case
+            - type: SCORE
+              resource: pharme::begin-next-phase-app
+              operator: "="
+              score: 1
+            # begin control
+            - type: SCORE
+              resource: pharme::begin-next-phase-counseling
+              operator: "="
+              score: 1
 
   - key: comprehension-app
     rank: 70
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: pharme::begin-next-phase-app
-              section: "0"
-              question: reviewed_results
-              operator: =
-              value: yes
+          # begin case
+          - type: SCORE
+            resource: pharme::begin-next-phase-app
+            operator: "="
+            score: 1
 
   - key: comprehension-counseling
     rank: 70
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: pharme::begin-next-phase-counseling
-              section: "0"
-              question: reviewed_results
-              operator: =
-              value: yes
+          # begin control
+          - type: SCORE
+            resource: pharme::begin-next-phase-counseling
+            operator: "="
+            score: 1
 
   - key: factor-adapted
     rank: 80
@@ -142,50 +122,39 @@ tasks:
         condition:
           type: OR
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-app
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-counseling
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
+            # begin case
+            - type: SCORE
+              resource: pharme::begin-next-phase-app
+              operator: "="
+              score: 1
+            # begin control
+            - type: SCORE
+              resource: pharme::begin-next-phase-counseling
+              operator: "="
+              score: 1
 
   - key: satisfaction-app
     rank: 90
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: pharme::begin-next-phase-app
-              section: "0"
-              question: reviewed_results
-              operator: =
-              value: yes
+          # begin case
+          - type: SCORE
+            resource: pharme::begin-next-phase-app
+            operator: "="
+            score: 1
 
   - key: satisfaction-counseling
     rank: 90
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: pharme::begin-next-phase-counseling
-              section: "0"
-              question: reviewed_results
-              operator: =
-              value: yes
+          # begin control
+          - type: SCORE
+            resource: pharme::begin-next-phase-counseling
+            operator: "="
+            score: 1
+
 
   - key: attitudes
     rank: 100
@@ -194,22 +163,16 @@ tasks:
         condition:
           type: OR
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-app
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-counseling
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
+            # begin case
+            - type: SCORE
+              resource: pharme::begin-next-phase-app
+              operator: "="
+              score: 1
+            # begin control
+            - type: SCORE
+              resource: pharme::begin-next-phase-counseling
+              operator: "="
+              score: 1
 
   - key: actions-taken
     rank: 110
@@ -218,33 +181,24 @@ tasks:
         condition:
           type: OR
           tasks:
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-app
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
-            - type: CALCULATION
-              fn: questionnaire-response-value
-              args:
-                questionnaire: pharme::begin-next-phase-counseling
-                section: "0"
-                question: reviewed_results
-                operator: =
-                value: yes
+            # begin case
+            - type: SCORE
+              resource: pharme::begin-next-phase-app
+              operator: "="
+              score: 1
+            # begin control
+            - type: SCORE
+              resource: pharme::begin-next-phase-counseling
+              operator: "="
+              score: 1
 
   - key: u-mars
     rank: 120
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: questionnaire-response-value
-            args:
-              questionnaire: pharme::begin-next-phase-app
-              section: "0"
-              question: reviewed_results
-              operator: =
-              value: yes
+          # begin case
+          - type: SCORE
+            resource: pharme::begin-next-phase-app
+            operator: "="
+            score: 1
