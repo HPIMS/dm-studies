@@ -48,6 +48,10 @@ tasks:
 
   - key: brief
     rank: 20
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks
 
   - key: knowledge
     rank: 30
@@ -64,6 +68,12 @@ tasks:
             resource: pharme::arm
             operator: "="
             score: 1 # case
+      - action: HIDE
+        condition:
+          - type: SCORE
+            resource: pharme::begin-next-phase-app
+            operator: "="
+            score: 1
 
   - key: begin-next-phase-counseling
     rank: 50
@@ -74,6 +84,12 @@ tasks:
             resource: pharme::arm
             operator: "="
             score: 0 # control
+      - action: HIDE
+        condition:
+          - type: SCORE
+            resource: pharme::begin-next-phase-counseling
+            operator: "="
+            score: 1
 
   - key: knowledge-followup
     rank: 60
