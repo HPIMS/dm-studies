@@ -2,7 +2,7 @@ key: arm
 scorable: false
 schedule:
   type: PERIOD
-  period: NEVER
+  period: ONCE
 name: Study Arm (HIDDEN DURING STUDY)
 sections:
   - type: survey
