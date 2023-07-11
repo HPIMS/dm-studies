@@ -45,251 +45,206 @@ timeResponsibility:
 tasks:
   - key: demographics
     rank: 10
-    schedule:
-      type: PERIOD
-      period: ALWAYS
 
   - key: brief
     rank: 20
-    schedule:
-      type: PERIOD
-      period: ALWAYS
 
   - key: knowledge
     rank: 30
-    schedule:
-      type: PERIOD
-      period: ALWAYS
 
   - key: arm
     rank: 40
-    schedule:
-      type: PERIOD
-      period: ALWAYS
 
   - key: begin-next-phase-app
     rank: 50
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: pharme::arm
-    #           section: "0"
-    #           question: arm_selection
-    #           operator: =
-    #           value: case
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: "0"
+              question: arm_selection
+              operator: =
+              value: case
 
   - key: begin-next-phase-counseling
     rank: 50
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: pharme::arm
-    #           section: "0"
-    #           question: arm_selection
-    #           operator: =
-    #           value: control
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: "0"
+              question: arm_selection
+              operator: =
+              value: control
 
   - key: knowledge-followup
     rank: 60
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: OR
-    #       tasks:
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-app
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-counseling
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-app
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-counseling
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
 
   - key: comprehension-app
     rank: 70
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: pharme::begin-next-phase-app
-    #           section: "0"
-    #           question: reviewed_results
-    #           operator: =
-    #           value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::begin-next-phase-app
+              section: "0"
+              question: reviewed_results
+              operator: =
+              value: yes
 
   - key: comprehension-counseling
     rank: 70
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: pharme::begin-next-phase-counseling
-    #           section: "0"
-    #           question: reviewed_results
-    #           operator: =
-    #           value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::begin-next-phase-counseling
+              section: "0"
+              question: reviewed_results
+              operator: =
+              value: yes
 
   - key: factor-adapted
     rank: 80
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: OR
-    #       tasks:
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-app
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-counseling
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-app
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-counseling
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
 
   - key: satisfaction-app
     rank: 90
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: pharme::begin-next-phase-app
-    #           section: "0"
-    #           question: reviewed_results
-    #           operator: =
-    #           value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::begin-next-phase-app
+              section: "0"
+              question: reviewed_results
+              operator: =
+              value: yes
 
   - key: satisfaction-counseling
     rank: 90
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: pharme::begin-next-phase-counseling
-    #           section: "0"
-    #           question: reviewed_results
-    #           operator: =
-    #           value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::begin-next-phase-counseling
+              section: "0"
+              question: reviewed_results
+              operator: =
+              value: yes
 
   - key: attitudes
     rank: 100
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: OR
-    #       tasks:
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-app
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-counseling
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-app
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-counseling
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
 
   - key: actions-taken
     rank: 110
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       type: OR
-    #       tasks:
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-app
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
-    #         - type: CALCULATION
-    #           fn: questionnaire-response-value
-    #           args:
-    #             questionnaire: pharme::begin-next-phase-counseling
-    #             section: "0"
-    #             question: reviewed_results
-    #             operator: =
-    #             value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-app
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::begin-next-phase-counseling
+                section: "0"
+                question: reviewed_results
+                operator: =
+                value: yes
 
   - key: u-mars
     rank: 120
-    schedule:
-      type: PERIOD
-      period: ALWAYS
-    # triggers:
-    #   - action: SHOW
-    #     condition:
-    #       - type: CALCULATION
-    #         fn: questionnaire-response-value
-    #         args:
-    #           questionnaire: pharme::begin-next-phase-app
-    #           section: "0"
-    #           question: reviewed_results
-    #           operator: =
-    #           value: yes
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::begin-next-phase-app
+              section: "0"
+              question: reviewed_results
+              operator: =
+              value: yes
