@@ -12,6 +12,7 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
+  gracePeriod: 28 # 4 Weeks
 name: Genetics & PGx Knowledge
 sections: 
   - type: survey

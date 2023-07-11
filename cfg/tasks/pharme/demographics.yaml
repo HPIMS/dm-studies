@@ -3,6 +3,7 @@ scorable: false
 schedule:
   type: PERIOD
   period: ONCE
+  gracePeriod: 28 # 4 Weeks
 intro:
   title: Demographics
   description: [

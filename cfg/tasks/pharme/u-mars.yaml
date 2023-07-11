@@ -19,6 +19,7 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
+  gracePeriod: 2 # Available Day + 2 Grace Days == 72 hrs available
 intro:
   title: PharMe Rating
   description: >-
