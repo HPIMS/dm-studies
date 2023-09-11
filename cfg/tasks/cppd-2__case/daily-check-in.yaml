@@ -195,7 +195,7 @@ sections:
               - section: health_symptoms
                 question: '4'
                 operator: =
-                value: 'YES'
+                value: 'yes'
         options:
           - value: light_flow
             text: Light flow
@@ -214,7 +214,7 @@ sections:
               - section: health_symptoms
                 question: '4'
                 operator: =
-                value: 'YES'
+                value: 'yes'
         options:
           - value: dysmenorrhea
             text: Dysmenorrhea (painful menstruation)
