@@ -1,17 +1,17 @@
 active:
   studies:
     cppd-1:
-      - c5fc4ce17019b92322a760d2b44c7fac
-      - 18
+      - 9254b87566990e7b4d81c7e95f113afd
+      - 19
     cppd-2:
       - 23e28ccb00e7cf66e443f665b737e592
       - 18
     cppd-2__case:
-      - 48adb2c9526eea737267dd5b71a98b3a
-      - 13
+      - f49bbf362e7698d815c182d85514f3fb
+      - 14
     cppd-2__control:
-      - 56f24a5266a5872ffcda49fa40dcfc17
-      - 13
+      - a73e88685f577b3433d683aed368767c
+      - 14
     cramp:
       - d28a36905862b41d1731077166b5290a
       - 115
@@ -34,6 +34,9 @@ active:
     cppd-1::bladder-irritants:
       - f4e5650a28a76589d6a8b5b1340cb50e
       - 5
+    cppd-1::daily-check-in:
+      - ccb68a20d8a9c5b25e15ea62af15f423
+      - 1
     cppd-1::demographics:
       - d957d86bad8fe5546c08d970702a0620
       - 5
@@ -43,12 +46,18 @@ active:
     cppd-1::physical-therapy:
       - 3a2ef2a4445e8f2aa3e4306b91634029
       - 8
+    cppd-2__case::daily-check-in:
+      - fd48a8bf9d490bc37a2ed527c7a6b77a
+      - 1
     cppd-2__case::demographics:
       - d957d86bad8fe5546c08d970702a0620
       - 5
     cppd-2__case::general-health:
       - 1b2fadfe0e2a550e290385737b36253b
       - 4
+    cppd-2__control::daily-check-in:
+      - fd48a8bf9d490bc37a2ed527c7a6b77a
+      - 1
     cppd-2__control::demographics:
       - d957d86bad8fe5546c08d970702a0620
       - 5
