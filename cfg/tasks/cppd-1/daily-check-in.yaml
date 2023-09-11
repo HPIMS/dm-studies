@@ -19,6 +19,14 @@ sections:
         question: Where is the pain?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: '1'
+                operator: =
+                value: 'yes'
         options:
           - value: abdomen
             text: Abdomen
@@ -60,7 +68,8 @@ sections:
             text: Severe
       - key: 1_sub_3
         question: What type of pain?
-        type: SINGLE_CHOICE
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
         triggers:
           - action:
               type: SHOW
@@ -147,7 +156,7 @@ sections:
           - value: bloating
             text: Bloating
           - value: gas
-            text: gas
+            text: Gas
           - value: endo_belly
             text: Endo belly
           - value: diarrhea
@@ -256,7 +265,7 @@ sections:
               - section: menstrual_health
                 question: '1'
                 operator: =
-                value: 'YES'
+                value: 'yes'
         options:
           - value: light_flow
             text: Light flow
@@ -274,7 +283,7 @@ sections:
               - section: menstrual_health
                 question: '1'
                 operator: =
-                value: 'YES'
+                value: 'yes'
         options:
           - value: clots
             text: Clots
@@ -293,7 +302,7 @@ sections:
               - section: menstrual_health
                 question: '1'
                 operator: =
-                value: 'YES'
+                value: 'yes'
         options:
           - value: dysmenorrhea
             text: Dysmenorrhea (painful menstruation)
