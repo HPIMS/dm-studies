@@ -101,7 +101,7 @@ sections:
           - value: bloating
             text: Bloating
           - value: gas
-            text: gas
+            text: Gas
           - value: endo_belly
             text: Endo belly
           - value: diarrhea
@@ -124,7 +124,7 @@ sections:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: 1a
+                question: '2'
                 operator: IS_SET
         options:
           - value: none
@@ -258,8 +258,8 @@ sections:
     title: Your Day
     description: How was your day? Rate how today went.
     questions:
-      - key: '1'
-        question: '1. Would you say your quality of day is:'
+      - key: '5'
+        question: '5. Would you say your quality of day is:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -272,11 +272,11 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '2'
-        question: '2. How would you rate….:'
+      - key: '6'
+        question: '6. How would you rate….:'
         type: DISPLAY
-      - key: 2a
-        question: '2a. Your physical health today:'
+      - key: 6a
+        question: '6a. Your physical health today:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -289,8 +289,8 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: 2b
-        question: '2b. Your mental health, including your mood and your ability to think:'
+      - key: 6b
+        question: '6b. Your mental health, including your mood and your ability to think:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -303,8 +303,8 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: 2c
-        question: '2c. Your satisfaction with your social activities and relationships:'
+      - key: 6c
+        question: '6c. Your satisfaction with your social activities and relationships:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -317,9 +317,9 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '3'
+      - key: '7'
         question: >-
-          3. How well were you able to carry out your usual social activities
+          7. How well were you able to carry out your usual social activities
           and roles today?
         description: >-
           Including activities at home, work and in your community,
@@ -336,9 +336,9 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '4'
+      - key: '8'
         question: >-
-          4. To what extent were you able to carry out your everyday physical
+          8. To what extent were you able to carry out your everyday physical
           activities today?
         description: >-
           Including walking, climbing stairs, carrying groceries, moving items,
@@ -355,9 +355,9 @@ sections:
             text: A little
           - value: not_at_all
             text: Not at all
-      - key: '5'
+      - key: '9'
         question: >-
-          5. How often were you bothered by emotional problems such as feeling
+          9. How often were you bothered by emotional problems such as feeling
           anxious, depressed or irritable today?
         type: SINGLE_CHOICE
         options:
