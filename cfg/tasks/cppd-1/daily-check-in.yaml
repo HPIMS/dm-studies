@@ -16,7 +16,7 @@ sections:
         question: 1. Are you experiencing any pain?
         type: YESNO_CHOICE
       - key: 1_sub_1
-        question: Where is the pain?
+        question: 1a. Where is the pain?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -49,7 +49,7 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 1_sub_2
-        question: Rate the severity of the pain.
+        question: 1b. Rate the severity of the pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -67,7 +67,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3
-        question: What type of pain?
+        question: 1c. What type of pain?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -125,7 +125,7 @@ sections:
         question: 2. Are you experiencing any digestive/urinary symptoms?
         type: YESNO_CHOICE
       - key: 2_sub_1
-        question: What are you experiencing?
+        question: 2a. What are you experiencing?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -172,7 +172,7 @@ sections:
           - value: frequent_urination
             text: Frequent urination
       - key: 2_sub_2
-        question: Rate the severity of the symptom.
+        question: 2b. Rate the severity of the symptom.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -193,7 +193,7 @@ sections:
         question: 3. Are you experiencing any other symptoms?
         type: YESNO_CHOICE
       - key: 3_sub_1
-        question: What are you experiencing?
+        question: 3a. What are you experiencing?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -230,7 +230,7 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 3_sub_2
-        question: Rate the severity of the symptom.
+        question: 3b. Rate the severity of the symptom.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -256,7 +256,7 @@ sections:
         question: 4. Do you have your period today?
         type: YESNO_CHOICE
       - key: 4_sub_1
-        question: How heavy is the flow?
+        question: 4a. How heavy is the flow?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -274,7 +274,7 @@ sections:
           - value: heavy_flow
             text: Heavy flow
       - key: 4_sub_2
-        question: Type of bleeding?
+        question: 4b. Type of bleeding?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -292,7 +292,7 @@ sections:
           - value: breakthrough_bleeding
             text: Breakthrough bleeding
       - key: 4_sub_3
-        question: Are you experiencing any period related symptoms?
+        question: 4c. Are you experiencing any period related symptoms?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -321,7 +321,7 @@ sections:
           - value: constipation
             text: Constipation
       - key: 4_sub_4
-        question: Rate the severity of the symptoms.
+        question: 4d. Rate the severity of the symptoms.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -406,7 +406,7 @@ sections:
           - value: interested
             text: Interested
       - key: 5_sub_1
-        question: How intense is the feeling?
+        question: 5a. How intense is the feeling?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -498,7 +498,7 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 8_sub_1
-        question: How severe was the effect?
+        question: 8a. How severe was the effect?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -596,7 +596,7 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 12_sub_1
-        question: How long was your exercise session?
+        question: 12a. How long was your exercise session?
         type: DURATION
         triggers:
           - action:
@@ -611,7 +611,7 @@ sections:
         minutesPlaceholder: Or minutes
       - key: 12_sub_2
         question: >-
-          How intense was your exercise session overall (i.e., perceived
+          12b. How intense was your exercise session overall (i.e., perceived
           exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
@@ -680,7 +680,7 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 13_sub_1
-        question: What was the effect?
+        question: 13a. What was the effect?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -722,7 +722,7 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 14_sub_1
-        question: What was the effect?
+        question: 14a. What was the effect?
         type: SINGLE_CHOICE
         triggers:
           - action:
