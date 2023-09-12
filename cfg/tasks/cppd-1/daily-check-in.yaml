@@ -28,20 +28,52 @@ sections:
                 operator: =
                 value: 'yes'
         options:
+          - value: face
+            text: Face
+          - value: head
+            text: Head
+          - value: jaw
+            text: Jaw
+          - value: neck
+            text: Neck
+          - value: shoulder
+            text: Shoulder
+          - value: upper_back
+            text: Upper back
+          - value: middle_back
+            text: Middle back
+          - value: lower_back
+            text: Lower back
+          - value: chest_breast
+            text: Chest/breast
+          - value: upper_arm
+            text: upper arm(s)
+          - value: elbow
+            text: Elbow(s)
+          - value: lower_arm
+            text: Lower arm(s)
+          - value: wrist_hand
+            text: Wrist/hand(s)
           - value: abdomen
             text: Abdomen
           - value: pelvis
             text: Pelvis
+          - value: hip
+            text: Hip(s)
           - value: groin
             text: Groin
-          - value: lower_back
-            text: Lower back
-          - value: hip
-            text: Hip
-          - value: buttocks
-            text: Buttocks
-          - value: inner_thigh
-            text: Inner thigh
+          - value: thighs_upper_leg
+            text: Thighs/upper leg(s)
+          - value: buttock
+            text: Buttock(s)
+          - value: knee
+            text: Knee(s)
+          - value: lower_leg
+            text: Lower leg(s)
+          - value: ankle
+            text: Ankle(s)
+          - value: feet
+            text: Feet
           - value: other
             text: Other
             inlineQuestion:
