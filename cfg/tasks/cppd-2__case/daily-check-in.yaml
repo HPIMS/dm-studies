@@ -234,8 +234,11 @@ sections:
   - type: survey
     key: sleep
     title: Sleep Tracking
-    description: 'How was your sleep last night?'
+    description: ''
     questions:
+      - key: sleep_prompt
+        type: DISPLAY
+        question: How was your sleep last night?
       - key: '6'
         question: '6. Refreshing:'
         type: SINGLE_CHOICE
@@ -293,7 +296,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health_symptoms
+              - section: menstrual_health
                 question: '9'
                 operator: =
                 value: 'yes'
@@ -312,7 +315,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health_symptoms
+              - section: menstrual_health
                 question: '9'
                 operator: =
                 value: 'yes'
@@ -340,35 +343,35 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: dysmenorrhea
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: bloating
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: cramps
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: breast_tenderness
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: back_pain
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: hot_flashes
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: diarrhea
-              - section: health_symptoms
+              - section: menstrual_health
                 question: 9_sub_2
                 operator: INCLUDES
                 value: constipation
