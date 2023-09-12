@@ -290,7 +290,7 @@ sections:
         question: 9. Do you have your period today?
         type: YESNO_CHOICE
       - key: 9_sub_1
-        question: How heavy is the flow?
+        question: 9a. How heavy is the flow?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -308,7 +308,7 @@ sections:
           - value: heavy_flow
             text: Heavy flow
       - key: 9_sub_2
-        question: Are you experiencing any period related symptoms?
+        question: 9b. Are you experiencing any period related symptoms?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -337,7 +337,7 @@ sections:
           - value: constipation
             text: Constipation
       - key: 9_sub_3
-        question: Rate the severity of the symptoms.
+        question: 9c. Rate the severity of the symptoms.
         type: SINGLE_CHOICE
         triggers:
           - action:
