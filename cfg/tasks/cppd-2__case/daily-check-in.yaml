@@ -22,15 +22,15 @@ sections:
           - value: pelvis
             text: Pelvis
           - value: groin
-            text: Groin
+            text: Groin(s)
           - value: lower_back
             text: Lower back
           - value: hip
-            text: Hip
+            text: Hip(s)
           - value: buttocks
             text: Buttocks
           - value: inner_thigh
-            text: Inner thigh
+            text: Inner thigh(s)
           - value: other
             text: Other
             inlineQuestion:
@@ -221,8 +221,6 @@ sections:
                 operator: INCLUDES
                 value: frequent_urination
         options:
-          - value: none
-            text: None
           - value: mild
             text: Mild
           - value: moderate
@@ -376,8 +374,6 @@ sections:
                 operator: INCLUDES
                 value: constipation
         options:
-          - value: none
-            text: None
           - value: mild
             text: Mild
           - value: moderate
@@ -389,7 +385,7 @@ sections:
   - type: survey
     key: qol
     title: Your Day
-    description: How was your day? Rate how today went.
+    description: ""
     questions:
       - key: '10'
         question: '10. Would you say your quality of day is:'
@@ -420,7 +416,7 @@ sections:
           - value: poor
             text: Poor
       - key: '12'
-        question: '12. How would you rate your your mental health, including your mood and your ability to think?'
+        question: '12. How would you rate your mental health, including your mood and your ability to think?'
         type: SINGLE_CHOICE
         options:
           - value: excellent
