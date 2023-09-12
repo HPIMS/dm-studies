@@ -12,8 +12,8 @@ sections:
     title: Health and Symptoms
     description: ''
     questions:
-      - key: 1a
-        question: '1a. Today, did you experience any pain related to your CPP condition?'
+      - key: '1'
+        question: '1. Today, did you experience any pain related to your CPP condition?'
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         options:
@@ -37,22 +37,51 @@ sections:
               key: 1a_other_description
               question: Please specify...
               type: TEXTAREA
-      - key: 1a_sub_1
-        question: Rate the severity of the pain.
+      - key: 1_sub_1
+        question: 1a. Rate the severity of the pain.
         type: H_SCALE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: 1a
-                operator: IS_SET
+                question: '1'
+                operator: INCLUDES
+                value: abdomen
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: pelvis
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: groin
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: lower_back
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: hip
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: buttocks
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: inner_thigh
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: other
         min: 1
         minLabel: None
         max: 10
         maxLabel: Worst imaginable pain
-      - key: 1b
-        question: 1b. Did you have to miss work or school due to your symptoms today?
+      - key: '2'
+        question: 2. Did you have to miss work or school due to your symptoms today?
         type: SINGLE_CHOICE
         options:
           - value: 'yes'
@@ -61,9 +90,9 @@ sections:
             text: 'No'
           - value: n/a
             text: N/A
-      - key: 1c
+      - key: '3'
         question: >-
-          1c. How much did pain interfere with your activities (home, social, or
+          3. How much did pain interfere with your activities (home, social, or
           work)?
         type: SINGLE_CHOICE
         options:
@@ -77,8 +106,8 @@ sections:
             text: Quite a bit
           - value: very_much
             text: Very much
-      - key: '2'
-        question: '2. Today, did you experience any digestive or urinary symptoms?'
+      - key: '4'
+        question: '4. Today, did you experience any digestive or urinary symptoms?'
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         options:
@@ -116,16 +145,81 @@ sections:
             text: Painful urination
           - value: frequent_urination
             text: Fainful urination
-      - key: 2_sub_1
-        question: Rate the severity of the symptom.
+      - key: 4_sub_1
+        question: 4a. Rate the severity of the symptom.
         type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: 1a
-                operator: IS_SET
+                question: '4'
+                operator: INCLUDES
+                value: heartburn
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: reflux
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: nausea
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: vomiting
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: indigestion
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: difficulty_swallowing
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: upset_stomach
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: belly_pain
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: bloating
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: gas
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: endo_belly
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: diarrhea
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: painful_bowel_movement
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: blood_in_stool
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: unable_to_urinate
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: painful_urination
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: frequent_urination
         options:
           - value: none
             text: None
@@ -137,11 +231,11 @@ sections:
             text: Severe
           - value: very_severe
             text: Very severe
-      - key: '3'
-        question: 3. How was your sleep last night?
+      - key: '5'
+        question: 5. How was your sleep last night?
         type: DISPLAY
-      - key: 3a
-        question: '3a. Refreshing:'
+      - key: 5a
+        question: '5a. Refreshing:'
         type: SINGLE_CHOICE
         options:
           - value: not_at_all
@@ -154,8 +248,8 @@ sections:
             text: Quite a bit
           - value: very_much
             text: Very much
-      - key: 3b
-        question: '3b. Problems with sleep:'
+      - key: 5b
+        question: '5b. Problems with sleep:'
         type: SINGLE_CHOICE
         options:
           - value: not_at_all
@@ -168,8 +262,8 @@ sections:
             text: Quite a bit
           - value: very_much
             text: Very much
-      - key: 3c
-        question: '3c. Difficulty falling asleep:'
+      - key: 5c
+        question: '5c. Difficulty falling asleep:'
         type: SINGLE_CHOICE
         options:
           - value: not_at_all
@@ -182,10 +276,10 @@ sections:
             text: Quite a bit
           - value: very_much
             text: Very much
-      - key: '4'
-        question: 4. Do you have your period today?
+      - key: '6'
+        question: 6. Do you have your period today?
         type: YESNO_CHOICE
-      - key: 4_sub_1
+      - key: 6_sub_1
         question: How heavy is the flow?
         type: SINGLE_CHOICE
         triggers:
@@ -193,7 +287,7 @@ sections:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: '4'
+                question: '6'
                 operator: =
                 value: 'yes'
         options:
@@ -203,7 +297,7 @@ sections:
             text: Medium flow
           - value: heavy_flow
             text: Heavy flow
-      - key: 4_sub_2
+      - key: 6_sub_2
         question: Are you experiencing any period related symptoms?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
@@ -212,7 +306,7 @@ sections:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: '4'
+                question: '6'
                 operator: =
                 value: 'yes'
         options:
@@ -232,7 +326,7 @@ sections:
             text: Diarrhea
           - value: constipation
             text: Constipation
-      - key: 4_sub_3
+      - key: 6_sub_3
         question: Rate the severity of the symptoms.
         type: SINGLE_CHOICE
         triggers:
@@ -240,8 +334,37 @@ sections:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: 4_sub_2
-                operator: IS_SET
+                question: 6_sub_2
+                operator: INCLUDES
+                value: dysmenorrhea
+              - section: health_symptoms
+                question: 6_sub_2
+                operator: INCLUDES
+                value: bloating
+              - section: health_symptoms
+                question: 6_sub_2
+                operator: INCLUDES
+                value: cramps
+              - section: health_symptoms
+                question: 6_sub_2
+                operator: INCLUDES
+                value: breast_tenderness
+              - section: health_symptoms
+                question: 6_sub_2
+                operator: INCLUDES
+                value: back_pain
+              - section: health_symptoms
+                question: 6_sub_2
+                operator: INCLUDES
+                value: hot_flashes
+              - section: health_symptoms
+                question: 6_sub_2
+                operator: INCLUDES
+                value: diarrhea
+              - section: health_symptoms
+                question: 6_sub_2
+                operator: INCLUDES
+                value: constipation
         options:
           - value: none
             text: None
@@ -258,8 +381,8 @@ sections:
     title: Your Day
     description: How was your day? Rate how today went.
     questions:
-      - key: '1'
-        question: '1. Would you say your quality of day is:'
+      - key: '7'
+        question: '7. Would you say your quality of day is:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -272,11 +395,11 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '2'
-        question: '2. How would you rate….:'
+      - key: '8'
+        question: '8. How would you rate….:'
         type: DISPLAY
-      - key: 2a
-        question: '2a. Your physical health today:'
+      - key: 8a
+        question: '8a. Your physical health today:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -289,8 +412,8 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: 2b
-        question: '2b. Your mental health, including your mood and your ability to think:'
+      - key: 8b
+        question: '8b. Your mental health, including your mood and your ability to think:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -303,8 +426,8 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: 2c
-        question: '2c. Your satisfaction with your social activities and relationships:'
+      - key: 8c
+        question: '6c. Your satisfaction with your social activities and relationships:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -317,9 +440,9 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '3'
+      - key: '9'
         question: >-
-          3. How well were you able to carry out your usual social activities
+          9. How well were you able to carry out your usual social activities
           and roles today?
         description: >-
           Including activities at home, work and in your community,
@@ -336,9 +459,9 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '4'
+      - key: '10'
         question: >-
-          4. To what extent were you able to carry out your everyday physical
+          10. To what extent were you able to carry out your everyday physical
           activities today?
         description: >-
           Including walking, climbing stairs, carrying groceries, moving items,
@@ -355,9 +478,9 @@ sections:
             text: A little
           - value: not_at_all
             text: Not at all
-      - key: '5'
+      - key: '11'
         question: >-
-          5. How often were you bothered by emotional problems such as feeling
+          11. How often were you bothered by emotional problems such as feeling
           anxious, depressed or irritable today?
         type: SINGLE_CHOICE
         options:
