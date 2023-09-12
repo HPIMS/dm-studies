@@ -1,7 +1,7 @@
 key: daily-check-in
 schedule:
   type: PERIOD
-  period: DAILY
+  period: ALWAYS
 timeRequirements:
   time: 5
   timeUnits: minutes
@@ -61,7 +61,7 @@ sections:
           - value: hip
             text: Hip(s)
           - value: groin
-            text: Groin
+            text: Groin(s)
           - value: thighs_upper_leg
             text: Thighs/upper leg(s)
           - value: buttock
@@ -321,8 +321,8 @@ sections:
             text: Clots
           - value: spotting
             text: Spotting
-          - value: breakthrough_bleeding
-            text: Breakthrough bleeding
+          - value: n/a
+            text: N/A
       - key: 4_sub_3
         question: 4c. Are you experiencing any period related symptoms?
         description: Select all that apply.
@@ -373,6 +373,27 @@ sections:
             text: Severe
           - value: very_severe
             text: Very severe
+      - key: 4_sub_1_alt
+        question: 4a. Are you experiencing any bleeding today outside of your normal menstrual period (also know as breakthrough bleeding)?
+        type: YESNO_CHOICE
+      - key: 4_sub_2_alt
+        question: 4b. Type of bleeding?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '4_sub_1_alt'
+                operator: =
+                value: 'yes'
+        options:
+          - value: clots
+            text: Clots
+          - value: spotting
+            text: Spotting
+          - value: n/a
+            text: N/A
   - type: survey
     key: mood
     title: Your Mood
