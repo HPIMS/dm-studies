@@ -386,7 +386,7 @@ sections:
                 value: 'no'
       - key: 4_sub_2_alt
         question: 4b. Type of bleeding?
-        type: YESNO_CHOICE
+        type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
