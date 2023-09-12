@@ -231,55 +231,62 @@ sections:
             text: Severe
           - value: very_severe
             text: Very severe
-      - key: '5'
-        question: 5. How was your sleep last night?
-        type: DISPLAY
-      - key: 5a
-        question: '5a. Refreshing:'
-        type: SINGLE_CHOICE
-        options:
-          - value: not_at_all
-            text: Not at all
-          - value: a_little_bit
-            text: A little bit
-          - value: somewhat
-            text: Somewhat
-          - value: quite_a_bit
-            text: Quite a bit
-          - value: very_much
-            text: Very much
-      - key: 5b
-        question: '5b. Problems with sleep:'
-        type: SINGLE_CHOICE
-        options:
-          - value: not_at_all
-            text: Not at all
-          - value: a_little_bit
-            text: A little bit
-          - value: somewhat
-            text: Somewhat
-          - value: quite_a_bit
-            text: Quite a bit
-          - value: very_much
-            text: Very much
-      - key: 5c
-        question: '5c. Difficulty falling asleep:'
-        type: SINGLE_CHOICE
-        options:
-          - value: not_at_all
-            text: Not at all
-          - value: a_little_bit
-            text: A little bit
-          - value: somewhat
-            text: Somewhat
-          - value: quite_a_bit
-            text: Quite a bit
-          - value: very_much
-            text: Very much
+  - type: survey
+    key: sleep
+    title: Sleep Tracking
+    description: 'How was your sleep last night?'
+    questions:
       - key: '6'
-        question: 6. Do you have your period today?
+        question: '6. Refreshing:'
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: a_little_bit
+            text: A little bit
+          - value: somewhat
+            text: Somewhat
+          - value: quite_a_bit
+            text: Quite a bit
+          - value: very_much
+            text: Very much
+      - key: '7'
+        question: '7. Problems with sleep:'
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: a_little_bit
+            text: A little bit
+          - value: somewhat
+            text: Somewhat
+          - value: quite_a_bit
+            text: Quite a bit
+          - value: very_much
+            text: Very much
+      - key: '8'
+        question: '8. Difficulty falling asleep:'
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: a_little_bit
+            text: A little bit
+          - value: somewhat
+            text: Somewhat
+          - value: quite_a_bit
+            text: Quite a bit
+          - value: very_much
+            text: Very much
+  - type: survey
+    key: menstrual_health
+    title: Menstrual Health
+    description: Track your period
+    questions:
+      - key: '9'
+        question: 9. Do you have your period today?
         type: YESNO_CHOICE
-      - key: 6_sub_1
+      - key: 9_sub_1
         question: How heavy is the flow?
         type: SINGLE_CHOICE
         triggers:
@@ -287,7 +294,7 @@ sections:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: '6'
+                question: '9'
                 operator: =
                 value: 'yes'
         options:
@@ -297,7 +304,7 @@ sections:
             text: Medium flow
           - value: heavy_flow
             text: Heavy flow
-      - key: 6_sub_2
+      - key: 9_sub_2
         question: Are you experiencing any period related symptoms?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
@@ -306,7 +313,7 @@ sections:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: '6'
+                question: '9'
                 operator: =
                 value: 'yes'
         options:
@@ -326,7 +333,7 @@ sections:
             text: Diarrhea
           - value: constipation
             text: Constipation
-      - key: 6_sub_3
+      - key: 9_sub_3
         question: Rate the severity of the symptoms.
         type: SINGLE_CHOICE
         triggers:
@@ -334,35 +341,35 @@ sections:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: dysmenorrhea
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: bloating
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: cramps
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: breast_tenderness
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: back_pain
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: hot_flashes
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: diarrhea
               - section: health_symptoms
-                question: 6_sub_2
+                question: 9_sub_2
                 operator: INCLUDES
                 value: constipation
         options:
@@ -381,8 +388,8 @@ sections:
     title: Your Day
     description: How was your day? Rate how today went.
     questions:
-      - key: '7'
-        question: '7. Would you say your quality of day is:'
+      - key: '10'
+        question: '10. Would you say your quality of day is:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -395,11 +402,8 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '8'
-        question: '8. How would you rate….:'
-        type: DISPLAY
-      - key: 8a
-        question: '8a. Your physical health today:'
+      - key: '11'
+        question: '11. How would you rate your physical health today:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -412,8 +416,8 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: 8b
-        question: '8b. Your mental health, including your mood and your ability to think:'
+      - key: '12'
+        question: '12. How would you rate your your mental health, including your mood and your ability to think:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -426,8 +430,8 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: 8c
-        question: '6c. Your satisfaction with your social activities and relationships:'
+      - key: '13'
+        question: '13. How would you rate your satisfaction with your social activities and relationships:'
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -440,9 +444,9 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '9'
+      - key: '14'
         question: >-
-          9. How well were you able to carry out your usual social activities
+          14. How well were you able to carry out your usual social activities
           and roles today?
         description: >-
           Including activities at home, work and in your community,
@@ -459,9 +463,9 @@ sections:
             text: Fair
           - value: poor
             text: Poor
-      - key: '10'
+      - key: '15'
         question: >-
-          10. To what extent were you able to carry out your everyday physical
+          15. To what extent were you able to carry out your everyday physical
           activities today?
         description: >-
           Including walking, climbing stairs, carrying groceries, moving items,
@@ -478,9 +482,9 @@ sections:
             text: A little
           - value: not_at_all
             text: Not at all
-      - key: '11'
+      - key: '16'
         question: >-
-          11. How often were you bothered by emotional problems such as feeling
+          16. How often were you bothered by emotional problems such as feeling
           anxious, depressed or irritable today?
         type: SINGLE_CHOICE
         options:
