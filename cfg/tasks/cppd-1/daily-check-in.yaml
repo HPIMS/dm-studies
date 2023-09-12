@@ -376,6 +376,14 @@ sections:
       - key: 4_sub_1_alt
         question: 4a. Are you experiencing any bleeding today outside of your normal menstrual period (also know as breakthrough bleeding)?
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '4'
+                operator: =
+                value: 'no'
       - key: 4_sub_2_alt
         question: 4b. Type of bleeding?
         type: YESNO_CHOICE
