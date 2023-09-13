@@ -141,8 +141,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -214,8 +212,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -287,8 +283,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -360,8 +354,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -433,8 +425,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -506,8 +496,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -579,8 +567,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -652,8 +638,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -725,8 +709,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -798,8 +780,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -871,8 +851,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -944,8 +922,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1017,8 +993,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1090,8 +1064,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1163,8 +1135,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1236,8 +1206,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1309,8 +1277,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1382,8 +1348,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1455,8 +1419,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1528,8 +1490,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1601,8 +1561,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1674,8 +1632,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1747,8 +1703,6 @@ sections:
             text: Tugging
           - value: dull
             text: Dull
-          - value: aching
-            text: Aching
           - value: radiating
             text: Radiating
           - value: piercing
@@ -1803,17 +1757,305 @@ sections:
             text: Painful urination
           - value: frequent_urination
             text: Frequent urination
-      - key: 2_sub_2
-        question: 2b. Rate the severity of the symptom.
+      - key: 2_sub_2_heartburn
+        question: 2b. Rate the severity of the heartburn symptoms.
         type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: '2'
-                operator: =
-                value: 'yes'
+                question: 2_sub_1
+                operator: INCLUDES
+                value: heartburn
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_reflux
+        question: 2c. Rate the severity of the reflux symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: reflux
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_nausea
+        question: 2d. Rate the severity of the nausea symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: nausea
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_vomiting
+        question: 2e. Rate the severity of the vomiting symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: vomiting
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_indigestion
+        question: 2f. Rate the severity of the indigestion symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: indigestion
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_difficulty_swallowing
+        question: 2g. Rate the severity of the difficulty swallowing symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: difficulty_swallowing
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_upset_stomach
+        question: 2h. Rate the severity of the upset stomach symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: upset_stomach
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_belly_pain
+        question: 2i. Rate the severity of the belly pain symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: belly_pain
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_bloating
+        question: 2j. Rate the severity of the bloating symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: bloating
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_gas
+        question: 2k. Rate the severity of the gas symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: gas
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_endo_belly
+        question: 2l. Rate the severity of the endo belly symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: endo_belly
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_diarrhea
+        question: 2m. Rate the severity of the loose stools/diarrhea symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: diarrhea
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_painful_bowel_movement
+        question: 2n. Rate the severity of the painful bowel movement symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: painful_bowel_movement
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_blood_in_stool
+        question: 2o. Rate the severity of the blood in stool symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: blood_in_stool
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_unable_to_urinate
+        question: 2p. Rate the severity of the unable to urinate symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: unable_to_urinate
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_painful_urination
+        question: 2q. Rate the severity of the painful urination symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: painful_urination
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_frequent_urination
+        question: 2r. Rate the severity of the frequent urination symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: frequent_urination
         options:
           - value: mild
             text: Mild
@@ -1855,23 +2097,162 @@ sections:
             text: Physical numbness
           - value: jittery
             text: Jittery
-          - value: other
-            text: Other
-            inlineQuestion:
-              key: 3_sub_1_other_description
-              question: Please specify...
-              type: TEXTAREA
-      - key: 3_sub_2
-        question: 3b. Rate the severity of the symptom.
+      - key: 3_sub_2_fatigue
+        question: 3b. Rate the severity of the fatigue symptoms.
         type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: health_symptoms
-                question: '3'
-                operator: =
-                value: 'yes'
+                question: 3_sub_1
+                operator: INCLUDES
+                value: fatigue
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_headache
+        question: 3c. Rate the severity of the headache symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: headache
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_hot_flashes
+        question: 3d. Rate the severity of the hot flashes symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: hot_flashes
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_fever
+        question: 3e. Rate the severity of the fever symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: fever
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_touch_sensitivity
+        question: 3f. Rate the severity of the touch sensitivity (e.g., intolerance to
+          clothing) symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: touch_sensitivity
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_itchy
+        question: 3g. Rate the severity of the itchy symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: itchy
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_sweaty
+        question: 3h. Rate the severity of the sweaty symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: sweaty
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_physical_numbness
+        question: 3i. Rate the severity of the physical numbness symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: physical_numbness
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_jittery
+        question: 3j. Rate the severity of the jittery symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: jittery
         options:
           - value: mild
             text: Mild
