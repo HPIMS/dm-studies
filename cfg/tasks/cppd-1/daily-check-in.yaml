@@ -2965,12 +2965,24 @@ sections:
   - type: survey
     key: daily_activities
     title: Activities of Daily Living
-    description: Were your daily activities impacted by your health today?
+    description: ""
     questions:
       - key: '8'
-        question: 8. Which activities were difficult to do?
+        question: 8. Were any of your daily activities impacted by your health today?
+        description: e.g. Self-care, running errands, working, going up/down stairs, etc.
+        type: YESNO_CHOICE
+      - key: 8_sub_1
+        question: 8a. Which activities were difficult to do?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: '8'
+                operator: =
+                value: 'yes'
         options:
           - value: self_care
             text: 'Self-care (e.g., washing, dressing, use toilet)'
@@ -3008,16 +3020,242 @@ sections:
               key: 8_other_description
               question: Please specify...
               type: TEXTAREA
-      - key: 8_sub_1
-        question: 8a. How severe was the effect?
+      - key: 8_sub_2_self_care
+        question: 8b. How severe was the effect on self-care (e.g., washing, dressing,
+          use toilet).
         type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: daily_activities
-                question: '8'
-                operator: IS_SET
+                question: 8_sub_1
+                operator: INCLUDES
+                value: self_care
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_working_studying
+        question: 8c. How severe was the effect on working or studying.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: working_studying
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_chores
+        question: 8d. How severe was the effect on chores (e.g., cleaning, preparing food).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: chores
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_errands
+        question: 8e. How severe was the effect on running errands (e.g., shopping).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: errands
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_walking_about
+        question: 8f. How severe was the effect on walking about.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: walking_about
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_stairs
+        question: 8g. How severe was the effect on going up/down stairs.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: stairs
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_other_physical_mobility
+        question: 8h. How severe was the effect on other physical mobility (e.g.,
+          kneeling, jumping, stretching, sitting down).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: other_physical_mobility
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_other_physical_mobility
+        question: 8i. How severe was the effect on cognition (e.g., focusing, thinking,
+          planning).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: other_physical_mobility
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_physical_exercise
+        question: 8j. How severe was the effect on physical exercise.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: physical_exercise
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_commuting
+        question: 8k. How severe was the effect on commuting (e.g., taking public
+          transportation, driving).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: commuting
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_social_activities
+        question: 8l. How severe was the effect on social roles and activities (e.g.,
+          family, friends, leisure activities).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: social_activities
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_other
+        question: 8m. How severe was the effect on other.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: other
         options:
           - value: little_difficulty
             text: Little difficulty
@@ -3079,8 +3317,20 @@ sections:
           12. Did you engage in leisure time physical activity (i.e., exercise
           outside of regular daily activities such as commuting and housework)
           today?
+        type: YESNO_CHOICE
+      - key: '12_sub_1'
+        question: >-
+          12a. Which activities did you engage in?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: '12'
+                operator: =
+                value: 'yes'
         options:
           - value: cardiovascular
             text: 'Cardiovascular (e.g., walking, jogging, swimming, etc)'
@@ -3106,37 +3356,369 @@ sections:
               key: 12_other_description
               question: Please specify...
               type: TEXTAREA
-      - key: 12_sub_1
-        question: 12a. How long was your exercise session?
+      - key: 12_sub_2_cardiovascular
+        question: 12b (part 1). How long was your cardiovascular (e.g., walking,
+          jogging, swimming, etc) exercise session?
         type: DURATION
         triggers:
           - action:
               type: SHOW
             condition:
               - section: physical_activity_exercise
-                question: '12'
-                operator: IS_SET
+                question: 12_sub_1
+                operator: INCLUDES
+                value: cardiovascular
         hours: true
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2
+      - key: 12_sub_2_cardiovascular
         question: >-
-          12b. How intense was your exercise session overall (i.e., perceived
-          exertion)?
-        description: >-
-          A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond
-          to light intensity activities, and 15 would correspond to hard
-          intensity activities.
+          12b (part 2). How insense was your cardiovascular (e.g., walking,
+          jogging, swimming, etc) exercise session overall (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
         type: SLIDER
         triggers:
           - action:
               type: SHOW
             condition:
               - section: physical_activity_exercise
-                question: '12'
-                operator: IS_SET
+                question: 12_sub_1
+                operator: INCLUDES
+                value: cardiovascular
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_body_weight_strength_training
+        question: 12c (part 1). How long was your body weight strength training
+          (including calisthenics) exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: body_weight_strength_training
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_body_weight_strength_training
+        question: >-
+          12c (part 2). How insense was your body weight strength training
+          (including calisthenics) exercise session overall (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: body_weight_strength_training
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_weights_strength_training
+        question: 12d (part 1). How long was your strength training with weights (e.g.,
+          lifting) exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: weights_strength_training
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_weights_strength_training
+        question: >-
+          12d (part 2). How insense was your strength training with weights
+          (e.g., lifting) exercise session overall (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: weights_strength_training
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_stretching
+        question: 12e (part 1). How long was your stretching exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: stretching
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_stretching
+        question: >-
+          12e (part 2). How insense was your stretching exercise session overall
+          (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: stretching
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_yoga
+        question: 12f (part 1). How long was your yoga exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: yoga
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_yoga
+        question: >-
+          12f (part 2). How insense was your yoga exercise session overall
+          (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: yoga
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_pilates_barre
+        question: 12g (part 1). How long was your pilates or barre fitness exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: pilates_barre
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_pilates_barre
+        question: >-
+          12g (part 2). How insense was your pilates or barre fitness exercise
+          session overall (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: pilates_barre
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_dance
+        question: 12h (part 1). How long was your dance (e.g., ballet, modern, ballroom)
+          exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: dance
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_dance
+        question: >-
+          12h (part 2). How insense was your dance (e.g., ballet, modern,
+          ballroom) exercise session overall (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: dance
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_gym_fitness
+        question: 12i (part 1). How long was your gym fitness (e.g., steps, aerobics;
+          trx) exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: gym_fitness
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_gym_fitness
+        question: >-
+          12i (part 2). How insense was your gym fitness (e.g., steps, aerobics;
+          trx) exercise session overall (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: gym_fitness
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_team_sports
+        question: 12j (part 1). How long was your team sports (e.g., basketball; soccer)
+          exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: team_sports
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_team_sports
+        question: >-
+          12j (part 2). How insense was your team sports (e.g., basketball;
+          soccer) exercise session overall (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: team_sports
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_2_other
+        question: 12k (part 1). How long was your other exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: other
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_2_other
+        question: >-
+          12k (part 2). How insense was your other exercise session overall
+          (i.e., perceived
+                exertion)?
+        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond to
+          light intensity activities, and 15 would correspond to hard intensity
+          activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: other
         min: 6
         max: 20
         step: 1
