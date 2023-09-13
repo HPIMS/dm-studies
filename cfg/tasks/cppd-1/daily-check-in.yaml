@@ -2447,16 +2447,485 @@ sections:
             text: Attentive
           - value: interested
             text: Interested
-      - key: 5_sub_1
-        question: 5a. How intense is the feeling?
+      - key: 5_sub_1_fearful
+        question: 2a. How intense is the fearful feeling?
         type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: mood
-                question: '5'
-                operator: IS_SET
+                question: "5"
+                operator: INCLUDES
+                value: fearful
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_nervous
+        question: 2b. How intense is the nervous feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: nervous
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_worried
+        question: 2c. How intense is the worried feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: worried
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_overwhelmed
+        question: 2d. How intense is the overwhelmed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: overwhelmed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_uneasy
+        question: 2e. How intense is the uneasy feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: uneasy
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_helpless
+        question: 2f. How intense is the helpless feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: helpless
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_depressed
+        question: 2g. How intense is the depressed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: depressed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_hopeless
+        question: 2h. How intense is the hopeless feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: hopeless
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_sad
+        question: 2i. How intense is the sad feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: sad
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_lonely
+        question: 2j. How intense is the lonely feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: lonely
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_isolated
+        question: 2k. How intense is the isolated feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: isolated
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_restless
+        question: 2l. How intense is the restless feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: restless
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_angry
+        question: 2m. How intense is the angry feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: angry
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_frustrated
+        question: 2n. How intense is the frustrated feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: frustrated
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_stressed
+        question: 2o. How intense is the stressed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: stressed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_happy
+        question: 2p. How intense is the happy feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: happy
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_calm_relaxed
+        question: 2q. How intense is the calm/relaxed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: calm_relaxed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_excited
+        question: 2r. How intense is the excited feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: excited
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_hopeful
+        question: 2s. How intense is the hopeful feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: hopeful
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_determined
+        question: 2t. How intense is the determined feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: determined
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_confident
+        question: 2u. How intense is the confident feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: confident
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_strong
+        question: 2v. How intense is the strong feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: strong
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_productive
+        question: 2w. How intense is the productive feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: productive
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_social
+        question: 2x. How intense is the social feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: social
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_active
+        question: 2y. How intense is the active feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: active
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_attentive
+        question: 2z. How intense is the attentive feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: attentive
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_interested
+        question: 2aa. How intense is the interested feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: "5"
+                operator: INCLUDES
+                value: interested
         options:
           - value: mild
             text: Mild
