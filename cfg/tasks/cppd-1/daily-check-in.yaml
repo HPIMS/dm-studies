@@ -2992,7 +2992,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: health_symptoms
+              - section: daily_activities
                 question: '8'
                 operator: =
                 value: 'yes'
@@ -3392,7 +3392,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_cardiovascular
+      - key: 12_sub_3_cardiovascular
         question: >-
           12b (part 2). How insense was your cardiovascular (e.g., walking,
           jogging, swimming, etc) exercise session overall (i.e., perceived
@@ -3431,7 +3431,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_body_weight_strength_training
+      - key: 12_sub_3_body_weight_strength_training
         question: >-
           12c (part 2). How insense was your body weight strength training
           (including calisthenics) exercise session overall (i.e., perceived
@@ -3470,7 +3470,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_weights_strength_training
+      - key: 12_sub_3_weights_strength_training
         question: >-
           12d (part 2). How insense was your strength training with weights
           (e.g., lifting) exercise session overall (i.e., perceived
@@ -3507,7 +3507,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_stretching
+      - key: 12_sub_3_stretching
         question: >-
           12e (part 2). How insense was your stretching exercise session overall
           (i.e., perceived
@@ -3544,7 +3544,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_yoga
+      - key: 12_sub_3_yoga
         question: >-
           12f (part 2). How insense was your yoga exercise session overall
           (i.e., perceived
@@ -3583,7 +3583,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_pilates_barre
+      - key: 12_sub_3_pilates_barre
         question: >-
           12g (part 2). How insense was your pilates or barre fitness exercise
           session overall (i.e., perceived
@@ -3622,7 +3622,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_dance
+      - key: 12_sub_3_dance
         question: >-
           12h (part 2). How insense was your dance (e.g., ballet, modern,
           ballroom) exercise session overall (i.e., perceived
@@ -3661,7 +3661,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_gym_fitness
+      - key: 12_sub_3_gym_fitness
         question: >-
           12i (part 2). How insense was your gym fitness (e.g., steps, aerobics;
           trx) exercise session overall (i.e., perceived
@@ -3700,7 +3700,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_team_sports
+      - key: 12_sub_3_team_sports
         question: >-
           12j (part 2). How insense was your team sports (e.g., basketball;
           soccer) exercise session overall (i.e., perceived
@@ -3737,7 +3737,7 @@ sections:
         minutes: true
         hoursPlaceholder: Hours
         minutesPlaceholder: Or minutes
-      - key: 12_sub_2_other
+      - key: 12_sub_3_other
         question: >-
           12k (part 2). How insense was your other exercise session overall
           (i.e., perceived
