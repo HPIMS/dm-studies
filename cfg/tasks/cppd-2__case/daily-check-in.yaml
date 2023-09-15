@@ -21,6 +21,8 @@ sections:
             text: Abdomen
           - value: pelvis
             text: Pelvis
+          - value: vagina
+            text: Vagina
           - value: groin
             text: Groin(s)
           - value: lower_back
@@ -81,7 +83,9 @@ sections:
         max: 10
         maxLabel: Worst imaginable pain
       - key: '2'
-        question: 2. Did you have to miss work or school due to your symptoms today?
+        question: >-
+          2. Did you have to miss work or school due to your pain symptoms
+          today?
         type: SINGLE_CHOICE
         options:
           - value: 'yes'
@@ -299,6 +303,8 @@ sections:
                 operator: =
                 value: 'yes'
         options:
+          - value: spotting
+            text: Spotting
           - value: light_flow
             text: Light flow
           - value: medium_flow
@@ -334,6 +340,8 @@ sections:
             text: Diarrhea
           - value: constipation
             text: Constipation
+          - value: blood_clots
+            text: Blood clots
       - key: 9_sub_3
         question: 9c. Rate the severity of the symptoms.
         type: SINGLE_CHOICE
@@ -373,6 +381,10 @@ sections:
                 question: 9_sub_2
                 operator: INCLUDES
                 value: constipation
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: blood_clots
         options:
           - value: mild
             text: Mild
@@ -382,10 +394,30 @@ sections:
             text: Severe
           - value: very_severe
             text: Very severe
+      - key: 9_sub_1_alt
+        question: >-
+          9a. Are you experiencing any bleeding or spotting outside of your
+          normal menstrual period (breakthrough bleeding)?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '9'
+                operator: =
+                value: 'no'
+        options:
+          - value: 'no'
+            text: 'No'
+          - value: spotting
+            text: Yes - spotting
+          - value: bleeding
+            text: Yes - bleeding
   - type: survey
     key: qol
-    title: Your Day
-    description: ""
+    title: How was your day?
+    description: Rate how today went.
     questions:
       - key: '10'
         question: '10. Would you say your quality of day is:'
@@ -402,7 +434,7 @@ sections:
           - value: poor
             text: Poor
       - key: '11'
-        question: '11. How would you rate your physical health today?'
+        question: 11. How would you rate your physical health today?
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -416,7 +448,9 @@ sections:
           - value: poor
             text: Poor
       - key: '12'
-        question: '12. How would you rate your mental health, including your mood and your ability to think?'
+        question: >-
+          12. How would you rate your mental health, including your mood and
+          your ability to think?
         type: SINGLE_CHOICE
         options:
           - value: excellent
@@ -430,7 +464,9 @@ sections:
           - value: poor
             text: Poor
       - key: '13'
-        question: '13. How would you rate your satisfaction with your social activities and relationships?'
+        question: >-
+          13. How would you rate your satisfaction with your social activities
+          and relationships?
         type: SINGLE_CHOICE
         options:
           - value: excellent
