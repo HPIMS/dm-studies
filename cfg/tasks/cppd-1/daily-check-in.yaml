@@ -3014,10 +3014,10 @@ sections:
               Other physical mobility (e.g., kneeling, jumping, stretching,
               sitting down)
             inlineQuestion:
-              key: 8_other_physical_mobility_description
+              key: 8_sub_1_other_physical_mobility_description
               question: Please specify...
               type: cognition
-          - value: other_physical_mobility
+          - value: cognition
             text: 'Cognition (e.g., focusing, thinking, planning)'
           - value: physical_exercise
             text: Physical exercise
@@ -3030,7 +3030,7 @@ sections:
           - value: other
             text: Other
             inlineQuestion:
-              key: 8_other_description
+              key: 8_sub_1_other_description
               question: Please specify...
               type: TEXTAREA
       - key: 8_sub_2_self_care
@@ -3179,7 +3179,7 @@ sections:
             text: Severe difficulty
           - value: unable_to_do
             text: Unable to do
-      - key: 8_sub_2_other_physical_mobility
+      - key: 8_sub_2_cognition
         question: >-
           8i. How severe was the effect on cognition (e.g., focusing, thinking,
           planning).
@@ -3191,7 +3191,7 @@ sections:
               - section: daily_activities
                 question: 8_sub_1
                 operator: INCLUDES
-                value: other_physical_mobility
+                value: cognition
         options:
           - value: little_difficulty
             text: Little difficulty
