@@ -1300,7 +1300,9 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_thighs_upper_leg
-        question: 1s (part 2). What type of thighs/upper leg(s) pain are you experiencing?
+        question: >-
+          1s (part 2). What type of thighs/upper leg(s) pain are you
+          experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -2170,7 +2172,8 @@ sections:
           - value: severe
             text: Severe
       - key: 3_sub_2_touch_sensitivity
-        question: 3f. Rate the severity of the touch sensitivity (e.g., intolerance to
+        question: >-
+          3f. Rate the severity of the touch sensitivity (e.g., intolerance to
           clothing) symptoms.
         type: SINGLE_CHOICE
         triggers:
@@ -2280,6 +2283,8 @@ sections:
                 operator: =
                 value: 'yes'
         options:
+          - value: spotting
+            text: Spotting
           - value: light_flow
             text: Light flow
           - value: medium_flow
@@ -2287,25 +2292,7 @@ sections:
           - value: heavy_flow
             text: Heavy flow
       - key: 4_sub_2
-        question: 4b. Type of bleeding?
-        type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: menstrual_health
-                question: '4'
-                operator: =
-                value: 'yes'
-        options:
-          - value: clots
-            text: Clots
-          - value: spotting
-            text: Spotting
-          - value: n/a
-            text: N/A
-      - key: 4_sub_3
-        question: 4c. Are you experiencing any period related symptoms?
+        question: 4b. Are you experiencing any period related symptoms?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -2333,16 +2320,51 @@ sections:
             text: Diarrhea
           - value: constipation
             text: Constipation
-      - key: 4_sub_4
-        question: 4d. Rate the severity of the symptoms.
+          - value: blood_clots
+            text: Blood clots
+      - key: 4_sub_3
+        question: 4c. Rate the severity of the symptoms.
         type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: menstrual_health
-                question: 4_sub_3
-                operator: IS_SET
+                question: 4_sub_2
+                operator: INCLUDES
+                value: dysmenorrhea
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: bloating
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: cramps
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: breast_tenderness
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: back_pain
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: hot_flashes
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: diarrhea
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: constipation
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: blood_clots
         options:
           - value: none
             text: None
@@ -2354,9 +2376,11 @@ sections:
             text: Severe
           - value: very_severe
             text: Very severe
-      - key: 4_sub_1_alt
-        question: 4a. Are you experiencing any bleeding today outside of your normal menstrual period (also know as breakthrough bleeding)?
-        type: YESNO_CHOICE
+      - key: 9_sub_1_alt
+        question: >-
+          9a. Are you experiencing any bleeding or spotting outside of your
+          normal menstrual period (breakthrough bleeding)?
+        type: SINGLE_CHOICE
         triggers:
           - action:
               type: SHOW
@@ -2365,24 +2389,13 @@ sections:
                 question: '4'
                 operator: =
                 value: 'no'
-      - key: 4_sub_2_alt
-        question: 4b. Type of bleeding?
-        type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: menstrual_health
-                question: '4_sub_1_alt'
-                operator: =
-                value: 'yes'
         options:
-          - value: clots
-            text: Clots
+          - value: 'no'
+            text: 'No'
           - value: spotting
-            text: Spotting
-          - value: n/a
-            text: N/A
+            text: Yes - spotting
+          - value: bleeding
+            text: Yes - bleeding
   - type: survey
     key: mood
     title: Your Mood
@@ -2455,7 +2468,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: fearful
         options:
@@ -2473,7 +2486,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: nervous
         options:
@@ -2491,7 +2504,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: worried
         options:
@@ -2509,7 +2522,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: overwhelmed
         options:
@@ -2527,7 +2540,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: uneasy
         options:
@@ -2545,7 +2558,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: helpless
         options:
@@ -2563,7 +2576,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: depressed
         options:
@@ -2581,7 +2594,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: hopeless
         options:
@@ -2599,7 +2612,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: sad
         options:
@@ -2617,7 +2630,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: lonely
         options:
@@ -2635,7 +2648,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: isolated
         options:
@@ -2653,7 +2666,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: restless
         options:
@@ -2671,7 +2684,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: angry
         options:
@@ -2689,7 +2702,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: frustrated
         options:
@@ -2707,7 +2720,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: stressed
         options:
@@ -2725,7 +2738,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: happy
         options:
@@ -2743,7 +2756,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: calm_relaxed
         options:
@@ -2761,7 +2774,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: excited
         options:
@@ -2779,7 +2792,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: hopeful
         options:
@@ -2797,7 +2810,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: determined
         options:
@@ -2815,7 +2828,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: confident
         options:
@@ -2833,7 +2846,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: strong
         options:
@@ -2851,7 +2864,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: productive
         options:
@@ -2869,7 +2882,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: social
         options:
@@ -2887,7 +2900,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: active
         options:
@@ -2905,7 +2918,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: attentive
         options:
@@ -2923,7 +2936,7 @@ sections:
               type: SHOW
             condition:
               - section: mood
-                question: "5"
+                question: '5'
                 operator: INCLUDES
                 value: interested
         options:
@@ -2965,11 +2978,11 @@ sections:
   - type: survey
     key: daily_activities
     title: Activities of Daily Living
-    description: ""
+    description: ''
     questions:
       - key: '8'
         question: 8. Were any of your daily activities impacted by your health today?
-        description: e.g. Self-care, running errands, working, going up/down stairs, etc.
+        description: 'e.g. Self-care, running errands, working, going up/down stairs, etc.'
         type: YESNO_CHOICE
       - key: 8_sub_1
         question: 8a. Which activities were difficult to do?
@@ -3021,7 +3034,8 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 8_sub_2_self_care
-        question: 8b. How severe was the effect on self-care (e.g., washing, dressing,
+        question: >-
+          8b. How severe was the effect on self-care (e.g., washing, dressing,
           use toilet).
         type: SINGLE_CHOICE
         triggers:
@@ -3062,7 +3076,9 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_chores
-        question: 8d. How severe was the effect on chores (e.g., cleaning, preparing food).
+        question: >-
+          8d. How severe was the effect on chores (e.g., cleaning, preparing
+          food).
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -3082,7 +3098,7 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_errands
-        question: 8e. How severe was the effect on running errands (e.g., shopping).
+        question: '8e. How severe was the effect on running errands (e.g., shopping).'
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -3142,7 +3158,8 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_other_physical_mobility
-        question: 8h. How severe was the effect on other physical mobility (e.g.,
+        question: >-
+          8h. How severe was the effect on other physical mobility (e.g.,
           kneeling, jumping, stretching, sitting down).
         type: SINGLE_CHOICE
         triggers:
@@ -3163,7 +3180,8 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_other_physical_mobility
-        question: 8i. How severe was the effect on cognition (e.g., focusing, thinking,
+        question: >-
+          8i. How severe was the effect on cognition (e.g., focusing, thinking,
           planning).
         type: SINGLE_CHOICE
         triggers:
@@ -3204,7 +3222,8 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_commuting
-        question: 8k. How severe was the effect on commuting (e.g., taking public
+        question: >-
+          8k. How severe was the effect on commuting (e.g., taking public
           transportation, driving).
         type: SINGLE_CHOICE
         triggers:
@@ -3225,7 +3244,8 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_social_activities
-        question: 8l. How severe was the effect on social roles and activities (e.g.,
+        question: >-
+          8l. How severe was the effect on social roles and activities (e.g.,
           family, friends, leisure activities).
         type: SINGLE_CHOICE
         triggers:
@@ -3318,9 +3338,8 @@ sections:
           outside of regular daily activities such as commuting and housework)
           today?
         type: YESNO_CHOICE
-      - key: '12_sub_1'
-        question: >-
-          12a. Which activities did you engage in?
+      - key: 12_sub_1
+        question: 12a. Which activities did you engage in?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -3357,7 +3376,8 @@ sections:
               question: Please specify...
               type: TEXTAREA
       - key: 12_sub_2_cardiovascular
-        question: 12b (part 1). How long was your cardiovascular (e.g., walking,
+        question: >-
+          12b (part 1). How long was your cardiovascular (e.g., walking,
           jogging, swimming, etc) exercise session?
         type: DURATION
         triggers:
@@ -3377,10 +3397,11 @@ sections:
           12b (part 2). How insense was your cardiovascular (e.g., walking,
           jogging, swimming, etc) exercise session overall (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3394,7 +3415,8 @@ sections:
         max: 20
         step: 1
       - key: 12_sub_2_body_weight_strength_training
-        question: 12c (part 1). How long was your body weight strength training
+        question: >-
+          12c (part 1). How long was your body weight strength training
           (including calisthenics) exercise session?
         type: DURATION
         triggers:
@@ -3414,10 +3436,11 @@ sections:
           12c (part 2). How insense was your body weight strength training
           (including calisthenics) exercise session overall (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3431,7 +3454,8 @@ sections:
         max: 20
         step: 1
       - key: 12_sub_2_weights_strength_training
-        question: 12d (part 1). How long was your strength training with weights (e.g.,
+        question: >-
+          12d (part 1). How long was your strength training with weights (e.g.,
           lifting) exercise session?
         type: DURATION
         triggers:
@@ -3451,10 +3475,11 @@ sections:
           12d (part 2). How insense was your strength training with weights
           (e.g., lifting) exercise session overall (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3487,10 +3512,11 @@ sections:
           12e (part 2). How insense was your stretching exercise session overall
           (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3523,10 +3549,11 @@ sections:
           12f (part 2). How insense was your yoga exercise session overall
           (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3540,7 +3567,9 @@ sections:
         max: 20
         step: 1
       - key: 12_sub_2_pilates_barre
-        question: 12g (part 1). How long was your pilates or barre fitness exercise session?
+        question: >-
+          12g (part 1). How long was your pilates or barre fitness exercise
+          session?
         type: DURATION
         triggers:
           - action:
@@ -3559,10 +3588,11 @@ sections:
           12g (part 2). How insense was your pilates or barre fitness exercise
           session overall (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3576,7 +3606,8 @@ sections:
         max: 20
         step: 1
       - key: 12_sub_2_dance
-        question: 12h (part 1). How long was your dance (e.g., ballet, modern, ballroom)
+        question: >-
+          12h (part 1). How long was your dance (e.g., ballet, modern, ballroom)
           exercise session?
         type: DURATION
         triggers:
@@ -3596,10 +3627,11 @@ sections:
           12h (part 2). How insense was your dance (e.g., ballet, modern,
           ballroom) exercise session overall (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3613,7 +3645,8 @@ sections:
         max: 20
         step: 1
       - key: 12_sub_2_gym_fitness
-        question: 12i (part 1). How long was your gym fitness (e.g., steps, aerobics;
+        question: >-
+          12i (part 1). How long was your gym fitness (e.g., steps, aerobics;
           trx) exercise session?
         type: DURATION
         triggers:
@@ -3633,10 +3666,11 @@ sections:
           12i (part 2). How insense was your gym fitness (e.g., steps, aerobics;
           trx) exercise session overall (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3650,7 +3684,8 @@ sections:
         max: 20
         step: 1
       - key: 12_sub_2_team_sports
-        question: 12j (part 1). How long was your team sports (e.g., basketball; soccer)
+        question: >-
+          12j (part 1). How long was your team sports (e.g., basketball; soccer)
           exercise session?
         type: DURATION
         triggers:
@@ -3670,10 +3705,11 @@ sections:
           12j (part 2). How insense was your team sports (e.g., basketball;
           soccer) exercise session overall (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
@@ -3706,10 +3742,11 @@ sections:
           12k (part 2). How insense was your other exercise session overall
           (i.e., perceived
                 exertion)?
-        description: A rating of 6 indicates no or minimal exertion, and 20 indicates
-          maximum possible effort. For example, a rating of 11 would correspond to
-          light intensity activities, and 15 would correspond to hard intensity
-          activities.
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
         type: SLIDER
         triggers:
           - action:
