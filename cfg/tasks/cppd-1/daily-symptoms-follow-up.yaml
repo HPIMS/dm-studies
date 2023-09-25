@@ -1,23 +1,29 @@
-key: daily-check-in
+key: daily-symptoms-follow-up
 schedule:
   type: PERIOD
-  period: ALWAYS
+  period: DAILY
+  timeOfDay:
+    - - '1800'
+      - '2359'
 timeRequirements:
   time: 5
   timeUnits: minutes
-name: Daily Check-in
+name: Daily Symptoms Follow Up
 sections:
   - type: survey
     key: health_symptoms
-    title: Health and Symptoms
-    description: ''
+    title: Daily Symptoms Follow Up
+    description: Track your symptoms for the day (follow up).
     questions:
       - key: '1'
-        question: 1. Are you experiencing any pain?
+        question: >-
+          1. Since the last time you tracked your pain symptoms today, have you
+          experienced any pain symptoms?
         type: YESNO_CHOICE
       - key: 1_sub_1
-        question: 1a. Where is the pain?
-        description: Select all that apply.
+        question: >-
+          1a. Select all body areas where you felt pain since you last tracked
+          today.
         type: MULTIPLE_CHOICE
         triggers:
           - action:
@@ -54,10 +60,16 @@ sections:
             text: Lower arm(s)
           - value: wrist_hand
             text: Wrist/hand(s)
-          - value: abdomen
-            text: Abdomen
+          - value: upper_abdomen
+            text: Upper abdomen
+          - value: lower_abdomen
+            text: Lower abdomen
+          - value: vagina
+            text: Vagina
           - value: pelvis
             text: Pelvis
+          - value: rectum
+            text: Rectum
           - value: hip
             text: Hip(s)
           - value: groin
@@ -997,8 +1009,8 @@ sections:
             text: Radiating
           - value: piercing
             text: Piercing
-      - key: 1_sub_2_abdomen
-        question: 1o (part 1). Rate the severity of the abdomen pain.
+      - key: 1_sub_2_upper_abdomen
+        question: 1o (part 1). Rate the severity of the upper abdomen pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1007,7 +1019,7 @@ sections:
               - section: health_symptoms
                 question: 1_sub_1
                 operator: INCLUDES
-                value: abdomen
+                value: upper_abdomen
         options:
           - value: mild
             text: Mild
@@ -1015,8 +1027,8 @@ sections:
             text: Moderate
           - value: severe
             text: Severe
-      - key: 1_sub_3_abdomen
-        question: 1o (part 2). What type of abdomen pain are you experiencing?
+      - key: 1_sub_3_upper_abdomen
+        question: 1o (part 2). What type of upper abdomen pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1026,7 +1038,149 @@ sections:
               - section: health_symptoms
                 question: 1_sub_1
                 operator: INCLUDES
-                value: abdomen
+                value: upper_abdomen
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_lower_abdomen
+        question: 1p (part 1). Rate the severity of the lower abdomen pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_abdomen
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_lower_abdomen
+        question: 1p (part 2). What type of lower abdomen pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_abdomen
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_vagina
+        question: 1q (part 1). Rate the severity of the vagina pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: vagina
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_vagina
+        question: 1q (part 2). What type of vagina pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: vagina
         options:
           - value: throbbing
             text: Throbbing
@@ -1069,7 +1223,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_pelvis
-        question: 1p (part 1). Rate the severity of the pelvis pain.
+        question: 1r (part 1). Rate the severity of the pelvis pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1087,7 +1241,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_pelvis
-        question: 1p (part 2). What type of pelvis pain are you experiencing?
+        question: 1r (part 2). What type of pelvis pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1139,8 +1293,79 @@ sections:
             text: Radiating
           - value: piercing
             text: Piercing
+      - key: 1_sub_2_rectum
+        question: 1s (part 1). Rate the severity of the rectum pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: rectum
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_rectum
+        question: 1s (part 2). What type of rectum pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: rectum
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
       - key: 1_sub_2_hip
-        question: 1q (part 1). Rate the severity of the hip(s) pain.
+        question: 1t (part 1). Rate the severity of the hip(s) pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1158,7 +1383,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_hip
-        question: 1q (part 2). What type of hip(s) pain are you experiencing?
+        question: 1t (part 2). What type of hip(s) pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1211,7 +1436,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_groin
-        question: 1r (part 1). Rate the severity of the groin(s) pain.
+        question: 1u (part 1). Rate the severity of the groin(s) pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1229,7 +1454,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_groin
-        question: 1r (part 2). What type of groin(s) pain are you experiencing?
+        question: 1u (part 2). What type of groin(s) pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1282,7 +1507,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_thighs_upper_leg
-        question: 1s (part 1). Rate the severity of the thighs/upper leg(s) pain.
+        question: 1v (part 1). Rate the severity of the thighs/upper leg(s) pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1301,7 +1526,7 @@ sections:
             text: Severe
       - key: 1_sub_3_thighs_upper_leg
         question: >-
-          1s (part 2). What type of thighs/upper leg(s) pain are you
+          1v (part 2). What type of thighs/upper leg(s) pain are you
           experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
@@ -1355,7 +1580,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_buttock
-        question: 1t (part 1). Rate the severity of the buttock(s) pain.
+        question: 1w (part 1). Rate the severity of the buttock(s) pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1373,7 +1598,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_buttock
-        question: 1t (part 2). What type of buttock(s) pain are you experiencing?
+        question: 1w (part 2). What type of buttock(s) pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1426,7 +1651,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_knee
-        question: 1u (part 1). Rate the severity of the knee(s) pain.
+        question: 1x (part 1). Rate the severity of the knee(s) pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1444,7 +1669,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_knee
-        question: 1u (part 2). What type of knee(s) pain are you experiencing?
+        question: 1x (part 2). What type of knee(s) pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1497,7 +1722,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_lower_leg
-        question: 1v (part 1). Rate the severity of the lower leg(s) pain.
+        question: 1y (part 1). Rate the severity of the lower leg(s) pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1515,7 +1740,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_lower_leg
-        question: 1v (part 2). What type of lower leg(s) pain are you experiencing?
+        question: 1y (part 2). What type of lower leg(s) pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1568,7 +1793,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_ankle
-        question: 1w (part 1). Rate the severity of the ankle(s) pain.
+        question: 1z (part 1). Rate the severity of the ankle(s) pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1586,7 +1811,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_ankle
-        question: 1w (part 2). What type of ankle(s) pain are you experiencing?
+        question: 1z (part 2). What type of ankle(s) pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1639,7 +1864,7 @@ sections:
           - value: piercing
             text: Piercing
       - key: 1_sub_2_feet
-        question: 1x (part 1). Rate the severity of the feet pain.
+        question: 1aa (part 1). Rate the severity of the feet pain.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -1657,7 +1882,7 @@ sections:
           - value: severe
             text: Severe
       - key: 1_sub_3_feet
-        question: 1x (part 2). What type of feet pain are you experiencing?
+        question: 1aa (part 2). What type of feet pain are you experiencing?
         type: MULTIPLE_CHOICE
         description: Select all that apply.
         triggers:
@@ -1710,7 +1935,9 @@ sections:
           - value: piercing
             text: Piercing
       - key: '2'
-        question: 2. Are you experiencing any digestive/urinary symptoms?
+        question: >-
+          2. Since the last time you tracked your digestive/urinary symptoms
+          today, have you experienced any digestive/urinary symptoms?
         type: YESNO_CHOICE
       - key: 2_sub_1
         question: 2a. What are you experiencing?
@@ -2066,7 +2293,9 @@ sections:
           - value: severe
             text: Severe
       - key: '3'
-        question: 3. Are you experiencing any other symptoms?
+        question: >-
+          3. Have you experienced any other symptoms since the last time you
+          tracked today?
         type: YESNO_CHOICE
       - key: 3_sub_1
         question: 3a. What are you experiencing?
@@ -2399,11 +2628,11 @@ sections:
   - type: survey
     key: mood
     title: Your Mood
-    description: How is your mood today?
+    description: How was your mood today?
     questions:
       - key: '5'
-        question: 5. Are you feeling...?
-        description: Select all that apply.
+        question: 5. Have you felt…?
+        description: Select all those that apply.
         type: MULTIPLE_CHOICE
         options:
           - value: fearful
@@ -2985,7 +3214,9 @@ sections:
         description: 'e.g. Self-care, running errands, working, going up/down stairs, etc.'
         type: YESNO_CHOICE
       - key: 8_sub_1
-        question: 8a. Which activities were difficult to do?
+        question: >-
+          8a. Which activities were difficult to do due to your pain or other
+          symptoms?
         description: Select all that apply.
         type: MULTIPLE_CHOICE
         triggers:
@@ -3016,7 +3247,11 @@ sections:
             inlineQuestion:
               key: 8_sub_1_other_physical_mobility_description
               question: Please specify...
-              type: cognition
+              type: TEXTAREA
+          - value: sleep
+            text: Sleep
+          - value: intercourse
+            text: Intercourse
           - value: cognition
             text: 'Cognition (e.g., focusing, thinking, planning)'
           - value: physical_exercise
@@ -3179,9 +3414,49 @@ sections:
             text: Severe difficulty
           - value: unable_to_do
             text: Unable to do
+      - key: 8_sub_2_sleep
+        question: 8i. How severe was the effect on sleep.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: sleep
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_intercourse
+        question: 8j. How severe was the effect on intercourse.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: intercourse
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
       - key: 8_sub_2_cognition
         question: >-
-          8i. How severe was the effect on cognition (e.g., focusing, thinking,
+          8k. How severe was the effect on cognition (e.g., focusing, thinking,
           planning).
         type: SINGLE_CHOICE
         triggers:
@@ -3202,7 +3477,7 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_physical_exercise
-        question: 8j. How severe was the effect on physical exercise.
+        question: 8l. How severe was the effect on physical exercise.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -3223,7 +3498,7 @@ sections:
             text: Unable to do
       - key: 8_sub_2_commuting
         question: >-
-          8k. How severe was the effect on commuting (e.g., taking public
+          8m. How severe was the effect on commuting (e.g., taking public
           transportation, driving).
         type: SINGLE_CHOICE
         triggers:
@@ -3245,7 +3520,7 @@ sections:
             text: Unable to do
       - key: 8_sub_2_social_activities
         question: >-
-          8l. How severe was the effect on social roles and activities (e.g.,
+          8n. How severe was the effect on social roles and activities (e.g.,
           family, friends, leisure activities).
         type: SINGLE_CHOICE
         triggers:
@@ -3266,7 +3541,7 @@ sections:
           - value: unable_to_do
             text: Unable to do
       - key: 8_sub_2_other
-        question: 8m. How severe was the effect on other.
+        question: 8o. How severe was the effect on other.
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -3293,8 +3568,8 @@ sections:
             text: Great
           - value: good
             text: Good
-          - value: bearable
-            text: Bearable
+          - value: managable
+            text: Managable
           - value: bad
             text: Bad
           - value: unbearable
@@ -3334,9 +3609,8 @@ sections:
     questions:
       - key: '12'
         question: >-
-          12. Did you engage in leisure time physical activity (i.e., exercise
-          outside of regular daily activities such as commuting and housework)
-          today?
+          12. Did you engage in exercise (i.e., leisure-time physical activity
+          outside of daily activities including commuting and housework) today?
         type: YESNO_CHOICE
       - key: 12_sub_1
         question: 12a. Which activities did you engage in?
@@ -3396,7 +3670,7 @@ sections:
         question: >-
           12b (part 2). How intense was your cardiovascular (e.g., walking,
           jogging, swimming, etc) exercise session overall (i.e., perceived
-          exertion)?
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3414,6 +3688,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_cardiovascular
+        question: >-
+          12b (part 3). Did cardiovascular (e.g., walking, jogging, swimming,
+          etc) exercise have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: cardiovascular
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_body_weight_strength_training
         question: >-
           12c (part 1). How long was your body weight strength training
@@ -3435,7 +3731,7 @@ sections:
         question: >-
           12c (part 2). How intense was your body weight strength training
           (including calisthenics) exercise session overall (i.e., perceived
-          exertion)?
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3453,6 +3749,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_body_weight_strength_training
+        question: >-
+          12c (part 3). Did body weight strength training (including
+          calisthenics) exercise have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: body_weight_strength_training
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_weights_strength_training
         question: >-
           12d (part 1). How long was your strength training with weights (e.g.,
@@ -3473,7 +3791,8 @@ sections:
       - key: 12_sub_3_weights_strength_training
         question: >-
           12d (part 2). How intense was your strength training with weights
-          (e.g., lifting) exercise session overall (i.e., perceived exertion)?
+          (e.g., lifting) exercise session overall (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3491,6 +3810,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_weights_strength_training
+        question: >-
+          12d (part 3). Did strength training with weights (e.g., lifting)
+          exercise have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: weights_strength_training
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_stretching
         question: 12e (part 1). How long was your stretching exercise session?
         type: DURATION
@@ -3509,7 +3850,8 @@ sections:
       - key: 12_sub_3_stretching
         question: >-
           12e (part 2). How intense was your stretching exercise session overall
-          (i.e., perceived exertion)?
+          (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3527,6 +3869,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_stretching
+        question: >-
+          12e (part 3). Did stretching exercise have any effect on your symptoms
+          today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: stretching
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_yoga
         question: 12f (part 1). How long was your yoga exercise session?
         type: DURATION
@@ -3545,7 +3909,8 @@ sections:
       - key: 12_sub_3_yoga
         question: >-
           12f (part 2). How intense was your yoga exercise session overall
-          (i.e., perceived exertion)?
+          (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3563,6 +3928,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_yoga
+        question: >-
+          12f (part 3). Did yoga exercise have any effect on your symptoms
+          today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: yoga
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_pilates_barre
         question: >-
           12g (part 1). How long was your pilates or barre fitness exercise
@@ -3583,7 +3970,8 @@ sections:
       - key: 12_sub_3_pilates_barre
         question: >-
           12g (part 2). How intense was your pilates or barre fitness exercise
-          session overall (i.e., perceived exertion)?
+          session overall (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3601,6 +3989,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_pilates_barre
+        question: >-
+          12g (part 3). Did pilates or barre fitness exercise have any effect on
+          your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: pilates_barre
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_dance
         question: >-
           12h (part 1). How long was your dance (e.g., ballet, modern, ballroom)
@@ -3621,7 +4031,8 @@ sections:
       - key: 12_sub_3_dance
         question: >-
           12h (part 2). How intense was your dance (e.g., ballet, modern,
-          ballroom) exercise session overall (i.e., perceived exertion)?
+          ballroom) exercise session overall (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3639,6 +4050,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_dance
+        question: >-
+          12h (part 3). Did dance (e.g., ballet, modern, ballroom) exercise have
+          any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: dance
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_gym_fitness
         question: >-
           12i (part 1). How long was your gym fitness (e.g., steps, aerobics;
@@ -3659,7 +4092,8 @@ sections:
       - key: 12_sub_3_gym_fitness
         question: >-
           12i (part 2). How intense was your gym fitness (e.g., steps, aerobics;
-          trx) exercise session overall (i.e., perceived exertion)?
+          trx) exercise session overall (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3677,6 +4111,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_gym_fitness
+        question: >-
+          12i (part 3). Did gym fitness (e.g., steps, aerobics; trx) exercise
+          have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: gym_fitness
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_team_sports
         question: >-
           12j (part 1). How long was your team sports (e.g., basketball; soccer)
@@ -3697,7 +4153,8 @@ sections:
       - key: 12_sub_3_team_sports
         question: >-
           12j (part 2). How intense was your team sports (e.g., basketball;
-          soccer) exercise session overall (i.e., perceived exertion)?
+          soccer) exercise session overall (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3715,6 +4172,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_team_sports
+        question: >-
+          12j (part 3). Did team sports (e.g., basketball; soccer) exercise have
+          any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: team_sports
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
       - key: 12_sub_2_other
         question: 12k (part 1). How long was your other exercise session?
         type: DURATION
@@ -3733,7 +4212,8 @@ sections:
       - key: 12_sub_3_other
         question: >-
           12k (part 2). How intense was your other exercise session overall
-          (i.e., perceived exertion)?
+          (i.e., perceived
+                exertion)?
         description: >-
           A rating of 6 indicates no or minimal exertion, and 20 indicates
           maximum possible effort. For example, a rating of 11 would correspond
@@ -3751,6 +4231,28 @@ sections:
         min: 6
         max: 20
         step: 1
+      - key: 12_sub_4_other
+        question: >-
+          12k (part 3). Did other exercise have any effect on your symptoms
+          today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: other
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
   - type: survey
     key: health_symptom_management
     title: Health and Symptom Self-Management
@@ -4127,17 +4629,47 @@ sections:
         type: MULTIPLE_CHOICE
         options:
           - value: prescription_pain_medication
-            text: Prescription pain medication
+            text: 'Prescription pain medication (e.g., tramadol; percocet)'
           - value: otc_pain_medication
-            text: Non-prescription (over the counter; OTC) pain medication
-          - value: hormones
-            text: Hormones
+            text: >-
+              Non-prescription/OTC pain medication (NSAIDs; acetaminophen,
+              aspirin)
+          - value: antidepressant
+            text: Antidepressant
+          - value: anxiolytic
+            text: Anxiolytic (anti-anxiety)
+          - value: antimuscarinic
+            text: Antimuscarinic/anti-spasmodic
+          - value: antiemetic
+            text: Antiemetic (nausea)
+          - value: h2_blockers
+            text: 'H2 Blockers (e.g., famotidine, Ranitidine)'
+          - value: ppis
+            text: 'Proton Pump Inhibitors (PPIs) (e.g., Omeprazole, Esomeprazole)'
+          - value: laxatives
+            text: Laxatives
+          - value: antidiarrheal
+            text: Antidiarrheal
+          - value: ibs
+            text: Irritable bowel syndrome medication
+          - value: ibd
+            text: >-
+              Inflammatory bowel disease medication (including ulcerative
+              colitis, crohn's disease)
+          - value: gnrh_analogs
+            text: 'GnRH analogs (e.g., Elagolix, Leuprolide, Nafarelin)'
+          - value: aromatase_inhibitors
+            text: Aromatase Inhibitors
+          - value: progestins
+            text: 'Progestins (e.g., Danazol)'
+          - value: other_hormones
+            text: Other hormone medication
             inlineQuestion:
-              key: 14_hormones_description
+              key: 14_other_hormones_description
               question: Please specify...
               type: TEXTAREA
-          - value: birth_control_medication
-            text: Birth control medication
+          - value: oral_contraceptive
+            text: Oral contraceptive pill
           - value: other
             text: Other
             inlineQuestion:
@@ -4146,8 +4678,8 @@ sections:
               type: TEXTAREA
       - key: 14_sub_1_prescription_pain_medication
         question: >-
-          14a. What was the effect of prescription pain medication on your
-          health or symptoms?
+          14b. What was the effect of prescription pain medication (e.g.,
+          tramadol; percocet) on your health or symptoms?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -4161,15 +4693,15 @@ sections:
           - value: helped
             text: Helped
           - value: no_effect
-            text: No effect
-          - value: made_worse
-            text: Made symptoms worse
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
           - value: unsure
             text: Unsure
       - key: 14_sub_1_otc_pain_medication
         question: >-
-          14b. What was the effect of non-prescription (over the counter; otc)
-          pain medication on your health or symptoms?
+          14c. What was the effect of non-prescription/otc pain medication
+          (nsaids; acetaminophen, aspirin) on your health or symptoms?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -4183,13 +4715,13 @@ sections:
           - value: helped
             text: Helped
           - value: no_effect
-            text: No effect
-          - value: made_worse
-            text: Made symptoms worse
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
           - value: unsure
             text: Unsure
-      - key: 14_sub_1_hormones
-        question: 14c. What was the effect of hormones on your health or symptoms?
+      - key: 14_sub_1_antidepressant
+        question: 14d. What was the effect of antidepressant on your health or symptoms?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -4198,19 +4730,63 @@ sections:
               - section: health_symptom_management
                 question: '14'
                 operator: INCLUDES
-                value: hormones
+                value: antidepressant
         options:
           - value: helped
             text: Helped
           - value: no_effect
-            text: No effect
-          - value: made_worse
-            text: Made symptoms worse
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
           - value: unsure
             text: Unsure
-      - key: 14_sub_1_birth_control_medication
+      - key: 14_sub_1_anxiolytic
         question: >-
-          14d. What was the effect of birth control medication on your health or
+          14e. What was the effect of anxiolytic (anti-anxiety) on your health
+          or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: anxiolytic
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_antimuscarinic
+        question: >-
+          14f. What was the effect of antimuscarinic/anti-spasmodic on your
+          health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: antimuscarinic
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_antiemetic
+        question: >-
+          14g. What was the effect of antiemetic (nausea) on your health or
           symptoms?
         type: SINGLE_CHOICE
         triggers:
@@ -4220,18 +4796,257 @@ sections:
               - section: health_symptom_management
                 question: '14'
                 operator: INCLUDES
-                value: birth_control_medication
+                value: antiemetic
         options:
           - value: helped
             text: Helped
           - value: no_effect
-            text: No effect
-          - value: made_worse
-            text: Made symptoms worse
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_h2_blockers
+        question: >-
+          14h. What was the effect of h2 blockers (e.g., famotidine, ranitidine)
+          on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: h2_blockers
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_ppis
+        question: >-
+          14i. What was the effect of proton pump inhibitors (ppis) (e.g.,
+          omeprazole, esomeprazole) on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: ppis
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_laxatives
+        question: 14j. What was the effect of laxatives on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: laxatives
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_antidiarrheal
+        question: 14k. What was the effect of antidiarrheal on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: antidiarrheal
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_ibs
+        question: >-
+          14l. What was the effect of irritable bowel syndrome medication on
+          your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: ibs
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_ibd
+        question: >-
+          14m. What was the effect of inflammatory bowel disease medication
+          (including ulcerative colitis, crohn's disease) on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: ibd
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_gnrh_analogs
+        question: >-
+          14n. What was the effect of gnrh analogs (e.g., elagolix, leuprolide,
+          nafarelin) on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: gnrh_analogs
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_aromatase_inhibitors
+        question: >-
+          14o. What was the effect of aromatase inhibitors on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: aromatase_inhibitors
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_progestins
+        question: >-
+          14p. What was the effect of progestins (e.g., danazol) on your health
+          or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: progestins
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_other_hormones
+        question: >-
+          14q. What was the effect of other hormone medication on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: other_hormones
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_oral_contraceptive
+        question: >-
+          14r. What was the effect of oral contraceptive pill on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: oral_contraceptive
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
           - value: unsure
             text: Unsure
       - key: 14_sub_1_other
-        question: 14e. What was the effect of other on your health or symptoms?
+        question: 14s. What was the effect of other on your health or symptoms?
         type: SINGLE_CHOICE
         triggers:
           - action:
@@ -4245,8 +5060,8 @@ sections:
           - value: helped
             text: Helped
           - value: no_effect
-            text: No effect
-          - value: made_worse
-            text: Made symptoms worse
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
           - value: unsure
             text: Unsure
