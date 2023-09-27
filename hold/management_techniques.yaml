@@ -1,0 +1,307 @@
+- key: 13_sub_1_heat_therapy
+  question: 13a. What was the effect of heat therapy (e.g., heat pack) on your
+    health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: heat_therapy
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_cold_therapy
+  question: 13b. What was the effect of cold therapy (e.g., ice pack) on your
+    health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: cold_therapy
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_tens
+  question: 13c. What was the effect of tens (transcutaneous electrical nerve
+    stimulation) on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: tens
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_psychotherapy
+  question: 13d. What was the effect of psychotherapy (e.g., talk therapy) on your
+    health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: psychotherapy
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_acupuncture_massage
+  question: 13e. What was the effect of acupuncture or massage on your health or
+    symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: acupuncture_massage
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_alcohol
+  question: 13f. What was the effect of alcohol on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: alcohol
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_resting
+  question: 13g. What was the effect of resting on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: resting
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_sleeping
+  question: 13h. What was the effect of sleeping on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: sleeping
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_meditation_breathing
+  question: 13i. What was the effect of meditation or breathing exercises on your
+    health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: meditation_breathing
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_stretching
+  question: 13j. What was the effect of stretching on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: stretching
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_pelvic_floor_therapy
+  question: 13k. What was the effect of pelvic floor therapy on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: pelvic_floor_therapy
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_physical_therapy
+  question: 13l. What was the effect of physical therapy on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: physical_therapy
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_cannabinoids
+  question: 13m. What was the effect of medical marijuana, cbd oil on your health
+    or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: cannabinoids
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_herbal_supplements
+  question: 13n. What was the effect of herbal supplements on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: herbal_supplements
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure
+- key: 13_sub_1_other
+  question: 13o. What was the effect of other on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "13"
+          operator: INCLUDES
+          value: other
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect
+    - value: made_worse
+      text: Made symptoms worse
+    - value: unsure
+      text: Unsure

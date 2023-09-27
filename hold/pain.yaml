@@ -1,0 +1,1846 @@
+- key: 1_sub_2_face
+  question: 1b (part 1). Rate the severity of the face pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: face
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_face
+  question: 1b (part 2). What type of face pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: face
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_head
+  question: 1c (part 1). Rate the severity of the head pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: head
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_head
+  question: 1c (part 2). What type of head pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: head
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_jaw
+  question: 1d (part 1). Rate the severity of the jaw pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: jaw
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_jaw
+  question: 1d (part 2). What type of jaw pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: jaw
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_neck
+  question: 1e (part 1). Rate the severity of the neck pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: neck
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_neck
+  question: 1e (part 2). What type of neck pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: neck
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_shoulder
+  question: 1f (part 1). Rate the severity of the shoulder pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: shoulder
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_shoulder
+  question: 1f (part 2). What type of shoulder pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: shoulder
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_upper_back
+  question: 1g (part 1). Rate the severity of the upper back pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: upper_back
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_upper_back
+  question: 1g (part 2). What type of upper back pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: upper_back
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_middle_back
+  question: 1h (part 1). Rate the severity of the middle back pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: middle_back
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_middle_back
+  question: 1h (part 2). What type of middle back pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: middle_back
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_lower_back
+  question: 1i (part 1). Rate the severity of the lower back pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_back
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_lower_back
+  question: 1i (part 2). What type of lower back pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_back
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_chest_breast
+  question: 1j (part 1). Rate the severity of the chest/breast pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: chest_breast
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_chest_breast
+  question: 1j (part 2). What type of chest/breast pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: chest_breast
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_upper_arm
+  question: 1k (part 1). Rate the severity of the upper arm(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: upper_arm
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_upper_arm
+  question: 1k (part 2). What type of upper arm(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: upper_arm
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_elbow
+  question: 1l (part 1). Rate the severity of the elbow(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: elbow
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_elbow
+  question: 1l (part 2). What type of elbow(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: elbow
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_lower_arm
+  question: 1m (part 1). Rate the severity of the lower arm(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_arm
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_lower_arm
+  question: 1m (part 2). What type of lower arm(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_arm
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_wrist_hand
+  question: 1n (part 1). Rate the severity of the wrist/hand(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: wrist_hand
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_wrist_hand
+  question: 1n (part 2). What type of wrist/hand(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: wrist_hand
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_upper_abdomen
+  question: 1o (part 1). Rate the severity of the upper abdomen pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: upper_abdomen
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_upper_abdomen
+  question: 1o (part 2). What type of upper abdomen pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: upper_abdomen
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_lower_abdomen
+  question: 1p (part 1). Rate the severity of the lower abdomen pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_abdomen
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_lower_abdomen
+  question: 1p (part 2). What type of lower abdomen pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_abdomen
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_vagina
+  question: 1q (part 1). Rate the severity of the vagina pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: vagina
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_vagina
+  question: 1q (part 2). What type of vagina pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: vagina
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_pelvis
+  question: 1r (part 1). Rate the severity of the pelvis pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: pelvis
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_pelvis
+  question: 1r (part 2). What type of pelvis pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: pelvis
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_rectum
+  question: 1s (part 1). Rate the severity of the rectum pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: rectum
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_rectum
+  question: 1s (part 2). What type of rectum pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: rectum
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_hip
+  question: 1t (part 1). Rate the severity of the hip(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: hip
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_hip
+  question: 1t (part 2). What type of hip(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: hip
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_groin
+  question: 1u (part 1). Rate the severity of the groin(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: groin
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_groin
+  question: 1u (part 2). What type of groin(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: groin
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_thighs_upper_leg
+  question: 1v (part 1). Rate the severity of the thighs/upper leg(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: thighs_upper_leg
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_thighs_upper_leg
+  question: 1v (part 2). What type of thighs/upper leg(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: thighs_upper_leg
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_buttock
+  question: 1w (part 1). Rate the severity of the buttock(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: buttock
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_buttock
+  question: 1w (part 2). What type of buttock(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: buttock
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_knee
+  question: 1x (part 1). Rate the severity of the knee(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: knee
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_knee
+  question: 1x (part 2). What type of knee(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: knee
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_lower_leg
+  question: 1y (part 1). Rate the severity of the lower leg(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_leg
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_lower_leg
+  question: 1y (part 2). What type of lower leg(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: lower_leg
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_ankle
+  question: 1z (part 1). Rate the severity of the ankle(s) pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: ankle
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_ankle
+  question: 1z (part 2). What type of ankle(s) pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: ankle
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing
+- key: 1_sub_2_feet
+  question: 1aa (part 1). Rate the severity of the feet pain.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: feet
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 1_sub_3_feet
+  question: 1aa (part 2). What type of feet pain are you experiencing?
+  type: MULTIPLE_CHOICE
+  description: Select all that apply.
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 1_sub_1
+          operator: INCLUDES
+          value: feet
+  options:
+    - value: throbbing
+      text: Throbbing
+    - value: shootingue
+      text: Shooting
+    - value: stabbing
+      text: Stabbing
+    - value: sharp
+      text: Sharp
+    - value: cramping
+      text: Cramping
+    - value: gnawing
+      text: Gnawing
+    - value: hot-burning
+      text: Hot-burning
+    - value: aching
+      text: Aching
+    - value: heavy
+      text: Heavy
+    - value: tender
+      text: Tender
+    - value: splitting
+      text: Splitting
+    - value: tiring_exhausting
+      text: Tiring-exhausting
+    - value: sickening
+      text: Sickening
+    - value: fearful
+      text: Fearful
+    - value: punishing_cruel
+      text: Punishing-cruel
+    - value: pinching
+      text: Pinching
+    - value: tugging
+      text: Tugging
+    - value: dull
+      text: Dull
+    - value: radiating
+      text: Radiating
+    - value: piercing
+      text: Piercing

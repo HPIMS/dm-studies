@@ -1,0 +1,306 @@
+- key: 2_sub_2_heartburn
+  question: 2b. Rate the severity of the heartburn symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: heartburn
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_reflux
+  question: 2c. Rate the severity of the reflux symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: reflux
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_nausea
+  question: 2d. Rate the severity of the nausea symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: nausea
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_vomiting
+  question: 2e. Rate the severity of the vomiting symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: vomiting
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_indigestion
+  question: 2f. Rate the severity of the indigestion symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: indigestion
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_difficulty_swallowing
+  question: 2g. Rate the severity of the difficulty swallowing symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: difficulty_swallowing
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_upset_stomach
+  question: 2h. Rate the severity of the upset stomach symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: upset_stomach
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_belly_pain
+  question: 2i. Rate the severity of the belly pain symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: belly_pain
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_bloating
+  question: 2j. Rate the severity of the bloating symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: bloating
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_gas
+  question: 2k. Rate the severity of the gas symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: gas
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_endo_belly
+  question: 2l. Rate the severity of the endo belly symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: endo_belly
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_diarrhea
+  question: 2m. Rate the severity of the loose stools/diarrhea symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: diarrhea
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_painful_bowel_movement
+  question: 2n. Rate the severity of the painful bowel movement symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: painful_bowel_movement
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_blood_in_stool
+  question: 2o. Rate the severity of the blood in stool symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: blood_in_stool
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_unable_to_urinate
+  question: 2p. Rate the severity of the unable to urinate symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: unable_to_urinate
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_painful_urination
+  question: 2q. Rate the severity of the painful urination symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: painful_urination
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 2_sub_2_frequent_urination
+  question: 2r. Rate the severity of the frequent urination symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 2_sub_1
+          operator: INCLUDES
+          value: frequent_urination
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe

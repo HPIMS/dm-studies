@@ -1,0 +1,163 @@
+- key: 3_sub_2_fatigue
+  question: 3b. Rate the severity of the fatigue symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: fatigue
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_headache
+  question: 3c. Rate the severity of the headache symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: headache
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_hot_flashes
+  question: 3d. Rate the severity of the hot flashes symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: hot_flashes
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_fever
+  question: 3e. Rate the severity of the fever symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: fever
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_touch_sensitivity
+  question: 3f. Rate the severity of the touch sensitivity (e.g., intolerance to
+    clothing) symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: touch_sensitivity
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_itchy
+  question: 3g. Rate the severity of the itchy symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: itchy
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_sweaty
+  question: 3h. Rate the severity of the sweaty symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: sweaty
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_physical_numbness
+  question: 3i. Rate the severity of the physical numbness symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: physical_numbness
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
+- key: 3_sub_2_jittery
+  question: 3j. Rate the severity of the jittery symptoms.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptoms
+          question: 3_sub_1
+          operator: INCLUDES
+          value: jittery
+  options:
+    - value: mild
+      text: Mild
+    - value: moderate
+      text: Moderate
+    - value: severe
+      text: Severe
