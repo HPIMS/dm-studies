@@ -1,0 +1,372 @@
+- key: 14_sub_1_prescription_pain_medication
+  question: 14b. What was the effect of prescription pain medication (e.g.,
+    tramadol; percocet) on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: prescription_pain_medication
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_otc_pain_medication
+  question: 14c. What was the effect of non-prescription/otc pain medication
+    (nsaids; acetaminophen, aspirin) on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: otc_pain_medication
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_antidepressant
+  question: 14d. What was the effect of antidepressant on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: antidepressant
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_anxiolytic
+  question: 14e. What was the effect of anxiolytic (anti-anxiety) on your health
+    or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: anxiolytic
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_antimuscarinic
+  question: 14f. What was the effect of antimuscarinic/anti-spasmodic on your
+    health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: antimuscarinic
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_antiemetic
+  question: 14g. What was the effect of antiemetic (nausea) on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: antiemetic
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_h2_blockers
+  question: 14h. What was the effect of h2 blockers (e.g., famotidine, ranitidine)
+    on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: h2_blockers
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_ppis
+  question: 14i. What was the effect of proton pump inhibitors (ppis) (e.g.,
+    omeprazole, esomeprazole) on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: ppis
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_laxatives
+  question: 14j. What was the effect of laxatives on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: laxatives
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_antidiarrheal
+  question: 14k. What was the effect of antidiarrheal on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: antidiarrheal
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_ibs
+  question: 14l. What was the effect of irritable bowel syndrome medication on
+    your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: ibs
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_ibd
+  question: 14m. What was the effect of inflammatory bowel disease medication
+    (including ulcerative colitis, crohn's disease) on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: ibd
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_gnrh_analogs
+  question: 14n. What was the effect of gnrh analogs (e.g., elagolix, leuprolide,
+    nafarelin) on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: gnrh_analogs
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_aromatase_inhibitors
+  question: 14o. What was the effect of aromatase inhibitors on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: aromatase_inhibitors
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_progestins
+  question: 14p. What was the effect of progestins (e.g., danazol) on your health
+    or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: progestins
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_other_hormones
+  question: 14q. What was the effect of other hormone medication on your health or
+    symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: other_hormones
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_oral_contraceptive
+  question: 14r. What was the effect of oral contraceptive pill on your health or
+    symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: oral_contraceptive
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 14_sub_1_other
+  question: 14s. What was the effect of other on your health or symptoms?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: health_symptom_management
+          question: "14"
+          operator: INCLUDES
+          value: other
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure

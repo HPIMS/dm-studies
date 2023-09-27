@@ -1,0 +1,573 @@
+- key: 12_sub_2_cardiovascular
+  question: 12b (part 1). How long was your cardiovascular (e.g., walking,
+    jogging, swimming, etc) exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: cardiovascular
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_cardiovascular
+  question: >-
+    12b (part 2). How intense was your cardiovascular (e.g., walking,
+    jogging, swimming, etc) exercise session overall (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: cardiovascular
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_cardiovascular
+  question: 12b (part 3). Did cardiovascular (e.g., walking, jogging, swimming,
+    etc) exercise have any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: cardiovascular
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_body_weight_strength_training
+  question: 12c (part 1). How long was your body weight strength training
+    (including calisthenics) exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: body_weight_strength_training
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_body_weight_strength_training
+  question: >-
+    12c (part 2). How intense was your body weight strength training
+    (including calisthenics) exercise session overall (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: body_weight_strength_training
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_body_weight_strength_training
+  question: 12c (part 3). Did body weight strength training (including
+    calisthenics) exercise have any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: body_weight_strength_training
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_weights_strength_training
+  question: 12d (part 1). How long was your strength training with weights (e.g.,
+    lifting) exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: weights_strength_training
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_weights_strength_training
+  question: >-
+    12d (part 2). How intense was your strength training with weights
+    (e.g., lifting) exercise session overall (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: weights_strength_training
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_weights_strength_training
+  question: 12d (part 3). Did strength training with weights (e.g., lifting)
+    exercise have any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: weights_strength_training
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_stretching
+  question: 12e (part 1). How long was your stretching exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: stretching
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_stretching
+  question: >-
+    12e (part 2). How intense was your stretching exercise session overall
+    (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: stretching
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_stretching
+  question: 12e (part 3). Did stretching exercise have any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: stretching
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_yoga
+  question: 12f (part 1). How long was your yoga exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: yoga
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_yoga
+  question: >-
+    12f (part 2). How intense was your yoga exercise session overall
+    (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: yoga
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_yoga
+  question: 12f (part 3). Did yoga exercise have any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: yoga
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_pilates_barre
+  question: 12g (part 1). How long was your pilates or barre fitness exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: pilates_barre
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_pilates_barre
+  question: >-
+    12g (part 2). How intense was your pilates or barre fitness exercise
+    session overall (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: pilates_barre
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_pilates_barre
+  question: 12g (part 3). Did pilates or barre fitness exercise have any effect on
+    your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: pilates_barre
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_dance
+  question: 12h (part 1). How long was your dance (e.g., ballet, modern, ballroom)
+    exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: dance
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_dance
+  question: >-
+    12h (part 2). How intense was your dance (e.g., ballet, modern,
+    ballroom) exercise session overall (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: dance
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_dance
+  question: 12h (part 3). Did dance (e.g., ballet, modern, ballroom) exercise have
+    any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: dance
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_gym_fitness
+  question: 12i (part 1). How long was your gym fitness (e.g., steps, aerobics;
+    trx) exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: gym_fitness
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_gym_fitness
+  question: >-
+    12i (part 2). How intense was your gym fitness (e.g., steps, aerobics;
+    trx) exercise session overall (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: gym_fitness
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_gym_fitness
+  question: 12i (part 3). Did gym fitness (e.g., steps, aerobics; trx) exercise
+    have any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: gym_fitness
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_team_sports
+  question: 12j (part 1). How long was your team sports (e.g., basketball; soccer)
+    exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: team_sports
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_team_sports
+  question: >-
+    12j (part 2). How intense was your team sports (e.g., basketball;
+    soccer) exercise session overall (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: team_sports
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_team_sports
+  question: 12j (part 3). Did team sports (e.g., basketball; soccer) exercise have
+    any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: team_sports
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure
+- key: 12_sub_2_other
+  question: 12k (part 1). How long was your other exercise session?
+  type: DURATION
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: other
+  hours: true
+  minutes: true
+  hoursPlaceholder: Hours
+  minutesPlaceholder: Or minutes
+- key: 12_sub_3_other
+  question: >-
+    12k (part 2). How intense was your other exercise session overall
+    (i.e., perceived
+          exertion)?
+  description: A rating of 6 indicates no or minimal exertion, and 20 indicates
+    maximum possible effort. For example, a rating of 11 would correspond to
+    light intensity activities, and 15 would correspond to hard intensity
+    activities.
+  type: SLIDER
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: other
+  min: 6
+  max: 20
+  step: 1
+- key: 12_sub_4_other
+  question: 12k (part 3). Did other exercise have any effect on your symptoms today?
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: physical_activity_exercise
+          question: 12_sub_1
+          operator: INCLUDES
+          value: other
+  options:
+    - value: helped
+      text: Helped
+    - value: no_effect
+      text: No effect/didn't help
+    - value: worsened_symptoms
+      text: Worsened symptoms
+    - value: unsure
+      text: Unsure

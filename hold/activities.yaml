@@ -1,0 +1,285 @@
+- key: 8_sub_2_self_care
+  question: 8b. How severe was the effect on self-care (e.g., washing, dressing,
+    use toilet).
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: self_care
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_working_studying
+  question: 8c. How severe was the effect on working or studying.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: working_studying
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_chores
+  question: 8d. How severe was the effect on chores (e.g., cleaning, preparing food).
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: chores
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_errands
+  question: 8e. How severe was the effect on running errands (e.g., shopping).
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: errands
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_walking_about
+  question: 8f. How severe was the effect on walking about.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: walking_about
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_stairs
+  question: 8g. How severe was the effect on going up/down stairs.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: stairs
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_other_physical_mobility
+  question: 8h. How severe was the effect on other physical mobility (e.g.,
+    kneeling, jumping, stretching, sitting down).
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: other_physical_mobility
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_sleep
+  question: 8i. How severe was the effect on sleep.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: sleep
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_intercourse
+  question: 8j. How severe was the effect on intercourse.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: intercourse
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_cognition
+  question: 8k. How severe was the effect on cognition (e.g., focusing, thinking,
+    planning).
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: cognition
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_physical_exercise
+  question: 8l. How severe was the effect on physical exercise.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: physical_exercise
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_commuting
+  question: 8m. How severe was the effect on commuting (e.g., taking public
+    transportation, driving).
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: commuting
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_social_activities
+  question: 8n. How severe was the effect on social roles and activities (e.g.,
+    family, friends, leisure activities).
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: social_activities
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
+- key: 8_sub_2_other
+  question: 8o. How severe was the effect on other.
+  type: SINGLE_CHOICE
+  triggers:
+    - action:
+        type: SHOW
+      condition:
+        - section: daily_activities
+          question: 8_sub_1
+          operator: INCLUDES
+          value: other
+  options:
+    - value: little_difficulty
+      text: Little difficulty
+    - value: some_difficulty
+      text: Some difficulty
+    - value: severe_difficulty
+      text: Severe difficulty
+    - value: unable_to_do
+      text: Unable to do
