@@ -1,0 +1,48 @@
+{
+  "key": "ehive-ibs-ucla",
+  "title": "UCLA IBS Study (Name missing)",
+  "timeEstimate": { "time": 5, "timeUnits": "minutes" },
+  "contact": {
+    "pi": "Lin Chang",
+    "email": "email@example.com"
+  },
+  "dates": {
+    "effectiveAt": "1900-01-01T00:00:00.000Z",
+    "effectiveUntil": "2100-12-31T23:59:59.0Z"
+  },
+  "intro": [["Section", [["BodyLarge", "Missing intro content."]]]],
+  "options": [],
+  "review": [
+    ["H3", "Data Collection Agreement for ehive Facilitated Research Studies"],
+    ["Display", "Icahn School of Medicine at Mount Sinai"],
+    [
+      "BodyLarge",
+      [
+        ["Italic", "Effective Date"],
+        ["Text", ": <<EFFECTIVE_DATE>>"]
+      ]
+    ],
+    ["H3", "INTRODUCTION"],
+    [
+      "BodyLarge",
+      "Data from completed tasks, surveys, linked wearable devices, and third party applications will be collected and processed through the ehive platform on behalf of <<STUDY_NAME>>."
+    ],
+    ["H3", "DEFINITIONS"],
+    [
+      "BodyLarge",
+      [
+        ["Bold", "“ehive”"],
+        [
+          "Text",
+          " is a platform and associated mobile app designed to collect, administer, and deliver information obtained as part of clinical research studies."
+        ]
+      ]
+    ],
+    ["H3", "POSSIBLE RISKS"],
+    [
+      "BodyLarge",
+      "The risk of loss of private information always exists, but there are procedures in place to minimize the risk. We have applied suitable administrative, technical, and physical safeguards in order to protect your information from illegal access, use or sharing. These safeguards include, without limitation, preventing researchers at Mount Sinai/ehive from seeing any personal identifying information (PII) about you."
+    ]
+  ],
+  "signMode": "agree"
+}
