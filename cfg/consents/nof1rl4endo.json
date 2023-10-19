@@ -33,32 +33,7 @@
       ]
     ]
   ],
-  "options": [
-    {
-      "type": "single",
-      "title": "User Feedback Interview ",
-      "summary": "At enrollment you may be asked to participate in a 1-hour virtual interview to provide feedback on the study app usability and usefulness. This is optional. You can choose not to participate in the interview and still enroll in this study. If you agree to the interview, the study team will set-up a virtual call with the lead researcher, Dr. Ensari. During the call, the ehive app will be described to you and you will be guided through its different components. Next, you will be asked to complete simple tasks on the app such as tracking a symptom and entering medications. The tasks will take approximately 20 minutes to complete. You will then be asked to complete 2 brief questionnaires on the ehive app and answer open- ended questions to share your perceptions and feedback. The session will be audio recorded for analysis. Do you agree to participate in the optional user feedback interview?",
-      "required": true,
-      "accept": "Yes",
-      "reject": "No"
-    },
-    {
-      "type": "single",
-      "title": "Future Contact",
-      "summary": "The researchers may wish to use your personal contact information to contact you in the future. Do you give the researchers permission to contact you in the future to request the collection of additional information about you, discuss how your private information, study data and/or samples might be used, or discuss possible participation in another research study?",
-      "required": true,
-      "accept": "Yes",
-      "reject": "No"
-    },
-    {
-      "type": "grouped",
-      "title": "Contact Methods",
-      "summary": "Please indicate your preferred method of contact. (Select all that apply)",
-      "items": [{ "text": "Email" }, { "text": "Phone" }],
-      "show": ["0", "=", "accept"],
-      "required": false
-    }
-  ],
+
   "review": [
     [
       "H3",
