@@ -13,19 +13,22 @@ name: WERF Pain
 sections:
   - type: survey
     key: '0'
-    title: ""
-    description: >-
-      1. Everyone experiences painful situations at some point in their lives.
-      Such experiences may include headaches, tooth pain, joint, or muscle pain.
-      People are often exposed to situations that may cause pain such as
-      illness, injury, dental procedures, or surgery.
-
-      We are interested in the types of thoughts and feelings that you have when
-      you are in pain. Listed below are thirteen statements describing different
-      thoughts and feelings that may be associated with pain. Using the scale,
-      please indicate the degree to which you have these thoughts and feelings
-      when you are experiencing pain.
+    title: ''
+    description: ''
     questions:
+      - key: WERF_pain_1
+        type: DISPLAY
+        question: >-
+          1. Everyone experiences painful situations at some point in their
+          lives. Such experiences may include headaches, tooth pain, joint, or
+          muscle pain. People are often exposed to situations that may cause
+          pain such as illness, injury, dental procedures, or surgery.
+        descrition: >-
+          We are interested in the types of thoughts and feelings that you have
+          when you are in pain. Listed below are thirteen statements describing
+          different thoughts and feelings that may be associated with pain.
+          Using the scale, please indicate the degree to which you have these
+          thoughts and feelings when you are experiencing pain.
       - key: WERF_pain_1.1
         question: I worry all the time about whether the pain will end
         type: SINGLE_CHOICE
@@ -208,19 +211,18 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-  - type: survey
-    key: '1'
-    title: Pain
-    description: >-
-      The following questions ask about pelvic pain with your periods (including
-      irregular bleeding or bleeding while on hormonal treatments, but not
-      spotting).
-
-      By 'pelvic pain' we mean any type of pain (cramping, shooting, stabbing,
-      etc.) in the lower part of your belly
-    questions:
+      - key: WERF_pain_2_intro
+        type: DISPLAY
+        question: >-
+          The following questions ask about pelvic pain with your periods (including
+          irregular bleeding or bleeding while on hormonal treatments, but not
+          spotting).
+        description: By 'pelvic pain' we mean any type of pain (cramping, shooting, stabbing,
+          etc.) in the lower part of your belly
       - key: WERF_pain_2
-        question: 2. Has there been a time in your life when you typically had pelvic pain during your periods?
+        question: >-
+          2. Has there been a time in your life when you typically had pelvic
+          pain during your periods?
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -240,14 +242,14 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_2
                 operator: IS_SET
                 AND:
-                - section: '1'
-                  question: WERF_pain_2
-                  operator: <>
-                  value: a
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_2.2
         question: 2.2. Have you had a period in the last 3 months?
         type: YESNO_CHOICE
@@ -255,14 +257,14 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_2
                 operator: IS_SET
                 AND:
-                - section: '1'
-                  question: WERF_pain_2
-                  operator: <>
-                  value: a
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_3
         question: 3. How much pelvic pain did you have during your last period?
         type: SINGLE_CHOICE
@@ -279,86 +281,99 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_2.2
-                operator: = 
+                operator: =
                 value: 'yes'
       - key: WERF_pain_4
-        question: 4. Did you take any pain-killers for pelvic pain during your last period?
+        question: >-
+          4. Did you take any pain-killers for pelvic pain during your last
+          period?
         type: MULTIPLE_CHOICE
         options:
           - value: a
             text: 'No'
           - value: b
-            text: Yes, pain-killers that were prescribed by a doctor
+            text: 'Yes, pain-killers that were prescribed by a doctor'
           - value: c
-            text: Yes, pain-killers bought over-the-counter without prescription (e.g. aspirin, ibuprofen, paracetamol/acetaminophen, naproxen)
+            text: >-
+              Yes, pain-killers bought over-the-counter without prescription
+              (e.g. aspirin, ibuprofen, paracetamol/acetaminophen, naproxen)
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_3
                 operator: IS_SET
                 AND:
-                  - section: '1'
+                  - section: '0'
                     question: WERF_pain_3
                     operator: <>
                     value: a
       - key: WERF_pain_5
-        question: 5. Did you take hormones to help alleviate pelvic pain during your last period and if so, did it help to alleviate your pain?
+        question: >-
+          5. Did you take hormones to help alleviate pelvic pain during your
+          last period and if so, did it help to alleviate your pain?
         type: SINGLE_CHOICE
         options:
           - value: a
             text: Did not take hormones for pain
           - value: b
-            text: Yes, but pain was not alleviated
+            text: 'Yes, but pain was not alleviated'
           - value: c
-            text: Yes, pain was at least somewhat alleviated
+            text: 'Yes, pain was at least somewhat alleviated'
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_3
                 operator: IS_SET
                 AND:
-                  - section: '1'
+                  - section: '0'
                     question: WERF_pain_3
                     operator: <>
                     value: a
       - key: WERF_pain_6
-        question: 6. During your last period, did your pelvic pain prevent you from going to work or school or carrying out your daily activities (even if taking pain-killers)?
+        question: >-
+          6. During your last period, did your pelvic pain prevent you from
+          going to work or school or carrying out your daily activities (even if
+          taking pain-killers)?
         type: YESNO_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_3
                 operator: IS_SET
                 AND:
-                  - section: '1'
+                  - section: '0'
                     question: WERF_pain_3
                     operator: <>
                     value: a
       - key: WERF_pain_7
-        question: 7. During your last period, did you have to lie down for any part of the day or longer because of your pelvic pain?
+        question: >-
+          7. During your last period, did you have to lie down for any part of
+          the day or longer because of your pelvic pain?
         type: YESNO_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_3
                 operator: IS_SET
                 AND:
-                  - section: '1'
+                  - section: '0'
                     question: WERF_pain_3
                     operator: <>
                     value: a
       - key: WERF_pain_8
-        question: 8. Please rate how severe your pelvic pain was at its worst during your last period using a scale from 0 to 10.
+        question: >-
+          8. Please rate how severe your pelvic pain was at its worst during
+          your last period using a scale from 0 to 10.
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -369,16 +384,18 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_3
                 operator: IS_SET
                 AND:
-                  - section: '1'
+                  - section: '0'
                     question: WERF_pain_3
                     operator: <>
                     value: a
       - key: WERF_pain_9
-        question: 9. During your last period, did you have to lie down for any part of the day or longer because of your pelvic pain?
+        question: >-
+          9. During your last period, did you have to lie down for any part of
+          the day or longer because of your pelvic pain?
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -397,12 +414,14 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_2.2
-                operator: = 
+                operator: =
                 value: 'yes'
       - key: WERF_pain_10
-        question: 10. Please rate how severe your pelvic pain during your period was at its worst in the last 12 months using a scale from 0 to 10.
+        question: >-
+          10. Please rate how severe your pelvic pain during your period was at
+          its worst in the last 12 months using a scale from 0 to 10.
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
         min: 0
@@ -413,14 +432,188 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: '1'
+              - section: '0'
                 question: WERF_pain_3
                 operator: IS_SET
                 AND:
-                  - section: '1'
+                  - section: '0'
                     question: WERF_pain_3
                     operator: <>
                     value: a
+      - key: WERF_pain_11
+        type: DISPLAY
+        question: >-
+          11. The following questions are about your bowel movements/stool when
+          you had pelvic pain during your period in the last 3 months.
 
-# The following questions are about your bowel movements/stool when you had pelvic pain during your period in the last 3 months.
-# When you had pelvic pain with your period in the last 3 months, how often...
+
+          When you had pelvic pain with your period in the last 3 months, how
+          often...
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_11a
+        question: (a) ...did this pain get better or stop after you had a bowel movement?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_11b
+        question: (b) ...did this pain get worse after you had a bowel movement
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_11c
+        question: (c) ...did you have more frequent bowel movements when the pain started?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_11d
+        question: (d) ...did you have less frequent bowel movements when the pain started?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_11e
+        question: (e) ...were your stools looser when the pain started?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_11f
+        question: (f) ...were your stools harder when the pain started?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
