@@ -13,17 +13,17 @@ name: WERF Pain
 sections:
   - type: survey
     key: '0'
-    title: ''
+    title: 'Pain'
     description: ''
     questions:
       - key: WERF_pain_1
         type: DISPLAY
         question: >-
-          1. Everyone experiences painful situations at some point in their
+          C1. Everyone experiences painful situations at some point in their
           lives. Such experiences may include headaches, tooth pain, joint, or
           muscle pain. People are often exposed to situations that may cause
           pain such as illness, injury, dental procedures, or surgery.
-        descrition: >-
+        description: >-
           We are interested in the types of thoughts and feelings that you have
           when you are in pain. Listed below are thirteen statements describing
           different thoughts and feelings that may be associated with pain.
@@ -221,7 +221,7 @@ sections:
           etc.) in the lower part of your belly
       - key: WERF_pain_2
         question: >-
-          2. Has there been a time in your life when you typically had pelvic
+          C2. Has there been a time in your life when you typically had pelvic
           pain during your periods?
         type: SINGLE_CHOICE
         options:
@@ -234,7 +234,7 @@ sections:
           - value: d
             text: Severe cramps (medication and bed rest needed)
       - key: WERF_pain_2.1
-        question: 2.1. At what age did you start having period pain?
+        question: C2.1. At what age did you start having period pain?
         description: Type your response in the space below.
         placeholder: ___ years
         type: NUMERIC
@@ -251,7 +251,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_2.2
-        question: 2.2. Have you had a period in the last 3 months?
+        question: Have you had a period in the last 3 months?
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -266,7 +266,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_3
-        question: 3. How much pelvic pain did you have during your last period?
+        question: C3. How much pelvic pain did you have during your last period?
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -287,7 +287,7 @@ sections:
                 value: 'yes'
       - key: WERF_pain_4
         question: >-
-          4. Did you take any pain-killers for pelvic pain during your last
+          C4. Did you take any pain-killers for pelvic pain during your last
           period?
         type: MULTIPLE_CHOICE
         options:
@@ -313,7 +313,7 @@ sections:
                     value: a
       - key: WERF_pain_5
         question: >-
-          5. Did you take hormones to help alleviate pelvic pain during your
+          C5. Did you take hormones to help alleviate pelvic pain during your
           last period and if so, did it help to alleviate your pain?
         type: SINGLE_CHOICE
         options:
@@ -337,7 +337,7 @@ sections:
                     value: a
       - key: WERF_pain_6
         question: >-
-          6. During your last period, did your pelvic pain prevent you from
+          C6. During your last period, did your pelvic pain prevent you from
           going to work or school or carrying out your daily activities (even if
           taking pain-killers)?
         type: YESNO_CHOICE
@@ -355,7 +355,7 @@ sections:
                     value: a
       - key: WERF_pain_7
         question: >-
-          7. During your last period, did you have to lie down for any part of
+          C7. During your last period, did you have to lie down for any part of
           the day or longer because of your pelvic pain?
         type: YESNO_CHOICE
         triggers:
@@ -372,7 +372,7 @@ sections:
                     value: a
       - key: WERF_pain_8
         question: >-
-          8. Please rate how severe your pelvic pain was at its worst during
+          C8. Please rate how severe your pelvic pain was at its worst during
           your last period using a scale from 0 to 10.
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -394,7 +394,7 @@ sections:
                     value: a
       - key: WERF_pain_9
         question: >-
-          9. During your last period, did you have to lie down for any part of
+          C9. During your last period, did you have to lie down for any part of
           the day or longer because of your pelvic pain?
         type: SINGLE_CHOICE
         options:
@@ -420,7 +420,7 @@ sections:
                 value: 'yes'
       - key: WERF_pain_10
         question: >-
-          10. Please rate how severe your pelvic pain during your period was at
+          C10. Please rate how severe your pelvic pain during your period was at
           its worst in the last 12 months using a scale from 0 to 10.
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
@@ -443,12 +443,9 @@ sections:
       - key: WERF_pain_11
         type: DISPLAY
         question: >-
-          11. The following questions are about your bowel movements/stool when
+          C11. The following questions are about your bowel movements/stool when
           you had pelvic pain during your period in the last 3 months.
-
-
-          When you had pelvic pain with your period in the last 3 months, how
-          often...
+        description: When you had pelvic pain with your period in the last 3 months, how often...
         triggers:
           - action:
               type: SHOW
@@ -617,3 +614,39 @@ sections:
                     question: WERF_pain_3
                     operator: <>
                     value: a
+      - key: WERF_pain_12_intro
+        type: DISPLAY
+        question: How old were you when your pelvic pain during your period was at its worst?
+      - key: WERF_pain_12
+        question: C12. How old were you when your pelvic pain during your period was at its worst?
+        description: Type your response in the space below.
+        placeholder: ___ years
+        type: NUMERIC
+      - key: WERF_pain_13
+        question: >-
+          C13. Please rate how severe your pelvic pain during your period was when it was at its worst using a scale from 0 to 10.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+      - key: WERF_pain_14
+        question: >-
+          C14. During the time in your life when your pelvic pain during your period was at its worst, were you taking any medication to help alleviate the pain?
+        description: (Please check all that apply)
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: Yes, pain-killers that were prescribed by a doctor
+          - value: c
+            text: Yes, pain-killers bought over-the-counter without prescription (e.g. aspirin, ibuprofen, paracetamol/acetaminophen, naproxen)
+          - value: d
+            text: Yes, hormones, but pain was not alleviated
+          - value: e
+            text: Yes, hormones, pain was at least somewhat alleviated
+      - key: WERF_pain_15_intro
+        type: DISPLAY
+        question: The following questions are about pelvic pain during your period over your lifetime (including irregular bleeding or bleeding while on hormonal treatments, but not spotting).x
