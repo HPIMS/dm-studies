@@ -1,0 +1,426 @@
+key: werf-pain
+scorable: false
+metadata:
+  author: ''
+  instrument: WERF EPHect Questionnaire - Standard (EPQ-S)
+  version: ''
+  references:
+    - 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252538/'
+schedule:
+  type: PERIOD
+  period: ALWAYS
+name: WERF Pain
+sections:
+  - type: survey
+    key: '0'
+    title: ""
+    description: >-
+      1. Everyone experiences painful situations at some point in their lives.
+      Such experiences may include headaches, tooth pain, joint, or muscle pain.
+      People are often exposed to situations that may cause pain such as
+      illness, injury, dental procedures, or surgery.
+
+      We are interested in the types of thoughts and feelings that you have when
+      you are in pain. Listed below are thirteen statements describing different
+      thoughts and feelings that may be associated with pain. Using the scale,
+      please indicate the degree to which you have these thoughts and feelings
+      when you are experiencing pain.
+    questions:
+      - key: WERF_pain_1.1
+        question: I worry all the time about whether the pain will end
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.2
+        question: I feel I can't go on
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.3
+        question: It's terrible and I think it's never going to get any better
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.4
+        question: It's awful and I feel that it overwhelms me
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.5
+        question: I feel I can't stand it anymore
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.6
+        question: I become afraid that the pain will get worse
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.7
+        question: I keep thinking of other painful events
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.8
+        question: I anxiously want the pain to go away
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.9
+        question: I can't seem to keep it out of my mind
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.10
+        question: I keep thinking about how much it hurts
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.11
+        question: I keep thinking about how badly I want the pain to stop
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.12
+        question: There's nothing I can do to reduce the intensity of the pain
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+      - key: WERF_pain_1.13
+        question: I wonder whether something serious may happen
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: To a slight degree
+          - value: c
+            text: To a moderate degree
+          - value: d
+            text: To a great degree
+          - value: e
+            text: All the time
+  - type: survey
+    key: '1'
+    title: Pain
+    description: >-
+      The following questions ask about pelvic pain with your periods (including
+      irregular bleeding or bleeding while on hormonal treatments, but not
+      spotting).
+
+      By 'pelvic pain' we mean any type of pain (cramping, shooting, stabbing,
+      etc.) in the lower part of your belly
+    questions:
+      - key: WERF_pain_2
+        question: 2. Has there been a time in your life when you typically had pelvic pain during your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No pain
+          - value: b
+            text: Mild cramps (medication never or rarely needed)
+          - value: c
+            text: Moderate cramps (medication usually needed)
+          - value: d
+            text: Severe cramps (medication and bed rest needed)
+      - key: WERF_pain_2.1
+        question: 2.1. At what age did you start having period pain?
+        description: Type your response in the space below.
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                - section: '1'
+                  question: WERF_pain_2
+                  operator: <>
+                  value: a
+      - key: WERF_pain_2.2
+        question: 2.2. Have you had a period in the last 3 months?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                - section: '1'
+                  question: WERF_pain_2
+                  operator: <>
+                  value: a
+      - key: WERF_pain_3
+        question: 3. How much pelvic pain did you have during your last period?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No pain
+          - value: b
+            text: Mild cramps (medication never or rarely needed)
+          - value: c
+            text: Moderate cramps (medication usually needed)
+          - value: d
+            text: Severe cramps (medication and bed rest needed)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_2.2
+                operator: = 
+                value: 'yes'
+      - key: WERF_pain_4
+        question: 4. Did you take any pain-killers for pelvic pain during your last period?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: Yes, pain-killers that were prescribed by a doctor
+          - value: c
+            text: Yes, pain-killers bought over-the-counter without prescription (e.g. aspirin, ibuprofen, paracetamol/acetaminophen, naproxen)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '1'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_5
+        question: 5. Did you take hormones to help alleviate pelvic pain during your last period and if so, did it help to alleviate your pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Did not take hormones for pain
+          - value: b
+            text: Yes, but pain was not alleviated
+          - value: c
+            text: Yes, pain was at least somewhat alleviated
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '1'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_6
+        question: 6. During your last period, did your pelvic pain prevent you from going to work or school or carrying out your daily activities (even if taking pain-killers)?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '1'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_7
+        question: 7. During your last period, did you have to lie down for any part of the day or longer because of your pelvic pain?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '1'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_8
+        question: 8. Please rate how severe your pelvic pain was at its worst during your last period using a scale from 0 to 10.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '1'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+      - key: WERF_pain_9
+        question: 9. During your last period, did you have to lie down for any part of the day or longer because of your pelvic pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never
+          - value: b
+            text: Occasionally (less than a quarter of my periods)
+          - value: c
+            text: Usually (more than half of my periods)
+          - value: d
+            text: Often (a quarter to half of my periods)
+          - value: e
+            text: Usually (more than half of my periods)
+          - value: f
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_2.2
+                operator: = 
+                value: 'yes'
+      - key: WERF_pain_10
+        question: 10. Please rate how severe your pelvic pain during your period was at its worst in the last 12 months using a scale from 0 to 10.
+        description: Where 0=no pain and 10=worst imaginable pain.
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '1'
+                question: WERF_pain_3
+                operator: IS_SET
+                AND:
+                  - section: '1'
+                    question: WERF_pain_3
+                    operator: <>
+                    value: a
+
+# The following questions are about your bowel movements/stool when you had pelvic pain during your period in the last 3 months.
+# When you had pelvic pain with your period in the last 3 months, how often...
