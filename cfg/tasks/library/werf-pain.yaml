@@ -12,6 +12,27 @@ schedule:
 name: WERF Pain
 sections:
   - type: survey
+    key: prelude
+    title: 'Pain'
+    description: ''
+    questions:
+      - key: WERF_age_select
+        question: Which of the following best describes your current age?
+        description: Why do we need this? Some questions in this survey depend on your current age. We use this information to streamline the questions we ask you.
+        type: SINGLE_CHOICE
+        required: true
+        options:
+          - value: a
+            text: 15 years old or younger
+          - value: b
+            text: 16-20 years old
+          - value: c
+            text: 21-30 years old
+          - value: d
+            text: 31-40 years old
+          - value: e
+            text: 41-50 years old
+  - type: survey
     key: '0'
     title: 'Pain'
     description: ''
@@ -649,4 +670,1908 @@ sections:
             text: Yes, hormones, pain was at least somewhat alleviated
       - key: WERF_pain_15_intro
         type: DISPLAY
-        question: The following questions are about pelvic pain during your period over your lifetime (including irregular bleeding or bleeding while on hormonal treatments, but not spotting).x
+        question: The following questions are about pelvic pain during your period over your lifetime (including irregular bleeding or bleeding while on hormonal treatments, but not spotting).
+      - key: WERF_pain_15_group_a_intro
+        type: DISPLAY
+        question: Up to age 15...
+      - key: WERF_pain_15a_group_a
+        question: How much pelvic pain did you usually have with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: No periods
+          - value: '2'
+            text: No pain
+          - value: '3'
+            text: Mild cramps (medication rarely needed)
+          - value: '4'
+            text: Moderate cramps (medication usually needed)
+          - value: '5'
+            text: Severe cramps (medication and bed rest needed)
+      - key: WERF_pain_15b_group_a
+        question: How often did you have pelvic pain with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Occasionally (less than a quarter of my periods) 
+          - value: '2'
+            text: Often (a quarter to half of my periods) 
+          - value: '3'
+            text: Usually (more than half of my periods) 
+          - value: '4'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '3'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '4'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '5'
+      - key: WERF_pain_15c_group_a
+        question: Did you take pain-killers for pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: "No"
+          - value: '2'
+            text: Yes, prescription 
+          - value: '3'
+            text: Yes, over-the-counter
+          - value: '4'
+            text: Both prescription and over-the-counter
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '3'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '4'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '5'
+      - key: WERF_pain_15d_group_a
+        question: Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Did not take hormones for pain
+          - value: '2'
+            text: Yes, but pain was not alleviated
+          - value: '3'
+            text: Yes, pain was at least somewhat alleviated
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '3'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '4'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '5'
+      - key: WERF_pain_15e_group_a
+        question: Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '3'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '4'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '5'
+      - key: WERF_pain_15f_group_a
+        question: Did you have to lie down for any part of the day or longer because of your pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '3'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '4'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '5'
+      - key: WERF_pain_15g.3_group_a
+        question: Can you remember how severe your pelvic pain was ON AVERAGE or AT ITS WORST?
+        description: You will be asked to rate your pain on a scale from 0 to 10 where 0=no pain and 10=worst imaginable pain.
+        boxLabel: ""
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '3'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '4'
+              - section: "0"
+                question: WERF_pain_15a_group_a
+                operator: =
+                value: '5'
+      - key: WERF_pain_15g.1_group_a
+        question: Please rate how severe your pelvic period pain was ON AVERAGE.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_a
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15g.2_group_a
+        question: Please rate how severe your pelvic period pain was AT ITS WORST.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_a
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15_group_b_intro
+        type: DISPLAY
+        question: 16-20 yrs...
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15a_group_b
+        question: How much pelvic pain did you usually have with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: No periods
+          - value: '2'
+            text: No pain
+          - value: '3'
+            text: Mild cramps (medication rarely needed)
+          - value: '4'
+            text: Moderate cramps (medication usually needed)
+          - value: '5'
+            text: Severe cramps (medication and bed rest needed)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15b_group_b
+        question: How often did you have pelvic pain with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Occasionally (less than a quarter of my periods) 
+          - value: '2'
+            text: Often (a quarter to half of my periods) 
+          - value: '3'
+            text: Usually (more than half of my periods) 
+          - value: '4'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15c_group_b
+        question: Did you take pain-killers for pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: "No"
+          - value: '2'
+            text: Yes, prescription 
+          - value: '3'
+            text: Yes, over-the-counter
+          - value: '4'
+            text: Both prescription and over-the-counter
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15d_group_b
+        question: Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Did not take hormones for pain
+          - value: '2'
+            text: Yes, but pain was not alleviated
+          - value: '3'
+            text: Yes, pain was at least somewhat alleviated
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15e_group_b
+        question: Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15f_group_b
+        question: Did you have to lie down for any part of the day or longer because of your pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.3_group_a
+        question: Can you remember how severe your pelvic pain was ON AVERAGE or AT ITS WORST?
+        description: You will be asked to rate your pain on a scale from 0 to 10 where 0=no pain and 10=worst imaginable pain.
+        boxLabel: ""
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'b'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_b
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.1_group_b
+        question: Please rate how severe your pelvic period pain was ON AVERAGE.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_b
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15g.2_group_b
+        question: Please rate how severe your pelvic period pain was AT ITS WORST.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_b
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15_group_c_intro
+        type: DISPLAY
+        question: 21-30 yrs...
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15a_group_c
+        question: How much pelvic pain did you usually have with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: No periods
+          - value: '2'
+            text: No pain
+          - value: '3'
+            text: Mild cramps (medication rarely needed)
+          - value: '4'
+            text: Moderate cramps (medication usually needed)
+          - value: '5'
+            text: Severe cramps (medication and bed rest needed)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15b_group_c
+        question: How often did you have pelvic pain with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Occasionally (less than a quarter of my periods) 
+          - value: '2'
+            text: Often (a quarter to half of my periods) 
+          - value: '3'
+            text: Usually (more than half of my periods) 
+          - value: '4'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15c_group_c
+        question: Did you take pain-killers for pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: "No"
+          - value: '2'
+            text: Yes, prescription 
+          - value: '3'
+            text: Yes, over-the-counter
+          - value: '4'
+            text: Both prescription and over-the-counter
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15d_group_c
+        question: Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Did not take hormones for pain
+          - value: '2'
+            text: Yes, but pain was not alleviated
+          - value: '3'
+            text: Yes, pain was at least somewhat alleviated
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15e_group_c
+        question: Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15f_group_c
+        question: Did you have to lie down for any part of the day or longer because of your pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.3_group_c
+        question: Can you remember how severe your pelvic pain was ON AVERAGE or AT ITS WORST?
+        description: You will be asked to rate your pain on a scale from 0 to 10 where 0=no pain and 10=worst imaginable pain.
+        boxLabel: ""
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'c'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_c
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.1_group_c
+        question: Please rate how severe your pelvic period pain was ON AVERAGE.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_c
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15g.2_group_c
+        question: Please rate how severe your pelvic period pain was AT ITS WORST.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_c
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15_group_d_intro
+        type: DISPLAY
+        question: 31-40 yrs...
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15a_group_d
+        question: How much pelvic pain did you usually have with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: No periods
+          - value: '2'
+            text: No pain
+          - value: '3'
+            text: Mild cramps (medication rarely needed)
+          - value: '4'
+            text: Moderate cramps (medication usually needed)
+          - value: '5'
+            text: Severe cramps (medication and bed rest needed)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15b_group_d
+        question: How often did you have pelvic pain with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Occasionally (less than a quarter of my periods) 
+          - value: '2'
+            text: Often (a quarter to half of my periods) 
+          - value: '3'
+            text: Usually (more than half of my periods) 
+          - value: '4'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15c_group_d
+        question: Did you take pain-killers for pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: "No"
+          - value: '2'
+            text: Yes, prescription 
+          - value: '3'
+            text: Yes, over-the-counter
+          - value: '4'
+            text: Both prescription and over-the-counter
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15d_group_d
+        question: Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Did not take hormones for pain
+          - value: '2'
+            text: Yes, but pain was not alleviated
+          - value: '3'
+            text: Yes, pain was at least somewhat alleviated
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15e_group_d
+        question: Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15f_group_d
+        question: Did you have to lie down for any part of the day or longer because of your pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.3_group_d
+        question: Can you remember how severe your pelvic pain was ON AVERAGE or AT ITS WORST?
+        description: You will be asked to rate your pain on a scale from 0 to 10 where 0=no pain and 10=worst imaginable pain.
+        boxLabel: ""
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'd'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_d
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.1_group_d
+        question: Please rate how severe your pelvic period pain was ON AVERAGE.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_d
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15g.2_group_d
+        question: Please rate how severe your pelvic period pain was AT ITS WORST.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_d
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15_group_e_intro
+        type: DISPLAY
+        question: 41-50 yrs...
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15a_group_e
+        question: How much pelvic pain did you usually have with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: No periods
+          - value: '2'
+            text: No pain
+          - value: '3'
+            text: Mild cramps (medication rarely needed)
+          - value: '4'
+            text: Moderate cramps (medication usually needed)
+          - value: '5'
+            text: Severe cramps (medication and bed rest needed)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+      - key: WERF_pain_15b_group_e
+        question: How often did you have pelvic pain with your periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Occasionally (less than a quarter of my periods) 
+          - value: '2'
+            text: Often (a quarter to half of my periods) 
+          - value: '3'
+            text: Usually (more than half of my periods) 
+          - value: '4'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15c_group_e
+        question: Did you take pain-killers for pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: "No"
+          - value: '2'
+            text: Yes, prescription 
+          - value: '3'
+            text: Yes, over-the-counter
+          - value: '4'
+            text: Both prescription and over-the-counter
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15d_group_e
+        question: Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Did not take hormones for pain
+          - value: '2'
+            text: Yes, but pain was not alleviated
+          - value: '3'
+            text: Yes, pain was at least somewhat alleviated
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15e_group_e
+        question: Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15f_group_e
+        question: Did you have to lie down for any part of the day or longer because of your pelvic period pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Never
+          - value: '2'
+            text: Occasionally (less than a quarter of my periods)
+          - value: '3'
+            text: Often (a quarter to half of my periods)
+          - value: '4'
+            text: Usually (more than half of my periods)
+          - value: '5'
+            text: Always (every period)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.3_group_e
+        question: Can you remember how severe your pelvic pain was ON AVERAGE or AT ITS WORST?
+        description: You will be asked to rate your pain on a scale from 0 to 10 where 0=no pain and 10=worst imaginable pain.
+        boxLabel: ""
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: prelude
+                question: WERF_age_select
+                operator: =
+                value: 'e'
+                AND:
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '3'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '4'
+                - section: "0"
+                  question: WERF_pain_15a_group_e
+                  operator: =
+                  value: '5'
+      - key: WERF_pain_15g.1_group_e
+        question: Please rate how severe your pelvic period pain was ON AVERAGE.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_e
+                operator: =
+                value: 'yes'
+      - key: WERF_pain_15g.2_group_e
+        question: Please rate how severe your pelvic period pain was AT ITS WORST.
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "0"
+                question: WERF_pain_15g.3_group_e
+                operator: =
+                value: 'yes'
