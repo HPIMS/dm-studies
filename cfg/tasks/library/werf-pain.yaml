@@ -53,7 +53,7 @@ sections:
           different thoughts and feelings that may be associated with pain.
           Using the scale, please indicate the degree to which you have these
           thoughts and feelings when you are experiencing pain.
-      - key: WERF_pain_1.1
+      - key: WERF_pain_1a
         question: I worry all the time about whether the pain will end
         type: SINGLE_CHOICE
         options:
@@ -67,7 +67,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.2
+      - key: WERF_pain_1b
         question: I feel I can't go on
         type: SINGLE_CHOICE
         options:
@@ -81,7 +81,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.3
+      - key: WERF_pain_1c
         question: It's terrible and I think it's never going to get any better
         type: SINGLE_CHOICE
         options:
@@ -95,7 +95,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.4
+      - key: WERF_pain_1d
         question: It's awful and I feel that it overwhelms me
         type: SINGLE_CHOICE
         options:
@@ -109,7 +109,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.5
+      - key: WERF_pain_1e
         question: I feel I can't stand it anymore
         type: SINGLE_CHOICE
         options:
@@ -123,7 +123,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.6
+      - key: WERF_pain_1f
         question: I become afraid that the pain will get worse
         type: SINGLE_CHOICE
         options:
@@ -137,7 +137,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.7
+      - key: WERF_pain_1g
         question: I keep thinking of other painful events
         type: SINGLE_CHOICE
         options:
@@ -151,7 +151,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.8
+      - key: WERF_pain_1h
         question: I anxiously want the pain to go away
         type: SINGLE_CHOICE
         options:
@@ -165,7 +165,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.9
+      - key: WERF_pain_1i
         question: I can't seem to keep it out of my mind
         type: SINGLE_CHOICE
         options:
@@ -179,7 +179,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.10
+      - key: WERF_pain_1j
         question: I keep thinking about how much it hurts
         type: SINGLE_CHOICE
         options:
@@ -193,7 +193,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.11
+      - key: WERF_pain_1k
         question: I keep thinking about how badly I want the pain to stop
         type: SINGLE_CHOICE
         options:
@@ -207,7 +207,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.12
+      - key: WERF_pain_1l
         question: There's nothing I can do to reduce the intensity of the pain
         type: SINGLE_CHOICE
         options:
@@ -221,7 +221,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1.13
+      - key: WERF_pain_1m
         question: I wonder whether something serious may happen
         type: SINGLE_CHOICE
         options:
@@ -655,8 +655,8 @@ sections:
       - key: WERF_pain_12_intro
         type: DISPLAY
         question: >-
-          How old were you when your pelvic pain during your period was at its
-          worst?
+          The following questions are about the time in your life when your
+          pelvic pain during your period was at its worst.
         triggers:
           - action:
               type: SHOW
@@ -850,18 +850,18 @@ sections:
                     operator: <>
                     value: a
                     AND:
-                    - section: '0'
-                      question: WERF_pain_15a_group_a
-                      operator: =
-                      value: '3'
-                    - section: '0'
-                      question: WERF_pain_15a_group_a
-                      operator: =
-                      value: '4'
-                    - section: '0'
-                      question: WERF_pain_15a_group_a
-                      operator: =
-                      value: '5'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '3'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '4'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '5'
       - key: WERF_pain_15d_group_a
         question: >-
           Up to age 15: Did you take hormones to help alleviate menstrual pelvic
