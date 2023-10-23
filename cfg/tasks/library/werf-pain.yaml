@@ -2609,6 +2609,10 @@ sections:
                 question: WERF_pain_15g.3_group_e
                 operator: =
                 value: 'yes'
-      - key: TEST
-        question: "Question"
-        content: ["H1", "TESTING"]
+      - key: WERF_pain_16_intro
+        type: "DISPLAY"
+        question: "The following questions are about pelvic pain during or after vaginal intercourse or penetration."
+        content: [["BodyLarge", "By 'pelvic pain' we mean any type of pain (cramping, shooting, stabbing, etc.) in the lower part of your belly, as shown by the shaded area in this picture:"],["Image", "WERF-pain-loc-ref"]]
+      - key: WERF_pain_16_skip_section
+        question: "We remind you that any information you give will be treated in complete confidence. If however you do not wish to answer these questions or If you have never had intercourse, please check here:"
+        type: CHECKBOX
