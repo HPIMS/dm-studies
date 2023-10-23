@@ -241,9 +241,14 @@ sections:
           The following questions ask about pelvic pain with your periods
           (including irregular bleeding or bleeding while on hormonal
           treatments, but not spotting).
-        description: >-
-          By 'pelvic pain' we mean any type of pain (cramping, shooting,
-          stabbing, etc.) in the lower part of your belly
+        content:
+          - - BodyLarge
+            - >-
+              By 'pelvic pain' we mean any type of pain (cramping, shooting,
+              stabbing, etc.) in the lower part of your belly, as shown by the
+              shaded area in this picture:
+          - - Image
+            - WERF-pain-loc-ref
       - key: WERF_pain_2
         question: >-
           C2. Has there been a time in your life when you typically had pelvic
@@ -652,6 +657,18 @@ sections:
         question: >-
           How old were you when your pelvic pain during your period was at its
           worst?
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_12
         question: >-
           C12. How old were you when your pelvic pain during your period was at
@@ -659,6 +676,18 @@ sections:
         description: Type your response in the space below.
         placeholder: ___ years
         type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_13
         question: >-
           C13. Please rate how severe your pelvic pain during your period was
@@ -669,6 +698,18 @@ sections:
         minLabel: No Pain
         max: 10
         maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_14
         question: >-
           C14. During the time in your life when your pelvic pain during your
@@ -689,12 +730,36 @@ sections:
             text: 'Yes, hormones, but pain was not alleviated'
           - value: e
             text: 'Yes, hormones, pain was at least somewhat alleviated'
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_15_intro
         type: DISPLAY
         question: >-
           The following questions are about pelvic pain during your period over
           your lifetime (including irregular bleeding or bleeding while on
           hormonal treatments, but not spotting).
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_15a_group_a
         question: >-
           Up to age 15: How much pelvic pain did you usually have with your
@@ -711,6 +776,18 @@ sections:
             text: Moderate cramps (medication usually needed)
           - value: '5'
             text: Severe cramps (medication and bed rest needed)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
       - key: WERF_pain_15b_group_a
         question: 'Up to age 15: How often did you have pelvic pain with your periods?'
         type: SINGLE_CHOICE
@@ -728,17 +805,26 @@ sections:
               type: SHOW
             condition:
               - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '3'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '4'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '5'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '3'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '4'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '5'
       - key: WERF_pain_15c_group_a
         question: 'Up to age 15: Did you take pain-killers for pelvic period pain?'
         type: SINGLE_CHOICE
@@ -756,17 +842,26 @@ sections:
               type: SHOW
             condition:
               - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '3'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '4'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '5'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                    - section: '0'
+                      question: WERF_pain_15a_group_a
+                      operator: =
+                      value: '3'
+                    - section: '0'
+                      question: WERF_pain_15a_group_a
+                      operator: =
+                      value: '4'
+                    - section: '0'
+                      question: WERF_pain_15a_group_a
+                      operator: =
+                      value: '5'
       - key: WERF_pain_15d_group_a
         question: >-
           Up to age 15: Did you take hormones to help alleviate menstrual pelvic
@@ -784,17 +879,26 @@ sections:
               type: SHOW
             condition:
               - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '3'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '4'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '5'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '3'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '4'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '5'
       - key: WERF_pain_15e_group_a
         question: >-
           Up to age 15: Did your pelvic period pain prevent you from going to
@@ -817,17 +921,26 @@ sections:
               type: SHOW
             condition:
               - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '3'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '4'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '5'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '3'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '4'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '5'
       - key: WERF_pain_15f_group_a
         question: >-
           Up to age 15: Did you have to lie down for any part of the day or
@@ -849,17 +962,26 @@ sections:
               type: SHOW
             condition:
               - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '3'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '4'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '5'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '3'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '4'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '5'
       - key: WERF_pain_15g.3_group_a
         question: >-
           Up to age 15: Can you remember how severe your pelvic pain was ON
@@ -874,17 +996,26 @@ sections:
               type: SHOW
             condition:
               - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '3'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '4'
-              - section: '0'
-                question: WERF_pain_15a_group_a
-                operator: =
-                value: '5'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '3'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '4'
+                      - section: '0'
+                        question: WERF_pain_15a_group_a
+                        operator: =
+                        value: '5'
       - key: WERF_pain_15g.1_group_a
         question: >-
           Up to age 15: Please rate how severe your pelvic period pain was ON
@@ -941,22 +1072,31 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: b
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
       - key: WERF_pain_15b_group_b
         question: '16-20 yrs: How often did you have pelvic pain with your periods?'
         type: SINGLE_CHOICE
@@ -973,74 +1113,83 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: b
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15c_group_b
         question: '16-20 yrs: Did you take pain-killers for pelvic period pain?'
         type: SINGLE_CHOICE
@@ -1057,74 +1206,83 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: b
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15d_group_b
         question: >-
           16-20 yrs: Did you take hormones to help alleviate menstrual pelvic
@@ -1141,74 +1299,83 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: b
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15e_group_b
         question: >-
           16-20 yrs: Did your pelvic period pain prevent you from going to work
@@ -1229,74 +1396,83 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: b
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15f_group_b
         question: >-
           16-20 yrs: Did you have to lie down for any part of the day or longer
@@ -1317,74 +1493,83 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: b
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.3_group_b
         question: >-
           16-20 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
@@ -1398,74 +1583,83 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: b
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_b
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_b
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.1_group_b
         question: >-
           16-20 yrs: Please rate how severe your pelvic period pain was ON
@@ -1522,18 +1716,27 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
       - key: WERF_pain_15b_group_c
         question: '21-30 yrs: How often did you have pelvic pain with your periods?'
         type: SINGLE_CHOICE
@@ -1550,57 +1753,66 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15c_group_c
         question: '21-30 yrs: Did you take pain-killers for pelvic period pain?'
         type: SINGLE_CHOICE
@@ -1617,57 +1829,66 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15d_group_c
         question: >-
           21-30 yrs: Did you take hormones to help alleviate menstrual pelvic
@@ -1684,57 +1905,66 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15e_group_c
         question: >-
           21-30 yrs: Did your pelvic period pain prevent you from going to work
@@ -1755,57 +1985,66 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15f_group_c
         question: >-
           21-30 yrs: Did you have to lie down for any part of the day or longer
@@ -1826,57 +2065,66 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.3_group_c
         question: >-
           21-30 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
@@ -1890,57 +2138,66 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: c
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_c
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_c
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.1_group_c
         question: >-
           21-30 yrs: Please rate how severe your pelvic period pain was ON
@@ -1997,14 +2254,23 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
       - key: WERF_pain_15b_group_d
         question: '31-40 yrs: How often did you have pelvic pain with your periods?'
         type: SINGLE_CHOICE
@@ -2021,40 +2287,49 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15c_group_d
         question: '31-40 yrs: Did you take pain-killers for pelvic period pain?'
         type: SINGLE_CHOICE
@@ -2071,40 +2346,49 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15d_group_d
         question: >-
           31-40 yrs: Did you take hormones to help alleviate menstrual pelvic
@@ -2121,40 +2405,49 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15e_group_d
         question: >-
           31-40 yrs: Did your pelvic period pain prevent you from going to work
@@ -2175,40 +2468,49 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15f_group_d
         question: >-
           31-40 yrs: Did you have to lie down for any part of the day or longer
@@ -2229,40 +2531,49 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.3_group_d
         question: >-
           31-40 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
@@ -2276,40 +2587,49 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: d
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
-                AND:
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_d
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_d
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.1_group_d
         question: >-
           31-40 yrs: Please rate how severe your pelvic period pain was ON
@@ -2366,10 +2686,19 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
+                AND:
+                  - section: '0'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
       - key: WERF_pain_15b_group_e
         question: '41-50 yrs: How often did you have pelvic pain with your periods?'
         type: SINGLE_CHOICE
@@ -2386,23 +2715,32 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15c_group_e
         question: '41-50 yrs: Did you take pain-killers for pelvic period pain?'
         type: SINGLE_CHOICE
@@ -2419,23 +2757,32 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15d_group_e
         question: >-
           41-50 yrs: Did you take hormones to help alleviate menstrual pelvic
@@ -2452,23 +2799,32 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15e_group_e
         question: >-
           41-50 yrs: Did your pelvic period pain prevent you from going to work
@@ -2489,23 +2845,32 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15f_group_e
         question: >-
           41-50 yrs: Did you have to lie down for any part of the day or longer
@@ -2526,23 +2891,32 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.3_group_e
         question: >-
           41-50 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
@@ -2556,23 +2930,32 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: prelude
-                question: WERF_age_select
-                operator: =
-                value: e
+              - section: '0'
+                question: WERF_pain_2
+                operator: IS_SET
                 AND:
                   - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '3'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '4'
-                  - section: '0'
-                    question: WERF_pain_15a_group_e
-                    operator: =
-                    value: '5'
+                    question: WERF_pain_2
+                    operator: <>
+                    value: a
+                    AND:
+                      - section: prelude
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+                        AND:
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '3'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '4'
+                          - section: '0'
+                            question: WERF_pain_15a_group_e
+                            operator: =
+                            value: '5'
       - key: WERF_pain_15g.1_group_e
         question: >-
           41-50 yrs: Please rate how severe your pelvic period pain was ON
@@ -2610,9 +2993,22 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_16_intro
-        type: "DISPLAY"
-        question: "The following questions are about pelvic pain during or after vaginal intercourse or penetration."
-        content: [["BodyLarge", "By 'pelvic pain' we mean any type of pain (cramping, shooting, stabbing, etc.) in the lower part of your belly, as shown by the shaded area in this picture:"],["Image", "WERF-pain-loc-ref"]]
+        type: DISPLAY
+        question: >-
+          The following questions are about pelvic pain during or after vaginal
+          intercourse or penetration.
+        content:
+          - - BodyLarge
+            - >-
+              By 'pelvic pain' we mean any type of pain (cramping, shooting,
+              stabbing, etc.) in the lower part of your belly, as shown by the
+              shaded area in this picture:
+          - - Image
+            - WERF-pain-loc-ref
       - key: WERF_pain_16_skip_section
-        question: "We remind you that any information you give will be treated in complete confidence. If however you do not wish to answer these questions or If you have never had intercourse, please check here:"
+        question: >-
+          We remind you that any information you give will be treated in
+          complete confidence. If however you do not wish to answer these
+          questions or If you have never had intercourse, please check here:
+        boxLabel: I do not wish to answer
         type: CHECKBOX
