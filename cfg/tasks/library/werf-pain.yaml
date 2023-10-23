@@ -2610,5 +2610,6 @@ sections:
                 operator: =
                 value: 'yes'
       - key: TEST
+        type: DISPLAY
         question: "Question"
         content: ["H1", "TESTING"]
