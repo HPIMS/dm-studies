@@ -17,7 +17,7 @@ sections:
     description: ''
     questions:
       - key: WERF_age_select
-        question: Which of the following best describes your current age?
+        question: ["Underline", "Which of the following best describes your current age?"]
         description: >-
           Why do we need this? Some questions in this survey depend on your
           current age. We use this information to streamline the questions we
