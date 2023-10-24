@@ -709,9 +709,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_15a_group_a
-        question: >-
-          Up to age 15: How much pelvic pain did you usually have with your
-          periods?
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -737,7 +735,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_15b_group_a
-        question: 'Up to age 15: How often did you have pelvic pain with your periods?'
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -774,7 +772,7 @@ sections:
                         operator: =
                         value: '5'
       - key: WERF_pain_15c_group_a
-        question: 'Up to age 15: Did you take pain-killers for pelvic period pain?'
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -811,9 +809,7 @@ sections:
                         operator: =
                         value: '5'
       - key: WERF_pain_15d_group_a
-        question: >-
-          Up to age 15: Did you take hormones to help alleviate menstrual pelvic
-          pain and if so, did it help to alleviate your pain?
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -848,10 +844,7 @@ sections:
                         operator: =
                         value: '5'
       - key: WERF_pain_15e_group_a
-        question: >-
-          Up to age 15: Did your pelvic period pain prevent you from going to
-          work or carrying out your daily activities (even if taking
-          pain-killers)?
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -890,9 +883,7 @@ sections:
                         operator: =
                         value: '5'
       - key: WERF_pain_15f_group_a
-        question: >-
-          Up to age 15: Did you have to lie down for any part of the day or
-          longer because of your pelvic period pain?
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -931,9 +922,7 @@ sections:
                         operator: =
                         value: '5'
       - key: WERF_pain_15g.3_group_a
-        question: >-
-          Up to age 15: Can you remember how severe your pelvic pain was ON
-          AVERAGE or AT ITS WORST?
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
           pain and 10=worst imaginable pain.
@@ -965,10 +954,7 @@ sections:
                         operator: =
                         value: '5'
       - key: WERF_pain_15g.1_group_a
-        question: >-
-          Up to age 15: Please rate how severe your pelvic period pain was ON
-          AVERAGE.
-        description: Where 0=no pain and 10=worst imaginable pain
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]]
         type: H_SCALE
         min: 0
         minLabel: No Pain
@@ -983,9 +969,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15g.2_group_a
-        question: >-
-          Up to age 15: Please rate how severe your pelvic period pain was AT
-          ITS WORST.
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -1001,9 +985,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15a_group_b
-        question: >-
-          16-20 yrs: How much pelvic pain did you usually have with your
-          periods?
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1046,7 +1028,7 @@ sections:
                         operator: =
                         value: e
       - key: WERF_pain_15b_group_b
-        question: '16-20 yrs: How often did you have pelvic pain with your periods?'
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1139,7 +1121,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15c_group_b
-        question: '16-20 yrs: Did you take pain-killers for pelvic period pain?'
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1232,9 +1214,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15d_group_b
-        question: >-
-          16-20 yrs: Did you take hormones to help alleviate menstrual pelvic
-          pain and if so, did it help to alleviate your pain?
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1325,9 +1305,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15e_group_b
-        question: >-
-          16-20 yrs: Did your pelvic period pain prevent you from going to work
-          or carrying out your daily activities (even if taking pain-killers)?
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1422,9 +1400,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15f_group_b
-        question: >-
-          16-20 yrs: Did you have to lie down for any part of the day or longer
-          because of your pelvic period pain?
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1519,9 +1495,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.3_group_b
-        question: >-
-          16-20 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
-          or AT ITS WORST?
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
           pain and 10=worst imaginable pain.
@@ -1609,9 +1583,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.1_group_b
-        question: >-
-          16-20 yrs: Please rate how severe your pelvic period pain was ON
-          AVERAGE.
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -1627,9 +1599,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15g.2_group_b
-        question: >-
-          16-20 yrs: Please rate how severe your pelvic period pain was AT ITS
-          WORST.
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -1645,9 +1615,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15a_group_c
-        question: >-
-          21-30 yrs: How much pelvic pain did you usually have with your
-          periods?
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1686,7 +1654,7 @@ sections:
                         operator: =
                         value: e
       - key: WERF_pain_15b_group_c
-        question: '21-30 yrs: How often did you have pelvic pain with your periods?'
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1762,7 +1730,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15c_group_c
-        question: '21-30 yrs: Did you take pain-killers for pelvic period pain?'
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1838,9 +1806,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15d_group_c
-        question: >-
-          21-30 yrs: Did you take hormones to help alleviate menstrual pelvic
-          pain and if so, did it help to alleviate your pain?
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1914,9 +1880,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15e_group_c
-        question: >-
-          21-30 yrs: Did your pelvic period pain prevent you from going to work
-          or carrying out your daily activities (even if taking pain-killers)?
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -1994,9 +1958,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15f_group_c
-        question: >-
-          21-30 yrs: Did you have to lie down for any part of the day or longer
-          because of your pelvic period pain?
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2074,9 +2036,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.3_group_c
-        question: >-
-          21-30 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
-          or AT ITS WORST?
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
           pain and 10=worst imaginable pain.
@@ -2147,9 +2107,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.1_group_c
-        question: >-
-          21-30 yrs: Please rate how severe your pelvic period pain was ON
-          AVERAGE.
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -2165,9 +2123,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15g.2_group_c
-        question: >-
-          21-30 yrs: Please rate how severe your pelvic period pain was AT ITS
-          WORST.
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -2183,9 +2139,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15a_group_d
-        question: >-
-          31-40 yrs: How much pelvic pain did you usually have with your
-          periods?
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2220,7 +2174,7 @@ sections:
                         operator: =
                         value: e
       - key: WERF_pain_15b_group_d
-        question: '31-40 yrs: How often did you have pelvic pain with your periods?'
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2279,7 +2233,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15c_group_d
-        question: '31-40 yrs: Did you take pain-killers for pelvic period pain?'
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2338,9 +2292,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15d_group_d
-        question: >-
-          31-40 yrs: Did you take hormones to help alleviate menstrual pelvic
-          pain and if so, did it help to alleviate your pain?
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2397,9 +2349,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15e_group_d
-        question: >-
-          31-40 yrs: Did your pelvic period pain prevent you from going to work
-          or carrying out your daily activities (even if taking pain-killers)?
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2460,9 +2410,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15f_group_d
-        question: >-
-          31-40 yrs: Did you have to lie down for any part of the day or longer
-          because of your pelvic period pain?
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2523,9 +2471,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.3_group_d
-        question: >-
-          31-40 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
-          or AT ITS WORST?
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
           pain and 10=worst imaginable pain.
@@ -2579,9 +2525,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.1_group_d
-        question: >-
-          31-40 yrs: Please rate how severe your pelvic period pain was ON
-          AVERAGE.
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -2597,9 +2541,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15g.2_group_d
-        question: >-
-          31-40 yrs: Please rate how severe your pelvic period pain was AT ITS
-          WORST.
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -2615,9 +2557,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15a_group_e
-        question: >-
-          41-50 yrs: How much pelvic pain did you usually have with your
-          periods?
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2648,7 +2588,7 @@ sections:
                         operator: =
                         value: e
       - key: WERF_pain_15b_group_e
-        question: '41-50 yrs: How often did you have pelvic pain with your periods?'
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2690,7 +2630,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15c_group_e
-        question: '41-50 yrs: Did you take pain-killers for pelvic period pain?'
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2732,9 +2672,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15d_group_e
-        question: >-
-          41-50 yrs: Did you take hormones to help alleviate menstrual pelvic
-          pain and if so, did it help to alleviate your pain?
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2774,9 +2712,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15e_group_e
-        question: >-
-          41-50 yrs: Did your pelvic period pain prevent you from going to work
-          or carrying out your daily activities (even if taking pain-killers)?
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2820,9 +2756,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15f_group_e
-        question: >-
-          41-50 yrs: Did you have to lie down for any part of the day or longer
-          because of your pelvic period pain?
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: '1'
@@ -2866,9 +2800,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.3_group_e
-        question: >-
-          41-50 yrs: Can you remember how severe your pelvic pain was ON AVERAGE
-          or AT ITS WORST?
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
           pain and 10=worst imaginable pain.
@@ -2905,9 +2837,7 @@ sections:
                             operator: =
                             value: '5'
       - key: WERF_pain_15g.1_group_e
-        question: >-
-          41-50 yrs: Please rate how severe your pelvic period pain was ON
-          AVERAGE.
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -2923,9 +2853,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_15g.2_group_e
-        question: >-
-          41-50 yrs: Please rate how severe your pelvic period pain was AT ITS
-          WORST.
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
