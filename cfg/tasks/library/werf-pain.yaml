@@ -2969,8 +2969,17 @@ sections:
                     question: WERF_pain_16
                     operator: =
                     value: 'yes'
+                    AND:
+                      - section: pain
+                        question: WERF_pain_17
+                        operator: IS_SET
+                        AND:          
+                          - section: pain
+                            question: WERF_pain_17
+                            operator: <>
+                            value: d
       - key: WERF_pain_19
-        question: ["Body",[["Text","C19. "],["Bold","When you last had vaginal intercourse/penetration"],["Text",", where did you feel the pain?"]]]
+        question: [["Text","C19. "],["Bold","When you last had vaginal intercourse/penetration"],["Text",", where did you feel the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
         options:
@@ -2987,19 +2996,13 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_19.1
         question: [["C19.1. Text","Please describe the other location(s) you felt pain "],["Bold","when you last had vaginal intercourse/penetration"],["Text","."]]
         type: TEXTAREA
@@ -3024,19 +3027,13 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_21
         question: [["Text","C21. Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," "],["Bold","in the 24 hours after the last time you had vaginal intercourse/penetration"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
@@ -3050,19 +3047,13 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_22
         question: [["Text","C22. During times you had vaginal intercourse/penetration "],["Bold","in the last 12 months"],["Text",", how often did you have pelvic pain "],["Underline","during or in the 24 hours after intercourse"],["Text","?"]]
         type: SINGLE_CHOICE
@@ -3080,19 +3071,13 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_23
         question: [["Text","C23. "],["Bold","In the last 12 months"],["Text",", was there a time of the month in which vaginal intercourse/penetration was more painful than at other times?"]]
         type: DESCRIPTION
@@ -3101,40 +3086,28 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_23.1a
-        question: [["Text","C23.1a. "],["Underline","During a period"],["Text",": Was intercourse/vaginal penetration attempted during this time frame?"]]
+        question: [["Text","C23.1. "],["Underline","During a period"],["Text",": Was intercourse/vaginal penetration attempted during this time frame?"]]
         type: YESNO_CHOICE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a                      
       - key: WERF_pain_23.1b
         question: [["Underline","During a period"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
@@ -3154,19 +3127,13 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_23.2b
         question: [["Underline","A few days before a period"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
@@ -3186,19 +3153,13 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_23.3b
         question: [["Underline","A few days after a period"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
@@ -3218,19 +3179,13 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_23.4b
         question: [["Underline","At mid cycle (around ovulation)"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
@@ -3250,22 +3205,31 @@ sections:
               type: SHOW
             condition:
               - section: pain
-                question: WERF_pain_skip_intercourse_section
-                operator: <>
-                value: true
+                question: WERF_pain_18
+                operator: IS_SET
                 AND:
                   - section: pain
-                    question: WERF_pain_16
-                    operator: =
-                    value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
       - key: WERF_pain_25
-        question: ["Body",[["Text","C25. "],["Bold","In the last 12 months"],["Text",", did you ever "],["Bold","avoid"],["Text"," vaginal intercourse/penetration because of pelvic pain?"]]]
+        question: [["Text","C25. "],["Bold","In the last 12 months"],["Text",", did you ever "],["Bold","avoid"],["Text"," vaginal intercourse/penetration because of pelvic pain?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: WERF_pain_18
+                operator: IS_SET
+                AND:
+                  - section: pain
+                    question: WERF_pain_18
+                    operator: <>
+                    value: a     
+      - key: WERF_pain_26_intro
+        question: [["Bold","The following questions are about the time in your life when your pain with vaginal intercourse/penetration was "],["Underline",["Bold","at its worst."]]]
+        type: DISPLAY
         triggers:
           - action:
               type: SHOW
@@ -3279,8 +3243,42 @@ sections:
                     question: WERF_pain_16
                     operator: =
                     value: 'yes'
-                    AND: 
-                      - section: pain
-                        question: WERF_pain_18
-                        operator: <>
-                        value: a
+      - key: WERF_pain_26
+        question: [["Text","C26. How old were you when your pelvic pain with vaginal intercourse/penetration was "],["Underline","at its worst"],["Text","?"]]
+        description: Type your response in the space below.
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: WERF_pain_skip_intercourse_section
+                operator: <>
+                value: true
+                AND:
+                  - section: pain
+                    question: WERF_pain_16
+                    operator: =
+                    value: 'yes'
+      - key: WERF_pain_27
+        question: [["Text","Please rate how severe your pelvic pain with vaginal intercourse/penetration was when it was "],["Underline","at its worst"],["Text"," using a scale from 0 to 10."]]
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: WERF_pain_skip_intercourse_section
+                operator: <>
+                value: true
+                AND:
+                  - section: pain
+                    question: WERF_pain_16
+                    operator: =
+                    value: 'yes'
