@@ -443,7 +443,7 @@ sections:
       - key: WERF_pain_11
         type: DISPLAY
         question: [["Text","C11. The following questions are about your bowel movements/stool "],["Bold","when you had pelvic pain during your period in the last 3 months"],["Text","."]]
-        content: ["BodySmall",["Italic",["Bold","When you had pelvic pain with your period in the last 3 months, how often..."]]]
+        content: ["BodyLarge",["Italic",["Bold","When you had pelvic pain with your period in the last 3 months, how often..."]]]
         triggers:
           - action:
               type: SHOW
@@ -2879,7 +2879,31 @@ sections:
               shaded area in this picture:
           - - Image
             - WERF-pain-loc-ref
-      - key: WERF_pain_16_skip_section
+      - key: WERF_pain_skip_intercourse_section
         question: [["Italic","We remind you that any information you give will be treated in complete confidence. If however you "],["Italic",["Bold","do not wish to answer these questions"]],["Italic"," or If you have never had intercourse, please check here."]]
         boxLabel: I do not wish to answer these questions.
         type: CHECKBOX
+      - key: WERF_pain_16
+        question: [["Text","Have you ever had pelvic "],["Underline","pain during intercourse or in the 24 hours following vaginal sexual intercourse/penetration"],["Text","?"]]
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: WERF_pain_skip_intercourse_section
+                operator: <>
+                value: true
+      - key: WERF_pain_16.1
+        question: C16.1. At what age did this pain start?
+        description: Type your response in the space below.
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain
+                question: WERF_pain_16
+                operator: =
+                value: 'yes'
