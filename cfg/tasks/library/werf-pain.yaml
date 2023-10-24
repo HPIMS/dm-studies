@@ -38,7 +38,7 @@ sections:
     title: ""
     description: ''
     questions:
-      - key: WERF_pain_1
+      - key: _1
         type: DISPLAY
         question: >-
           C1. Everyone experiences painful situations at some point in their
@@ -46,7 +46,7 @@ sections:
           muscle pain. People are often exposed to situations that may cause
           pain such as illness, injury, dental procedures, or surgery.
         content: ["BodyLarge",[["Text","We are interested in the types of thoughts and feelings that you have "],["Bold","when you are in pain"],["Text",". Listed below are thirteen statements describing different thoughts and feelings that may be associated with pain. Using the scale, please indicate the degree to which you have these thoughts and feelings when you are experiencing pain."]]]
-      - key: WERF_pain_1a
+      - key: _1a
         question: I worry all the time about whether the pain will end
         type: SINGLE_CHOICE
         options:
@@ -60,7 +60,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1b
+      - key: _1b
         question: I feel I can't go on
         type: SINGLE_CHOICE
         options:
@@ -74,7 +74,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1c
+      - key: _1c
         question: It's terrible and I think it's never going to get any better
         type: SINGLE_CHOICE
         options:
@@ -88,7 +88,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1d
+      - key: _1d
         question: It's awful and I feel that it overwhelms me
         type: SINGLE_CHOICE
         options:
@@ -102,7 +102,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1e
+      - key: _1e
         question: I feel I can't stand it anymore
         type: SINGLE_CHOICE
         options:
@@ -116,7 +116,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1f
+      - key: _1f
         question: I become afraid that the pain will get worse
         type: SINGLE_CHOICE
         options:
@@ -130,7 +130,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1g
+      - key: _1g
         question: I keep thinking of other painful events
         type: SINGLE_CHOICE
         options:
@@ -144,7 +144,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1h
+      - key: _1h
         question: I anxiously want the pain to go away
         type: SINGLE_CHOICE
         options:
@@ -158,7 +158,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1i
+      - key: _1i
         question: I can't seem to keep it out of my mind
         type: SINGLE_CHOICE
         options:
@@ -172,7 +172,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1j
+      - key: _1j
         question: I keep thinking about how much it hurts
         type: SINGLE_CHOICE
         options:
@@ -186,7 +186,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1k
+      - key: _1k
         question: I keep thinking about how badly I want the pain to stop
         type: SINGLE_CHOICE
         options:
@@ -200,7 +200,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1l
+      - key: _1l
         question: There's nothing I can do to reduce the intensity of the pain
         type: SINGLE_CHOICE
         options:
@@ -214,7 +214,7 @@ sections:
             text: To a great degree
           - value: e
             text: All the time
-      - key: WERF_pain_1m
+      - key: _1m
         question: I wonder whether something serious may happen
         type: SINGLE_CHOICE
         options:
@@ -233,7 +233,7 @@ sections:
     title: ""
     description: ''
     questions:
-      - key: WERF_pain_period_section_intro
+      - key: _period_section_intro
         type: DISPLAY
         question: [["Bold","The following questions ask about pelvic pain "],["Underline",["Bold","with"]],["Bold"," your periods "],["Italic",["Bold","(including irregular bleeding or bleeding while on hormonal treatments, but not spotting)"]],["Bold","."]]
         content:
@@ -244,7 +244,7 @@ sections:
               shaded area in this picture:
           - - Image
             - WERF-pain-loc-ref
-      - key: WERF_pain_2
+      - key: _2
         question: >-
           C2. Has there been a time in your life when you typically had pelvic
           pain during your periods?
@@ -258,7 +258,7 @@ sections:
             text: Moderate cramps (medication usually needed)
           - value: d
             text: Severe cramps (medication and bed rest needed)
-      - key: WERF_pain_2.1
+      - key: _2.1
         question: C2.1. At what age did you start having period pain?
         description: Type your response in the space below.
         placeholder: ___ years
@@ -268,14 +268,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_2.2
+      - key: _2.2
         question: ["Bold", Have you had a period in the last 3 months?"]
         type: YESNO_CHOICE
         triggers:
@@ -283,14 +283,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_3
+      - key: _3
         question: [["Text","C3. How much pelvic pain did you have "],["Bold","during your last period"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -307,10 +307,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2.2
+                question: _2.2
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_4
+      - key: _4
         question: [["Text","C4. Did you take any pain-killers for pelvic pain "],["Bold","during your last period"],["Text","?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -328,14 +328,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_5
+      - key: _5
         question: [["Text","C5. Did you take hormones to help alleviate pelvic pain "],["Bold","during your last period"],["Text"," and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -350,14 +350,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_6
+      - key: _6
         question: [["Text","C6. "],["Bold","During your last period"],["Text",", did your pelvic pain prevent you from going to work or school or carrying out your daily activities (even if taking pain-killers)?"]]
         type: YESNO_CHOICE
         triggers:
@@ -365,14 +365,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_7
+      - key: _7
         question: [["Text","C7. "],["Bold","During your last period"],["Text",", did you have to lie down for any part of the day or longer because of your pelvic pain?"]]
         type: YESNO_CHOICE
         triggers:
@@ -380,14 +380,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_8
+      - key: _8
         question: [["Text","C8. Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," "],["Bold","during your last period"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -400,14 +400,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_9
+      - key: _9
         question: [["Text","C9. "],["Bold","In the last 12 months"],["Text",", how often have you had pelvic pain during your period?"]]
         type: SINGLE_CHOICE
         options:
@@ -428,10 +428,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2.2
+                question: _2.2
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_10
+      - key: _10
         question: [["Text","C10. Please rate how severe your pelvic pain during your period was "],["Underline","at its worst"],["Text"," "],["Bold","in the last 12 months"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
@@ -444,14 +444,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_11
+      - key: _11
         type: DISPLAY
         question: [["Text","C11. The following questions are about your bowel movements/stool "],["Bold","when you had pelvic pain during your period in the last 3 months"],["Text","."]]
         content: ["BodyLarge",["Italic",["Bold","When you had pelvic pain with your period in the last 3 months, how often..."]]]
@@ -460,14 +460,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_11a
+      - key: _11a
         question: [["Text","(a) ...did this pain "],["Underline","get better or stop"],["Text"," after you had a bowel movement?"]]
         type: SINGLE_CHOICE
         options:
@@ -486,14 +486,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_11b
+      - key: _11b
         question: [["Text","(b) ...did this pain "],["Underline","get worse"],["Text"," after you had a bowel movement"]]
         type: SINGLE_CHOICE
         options:
@@ -512,14 +512,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_11c
+      - key: _11c
         question: [["Text","(c) ...did you have "],["Underline","more frequent"],["Text"," bowel movements when the pain started?"]]
         type: SINGLE_CHOICE
         options:
@@ -538,14 +538,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_11d
+      - key: _11d
         question: [["Text","(d) ...did you have "],["Underline","less frequent"],["Text"," bowel movements when the pain started?"]]
         type: SINGLE_CHOICE
         options:
@@ -564,14 +564,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_11e
+      - key: _11e
         question: [["Text","(e) ...were your stools "],["Underline","looser"],["Text"," when the pain started?"]]
         type: SINGLE_CHOICE
         options:
@@ -590,14 +590,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_11f
+      - key: _11f
         question: [["Text","(f) ...were your stools "],["Underline","harder"],["Text"," when the pain started?"]]
         type: SINGLE_CHOICE
         options:
@@ -616,14 +616,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_3
+                question: _3
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_3
+                    question: _3
                     operator: <>
                     value: a
-      - key: WERF_pain_12_intro
+      - key: _12_intro
         type: DISPLAY
         question: [["Bold","The following questions are about the time "],["Underline",["Bold","in your life"]],["Bold"," when your pelvic pain during your period was "],["Underline",["Bold","at its worst"]],["Bold","."]]
         triggers:
@@ -631,14 +631,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_12
+      - key: _12
         question: [["Text","C12. How old were you when your pelvic pain during your period was "],["Underline","at its worst"],["Text","?"]]
         description: Type your response in the space below.
         placeholder: ___ years
@@ -648,14 +648,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_13
+      - key: _13
         question: [["Text","C13. Please rate how severe your pelvic pain during your period was when it was "],["Underline","at its worst"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -668,14 +668,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_14
+      - key: _14
         question: [["Text","C14. During the time in your life when your pelvic pain during your period was "],["Underline","at its worst"],["Text",", were you taking any medication to help alleviate the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -697,14 +697,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_15_intro
+      - key: _15_intro
         type: DISPLAY
         question: [["Text","C15. The following questions are about pelvic pain during your period "],["Underline",["Bold","over your lifetime "]],["Text","(including irregular bleeding or bleeding while on hormonal treatments, but not spotting)."]]
         triggers:
@@ -712,14 +712,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_15a_group_a
+      - key: _15a_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -738,14 +738,14 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
-      - key: WERF_pain_15b_group_a
+      - key: _15b_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -762,18 +762,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: WERF_pain_15c_group_a
+      - key: _15c_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -790,18 +790,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: WERF_pain_15d_group_a
+      - key: _15d_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -816,18 +816,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: WERF_pain_15e_group_a
+      - key: _15e_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
@@ -846,18 +846,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: WERF_pain_15f_group_a
+      - key: _15f_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -876,18 +876,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.3_group_a
+      - key: _15g.3_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
@@ -898,18 +898,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_a
+                question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.1_group_a
+      - key: _15g.1_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -922,10 +922,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_a
+                question: _15g.3_group_a
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15g.2_group_a
+      - key: _15g.2_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -938,10 +938,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_a
+                question: _15g.3_group_a
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15a_group_b
+      - key: _15a_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -960,11 +960,11 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
                     AND:
@@ -984,7 +984,7 @@ sections:
                         question: WERF_age_select
                         operator: =
                         value: e
-      - key: WERF_pain_15b_group_b
+      - key: _15b_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -1001,18 +1001,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: WERF_pain_15c_group_b
+      - key: _15c_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1029,18 +1029,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: WERF_pain_15d_group_b
+      - key: _15d_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1055,18 +1055,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: WERF_pain_15e_group_b
+      - key: _15e_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
@@ -1085,18 +1085,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: WERF_pain_15f_group_b
+      - key: _15f_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1115,18 +1115,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.3_group_b
+      - key: _15g.3_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
@@ -1137,18 +1137,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_b
+                question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.1_group_b
+      - key: _15g.1_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1161,10 +1161,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_b
+                question: _15g.3_group_b
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15g.2_group_b
+      - key: _15g.2_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1177,10 +1177,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_b
+                question: _15g.3_group_b
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15a_group_c
+      - key: _15a_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -1199,11 +1199,11 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
                     AND:
@@ -1219,7 +1219,7 @@ sections:
                         question: WERF_age_select
                         operator: =
                         value: e
-      - key: WERF_pain_15b_group_c
+      - key: _15b_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -1236,18 +1236,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: WERF_pain_15c_group_c
+      - key: _15c_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1264,18 +1264,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: WERF_pain_15d_group_c
+      - key: _15d_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1290,18 +1290,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: WERF_pain_15e_group_c
+      - key: _15e_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
@@ -1320,18 +1320,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: WERF_pain_15f_group_c
+      - key: _15f_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1350,18 +1350,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.3_group_c
+      - key: _15g.3_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
@@ -1372,18 +1372,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_c
+                question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.1_group_c
+      - key: _15g.1_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1396,10 +1396,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_c
+                question: _15g.3_group_c
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15g.2_group_c
+      - key: _15g.2_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1412,10 +1412,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_c
+                question: _15g.3_group_c
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15a_group_d
+      - key: _15a_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -1434,11 +1434,11 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
                     AND:
@@ -1450,7 +1450,7 @@ sections:
                         question: WERF_age_select
                         operator: =
                         value: e
-      - key: WERF_pain_15b_group_d
+      - key: _15b_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -1467,18 +1467,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: WERF_pain_15c_group_d
+      - key: _15c_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1495,18 +1495,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: WERF_pain_15d_group_d
+      - key: _15d_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1521,18 +1521,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: WERF_pain_15e_group_d
+      - key: _15e_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
@@ -1551,18 +1551,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: WERF_pain_15f_group_d
+      - key: _15f_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1581,18 +1581,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.3_group_d
+      - key: _15g.3_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
@@ -1603,18 +1603,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_d
+                question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.1_group_d
+      - key: _15g.1_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1627,10 +1627,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_d
+                question: _15g.3_group_d
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15g.2_group_d
+      - key: _15g.2_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1643,10 +1643,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_d
+                question: _15g.3_group_d
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15a_group_e
+      - key: _15a_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -1665,11 +1665,11 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_2
+                question: _2
                 operator: IS_SET
                 AND:
                   - section: group_2
-                    question: WERF_pain_2
+                    question: _2
                     operator: <>
                     value: a
                     AND:
@@ -1677,7 +1677,7 @@ sections:
                         question: WERF_age_select
                         operator: =
                         value: e
-      - key: WERF_pain_15b_group_e
+      - key: _15b_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE
         options:
@@ -1694,18 +1694,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: WERF_pain_15c_group_e
+      - key: _15c_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you take pain-killers for pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1722,18 +1722,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: WERF_pain_15d_group_e
+      - key: _15d_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you take hormones to help alleviate menstrual pelvic pain and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1748,18 +1748,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: WERF_pain_15e_group_e
+      - key: _15e_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did your pelvic period pain prevent you from going to work or carrying out your daily activities (even if taking pain-killers)?"]]
         type: SINGLE_CHOICE
         options:
@@ -1778,18 +1778,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: WERF_pain_15f_group_e
+      - key: _15f_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you have to lie down for any part of the day or longer because of your pelvic period pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -1808,18 +1808,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.3_group_e
+      - key: _15g.3_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
         description: >-
           You will be asked to rate your pain on a scale from 0 to 10 where 0=no
@@ -1830,18 +1830,18 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '3'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '4'
               - section: group_2
-                question: WERF_pain_15a_group_e
+                question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: WERF_pain_15g.1_group_e
+      - key: _15g.1_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1854,10 +1854,10 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_e
+                question: _15g.3_group_e
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_15g.2_group_e
+      - key: _15g.2_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -1870,7 +1870,7 @@ sections:
               type: SHOW
             condition:
               - section: group_2
-                question: WERF_pain_15g.3_group_e
+                question: _15g.3_group_e
                 operator: =
                 value: 'yes'
   - type: survey
@@ -1878,7 +1878,7 @@ sections:
     title: ""
     description: ''
     questions:
-      - key: WERF_pain_intercourse_section_intro
+      - key: _intercourse_section_intro
         type: DISPLAY
         question: ["Bold","The following questions are about pelvic pain during or after vaginal intercourse or penetration."]
         content:
@@ -1889,11 +1889,11 @@ sections:
               shaded area in this picture:
           - - Image
             - WERF-pain-loc-ref
-      - key: WERF_pain_skip_intercourse_section
+      - key: _skip_intercourse_section
         question: [["Italic","We remind you that any information you give will be treated in complete confidence. If however you "],["Italic",["Bold","do not wish to answer these questions please check here."]]]
         boxLabel: I do not wish to answer these questions
         type: CHECKBOX
-      - key: WERF_pain_skip_intercourse_section_2
+      - key: _skip_intercourse_section_2
         question: [["Italic","If you have "],["Italic",["Bold","never had intercourse"]],["Italic",", please check here."]]
         boxLabel: I have never had intercourse
         type: CHECKBOX
@@ -1902,10 +1902,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_skip_intercourse_section
+                question: _skip_intercourse_section
                 operator: <>
                 value: true
-      - key: WERF_pain_16
+      - key: _16
         question: [["Text","C16. Have you ever had pelvic "],["Underline","pain during intercourse or in the 24 hours following vaginal sexual intercourse/penetration"],["Text","?"]]
         type: YESNO_CHOICE
         triggers:
@@ -1913,15 +1913,15 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_skip_intercourse_section
+                question: _skip_intercourse_section
                 operator: <>
                 value: true
                 AND:
                   - section: group_3
-                    question: WERF_pain_skip_intercourse_section_2
+                    question: _skip_intercourse_section_2
                     operator: <>
                     value: true
-      - key: WERF_pain_16.1
+      - key: _16.1
         question: C16.1. At what age did this pain start?
         description: Type your response in the space below.
         placeholder: ___ years
@@ -1931,10 +1931,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_17
+      - key: _17
         question: C17. When did you last have vaginal intercourse?
         type: SINGLE_CHOICE
         options:
@@ -1951,10 +1951,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_17.1
+      - key: _17.1
         question: Did you avoid intercourse because of pelvic pain?
         type: YESNO_CHOICE
         triggers:
@@ -1962,10 +1962,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_17
+                question: _17
                 operator: =
                 value: d
-      - key: WERF_pain_18
+      - key: _18
         question: [["Text","C18. "],["Bold","When you last had vaginal intercourse/penetration"],["Text",", did you have pelvic pain d"],["Underline","uring or in the 24 hours following sexual intercourse"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -1982,19 +1982,19 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
                 AND:
                   - section: group_3
-                    question: WERF_pain_17
+                    question: _17
                     operator: IS_SET
                     AND:          
                       - section: group_3
-                        question: WERF_pain_17
+                        question: _17
                         operator: <>
                         value: d
-      - key: WERF_pain_19
+      - key: _19
         question: [["Text","C19. "],["Bold","When you last had vaginal intercourse/penetration"],["Text",", where did you feel the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -2012,14 +2012,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_19.1
+      - key: _19.1
         question: [["C19.1. Text","Please describe the other location(s) you felt pain "],["Bold","when you last had vaginal intercourse/penetration"],["Text","."]]
         type: TEXTAREA
         triggers:
@@ -2027,10 +2027,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_19
+                question: _19
                 operator: INCLUDES
                 value: d
-      - key: WERF_pain_20
+      - key: _20
         question: [["Text","C20. Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," "],["Bold","during the last time you had vaginal intercourse/penetration"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2043,14 +2043,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_21
+      - key: _21
         question: [["Text","C21. Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," "],["Bold","in the 24 hours after the last time you had vaginal intercourse/penetration"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2063,14 +2063,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_22
+      - key: _22
         question: [["Text","C22. During times you had vaginal intercourse/penetration "],["Bold","in the last 12 months"],["Text",", how often did you have pelvic pain "],["Underline","during or in the 24 hours after intercourse"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -2087,14 +2087,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_23
+      - key: _23
         question: [["Text","C23. "],["Bold","In the last 12 months"],["Text",", was there a time of the month in which vaginal intercourse/penetration was more painful than at other times?"]]
         type: DESCRIPTION
         triggers:
@@ -2102,14 +2102,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_23.1a
+      - key: _23.1a
         question: [["Text","C23.1. "],["Underline","During a period"],["Text",": Was intercourse/vaginal penetration attempted during this time frame?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2117,14 +2117,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a                      
-      - key: WERF_pain_23.1b
+      - key: _23.1b
         question: [["Underline","During a period"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2132,10 +2132,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_23.1a
+                question: _23.1a
                 operator: =
                 value: 'yes'                 
-      - key: WERF_pain_23.2a
+      - key: _23.2a
         question: [["Text","C23.2. "],["Underline","A few days before a period"],["Text",": Was intercourse/vaginal penetration attempted during this time frame?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2143,14 +2143,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_23.2b
+      - key: _23.2b
         question: [["Underline","A few days before a period"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2158,10 +2158,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_23.2a
+                question: _23.2a
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_23.3a
+      - key: _23.3a
         question: [["Text","C23.3. "],["Underline","A few days after a period"],["Text",": Was intercourse/vaginal penetration attempted during this time frame?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2169,14 +2169,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_23.3b
+      - key: _23.3b
         question: [["Underline","A few days after a period"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2184,10 +2184,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_23.3a
+                question: _23.3a
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_23.4a
+      - key: _23.4a
         question: [["Text","C23.4. "],["Underline","At mid cycle (around ovulation)"],["Text",": Was intercourse/vaginal penetration attempted during this time frame?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2195,14 +2195,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_23.4b
+      - key: _23.4b
         question: [["Underline","At mid cycle (around ovulation)"],["Text",": Was it more painful at this time than other times?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2210,10 +2210,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_23.4a
+                question: _23.4a
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_24
+      - key: _24
         question: [["Text","C24. "],["Bold","In the last 12 months"],["Text",", did you ever "],["Bold","interrupt"],["Text"," vaginal intercourse/penetration because of pelvic pain?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2221,14 +2221,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_25
+      - key: _25
         question: [["Text","C25. "],["Bold","In the last 12 months"],["Text",", did you ever "],["Bold","avoid"],["Text"," vaginal intercourse/penetration because of pelvic pain?"]]
         type: YESNO_CHOICE
         triggers:
@@ -2236,14 +2236,14 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_18
+                question: _18
                 operator: IS_SET
                 AND:
                   - section: group_3
-                    question: WERF_pain_18
+                    question: _18
                     operator: <>
                     value: a     
-      - key: WERF_pain_26_intro
+      - key: _26_intro
         question: [["Bold","The following questions are about the time in your life when your pain with vaginal intercourse/penetration was "],["Underline",["Bold","at its worst."]]]
         type: DISPLAY
         triggers:
@@ -2251,10 +2251,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_26
+      - key: _26
         question: [["Text","C26. How old were you when your pelvic pain with vaginal intercourse/penetration was "],["Underline","at its worst"],["Text","?"]]
         description: Type your response in the space below.
         placeholder: ___ years
@@ -2264,10 +2264,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_27
+      - key: _27
         question: [["Text","Please rate how severe your pelvic pain with vaginal intercourse/penetration was when it was "],["Underline","at its worst"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2280,10 +2280,10 @@ sections:
               type: SHOW
             condition:
                 - section: group_3
-                  question: WERF_pain_16
+                  question: _16
                   operator: =
                   value: 'yes'
-      - key: WERF_pain_28_intro
+      - key: _28_intro
         type: DISPLAY
         question: [["Text","C28. The following questions are about pelvic pain during or after intercourse "],["Underline","during your lifetime"],["Text","."]]
         triggers:
@@ -2291,10 +2291,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28a_group_a
+      - key: _28a_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -2309,10 +2309,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28b_group_a
+      - key: _28b_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Where did you feel the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -2328,10 +2328,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_a
+                question: _28a_group_a
                 operator: =
                 value: '2'
-      - key: WERF_pain_28c_group_a
+      - key: _28c_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": On average, how often did you have pelvic pain during or in the 24 hours after intercourse?"]]
         type: SINGLE_CHOICE
         options:
@@ -2348,10 +2348,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_a
+                question: _28a_group_a
                 operator: =
                 value: '2'
-      - key: WERF_pain_28d_group_a
+      - key: _28d_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Was there a time of the month in which intercourse was more painful than at other times?"]]
         type: SINGLE_CHOICE
         options:
@@ -2370,10 +2370,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_a
+                question: _28a_group_a
                 operator: =
                 value: '2'
-      - key: WERF_pain_28e_group_a
+      - key: _28e_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you ever interrupt intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2386,10 +2386,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_a
+                question: _28a_group_a
                 operator: =
                 value: '2'
-      - key: WERF_pain_28f_group_a
+      - key: _28f_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you ever avoid intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2402,10 +2402,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_a
+                question: _28a_group_a
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.3_group_a
+      - key: _28g.3_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
         description: >-
           You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
@@ -2416,10 +2416,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_a
+                question: _28a_group_a
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.1_group_a
+      - key: _28g.1_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2432,10 +2432,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_a
+                question: _28g.3_group_a
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28g.2_group_a
+      - key: _28g.2_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2448,10 +2448,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_a
+                question: _28g.3_group_a
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28a_group_b
+      - key: _28a_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -2466,7 +2466,7 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28b_group_a
+                question: _28b_group_a
                 operator: =
                 value: 'yes'
                 AND:
@@ -2486,7 +2486,7 @@ sections:
                     question: WERF_age_select
                     operator: =
                     value: e
-      - key: WERF_pain_28b_group_b
+      - key: _28b_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Where did you feel the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -2502,10 +2502,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_b
+                question: _28a_group_b
                 operator: =
                 value: '2'
-      - key: WERF_pain_28c_group_b
+      - key: _28c_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": On average, how often did you have pelvic pain during or in the 24 hours after intercourse?"]]
         type: SINGLE_CHOICE
         options:
@@ -2522,10 +2522,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_b
+                question: _28a_group_b
                 operator: =
                 value: '2'
-      - key: WERF_pain_28d_group_b
+      - key: _28d_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Was there a time of the month in which intercourse was more painful than at other times?"]]
         type: SINGLE_CHOICE
         options:
@@ -2544,10 +2544,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_b
+                question: _28a_group_b
                 operator: =
                 value: '2'
-      - key: WERF_pain_28e_group_b
+      - key: _28e_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Did you ever interrupt intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2560,10 +2560,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_b
+                question: _28a_group_b
                 operator: =
                 value: '2'
-      - key: WERF_pain_28f_group_b
+      - key: _28f_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Did you ever avoid intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2576,10 +2576,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_b
+                question: _28a_group_b
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.3_group_b
+      - key: _28g.3_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
         description: >-
           You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
@@ -2590,10 +2590,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_b
+                question: _28a_group_b
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.1_group_b
+      - key: _28g.1_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2606,10 +2606,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_b
+                question: _28g.3_group_b
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28g.2_group_b
+      - key: _28g.2_group_b
         question: [["Underline",["Bold","16-20yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2622,10 +2622,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_b
+                question: _28g.3_group_b
                 operator: =
                 value: 'yes'                   
-      - key: WERF_pain_28a_group_c
+      - key: _28a_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -2640,7 +2640,7 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
                 AND:
@@ -2656,7 +2656,7 @@ sections:
                     question: WERF_age_select
                     operator: =
                     value: e
-      - key: WERF_pain_28b_group_c
+      - key: _28b_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Where did you feel the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -2672,10 +2672,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_c
+                question: _28a_group_c
                 operator: =
                 value: '2'
-      - key: WERF_pain_28c_group_c
+      - key: _28c_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": On average, how often did you have pelvic pain during or in the 24 hours after intercourse?"]]
         type: SINGLE_CHOICE
         options:
@@ -2692,10 +2692,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_c
+                question: _28a_group_c
                 operator: =
                 value: '2'
-      - key: WERF_pain_28d_group_c
+      - key: _28d_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Was there a time of the month in which intercourse was more painful than at other times?"]]
         type: SINGLE_CHOICE
         options:
@@ -2714,10 +2714,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_c
+                question: _28a_group_c
                 operator: =
                 value: '2'
-      - key: WERF_pain_28e_group_c
+      - key: _28e_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Did you ever interrupt intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2730,10 +2730,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_c
+                question: _28a_group_c
                 operator: =
                 value: '2'
-      - key: WERF_pain_28f_group_c
+      - key: _28f_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Did you ever avoid intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2746,10 +2746,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_c
+                question: _28a_group_c
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.3_group_c
+      - key: _28g.3_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
         description: >-
           You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
@@ -2760,10 +2760,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_c
+                question: _28a_group_c
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.1_group_c
+      - key: _28g.1_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2776,10 +2776,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_c
+                question: _28g.3_group_c
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28g.2_group_c
+      - key: _28g.2_group_c
         question: [["Underline",["Bold","21-30yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2792,10 +2792,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_c
+                question: _28g.3_group_c
                 operator: =
                 value: 'yes' 
-      - key: WERF_pain_28a_group_d
+      - key: _28a_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -2810,7 +2810,7 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
                 AND:
@@ -2822,7 +2822,7 @@ sections:
                     question: WERF_age_select
                     operator: =
                     value: e
-      - key: WERF_pain_28b_group_d
+      - key: _28b_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Where did you feel the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -2838,10 +2838,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_d
+                question: _28a_group_d
                 operator: =
                 value: '2'
-      - key: WERF_pain_28c_group_d
+      - key: _28c_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": On average, how often did you have pelvic pain during or in the 24 hours after intercourse?"]]
         type: SINGLE_CHOICE
         options:
@@ -2858,10 +2858,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_d
+                question: _28a_group_d
                 operator: =
                 value: '2'
-      - key: WERF_pain_28d_group_d
+      - key: _28d_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Was there a time of the month in which intercourse was more painful than at other times?"]]
         type: SINGLE_CHOICE
         options:
@@ -2880,10 +2880,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_d
+                question: _28a_group_d
                 operator: =
                 value: '2'
-      - key: WERF_pain_28e_group_d
+      - key: _28e_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Did you ever interrupt intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2896,10 +2896,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_d
+                question: _28a_group_d
                 operator: =
                 value: '2'
-      - key: WERF_pain_28f_group_d
+      - key: _28f_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Did you ever avoid intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -2912,10 +2912,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_d
+                question: _28a_group_d
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.3_group_d
+      - key: _28g.3_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
         description: >-
           You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
@@ -2926,10 +2926,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_d
+                question: _28a_group_d
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.1_group_d
+      - key: _28g.1_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2942,10 +2942,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_d
+                question: _28g.3_group_d
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28g.2_group_d
+      - key: _28g.2_group_d
         question: [["Underline",["Bold","31-40yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -2958,10 +2958,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_d
+                question: _28g.3_group_d
                 operator: =
                 value: 'yes' 
-      - key: WERF_pain_28a_group_e
+      - key: _28a_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
@@ -2976,7 +2976,7 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_16
+                question: _16
                 operator: =
                 value: 'yes'
                 AND:
@@ -2984,7 +2984,7 @@ sections:
                     question: WERF_age_select
                     operator: =
                     value: e
-      - key: WERF_pain_28b_group_e
+      - key: _28b_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Where did you feel the pain?"]]
         description: Select all that apply
         type: MULTIPLE_CHOICE
@@ -3000,10 +3000,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_e
+                question: _28a_group_e
                 operator: =
                 value: '2'
-      - key: WERF_pain_28c_group_e
+      - key: _28c_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": On average, how often did you have pelvic pain during or in the 24 hours after intercourse?"]]
         type: SINGLE_CHOICE
         options:
@@ -3020,10 +3020,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_e
+                question: _28a_group_e
                 operator: =
                 value: '2'
-      - key: WERF_pain_28d_group_e
+      - key: _28d_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Was there a time of the month in which intercourse was more painful than at other times?"]]
         type: SINGLE_CHOICE
         options:
@@ -3042,10 +3042,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_e
+                question: _28a_group_e
                 operator: =
                 value: '2'
-      - key: WERF_pain_28e_group_e
+      - key: _28e_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Did you ever interrupt intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -3058,10 +3058,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_e
+                question: _28a_group_e
                 operator: =
                 value: '2'
-      - key: WERF_pain_28f_group_e
+      - key: _28f_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Did you ever avoid intercourse because of pelvic pain?"]]
         type: SINGLE_CHOICE
         options:
@@ -3074,10 +3074,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_e
+                question: _28a_group_e
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.3_group_e
+      - key: _28g.3_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
         description: >-
           You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
@@ -3088,10 +3088,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28a_group_e
+                question: _28a_group_e
                 operator: =
                 value: '2'
-      - key: WERF_pain_28g.1_group_e
+      - key: _28g.1_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -3104,10 +3104,10 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_e
+                question: _28g.3_group_e
                 operator: =
                 value: 'yes'
-      - key: WERF_pain_28g.2_group_e
+      - key: _28g.2_group_e
         question: [["Underline",["Bold","41-50yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
@@ -3120,7 +3120,7 @@ sections:
               type: SHOW
             condition:
               - section: group_3
-                question: WERF_pain_28g.3_group_e
+                question: _28g.3_group_e
                 operator: =
                 value: 'yes'
   - type: survey
@@ -3128,7 +3128,7 @@ sections:
     title: ""
     description: ''
     questions:
-      - key: WERF_pain_general_section_intro
+      - key: _general_section_intro
         type: DISPLAY
         question: ["Bold","The questions in this section ask about pelvic/lower abdominal pain in general."]
         content:
@@ -3147,3 +3147,945 @@ sections:
                 - >-
                   : pain related to periods or intercourse, pregnancy or childbirth, any
                   surgery, sports-related or other injury, food poisoning or stomach flu.
+      - key: _29
+        question: C29. Have you ever experienced pelvic pain in general?
+        description: [["Underline",["Italic",["Bold","Do not count"]]],["Italic",": pain caused by menstrual cramps, intercourse, surgery, pregnancy, childbirth, sports-related or other injury, food poisoning, or stomach flu."]]
+        type: YESNO_CHOICE
+      - key: _29.1
+        question: C29.1. At what age did you start having this pelvic pain?
+        description: Type your response in the space below.
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29
+                operator: =
+                value: 'yes'
+      - key: _29.2
+        question: C29.2. When did you last have this pain?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: In the last month
+          - value: b
+            text: 1-3 months ago
+          - value: c
+            text: 4-6 months ago
+          - value: d
+            text: 7-12 months ago
+          - value: e
+            text: Longer than 12 months ago
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29
+                operator: =
+                value: 'yes'
+      - key: _30_intro
+        type: DISPLAY
+        question: [["Text","C30. To what extent has your pain interfered with your normal social activities with each of the following activities "],["Bold","in the last 3 months"],["Text",":"]]
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _30a
+        question: "Work or school:"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+          - value: f
+            text: Not applicable
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _30b
+        question: "Daily activities at home:"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _30c
+        question: "Sleep:"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _30d
+        question: "Sexual intercourse:"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+          - value: f
+            text: Not applicable
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _30e
+        question: "Exercise/sports:"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+          - value: f
+            text: Not applicable
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _30f
+        question: "Social activities:"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Not at all
+          - value: b
+            text: Slightly
+          - value: c
+            text: Moderately
+          - value: d
+            text: Quite a bit
+          - value: e
+            text: Extremely
+          - value: f
+            text: Not applicable
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _31
+        question: [["Text","C31. Approximately how long in total did you have this pain for "],["Bold","in the last 3 months"],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Less than one day a month
+          - value: b
+            text: One day a month
+          - value: c
+            text: Two to three days a month
+          - value: d
+            text: One day a week
+          - value: e
+            text: More than one day a week
+          - value: f
+            text: Every day
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _32
+        question: [["Text","C32. Have you taken any medication to help alleviate this pain "],["Bold","in the last 3 months"],["Text","?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: Yes, pain-killers that were prescribed by a doctor
+          - value: c
+            text: Yes, pain-killers bought over-the-counter without prescription (e.g. aspirin, ibuprofen, paracetamol/acetaminophen, naproxen)
+          - value: d
+            text: Yes, hormones, but pain was not alleviated
+          - value: e
+            text: Yes, hormones, pain was at least somewhat alleviated
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _33
+        question: [["Text","C33. Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," "],["Bold","in the last three months"],["Text"," using a scale from 0 to 10."]]
+        description: Where 0=no pain and 10=worst imaginable pain
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34_intro
+        type: DISPLAY
+        question: [["Text","C34. When you had pelvic pain "],["Bold","in the last 3 months"],["Text",", what did it feel like?"]]
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34a
+        question: Throbbing
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34b
+        question: Shooting
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34c
+        question: Stabbing
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34d
+        question: Sharp
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34e
+        question: Cramping
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34f
+        question: Gnawing
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34g
+        question: Hot-Burning
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34h
+        question: Aching
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34i
+        question: Heavy
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34j
+        question: Tender
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34k
+        question: Splitting
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34l
+        question: Tiring-Exhausting
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34m
+        question: Sickening
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34n
+        question: Fearful
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _34o
+        question: Punishing-Cruel
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: None
+          - value: b
+            text: Mild
+          - value: c
+            text: Moderate
+          - value: d
+            text: Severe
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _35
+        question: C35. What makes your pelvic pain worse?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Sitting
+          - value: b
+            text: Full bladder or urinating
+          - value: c
+            text: Bowel movement
+          - value: d
+            text: Constipation
+          - value: e
+            text: Intercourse or orgasm
+          - value: f
+            text: Standing or walking
+          - value: g
+            text: Exercise
+          - value: h
+            text: Stress
+          - value: i
+            text: Time of day
+          - value: j
+            text: Full meal
+          - value: k
+            text: Weather
+          - value: l
+            text: Contact with clothing
+          - value: m
+            text: Coughing/sneezing
+          - value: 'n'
+            text: Nothing makes my pain worse
+          - value: o
+            text: Other
+            inlineQuestion:
+              key: _35_o_description
+              question: Please specify...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _36
+        question: C36. What helps your pelvic pain?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Pain medication
+          - value: b
+            text: Relaxation
+          - value: c
+            text: Lying down
+          - value: d
+            text: Music
+          - value: e
+            text: Bowel movement
+          - value: f
+            text: Hot bath
+          - value: g
+            text: Meditation
+          - value: h
+            text: Laxatives / enema
+          - value: i
+            text: TENS Unit
+          - value: j
+            text: Emptying bladder
+          - value: k
+            text: Massage
+          - value: l
+            text: Ice
+          - value: m
+            text: Heating pad
+          - value: 'n'
+            text: Nothing helps
+          - value: o
+            text: Other
+            inlineQuestion:
+              key: _36_o_description
+              question: Please specify...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _37_intro
+        type: DISPLAY
+        question: [["Text","C37. The following questions are about your bowel movements/stool when you had pelvic pain in the "],["Bold","last 3 months:"]]
+        content: ["BodyLarge",["Italic",["Bold","When you had pelvic pain in the last 3 months, how often..."]]]
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _37a
+        question: [["Text","(a) ...did this pain "],["Underline","get better or stop"],["Text"," after you had a bowel movement? "]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _37b
+        question: [["Text","(b) ...did this pain "],["Underline","get worse"],["Text"," after you had a bowel movement"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _37c
+        question: [["Text","(c) ...did you have "],["Underline","more frequent"],["Text"," bowel movements when the pain started?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _37d
+        question: [["Text","(d) ...did you have "],["Underline","less frequent"],["Text"," bowel movements when the pain started?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _37e
+        question: [["Text","(e) ...were your stools "],["Underline","looser"],["Text"," when the pain started?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
+      - key: _37f
+        question: [["Text","(f) ...were your stools "],["Underline","harder"],["Text"," when the pain started?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: a
+              - section: group_4
+                question: _29.2
+                operator: =
+                value: b
