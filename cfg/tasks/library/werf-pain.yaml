@@ -19,9 +19,7 @@ sections:
       - key: WERF_age_select
         question: Which of the following best describes your current age?
         description: >-
-          Why do we need this? Some questions in this survey depend on your
-          current age. We use this information to streamline the questions we
-          ask you.
+          Why do we need this? Some questions can be skipped based on your current age. We use this information to simplify the questionnaire that we show you.
         type: SINGLE_CHOICE
         required: true
         options:
@@ -42,14 +40,7 @@ sections:
           lives. Such experiences may include headaches, tooth pain, joint, or
           muscle pain. People are often exposed to situations that may cause
           pain such as illness, injury, dental procedures, or surgery.
-        content:
-          - BodyLarge
-          - >-
-            We are interested in the types of thoughts and feelings that you
-            have when you are in pain. Listed below are thirteen statements
-            describing different thoughts and feelings that may be associated
-            with pain. Using the scale, please indicate the degree to which you
-            have these thoughts and feelings when you are experiencing pain.
+        content: ["BodyLarge",[["Text","We are interested in the types of thoughts and feelings that you have "],["Bold","when you are in pain"],["Text",". Listed below are thirteen statements describing different thoughts and feelings that may be associated with pain. Using the scale, please indicate the degree to which you have these thoughts and feelings when you are experiencing pain."]]]
       - key: WERF_pain_1a
         question: I worry all the time about whether the pain will end
         type: SINGLE_CHOICE
@@ -234,10 +225,7 @@ sections:
             text: All the time
       - key: WERF_pain_2_intro
         type: DISPLAY
-        question: >-
-          The following questions ask about pelvic pain with your periods
-          (including irregular bleeding or bleeding while on hormonal
-          treatments, but not spotting).
+        question: [["Bold","The following questions ask about pelvic pain "],["Underline",["Bold","with"]],["Bold"," your periods "],["Italic",["Bold","(including irregular bleeding or bleeding while on hormonal treatments, but not spotting)"]],["Bold","."]]
         content:
           - - BodyLarge
             - >-
@@ -278,7 +266,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_2.2
-        question: Have you had a period in the last 3 months?
+        question: ["Bold", Have you had a period in the last 3 months?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -293,7 +281,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_3
-        question: C3. How much pelvic pain did you have during your last period?
+        question: [["Text","C3. How much pelvic pain did you have "],["Bold","during your last period"],["Text","?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -313,9 +301,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_4
-        question: >-
-          C4. Did you take any pain-killers for pelvic pain during your last
-          period?
+        question: [["Text","C4. Did you take any pain-killers for pelvic pain "],["Bold","during your last period"],["Text","?"]]
         type: MULTIPLE_CHOICE
         options:
           - value: a
@@ -339,9 +325,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_5
-        question: >-
-          C5. Did you take hormones to help alleviate pelvic pain during your
-          last period and if so, did it help to alleviate your pain?
+        question: [["Text","C5. Did you take hormones to help alleviate pelvic pain "],["Bold","during your last period"],["Text"," and if so, did it help to alleviate your pain?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -363,10 +347,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_6
-        question: >-
-          C6. During your last period, did your pelvic pain prevent you from
-          going to work or school or carrying out your daily activities (even if
-          taking pain-killers)?
+        question: [["Text","C6. "],["Bold","During your last period"],["Text",", did your pelvic pain prevent you from going to work or school or carrying out your daily activities (even if taking pain-killers)?"]]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -381,9 +362,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_7
-        question: >-
-          C7. During your last period, did you have to lie down for any part of
-          the day or longer because of your pelvic pain?
+        question: [["Text","C7. "],["Bold","During your last period"],["Text",", did you have to lie down for any part of the day or longer because of your pelvic pain?"]]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -398,9 +377,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_8
-        question: >-
-          C8. Please rate how severe your pelvic pain was at its worst during
-          your last period using a scale from 0 to 10.
+        question: [["Text","C8. Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," "],["Bold","during your last period"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -420,9 +397,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_9
-        question: >-
-          C9. During your last period, did you have to lie down for any part of
-          the day or longer because of your pelvic pain?
+        question: [["Text","C9. "],["Bold","In the last 12 months"],["Text",", how often have you had pelvic pain during your period?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -446,9 +421,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: WERF_pain_10
-        question: >-
-          C10. Please rate how severe your pelvic pain during your period was at
-          its worst in the last 12 months using a scale from 0 to 10.
+        question: [["Text","C10. Please rate how severe your pelvic pain during your period was "],["Underline","at its worst"],["Text"," "],["Bold","in the last 12 months"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
         min: 0
@@ -469,14 +442,8 @@ sections:
                     value: a
       - key: WERF_pain_11
         type: DISPLAY
-        question: >-
-          C11. The following questions are about your bowel movements/stool when
-          you had pelvic pain during your period in the last 3 months.
-        content:
-          - BodyLarge
-          - >-
-            When you had pelvic pain with your period in the last 3 months, how
-            often...
+        question: [["Text","C11. The following questions are about your bowel movements/stool "],["Bold","when you had pelvic pain during your period in the last 3 months"],["Text","."]]
+        content: ["BodySmall",["Italic",["Bold","When you had pelvic pain with your period in the last 3 months, how often..."]]]
         triggers:
           - action:
               type: SHOW
@@ -490,9 +457,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_11a
-        question: >-
-          (a) ...did this pain get better or stop after you had a bowel
-          movement?
+        question: [["Text","(a) ...did this pain "],["Underline","get better or stop"],["Text"," after you had a bowel movement?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -518,7 +483,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_11b
-        question: (b) ...did this pain get worse after you had a bowel movement
+        question: [["Text","(b) ...did this pain "],["Underline","get worse"],["Text"," after you had a bowel movement"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -544,9 +509,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_11c
-        question: >-
-          (c) ...did you have more frequent bowel movements when the pain
-          started?
+        question: [["Text","(c) ...did you have "],["Underline","more frequent"],["Text"," bowel movements when the pain started?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -572,9 +535,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_11d
-        question: >-
-          (d) ...did you have less frequent bowel movements when the pain
-          started?
+        question: [["Text","(d) ...did you have "],["Underline","less frequent"],["Text"," bowel movements when the pain started?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -600,7 +561,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_11e
-        question: (e) ...were your stools looser when the pain started?
+        question: [["Text","(e) ...were your stools "],["Underline","looser"],["Text"," when the pain started?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -626,7 +587,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_11f
-        question: (f) ...were your stools harder when the pain started?
+        question: [["Text","(f) ...were your stools "],["Underline","harder"],["Text"," when the pain started?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -653,9 +614,7 @@ sections:
                     value: a
       - key: WERF_pain_12_intro
         type: DISPLAY
-        question: >-
-          The following questions are about the time in your life when your
-          pelvic pain during your period was at its worst.
+        question: [["Bold","The following questions are about the time "],["Underline",["Bold","in your life"]],["Bold"," when your pelvic pain during your period was "],["Underline",["Bold","at its worst"]],["Bold","."]]
         triggers:
           - action:
               type: SHOW
@@ -669,9 +628,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_12
-        question: >-
-          C12. How old were you when your pelvic pain during your period was at
-          its worst?
+        question: [["Text","C12. How old were you when your pelvic pain during your period was "],["Underline","at its worst"],["Text","?"]]
         description: Type your response in the space below.
         placeholder: ___ years
         type: NUMERIC
@@ -688,9 +645,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_13
-        question: >-
-          C13. Please rate how severe your pelvic pain during your period was
-          when it was at its worst using a scale from 0 to 10.
+        question: [["Text","C13. Please rate how severe your pelvic pain during your period was when it was "],["Underline","at its worst"],["Text"," using a scale from 0 to 10."]]
         description: Where 0=no pain and 10=worst imaginable pain
         type: H_SCALE
         min: 0
@@ -710,10 +665,7 @@ sections:
                     operator: <>
                     value: a
       - key: WERF_pain_14
-        question: >-
-          C14. During the time in your life when your pelvic pain during your
-          period was at its worst, were you taking any medication to help
-          alleviate the pain?
+        question: [["Text","C14. During the time in your life when your pelvic pain during your period was "],["Underline","at its worst"],["Text",", were you taking any medication to help alleviate the pain?"]]
         description: (Please check all that apply)
         type: MULTIPLE_CHOICE
         options:
@@ -743,10 +695,7 @@ sections:
                     value: a
       - key: WERF_pain_15_intro
         type: DISPLAY
-        question: >-
-          The following questions are about pelvic pain during your period over
-          your lifetime (including irregular bleeding or bleeding while on
-          hormonal treatments, but not spotting).
+        question: [["Text","C15. The following questions are about pelvic pain during your period "],["Underline",["Bold","over your lifetime "]],["Text","(including irregular bleeding or bleeding while on hormonal treatments, but not spotting)."]]
         triggers:
           - action:
               type: SHOW
@@ -2993,9 +2942,7 @@ sections:
                 value: 'yes'
       - key: WERF_pain_16_intro
         type: DISPLAY
-        question: >-
-          The following questions are about pelvic pain during or after vaginal
-          intercourse or penetration.
+        question: ["Bold","The following questions are about pelvic pain during or after vaginal intercourse or penetration."]
         content:
           - - BodyLarge
             - >-
@@ -3005,9 +2952,6 @@ sections:
           - - Image
             - WERF-pain-loc-ref
       - key: WERF_pain_16_skip_section
-        question: >-
-          We remind you that any information you give will be treated in
-          complete confidence. If however you do not wish to answer these
-          questions or If you have never had intercourse, please check here:
-        boxLabel: I do not wish to answer
+        question: [["Italic","We remind you that any information you give will be treated in complete confidence. If however you "],["Italic",["Bold","do not wish to answer these questions"]],["Italic"," or If you have never had intercourse, please check here."]]
+        boxLabel: I do not wish to answer these questions.
         type: CHECKBOX
