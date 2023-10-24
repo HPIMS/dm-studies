@@ -17,7 +17,7 @@ sections:
     description: ''
     questions:
       - key: WERF_age_select
-        question: ["Underline", "Which of the following best describes your current age?"]
+        question: Which of the following best describes your current age?
         description: >-
           Why do we need this? Some questions can be skipped based on your current age. We use this information to simplify the questionnaire that we show you.
         type: SINGLE_CHOICE
