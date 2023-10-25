@@ -5296,7 +5296,6 @@ sections:
       - key: _43a
         question: Low back pain
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: a
             text: 'No'
@@ -5307,7 +5306,6 @@ sections:
       - key: _43b
         question: Muscle/joint pain unrelated to a viral infection or (sports) injury
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: a
             text: 'No'
@@ -5318,7 +5316,6 @@ sections:
       - key: _43c
         question: Pain at ovulation (mid cycle)
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: a
             text: 'No'
@@ -5329,7 +5326,6 @@ sections:
       - key: _43d
         question: Pain in legs
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: a
             text: 'No'
@@ -5340,7 +5336,6 @@ sections:
       - key: _43e
         question: Pain with urination
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: a
             text: 'No'
@@ -5351,7 +5346,6 @@ sections:
       - key: _43f
         question: Pain with bowel movement
         type: SINGLE_CHOICE
-        required: true
         options:
           - value: a
             text: 'No'
