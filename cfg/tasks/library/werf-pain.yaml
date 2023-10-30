@@ -766,7 +766,6 @@ sections:
                         question: WERF_age_select
                         operator: =
                         value: e
-
       - key: _15b_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": How often did you have pelvic pain with your periods?"]]
         type: SINGLE_CHOICE

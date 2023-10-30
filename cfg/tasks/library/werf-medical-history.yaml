@@ -1,0 +1,1109 @@
+key: werf-medical-history
+scorable: false
+metadata:
+  author: ''
+  instrument: WERF EPHect Questionnaire - Standard (EPQ-S)
+  version: ''
+  references:
+    - 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252538/'
+schedule:
+  type: PERIOD
+  period: ALWAYS
+name: WERF Medical History
+sections:
+  - type: survey
+    key: group_0
+    title: ""
+    description: ''
+    questions:
+      - key: _1
+        question: D1. Have you ever been diagnosed by a doctor with cancer or a malignancy of any kind?
+        type: YESNO_CHOICE
+      - key: _1.1
+        question: D1.1. What type(s) of cancer (primary location) have you been diagnosed with, and when were you first diagnosed?
+        type: TEXTAREA
+      - key: _2
+        question: D2. Have you ever had any of the following medical conditions?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply
+        options:
+          - value: a
+            text: Anxiety requiring medication or therapy 
+            inlineQuestion:
+              key: _2_a_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: b
+            text: Asthma
+            inlineQuestion:
+              key: _2_b_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: c
+            text: Cardiovascular disease
+            inlineQuestion:
+              key: _2_c_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: d
+            text: Crohn's Disease
+            inlineQuestion:
+              key: _2_d_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: e
+            text: Chronic Fatigue Syndrome (CFS) / Myalgic encephalomyelitis (ME)
+            inlineQuestion:
+              key: _2_e_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: f
+            text: Deafness/difficulty hearing
+            inlineQuestion:
+              key: _2_f_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: g
+            text: Depression requiring medication or therapy 
+            inlineQuestion:
+              key: _2_g_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: h
+            text: Diabetes requiring diet control
+            inlineQuestion:
+              key: _2_h_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: i
+            text: Diabetes requiring insulin or tablets
+            inlineQuestion:
+              key: _2_i_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: j
+            text: Eczema
+            inlineQuestion:
+              key: _2_j_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: k
+            text: Fibroid uterus
+            inlineQuestion:
+              key: _2_k_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: l
+            text: Fibromyalgia
+            inlineQuestion:
+              key: _2_l_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: m
+            text: Glandular Fever
+            inlineQuestion:
+              key: _2_m_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: 'n'
+            text: Graves' Disease
+            inlineQuestion:
+              key: _2_n_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: o
+            text: Hashimoto's disease
+            inlineQuestion:
+              key: _2_o_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: p
+            text: High blood pressure
+            inlineQuestion:
+              key: _2_p_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: q
+            text: Irritable Bowel Syndrome (IBS)
+            inlineQuestion:
+              key: _2_q_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: r
+            text: Migraine
+            inlineQuestion:
+              key: _2_r_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: s
+            text: Mitral valve prolapse
+            inlineQuestion:
+              key: _2_s_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: t
+            text: Multiple Sclerosis
+            inlineQuestion:
+              key: _2_t_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: u
+            text: Painful bladder/interstitial cystitis (NOT bacterial bladder infection)
+            inlineQuestion:
+              key: _2_u_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: v
+            text: Pelvic Inflammatory Disease (PID)
+            inlineQuestion:
+              key: _2_v_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: w
+            text: Polycystic Ovary Syndrome
+            inlineQuestion:
+              key: _2_w_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: x
+            text: Rheumatoid Arthritis
+            inlineQuestion:
+              key: _2_x_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: 'y'
+            text: Scoliosis (curvature of the spine)
+            inlineQuestion:
+              key: _2_y_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: z
+            text: Spine problems (excluding scoliosis)
+            inlineQuestion:
+              key: _2_z_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: aa
+            text: Sjogren's syndrome
+            inlineQuestion:
+              key: _2_aa_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: ab
+            text: SLE (Lupus)
+            inlineQuestion:
+              key: _2_ab_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: ac
+            text: Thyroid disease
+            inlineQuestion:
+              key: _2_ac_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: ad
+            text: Ulcerative Colitis
+            inlineQuestion:
+              key: _2_ad_description
+              question: Age diagnosed...
+              type: TEXTAREA
+          - value: ae
+            text: Other
+            inlineQuestion:
+              key: _2_ae_description
+              question: Diagnosis & age diagnosed...
+              type: TEXTAREA
+      - key: _3
+        question: D3. Have you been told that you were born with a structural problem / birth defect of your uterus, cervix, or vagina?
+        type: YESNO_CHOICE
+      - key: _3.1
+        question: D3.1. Did you have surgery for this issue?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _3
+                operator: =
+                value: 'yes'
+      - key: _3.2
+        question: D3.2. Was the problem improved or corrected after surgery?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _3.1
+                operator: =
+                value: 'yes'
+      - key: _4
+        type: DISPLAY
+        question: D4. Have you had any of the following surgical procedures during your life? 
+        content: If so, at approximately what age(s) did you have the procedure(s), how many have you had in total, and what was the reason for the surgery?
+      - key: _4a
+        question: Tubal ligation (sterilisation/tubes tied)
+        type: YESNO_CHOICE
+      - key: _4a_part_2
+        question: At approximately what age did you have the procedure?
+        placeholder: ___ years
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4a
+                operator: =
+                value: 'yes'
+      - key: _4b
+        question: Appendix removed
+        type: YESNO_CHOICE
+      - key: _4b_part_2
+        question: At approximately what age did you have the procedure?
+        placeholder: ___ years
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4b
+                operator: =
+                value: 'yes'
+      - key: _4c
+        question: Hysterectomy
+        type: YESNO_CHOICE
+      - key: _4c_part_2
+        question: At approximately what age did you have the procedure?
+        placeholder: ___ years
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4c
+                operator: =
+                value: 'yes'
+      - key: _4c_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4c
+                operator: =
+                value: 'yes'
+      - key: _4d
+        question: Oophorectomy
+        type: YESNO_CHOICE
+      - key: _4d_part_0
+        question: How many of your ovaries have been removed?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: both
+          - value: c
+            text: unsure
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4d
+                operator: =
+                value: 'yes'
+      - key: _4d_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4d
+                operator: =
+                value: 'yes'
+      - key: _4d_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4d
+                operator: =
+                value: 'yes'
+      - key: _4d_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4d
+                operator: =
+                value: 'yes'
+      - key: _4e
+        question: Dilatation and Curettage (D&C)
+        type: YESNO_CHOICE
+      - key: _4e_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4e
+                operator: =
+                value: 'yes'
+      - key: _4e_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4e
+                operator: =
+                value: 'yes'
+      - key: _4e_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4e
+                operator: =
+                value: 'yes'
+      - key: _4f
+        question: Cervical surgery (LEEP or conization)
+        type: YESNO_CHOICE
+      - key: _4f_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4f
+                operator: =
+                value: 'yes'
+      - key: _4f_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4f
+                operator: =
+                value: 'yes'
+      - key: _4f_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4f
+                operator: =
+                value: 'yes'
+      - key: _4g
+        question: Hysteroscopy
+        type: YESNO_CHOICE
+      - key: _4g_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4g
+                operator: =
+                value: 'yes'
+      - key: _4g_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4g
+                operator: =
+                value: 'yes'
+      - key: _4g_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4g
+                operator: =
+                value: 'yes'
+      - key: _4h
+        question: Gall bladder surgery
+        type: YESNO_CHOICE
+      - key: _4h_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4h
+                operator: =
+                value: 'yes'
+      - key: _4h_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4h
+                operator: =
+                value: 'yes'
+      - key: _4h_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4h
+                operator: =
+                value: 'yes'
+      - key: _4i
+        question: Hernia operation
+        type: YESNO_CHOICE
+      - key: _4i_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4i
+                operator: =
+                value: 'yes'
+      - key: _4i_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4i
+                operator: =
+                value: 'yes'
+      - key: _4i_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4i
+                operator: =
+                value: 'yes'
+      - key: _4j
+        question: Sigmoidoscopy/colonoscopy (insertion of a tube to look inside your bowel)
+        type: YESNO_CHOICE
+      - key: _4j_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4j
+                operator: =
+                value: 'yes'
+      - key: _4j_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4j
+                operator: =
+                value: 'yes'
+      - key: _4j_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4j
+                operator: =
+                value: 'yes'
+      - key: _4k
+        question: Laparoscopy (surgery involving insertion of a telescope into you abdomen)
+        type: YESNO_CHOICE
+      - key: _4k_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+      - key: _4k.1_part_2
+        question: [["Text","At approximately what age did you have the "],["Underline",["Bold","1st"]],["Text"," procedure?"]]
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 1
+      - key: _4k.1_part_3
+        question: [["Text","What was the reason for the "],["Underline",["Bold","1st"]],["Text"," surgery?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 1
+      - key: _4k.2_part_2
+        question: [["Text","At approximately what age did you have the "],["Underline",["Bold","2nd"]],["Text"," procedure?"]]
+        placeholder: ___ years
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 2
+      - key: _4k.2_part_3
+        question: [["Text","What was the reason for the "],["Underline",["Bold","2nd"]],["Text"," surgery?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 2
+      - key: _4k.3_part_2
+        question: [["Text","At approximately what age did you have the "],["Underline",["Bold","3rd"]],["Text"," procedure?"]]
+        placeholder: ___ years
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 3
+      - key: _4k.3_part_3
+        question: [["Text","What was the reason for the "],["Underline",["Bold","3rd"]],["Text"," surgery?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 3
+      - key: _4k.4_part_2
+        question: [["Text","At approximately what age did you have the "],["Underline",["Bold","4th"]],["Text"," procedure?"]]
+        placeholder: ___ years
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 4
+      - key: _4k.4_part_3
+        question: [["Text","What was the reason for the "],["Underline",["Bold","4th"]],["Text"," surgery?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 4
+      - key: _4k.5_part_2
+        question: [["Text","At approximately what age did you have the "],["Underline",["Bold","5th or last"]],["Text"," procedure?"]]
+        placeholder: ___ years
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 5
+      - key: _4k.5_part_3
+        question: [["Text","What was the reason for the "],["Underline",["Bold","5th or last"]],["Text"," surgery?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4k
+                operator: =
+                value: 'yes'
+                AND:
+                  - section: group_0
+                    question: _4k_part_1
+                    operator: '>='
+                    value: 5
+      - key: _4l
+        question: Other abdominal surgery
+        type: YESNO_CHOICE
+      - key: _4l_part_0
+        question: What was the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4l
+                operator: =
+                value: 'yes'
+      - key: _4l_part_1
+        question: How many times did you have this surgery?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4l
+                operator: =
+                value: 'yes'
+      - key: _4l_part_2
+        question: At approximately what age(s) did you have the procedure?
+        placeholder: ___ years, ...
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4l
+                operator: =
+                value: 'yes'
+      - key: _4l_part_3
+        question: What was the reason for the surgery?
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _4l
+                operator: =
+                value: 'yes'
+  - type: survey
+    key: group_1
+    title: ""
+    description: ''
+    questions:
+      - key: _5_intro
+        type: DISPLAY
+        question: [["Text","D5. The following questions are about your bowel movements/stool in general "],["Bold","in the last 3 months:"]]
+        content: ["BodyLarge",["Italic",["Bold","In the last 3 months, how often..."]]]
+      - key: _5a
+        question: ...did you have loose, mushy, or watery stools? 
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/ Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+      - key: _5b
+        question: ...did you have hard or lumpy stools? 
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never/ Rarely
+          - value: b
+            text: Sometimes
+          - value: c
+            text: Often
+          - value: d
+            text: Most of the time
+          - value: e
+            text: Always
+      - key: _6
+        question: [["Text","D6. Have you had any of the following "],["Bold","in the last 3 months"],["Text","?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Rectal bleeding or blood in your stool
+          - value: b
+            text: Less than 3 bowel movements per week
+          - value: c
+            text: More than 3 bowel movements per day
+          - value: d
+            text: Nausea and/or vomiting
+          - value: e
+            text: Straining during a bowel movement
+          - value: f
+            text: Urgent need to have a bowel movement
+          - value: g
+            text: Feeling of incomplete emptying with bowel movements
+          - value: h
+            text: Passing mucus at the time of bowel movements
+          - value: i
+            text: Abdominal fullness, bloating, or swelling
+          - value: j
+            text: Intestinal cramping
+      - key: _7
+        question: [["Text","D7. "],["Bold","In the last 3 months"],["Text",", have you experienced any of the following?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Loss of urine when coughing, sneezing or laughing
+          - value: b
+            text: Difficulty passing urine
+          - value: c
+            text: Frequent bladder infections
+          - value: d
+            text: Blood in the urine
+          - value: e
+            text: Still feeling full after urination
+          - value: f
+            text: Having to urinate again within minutes of urinating
+      - key: _8
+        question: D8. Has a doctor or other health care provider ever diagnosed you with endometriosis?
+        type: YESNO_CHOICE
+      - key: _8.1
+        question: D8.1. How was the diagnosis made?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Laparoscopy or other surgical procedure
+          - value: b
+            text: Ultrasound/MRI scan
+          - value: c
+            text: Based on symptoms
+          - value: d
+            text: Other
+            inlineQuestion:
+              key: _8.1_d_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _8
+                operator: =
+                value: 'yes'
+      - key: _8.2
+        question: D8.2. If you have had surgery for endometriosis, during your most recent surgery was your endometriosis treated (i.e. was it removed or burnt away)?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'Yes'
+          - value: c
+            text: Unsure
+          - value: d
+            text: Have not had surgery for endometriosis
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _8
+                operator: =
+                value: 'yes'
+      - key: _8.3_trigger
+        question: Have you ever had symptoms of endometriosis?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _8
+                operator: =
+                value: 'yes'
+      - key: _8.3
+        question: D8.3. How old were you when you first had symptoms?
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _8
+                operator: =
+                value: 'yes'
+                AND: 
+                  - section: group_1
+                    question: _8.3_trigger
+                    operator: =
+                    value: 'yes'
+      - key: _8.4
+        question: D8.4. What symptoms, if any, prompted you to see a health care provider before your diagnosis with endometriosis?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Pain
+          - value: b
+            text: Infertility
+          - value: c
+            text: No symptoms
+          - value: d
+            text: Other
+            inlineQuestion:
+              key: _8.4_d_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _8
+                operator: =
+                value: 'yes'
+      - key: _8.5
+        question: D8.5. How old were you when you were diagnosed with endometriosis?
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _8
+                operator: =
+                value: 'yes'
+      - key: _9
+        question: D9. Have you ever had surgery to look for endometriosis and none was found?
+        type: YESNO_CHOICE
+      - key: _9.1
+        question: D9.1. What symptoms prompted the surgery?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Pain
+          - value: b
+            text: Infertility
+          - value: d
+            text: Other
+            inlineQuestion:
+              key: _8.4_d_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _9
+                operator: =
+                value: 'yes'
+      - key: _10_intro
+        type: DISPLAY
+        question: D10. Have any of your female blood relatives been diagnosed with endometriosis or suffered from chronic pelvic pain?
+      - key: _10a_group_a
+        question: [["Text","Has your "],["Underline",["Bold","mother"]],["Text"," been diagnosed with "],["Underline",["Bold","endometriosis"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
+      - key: _10b_group_a
+        question: [["Text","Has your "],["Underline",["Bold","mother"]],["Text"," been diagnosed with "],["Underline",["Bold","chronic pelvic pain"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
+      - key: _10a_group_b
+        question: [["Text","Has your "],["Underline",["Bold","sister"]],["Text"," been diagnosed with "],["Underline",["Bold","endometriosis"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
+          - value: d
+            text: Do not have a sister
+      - key: _10b_group_b
+        question: [["Text","Has your "],["Underline",["Bold","sister"]],["Text"," been diagnosed with "],["Underline",["Bold","chronic pelvic pain"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
+          - value: d
+            text: Do not have a sister
+      - key: _10a_group_c
+        question: [["Text","Has your "],["Underline",["Bold","grandmother, aunt or cousin on mother's side"]],["Text"," been diagnosed with "],["Underline",["Bold","endometriosis"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
+      - key: _10b_group_c
+        question: [["Text","Has your "],["Underline",["Bold","grandmother, aunt or cousin on mother's side"]],["Text"," been diagnosed with "],["Underline",["Bold","chronic pelvic pain"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
+      - key: _10a_group_d
+        question: [["Text","Has your "],["Underline",["Bold","grandmother, aunt or cousin on father's side"]],["Text"," been diagnosed with "],["Underline",["Bold","endometriosis"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
+      - key: _10b_group_d
+        question: [["Text","Has your "],["Underline",["Bold","grandmother, aunt or cousin on father's side"]],["Text"," been diagnosed with "],["Underline",["Bold","chronic pelvic pain"]],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'No'
+          - value: b
+            text: 'yes'
+          - value: c
+            text: Do not know
