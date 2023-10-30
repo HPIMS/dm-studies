@@ -22,6 +22,14 @@ sections:
       - key: _1.1
         question: D1.1. What type(s) of cancer (primary location) have you been diagnosed with, and when were you first diagnosed?
         type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: =
+                value: 'yes'
       - key: _2
         question: D2. Have you ever had any of the following medical conditions?
         type: MULTIPLE_CHOICE
@@ -240,8 +248,7 @@ sections:
                 value: 'yes'
       - key: _4
         type: DISPLAY
-        question: D4. Have you had any of the following surgical procedures during your life? 
-        content: If so, at approximately what age(s) did you have the procedure(s), how many have you had in total, and what was the reason for the surgery?
+        question: D4. Have you had any of the following surgical procedures during your life?
       - key: _4a
         question: Tubal ligation (sterilisation/tubes tied)
         type: YESNO_CHOICE
@@ -1020,6 +1027,11 @@ sections:
                 question: _9
                 operator: =
                 value: 'yes'
+  - type: survey
+    key: group_2
+    title: ""
+    description: ''
+    questions:
       - key: _10_intro
         type: DISPLAY
         question: D10. Have any of your female blood relatives been diagnosed with endometriosis or suffered from chronic pelvic pain?
