@@ -1,0 +1,325 @@
+key: werf-menstrual-history
+scorable: false
+metadata:
+  author: ''
+  instrument: WERF EPHect Questionnaire - Standard (EPQ-S)
+  version: ''
+  references:
+    - 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252538/'
+schedule:
+  type: PERIOD
+  period: ALWAYS
+name: WERF Menstrual History and Hormones
+sections:
+  - type: survey
+    key: meta
+    title: ""
+    description: ''
+    questions:
+      - key: WERF_age_select
+        question: Which of the following best describes your current age?
+        description: >-
+          Why do we need this? Some questions can be skipped based on your current age. We use this information to simplify the questionnaire that we show you.
+        type: SINGLE_CHOICE
+        required: true
+        options:
+          - value: a
+            text: 15 years old or younger
+          - value: b
+            text: 16-20 years old
+          - value: c
+            text: 21-30 years old
+          - value: d
+            text: 31-40 years old
+          - value: e
+            text: 41-50 years old
+  - type: survey
+    key: group_0
+    title: ""
+    description: ''
+    questions:
+      - key: _1
+        question: A1. How old were you when you had your first menstrual period?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 8 years or younger
+          - value: b
+            text: '9'
+          - value: c
+            text: '10'
+          - value: d
+            text: '11'
+          - value: e
+            text: '12'
+          - value: f
+            text: '13'
+          - value: g
+            text: '14'
+          - value: h
+            text: '15'
+          - value: i
+            text: '16'
+          - value: j
+            text: 17 years or older
+          - value: k
+            text: Uncertain
+          - value: l
+            text: Periods have not started yet
+      - key: _2
+        question: A2. Have you had any periods in the last 3 months?
+        description: ["Underline","(We mean bleeding for which you needed a tampon or sanitary pad, NOT discharge (spotting) for which you needed a panty liner only)"]
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l 
+      - key: _2.1
+        question: A2.1. What was the reason for not having periods?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Taking hormones continuously (e.g. the Pill, injections, Mirena, HRT)
+          - value: b
+            text: Pregnant/breastfeeding
+          - value: c
+            text: Unsure
+          - value: d
+            text: Other
+            inlineQuestion:
+              key: _2.1_d_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'no'
+      - key: _2.2
+        question: A2.2. Approximately how many periods have you had over the last 12 months?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'no'
+      - key: _2.3
+        question: A2.3. When was your last period?
+        type: NUMERIC
+        options:
+          - value: a
+            text: 3-6 months ago
+          - value: b
+            text: 7-12 months ago
+          - value: c
+            text: Over 12 months ago
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'no'
+      - key: _2.4
+        question: A2.4. When was your last period?
+        type: NUMERIC
+        options:
+          - value: a
+            text: Natural
+          - value: b
+            text: Hormone induced
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.5
+        question: A2.4. Were your periods in the last 3 months natural or hormone-induced (e.g. on the Pill, injections, Mirena or HRT)?
+        type: NUMERIC
+        options:
+          - value: a
+            text: Natural
+          - value: b
+            text: Hormone induced
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.5
+        question: A2.5. When was the first day of your last menstrual period (LMP)?
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.5_alt
+        question: "Or: "
+        type: CHECKBOX
+        boxLabel: I am uncertain
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.6
+        question: ["Body",[["Text","A2.6. Were your periods "],["Bold","in the last 3 months"],["Text"," regular?"]]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Extremely regular (period starts 1-2 days before or after it is expected)
+          - value: b
+            text: Very regular (period starts 3-4 days before or after it is expected)
+          - value: c
+            text: Regular (period starts 5-7 days before or after it is expected)
+          - value: d
+            text: Somewhat irregular (period starts 8-20 days before or after it is expected)
+          - value: e
+            text: Irregular (period starts more than 20 days before or after it is expected)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.7
+        question: [["Text","A2.7. How many days of bleeding did you usually have each period "],["Bold","in the last 3 months"],["Text"," regular?"]]
+        description: ["Italic","(Not counting discharge/spotting for which you need a panty liner only)"]
+        placeholder: ___ days
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.7_alt
+        question: "Or: "
+        type: CHECKBOX
+        boxLabel: Too irregular to say
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.8_intro
+        question: [["Text","The figure below shows examples of the amount of bleeding you can experience "],["Bold","every four hours"],["Text"," during your period. Please describe the amount of bleeding you typically experience four-hourly during your period "],["Bold","at its heaviest"],["Text",", and "],["Bold","on average"],["Text","."]]
+        content: ['Image', 'WERF-sanitary-ref']
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.8a
+        question: ["Underline",["Bold","At its heaviest?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: Spotting
+          - value: b
+            text: Light
+          - value: c
+            text: Moderate
+          - value: d
+            text: Heavy
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.8b
+        question: ["Underline",["Bold","On average?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: Spotting
+          - value: b
+            text: Light
+          - value: c
+            text: Moderate
+          - value: d
+            text: Heavy
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _2.9
+        question: [["Text", "A2.9. "],["Bold","In the last 3 months"],["Text",", how many days were there between the first day of one period and the first day of the next "],["Bold","on average"],["Text","?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: < 24 days
+          - value: b
+            text: 24-31 days
+          - value: c
+            text: 32-38 days
+          - value: d
+            text: 39-50 days
+          - value: e
+            text: 51+ days
+          - value: e
+            text: Too irregular to estimate
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _2
+                operator: =
+                value: 'yes'
+  - type: survey
+    key: group_0
+    title: ""
+    description: ''
+    questions:
+      - key: _3_intro
+        question: [["Text","A3. We are interested in what your period was like when you were "],["Underline",["Bold","NOT using hormonal contraception"]],["Text"," (the Pill, patch, ring, injection or hormonal IUD). For each age range, please tell us if you had periods and what they were like. If you did not have periods during an age range or were using hormonal contraception the whole time, please select the appropriate response. If you have not yet reached an age group, please skip."]]
+        type: DISPLAY
+
+
