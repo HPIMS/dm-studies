@@ -1,0 +1,63 @@
+key: demographis
+active: false
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Demographics
+sections:
+  - type: survey
+    key: sdh
+    title: ""
+    description: ""
+    questions:
+      - key: ms_patient
+        question: Are you a patient at the Mount Sinai Health System?
+        description: ''
+        type: YESNO_CHOICE
+      - key: ethnicity
+        question: What is your ethnicity?
+        type: SINGLE_CHOICE
+        options:
+          - value: hispanic_or_latino
+            text: Hispanic or Latino
+          - value: not_hispanic_or_latino
+            text: Not Hispanic or Latino
+          - value: unknown
+            text: Unknown
+      - key: race
+        question: What is your race?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: american
+            text: American Indian or Alaska Native
+          - value: asian
+            text: Asian
+          - value: black
+            text: Black, African-American
+          - value: hawaiian
+            text: Native Hawaiian or Other Pacific Islander
+          - value: white
+            text: White
+          - value: unknown
+            text: Unknown
+      - key: age
+        question: How old are you?
+        type: NUMERIC
+        placeholder: ___ years
+      - key: about_you
+        question: Write something about youself
+        type: TEXTAREA
+        placeholder: lorem ipsum
+      - key: about_you
+        question: Write something about youself
+        type: TEXT
+        placeholder: lorem ipsum
+      - key: display
+        type: DISPLAY
+        question: [["Text","lorem "],["Bold","ipsum"]]
+        content: [["H1","THIS IS A TITLE"],["Body",[["Text","In this survey we ask you to answer some questions regarding your ethnical/racial, social and "],["Bold","economical background"],["Text","."]]],["Body",[["Text","\n"],["Text","Why is "],["Underline","completing"],["Text"," this survey important?Health and disease is not only about biology. Social and economical factors can play a big role in your health. We want to account for this in our analyses and assess the impact of socioeconomical factors in the development of dysmenorrhea."]]],["Body",[["Text","\n"],["Italic",["Bold","You can take this survey later if you prefer. You may always choose to skip any questions that make you feel uncomfortable."]]]]]
