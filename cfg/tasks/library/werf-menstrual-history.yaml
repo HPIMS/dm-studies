@@ -68,7 +68,7 @@ sections:
             text: Periods have not started yet
       - key: _2
         question: A2. Have you had any periods in the last 3 months?
-        description: ["Underline","(We mean bleeding for which you needed a tampon or sanitary pad, NOT discharge (spotting) for which you needed a panty liner only)"]
+        description: ["Italic","(We mean bleeding for which you needed a tampon or sanitary pad, NOT discharge (spotting) for which you needed a panty liner only)"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -179,7 +179,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2.5_alt
-        question: "Or: "
+        question: ["Bold","Or check here if you are uncertain."]
         type: CHECKBOX
         boxLabel: I am uncertain
         triggers:
@@ -226,7 +226,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2.7_alt
-        question: "Or: "
+        question: ["Bold","Or check here if it is too irregular to say."]
         type: CHECKBOX
         boxLabel: Too irregular to say
         triggers:
