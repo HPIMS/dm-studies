@@ -252,7 +252,7 @@ sections:
       - key: _4a
         question: Tubal ligation (sterilisation/tubes tied)
         type: YESNO_CHOICE
-      - key: _4a_part_2
+      - key: _4a.3
         question: At approximately what age did you have the procedure?
         placeholder: ___ years
         type: TEXT
@@ -267,7 +267,7 @@ sections:
       - key: _4b
         question: Appendix removed
         type: YESNO_CHOICE
-      - key: _4b_part_2
+      - key: _4b.3
         question: At approximately what age did you have the procedure?
         placeholder: ___ years
         type: TEXT
@@ -282,7 +282,7 @@ sections:
       - key: _4c
         question: Hysterectomy
         type: YESNO_CHOICE
-      - key: _4c_part_2
+      - key: _4c.3
         question: At approximately what age did you have the procedure?
         placeholder: ___ years
         type: TEXT
@@ -294,7 +294,7 @@ sections:
                 question: _4c
                 operator: =
                 value: 'yes'
-      - key: _4c_part_3
+      - key: _4c.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -308,7 +308,7 @@ sections:
       - key: _4d
         question: Oophorectomy
         type: YESNO_CHOICE
-      - key: _4d_part_0
+      - key: _4d.1
         question: How many of your ovaries have been removed?
         type: SINGLE_CHOICE
         options:
@@ -326,7 +326,7 @@ sections:
                 question: _4d
                 operator: =
                 value: 'yes'
-      - key: _4d_part_1
+      - key: _4d.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -337,7 +337,7 @@ sections:
                 question: _4d
                 operator: =
                 value: 'yes'
-      - key: _4d_part_2
+      - key: _4d.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -349,7 +349,7 @@ sections:
                 question: _4d
                 operator: =
                 value: 'yes'
-      - key: _4d_part_3
+      - key: _4d.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -363,7 +363,7 @@ sections:
       - key: _4e
         question: Dilatation and Curettage (D&C)
         type: YESNO_CHOICE
-      - key: _4e_part_1
+      - key: _4e.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -374,7 +374,7 @@ sections:
                 question: _4e
                 operator: =
                 value: 'yes'
-      - key: _4e_part_2
+      - key: _4e.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -386,7 +386,7 @@ sections:
                 question: _4e
                 operator: =
                 value: 'yes'
-      - key: _4e_part_3
+      - key: _4e.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -400,7 +400,7 @@ sections:
       - key: _4f
         question: Cervical surgery (LEEP or conization)
         type: YESNO_CHOICE
-      - key: _4f_part_1
+      - key: _4f.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -411,7 +411,7 @@ sections:
                 question: _4f
                 operator: =
                 value: 'yes'
-      - key: _4f_part_2
+      - key: _4f.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -423,7 +423,7 @@ sections:
                 question: _4f
                 operator: =
                 value: 'yes'
-      - key: _4f_part_3
+      - key: _4f.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -437,7 +437,7 @@ sections:
       - key: _4g
         question: Hysteroscopy
         type: YESNO_CHOICE
-      - key: _4g_part_1
+      - key: _4g.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -448,7 +448,7 @@ sections:
                 question: _4g
                 operator: =
                 value: 'yes'
-      - key: _4g_part_2
+      - key: _4g.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -460,7 +460,7 @@ sections:
                 question: _4g
                 operator: =
                 value: 'yes'
-      - key: _4g_part_3
+      - key: _4g.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -474,7 +474,7 @@ sections:
       - key: _4h
         question: Gall bladder surgery
         type: YESNO_CHOICE
-      - key: _4h_part_1
+      - key: _4h.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -485,7 +485,7 @@ sections:
                 question: _4h
                 operator: =
                 value: 'yes'
-      - key: _4h_part_2
+      - key: _4h.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -497,7 +497,7 @@ sections:
                 question: _4h
                 operator: =
                 value: 'yes'
-      - key: _4h_part_3
+      - key: _4h.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -511,7 +511,7 @@ sections:
       - key: _4i
         question: Hernia operation
         type: YESNO_CHOICE
-      - key: _4i_part_1
+      - key: _4i.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -522,7 +522,7 @@ sections:
                 question: _4i
                 operator: =
                 value: 'yes'
-      - key: _4i_part_2
+      - key: _4i.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -534,7 +534,7 @@ sections:
                 question: _4i
                 operator: =
                 value: 'yes'
-      - key: _4i_part_3
+      - key: _4i.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -548,7 +548,7 @@ sections:
       - key: _4j
         question: Sigmoidoscopy/colonoscopy (insertion of a tube to look inside your bowel)
         type: YESNO_CHOICE
-      - key: _4j_part_1
+      - key: _4j.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -559,7 +559,7 @@ sections:
                 question: _4j
                 operator: =
                 value: 'yes'
-      - key: _4j_part_2
+      - key: _4j.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -571,7 +571,7 @@ sections:
                 question: _4j
                 operator: =
                 value: 'yes'
-      - key: _4j_part_3
+      - key: _4j.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
@@ -585,7 +585,7 @@ sections:
       - key: _4k
         question: Laparoscopy (surgery involving insertion of a telescope into you abdomen)
         type: YESNO_CHOICE
-      - key: _4k_part_1
+      - key: _4k.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -596,7 +596,7 @@ sections:
                 question: _4k
                 operator: =
                 value: 'yes'
-      - key: _4k.1_part_2
+      - key: _4k.1.3
         question: [["Text","At approximately what age did you have the "],["Underline",["Bold","1st"]],["Text"," procedure?"]]
         placeholder: ___ years, ...
         type: TEXT
@@ -610,10 +610,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 1
-      - key: _4k.1_part_3
+      - key: _4k.1.4
         question: [["Text","What was the reason for the "],["Underline",["Bold","1st"]],["Text"," surgery?"]]
         type: TEXT
         triggers:
@@ -626,10 +626,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 1
-      - key: _4k.2_part_2
+      - key: _4k.2.3
         question: [["Text","At approximately what age did you have the "],["Underline",["Bold","2nd"]],["Text"," procedure?"]]
         placeholder: ___ years
         type: TEXT
@@ -643,10 +643,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 2
-      - key: _4k.2_part_3
+      - key: _4k.2.4
         question: [["Text","What was the reason for the "],["Underline",["Bold","2nd"]],["Text"," surgery?"]]
         type: TEXT
         triggers:
@@ -659,10 +659,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 2
-      - key: _4k.3_part_2
+      - key: _4k.3.3
         question: [["Text","At approximately what age did you have the "],["Underline",["Bold","3rd"]],["Text"," procedure?"]]
         placeholder: ___ years
         type: TEXT
@@ -676,10 +676,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 3
-      - key: _4k.3_part_3
+      - key: _4k.3.4
         question: [["Text","What was the reason for the "],["Underline",["Bold","3rd"]],["Text"," surgery?"]]
         type: TEXT
         triggers:
@@ -692,10 +692,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 3
-      - key: _4k.4_part_2
+      - key: _4k.4.3
         question: [["Text","At approximately what age did you have the "],["Underline",["Bold","4th"]],["Text"," procedure?"]]
         placeholder: ___ years
         type: TEXT
@@ -709,10 +709,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 4
-      - key: _4k.4_part_3
+      - key: _4k.4.4
         question: [["Text","What was the reason for the "],["Underline",["Bold","4th"]],["Text"," surgery?"]]
         type: TEXT
         triggers:
@@ -725,10 +725,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 4
-      - key: _4k.5_part_2
+      - key: _4k.5.3
         question: [["Text","At approximately what age did you have the "],["Underline",["Bold","5th or last"]],["Text"," procedure?"]]
         placeholder: ___ years
         type: TEXT
@@ -742,10 +742,10 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2.3
                     operator: '>='
                     value: 5
-      - key: _4k.5_part_3
+      - key: _4k.5.4
         question: [["Text","What was the reason for the "],["Underline",["Bold","5th or last"]],["Text"," surgery?"]]
         type: TEXT
         triggers:
@@ -758,13 +758,13 @@ sections:
                 value: 'yes'
                 AND:
                   - section: _D(1)
-                    question: _4k_part_1
+                    question: _4k.2
                     operator: '>='
                     value: 5
       - key: _4l
         question: Other abdominal surgery
         type: YESNO_CHOICE
-      - key: _4l_part_0
+      - key: _4l.1
         question: What was the surgery?
         type: TEXT
         triggers:
@@ -775,7 +775,7 @@ sections:
                 question: _4l
                 operator: =
                 value: 'yes'
-      - key: _4l_part_1
+      - key: _4l.2
         question: How many times did you have this surgery?
         type: NUMERIC
         triggers:
@@ -786,7 +786,7 @@ sections:
                 question: _4l
                 operator: =
                 value: 'yes'
-      - key: _4l_part_2
+      - key: _4l.3
         question: At approximately what age(s) did you have the procedure?
         placeholder: ___ years, ...
         type: TEXT
@@ -798,7 +798,7 @@ sections:
                 question: _4l
                 operator: =
                 value: 'yes'
-      - key: _4l_part_3
+      - key: _4l.4
         question: What was the reason for the surgery?
         type: TEXT
         triggers:
