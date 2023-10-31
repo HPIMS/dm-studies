@@ -310,7 +310,7 @@ sections:
                 question: WERF_age_select
                 operator: =
                 value: e
-      - key: _11e
+      - key: _11f
         question: ["Bold", "35-39"]
         type: H_SCALE
         min: 1
@@ -327,7 +327,7 @@ sections:
                 question: WERF_age_select
                 operator: =
                 value: e
-      - key: _11e
+      - key: _11g
         question: ["Bold", "40-44"]
         type: H_SCALE
         min: 1
@@ -344,7 +344,7 @@ sections:
                 question: WERF_age_select
                 operator: =
                 value: e
-      - key: _11f
+      - key: _11h
         question: ["Bold", "45+"]
         type: H_SCALE
         min: 1
@@ -359,7 +359,7 @@ sections:
                 value: e
       - key: _12
         question: F12. The shapes and descriptions below describe 4 typical female body shapes. Which shape best describes your body at each age? 
-        content: ["Image", "WERF-body-condition-ref"]
+        content: ["Image", "WERF-body-shape-ref"]
         type: DISPLAY
       - key: _12a
         question: ["Bold", "15-19"]
