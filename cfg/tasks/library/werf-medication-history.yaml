@@ -1086,12 +1086,20 @@ sections:
     title: ""
     description: ''
     questions:
-      - key: _2_intro
+      - key: _2
         question: [["Text","E2. Have you EVER taken prescription drugs for "],["Underline",["Bold","more than 3 months"]],["Text",", "],["Bold","excluding"],["Text"," hormone treatments and pain medications?"]]
         type: YESNO_CHOICE
       - key: _2a
         question: [["Text","Have you ever taken "],["Underline",["Bold","diuretics (water pills)"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2a.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1141,9 +1149,25 @@ sections:
       - key: _2a.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2a
+                operator: =
+                value: 'yes'
       - key: _2b
         question: [["Text","Have you ever taken "],["Underline",["Bold","diabetic tablets"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2b.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1193,9 +1217,25 @@ sections:
       - key: _2b.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2b
+                operator: =
+                value: 'yes'
       - key: _2c
         question: [["Text","Have you ever taken "],["Underline",["Bold","insulin"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2c.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1245,9 +1285,25 @@ sections:
       - key: _2c.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2c
+                operator: =
+                value: 'yes'
       - key: _2d
         question: [["Text","Have you ever taken "],["Underline",["Bold","thyroid drugs"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2d.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1297,9 +1353,25 @@ sections:
       - key: _2d.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2d
+                operator: =
+                value: 'yes'
       - key: _2e
         question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for epilepsy"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2e.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1349,9 +1421,25 @@ sections:
       - key: _2e.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2e
+                operator: =
+                value: 'yes'
       - key: _2f
         question: [["Text","Have you ever taken "],["Underline",["Bold","sleeping tablets / tranquilisers"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2f.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1401,9 +1489,25 @@ sections:
       - key: _2f.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2f
+                operator: =
+                value: 'yes'
       - key: _2g
         question: [["Text","Have you ever taken "],["Underline",["Bold","anti-depressants"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2g.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1453,9 +1557,25 @@ sections:
       - key: _2g.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2g
+                operator: =
+                value: 'yes'
       - key: _2h
         question: [["Text","Have you ever taken "],["Underline",["Bold","other drugs to treat mental illness"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2h.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1505,9 +1625,25 @@ sections:
       - key: _2h.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2h
+                operator: =
+                value: 'yes'
       - key: _2i
         question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for osteoporosis (“brittle bones”)"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2i.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1557,9 +1693,25 @@ sections:
       - key: _2i.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2i
+                operator: =
+                value: 'yes'
       - key: _2j
         question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for rheumatoid arthritis"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2j.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1609,9 +1761,25 @@ sections:
       - key: _2j.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2j
+                operator: =
+                value: 'yes'
       - key: _2k
         question: [["Text","Have you ever taken "],["Underline",["Bold","antibiotics for a month or more"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2k.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1661,9 +1829,25 @@ sections:
       - key: _2k.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2k
+                operator: =
+                value: 'yes'
       - key: _2l
         question: [["Text","Have you ever taken "],["Underline",["Bold","antacids"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2l.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1713,9 +1897,25 @@ sections:
       - key: _2l.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2l
+                operator: =
+                value: 'yes'
       - key: _2m
         question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for stomach ulcer / gastritis"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2m.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1765,9 +1965,25 @@ sections:
       - key: _2m.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2m
+                operator: =
+                value: 'yes'
       - key: _2n
         question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for high cholesterol"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2n.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1817,9 +2033,25 @@ sections:
       - key: _2n.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2n
+                operator: =
+                value: 'yes'
       - key: _2o
         question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for allergies (antihistamines)"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2o.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1869,9 +2101,25 @@ sections:
       - key: _2o.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2o
+                operator: =
+                value: 'yes'
       - key: _2p
         question: [["Text","Have you ever taken "],["Underline",["Bold","steroids (oral, inhaled, or nasal)"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2p.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1921,9 +2169,25 @@ sections:
       - key: _2p.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2p
+                operator: =
+                value: 'yes'
       - key: _2q
         question: [["Text","Have you ever taken "],["Underline",["Bold","chemotherapy for cancer"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2q.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -1973,9 +2237,25 @@ sections:
       - key: _2q.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2q
+                operator: =
+                value: 'yes'
       - key: _2r
         question: [["Text","Have you ever taken "],["Underline",["Bold","tamoxifen for cancer"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2r.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -2025,9 +2305,25 @@ sections:
       - key: _2r.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2r
+                operator: =
+                value: 'yes'
       - key: _2s
         question: [["Text","Have you ever taken "],["Underline",["Bold","blood pressure drugs"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2s.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -2077,9 +2373,25 @@ sections:
       - key: _2s.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2s
+                operator: =
+                value: 'yes'
       - key: _2t
         question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for angina (chest pain)"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2t.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -2129,9 +2441,25 @@ sections:
       - key: _2t.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2t
+                operator: =
+                value: 'yes'
       - key: _2u
         question: [["Text","Have you ever taken "],["Underline",["Bold","other drugs for a heart condition"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2u.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -2181,9 +2509,25 @@ sections:
       - key: _2u.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2u
+                operator: =
+                value: 'yes'
       - key: _2v
         question: [["Text","Have you ever taken "],["Underline",["Bold","inhaler for asthma"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2v.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -2233,9 +2577,25 @@ sections:
       - key: _2v.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2v
+                operator: =
+                value: 'yes'
       - key: _2w
         question: [["Text","Have you ever taken "],["Underline",["Bold","warfarin / heparin to thin blood"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2w.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -2285,9 +2645,25 @@ sections:
       - key: _2w.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2w
+                operator: =
+                value: 'yes'
       - key: _2x
         question: [["Text","Have you ever taken "],["Underline",["Bold","migraine tablets/injections"]],["Text","?"]]
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2
+                operator: =
+                value: 'yes'
       - key: _2x.1
         question: [["Text","Have you ever taken this drug "],["Underline","every day"],["Text"," for "],["Underline","over a month?"]]
         type: YESNO_CHOICE
@@ -2337,3 +2713,12 @@ sections:
       - key: _2x.5
         question: [["Text","Please write down the specific "],["Underline","name"],["Text"," of the drug you have used "],["Underline","most recently"],["Text"," if known."]]
         type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(2)
+                question: _2x
+                operator: =
+                value: 'yes'
+
