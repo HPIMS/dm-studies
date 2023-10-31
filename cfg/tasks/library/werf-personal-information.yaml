@@ -1,0 +1,185 @@
+key: werf-personal-information
+scorable: false
+metadata:
+  author: ''
+  instrument: WERF EPHect Questionnaire - Standard (EPQ-S)
+  version: ''
+  references:
+    - 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252538/'
+schedule:
+  type: PERIOD
+  period: ALWAYS
+name: WERF Personal Information and Lifestyle
+sections:
+  - type: survey
+    key: _F(1)
+    title: ""
+    description: ''
+    questions:
+      - key: _1
+        question: F1. What is your date of birth?
+        type: DATE
+      - key: _2
+        question: F2. How would you describe your ethnic origin?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: American Indian or Alaska Native
+          - value: b
+            text: Asian/Pacific/Oriental
+          - value: c
+            text: Black
+          - value: d
+            text: Native Hawaiian or Other Pacific Islander
+          - value: e
+            text: White
+          - value: f
+            text: Mixed Race
+          - value: g
+            text: Other
+            inlineQuestion:
+              key: _2_g_description
+              question: Please specify...
+      - key: _2.1
+        question: Please specify further...
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Black African
+          - value: b
+            text: African American
+          - value: c
+            text: Black Caribbean
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _2
+                operator: INCLUDES
+                value: c
+      - key: _2.2
+        question: Please specify further...
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: North/West European
+          - value: b
+            text: East European
+          - value: c
+            text: South European
+          - value: d
+            text: North American
+          - value: e
+            text: Other
+            inlineQuestion:
+              key: _2.2_e_description
+              question: Please specify...
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _2
+                operator: INCLUDES
+                value: e
+      - key: _3
+        question: F3. Do you consider yourself to be Spanish/Hispanic/Latina?
+        type: YESNO_CHOICE
+      - key: _4
+        question: F4. What is your major ancestry?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Scandinavian
+          - value: b
+            text: Irish / Celtic / British
+          - value: c
+            text: Other Northern European
+          - value: d
+            text: Eastern European
+          - value: e
+            text: South American
+          - value: f
+            text: Central American or Caribbean
+          - value: g
+            text: African
+          - value: h
+            text: Asian
+          - value: i
+            text: Southern European / Mediterranean
+          - value: j
+            text: Other
+            inlineQuestion:
+              key: _4_i_description
+              question: Please specify...
+          - value: k
+            text: Don't know
+      - key: _5
+        question: F5. Are you currently in school?
+        type: YESNO_CHOICE
+      - key: _6
+        question: F6. What is the highest level of education you have attained (with certificate)?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Primary/grade School
+          - value: b
+            text: Lower secondary/middle school
+          - value: c
+            text: Upper secondary/high school
+          - value: d
+            text: Post-secondary not university / some college or vocational school
+          - value: e
+            text: University
+          - value: f
+            text: Postgraduate
+      - key: _7
+        question: F7. What is your current height?
+        type: HEIGHT
+      - key: _8
+        question: F8. What is your current weight?
+        type: WEIGHT
+      - key: _9
+        question: [["Text","F9. Since 18 years of age, what is "],["Bold","the most"],["Text"," that you have weighed?"]]
+        description: ["Italic","(Not including pregnancy and the 12 months following pregnancy)"]
+        type: WEIGHT
+      - key: _9.1
+        question: How old were you when you weighed that much?
+        placeholder: ___ years
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _9
+                operator: IS_SET
+                AND:
+                  - section: _F(1)
+                    question: _9
+                    operator: ">"
+                    value: 0
+      - key: _10
+        question: [["Text","F10. Since 18 years of age, what is "],["Bold","the least"],["Text"," that you have weighed?"]]
+        description: ["Italic","(Not including pregnancy and the 12 months following pregnancy)"]
+        type: WEIGHT
+      - key: _10.1
+        question: How old were you when you weighed that much?
+        placeholder: ___ years
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _10
+                operator: IS_SET
+                AND:
+                  - section: _F(1)
+                    question: _10
+                    operator: ">"
+                    value: 0
