@@ -16,26 +16,1068 @@ sections:
     title: ""
     description: ''
     questions:
-      - key: _1
+      - key: _1_intro
         question: [["Text","E1. Please tell us about any pain medications, over-the-counter or prescription, that you have used at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
-        description: Select all that apply
-        type: MULTIPLE_CHOICE
+        type: DISPLAY
+      - key: _1a
+        question: [["Text","Have you ever taken "],["Underline",["Bold","paracetamol/acetaminophen"]],["Text"," at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1a.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1a.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1a.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
         options:
           - value: a
-            text: Paracetamol/acetaminophen
+            text: Pelvic pain
           - value: b
-            text: Aspirin (325 mg or more/tablet)
+            text: Other pain
           - value: c
-            text: Ibuprofen (e.g., Brufen)
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1a.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
           - value: d
-            text: Celebrex, Vioxx (COX-2 inhibitors)
-          - value: e
-            text: Other anti-inflammatory analgesics (naproxen, mefanamic acid, Aleve, Naprosyn, Relafen, Ketoprofen, Anaprox)
-          - value: f
-            text: Strong (narcotic) analgesics (hydrocodone +paracetamol, codeine+paracetamol, morphine, codeine, oxycodone, hydrocodone, Demerol)
-          - value: g
-            text: Other pain-killing drugs aimed at the nerves/central nervous system (amitriptyline, nortriptyline, gabapentin, pregabalin, lamotrigine)
-          - value: h
-            text: Muscle relaxants (diazepam/temazepam, buscopan)
-          - value: i
-            text: Herbal medicines
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1a.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1a.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1a.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1a.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1a
+                operator: =
+                value: 'yes'
+      - key: _1b
+        question: [["Text","Have you ever taken "],["Underline",["Bold","aspirin"]],["Text"," (325 mg or more/tablet) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1b.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1b.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1b.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1b.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1b.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1b.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1b.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1b.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1b
+                operator: =
+                value: 'yes'
+      - key: _1c
+        question: [["Text","Have you ever taken "],["Underline",["Bold","ibuprofen"]],["Text"," (e.g., Brufen) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1c.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1c.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1c.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1c.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1c.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1c.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1c.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1c.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1c
+                operator: =
+                value: 'yes'
+      - key: _1d
+        question: [["Text","Have you ever taken "],["Underline",["Bold","celebrex, Vioxx (COX-2 inhibitors)"]],["Text"," at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1d.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1d.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1d.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1d.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1d.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1d.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1d.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1d.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1d
+                operator: =
+                value: 'yes'
+      - key: _1e
+        question: [["Text","Have you ever taken "],["Underline",["Bold","other anti-inflammatory analgesics"]],["Text"," (e.g. naproxen, mefanamic acid, Aleve, Naprosyn, Relafen, Ketoprofen, Anaprox) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1e.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1e.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1e.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1e.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1e.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1e.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1e.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1e.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1e
+                operator: =
+                value: 'yes'
+      - key: _1f
+        question: [["Text","Have you ever taken "],["Underline",["Bold","strong (narcotic) analgesics"]],["Text"," (e.g. hydrocodone +paracetamol, codeine+paracetamol, morphine, codeine, oxycodone, hydrocodone, Demerol) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1f.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1f.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1f.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1f.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1f.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1f.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1f.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1f.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1f
+                operator: =
+                value: 'yes'
+      - key: _1g
+        question: [["Text","Have you ever taken "],["Underline",["Bold","other pain-killing drugs aimed at the nerves/central nervous system"]],["Text"," (e.g. amitriptyline, nortriptyline, gabapentin, pregabalin, lamotrigine) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1g.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1g.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1g.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1g.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1g.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1g.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1g.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1g.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1g
+                operator: =
+                value: 'yes'
+      - key: _1h
+        question: [["Text","Have you ever taken "],["Underline",["Bold","muscle relaxants"]],["Text"," (e.g. diazepam/temazepam, buscopan) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1h.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1h.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1h.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1h.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1h.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1h.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1h.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1h.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1h
+                operator: =
+                value: 'yes'
+      - key: _1i
+        question: [["Text","Have you ever taken "],["Underline",["Bold","herbal medicines"]],["Text"," at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        type: YESNO_CHOICE
+      - key: _1i.1
+        question: Are you currently taking this medication?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
+      - key: _1i.2
+        question: [["Text","At what age did you "],["Underline",["Bold","first"]],["Text"," take this drug regularly?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
+      - key: _1i.3
+        question: For what pain was this medication used?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Pelvic pain
+          - value: b
+            text: Other pain
+          - value: c
+            text: Both
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
+      - key: _1i.4
+        question: How many days per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: '1'
+          - value: b
+            text: 2-3
+          - value: c
+            text: 4-5
+          - value: d
+            text: 6+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
+      - key: _1i.5
+        question: How many tablets per week?
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 1-2
+          - value: b
+            text: 3-5
+          - value: c
+            text: 6-14
+          - value: d
+            text: 15+
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
+      - key: _1i.6.1_intro
+        question: In total, how long have you used this drug?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
+      - key: _1i.6.1
+        question: ""
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
+      - key: _1i.6.2
+        question: ""
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _E(1)
+                question: _1i
+                operator: =
+                value: 'yes'
