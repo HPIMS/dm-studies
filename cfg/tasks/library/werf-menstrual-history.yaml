@@ -1273,6 +1273,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _7.3.1
+        question: ""
         placeholder: ___ years
         type: NUMERIC
         triggers:
@@ -1284,6 +1285,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _7.3.2
+        question: ""
         placeholder: ___ months
         type: NUMERIC
         triggers:
