@@ -119,7 +119,7 @@ sections:
                 value: 'no'
       - key: _2.3
         question: A2.3. When was your last period?
-        type: NUMERIC
+        type: SINGLE_CHOICE
         options:
           - value: a
             text: 3-6 months ago
@@ -136,24 +136,8 @@ sections:
                 operator: =
                 value: 'no'
       - key: _2.4
-        question: A2.4. When was your last period?
-        type: NUMERIC
-        options:
-          - value: a
-            text: Natural
-          - value: b
-            text: Hormone induced
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: group_0
-                question: _2
-                operator: =
-                value: 'yes'
-      - key: _2.5
         question: A2.4. Were your periods in the last 3 months natural or hormone-induced (e.g. on the Pill, injections, Mirena or HRT)?
-        type: NUMERIC
+        type: SINGLE_CHOICE
         options:
           - value: a
             text: Natural
