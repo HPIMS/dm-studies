@@ -419,8 +419,8 @@ sections:
                 question: _3a_group_a
                 operator: =
                 value: '1'
-      - key: _3d_intro
-        question: [["Underline",["Bold","Up to age 15"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+      - key: _3d_intro_group_a
+        question: [["Underline",["Bold","Up to age 15"]], ["Text"," How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
         type: DISPLAY
         triggers:
           - action:
@@ -581,8 +581,8 @@ sections:
                 question: _3a_group_b
                 operator: =
                 value: '1'
-      - key: _3d_intro
-        question: [["Underline",["Bold","16-20 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+      - key: _3d_intro_group_b
+        question: [["Underline",["Bold","16-20 yrs"]], ["Text"," How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
         type: DISPLAY
         triggers:
           - action:
@@ -739,8 +739,8 @@ sections:
                 question: _3a_group_c
                 operator: =
                 value: '1'
-      - key: _3d_intro
-        question: [["Underline",["Bold","21-30 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+      - key: _3d_intro_group_c
+        question: [["Underline",["Bold","21-30 yrs"]], ["Text"," How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
         type: DISPLAY
         triggers:
           - action:
@@ -893,8 +893,8 @@ sections:
                 question: _3a_group_d
                 operator: =
                 value: '1'
-      - key: _3d_intro
-        question: [["Underline",["Bold","31-40 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+      - key: _3d_intro_group_d
+        question: [["Underline",["Bold","31-40 yrs"]], ["Text"," How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
         type: DISPLAY
         triggers:
           - action:
@@ -1047,8 +1047,8 @@ sections:
                 question: _3a_group_e
                 operator: =
                 value: '1'
-      - key: _3d_intro
-        question: [["Underline",["Bold","41-50 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+      - key: _3d_intro_e
+        question: [["Underline",["Bold","41-50 yrs"]], ["Text"," How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
         type: DISPLAY
         triggers:
           - action:
