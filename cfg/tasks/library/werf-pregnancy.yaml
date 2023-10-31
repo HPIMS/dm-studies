@@ -12,7 +12,7 @@ schedule:
 name: WERF Pregnancy and Fertility
 sections:
   - type: survey
-    key: group_0
+    key: _B(1)
     title: ""
     description: ''
     questions:
@@ -26,7 +26,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1
                 operator: =
                 value: 'yes'
@@ -37,7 +37,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 1
@@ -57,7 +57,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 1
@@ -86,7 +86,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 1
@@ -104,15 +104,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: f
@@ -128,15 +128,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: d
@@ -154,15 +154,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: d
@@ -195,7 +195,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 1 
@@ -208,11 +208,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_a
                 operator: INCLUDES
                 value: b
@@ -223,7 +223,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 2
@@ -243,7 +243,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 2
@@ -272,7 +272,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 2 
@@ -290,15 +290,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: f
@@ -314,15 +314,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: d
@@ -340,15 +340,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: d
@@ -381,7 +381,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 2
@@ -394,11 +394,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_b
                 operator: INCLUDES
                 value: b
@@ -409,7 +409,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 3
@@ -429,7 +429,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 3
@@ -458,7 +458,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 3
@@ -476,15 +476,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: f
@@ -500,15 +500,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: d
@@ -526,15 +526,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: d
@@ -567,7 +567,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 3
@@ -580,11 +580,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_c
                 operator: INCLUDES
                 value: b
@@ -595,7 +595,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 4
@@ -615,7 +615,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 4
@@ -644,7 +644,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 4
@@ -662,15 +662,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: f
@@ -686,15 +686,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: d
@@ -712,15 +712,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: d
@@ -753,7 +753,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 4 
@@ -766,11 +766,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_d
                 operator: INCLUDES
                 value: b
@@ -781,7 +781,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 5
@@ -801,7 +801,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 5 
@@ -830,7 +830,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 5
@@ -848,15 +848,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: f
@@ -872,15 +872,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: d
@@ -898,15 +898,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: d
@@ -939,7 +939,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 5
@@ -952,11 +952,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_e
                 operator: INCLUDES
                 value: b
@@ -967,7 +967,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 6
@@ -987,7 +987,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 6 
@@ -1016,7 +1016,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 6
@@ -1034,15 +1034,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: f
@@ -1058,15 +1058,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: d
@@ -1084,15 +1084,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: d
@@ -1125,7 +1125,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 6
@@ -1138,11 +1138,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_f
                 operator: INCLUDES
                 value: b
@@ -1153,7 +1153,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 7
@@ -1173,7 +1173,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 7 
@@ -1202,7 +1202,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 7
@@ -1220,15 +1220,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: f
@@ -1244,15 +1244,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: d
@@ -1270,15 +1270,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: d
@@ -1311,7 +1311,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 7
@@ -1324,11 +1324,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_g
                 operator: INCLUDES
                 value: b
@@ -1339,7 +1339,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 8
@@ -1359,7 +1359,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 8 
@@ -1388,7 +1388,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 8
@@ -1406,15 +1406,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: f
@@ -1430,15 +1430,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: d
@@ -1456,15 +1456,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: d
@@ -1497,7 +1497,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 8
@@ -1510,11 +1510,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_h
                 operator: INCLUDES
                 value: b
@@ -1525,7 +1525,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 9
@@ -1545,7 +1545,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 9 
@@ -1574,7 +1574,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 9
@@ -1592,15 +1592,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: f
@@ -1616,15 +1616,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: d
@@ -1642,15 +1642,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: d
@@ -1683,7 +1683,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 9
@@ -1696,11 +1696,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_i
                 operator: INCLUDES
                 value: b
@@ -1711,7 +1711,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 10
@@ -1731,7 +1731,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 10 
@@ -1760,7 +1760,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 10
@@ -1778,15 +1778,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: c 
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: e
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: f
@@ -1802,15 +1802,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: d
@@ -1828,15 +1828,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: b
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: d
@@ -1869,7 +1869,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1.1
                 operator: '>='
                 value: 10
@@ -1882,16 +1882,16 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: a
-              - section: group_0
+              - section: _B(1)
                 question: _1c_group_j
                 operator: INCLUDES
                 value: b
   - type: survey
-    key: group_1
+    key: _B(2)
     title: ""
     description: ''
     questions:
@@ -1906,7 +1906,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -1948,7 +1948,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _3
                 operator: =
                 value: 'yes'
@@ -1962,7 +1962,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -1980,7 +1980,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -1992,11 +1992,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1a.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1a.1
                 operator: =
                 value: c
@@ -2014,7 +2014,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2026,11 +2026,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1b.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1b.1
                 operator: =
                 value: c
@@ -2048,7 +2048,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2060,11 +2060,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1c.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1c.1
                 operator: =
                 value: c
@@ -2082,7 +2082,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2094,11 +2094,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1d.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1d.1
                 operator: =
                 value: c
@@ -2116,7 +2116,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2128,11 +2128,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1e.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1e.1
                 operator: =
                 value: c
@@ -2150,7 +2150,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2162,11 +2162,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1f.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1f.1
                 operator: =
                 value: c
@@ -2184,7 +2184,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2196,11 +2196,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1g.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1g.1
                 operator: =
                 value: c
@@ -2218,7 +2218,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2230,11 +2230,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1h.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1h.1
                 operator: =
                 value: c
@@ -2252,7 +2252,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4
                 operator: =
                 value: 'yes'
@@ -2264,11 +2264,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1i.1
                 operator: =
                 value: b
-              - section: group_1
+              - section: _B(2)
                 question: _4.1i.1
                 operator: =
                 value: c
@@ -2294,15 +2294,15 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _B(2)
                 question: _4.1g.1
                 operator: =
                 value: 'yes'
-              - section: group_1
+              - section: _B(2)
                 question: _4.1h.1
                 operator: =
                 value: 'yes'
-              - section: group_1
+              - section: _B(2)
                 question: _4.1i.1
                 operator: =
                 value: 'yes'

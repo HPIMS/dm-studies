@@ -1,0 +1,41 @@
+key: werf-medication-history
+scorable: false
+metadata:
+  author: ''
+  instrument: WERF EPHect Questionnaire - Standard (EPQ-S)
+  version: ''
+  references:
+    - 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252538/'
+schedule:
+  type: PERIOD
+  period: ALWAYS
+name: WERF Medication History
+sections:
+  - type: survey
+    key: _E(1)
+    title: ""
+    description: ''
+    questions:
+      - key: _1
+        question: [["Text","E1. Please tell us about any pain medications, over-the-counter or prescription, that you have used at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Paracetamol/acetaminophen
+          - value: b
+            text: Aspirin (325 mg or more/tablet)
+          - value: c
+            text: Ibuprofen (e.g., Brufen)
+          - value: d
+            text: Celebrex, Vioxx (COX-2 inhibitors)
+          - value: e
+            text: Other anti-inflammatory analgesics (naproxen, mefanamic acid, Aleve, Naprosyn, Relafen, Ketoprofen, Anaprox)
+          - value: f
+            text: Strong (narcotic) analgesics (hydrocodone +paracetamol, codeine+paracetamol, morphine, codeine, oxycodone, hydrocodone, Demerol)
+          - value: g
+            text: Other pain-killing drugs aimed at the nerves/central nervous system (amitriptyline, nortriptyline, gabapentin, pregabalin, lamotrigine)
+          - value: h
+            text: Muscle relaxants (diazepam/temazepam, buscopan)
+          - value: i
+            text: Herbal medicines

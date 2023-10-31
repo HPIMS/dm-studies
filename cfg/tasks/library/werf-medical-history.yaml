@@ -12,7 +12,7 @@ schedule:
 name: WERF Medical History
 sections:
   - type: survey
-    key: group_0
+    key: _D(1)
     title: ""
     description: ''
     questions:
@@ -26,7 +26,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _1
                 operator: =
                 value: 'yes'
@@ -231,7 +231,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _3
                 operator: =
                 value: 'yes'
@@ -242,7 +242,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _3.1
                 operator: =
                 value: 'yes'
@@ -260,7 +260,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4a
                 operator: =
                 value: 'yes'
@@ -275,7 +275,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4b
                 operator: =
                 value: 'yes'
@@ -290,7 +290,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4c
                 operator: =
                 value: 'yes'
@@ -301,7 +301,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4c
                 operator: =
                 value: 'yes'
@@ -322,7 +322,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4d
                 operator: =
                 value: 'yes'
@@ -333,7 +333,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4d
                 operator: =
                 value: 'yes'
@@ -345,7 +345,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4d
                 operator: =
                 value: 'yes'
@@ -356,7 +356,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4d
                 operator: =
                 value: 'yes'
@@ -370,7 +370,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4e
                 operator: =
                 value: 'yes'
@@ -382,7 +382,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4e
                 operator: =
                 value: 'yes'
@@ -393,7 +393,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4e
                 operator: =
                 value: 'yes'
@@ -407,7 +407,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4f
                 operator: =
                 value: 'yes'
@@ -419,7 +419,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4f
                 operator: =
                 value: 'yes'
@@ -430,7 +430,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4f
                 operator: =
                 value: 'yes'
@@ -444,7 +444,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4g
                 operator: =
                 value: 'yes'
@@ -456,7 +456,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4g
                 operator: =
                 value: 'yes'
@@ -467,7 +467,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4g
                 operator: =
                 value: 'yes'
@@ -481,7 +481,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4h
                 operator: =
                 value: 'yes'
@@ -493,7 +493,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4h
                 operator: =
                 value: 'yes'
@@ -504,7 +504,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4h
                 operator: =
                 value: 'yes'
@@ -518,7 +518,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4i
                 operator: =
                 value: 'yes'
@@ -530,7 +530,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4i
                 operator: =
                 value: 'yes'
@@ -541,7 +541,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4i
                 operator: =
                 value: 'yes'
@@ -555,7 +555,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4j
                 operator: =
                 value: 'yes'
@@ -567,7 +567,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4j
                 operator: =
                 value: 'yes'
@@ -578,7 +578,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4j
                 operator: =
                 value: 'yes'
@@ -592,7 +592,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
@@ -604,12 +604,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 1
@@ -620,12 +620,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 1
@@ -637,12 +637,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 2
@@ -653,12 +653,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 2
@@ -670,12 +670,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 3
@@ -686,12 +686,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 3
@@ -703,12 +703,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 4
@@ -719,12 +719,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 4
@@ -736,12 +736,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 5
@@ -752,12 +752,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4k
                 operator: =
                 value: 'yes'
                 AND:
-                  - section: group_0
+                  - section: _D(1)
                     question: _4k_part_1
                     operator: '>='
                     value: 5
@@ -771,7 +771,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4l
                 operator: =
                 value: 'yes'
@@ -782,7 +782,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4l
                 operator: =
                 value: 'yes'
@@ -794,7 +794,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4l
                 operator: =
                 value: 'yes'
@@ -805,12 +805,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _D(1)
                 question: _4l
                 operator: =
                 value: 'yes'
   - type: survey
-    key: group_1
+    key: _D(2)
     title: ""
     description: ''
     questions:
@@ -912,7 +912,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _D(2)
                 question: _8
                 operator: =
                 value: 'yes'
@@ -932,7 +932,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _D(2)
                 question: _8
                 operator: =
                 value: 'yes'
@@ -943,7 +943,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _D(2)
                 question: _8
                 operator: =
                 value: 'yes'
@@ -955,12 +955,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _D(2)
                 question: _8
                 operator: =
                 value: 'yes'
                 AND: 
-                  - section: group_1
+                  - section: _D(2)
                     question: _8.3_trigger
                     operator: =
                     value: 'yes'
@@ -985,7 +985,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _D(2)
                 question: _8
                 operator: =
                 value: 'yes'
@@ -997,7 +997,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _D(2)
                 question: _8
                 operator: =
                 value: 'yes'
@@ -1023,12 +1023,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _D(2)
                 question: _9
                 operator: =
                 value: 'yes'
   - type: survey
-    key: group_2
+    key: _D(3)
     title: ""
     description: ''
     questions:
