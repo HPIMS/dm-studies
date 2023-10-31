@@ -12,6 +12,28 @@ schedule:
 name: WERF Personal Information and Lifestyle
 sections:
   - type: survey
+    key: meta
+    title: ""
+    description: ''
+    questions:
+      - key: WERF_age_select
+        question: Which of the following best describes your current age?
+        description: >-
+          Why do we need this? Some questions can be skipped based on your current age. We use this information to simplify the questionnaire that we show you.
+        type: SINGLE_CHOICE
+        required: true
+        options:
+          - value: a
+            text: 15 years old or younger
+          - value: b
+            text: 16-20 years old
+          - value: c
+            text: 21-30 years old
+          - value: d
+            text: 31-40 years old
+          - value: e
+            text: 41-50 years old
+  - type: survey
     key: _F(1)
     title: ""
     description: ''
@@ -151,18 +173,6 @@ sections:
         question: How old were you when you weighed that much?
         placeholder: ___ years
         type: AGE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _F(1)
-                question: _9
-                operator: IS_SET
-                AND:
-                  - section: _F(1)
-                    question: _9
-                    operator: ">"
-                    value: 0
       - key: _10
         question: [["Text","F10. Since 18 years of age, what is "],["Bold","the least"],["Text"," that you have weighed?"]]
         description: ["Italic","(Not including pregnancy and the 12 months following pregnancy)"]
@@ -171,15 +181,665 @@ sections:
         question: How old were you when you weighed that much?
         placeholder: ___ years
         type: AGE
+      - key: _11
+        question: F11. Which picture best depics your shape at each age?
+        content: ["Image", "WERF-body-condition-ref"]
+        type: DISPLAY
+      - key: _11a
+        question: ["Bold", "10-14"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: a
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: b
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _11b
+        question: ["Bold", "15-19"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: a
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: b
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _11c
+        question: ["Bold", "20-24"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: b
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _11d
+        question: ["Bold", "25-29"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _11e
+        question: ["Bold", "30-34"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _11e
+        question: ["Bold", "35-39"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _11e
+        question: ["Bold", "40-44"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _11f
+        question: ["Bold", "45+"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _12
+        question: F12. The shapes and descriptions below describe 4 typical female body shapes. Which shape best describes your body at each age? 
+        content: ["Image", "WERF-body-condition-ref"]
+        type: DISPLAY
+      - key: _12a
+        question: ["Bold", "15-19"]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Rectange
+          - value: b
+            text: Pear
+          - value: c
+            text: Apple
+          - value: d
+            text: Hourglass
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: a
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: b
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _12b
+        question: ["Bold", "20 to 29"]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Rectange
+          - value: b
+            text: Pear
+          - value: c
+            text: Apple
+          - value: d
+            text: Hourglass
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: b
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _12c
+        question: ["Bold", "30 to 39"]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Rectange
+          - value: b
+            text: Pear
+          - value: c
+            text: Apple
+          - value: d
+            text: Hourglass
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: c
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _12d
+        question: ["Bold", "40 to 49"]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Rectange
+          - value: b
+            text: Pear
+          - value: c
+            text: Apple
+          - value: d
+            text: Hourglass
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: d
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _12e
+        question: ["Bold", "50+"]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Rectange
+          - value: b
+            text: Pear
+          - value: c
+            text: Apple
+          - value: d
+            text: Hourglass
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: meta
+                question: WERF_age_select
+                operator: =
+                value: e
+      - key: _13
+        question: F13. At age 18, what was your natural hair color?
+        description: If you are under 18, please tell us what your natural hair color is now.
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Red
+          - value: b
+            text: Dark brown
+          - value: c
+            text: Blonde
+          - value: d
+            text: Black
+          - value: e
+            text: Light brown
+      - key: _14
+        question: F14. What is your eye color?
+        description: If you are under 18, please tell us what your natural hair color is now.
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Blue
+          - value: b
+            text: Hazel
+          - value: c
+            text: Gray
+          - value: d
+            text: Brown
+          - value: e
+            text: Green
+      - key: _15
+        question: [["Text","F15. During "],["Bold","the last 12 months"],["Text",", what was your average time "],["Bold","per week"],["Text"," spent on each of the following recreational activities?"]]
+        type: DISPLAY
+      - key: _15a
+        question: ["Bold", "Walking or hiking outdoors"]
+        description: ["Italic", "(include walking to work)"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _15b
+        question: ["Bold", "Jogging"]
+        description: ["Italic", "(slower than 10 minutes/mile)"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _15c
+        question: ["Bold", "Running"]
+        description: ["Italic", "(10 minutes/mile or faster)"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _15d
+        question: ["Bold", "Bicycling"]
+        description: ["Italic", "(include stationary machine)"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _15e
+        question: ["Bold", "Calisthenics/aerobics/aerobic dance/rowing machine"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _15f
+        question: ["Bold", "Tennis, squash, racquetball"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _15g
+        question: ["Bold", "Lap swimming"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _15h
+        question: ["Bold", "Other aerobic activities"]
+        description: ["Italic", "(e.g., lawn mowing)"]
+        type: SINGLE_CHOICE
+        options: 
+          - value: a
+            text: '0'
+          - value: b
+            text: 1-4 min
+          - value: c
+            text: 5-19 min
+          - value: d
+            text: 20-59 min
+          - value: e
+            text: 1 hour
+          - value: f
+            text: 1-1.5 hr
+          - value: g
+            text: 2-3 hr
+          - value: h
+            text: 4-6 hr
+          - value: i
+            text: 7-10 hr
+          - value: j
+            text: 11+ hr
+      - key: _16
+        question: F16. Have you smoked at least 100 cigarettes in your entire life?
+        type: YESNO_CHOICE
+      - key: _16.1
+        question: F16.1. How old were you when you first started smoking?
+        placeholder: ___ years
+        type: AGE
         triggers:
           - action:
               type: SHOW
             condition:
               - section: _F(1)
-                question: _10
-                operator: IS_SET
-                AND:
-                  - section: _F(1)
-                    question: _10
-                    operator: ">"
-                    value: 0
+                question: _16
+                operator: =
+                value: 'yes'
+      - key: _16.2
+        question: F16.2. Do you smoke currently?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _16
+                operator: =
+                value: 'yes'
+      - key: _16.2.1
+        question: What age did you stop smoking?
+        placeholder: ___ years
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _16.2
+                operator: =
+                value: 'no'
+      - key: _16.2.2
+        question: About how many cigarettes do you smoke per week?
+        placeholder: ___ cigarettes
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _16.2
+                operator: =
+                value: 'yes'
+      - key: _17
+        question: F17. Do you drink any alcohol?
+        type: YESNO_CHOICE
+      - key: _17.1
+        question: F17.1. During an average week, how much do you drink of the following?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _17
+                operator: =
+                value: 'yes'
+      - key: _17.1a
+        question: ["Bold", "Beer/lager/cider"]
+        description: ["Italic", "(half pints, 284ml)"]
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _17
+                operator: =
+                value: 'yes'
+      - key: _17.1b
+        question: ["Bold", "Sherry/vermouth/port"]
+        description: ["Italic", "(50ml)"]
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _17
+                operator: =
+                value: 'yes'
+      - key: _17.1c
+        question: ["Bold", "Wine"]
+        description: ["Italic", "(175ml)"]
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _17
+                operator: =
+                value: 'yes'
+      - key: _17.1d
+        question: ["Bold", "Spirits"]
+        description: ["Italic", "(50ml)"]
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _F(1)
+                question: _17
+                operator: =
+                value: 'yes'
