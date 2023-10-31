@@ -1,0 +1,2298 @@
+key: werf-pregnancy
+scorable: false
+metadata:
+  author: ''
+  instrument: WERF EPHect Questionnaire - Standard (EPQ-S)
+  version: ''
+  references:
+    - 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4252538/'
+schedule:
+  type: PERIOD
+  period: ALWAYS
+name: WERF Menstrual History and Hormones
+sections:
+  - type: survey
+    key: group_0
+    title: ""
+    description: ''
+    questions:
+      - key: _1
+        question: B1. Have you ever been pregnant (confirmed by a positive pregnancy test, including miscarriages, ectopic pregnancies or terminations)?
+        type: YESNO_CHOICE
+      - key: _1.1
+        question: How many times have you been pregnant?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: =
+                value: 'yes'
+      - key: _1a_group_a
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","1st"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 1
+      - key: _1b_group_a
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","1st"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 1
+      - key: _1c_group_a
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","1st"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 1
+      - key: _1d_group_a
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_a
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_a
+        question: [["Text","Did the "],["Underline",["Bold","1st"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_a
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","1st"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_a_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 1 
+      - key: _1h_group_a
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_a
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_b
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","2nd"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 2
+      - key: _1b_group_b
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","2nd"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 2
+      - key: _1c_group_b
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","2nd"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 2 
+      - key: _1d_group_b
+        question: [["Text","If the "],["Underline",["Bold","2nd"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_b
+        question: [["Text","If the "],["Underline",["Bold","2nd"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_b
+        question: [["Text","Did the "],["Underline",["Bold","2nd"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_b
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","2nd"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_b_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 2
+      - key: _1h_group_b
+        question: [["Text","If the "],["Underline",["Bold","2nd"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_b
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_c
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","3rd"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 3
+      - key: _1b_group_c
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","3rd"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 3
+      - key: _1c_group_c
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","3rd"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 3
+      - key: _1d_group_c
+        question: [["Text","If the "],["Underline",["Bold","3rd"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_c
+        question: [["Text","If the "],["Underline",["Bold","3rd"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_c
+        question: [["Text","Did the "],["Underline",["Bold","3rd"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_c
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","3rd"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_c_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 3
+      - key: _1h_group_c
+        question: [["Text","If the "],["Underline",["Bold","3rd"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_c
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_d
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","4th"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 4
+      - key: _1b_group_d
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","4th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 4
+      - key: _1c_group_d
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","4th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 4
+      - key: _1d_group_d
+        question: [["Text","If the "],["Underline",["Bold","4th"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_d
+        question: [["Text","If the "],["Underline",["Bold","4th"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_d
+        question: [["Text","Did the "],["Underline",["Bold","4th"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_d
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","4th"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_d_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 4 
+      - key: _1h_group_d
+        question: [["Text","If the "],["Underline",["Bold","4th"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_d
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_e
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","5th"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 5
+      - key: _1b_group_e
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","5th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 5 
+      - key: _1c_group_e
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","5th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 5
+      - key: _1d_group_e
+        question: [["Text","If the "],["Underline",["Bold","5th"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_e
+        question: [["Text","If the "],["Underline",["Bold","5th"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_e
+        question: [["Text","Did the "],["Underline",["Bold","5th"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_e
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","5th"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_e_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 5
+      - key: _1h_group_e
+        question: [["Text","If the "],["Underline",["Bold","5th"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_e
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_f
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","6th"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 6
+      - key: _1b_group_f
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","6th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 6 
+      - key: _1c_group_f
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","6th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 6
+      - key: _1d_group_f
+        question: [["Text","If the "],["Underline",["Bold","6th"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_f
+        question: [["Text","If the "],["Underline",["Bold","6th"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_f
+        question: [["Text","Did the "],["Underline",["Bold","6th"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_f
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","6th"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_f_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 6
+      - key: _1h_group_f
+        question: [["Text","If the "],["Underline",["Bold","6th"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_f
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_g
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","7th"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 7
+      - key: _1b_group_g
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","7th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 7 
+      - key: _1c_group_g
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","7th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 7
+      - key: _1d_group_g
+        question: [["Text","If the "],["Underline",["Bold","7th"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_g
+        question: [["Text","If the "],["Underline",["Bold","7th"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_g
+        question: [["Text","Did the "],["Underline",["Bold","7th"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_g
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","7th"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_g_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 7
+      - key: _1h_group_g
+        question: [["Text","If the "],["Underline",["Bold","7th"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_g
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_h
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","8th"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 8
+      - key: _1b_group_h
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","8th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 8 
+      - key: _1c_group_h
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","8th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 8
+      - key: _1d_group_h
+        question: [["Text","If the "],["Underline",["Bold","8th"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_h
+        question: [["Text","If the "],["Underline",["Bold","8th"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_h
+        question: [["Text","Did the "],["Underline",["Bold","8th"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_h
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","8th"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_h_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 8
+      - key: _1h_group_h
+        question: [["Text","If the "],["Underline",["Bold","8th"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_h
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_i
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","9th"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 9
+      - key: _1b_group_i
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","9th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 9 
+      - key: _1c_group_i
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","9th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 9
+      - key: _1d_group_i
+        question: [["Text","If the "],["Underline",["Bold","9th"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_i
+        question: [["Text","If the "],["Underline",["Bold","9th"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_i
+        question: [["Text","Did the "],["Underline",["Bold","9th"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_i
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","9th"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_i_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 9
+      - key: _1h_group_i
+        question: [["Text","If the "],["Underline",["Bold","9th"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_i
+                operator: INCLUDES
+                value: b
+      - key: _1a_group_j
+        question: [["Text","How old were you at the start of "],["Underline",["Bold","10th"]],["Text"," the pregnancy?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 10
+      - key: _1b_group_j
+        question: [["Text","What fertility treatment was used, if any, for the "],["Underline",["Bold","10th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: 'Natural conception: no fertility treatment'
+          - value: b
+            text: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene) 
+          - value: c
+            text: Intrauterine insemination (IUI) 
+          - value: d
+            text: In vitro fertilization (IVF/ICSI)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 10 
+      - key: _1c_group_j
+        question: [["Text","What was the outcome of the "],["Underline",["Bold","10th"]],["Text"," pregnancy?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Single live birth
+          - value: b
+            text: Twins or triplets
+          - value: c
+            text: Miscarriage
+          - value: d
+            text: Stillbirth
+          - value: e
+            text: Termination (abortion)
+          - value: f
+            text: Tubal or pregnancy in other location outside the uterus 
+          - value: g
+            text: Molar 
+          - value: h
+            text: Currently pregnant 
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 10
+      - key: _1d_group_j
+        question: [["Text","If the "],["Underline",["Bold","10th"]],["Text"," pregnancy was a miscarriage, tubal/ectopic or if you had a termination, how was this managed?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Surgically (D&C) 
+          - value: b
+            text: Medically (with tablets either orally and/or vaginally) 
+          - value: c
+            text: No management was needed
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: c 
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: e
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: f
+      - key: _1e_group_j
+        question: [["Text","If the "],["Underline",["Bold","10th"]],["Text"," pregnancy resulted in a birth, was the delivery vaginal or via Caesarean section?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Vaginal birth 
+          - value: b
+            text: Caesarean section
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: d
+      - key: _1f_group_j
+        question: [["Text","Did the "],["Underline",["Bold","10th"]],["Text"," pregnancy go into labor and if so, was it induced or did it begin on its own?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: No labor  
+          - value: b
+            text: Spontaneous labor 
+          - value: b
+            text: Induced labor
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: b
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: d
+      - key: _1g_group_j
+        question: [["Text","Did you have any of the following complications related to pregnancy or breast feeding for the "],["Underline",["Bold","10th"]],["Text"," pregnancy?"]]
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Gestational diabetes 
+          - value: b
+            text: Pregnancy-related high blood pressure 
+          - value: c
+            text: Pre-eclampsia/toxemia of pregnancy
+          - value: d
+            text: Mastitis/breast infection 
+          - value: e
+            text: HELLP syndrome
+          - value: f
+            text: Hyperemesis gravidarum 
+          - value: g
+            text: Pre term birth (birth before 37 weeks)
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _1g_group_j_h_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1.1
+                operator: '>='
+                value: 10
+      - key: _1h_group_j
+        question: [["Text","If the "],["Underline",["Bold","10th"]],["Text"," pregnancy resulted in a birth, for how long did you breastfeed?"]]
+        description: ["Italic", "(Please enter the number of months you breastfed or write '0' if you did not breastfeed; if you breastfed for less than 1 month, please write '1')"]
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: a
+              - section: group_0
+                question: _1c_group_j
+                operator: INCLUDES
+                value: b
+  - type: survey
+    key: group_1
+    title: ""
+    description: ''
+    questions:
+      - key: _2
+        question: B2. Have you ever tried to get pregnant for more than 6 months in a row without succeeding?
+        type: YESNO_CHOICE
+      - key: _2.1
+        question: B2.1. What was the longest amount of time that you tried, whether or not you actually got pregnant?
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _2
+                operator: =
+                value: 'yes'
+      - key: _3
+        question: B3. Have you or your partner ever had any tests/investigations to find out why you were not getting pregnant?
+        type: YESNO_CHOICE
+      - key: _3.1
+        question: B3.1. What were the results of these tests?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options: 
+          - value: a
+            text: Endometriosis
+          - value: b
+            text: Adhesions
+          - value: c
+            text: Blocked tubes
+          - value: d
+            text: Polycystic ovary syndrome (PCOS)
+          - value: e
+            text: Pelvic inflammatory disease
+          - value: f
+            text: No/irregular ovulation
+          - value: g
+            text: Poor sperm count/quality
+          - value: h
+            text: Uterine fibroids
+          - value: i
+            text: No cause was found
+          - value: j
+            text: I can't remember
+          - value: k
+            text: Other
+            inlineQuestion:
+              key: _3.1_k_description
+              question: Please describe...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3
+                operator: =
+                value: 'yes'
+      - key: _4
+        question: B4. Did you ever seek treatment for infertility in any clinic?
+        type: YESNO_CHOICE
+      - key: _4.1_intro
+        question: B4.1. Please tell us about any fertility treatment you have used.
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1a.1
+        question: Intercourse timed specifically to conceive
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1a.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1a.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1a.1
+                operator: =
+                value: c
+      - key: _4.1b.1
+        question: Fertility drugs by pills to stimulate ovulation (clomid, clomiphene or any other drug in pill form)
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1b.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1b.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1b.1
+                operator: =
+                value: c
+      - key: _4.1c.1
+        question: Fertility drugs by Injection (gonadotropins, HCG, or any other drug by injection)
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1c.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1c.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1c.1
+                operator: =
+                value: c
+      - key: _4.1d.1
+        question: Progesterone (vaginal or intramuscular injection) 
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1d.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1d.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1d.1
+                operator: =
+                value: c
+      - key: _4.1e.1
+        question: Insemination with your partner's semen
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1e.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1e.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1e.1
+                operator: =
+                value: c
+      - key: _4.1f.1
+        question: Intrauterine insemination with a donor's semen
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1f.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1f.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1f.1
+                operator: =
+                value: c
+      - key: _4.1g.1
+        question: In vitro fertilization (IVF)
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1g.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1g.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1g.1
+                operator: =
+                value: c
+      - key: _4.1h.1
+        question: In vitro fertilization with intracytoplasmic sperm injection (ICSI)
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1h.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1h.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1h.1
+                operator: =
+                value: c
+      - key: _4.1i.1
+        question: In vitro fertilization with eggs from a donor
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Never used
+          - value: b
+            text: Never used
+          - value: c
+            text: Used, but not within the last three months
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4.1i.2
+        question: Number of cycles?
+        placeholder: ___ cycles
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1i.1
+                operator: =
+                value: b
+              - section: group_1
+                question: _4.1i.1
+                operator: =
+                value: c
+      - key: _4.2
+        question: "If you ever had IVF, ICSI, or IVF with donor egg(s): After what step did your IVF cycle(s) end?"
+        type: MULTIPLE_CHOICE
+        options:
+          - value: a
+            text: Ovarian stimulation (did not have eggs to retrieve)
+          - value: b
+            text: Egg retrieval (did not have embryos transferred)
+          - value: c
+            text: Embryo transfer (did not have a positive pregnancy test)
+          - value: d
+            text: Chemical pregnancy (had a positive pregnancy test but no heartbeat on ultrasound)
+          - value: e
+            text: Clinical pregnancy (heartbeat detected, but had a pregnancy loss before the end of 12 weeks)
+          - value: f
+            text: Pregnancy loss or stillbirth after 12 weeks
+          - value: g
+            text: Live birth
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _4.1g.1
+                operator: =
+                value: 'yes'
+              - section: group_1
+                question: _4.1h.1
+                operator: =
+                value: 'yes'
+              - section: group_1
+                question: _4.1i.1
+                operator: =
+                value: 'yes'
