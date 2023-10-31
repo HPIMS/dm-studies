@@ -34,7 +34,7 @@ sections:
           - value: e
             text: 41-50 years old
   - type: survey
-    key: group_0
+    key: _A(1)
     title: ""
     description: ''
     questions:
@@ -74,11 +74,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l 
@@ -102,7 +102,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'no'
@@ -113,7 +113,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'no'
@@ -131,7 +131,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'no'
@@ -147,7 +147,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -158,7 +158,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -170,7 +170,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -192,7 +192,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -205,7 +205,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -217,7 +217,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -229,7 +229,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -249,7 +249,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -269,7 +269,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
@@ -293,12 +293,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _2
                 operator: =
                 value: 'yes'
   - type: survey
-    key: group_1
+    key: _A(2)
     title: ""
     description: ''
     questions:
@@ -309,7 +309,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: =
                 value: l
@@ -320,11 +320,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l
@@ -343,11 +343,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l
@@ -390,7 +390,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_a
                 operator: =
                 value: '1'
@@ -403,7 +403,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_a
                 operator: =
                 value: '1'
@@ -415,7 +415,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_a
                 operator: =
                 value: '1'
@@ -426,7 +426,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_a
                 operator: =
                 value: '1'
@@ -446,7 +446,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_a
                 operator: =
                 value: '1'
@@ -466,7 +466,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_a
                 operator: =
                 value: '1'
@@ -490,7 +490,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_a
                 operator: =
                 value: '1'
@@ -509,11 +509,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l
@@ -552,7 +552,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_b
                 operator: =
                 value: '1'
@@ -565,7 +565,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_b
                 operator: =
                 value: '1'
@@ -577,7 +577,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_b
                 operator: =
                 value: '1'
@@ -588,7 +588,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_b
                 operator: =
                 value: '1'
@@ -608,7 +608,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_b
                 operator: =
                 value: '1'
@@ -628,7 +628,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_b
                 operator: =
                 value: '1'
@@ -652,7 +652,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_b
                 operator: =
                 value: '1'
@@ -671,11 +671,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l
@@ -710,7 +710,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_c
                 operator: =
                 value: '1'
@@ -723,7 +723,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_c
                 operator: =
                 value: '1'
@@ -735,7 +735,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_c
                 operator: =
                 value: '1'
@@ -746,7 +746,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_c
                 operator: =
                 value: '1'
@@ -766,7 +766,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_c
                 operator: =
                 value: '1'
@@ -786,7 +786,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_c
                 operator: =
                 value: '1'
@@ -810,7 +810,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_c
                 operator: =
                 value: '1'
@@ -829,11 +829,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l
@@ -864,7 +864,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_d
                 operator: =
                 value: '1'
@@ -877,7 +877,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_d
                 operator: =
                 value: '1'
@@ -889,7 +889,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_d
                 operator: =
                 value: '1'
@@ -900,7 +900,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_d
                 operator: =
                 value: '1'
@@ -920,7 +920,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_d
                 operator: =
                 value: '1'
@@ -940,7 +940,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_d
                 operator: =
                 value: '1'
@@ -964,7 +964,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_d
                 operator: =
                 value: '1'
@@ -983,11 +983,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l
@@ -1018,7 +1018,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_e
                 operator: =
                 value: '1'
@@ -1031,7 +1031,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_e
                 operator: =
                 value: '1'
@@ -1043,7 +1043,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_e
                 operator: =
                 value: '1'
@@ -1054,7 +1054,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_e
                 operator: =
                 value: '1'
@@ -1074,7 +1074,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_e
                 operator: =
                 value: '1'
@@ -1094,7 +1094,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_e
                 operator: =
                 value: '1'
@@ -1118,12 +1118,12 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_1
+              - section: _A(2)
                 question: _3a_group_e
                 operator: =
                 value: '1'
   - type: survey
-    key: group_2
+    key: _A(3)
     title: ""
     description: ''
     questions:
@@ -1134,7 +1134,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: =
                 value: l
@@ -1145,11 +1145,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l 
@@ -1160,7 +1160,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _5
                 operator: =
                 value: 'yes'
@@ -1193,11 +1193,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l 
@@ -1208,7 +1208,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _6
                 operator: INCLUDES
                 value: b
@@ -1219,7 +1219,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _6
                 operator: INCLUDES
                 value: b
@@ -1230,11 +1230,11 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_0
+              - section: _A(1)
                 question: _1
                 operator: IS_SET
                 AND:
-                  - section: group_0
+                  - section: _A(1)
                     question: _1
                     operator: <>
                     value: l 
@@ -1246,7 +1246,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _7
                 operator: =
                 value: 'yes'
@@ -1257,7 +1257,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _7
                 operator: =
                 value: 'yes'
@@ -1268,7 +1268,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _7
                 operator: =
                 value: 'yes'
@@ -1280,7 +1280,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _7
                 operator: =
                 value: 'yes'
@@ -1292,7 +1292,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: group_2
+              - section: _A(3)
                 question: _7
                 operator: =
                 value: 'yes'
