@@ -249,7 +249,7 @@ sections:
                 question: _2
                 operator: =
                 value: 'yes'
-      - key: _2.8a
+      - key: _2.8.1
         question: ["Underline",["Bold","At its heaviest?"]]
         type: SINGLE_CHOICE
         options: 
@@ -269,7 +269,7 @@ sections:
                 question: _2
                 operator: =
                 value: 'yes'
-      - key: _2.8b
+      - key: _2.8.2
         question: ["Underline",["Bold","On average?"]]
         type: SINGLE_CHOICE
         options: 
@@ -318,8 +318,995 @@ sections:
     title: ""
     description: ''
     questions:
+      - key: _section_skip
+        question: ["Italic","There are no questions to complete on this page. Please continue."]
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: =
+                value: l
       - key: _3_intro
         question: [["Text","A3. We are interested in what your period was like when you were "],["Underline",["Bold","NOT using hormonal contraception"]],["Text"," (the Pill, patch, ring, injection or hormonal IUD). For each age range, please tell us if you had periods and what they were like. If you did not have periods during an age range or were using hormonal contraception the whole time, please select the appropriate response. If you have not yet reached an age group, please skip."]]
         type: DISPLAY
-
-
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l
+      - key: _3a_group_a
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Did you have natural periods during this time period?"]]
+        description: ["Italic", "(not on hormonal contraception)"]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: 'Yes'
+          - value: '2'
+            text: 'No'
+          - value: '3'
+            text: Used hormonal contraception for entire time frame
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l
+                    AND:
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: a
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+      - key: _3b_group_a
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Were your periods regular when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Extremely regular (period starts 1-2 days before or after it is expected)
+          - value: '2'
+            text: Very regular (period starts 3-4 days before or after it is expected)
+          - value: '3'
+            text: Regular (period starts 5-7 days before or after it is expected)
+          - value: '4'
+            text: Somewhat irregular (period starts 8-20 days before or after it is expected)
+          - value: '5'
+            text: Irregular (period starts more than 20 days before or after it is expected)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_a
+                operator: =
+                value: '1'
+      - key: _3c_group_a
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": How many days of bleeding did you usually have each period when not using hormonal contraception?"]]
+        description: ["Italic", "(Not counting discharge or spotting for which you needed a panty liner only)"]
+        placeholder: ___ days
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_a
+                operator: =
+                value: '1'
+      - key: _3c_alt_group_a
+        question: ["Bold","Or check here if it is too irregular to say."]
+        type: CHECKBOX
+        boxLabel: Too irregular to say
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_a
+                operator: =
+                value: '1'
+      - key: _3d_intro
+        question: [["Underline",["Bold","Up to age 15"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_a
+                operator: =
+                value: '1'
+      - key: _3d.1_group_a
+        question: ["Underline",["Bold","At its heaviest?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_a
+                operator: =
+                value: '1'
+      - key: _3d.2_group_a
+        question: ["Underline",["Bold","On average?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_a
+                operator: =
+                value: '1'
+      - key: _3e_group_a
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": On average, how many days were there between the start of one period and the start of the next, when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: <24 days
+          - value: '2'
+            text: 24-31 days
+          - value: '3'
+            text: 32-38 days
+          - value: '4'
+            text: 39-50 days
+          - value: '5'
+            text: 51+ days
+          - value: '6'
+            text: Too irregular to estimate
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_a
+                operator: =
+                value: '1'
+      - key: _3a_group_b
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you have natural periods during this time period?"]]
+        description: ["Italic", "(not on hormonal contraception)"]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: 'Yes'
+          - value: '2'
+            text: 'No'
+          - value: '3'
+            text: Used hormonal contraception for entire time frame
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l
+                    AND:
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: b
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+      - key: _3b_group_b
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Were your periods regular when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Extremely regular (period starts 1-2 days before or after it is expected)
+          - value: '2'
+            text: Very regular (period starts 3-4 days before or after it is expected)
+          - value: '3'
+            text: Regular (period starts 5-7 days before or after it is expected)
+          - value: '4'
+            text: Somewhat irregular (period starts 8-20 days before or after it is expected)
+          - value: '5'
+            text: Irregular (period starts more than 20 days before or after it is expected)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_b
+                operator: =
+                value: '1'
+      - key: _3c_group_b
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": How many days of bleeding did you usually have each period when not using hormonal contraception?"]]
+        description: ["Italic", "(Not counting discharge or spotting for which you needed a panty liner only)"]
+        placeholder: ___ days
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_b
+                operator: =
+                value: '1'
+      - key: _3c_alt_group_b
+        question: ["Bold","Or check here if it is too irregular to say."]
+        type: CHECKBOX
+        boxLabel: Too irregular to say
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_b
+                operator: =
+                value: '1'
+      - key: _3d_intro
+        question: [["Underline",["Bold","16-20 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_b
+                operator: =
+                value: '1'
+      - key: _3d.1_group_b
+        question: ["Underline",["Bold","At its heaviest?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_b
+                operator: =
+                value: '1'
+      - key: _3d.2_group_b
+        question: ["Underline",["Bold","On average?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_b
+                operator: =
+                value: '1'
+      - key: _3e_group_b
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": On average, how many days were there between the start of one period and the start of the next, when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: <24 days
+          - value: '2'
+            text: 24-31 days
+          - value: '3'
+            text: 32-38 days
+          - value: '4'
+            text: 39-50 days
+          - value: '5'
+            text: 51+ days
+          - value: '6'
+            text: Too irregular to estimate
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_b
+                operator: =
+                value: '1'
+      - key: _3a_group_c
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you have natural periods during this time period?"]]
+        description: ["Italic", "(not on hormonal contraception)"]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: 'Yes'
+          - value: '2'
+            text: 'No'
+          - value: '3'
+            text: Used hormonal contraception for entire time frame
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l
+                    AND:
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: c
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+      - key: _3b_group_c
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Were your periods regular when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Extremely regular (period starts 1-2 days before or after it is expected)
+          - value: '2'
+            text: Very regular (period starts 3-4 days before or after it is expected)
+          - value: '3'
+            text: Regular (period starts 5-7 days before or after it is expected)
+          - value: '4'
+            text: Somewhat irregular (period starts 8-20 days before or after it is expected)
+          - value: '5'
+            text: Irregular (period starts more than 20 days before or after it is expected)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_c
+                operator: =
+                value: '1'
+      - key: _3c_group_c
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": How many days of bleeding did you usually have each period when not using hormonal contraception?"]]
+        description: ["Italic", "(Not counting discharge or spotting for which you needed a panty liner only)"]
+        placeholder: ___ days
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_c
+                operator: =
+                value: '1'
+      - key: _3c_alt_group_c
+        question: ["Bold","Or check here if it is too irregular to say."]
+        type: CHECKBOX
+        boxLabel: Too irregular to say
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_c
+                operator: =
+                value: '1'
+      - key: _3d_intro
+        question: [["Underline",["Bold","21-30 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_c
+                operator: =
+                value: '1'
+      - key: _3d.1_group_c
+        question: ["Underline",["Bold","At its heaviest?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_c
+                operator: =
+                value: '1'
+      - key: _3d.2_group_c
+        question: ["Underline",["Bold","On average?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_c
+                operator: =
+                value: '1'
+      - key: _3e_group_c
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": On average, how many days were there between the start of one period and the start of the next, when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: <24 days
+          - value: '2'
+            text: 24-31 days
+          - value: '3'
+            text: 32-38 days
+          - value: '4'
+            text: 39-50 days
+          - value: '5'
+            text: 51+ days
+          - value: '6'
+            text: Too irregular to estimate
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_c
+                operator: =
+                value: '1'
+      - key: _3a_group_d
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you have natural periods during this time period?"]]
+        description: ["Italic", "(not on hormonal contraception)"]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: 'Yes'
+          - value: '2'
+            text: 'No'
+          - value: '3'
+            text: Used hormonal contraception for entire time frame
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l
+                    AND:
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+      - key: _3b_group_d
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Were your periods regular when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Extremely regular (period starts 1-2 days before or after it is expected)
+          - value: '2'
+            text: Very regular (period starts 3-4 days before or after it is expected)
+          - value: '3'
+            text: Regular (period starts 5-7 days before or after it is expected)
+          - value: '4'
+            text: Somewhat irregular (period starts 8-20 days before or after it is expected)
+          - value: '5'
+            text: Irregular (period starts more than 20 days before or after it is expected)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_d
+                operator: =
+                value: '1'
+      - key: _3c_group_d
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": How many days of bleeding did you usually have each period when not using hormonal contraception?"]]
+        description: ["Italic", "(Not counting discharge or spotting for which you needed a panty liner only)"]
+        placeholder: ___ days
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_d
+                operator: =
+                value: '1'
+      - key: _3c_alt_group_d
+        question: ["Bold","Or check here if it is too irregular to say."]
+        type: CHECKBOX
+        boxLabel: Too irregular to say
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_d
+                operator: =
+                value: '1'
+      - key: _3d_intro
+        question: [["Underline",["Bold","31-40 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_d
+                operator: =
+                value: '1'
+      - key: _3d.1_group_d
+        question: ["Underline",["Bold","At its heaviest?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_d
+                operator: =
+                value: '1'
+      - key: _3d.2_group_d
+        question: ["Underline",["Bold","On average?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_d
+                operator: =
+                value: '1'
+      - key: _3e_group_d
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": On average, how many days were there between the start of one period and the start of the next, when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: <24 days
+          - value: '2'
+            text: 24-31 days
+          - value: '3'
+            text: 32-38 days
+          - value: '4'
+            text: 39-50 days
+          - value: '5'
+            text: 51+ days
+          - value: '6'
+            text: Too irregular to estimate
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_d
+                operator: =
+                value: '1'
+      - key: _3a_group_e
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you have natural periods during this time period?"]]
+        description: ["Italic", "(not on hormonal contraception)"]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: 'Yes'
+          - value: '2'
+            text: 'No'
+          - value: '3'
+            text: Used hormonal contraception for entire time frame
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l
+                    AND:
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: d
+                      - section: meta
+                        question: WERF_age_select
+                        operator: =
+                        value: e
+      - key: _3b_group_e
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Were your periods regular when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Extremely regular (period starts 1-2 days before or after it is expected)
+          - value: '2'
+            text: Very regular (period starts 3-4 days before or after it is expected)
+          - value: '3'
+            text: Regular (period starts 5-7 days before or after it is expected)
+          - value: '4'
+            text: Somewhat irregular (period starts 8-20 days before or after it is expected)
+          - value: '5'
+            text: Irregular (period starts more than 20 days before or after it is expected)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_e
+                operator: =
+                value: '1'
+      - key: _3c_group_e
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": How many days of bleeding did you usually have each period when not using hormonal contraception?"]]
+        description: ["Italic", "(Not counting discharge or spotting for which you needed a panty liner only)"]
+        placeholder: ___ days
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_e
+                operator: =
+                value: '1'
+      - key: _3c_alt_group_e
+        question: ["Bold","Or check here if it is too irregular to say."]
+        type: CHECKBOX
+        boxLabel: Too irregular to say
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_e
+                operator: =
+                value: '1'
+      - key: _3d_intro
+        question: [["Underline",["Bold","41-50 yrs"]], ["Text","How heavy was your menstrual flow "],["Bold","at its heaviest and on average"],["Text",", when not using hormonal contraception? Please use the figure on the previous page to describe the amount of bleeding that you typically experienced every four hours"],["Bold","."]]
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_e
+                operator: =
+                value: '1'
+      - key: _3d.1_group_e
+        question: ["Underline",["Bold","At its heaviest?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_e
+                operator: =
+                value: '1'
+      - key: _3d.2_group_e
+        question: ["Underline",["Bold","On average?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: Spotting
+          - value: '2'
+            text: Light
+          - value: '3'
+            text: Moderate
+          - value: '4'
+            text: Heavy (clots/flooding)
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_e
+                operator: =
+                value: '1'
+      - key: _3e_group_e
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": On average, how many days were there between the start of one period and the start of the next, when not using hormonal contraception?"]]
+        type: SINGLE_CHOICE
+        options: 
+          - value: '1'
+            text: <24 days
+          - value: '2'
+            text: 24-31 days
+          - value: '3'
+            text: 32-38 days
+          - value: '4'
+            text: 39-50 days
+          - value: '5'
+            text: 51+ days
+          - value: '6'
+            text: Too irregular to estimate
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_1
+                question: _3a_group_e
+                operator: =
+                value: '1'
+  - type: survey
+    key: group_2
+    title: ""
+    description: ''
+    questions:
+      - key: _section_skip
+        question: ["Italic","There are no questions to complete on this page. Please continue."]
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: =
+                value: l
+      - key: _5
+        question: A5. Have you ever used emergency contraception?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l 
+      - key: _5.1
+        question: [["Text","A5.1. Have you used emergency contraception "],["Bold","in the last 3 months"],["Text","?"]]
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _5
+                operator: =
+                value: 'yes'
+      - key: _6
+        question: What are/were your reasons for using hormones?
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options: 
+          - value: a
+            text: Birth control / pregnancy prevention
+          - value: b
+            text: Pelvic pain or pain with periods
+          - value: c
+            text: Irregular periods
+          - value: d
+            text: Heavy periods
+          - value: e
+            text: Acne
+          - value: f
+            text: Polycystic ovarian syndrome (PCOS)
+          - value: g
+            text: Ovarian cyst
+          - value: h
+            text: Other
+            inlineQuestion:
+              key: _6_h_description
+              question: Please specify...
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l 
+      - key: _6.1
+        question: A6.1. Did hormones help with the pelvic pain or pain with periods?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _6
+                operator: INCLUDES
+                value: b
+      - key: _6.2
+        question: A6.2. Did you ever discontinue or change hormones because they were not effective enough at controlling pain?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _6
+                operator: INCLUDES
+                value: b
+      - key: _7
+        question: A7. Have you ever used a non-hormonal coil/IUD?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_0
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: group_0
+                    question: _1
+                    operator: <>
+                    value: l 
+      - key: _7.1
+        question: At what age did you first use a non-hormonal coil/IUD?
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _7
+                operator: =
+                value: 'yes'
+      - key: _7.2
+        question: [["Text","Have you used a non-hormonal coil/IUD "],["Bold","in the last 3 months"],["Text","?"]]
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _7
+                operator: =
+                value: 'yes'
+      - key: _7.3_intro
+        question: How long have you used a non-hormonal coil/IUD?
+        type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _7
+                operator: =
+                value: 'yes'
+      - key: _7.3.1
+        placeholder: ___ years
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _7
+                operator: =
+                value: 'yes'
+      - key: _7.3.2
+        placeholder: ___ months
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: group_2
+                question: _7
+                operator: =
+                value: 'yes'
