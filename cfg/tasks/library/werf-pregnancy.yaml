@@ -9,7 +9,7 @@ metadata:
 schedule:
   type: PERIOD
   period: ALWAYS
-name: WERF Menstrual History and Hormones
+name: WERF Pregnancy and Fertility
 sections:
   - type: survey
     key: group_0
@@ -63,7 +63,8 @@ sections:
                 value: 1
       - key: _1c_group_a
         question: [["Text","What was the outcome of the "],["Underline",["Bold","1st"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -147,7 +148,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -248,7 +249,8 @@ sections:
                 value: 2
       - key: _1c_group_b
         question: [["Text","What was the outcome of the "],["Underline",["Bold","2nd"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -332,7 +334,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -433,7 +435,8 @@ sections:
                 value: 3
       - key: _1c_group_c
         question: [["Text","What was the outcome of the "],["Underline",["Bold","3rd"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -517,7 +520,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -618,7 +621,8 @@ sections:
                 value: 4
       - key: _1c_group_d
         question: [["Text","What was the outcome of the "],["Underline",["Bold","4th"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -702,7 +706,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -803,7 +807,8 @@ sections:
                 value: 5 
       - key: _1c_group_e
         question: [["Text","What was the outcome of the "],["Underline",["Bold","5th"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -887,7 +892,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -988,7 +993,8 @@ sections:
                 value: 6 
       - key: _1c_group_f
         question: [["Text","What was the outcome of the "],["Underline",["Bold","6th"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -1072,7 +1078,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -1173,7 +1179,8 @@ sections:
                 value: 7 
       - key: _1c_group_g
         question: [["Text","What was the outcome of the "],["Underline",["Bold","7th"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -1257,7 +1264,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -1358,7 +1365,8 @@ sections:
                 value: 8 
       - key: _1c_group_h
         question: [["Text","What was the outcome of the "],["Underline",["Bold","8th"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -1442,7 +1450,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -1543,7 +1551,8 @@ sections:
                 value: 9 
       - key: _1c_group_i
         question: [["Text","What was the outcome of the "],["Underline",["Bold","9th"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -1627,7 +1636,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -1728,7 +1737,8 @@ sections:
                 value: 10 
       - key: _1c_group_j
         question: [["Text","What was the outcome of the "],["Underline",["Bold","10th"]],["Text"," pregnancy?"]]
-        type: SINGLE_CHOICE
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
         options:
           - value: a
             text: Single live birth
@@ -1812,7 +1822,7 @@ sections:
             text: No labor  
           - value: b
             text: Spontaneous labor 
-          - value: b
+          - value: c
             text: Induced labor
         triggers:
           - action:
@@ -1963,7 +1973,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -1997,7 +2007,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -2031,7 +2041,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -2065,7 +2075,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -2099,7 +2109,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -2133,7 +2143,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -2167,7 +2177,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -2201,7 +2211,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
@@ -2235,7 +2245,7 @@ sections:
           - value: a
             text: Never used
           - value: b
-            text: Never used
+            text: Used within the last three months
           - value: c
             text: Used, but not within the last three months
         triggers:
