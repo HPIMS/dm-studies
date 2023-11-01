@@ -767,7 +767,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(5)
+              - section: _F(6)
                 question: _16
                 operator: =
                 value: 'yes'
@@ -778,7 +778,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(5)
+              - section: _F(6)
                 question: _16
                 operator: =
                 value: 'yes'
@@ -790,7 +790,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(5)
+              - section: _F(6)
                 question: _16.2
                 operator: =
                 value: 'no'
@@ -802,7 +802,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(5)
+              - section: _F(6)
                 question: _16.2
                 operator: =
                 value: 'yes'
