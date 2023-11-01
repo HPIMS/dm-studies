@@ -175,7 +175,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2.6
-        question: ["Body",[["Text","A2.6. Were your periods "],["Bold","in the last 3 months"],["Text"," regular?"]]]
+        question: [["Text","A2.6. Were your periods "],["Bold","in the last 3 months"],["Text"," regular?"]]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -1128,8 +1128,1798 @@ sections:
     description: ''
     questions:
       - key: _section_skip
-        question: ["Italic","TODO: IMPLEMENT THIS SCREEN."]
+        question: ["Italic","There are no questions to complete on this page. Please continue."]
         type: DISPLAY
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(1)
+                question: _1
+                operator: =
+                value: l
+      - key: _4
+        question: [["Text","A4. Have you "],["Bold","ever"],["Text"," used a hormone for any reason?"]]
+        description: ["Italic", "(e.g. acne, bad cramping, irregular periods, birth control, fertility treatments)"] 
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(1)
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: _A(1)
+                    question: _1
+                    operator: <>
+                    value: l
+      - key: _4.1
+        question: How many hormones have you taken?
+        type: NUMERIC
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4
+                operator: =
+                value: 'yes'
+      - key: _4a_group_a
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 1
+      - key: _4b_group_a
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_a_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_a_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 1
+      - key: _4c_group_a
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 1
+      - key: _4d_group_a
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 1
+      - key: _4e_group_a
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_a
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_a
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_a
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_a
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_a
+                operator: =
+                value: '15'
+      - key: _4a_group_b
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 2
+      - key: _4b_group_b
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_b_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_b_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 2
+      - key: _4c_group_b
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 2
+      - key: _4d_group_b
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 2
+      - key: _4e_group_b
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_b
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_b
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_b
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_b
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_b
+                operator: =
+                value: '15'
+      - key: _4a_group_c
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 3
+      - key: _4b_group_c
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_c_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_c_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 3
+      - key: _4c_group_c
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 3
+      - key: _4d_group_c
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 3
+      - key: _4e_group_c
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_c
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_c
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_c
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_c
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_c
+                operator: =
+                value: '15'
+      - key: _4a_group_d
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 4
+      - key: _4b_group_d
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_d_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_d_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 4
+      - key: _4c_group_d
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 4
+      - key: _4d_group_d
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 4
+      - key: _4e_group_d
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_d
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_d
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_d
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_d
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_d
+                operator: =
+                value: '15'
+      - key: _4a_group_e
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 5
+      - key: _4b_group_e
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_e_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_e_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 5
+      - key: _4c_group_e
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 5
+      - key: _4d_group_e
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 5
+      - key: _4e_group_e
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_e
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_e
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_e
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_e
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_e
+                operator: =
+                value: '15'
+      - key: _4a_group_f
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 6
+      - key: _4b_group_f
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_f_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_f_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 6
+      - key: _4c_group_f
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 6
+      - key: _4d_group_f
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 6
+      - key: _4e_group_f
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_f
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_f
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_f
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_f
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_f
+                operator: =
+                value: '15'
+      - key: _4a_group_g
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 7
+      - key: _4b_group_g
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_g_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_g_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 7
+      - key: _4c_group_g
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 7
+      - key: _4d_group_g
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 7
+      - key: _4e_group_g
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_g
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_g
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_g
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_g
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_g
+                operator: =
+                value: '15'
+      - key: _4a_group_h
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 8
+      - key: _4b_group_h
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_h_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_h_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 8
+      - key: _4c_group_h
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 8
+      - key: _4d_group_h
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 8
+      - key: _4e_group_h
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_h
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_h
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_h
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_h
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_h
+                operator: =
+                value: '15'
+      - key: _4a_group_i
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 9
+      - key: _4b_group_i
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_i_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_i_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 9
+      - key: _4c_group_i
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 9
+      - key: _4d_group_i
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 9
+      - key: _4e_group_i
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_i
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_i
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_i
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_i
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_i
+                operator: =
+                value: '15'
+      - key: _4a_group_j
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 10
+      - key: _4b_group_j
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_j_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_j_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 10
+      - key: _4c_group_j
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 10
+      - key: _4d_group_j
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 10
+      - key: _4e_group_j
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_j
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_j
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_j
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_j
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_j
+                operator: =
+                value: '15'
+      - key: _4a_group_k
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 11
+      - key: _4b_group_k
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_k_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_k_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 11
+      - key: _4c_group_k
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 11
+      - key: _4d_group_k
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 11
+      - key: _4e_group_k
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_k
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_k
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_k
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_k
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_k
+                operator: =
+                value: '15'
+      - key: _4a_group_l
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 12
+      - key: _4b_group_l
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_l_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_l_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 12
+      - key: _4c_group_l
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 12
+      - key: _4d_group_l
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 12
+      - key: _4e_group_l
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_l
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_l
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_l
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_l
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_l
+                operator: =
+                value: '15'
+      - key: _4a_group_m
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 13
+      - key: _4b_group_m
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_m_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_m_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 13
+      - key: _4c_group_m
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 13
+      - key: _4d_group_m
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 13
+      - key: _4e_group_m
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_m
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_m
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_m
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_m
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_m
+                operator: =
+                value: '15'
+      - key: _4a_group_n
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 14
+      - key: _4b_group_n
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_n_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_n_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 14
+      - key: _4c_group_n
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 14
+      - key: _4d_group_n
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 14
+      - key: _4e_group_n
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_n
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_n
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_n
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_n
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_n
+                operator: =
+                value: '15'
+      - key: _4a_group_o
+        question: [["Text","Name of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 15
+      - key: _4b_group_o
+        question: [["Text","Category of the "],["Underline",["Bold","1st"]],["Text"," hormone?"]]
+        type: SINGLE_CHOICE
+        options:
+          - value: '1'
+            text: Combined birth control pill (e.g. Marvelon, Yasmin, Microgynon)
+          - value: '2'
+            text: Progestin only birth control pill (“mini-pill”, e.g. Cerazette, Micronor)
+          - value: '3'
+            text: Unsure of which type of oral birth control pill
+          - value: '4'
+            text: Progestin injection/shot (e.g. Depo provera)
+          - value: '5'
+            text: "Transdermals: patches (e.g. OrthoEvra, Climara), dots (Vivelle dot)"
+          - value: '6'
+            text: Vaginal ring (NuvaRing)
+          - value: '7'
+            text: Progesterone containing coil/IUD (Mirena)
+          - value: '8'
+            text: Hormonal implant (Implanon/Nexplanon)
+          - value: '9'
+            text: Oral progestins to regulate the cycle (e.g. medroxyprogesterone acetate [Provera], dydrogesterone [Duphaston], dienogest [Visanne], Norethisterone)
+          - value: '10'
+            text: GnRH agonist injection/shot (e.g. leuprolilide (leuproline) acetate [Prostap], goserelin [Zoladex])
+          - value: '11'
+            text: Norethindrone acetate (Aygestin)
+          - value: '12'
+            text: Danazol
+            inlineQuestion:
+              key: _4b_group_o_12_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '13'
+            text: Hormone replacement therapy (e.g. Premarin, Provera) 
+          - value: '14'
+            text: Other
+            inlineQuestion:
+              key: _4b_group_o_14_description
+              question: Vaginally or orally?
+              type: TEXTAREA
+          - value: '15'
+            text: Don't know what type of hormone
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 15
+      - key: _4c_group_o
+        question: [["Text","Age the "],["Underline",["Bold","1st"]],["Text"," hormone was started?"]]
+        type: AGE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 15
+      - key: _4d_group_o
+        question: [["Text","Total time the "],["Underline",["Bold","1st"]],["Text"," hormone was used?"]]
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4.1
+                operator: '>='
+                value: 15
+      - key: _4e_group_o
+        question: [["Text","If the "],["Underline",["Bold","1st"]],["Text"," hormone was an "], ["Underline", "injection"], ["Text", " when was the date of the last injection?"]]
+        type: DATE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(3)
+                question: _4b_group_o
+                operator: =
+                value: '4'
+              - section: _A(3)
+                question: _4b_group_o
+                operator: =
+                value: '10'
+              - section: _A(3)
+                question: _4b_group_o
+                operator: =
+                value: '13'
+              - section: _A(3)
+                question: _4b_group_o
+                operator: =
+                value: '14'
+              - section: _A(3)
+                question: _4b_group_o
+                operator: =
+                value: '15'
   - type: survey
     key: _A(4)
     title: Menstrual History and Hormones
@@ -1208,7 +2998,12 @@ sections:
                   - section: _A(1)
                     question: _1
                     operator: <>
-                    value: l 
+                    value: l
+                    AND:
+                      - section: _A(3)
+                        question: _4
+                        operator: =
+                        value: 'yes'
       - key: _6.1
         question: A6.1. Did hormones help with the pelvic pain or pain with periods?
         type: YESNO_CHOICE
@@ -1269,33 +3064,16 @@ sections:
                 question: _7
                 operator: =
                 value: 'yes'
-      - key: _7.3_intro
+      - key: _7.3
         question: How long have you used a non-hormonal coil/IUD?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _A(4)
-                question: _7
-                operator: =
-                value: 'yes'
-      - key: _7.3.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _A(4)
-                question: _7
-                operator: =
-                value: 'yes'
-      - key: _7.3.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -9030,7 +10808,7 @@ sections:
           - value: a
             text: Irritable Bowel Syndrome
           - value: b
-            text: Inflammatory bowel disease (e.g. Crohn’s or Ulcerative Colitis)
+            text: Inflammatory bowel disease (e.g. Crohn's or Ulcerative Colitis)
           - value: c
             text: Endometriosis
           - value: d
@@ -10318,33 +12096,16 @@ sections:
                 question: _1a
                 operator: =
                 value: 'yes'
-      - key: _1a.6.1_intro
+      - key: _1a.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1a
-                operator: =
-                value: 'yes'
-      - key: _1a.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1a
-                operator: =
-                value: 'yes'
-      - key: _1a.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -10437,33 +12198,16 @@ sections:
                 question: _1b
                 operator: =
                 value: 'yes'
-      - key: _1b.6.1_intro
+      - key: _1b.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1b
-                operator: =
-                value: 'yes'
-      - key: _1b.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1b
-                operator: =
-                value: 'yes'
-      - key: _1b.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -10556,33 +12300,16 @@ sections:
                 question: _1c
                 operator: =
                 value: 'yes'
-      - key: _1c.6.1_intro
+      - key: _1c.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1c
-                operator: =
-                value: 'yes'
-      - key: _1c.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1c
-                operator: =
-                value: 'yes'
-      - key: _1c.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -10675,33 +12402,16 @@ sections:
                 question: _1d
                 operator: =
                 value: 'yes'
-      - key: _1d.6.1_intro
+      - key: _1d.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1d
-                operator: =
-                value: 'yes'
-      - key: _1d.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1d
-                operator: =
-                value: 'yes'
-      - key: _1d.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -10794,33 +12504,16 @@ sections:
                 question: _1e
                 operator: =
                 value: 'yes'
-      - key: _1e.6.1_intro
+      - key: _1e.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1e
-                operator: =
-                value: 'yes'
-      - key: _1e.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1e
-                operator: =
-                value: 'yes'
-      - key: _1e.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -10913,33 +12606,16 @@ sections:
                 question: _1f
                 operator: =
                 value: 'yes'
-      - key: _1f.6.1_intro
+      - key: _1f.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1f
-                operator: =
-                value: 'yes'
-      - key: _1f.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1f
-                operator: =
-                value: 'yes'
-      - key: _1f.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -11032,33 +12708,16 @@ sections:
                 question: _1g
                 operator: =
                 value: 'yes'
-      - key: _1g.6.1_intro
+      - key: _1g.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1g
-                operator: =
-                value: 'yes'
-      - key: _1g.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1g
-                operator: =
-                value: 'yes'
-      - key: _1g.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -11151,33 +12810,16 @@ sections:
                 question: _1h
                 operator: =
                 value: 'yes'
-      - key: _1h.6.1_intro
+      - key: _1h.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1h
-                operator: =
-                value: 'yes'
-      - key: _1h.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1h
-                operator: =
-                value: 'yes'
-      - key: _1h.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -11270,33 +12912,16 @@ sections:
                 question: _1i
                 operator: =
                 value: 'yes'
-      - key: _1i.6.1_intro
+      - key: _1i.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1i
-                operator: =
-                value: 'yes'
-      - key: _1i.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1i
-                operator: =
-                value: 'yes'
-      - key: _1i.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW

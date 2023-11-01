@@ -103,33 +103,16 @@ sections:
                 question: _1a
                 operator: =
                 value: 'yes'
-      - key: _1a.6.1_intro
+      - key: _1a.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1a
-                operator: =
-                value: 'yes'
-      - key: _1a.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1a
-                operator: =
-                value: 'yes'
-      - key: _1a.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -222,33 +205,16 @@ sections:
                 question: _1b
                 operator: =
                 value: 'yes'
-      - key: _1b.6.1_intro
+      - key: _1b.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1b
-                operator: =
-                value: 'yes'
-      - key: _1b.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1b
-                operator: =
-                value: 'yes'
-      - key: _1b.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -341,33 +307,16 @@ sections:
                 question: _1c
                 operator: =
                 value: 'yes'
-      - key: _1c.6.1_intro
+      - key: _1c.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1c
-                operator: =
-                value: 'yes'
-      - key: _1c.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1c
-                operator: =
-                value: 'yes'
-      - key: _1c.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -460,33 +409,16 @@ sections:
                 question: _1d
                 operator: =
                 value: 'yes'
-      - key: _1d.6.1_intro
+      - key: _1d.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1d
-                operator: =
-                value: 'yes'
-      - key: _1d.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1d
-                operator: =
-                value: 'yes'
-      - key: _1d.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -579,33 +511,16 @@ sections:
                 question: _1e
                 operator: =
                 value: 'yes'
-      - key: _1e.6.1_intro
+      - key: _1e.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1e
-                operator: =
-                value: 'yes'
-      - key: _1e.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1e
-                operator: =
-                value: 'yes'
-      - key: _1e.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -698,33 +613,16 @@ sections:
                 question: _1f
                 operator: =
                 value: 'yes'
-      - key: _1f.6.1_intro
+      - key: _1f.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1f
-                operator: =
-                value: 'yes'
-      - key: _1f.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1f
-                operator: =
-                value: 'yes'
-      - key: _1f.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -817,33 +715,16 @@ sections:
                 question: _1g
                 operator: =
                 value: 'yes'
-      - key: _1g.6.1_intro
+      - key: _1g.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1g
-                operator: =
-                value: 'yes'
-      - key: _1g.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1g
-                operator: =
-                value: 'yes'
-      - key: _1g.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99  
         triggers:
           - action:
               type: SHOW
@@ -936,33 +817,16 @@ sections:
                 question: _1h
                 operator: =
                 value: 'yes'
-      - key: _1h.6.1_intro
+      - key: _1h.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1h
-                operator: =
-                value: 'yes'
-      - key: _1h.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1h
-                operator: =
-                value: 'yes'
-      - key: _1h.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99 
         triggers:
           - action:
               type: SHOW
@@ -1055,33 +919,16 @@ sections:
                 question: _1i
                 operator: =
                 value: 'yes'
-      - key: _1i.6.1_intro
+      - key: _1i.6
         question: In total, how long have you used this drug?
-        type: DISPLAY
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1i
-                operator: =
-                value: 'yes'
-      - key: _1i.6.1
-        question: ""
-        placeholder: ___ years
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _E(1)
-                question: _1i
-                operator: =
-                value: 'yes'
-      - key: _1i.6.2
-        question: ""
-        placeholder: ___ months
-        type: NUMERIC
+        type: AGE
+        modes:
+          - unit: 'y'
+            min: 0
+            max: 99
+          - unit: m
+            min: 0
+            max: 99 
         triggers:
           - action:
               type: SHOW
