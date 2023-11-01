@@ -1913,6 +1913,18 @@ sections:
       - key: _3
         question: B3. Have you or your partner ever had any tests/investigations to find out why you were not getting pregnant?
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(1)
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: _A(1)
+                    question: _1
+                    operator: <>
+                    value: l 
       - key: _3.1
         question: B3.1. What were the results of these tests?
         description: Select all that apply
@@ -1955,6 +1967,18 @@ sections:
       - key: _4
         question: B4. Did you ever seek treatment for infertility in any clinic?
         type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _A(1)
+                question: _1
+                operator: IS_SET
+                AND:
+                  - section: _A(1)
+                    question: _1
+                    operator: <>
+                    value: l 
       - key: _4.1_intro
         question: B4.1. Please tell us about any fertility treatment you have used.
         type: DISPLAY

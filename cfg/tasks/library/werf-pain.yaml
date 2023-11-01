@@ -5423,7 +5423,7 @@ sections:
         type: DISPLAY
         question: [["Text","C43. Please indicate whether you have (had) the following other types of pain "],["Bold","in the last 12 months"],["Text",":"]]
       - key: _43a
-        question: Low back pain
+        question: ["Bold", "Low back pain"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -5433,7 +5433,7 @@ sections:
           - value: c
             text: Yes, more than 1 month ago
       - key: _43b
-        question: Muscle/joint pain unrelated to a viral infection or (sports) injury
+        question: ["Bold", "Muscle/joint pain unrelated to a viral infection or (sports) injury"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -5443,7 +5443,7 @@ sections:
           - value: c
             text: Yes, more than 1 month ago
       - key: _43c
-        question: Pain at ovulation (mid cycle)
+        question: ["Bold", "Pain at ovulation (mid cycle)"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -5453,7 +5453,7 @@ sections:
           - value: c
             text: Yes, more than 1 month ago
       - key: _43d
-        question: Pain in legs
+        question: ["Bold", "Pain in legs"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -5463,7 +5463,7 @@ sections:
           - value: c
             text: Yes, more than 1 month ago
       - key: _43e
-        question: Pain with urination
+        question: ["Bold", "Pain with urination"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -5473,7 +5473,7 @@ sections:
           - value: c
             text: Yes, more than 1 month ago
       - key: _43f
-        question: Pain with bowel movement
+        question: ["Bold", "Pain with bowel movement"]
         type: SINGLE_CHOICE
         options:
           - value: a
