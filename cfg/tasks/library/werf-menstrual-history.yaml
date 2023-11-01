@@ -41,6 +41,7 @@ sections:
       - key: _1
         question: A1. How old were you when you had your first menstrual period?
         type: SINGLE_CHOICE
+        required: true
         options:
           - value: a
             text: 8 years or younger
