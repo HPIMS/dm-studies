@@ -21,7 +21,7 @@ sections:
         type: DISPLAY
       - key: _1a
         question: ["Bold","Paracetamol/acetaminophen"]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1a.1
         question: Are you currently taking this medication?
@@ -140,7 +140,7 @@ sections:
                 value: 'yes'
       - key: _1b
         question: [["Bold","Aspirin"], ["Text", " (325 mg or more/tablet)"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1b.1
         question: Are you currently taking this medication?
@@ -259,7 +259,7 @@ sections:
                 value: 'yes'
       - key: _1c
         question: [["Bold","Ibuprofen"], ["Text", " (e.g., Brufen)"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1c.1
         question: Are you currently taking this medication?
@@ -378,7 +378,7 @@ sections:
                 value: 'yes'
       - key: _1d
         question: [["Bold","Celebrex, Vioxx (COX-2 inhibitors)"], ["Text", " (e.g., Brufen)"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1d.1
         question: Are you currently taking this medication?
@@ -497,7 +497,7 @@ sections:
                 value: 'yes'
       - key: _1e
         question: [["Bold","Other anti-inflammatory analgesics"], ["Text", " (e.g. naproxen, mefanamic acid, Aleve, Naprosyn, Relafen, Ketoprofen, Anaprox)"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1e.1
         question: Are you currently taking this medication?
@@ -616,7 +616,7 @@ sections:
                 value: 'yes'
       - key: _1f
         question: [["Bold","Strong (narcotic) analgesics"], ["Text", " (e.g. hydrocodone +paracetamol, codeine+paracetamol, morphine, codeine, oxycodone, hydrocodone, Demerol)"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1f.1
         question: Are you currently taking this medication?
@@ -735,7 +735,7 @@ sections:
                 value: 'yes'
       - key: _1g
         question: [["Bold","Other pain-killing drugs aimed at the nerves/central nervous system"], ["Text", " (e.g. amitriptyline, nortriptyline, gabapentin, pregabalin, lamotrigine)"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1g.1
         question: Are you currently taking this medication?
@@ -854,7 +854,7 @@ sections:
                 value: 'yes'
       - key: _1h
         question: [["Bold","Muscle relaxants"], ["Text", " (e.g. diazepam/temazepam, buscopan)"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1h.1
         question: Are you currently taking this medication?
@@ -973,7 +973,7 @@ sections:
                 value: 'yes'
       - key: _1i
         question: [["Bold","Herbal medicines"]]
-        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        description: ["BodyLage", [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","?"]]]
         type: YESNO_CHOICE
       - key: _1i.1
         question: Are you currently taking this medication?
@@ -1099,8 +1099,8 @@ sections:
         question: [["Text","E2. Have you EVER taken prescription drugs for "],["Underline",["Bold","more than 3 months"]],["Text",", "],["Bold","excluding"],["Text"," hormone treatments and pain medications?"]]
         type: YESNO_CHOICE
       - key: _2a
-        question: [["Bold","Diuretics (water pills)"]]
-        description: Have you ever taken this medication?
+        question: ["Bold","Diuretics (water pills)"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1168,7 +1168,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2b
-        question: [["Text","Have you ever taken "],["Underline",["Bold","diabetic tablets"]],["Text","?"]]
+        question: ["Bold","Diabetic tablets"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1236,7 +1237,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2c
-        question: [["Text","Have you ever taken "],["Underline",["Bold","insulin"]],["Text","?"]]
+        question: ["Bold","Insulin"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1304,7 +1306,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2d
-        question: [["Text","Have you ever taken "],["Underline",["Bold","thyroid drugs"]],["Text","?"]]
+        question: ["Bold","Thyroid drugs"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1372,7 +1375,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2e
-        question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for epilepsy"]],["Text","?"]]
+        question: ["Bold","Drugs for epileps"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1440,7 +1444,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2f
-        question: [["Text","Have you ever taken "],["Underline",["Bold","sleeping tablets / tranquilisers"]],["Text","?"]]
+        question: ["Bold","Sleeping tablets / tranquilisers"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1508,7 +1513,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2g
-        question: [["Text","Have you ever taken "],["Underline",["Bold","anti-depressants"]],["Text","?"]]
+        question: ["Bold","Anti-depressants"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1576,7 +1582,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2h
-        question: [["Text","Have you ever taken "],["Underline",["Bold","other drugs to treat mental illness"]],["Text","?"]]
+        question: ["Bold","Other drugs to treat mental illness"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1644,7 +1651,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2i
-        question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for osteoporosis (“brittle bones”)"]],["Text","?"]]
+        question: ["Bold","Drugs for osteoporosis (“brittle bones”)"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1712,7 +1720,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2j
-        question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for rheumatoid arthritis"]],["Text","?"]]
+        question: ["Bold","Drugs for rheumatoid arthritis"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1780,7 +1789,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2k
-        question: [["Text","Have you ever taken "],["Underline",["Bold","antibiotics for a month or more"]],["Text","?"]]
+        question: ["Bold","Antibiotics for a month or more"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1848,7 +1858,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2l
-        question: [["Text","Have you ever taken "],["Underline",["Bold","antacids"]],["Text","?"]]
+        question: ["Bold","Antibiotics for a month or more"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1916,7 +1927,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2m
-        question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for stomach ulcer / gastritis"]],["Text","?"]]
+        question: ["Bold","Drugs for stomach ulcer / gastritis"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -1984,7 +1996,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2n
-        question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for high cholesterol"]],["Text","?"]]
+        question: ["Bold","Drugs for high cholesterol"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2052,7 +2065,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2o
-        question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for allergies (antihistamines)"]],["Text","?"]]
+        question: ["Bold","Drugs for allergies (antihistamines)"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2120,7 +2134,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2p
-        question: [["Text","Have you ever taken "],["Underline",["Bold","steroids (oral, inhaled, or nasal)"]],["Text","?"]]
+        question: ["Bold","Steroids (oral, inhaled, or nasal)"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2188,7 +2203,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2q
-        question: [["Text","Have you ever taken "],["Underline",["Bold","chemotherapy for cancer"]],["Text","?"]]
+        question: ["Bold","Chemotherapy for cancer"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2256,7 +2272,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2r
-        question: [["Text","Have you ever taken "],["Underline",["Bold","tamoxifen for cancer"]],["Text","?"]]
+        question: ["Bold","Tamoxifen for cancer"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2324,7 +2341,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2s
-        question: [["Text","Have you ever taken "],["Underline",["Bold","blood pressure drugs"]],["Text","?"]]
+        question: ["Bold","Blood pressure drugs"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2392,7 +2410,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2t
-        question: [["Text","Have you ever taken "],["Underline",["Bold","drugs for angina (chest pain)"]],["Text","?"]]
+        question: ["Bold","Drugs for angina (chest pain)"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2460,7 +2479,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2u
-        question: [["Text","Have you ever taken "],["Underline",["Bold","other drugs for a heart condition"]],["Text","?"]]
+        question: ["Bold","Other drugs for a heart condition"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2528,7 +2548,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2v
-        question: [["Text","Have you ever taken "],["Underline",["Bold","inhaler for asthma"]],["Text","?"]]
+        question: ["Bold","Inhaler for asthma"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2596,7 +2617,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2w
-        question: [["Text","Have you ever taken "],["Underline",["Bold","warfarin / heparin to thin blood"]],["Text","?"]]
+        question: ["Bold","Warfarin / heparin to thin blood"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
@@ -2664,7 +2686,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _2x
-        question: [["Text","Have you ever taken "],["Underline",["Bold","migraine tablets/injections"]],["Text","?"]]
+        question: ["Bold","Migraine tablets/injections"]
+        description: ["BodyLage", "Have you ever taken this medication?"]
         type: YESNO_CHOICE
         triggers:
           - action:
