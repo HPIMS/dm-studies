@@ -262,7 +262,7 @@ sections:
         question: C2.1. At what age did you start having period pain?
         description: Type your response in the space below.
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
@@ -642,7 +642,7 @@ sections:
         question: [["Text","C12. How old were you when your pelvic pain during your period was "],["Underline","at its worst"],["Text","?"]]
         description: Type your response in the space below.
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
@@ -2016,7 +2016,7 @@ sections:
         question: C16.1. At what age did this pain start?
         description: Type your response in the space below.
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
@@ -2349,7 +2349,7 @@ sections:
         question: [["Text","C26. How old were you when your pelvic pain with vaginal intercourse/penetration was "],["Underline","at its worst"],["Text","?"]]
         description: Type your response in the space below.
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
@@ -3319,7 +3319,7 @@ sections:
         question: C29.1. At what age did you start having this pelvic pain?
         description: Type your response in the space below.
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
@@ -4269,7 +4269,7 @@ sections:
         question: [["Text","C38. How old were you when your pelvic/lower abdominal pain was "],["Underline","at its worst"],["Text","?"]]
         description: Type your response in the space below.
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
