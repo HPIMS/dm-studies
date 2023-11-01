@@ -250,7 +250,7 @@ sections:
         type: DISPLAY
         question: D4. Have you had any of the following surgical procedures during your life?
       - key: _4a
-        question: Tubal ligation (sterilisation/tubes tied)
+        question: ["Bold", "Tubal ligation (sterilisation/tubes tied)"]
         type: YESNO_CHOICE
       - key: _4a.3
         question: At approximately what age did you have the procedure?
@@ -265,7 +265,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4b
-        question: Appendix removed
+        question: ["Bold", "Appendix removed"]
         type: YESNO_CHOICE
       - key: _4b.3
         question: At approximately what age did you have the procedure?
@@ -280,7 +280,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4c
-        question: Hysterectomy
+        question: ["Bold", "Hysterectomy"]
         type: YESNO_CHOICE
       - key: _4c.3
         question: At approximately what age did you have the procedure?
@@ -306,7 +306,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4d
-        question: Oophorectomy
+        question: ["Bold", "Oophorectomy"]
         type: YESNO_CHOICE
       - key: _4d.1
         question: How many of your ovaries have been removed?
@@ -361,7 +361,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4e
-        question: Dilatation and Curettage (D&C)
+        question: ["Bold", "Dilatation and Curettage (D&C)"]
         type: YESNO_CHOICE
       - key: _4e.2
         question: How many times did you have this surgery?
@@ -398,7 +398,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4f
-        question: Cervical surgery (LEEP or conization)
+        question: ["Bold", "Cervical surgery (LEEP or conization)"]
         type: YESNO_CHOICE
       - key: _4f.2
         question: How many times did you have this surgery?
@@ -435,7 +435,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4g
-        question: Hysteroscopy
+        question: ["Bold", "Hysteroscopy"]
         type: YESNO_CHOICE
       - key: _4g.2
         question: How many times did you have this surgery?
@@ -472,7 +472,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4h
-        question: Gall bladder surgery
+        question: ["Bold", "Gall bladder surgery"]
         type: YESNO_CHOICE
       - key: _4h.2
         question: How many times did you have this surgery?
@@ -509,7 +509,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4i
-        question: Hernia operation
+        question: ["Bold", "Hernia operation"]
         type: YESNO_CHOICE
       - key: _4i.2
         question: How many times did you have this surgery?
@@ -546,7 +546,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4j
-        question: Sigmoidoscopy/colonoscopy (insertion of a tube to look inside your bowel)
+        question: ["Bold", "Sigmoidoscopy/colonoscopy (insertion of a tube to look inside your bowel)"]
         type: YESNO_CHOICE
       - key: _4j.2
         question: How many times did you have this surgery?
@@ -583,7 +583,7 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _4k
-        question: Laparoscopy (surgery involving insertion of a telescope into you abdomen)
+        question: ["Bold", "Laparoscopy (surgery involving insertion of a telescope into you abdomen)"]
         type: YESNO_CHOICE
       - key: _4k.2
         question: How many times did you have this surgery?
@@ -762,7 +762,7 @@ sections:
                     operator: '>='
                     value: 5
       - key: _4l
-        question: Other abdominal surgery
+        question: ["Bold", "Other abdominal surgery"]
         type: YESNO_CHOICE
       - key: _4l.1
         question: What was the surgery?

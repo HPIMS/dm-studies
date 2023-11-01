@@ -191,7 +191,7 @@ sections:
         content: ["Image", "WERF-body-condition-ref"]
         type: DISPLAY
       - key: _11a
-        question: ["Bold", "10-14"]
+        question: ["Bold", "10-14 yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -220,7 +220,7 @@ sections:
                 operator: =
                 value: e
       - key: _11b
-        question: ["Bold", "15-19"]
+        question: ["Bold", "15-19 yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -249,7 +249,7 @@ sections:
                 operator: =
                 value: e
       - key: _11c
-        question: ["Bold", "20-24"]
+        question: ["Bold", "20-24 yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -274,7 +274,7 @@ sections:
                 operator: =
                 value: e
       - key: _11d
-        question: ["Bold", "25-29"]
+        question: ["Bold", "25-29 yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -295,7 +295,7 @@ sections:
                 operator: =
                 value: e
       - key: _11e
-        question: ["Bold", "30-34"]
+        question: ["Bold", "30-34 yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -316,7 +316,7 @@ sections:
                 operator: =
                 value: e
       - key: _11f
-        question: ["Bold", "35-39"]
+        question: ["Bold", "35-39 yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -333,7 +333,7 @@ sections:
                 operator: =
                 value: e
       - key: _11g
-        question: ["Bold", "40-44"]
+        question: ["Bold", "40-44 yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -350,7 +350,7 @@ sections:
                 operator: =
                 value: e
       - key: _11h
-        question: ["Bold", "45+"]
+        question: ["Bold", "45+ yrs"]
         type: H_SCALE
         min: 1
         max: 9
@@ -372,7 +372,7 @@ sections:
         content: ["Image", "WERF-body-shape-ref"]
         type: DISPLAY
       - key: _12a
-        question: ["Bold", "15-19"]
+        question: ["Bold", "15-19 yrs"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -408,7 +408,7 @@ sections:
                 operator: =
                 value: e
       - key: _12b
-        question: ["Bold", "20 to 29"]
+        question: ["Bold", "20-29 yrs"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -440,7 +440,7 @@ sections:
                 operator: =
                 value: e
       - key: _12c
-        question: ["Bold", "30 to 39"]
+        question: ["Bold", "30-39 yrs"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -468,7 +468,7 @@ sections:
                 operator: =
                 value: e
       - key: _12d
-        question: ["Bold", "40 to 49"]
+        question: ["Bold", "40-49 yrs"]
         type: SINGLE_CHOICE
         options:
           - value: a
@@ -492,7 +492,7 @@ sections:
                 operator: =
                 value: e
       - key: _12e
-        question: ["Bold", "50+"]
+        question: ["Bold", "50+ yrs"]
         type: SINGLE_CHOICE
         options:
           - value: a
