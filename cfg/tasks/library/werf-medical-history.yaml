@@ -13,7 +13,7 @@ name: WERF Medical History
 sections:
   - type: survey
     key: _D(1)
-    title: ""
+    title: Medical History
     description: ''
     questions:
       - key: _1
@@ -811,7 +811,7 @@ sections:
                 value: 'yes'
   - type: survey
     key: _D(2)
-    title: ""
+    title: Medical History
     description: ''
     questions:
       - key: _5_intro
@@ -1029,7 +1029,7 @@ sections:
                 value: 'yes'
   - type: survey
     key: _D(3)
-    title: ""
+    title: Medical History
     description: ''
     questions:
       - key: _10_intro
