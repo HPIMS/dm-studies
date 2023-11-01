@@ -13,7 +13,7 @@ name: WERF Medication History
 sections:
   - type: survey
     key: _E(1)
-    title: ""
+    title: Medication History
     description: ''
     questions:
       - key: _1_intro
@@ -1092,7 +1092,7 @@ sections:
                 value: 'yes'
   - type: survey
     key: _E(2)
-    title: ""
+    title: Medication History
     description: ''
     questions:
       - key: _2
