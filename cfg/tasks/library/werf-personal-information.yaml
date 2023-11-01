@@ -181,6 +181,11 @@ sections:
         question: How old were you when you weighed that much?
         placeholder: ___ years
         type: AGE
+  - type: survey
+    key: _F(2)
+    title: ""
+    description: ''
+    questions:
       - key: _11
         question: F11. Which picture best depics your shape at each age?
         content: ["Image", "WERF-body-condition-ref"]
@@ -357,6 +362,11 @@ sections:
                 question: WERF_age_select
                 operator: =
                 value: e
+  - type: survey
+    key: _F(3)
+    title: ""
+    description: ''
+    questions:
       - key: _12
         question: F12. The shapes and descriptions below describe 4 typical female body shapes. Which shape best describes your body at each age? 
         content: ["Image", "WERF-body-shape-ref"]
@@ -501,6 +511,11 @@ sections:
                 question: WERF_age_select
                 operator: =
                 value: e
+  - type: survey
+    key: _F(4)
+    title: ""
+    description: ''
+    questions:
       - key: _13
         question: F13. At age 18, what was your natural hair color?
         description: If you are under 18, please tell us what your natural hair color is now.
@@ -531,6 +546,11 @@ sections:
             text: Brown
           - value: e
             text: Green
+  - type: survey
+    key: _F(5)
+    title: ""
+    description: ''
+    questions:
       - key: _15
         question: [["Text","F15. During "],["Bold","the last 12 months"],["Text",", what was your average time "],["Bold","per week"],["Text"," spent on each of the following recreational activities?"]]
         type: DISPLAY
@@ -731,6 +751,11 @@ sections:
             text: 7-10 hr
           - value: j
             text: 11+ hr
+  - type: survey
+    key: _F(6)
+    title: ""
+    description: ''
+    questions:
       - key: _16
         question: F16. Have you smoked at least 100 cigarettes in your entire life?
         type: YESNO_CHOICE
@@ -742,7 +767,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(5)
                 question: _16
                 operator: =
                 value: 'yes'
@@ -753,7 +778,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(5)
                 question: _16
                 operator: =
                 value: 'yes'
@@ -765,7 +790,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(5)
                 question: _16.2
                 operator: =
                 value: 'no'
@@ -777,7 +802,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(5)
                 question: _16.2
                 operator: =
                 value: 'yes'
@@ -791,7 +816,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(6)
                 question: _17
                 operator: =
                 value: 'yes'
@@ -803,7 +828,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(6)
                 question: _17
                 operator: =
                 value: 'yes'
@@ -815,7 +840,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(6)
                 question: _17
                 operator: =
                 value: 'yes'
@@ -827,7 +852,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(6)
                 question: _17
                 operator: =
                 value: 'yes'
@@ -839,7 +864,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: _F(1)
+              - section: _F(6)
                 question: _17
                 operator: =
                 value: 'yes'
