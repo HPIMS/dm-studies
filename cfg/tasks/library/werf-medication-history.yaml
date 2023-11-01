@@ -20,7 +20,8 @@ sections:
         question: [["Text","E1. Please tell us about any pain medications, over-the-counter or prescription, that you have used at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: DISPLAY
       - key: _1a
-        question: [["Text","Have you ever taken "],["Underline",["Bold","paracetamol/acetaminophen"]],["Text"," at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: ["Bold","Paracetamol/acetaminophen"]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1a.1
         question: Are you currently taking this medication?
@@ -138,7 +139,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1b
-        question: [["Text","Have you ever taken "],["Underline",["Bold","aspirin"]],["Text"," (325 mg or more/tablet) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Aspirin"], ["Text", " (325 mg or more/tablet)"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1b.1
         question: Are you currently taking this medication?
@@ -256,7 +258,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1c
-        question: [["Text","Have you ever taken "],["Underline",["Bold","ibuprofen"]],["Text"," (e.g., Brufen) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Ibuprofen"], ["Text", " (e.g., Brufen)"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1c.1
         question: Are you currently taking this medication?
@@ -374,7 +377,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1d
-        question: [["Text","Have you ever taken "],["Underline",["Bold","celebrex, Vioxx (COX-2 inhibitors)"]],["Text"," at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Celebrex, Vioxx (COX-2 inhibitors)"], ["Text", " (e.g., Brufen)"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1d.1
         question: Are you currently taking this medication?
@@ -492,7 +496,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1e
-        question: [["Text","Have you ever taken "],["Underline",["Bold","other anti-inflammatory analgesics"]],["Text"," (e.g. naproxen, mefanamic acid, Aleve, Naprosyn, Relafen, Ketoprofen, Anaprox) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Other anti-inflammatory analgesics"], ["Text", " (e.g. naproxen, mefanamic acid, Aleve, Naprosyn, Relafen, Ketoprofen, Anaprox)"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1e.1
         question: Are you currently taking this medication?
@@ -610,7 +615,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1f
-        question: [["Text","Have you ever taken "],["Underline",["Bold","strong (narcotic) analgesics"]],["Text"," (e.g. hydrocodone +paracetamol, codeine+paracetamol, morphine, codeine, oxycodone, hydrocodone, Demerol) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Strong (narcotic) analgesics"], ["Text", " (e.g. hydrocodone +paracetamol, codeine+paracetamol, morphine, codeine, oxycodone, hydrocodone, Demerol)"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1f.1
         question: Are you currently taking this medication?
@@ -728,7 +734,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1g
-        question: [["Text","Have you ever taken "],["Underline",["Bold","other pain-killing drugs aimed at the nerves/central nervous system"]],["Text"," (e.g. amitriptyline, nortriptyline, gabapentin, pregabalin, lamotrigine) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Other pain-killing drugs aimed at the nerves/central nervous system"], ["Text", " (e.g. amitriptyline, nortriptyline, gabapentin, pregabalin, lamotrigine)"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1g.1
         question: Are you currently taking this medication?
@@ -846,7 +853,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1h
-        question: [["Text","Have you ever taken "],["Underline",["Bold","muscle relaxants"]],["Text"," (e.g. diazepam/temazepam, buscopan) at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Muscle relaxants"], ["Text", " (e.g. diazepam/temazepam, buscopan)"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1h.1
         question: Are you currently taking this medication?
@@ -964,7 +972,8 @@ sections:
                 operator: =
                 value: 'yes'
       - key: _1i
-        question: [["Text","Have you ever taken "],["Underline",["Bold","herbal medicines"]],["Text"," at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
+        question: [["Bold","Herbal medicines"]]
+        description: [["Text","Have you ever taken this medication, at least once a week for a period of "],["Underline",["Bold","3 months or longer"]],["Text","."]]
         type: YESNO_CHOICE
       - key: _1i.1
         question: Are you currently taking this medication?
@@ -1090,7 +1099,8 @@ sections:
         question: [["Text","E2. Have you EVER taken prescription drugs for "],["Underline",["Bold","more than 3 months"]],["Text",", "],["Bold","excluding"],["Text"," hormone treatments and pain medications?"]]
         type: YESNO_CHOICE
       - key: _2a
-        question: [["Text","Have you ever taken "],["Underline",["Bold","diuretics (water pills)"]],["Text","?"]]
+        question: [["Bold","Diuretics (water pills)"]]
+        description: Have you ever taken this medication?
         type: YESNO_CHOICE
         triggers:
           - action:
