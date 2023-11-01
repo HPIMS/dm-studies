@@ -908,12 +908,14 @@ sections:
                 question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: _15g.3_group_a
-        question: [["Underline",["Bold","Up to age 15"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
-        description: >-
-          You will be asked to rate your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
+      - key: _15g.1_group_a
+        question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]]
+        description: Where 0=no pain and 10=worst imaginable pain.
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
         triggers:
           - action:
               type: SHOW
@@ -930,22 +932,6 @@ sections:
                 question: _15a_group_a
                 operator: =
                 value: '5'
-      - key: _15g.1_group_a
-        question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]]
-        description: Where 0=no pain and 10=worst imaginable pain.
-        type: H_SCALE
-        min: 0
-        minLabel: No Pain
-        max: 10
-        maxLabel: Worst Imaginable Pain
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(2)
-                question: _15g.3_group_a
-                operator: =
-                value: 'yes'
       - key: _15g.2_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -959,9 +945,37 @@ sections:
               type: SHOW
             condition:
               - section: _C(2)
-                question: _15g.3_group_a
+                question: _15a_group_a
                 operator: =
-                value: 'yes'
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_a
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_a
+                operator: =
+                value: '5'
+      - key: _15g_alt_group_a
+        question: ["Bold","Or check here if you can't remember how severe your pelvic pain was."]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(2)
+                question: _15a_group_a
+                operator: =
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_a
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_a
+                operator: =
+                value: '5'
       - key: _15a_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
@@ -1147,12 +1161,14 @@ sections:
                 question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: _15g.3_group_b
-        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
-        description: >-
-          You will be asked to rate your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
+      - key: _15g.1_group_b
+        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
+        description: Where 0=no pain and 10=worst imaginable pain.
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
         triggers:
           - action:
               type: SHOW
@@ -1169,22 +1185,6 @@ sections:
                 question: _15a_group_b
                 operator: =
                 value: '5'
-      - key: _15g.1_group_b
-        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
-        description: Where 0=no pain and 10=worst imaginable pain.
-        type: H_SCALE
-        min: 0
-        minLabel: No Pain
-        max: 10
-        maxLabel: Worst Imaginable Pain
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(2)
-                question: _15g.3_group_b
-                operator: =
-                value: 'yes'
       - key: _15g.2_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -1198,9 +1198,37 @@ sections:
               type: SHOW
             condition:
               - section: _C(2)
-                question: _15g.3_group_b
+                question: _15a_group_b
                 operator: =
-                value: 'yes'
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_b
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_b
+                operator: =
+                value: '5'
+      - key: _15g_alt_group_b
+        question: ["Bold","Or check here if you can't remember how severe your pelvic pain was."]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(2)
+                question: _15a_group_b
+                operator: =
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_b
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_b
+                operator: =
+                value: '5'
       - key: _15a_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
@@ -1382,12 +1410,14 @@ sections:
                 question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: _15g.3_group_c
-        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
-        description: >-
-          You will be asked to rate your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
+      - key: _15g.1_group_c
+        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
+        description: Where 0=no pain and 10=worst imaginable pain.
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
         triggers:
           - action:
               type: SHOW
@@ -1404,22 +1434,6 @@ sections:
                 question: _15a_group_c
                 operator: =
                 value: '5'
-      - key: _15g.1_group_c
-        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
-        description: Where 0=no pain and 10=worst imaginable pain.
-        type: H_SCALE
-        min: 0
-        minLabel: No Pain
-        max: 10
-        maxLabel: Worst Imaginable Pain
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(2)
-                question: _15g.3_group_c
-                operator: =
-                value: 'yes'
       - key: _15g.2_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -1433,9 +1447,37 @@ sections:
               type: SHOW
             condition:
               - section: _C(2)
-                question: _15g.3_group_c
+                question: _15a_group_c
                 operator: =
-                value: 'yes'
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_c
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_c
+                operator: =
+                value: '5'
+      - key: _15g_alt_group_c
+        question: ["Bold","Or check here if you can't remember how severe your pelvic pain was."]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(2)
+                question: _15a_group_c
+                operator: =
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_c
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_c
+                operator: =
+                value: '5'
       - key: _15a_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
@@ -1613,12 +1655,14 @@ sections:
                 question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: _15g.3_group_d
-        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
-        description: >-
-          You will be asked to rate your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
+      - key: _15g.1_group_d
+        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
+        description: Where 0=no pain and 10=worst imaginable pain.
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
         triggers:
           - action:
               type: SHOW
@@ -1635,22 +1679,6 @@ sections:
                 question: _15a_group_d
                 operator: =
                 value: '5'
-      - key: _15g.1_group_d
-        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
-        description: Where 0=no pain and 10=worst imaginable pain.
-        type: H_SCALE
-        min: 0
-        minLabel: No Pain
-        max: 10
-        maxLabel: Worst Imaginable Pain
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(2)
-                question: _15g.3_group_d
-                operator: =
-                value: 'yes'
       - key: _15g.2_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -1664,9 +1692,37 @@ sections:
               type: SHOW
             condition:
               - section: _C(2)
-                question: _15g.3_group_d
+                question: _15a_group_d
                 operator: =
-                value: 'yes'
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_d
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_d
+                operator: =
+                value: '5'
+      - key: _15g_alt_group_d
+        question: ["Bold","Or check here if you can't remember how severe your pelvic pain was."]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(2)
+                question: _15a_group_d
+                operator: =
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_d
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_d
+                operator: =
+                value: '5'
       - key: _15a_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": How much pelvic pain did you usually have with your periods?"]]
         type: SINGLE_CHOICE
@@ -1840,12 +1896,14 @@ sections:
                 question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: _15g.3_group_e
-        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","on average"],["Text"," or "],["Underline","at its worst"],["Text","?"]]
-        description: >-
-          You will be asked to rate your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
+      - key: _15g.1_group_e
+        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
+        description: Where 0=no pain and 10=worst imaginable pain.
+        type: H_SCALE
+        min: 0
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Imaginable Pain
         triggers:
           - action:
               type: SHOW
@@ -1862,22 +1920,6 @@ sections:
                 question: _15a_group_e
                 operator: =
                 value: '5'
-      - key: _15g.1_group_e
-        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","on average"],["Text","."]] 
-        description: Where 0=no pain and 10=worst imaginable pain.
-        type: H_SCALE
-        min: 0
-        minLabel: No Pain
-        max: 10
-        maxLabel: Worst Imaginable Pain
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(2)
-                question: _15g.3_group_e
-                operator: =
-                value: 'yes'
       - key: _15g.2_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic period pain was "],["Underline","at its worst"],["Text","."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -1891,9 +1933,37 @@ sections:
               type: SHOW
             condition:
               - section: _C(2)
-                question: _15g.3_group_e
+                question: _15a_group_e
                 operator: =
-                value: 'yes'
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_e
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_e
+                operator: =
+                value: '5'
+      - key: _15g_alt_group_d
+        question: ["Bold","Or check here if you can't remember how severe your pelvic pain was."]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(2)
+                question: _15a_group_e
+                operator: =
+                value: '3'
+              - section: _C(2)
+                question: _15a_group_e
+                operator: =
+                value: '4'
+              - section: _C(2)
+                question: _15a_group_e
+                operator: =
+                value: '5'
   - type: survey
     key: _C(3)
     title: ""
@@ -2449,20 +2519,6 @@ sections:
                 question: _28a_group_a
                 operator: =
                 value: '2'
-      - key: _28g.3_group_a
-        question: [["Underline",["Bold","Up to age 15"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(3)
-                question: _28a_group_a
-                operator: =
-                value: '2'
       - key: _28g.1_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -2476,10 +2532,22 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_a
+                question: _28a_group_a
                 operator: =
-                value: 'yes'
-      - key: _28g.2_group_a
+                value: '2'
+      - key: _28g_alt_group_a
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "during intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_a
+                operator: =
+                value: '2'
+      - key: _28h.1_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
@@ -2492,9 +2560,21 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_a
+                question: _28a_group_a
                 operator: =
-                value: 'yes'
+                value: '2'
+      - key: _28h_alt_group_a
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "in the 24 hours after intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_a
+                operator: =
+                value: '2'
       - key: _28a_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
@@ -2623,20 +2703,6 @@ sections:
                 question: _28a_group_b
                 operator: =
                 value: '2'
-      - key: _28g.3_group_b
-        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(3)
-                question: _28a_group_b
-                operator: =
-                value: '2'
       - key: _28g.1_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -2650,10 +2716,22 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_b
+                question: _28a_group_b
                 operator: =
-                value: 'yes'
-      - key: _28g.2_group_b
+                value: '2'
+      - key: _28g_alt_group_b
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "during intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_b
+                operator: =
+                value: '2'
+      - key: _28h.1_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
@@ -2666,9 +2744,21 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_b
+                question: _28a_group_b
                 operator: =
-                value: 'yes'                   
+                value: '2'
+      - key: _28h_alt_group_b
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "in the 24 hours after intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_b
+                operator: =
+                value: '2'                  
       - key: _28a_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
@@ -2793,20 +2883,6 @@ sections:
                 question: _28a_group_c
                 operator: =
                 value: '2'
-      - key: _28g.3_group_c
-        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(3)
-                question: _28a_group_c
-                operator: =
-                value: '2'
       - key: _28g.1_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -2820,10 +2896,22 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_c
+                question: _28a_group_c
                 operator: =
-                value: 'yes'
-      - key: _28g.2_group_c
+                value: '2'
+      - key: _28g_alt_group_c
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "during intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_c
+                operator: =
+                value: '2'
+      - key: _28h.1_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
@@ -2836,9 +2924,21 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_c
+                question: _28a_group_c
                 operator: =
-                value: 'yes' 
+                value: '2'
+      - key: _28h_alt_group_c
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "in the 24 hours after intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_c
+                operator: =
+                value: '2'
       - key: _28a_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
@@ -2959,20 +3059,6 @@ sections:
                 question: _28a_group_d
                 operator: =
                 value: '2'
-      - key: _28g.3_group_d
-        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(3)
-                question: _28a_group_d
-                operator: =
-                value: '2'
       - key: _28g.1_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -2986,10 +3072,22 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_d
+                question: _28a_group_d
                 operator: =
-                value: 'yes'
-      - key: _28g.2_group_d
+                value: '2'
+      - key: _28g_alt_group_d
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "during intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_d
+                operator: =
+                value: '2'
+      - key: _28h.1_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
@@ -3002,9 +3100,21 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_d
+                question: _28a_group_d
                 operator: =
-                value: 'yes' 
+                value: '2'
+      - key: _28h_alt_group_d
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "in the 24 hours after intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_d
+                operator: =
+                value: '2'
       - key: _28a_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Did you have pelvic pain "],["Bold","during or in the 24 hours after vaginal intercourse/penetration"],["Text","?"]]
         type: SINGLE_CHOICE
@@ -3121,20 +3231,6 @@ sections:
                 question: _28a_group_e
                 operator: =
                 value: '2'
-      - key: _28g.3_group_e
-        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Can you remember how severe your "],["Underline","pelvic pain was during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," "],["Underline","during intercourse"],["Text"," or "],["Underline","24 hours after intercourse"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(3)
-                question: _28a_group_e
-                operator: =
-                value: '2'
       - key: _28g.1_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain during intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -3148,10 +3244,22 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_e
+                question: _28a_group_e
                 operator: =
-                value: 'yes'
-      - key: _28g.2_group_e
+                value: '2'
+      - key: _28g_alt_group_e
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "during intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_e
+                operator: =
+                value: '2'
+      - key: _28h.1_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your "],["Underline","pelvic pain in the 24 hours after intercourse"],["Text"," was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
         type: H_SCALE
@@ -3164,9 +3272,21 @@ sections:
               type: SHOW
             condition:
               - section: _C(3)
-                question: _28g.3_group_e
+                question: _28a_group_e
                 operator: =
-                value: 'yes'
+                value: '2'
+      - key: _28h_alt_group_e
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "in the 24 hours after intercourse"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(3)
+                question: _28a_group_e
+                operator: =
+                value: '2'
   - type: survey
     key: _C(4)
     title: ""
@@ -4387,24 +4507,6 @@ sections:
                 question: _41a_group_a
                 operator: =
                 value: '2'
-      - key: _41g.2_group_a
-        question: [["Underline",["Bold","Up to age 15"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","at its worst"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(4)
-                question: _41a_group_a
-                operator: =
-                value: '1'
-              - section: _C(4)
-                question: _41a_group_a
-                operator: =
-                value: '2'
       - key: _41g.1_group_a
         question: [["Underline",["Bold","Up to age 15"]],["Text",": Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -4418,9 +4520,29 @@ sections:
               type: SHOW
             condition:
               - section: _C(4)
-                question: _41g.2_group_a
+                question: _41a_group_a
                 operator: =
-                value: 'yes'
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_a
+                operator: =
+                value: '2'
+      - key: _41g_alt_group_a
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "at its worst"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(4)
+                question: _41a_group_a
+                operator: =
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_a
+                operator: =
+                value: '2'
       - key: _41a_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": How often did you have pelvic pain?"]]
         type: SINGLE_CHOICE
@@ -4596,24 +4718,6 @@ sections:
                 question: _41a_group_b
                 operator: =
                 value: '2'
-      - key: _41g.2_group_b
-        question: [["Underline",["Bold","16-20 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","at its worst"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(4)
-                question: _41a_group_b
-                operator: =
-                value: '1'
-              - section: _C(4)
-                question: _41a_group_b
-                operator: =
-                value: '2'
       - key: _41g.1_group_b
         question: [["Underline",["Bold","16-20 yrs"]],["Text",": Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -4627,9 +4731,29 @@ sections:
               type: SHOW
             condition:
               - section: _C(4)
-                question: _41g.2_group_b
+                question: _41a_group_b
                 operator: =
-                value: 'yes'
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_b
+                operator: =
+                value: '2'
+      - key: _41g_alt_group_b
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "at its worst"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(4)
+                question: _41a_group_b
+                operator: =
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_b
+                operator: =
+                value: '2'
       - key: _41a_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": How often did you have pelvic pain?"]]
         type: SINGLE_CHOICE
@@ -4801,24 +4925,6 @@ sections:
                 question: _41a_group_c
                 operator: =
                 value: '2'
-      - key: _41g.2_group_c
-        question: [["Underline",["Bold","21-30 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","at its worst"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(4)
-                question: _41a_group_c
-                operator: =
-                value: '1'
-              - section: _C(4)
-                question: _41a_group_c
-                operator: =
-                value: '2'
       - key: _41g.1_group_c
         question: [["Underline",["Bold","21-30 yrs"]],["Text",": Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -4832,9 +4938,29 @@ sections:
               type: SHOW
             condition:
               - section: _C(4)
-                question: _41g.2_group_c
+                question: _41a_group_c
                 operator: =
-                value: 'yes'
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_c
+                operator: =
+                value: '2'
+      - key: _41g_alt_group_c
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "at its worst"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(4)
+                question: _41a_group_c
+                operator: =
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_c
+                operator: =
+                value: '2'
       - key: _41a_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": How often did you have pelvic pain?"]]
         type: SINGLE_CHOICE
@@ -5006,24 +5132,6 @@ sections:
                 question: _41a_group_d
                 operator: =
                 value: '2'
-      - key: _41g.2_group_d
-        question: [["Underline",["Bold","31-40 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","at its worst"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(4)
-                question: _41a_group_d
-                operator: =
-                value: '1'
-              - section: _C(4)
-                question: _41a_group_d
-                operator: =
-                value: '2'
       - key: _41g.1_group_d
         question: [["Underline",["Bold","31-40 yrs"]],["Text",": Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -5037,9 +5145,29 @@ sections:
               type: SHOW
             condition:
               - section: _C(4)
-                question: _41g.2_group_d
+                question: _41a_group_d
                 operator: =
-                value: 'yes'
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_d
+                operator: =
+                value: '2'
+      - key: _41g_alt_group_d
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "at its worst"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(4)
+                question: _41a_group_d
+                operator: =
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_d
+                operator: =
+                value: '2'
       - key: _41a_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": How often did you have pelvic pain?"]]
         type: SINGLE_CHOICE
@@ -5211,24 +5339,6 @@ sections:
                 question: _41a_group_e
                 operator: =
                 value: '2'
-      - key: _41g.2_group_e
-        question: [["Underline",["Bold","41-50 yrs"]],["Text",": Can you remember how severe your pelvic pain was "],["Underline","at its worst"],["Text","."]]
-        description: >-
-          You will be asked to rate the severity your pain on a scale from 0 to 10 where 0=no
-          pain and 10=worst imaginable pain.
-        type: YESNO_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: _C(4)
-                question: _41a_group_e
-                operator: =
-                value: '1'
-              - section: _C(4)
-                question: _41a_group_e
-                operator: =
-                value: '2'
       - key: _41g.1_group_e
         question: [["Underline",["Bold","41-50 yrs"]],["Text",": Please rate how severe your pelvic pain was "],["Underline","at its worst"],["Text"," using the scale."]]
         description: Where 0=no pain and 10=worst imaginable pain.
@@ -5242,9 +5352,29 @@ sections:
               type: SHOW
             condition:
               - section: _C(4)
-                question: _41g.2_group_e
+                question: _41a_group_e
                 operator: =
-                value: 'yes'
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_e
+                operator: =
+                value: '2'
+      - key: _41g_alt_group_e
+        question: [["Bold","Or check here if you can't remember how severe your pelvic pain was "], ["Underline", "at its worst"], ["Bold", "."]]
+        type: CHECKBOX
+        boxLabel: Can't remember
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: _C(4)
+                question: _41a_group_e
+                operator: =
+                value: '1'
+              - section: _C(4)
+                question: _41a_group_e
+                operator: =
+                value: '2'
       - key: _42
         question: C42. Have you ever received a diagnosis for the pain from a doctor?
         type: YESNO_CHOICE
