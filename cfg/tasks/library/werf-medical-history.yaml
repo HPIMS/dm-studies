@@ -950,7 +950,7 @@ sections:
       - key: _8.3
         question: D8.3. How old were you when you first had symptoms?
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
@@ -992,7 +992,7 @@ sections:
       - key: _8.5
         question: D8.5. How old were you when you were diagnosed with endometriosis?
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW

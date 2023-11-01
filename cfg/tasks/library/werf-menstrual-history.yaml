@@ -1241,7 +1241,7 @@ sections:
       - key: _7.1
         question: At what age did you first use a non-hormonal coil/IUD?
         placeholder: ___ years
-        type: NUMERIC
+        type: AGE
         triggers:
           - action:
               type: SHOW
