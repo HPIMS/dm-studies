@@ -1,0 +1,85 @@
+key: general-health-survey
+active: true
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: General Health Survey
+intro:
+  title: General Health Survey
+  description: In this survey we ask you to answer some questions regarding your general health.
+    Why is completing this survey important?
+    Menstruation is a complex process involving several body systems. It is therefore not surprising that pre-existing health conditions influence menstruation and menstrual cramps. We will ask you several questions regarding your general health. We will also ask you to share your Apple Health app data with us. This will enable us to account for pre-existing health conditions in our analyses. Doing so will ensure that we can look at menstrual cramps-specific processes rather than other disorders that might influence your cramps.
+
+    You can take this survey later if you prefer. You may always choose to skip any questions that make you feel
+sections:
+  - type: survey
+    key: general
+    title: "BMI and medications"
+    description: ""
+    questions:
+      - key: medication_current
+        question: Do you currently take medications?
+        type: YESNO_CHOICE
+      - key: medication_text
+        question: Which medications are you currently taking?
+        type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: general
+                question: medication_current
+                operator: =
+                value: yes  
+      - key: height
+        question: What is your height?
+        type: HEIGHT
+      - key: weight
+        question: What is your weight?
+        type: WEIGHT   
+      - key: werf_weight_most
+        question: [["Text","F9. Since 18 years of age, what is "],["Bold","the most"],["Text"," that you have weighed?"]]
+        description: ["Italic","(Not including pregnancy and the 12 months following pregnancy)"]
+        type: Integer
+      - key: werf_weight_least
+        question: [["Text","F10. Since 18 years of age, what is "],["Bold","the least"],["Text"," that you have weighed?"]]
+        description: ["Italic","(Not including pregnancy and the 12 months following pregnancy)"]
+        type: Integer
+      - key: age_shape
+        question: F11. Which picture best depics your shape at each age?
+        content: ["Image", "WERF-body-condition-ref"]
+        type: DISPLAY
+      - key: age_shape_a
+        question: ["Bold", "10-14 yrs"]
+        type: H_SCALE
+        min: 1
+        max: 9
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: general
+                question: _age_select
+                operator: =
+                value: a
+              - section: general
+                question: _age_select
+                operator: =
+                value: b
+              - section: general
+                question: _age_select
+                operator: =
+                value: c
+              - section: _general
+                question: _age_select
+                operator: =
+                value: d
+              - section: general
+                question: _age_select
+                operator: =
+                value: e
+      
