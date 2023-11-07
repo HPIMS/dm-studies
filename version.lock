@@ -20,7 +20,19 @@ active:
       - 44
     ibd-forecast:
       - 33c43d3254b3f37dfe3f3e47c8daca13
-      - 26
+      - 33
+    ibs-ucla:
+      - d6e80dc98a2aab31190890a510b71978
+      - 1
+    nof1rl4endo:
+      - 4fe8eb8f590b32e2c7772b097abfc3a0
+      - 58
+    pharme:
+      - ba0f4251d707d946b27871a882f13e92
+      - 19
+    playground:
+      - 934edd22cba40457cb4b14fcab223446
+      - 15
     ra-forecast:
       - 87bd0b2728fe9563494d1fabd1621985
       - 28
@@ -306,7 +318,70 @@ active:
       - 4
     library::sibdq:
       - a58ca31399f2231f577be66f908ee4ff
+      - 8
+    library::werf-ephect:
+      - 341169cbb5b60652062dd6efc14a6aaf
+      - 7
+    nof1rl4endo::demographics:
+      - da6dbc9af90ce11373968c47fd16352a
+      - 2
+    pharme::actions-taken:
+      - 93c1a21e94110cea61c4e7d519b01f6a
+      - 4
+    pharme::arm:
+      - 084502e3ea0a4335a2d023d4762bf804
       - 6
+    pharme::attitudes:
+      - 4fd6ef4a054dff36f58c62c8a4413d68
+      - 4
+    pharme::begin-next-phase-app:
+      - bd781c92f5fe7a94a355ce106f827117
+      - 2
+    pharme::begin-next-phase-counseling:
+      - 82229ec274d9173e3f47f365e12a998e
+      - 2
+    pharme::comprehension-app:
+      - 34c761513c763f9b6cf1654b5e879eef
+      - 4
+    pharme::comprehension-counseling:
+      - 845c174c7503a4be6a1acacfdffa1817
+      - 4
+    pharme::demographics:
+      - e64a9e7878ee743ac539e36f65566452
+      - 3
+    pharme::factor-adapted:
+      - 7f50b465b4cf406665a76f40508f7a33
+      - 3
+    pharme::knowledge:
+      - 09f6f080afb1e7551e7dc0c283b63895
+      - 5
+    pharme::knowledge-followup:
+      - fc5e74af3379fb9b85917bbf78a719e8
+      - 2
+    pharme::satisfaction-app:
+      - 9b7d1727d67c7c97bd14017b472039c9
+      - 4
+    pharme::satisfaction-counseling:
+      - 6d3044445c3265e1786c0421222d8769
+      - 4
+    pharme::u-mars:
+      - 7c8a66eee2f10b78d62d0030fab8b5e1
+      - 10
+    playground::showcase-h-scale:
+      - 40d898e2c184f44c34ad5425451469aa
+      - 3
+    playground::showcase-image-grid:
+      - 5c9d291d080a4f051b759ecceca12daa
+      - 2
+    playground::showcase-rate:
+      - 5e365453744e6272accae3904a2dda4b
+      - 3
+    playground::showcase-reorderable:
+      - 1c947d92a2a9a4bf93b131ff13ce7b8a
+      - 3
+    playground::showcase-touch-points:
+      - cd0440821f6338a4ec234d35aee145a0
+      - 1
     ra-forecast::baseline_demographics:
       - 60e2fba37ab5cbed583b96e98d558d1f
       - 4
@@ -438,7 +513,34 @@ inactive:
       - 4
     library::ucls-ls:
       - 88c44addbde87a005d719b570788706a
+      - 5
+    library::werf-medical-history:
+      - 692f534daf59b40f259ff930f710787a
+      - 5
+    library::werf-medication-history:
+      - 8904ebae665c14a6f7745ffbfb2e91a3
+      - 8
+    library::werf-menstrual-history:
+      - 2f4bd3a30cc6680f3423be053b31b8cf
+      - 15
+    library::werf-pain:
+      - c561d566f138d61a19920bbbe40aa676
+      - 30
+    library::werf-personal-information:
+      - 1b86fe2f0acb39e068a0b70bc14c3497
+      - 8
+    library::werf-pregnancy:
+      - 814443f7962e56c0fad8ca862234b084
+      - 5
+    nof1rl4endo::general-health-survey:
+      - 75d0adf479817f012c2c34e1d4bbef42
       - 1
+    operationalizing-warrior-watch::baseline-demographics:
+      - cafe580575a7cf767101a08941dfd3f1
+      - 2
+    operationalizing-warrior-watch::report-new-information:
+      - 9f53ffcf0eccc5cf3757618464837a45
+      - 2
     warrior-shield::daily-check-in:
       - 1f27ffb3982a88508ee2d1a185c6d506
       - 7
