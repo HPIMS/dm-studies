@@ -72,8 +72,12 @@ sections:
             condition:
               - section: substance
                 question: drink_freq
-                operator: <>
-                value: never
+                operator: IS_SET
+                AND:
+                  - section: substance
+                    question: drink_freq
+                    operator: <>
+                    value: never
       - key: smoke_100
         question: Have you smoked at least 100 cigarettes in your entire life?
         type: YESNO_CHOICE
@@ -97,8 +101,12 @@ sections:
             condition:
               - section: substance
                 question: smoking
-                operator: <>
-                value: no
+                operator: IS_SET
+                AND:
+                  - section: substance
+                    question: smoking
+                    operator: <>
+                    value: no
       - key: coffee_count
         question: On average, how many cups of coffee do you drink per day?
         type: NUMERIC
