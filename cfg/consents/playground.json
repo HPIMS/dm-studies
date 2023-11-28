@@ -28,6 +28,11 @@
       "ineligibleText": "You must be able to read and comprehend English"
     }
   ],
+  "verifyEligibility": {
+    "scope": ["Patient.read"],
+    "verify": ["SINAI_PATIENT", "MIN_AGE_18"],
+    "aud": ""
+  },
   "intro": [
     [
       "Section",
