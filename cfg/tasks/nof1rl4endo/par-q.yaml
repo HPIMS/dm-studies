@@ -1,0 +1,139 @@
+key: par-q
+active: true
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 3
+  timeUnits: minutes
+intro:
+  title: PHYSICAL ACTIVITY READINESS QUESTIONNAIRE (PAR-Q) & YOU
+  description: >-
+    Regular physical activity is fun and healthy, and increasingly more people are starting to become more active every day. 
+    Being more active is very safe for most people. 
+    However, some people should check with their doctor before they start becoming much more physically active. 
+    If you are planning to become more physically active than you are now, start by answering the seven questions in the box below. 
+    If you are between the ages of 15 and 69, the Par-Q will tell you if you should check with your doctor before you start. 
+    If you are over 69 years of age and you are not used to being very active, check with your doctor. 
+    Common sense is your best guide when you answer these questions. 
+    Please read the questions carefully and answer each one honestly.
+name: par-q
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: ""
+    sections:
+      - type: survey
+        key: "0"
+        title: ""
+        description: ""
+        questions:
+          - key: parq_1
+            question: "Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor?"
+            type: YESNO_CHOICE
+          - key: parq_2
+            question: "Do you feel pain in your chest when you do physical activity?"
+            type: YESNO_CHOICE
+          - key: parq_3
+            question: "In the past month, have you had chest pain when you were not doing physical activity?"
+            type: YESNO_CHOICE
+          - key: parq_4
+            question: "Do you lose your balance because of dizziness or do you ever lose consciousness?"
+            type: YESNO_CHOICE
+          - key: parq_5
+            question: "Do you have a bone or joint problem that could be made worse by a change in your physical activity?"
+            type: YESNO_CHOICE
+          - key: parq_6
+            question: "Is your doctor currently prescribing drugs (for example, water pills) for your blood pressure or heart condition?"
+            type: YESNO_CHOICE
+          - key: parq_7
+            question: "Do you know of any other reason why you should not do physical activity?"
+            type: YESNO_CHOICE
+instructions:
+  yes:
+    - key: instruction_1
+      text: "Talk to your doctor by phone or in person before you start becoming much more physically active or before you have a fitness appraisal."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'yes'
+    - key: instruction_2
+      text: "Tell your doctor about the PAR-Q and which questions you answered YES."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'yes'
+    - key: instruction_3
+      text: "You may be able to do any activity you want--- as long as you start slowly and build up gradually."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'yes'
+    - key: instruction_4
+      text: "you may need to restrict your activities to those which are safe for you. Talk with your doctor about the kinds of activities you wish to participate in and follow his/her advice."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'yes'
+    - key: instruction_5
+      text: "Find out which community programs are safe and helpful for you."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'yes'
+  no:
+    - key: instruction_6
+      text: "You can start becoming much more physically active--- begin slowly and build up gradually. This is the safest and easiest way to go."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'no'
+    - key: instruction_7
+      text: "You can take part in a fitness appraisal--- this is an excellent way to determine your basic fitness so that you can plan the best way for you to live actively."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'no'
+delay:
+  reasons:
+    - key: delay_1
+      text: "You are not feeling well because of a temporary illness such as a cold or a fever--- wait until you feel better."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'yes'
+    - key: delay_2
+      text: "You are or may be pregnant--- talk to your doctor before you start becoming more active."
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - key: parq_1
+              operator: =
+              value: 'yes'
