@@ -1,11 +1,13 @@
 key: health-itues
-active: true
-scorable: false
+scorable: true
+score:
+  fn: sum-score
+  args: {}
 schedule:
   type: PERIOD
-  period: ALWAYS
+  period: ONCE
 timeRequirements:
-  time: 3
+  time:2
   timeUnits: minutes
 name: Health IT Usability
 intro:
@@ -17,65 +19,390 @@ sections:
     title: Impact 
     questions:
       - key: health-itues_1
-        question: I think the mHealth App* would be a positive addition to individuals with chronic pelvic pain disorders (e.g., endometriosis).
+        question: I think the mHealth App would be a positive addition to individuals with chronic pelvic pain disorders (e.g., endometriosis).
         type: SINGLE_CHOICE
         options:
           - value: strongly_agree
             text: Strongly Agree 
+            score: 5            
           - value: somewhat_agree
             text: Somewhat Agree 
+            score: 4           
           - value: neither_agree_disagree
-            text: Neither Agree nor Disagree 
+            text: Neither Agree nor Disagree
+            score: 3             
           - value: somewhat_disagree
             text: Somewhat Disagree
+            score: 2            
           - value: strongly_disagree
             text: Strongly disagree  
+            score: 1            
       - key: health-itues_2
-        question: I think the mHealth App would improve the quality of life of individuals with chronic pelvic pain disorders (e.g., endometriosis)
+        question: I think the mHealth App would improve the quality of life of individuals with chronic pelvic pain disorders (e.g., endometriosis)..
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1 
       - key: health-itues_3
         question: The mHealth App would be an important part of meeting my information needs related to symptom self-management.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1         
   - key: perceived_usefulness
     title: Perceived usefulness 
     questions:  
       - key: health-itues_4
-        question: Using the mHealth App would make it easier to self-manage my disease-related** symptoms. 
+        question: Using the mHealth App would make it easier to self-manage my disease-related symptoms. 
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1          
       - key: health-itues_5
-        question: Using the mHealth App would enable me to self-manage my disease-related symptoms more quickly.            
+        question: Using the mHealth App would enable me to self-manage my disease-related symptoms more quickly. 
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1                      
       - key: health-itues_6
         question: Using the mHealth App would make it more likely that I can self-manage my disease-related symptoms
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_7
         question: Using the mHealth App would be useful for self-managing my disease-related symptoms.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_8
-        question:  I can always remember how to log on to and use the mHealth App.        
+        question:  I can always remember how to log on to and use the mHealth App. 
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1                  
       - key: health-itues_8
-        question: I think the mHealth App presents a more equitable process for self-managing my disease-related symptoms
+        question: I think the mHealth App presents a more equitable process for self-managing my disease-related symptoms.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_9
-        question:  I am satisfied with the mHealth App for self-managing my disease-related symptoms 
-        - key: health-itues_10
+        question:  I am satisfied with the mHealth App for self-managing my disease-related symptoms.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1            
+      - key: health-itues_10
         question: I self-manage my disease-related symptoms in a timely manner because of the mHealth App.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_11
-        question:  Using the mHealth App increases my ability to self-manage my disease-related symptoms.      
-        - key: health-itues_12
-        question: I am able to self-manage my disease-related symptoms whenever I use the mHealth App.            
+        question:  Using the mHealth App increases my ability to self-manage my disease-related symptoms. 
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1                
+      - key: health-itues_12
+        question: I am able to self-manage my disease-related symptoms whenever I use the mHealth App. 
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
   - key: perceived_ease_of_use
     title: Perceived ease of use 
     questions:  
       - key: health-itues_13
         question: I am comfortable with my ability to use the mHealth App.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_14
-        question: Learning to operate the mHealth App is easy for me.             
+        question: Learning to operate the mHealth App is easy for me.  
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1                      
       - key: health-itues_15
         question: It is easy for me to become skillful at using the mHealth App.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_16
         question: I find the mHealth App easy to use. 
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_17
-        question:  I can always remember how to log on to and use the mHealth App. 
+        question:  I can always remember how to log on to and use the mHealth App.
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1            
   - key: user_control
     title: User Control
     questions:  
       - key: The mHealth App gives error messages that clearly tell me how to fix problems. 
         question: health-itues_18
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_19
         question: Whenever I make a mistake using the mHealth App, I recover easily and quickly. 
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1           
       - key: health-itues_20
-        question: The information (such as on-line help, on-screen messages, and other documentation) provided with the mHealth App is clear.                                                
+        question: The information (such as on-line help, on-screen messages, and other documentation) provided with the mHealth App is clear.  
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 5            
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 4           
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree
+            score: 3             
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 2            
+          - value: strongly_disagree
+            text: Strongly disagree  
+            score: 1             
