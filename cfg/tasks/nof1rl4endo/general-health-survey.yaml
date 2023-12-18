@@ -1,4 +1,4 @@
-key: general-health-survey
+ey: general-health-survey
 active: true
 scorable: false
 schedule:
@@ -10,76 +10,340 @@ timeRequirements:
 name: General Health Survey
 intro:
   title: General Health Survey
-  description: In this survey we ask you to answer some questions regarding your general health.
+  description: >- 
+    In this survey we ask you to answer some questions regarding your general health.
     Why is completing this survey important?
-    Menstruation is a complex process involving several body systems. It is therefore not surprising that pre-existing health conditions influence menstruation and menstrual cramps. We will ask you several questions regarding your general health. We will also ask you to share your Apple Health app data with us. This will enable us to account for pre-existing health conditions in our analyses. Doing so will ensure that we can look at menstrual cramps-specific processes rather than other disorders that might influence your cramps.
-
+    Menstruation is a complex process involving several body systems. 
+    It is therefore not surprising that pre-existing health conditions influence menstruation and menstrual cramps. 
+    We will ask you several questions regarding your general health. We will also ask you to share your Apple Health app data with us. 
+    This will enable us to account for pre-existing health conditions in our analyses. 
+    Doing so will ensure that we can look at menstrual cramps-specific processes rather than other disorders that might influence your cramps.
     You can take this survey later if you prefer. You may always choose to skip any questions that make you feel
 sections:
   - type: survey
     key: general
-    title: "BMI and medications"
-    description: ""
+    title: 1.BMI and medications
     questions:
-      - key: medication_current
+      - key: 1_medication_current
         question: Do you currently take medications?
         type: YESNO_CHOICE
-      - key: medication_text
+      - key: 1_medication_text
         question: Which medications are you currently taking?
+      - key: 1_medication_text
+        question: Which medications are you currently taking?
+      - key: 1_height
+        question: What is your height?
+        type: HEIGHT
+      - key: 1_weight
+        question: What is your weight?
+        type: WEIGHT                 
+  - key: smoke_and_ciagrette
+    title: 2. smoke and cigarette
+    questions:
+      - key: 2_drink_freq
+        question: How often do you have a drink containing alcohol?  
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+          - value: monthly
+            text: Monthly or less
+          - value: 2_4_month
+            text: 2-4 times per month
+          - value: 2_3_week
+            text: 2-3 times per week
+          - value: 4_week
+            text: 4+ times per week 
+      - key: 2_drink_count
+        question: How many drinks containing alcohol do you have on a typical day when you are drinking?
+        type: NUMERIC
+        minValue: 1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: smoke_and_ciagrette
+                question: 2_drink_freq
+                operator: IS_SET
+                AND:
+                  - section: smoke_and_ciagrette
+                    question: 2_drink_freq
+                    operator: <>
+                    value: never
+      - key: 2_smoke_100
+        question: Have you smoked at least 100 cigarettes in your entire life?
+        type: YESNO_CHOICE
+      - key: 2_smoke_age
+        question: How old were you when you first started smoking?
+        type: 'AGE' 
+      - key: 2_smoking
+        question: Do you currently smoke cigarettes?        
+        type: SINGLE_CHOICE
+        options:
+          - value: no_smoking
+            text: No I dont smoke
+          - value: sometimes
+            text: Sometimes
+          - value: daily
+            text: Every day
+      - key: 2_cigarette_count
+        question: On average, how many cigarettes do you smoke per day?  
+        type: NUMERIC
+        minValue: 1
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: smoke_and_ciagrette
+                question: 2_smoking
+                operator: IS_SET
+                AND:
+                  - section: smoke_and_ciagrette
+                    question: 2_smoking
+                    operator: <>
+                    value: no_smoking  
+      - key: 2_smoke_stopped
+        question: If you used to smoke, what age did you stopped smoking? 
+        type: 'AGE'                              
+      - key: 2_coffee_day
+        question: On average, how many cups of coffee do you drink per day? 
+        type: NUMERIC     
+  - key: pain_and_mensturalcramps
+    title: 3. pain other than menstrual cramps
+    questions:
+      - key: 3_pain_other
+        question: Aside from menstruation-related pain, do you experience pain on a regular basis? 
+        type: YESNO_CHOICE  
+      - key: 3_pain_diagnosis
+        question: If yes, Is your pain associated to any diagnosis you received by a doctor or healthcare practitioner?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_and_mensturalcramps
+                question: 3_pain_other
+                operator: =
+                value: 'yes'        
+      - key: 3_pain_diagnosis_specify
+        question: If yes,Please specify the condition
         type: TEXTAREA
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: general
-                question: medication_current
+              - section: pain
+                question: pain_diagnosis
                 operator: =
-                value: yes  
-      - key: height
-        question: What is your height?
-        type: HEIGHT
-      - key: weight
-        question: What is your weight?
-        type: WEIGHT   
-      - key: werf_weight_most
-        question: [["Text","F9. Since 18 years of age, what is "],["Bold","the most"],["Text"," that you have weighed?"]]
-        description: ["Italic","(Not including pregnancy and the 12 months following pregnancy)"]
-        type: Integer
-      - key: werf_weight_least
-        question: [["Text","F10. Since 18 years of age, what is "],["Bold","the least"],["Text"," that you have weighed?"]]
-        description: ["Italic","(Not including pregnancy and the 12 months following pregnancy)"]
-        type: Integer
-      - key: age_shape
-        question: F11. Which picture best depics your shape at each age?
-        content: ["Image", "WERF-body-condition-ref"]
-        type: DISPLAY
-      - key: age_shape_a
-        question: ["Bold", "10-14 yrs"]
-        type: H_SCALE
-        min: 1
-        max: 9
+                value: 'yes'        
+      - key: 3_pain_location
+        question: Where do you feel pain 
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: pelvis
+            text: Pelvis and/or lower abdomen
+          - value: stomach
+            text: Stomach / upper abdomen
+          - value: lower_back
+            text: Lower back
+          - value: upper_back
+            text: Upper back, neck, or shoulders
+          - value: upper_legs
+            text: Upper legs
+          - value: lower_legs
+            text: Lower legs
+          - value: arms
+            text: Arms
+          - value: head
+            text: Head
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: 3_pain_location_other_description
+              question: "Please specify:"
+              type: TEXTAREA
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: general
-                question: _age_select
+              - section: pain_and_mensturalcramps
+                question: 3_pain_other
                 operator: =
-                value: a
-              - section: general
-                question: _age_select
+                value: 'yes'
+      - key: 3_pain_freq
+        question: How often do you feel pain? 
+        options:
+          - value: daily
+            text: Daily
+          - value: weekly
+            text: Weekly
+          - value: monthly
+            text: Monthly
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: pain_and_mensturalcramps
+                question: 3_pain_other
                 operator: =
-                value: b
-              - section: general
-                question: _age_select
+                value: 'yes'                                 
+  - key: diagnosis
+    title: 4.Diagnosis
+    questions:
+      - key: 4_diagnosis_chronic
+        question: >-   
+          Have you been diagnosed by a doctor of other healthcare provider with a chronic condition
+          (i.e. a condition that will last for a long period of time and you are currently having or taking medications for), 
+          excluding pelvic and gynecological conditions? 
+        type: YESNO_CHOICE  
+      - key: 4_diagnosis_select
+        question: If yes, select all that apply
+        type:
+        options:
+          - value: diagnosis_1
+            text: Generalized anxiety disorder
+          - value: diagnosis_2
+            text: Panic attack/panic disorder
+          - value: diagnosis_3
+            text: Other anxiety disorders
+          - value: diagnosis_4
+            text: Major depression disorder
+          - value: diagnosis_5
+            text: Obsessive compulsive disorder
+          - value: diagnosis_6
+            text: Post-traumatic stress disorder
+          - value: diagnosis_7
+            text: Bipolar disorder
+          - value: diagnosis_8
+            text: Eating disorder, including anorexia nervosa or bulimia
+          - value: diagnosis_9
+            text: Schizophrenia
+          - value: diagnosis_10
+            text: Psychosis or other psychotic disorders beyond schizophrenia
+          - value: diagnosis_other
+            text: Other psychiatric conditions not listed above
+            inlineQuestion:
+              key: 4_diagnosis_select_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: 4_diagnosis_chronic
                 operator: =
-                value: c
-              - section: _general
-                question: _age_select
+                value: 'yes'
+      - key: 4_surgery_select
+        question: Have you had any surgery?  
+        description: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: surgery_1
+            text: Bone
+          - value: surgery_2
+            text: Breast
+          - value: surgery_3
+            text: Gallbladder
+          - value: surgery_4
+            text: Heart
+          - value: surgery_5
+            text: Stomach
+          - value: surgery_6
+            text: Colon or rectum
+          - value: surgery_7
+            text: Intestine
+          - value: surgery_8
+            text: Appendix
+          - value: surgery_9
+            text: Vascular
+          - value: surgery_10
+            text: C-section
+          - value: surgery_11
+            text: Uterine cervical surgery
+          - value: surgery_12
+            text: "Surgery on uterus: removal of fibroid"
+          - value: surgery_13
+            text: "Surgery on uterus: removal of endometrial polyp"
+          - value: surgery_14
+            text: Removal of an ovary
+          - value: surgery_15
+            text: Removal or ligation of fallopian tubes
+      - key: 4_cancer
+        question: Were you ever diagnosed with cancer? 
+        type: YESNO_CHOICE 
+      - key: 4_cancer_select
+        question: If yes, which type of cancer?
+        type: MULTIPLE_CHOICE
+        options:
+          - value: cancer_1
+            text: Breast
+          - value: cancer_2
+            text: Colon or rectum
+          - value: cancer_3
+            text: Stomach
+          - value: cancer_4
+            text: Blood (lymphoma or leukemia)
+          - value: cancer_5
+            text: Bone
+          - value: cancer_6
+            text: Skin
+          - value: cancer_7
+            text: Uterus or endometrial
+          - value: cancer_8
+            text: Ovarian
+          - value: cancer_9
+            text: Cervical (uterine cervix)
+          - value: cancer_10
+            text: Pulmonary
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: 4_cancer_select_other_description
+              question: "Please specify:"
+              type: TEXTAREA
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: 4_cancer
                 operator: =
-                value: d
-              - section: general
-                question: _age_select
+                value: 'yes'  
+      - key: 4_cancer_date
+        question: What month and year were you first diagnosed?
+        placeholder: MM/YYYY
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: 4_cancer
                 operator: =
-                value: e
-      
+                value: 'yes' 
+      - key: 4_cancer_treat
+        question: When did you last receive therapy for it?
+        placeholder: MM/YYYY
+        type: TEXT
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: 4_cancer
+                operator: =
+                value: 'yes'  
+      - key: 4_cancer_status
+        question: Are you currently cancer free?
+        type: YESNO_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: diagnosis
+                question: 4_cancer
+                operator: =
+                value: 'yes'
+                               

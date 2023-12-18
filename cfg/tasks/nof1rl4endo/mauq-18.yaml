@@ -1,0 +1,42 @@
+key: mauq-18
+active: true
+scorable: false
+schedule:
+  type: PERIOD
+  period: ONCE
+  delay: 6
+  delayUnits: DAYS
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: App Usability
+intro:
+  title: Usability
+  description: Tell us about the App usability and comfort.
+outro:
+  title: Thank you!
+  description: Congratulations! You completed the survey sucessfully. We appreciate your participation.
+sections:
+  - type: survey
+    key: ease_of_use
+    title: Ease of use 
+    questions:
+      - key: health-itues_1
+        question: I think the mHealth App* would be a positive addition to individuals with chronic pelvic pain disorders (e.g., endometriosis).
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+          - value: somewhat_agree
+            text: Somewhat Agree 
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+          - value: strongly_disagree
+            text: Strongly disagree  
+      - key: health-itues_2
+        question: I think the mHealth App would improve the quality of life of individuals with chronic pelvic pain disorders (e.g., endometriosis)
+      - key: health-itues_3
+        question: The mHealth App would be an important part of meeting my information needs related to symptom self-management.
+  - key: perceived_usefulness
