@@ -1,11 +1,12 @@
 key: mauq-18
 active: true
-scorable: false
+scorable: true
+score:
+  fn: sum-score
+  args: {}
 schedule:
   type: PERIOD
   period: ONCE
-  delay: 6
-  delayUnits: DAYS
 timeRequirements:
   time: 2
   timeUnits: minutes
@@ -19,24 +20,459 @@ outro:
 sections:
   - type: survey
     key: ease_of_use
-    title: Ease of use 
+    title: APP Ease of use 
     questions:
-      - key: health-itues_1
-        question: I think the mHealth App* would be a positive addition to individuals with chronic pelvic pain disorders (e.g., endometriosis).
+      - key: ease_of_use_1
+        question: The app was easy to use. 
         type: SINGLE_CHOICE
         options:
           - value: strongly_agree
             text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
           - value: somewhat_agree
             text: Somewhat Agree 
+            score: 3               
           - value: neither_agree_disagree
             text: Neither Agree nor Disagree 
+            score: 4              
           - value: somewhat_disagree
             text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
           - value: strongly_disagree
-            text: Strongly disagree  
-      - key: health-itues_2
-        question: I think the mHealth App would improve the quality of life of individuals with chronic pelvic pain disorders (e.g., endometriosis)
-      - key: health-itues_3
-        question: The mHealth App would be an important part of meeting my information needs related to symptom self-management.
-  - key: perceived_usefulness
+            text: Strongly disagree 
+            score: 7               
+      - key: ease_of_use_2
+        question: It was easy for me to learn to use the app.  
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7 
+      - key: ease_of_use_3
+        question: The navigation was consistent when moving between screens.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7 
+      - key: ease_of_use_4
+        question: The interface of the app allowed me to use all the functions (such as entering information, responding to reminders, viewing information) offered by the app. 
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7  
+      - key: ease_of_use_5
+        question: Whenever I made a mistake using the app, I could recover easily and quickly.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7                  
+  - key: interface_and_satisfaction
+    title: APP Interface and Use Satifaction
+      - key: interface_1
+        question: I like the interface of the app. 
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7  
+      - key: interface_2
+        question: The information in the app was well organized, so I could easily find the information I needed.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7         
+      - key: interface_3
+        question: The app adequately acknowledged and provided information to let me know the progress of my action.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7  
+      - key: interface_4
+        question: I feel comfortable using this app in social settings. 
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7 
+      - key: interface_5
+        question: The amount of time involved in using this app has been fitting for me.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7      
+      - key: interface_6
+        question: I would use this app again.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7   
+      - key: interface_7
+        question: Overall, I am satisfied with this app.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7                               
+  - key: usefulness
+    title: APP Usefulness
+      - key: usefullness_1
+        question: The app would be useful for my health and well-being.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7 
+      - key: usefullness_2
+        question: The app improved my access to health care services.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7        
+      - key: usefullness_3
+        question: The app helped me manage my health effectively.  
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7  
+      - key: usefullness_4
+        question: This app has all the functions and capabilities I expected it to have. 
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7 
+      - key: usefullness_5
+        question: I could use the app even when the Internet connection was poor or not available. 
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7   
+      - key: usefullness_6
+        question: This mHealth app provided an acceptable way to receive health care services, such as accessing educational materials, tracking my own activities, and performing self-assessment.               
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_agree
+            text: Strongly Agree 
+            score: 1              
+          - value: agree
+            text: Agree 
+            score: 2        
+          - value: somewhat_agree
+            text: Somewhat Agree 
+            score: 3               
+          - value: neither_agree_disagree
+            text: Neither Agree nor Disagree 
+            score: 4              
+          - value: somewhat_disagree
+            text: Somewhat Disagree
+            score: 5               
+          - value: disagree
+            text: DisAgree    
+            score: 6                       
+          - value: strongly_disagree
+            text: Strongly disagree 
+            score: 7 
