@@ -75,7 +75,7 @@ sections:
             text: Strongly disagree  
             score: 1 
   - type: survey                   
-  - key: perceived_usefulness
+    key: perceived_usefulness
     title: Perceived usefulness 
     questions:  
       - key: health-itues_4
@@ -259,7 +259,7 @@ sections:
             text: Strongly disagree  
             score: 1 
   - type: survey                    
-  - key: perceived_ease_of_use
+    key: perceived_ease_of_use
     title: Perceived ease of use 
     questions:  
       - key: health-itues_13
@@ -353,7 +353,7 @@ sections:
             text: Strongly disagree  
             score: 1 
   - type: survey                     
-  - key: user_control
+    key: user_control
     title: User Control
     questions:  
       - key: The mHealth App gives error messages that clearly tell me how to fix problems. 
