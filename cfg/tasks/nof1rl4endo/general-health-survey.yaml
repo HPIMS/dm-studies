@@ -38,7 +38,7 @@ sections:
         question: What is your weight?
         type: WEIGHT
   - type: survey                       
-  - key: smoke_and_ciagrette
+    key: smoke_and_ciagrette
     title: 2. smoke and cigarette
     questions:
       - key: 2_drink_freq
@@ -110,7 +110,7 @@ sections:
         question: On average, how many cups of coffee do you drink per day? 
         type: NUMERIC
   - type: survey           
-  - key: pain_and_mensturalcramps
+    key: pain_and_mensturalcramps
     title: 3. pain other than menstrual cramps
     questions:
       - key: 3_pain_other
@@ -191,7 +191,7 @@ sections:
                 operator: =
                 value: 'yes'
   - type: survey                                               
-  - key: diagnosis
+    key: diagnosis
     title: 4.Diagnosis
     questions:
       - key: 4_diagnosis_chronic
