@@ -51,89 +51,76 @@ sections:
           - key: parq_7
             question: "Do you know of any other reason why you should not do physical activity?"
             type: YESNO_CHOICE
-instructions:
-  yes:
-    - key: instruction_1
-      text: "Talk to your doctor by phone or in person before you start becoming much more physically active or before you have a fitness appraisal."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'yes'
-    - key: instruction_2
-      text: "Tell your doctor about the PAR-Q and which questions you answered YES."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'yes'
-    - key: instruction_3
-      text: "You may be able to do any activity you want--- as long as you start slowly and build up gradually."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'yes'
-    - key: instruction_4
-      text: "you may need to restrict your activities to those which are safe for you. Talk with your doctor about the kinds of activities you wish to participate in and follow his/her advice."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'yes'
-    - key: instruction_5
-      text: "Find out which community programs are safe and helpful for you."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'yes'
-  no:
-    - key: instruction_6
-      text: "You can start becoming much more physically active--- begin slowly and build up gradually. This is the safest and easiest way to go."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'no'
-    - key: instruction_7
-      text: "You can take part in a fitness appraisal--- this is an excellent way to determine your basic fitness so that you can plan the best way for you to live actively."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'no'
-delay:
-  reasons:
-    - key: delay_1
-      text: "You are not feeling well because of a temporary illness such as a cold or a fever--- wait until you feel better."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'yes'
-    - key: delay_2
-      text: "You are or may be pregnant--- talk to your doctor before you start becoming more active."
-      triggers:
-        - action:
-            type: SHOW
-          condition:
-            - key: parq_1
-              operator: =
-              value: 'yes'
+          - key: instruction_1
+            type: DISPLAY
+            content: ["UnorderedList",[["Body","Talk to your doctor by phone or in person BEFORE you start becoming much more physically active or BEFORE you have a fitness appraisal. Tell your doctor about the PAR-Q and which questions you answered YES."],["Body","You may be able to do any activity you want--- as long as you start slowly and build up gradually. Or, you may need to restrict your activities to those which are safe for you. Talk with your doctor about the kinds of activities you wish to participate in and follow his/her advice."],["Body","Find out which community programs are safe and helpful for you."]]]
+            triggers:
+              - action:
+                  type: SHOW
+                condition:
+                  - section: "0"
+                    question: parq_1
+                    operator: =
+                    value: 'yes'
+                  - section: "0"                    
+                    question: parq_2
+                    operator: =
+                    value: 'yes'    
+                  - section: "0"                    
+                    question: parq_3
+                    operator: =
+                    value: 'yes'  
+                  - section: "0"                    
+                    question: parq_4
+                    operator: =
+                    value: 'yes' 
+                  - section: "0"                    
+                    question: parq_5
+                    operator: =
+                    value: 'yes' 
+                  - section: "0"                    
+                    question: parq_6
+                    operator: =
+                    value: 'yes'  
+                  - section: "0"                    
+                    question: parq_7
+                    operator: =
+                    value: 'yes'                                                                                                                   
+          - key: instruction_2
+            type: DISPLAY
+            content: ["UnorderedList",[["Body","You can start becoming much more physically active--- begin slowly and build up gradually. This is the safest and easiest way to go."],["Body","You can take part in a fitness appraisal--- this is an excellent way to determine your basic fitness so that you can plan the best way for you to live actively."]]]
+            triggers:
+              - action:
+                  type: HIDE
+                condition:
+                  - section: "0"
+                    question: parq_1
+                    operator: =
+                    value: 'yes'
+                  - section: "0"                    
+                    question: parq_2
+                    operator: =
+                    value: 'yes'    
+                  - section: "0"                    
+                    question: parq_3
+                    operator: =
+                    value: 'yes'  
+                  - section: "0"                    
+                    question: parq_4
+                    operator: =
+                    value: 'yes' 
+                  - section: "0"                    
+                    question: parq_5
+                    operator: =
+                    value: 'yes' 
+                  - section: "0"                    
+                    question: parq_6
+                    operator: =
+                    value: 'yes'  
+                  - section: "0"                    
+                    question: parq_7
+                    operator: =
+                    value: 'yes' 
+          - key: delay_1
+            type: DISPLAY
+            content: [["Body",[["Bold","DELAY BECOMING MORE ACTIVE IF"],["Text"," "],["Bold",":"]]],["UnorderedList",[["Body","You are not feeling well because of a temporary illness such as a cold or a fever--- wait until you feel better. "],["Body","You are or may be pregnant--- talk to your doctor before you start becoming more active."]]]]

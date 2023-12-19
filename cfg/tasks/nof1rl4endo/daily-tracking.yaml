@@ -80,7 +80,7 @@ sections:
                 - value: ankle
                   text: Ankle(s)
                 - value: feet
-                 text: Feet
+                  text: Feet
             - key: 1a_pain_intensity
               question: How severe is/was the pain?
               type: SINGLE_CHOICE
@@ -208,7 +208,7 @@ sections:
                 - value: ankle
                   text: Ankle(s)
                 - value: feet
-                 text: Feet              
+                  text: Feet              
             - key: 1b_pain_intensity
               question: How severe is/was the pain?
               type: SINGLE_CHOICE
@@ -335,7 +335,7 @@ sections:
                 - value: ankle
                   text: Ankle(s)
                 - value: feet
-                 text: Feet                                       
+                  text: Feet                                       
             - key: 1c_pain_intensity
               question: How severe is/was the pain?
               type: SINGLE_CHOICE
@@ -409,7 +409,7 @@ sections:
                 - value: nausea
                   text: Nausea
                 - value: vomiting
-                   text: Vomiting
+                  text: Vomiting
                 - value: indigestion
                   text: Indigestion
                 - value: difficulty_swallowing
@@ -547,8 +547,8 @@ sections:
             - key: 2c_feeling_intensity
               question: How intense is the feeling?
               type: Numeric
-               min: 0
-               max: 10 
+              min: 0
+              max: 10 
         - key: menstural_symptoms
           title: 2d. Menstrual status
           questions:
@@ -825,7 +825,7 @@ sections:
                 - value: commuting
                   text: 'Commuting (e.g., taking public transportation, driving)'
                 - value: social_activities
-                   text: >-
+                  text: >-
                    Social roles and activities (e.g., family, friends, leisure
                    activities)
                 - value: other
@@ -875,7 +875,8 @@ sections:
                   text: No Effect on pain or unsure              
             - key: 2h_exer_rec_time
               question: Approximately, what time of the day did you complete your recommended exercise
-              type: SINGLE_CHOICE  
+              type: SINGLE_CHOICE 
+              options:               
                 - value: morning
                   text: Morning (before noon)
                 - value: afternoon
