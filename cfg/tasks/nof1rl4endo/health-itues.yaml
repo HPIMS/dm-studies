@@ -73,7 +73,7 @@ sections:
             score: 2            
           - value: strongly_disagree
             text: Strongly disagree  
-            score: 1
+            score: 1 
   - type: survey                   
   - key: perceived_usefulness
     title: Perceived usefulness 
@@ -223,7 +223,7 @@ sections:
             text: Strongly disagree  
             score: 1           
       - key: health-itues_11
-        question:  Using the mHealth App increases my ability to self-manage my disease-related symptoms. 
+        question: Using the mHealth App increases my ability to self-manage my disease-related symptoms. 
         options:
           - value: strongly_agree
             text: Strongly Agree 
