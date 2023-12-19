@@ -25,8 +25,8 @@ active:
       - d6e80dc98a2aab31190890a510b71978
       - 1
     nof1rl4endo:
-      - 8088dfecf9caa9c205e81f66c70802a2
-      - 60
+      - 564afc3671dee0994b3e507c1911e565
+      - 61
     pharme:
       - ba0f4251d707d946b27871a882f13e92
       - 19
@@ -322,12 +322,24 @@ active:
     library::werf-ephect:
       - 341169cbb5b60652062dd6efc14a6aaf
       - 7
+    nof1rl4endo::daily-tracking:
+      - f81cd3793d347be2071ca6aa063cee95
+      - 1
     nof1rl4endo::demographics:
       - da6dbc9af90ce11373968c47fd16352a
       - 2
+    nof1rl4endo::health-itues:
+      - 09427180dbbb512ceb992d112cb892c7
+      - 1
+    nof1rl4endo::mauq-18:
+      - 214829ece2a6412174fab95eb13650b8
+      - 1
     nof1rl4endo::painmap:
       - ab919eab18888ac15e3a86f149e23911
       - 2
+    nof1rl4endo::par-q:
+      - 2a54f8e9e6498162996f095057a9d073
+      - 1
     pharme::actions-taken:
       - 93c1a21e94110cea61c4e7d519b01f6a
       - 4
@@ -535,10 +547,12 @@ inactive:
     library::werf-pregnancy:
       - 814443f7962e56c0fad8ca862234b084
       - 5
-    nof1rl4endo::general-health-survey:
-      - 75d0adf479817f012c2c34e1d4bbef42
->>>>>>> Stashed changes
-      - 1
+    operationalizing-warrior-watch::baseline-demographics:
+      - cafe580575a7cf767101a08941dfd3f1
+      - 2
+    operationalizing-warrior-watch::report-new-information:
+      - 9f53ffcf0eccc5cf3757618464837a45
+      - 2
     warrior-shield::daily-check-in:
       - 1f27ffb3982a88508ee2d1a185c6d506
       - 7

@@ -146,9 +146,11 @@ sections:
             score: 6                       
           - value: strongly_disagree
             text: Strongly disagree 
-            score: 7                  
-  - key: interface_and_satisfaction
-    title: APP Interface and Use Satifaction
+            score: 7 
+  - type: survey
+    key: interface_and_satisfaction
+    title: APP Interface and Use Satifaction 
+    questions:            
       - key: interface_1
         question: I like the interface of the app. 
         type: SINGLE_CHOICE
@@ -323,9 +325,11 @@ sections:
             score: 6                       
           - value: strongly_disagree
             text: Strongly disagree 
-            score: 7                               
-  - key: usefulness
+            score: 7   
+  - type: survey
+    key: usefulness
     title: APP Usefulness
+    questions:                                        
       - key: usefullness_1
         question: The app would be useful for my health and well-being.
         type: SINGLE_CHOICE
