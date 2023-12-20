@@ -19,7 +19,6 @@ longDescription: >-
   This study aims to evaluate the association of daily pain symptoms to varying
   exercise recommendations among individuals with chronic pelvic pain disorders.
 
-  
   Participation in the study involves following tailored exercise
   recommendations 3 times a week for 10 weeks in total, wearing an activity
   tracker, and tracking daily pain and other health symptoms, physical function
@@ -38,7 +37,10 @@ timeResponsibility:
 tasks:
   - demographics
   - general-health-survey
-  - daily-tracking
+  - daily-morning-pain-tracking
+  - daily-afternoon-pain-tracking
+  - daily-evening-pain-tracking
+  - other_momentary_and_daily_tracking
   - health-itues
   - mauq-18
   - promis-physical-function-4a-v1.0
