@@ -27,10 +27,6 @@ sections:
       - key: 1_medication_current
         question: Do you currently take medications?
         type: YESNO_CHOICE
-      - key: 1_medication_text
-        question: Which medications are you currently taking?
-      - key: 1_medication_text
-        question: Which medications are you currently taking?
       - key: 1_height
         question: What is your height?
         type: HEIGHT
@@ -202,7 +198,7 @@ sections:
         type: YESNO_CHOICE  
       - key: 4_diagnosis_select
         question: If yes, select all that apply
-        type:
+        type: MULTIPLE_CHOICE
         options:
           - value: diagnosis_1
             text: Generalized anxiety disorder
