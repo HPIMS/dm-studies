@@ -21,6 +21,9 @@ active:
     ibd-forecast:
       - 33c43d3254b3f37dfe3f3e47c8daca13
       - 26
+    nof1rl4endo:
+      - df1a2b02ac7aaee37142e079804d86be
+      - 1
     ra-forecast:
       - 87bd0b2728fe9563494d1fabd1621985
       - 7
@@ -274,6 +277,9 @@ active:
     library::promis-global-mental-health-2a-v1.2:
       - 2c4f6847579f5c3fde6c93feee3b4fe8
       - 2
+    library::promis-pain-interference-6b-v1.0:
+      - eef88535b532ac1eb65a2ad9e96a6a48
+      - 5
     library::promis-pain-interference-6b-v1.1:
       - 45137ecddd239b84a35640485791e6d7
       - 2
@@ -301,6 +307,39 @@ active:
     library::sibdq:
       - a58ca31399f2231f577be66f908ee4ff
       - 6
+    library::werf-ephect:
+      - 341169cbb5b60652062dd6efc14a6aaf
+      - 1
+    nof1rl4endo::daily-afternoon-pain-tracking:
+      - 571b2fccfaede3fe9ede52afa0c05702
+      - 1
+    nof1rl4endo::daily-evening-pain-tracking:
+      - 75cd4a828b389922475df7558f164040
+      - 1
+    nof1rl4endo::daily-morning-pain-tracking:
+      - d8b6da7a1816bd30e3500fe9ba63a83c
+      - 1
+    nof1rl4endo::demographics:
+      - da6dbc9af90ce11373968c47fd16352a
+      - 1
+    nof1rl4endo::general-health-survey:
+      - aa2df6b03f6e3f0d2e91b1c3ab26ab9e
+      - 1
+    nof1rl4endo::health-itues:
+      - 27e7d48d389b5743692f28eecce68633
+      - 1
+    nof1rl4endo::mauq-18:
+      - 214829ece2a6412174fab95eb13650b8
+      - 1
+    nof1rl4endo::other-momentary-and-daily-tracking:
+      - 057d1f5cd6c6560a2abd1c20c5460b19
+      - 1
+    nof1rl4endo::painmap:
+      - ab919eab18888ac15e3a86f149e23911
+      - 1
+    nof1rl4endo::par-q:
+      - 9d55584f4f7764774a11a1274a37b03a
+      - 1
     ra-forecast::baseline_demographics:
       - 60e2fba37ab5cbed583b96e98d558d1f
       - 2
@@ -394,9 +433,6 @@ inactive:
     library::promis-gh-qol-2-item:
       - 4d10a34eed0486c83ae919b6cc2cf1de
       - 5
-    library::promis-pain-interference-6b-v1.0:
-      - eef88535b532ac1eb65a2ad9e96a6a48
-      - 5
     library::promis-social-support-2-item:
       - 7588542ed52f5c48427d080ed4a6d1ef
       - 7
@@ -432,6 +468,27 @@ inactive:
       - 1
     library::ucls-ls:
       - 88c44addbde87a005d719b570788706a
+      - 1
+    library::werf-medical-history:
+      - 692f534daf59b40f259ff930f710787a
+      - 1
+    library::werf-medication-history:
+      - 8904ebae665c14a6f7745ffbfb2e91a3
+      - 1
+    library::werf-menstrual-history:
+      - 2f4bd3a30cc6680f3423be053b31b8cf
+      - 1
+    library::werf-pain:
+      - c561d566f138d61a19920bbbe40aa676
+      - 1
+    library::werf-personal-information:
+      - 1b86fe2f0acb39e068a0b70bc14c3497
+      - 1
+    library::werf-pregnancy:
+      - 814443f7962e56c0fad8ca862234b084
+      - 1
+    nof1rl4endo::daily-tracking:
+      - 1c3332fb7cb6023f7c47ca4f4804ac6e
       - 1
     warrior-shield::daily-check-in:
       - 1f27ffb3982a88508ee2d1a185c6d506

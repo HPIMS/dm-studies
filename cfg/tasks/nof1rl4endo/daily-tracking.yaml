@@ -148,7 +148,11 @@ sections:
                     - section: morning_pain
                       question: '1a_pain'
                       operator: =
+<<<<<<< Updated upstream
                       value: 'yes'    
+=======
+                      value: 'yes'      
+>>>>>>> Stashed changes
             - key: 1b_pain_location
               question: Where is the pain?  Select all body areas where you experienced pain since your last pain tracking.
               type: MULTIPLE_CHOICE
@@ -274,7 +278,11 @@ sections:
                     - section: afternoon_pain
                       question: '1b_pain'
                       operator: =
+<<<<<<< Updated upstream
                       value: 'yes'                                  
+=======
+                      value: 'yes'                    
+>>>>>>> Stashed changes
             - key: 1c_pain_location
               question: Where is the pain?
               type: MULTIPLE_CHOICE              
