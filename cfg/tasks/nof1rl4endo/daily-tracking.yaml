@@ -21,8 +21,7 @@ sections:
           questions:
             - key: 1a_pain
               question: Have you experienced any pain since you woke up today?
-              type: SINGLE_CHOICE
-              options: YESNO_CHOICE 
+              type: YESNO_CHOICE
             - key: 1a_pain_location
               question: Where is the pain? Select all body areas where you felt pain since you woke up today.
               type: MULTIPLE_CHOICE
@@ -141,7 +140,7 @@ sections:
           questions:
             - key: 1b_pain
               question: Since the last time you tracked your pain symptoms today, have you experienced any pain symptoms?
-              type: SINGLE_CHOICE
+              type: YESNO_CHOICE
               triggers:
                 - action:
                     type: SHOW
@@ -149,8 +148,7 @@ sections:
                     - section: morning_pain
                       question: '1a_pain'
                       operator: =
-                      value: 'yes'
-              option: YESNO_CHOICE       
+                      value: 'yes'    
             - key: 1b_pain_location
               question: Where is the pain?  Select all body areas where you experienced pain since your last pain tracking.
               type: MULTIPLE_CHOICE
@@ -268,7 +266,7 @@ sections:
           questions:
             - key: 1c_pain
               question: Since the last time you tracked your pain symptoms today, have you experienced any pain symptoms?
-              type: SINGLE_CHOICE
+              type: YESNO_CHOICE
               triggers:
                 - action:
                     type: SHOW
@@ -276,8 +274,7 @@ sections:
                     - section: afternoon_pain
                       question: '1b_pain'
                       operator: =
-                      value: 'yes'
-              option: YESNO_CHOICE                      
+                      value: 'yes'                                  
             - key: 1c_pain_location
               question: Where is the pain?
               type: MULTIPLE_CHOICE              
@@ -555,8 +552,7 @@ sections:
           questions:
             - key: 2d_period
               question: Track your period. Do you have your period today?
-              type: SINGLE_CHOICE
-              option: YESNO_CHOICE
+              type: YESNO_CHOICE
             - key: 2d_period_flow
               question: How is the bleeding/flow?
               type: SINGLE_CHOICE
@@ -630,8 +626,7 @@ sections:
           questions:
             - key: 2e_meds
               question: Did you take any medications today?
-              type: SINGLE_CHOICE
-              option: YESNO_CHOICE
+              type: YESNO_CHOICE
             - key: 2e_meds_list
               question: if you have taken medication today,select all that apply. 
               type: MULTIPLE_CHOICE
@@ -696,8 +691,7 @@ sections:
           questions:
             - key: 2f_exercise
               question: Did you do any physical exercise today other than your recommendation? 
-              type: SINGLE_CHOICE
-              option: YESNO_CHOICE 
+              type: YESNO_CHOICE
             - key: 2f_exercise_list
               question: if you have done any physical exercise today other than your recommendation today,select all that apply.
               type: MULTIPLE_CHOICE

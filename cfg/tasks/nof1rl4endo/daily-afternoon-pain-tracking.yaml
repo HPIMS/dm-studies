@@ -15,8 +15,7 @@ sections:
    questions:
     - key: 1b_pain
       question: Since the last time you tracked your pain symptoms today, have you experienced any pain symptoms?
-      type: SINGLE_CHOICE
-      option: YESNO_CHOICE       
+      type: YESNO_CHOICE   
     - key: 1b_pain_location
       question: Where is the pain?  Select all body areas where you experienced pain since your last pain tracking.
       type: MULTIPLE_CHOICE
