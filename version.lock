@@ -2,383 +2,431 @@ active:
   studies:
     cppd-1:
       - 0a208037703965c73b86f8f821e33cf6
-      - 9
+      - 38
     cppd-2:
       - 23e28ccb00e7cf66e443f665b737e592
-      - 5
+      - 18
     cppd-2__case:
       - 9f133cf47f5b6e394173ee3d77ea324f
-      - 9
+      - 28
     cppd-2__control:
       - 45b1eb2aa6336ce35d3bc094c27933fa
-      - 9
+      - 27
     cramp:
-      - fa315d77faca8a3cc8e32ccf6b024d03
-      - 9
+      - 7b5e892b97879942cabaaf1d6d3174f0
+      - 118
     digi-ibd-001:
-      - 68bd6855f025a4d670ef88b44f9bb236
-      - 13
+      - 65cfa812062ae08a83000b2b0518707e
+      - 44
     ibd-forecast:
       - 33c43d3254b3f37dfe3f3e47c8daca13
-      - 26
-    nof1rl4endo:
-      - df1a2b02ac7aaee37142e079804d86be
+      - 33
+    ibs-ucla:
+      - d6e80dc98a2aab31190890a510b71978
       - 1
+    nof1rl4endo:
+      - 8088dfecf9caa9c205e81f66c70802a2
+      - 60
+    pharme:
+      - ba0f4251d707d946b27871a882f13e92
+      - 19
+    playground:
+      - 934edd22cba40457cb4b14fcab223446
+      - 15
     ra-forecast:
       - 87bd0b2728fe9563494d1fabd1621985
-      - 7
+      - 28
   tasks:
     cppd-1::bladder-irritants:
       - f4e5650a28a76589d6a8b5b1340cb50e
-      - 2
+      - 5
     cppd-1::daily-symptoms:
       - f98021443a6f764e1a54f50ae3aba44b
-      - 1
+      - 2
     cppd-1::daily-symptoms-follow-up:
       - 449479666e5523523c7da3905e6f4d8a
-      - 1
+      - 2
     cppd-1::demographics:
       - d957d86bad8fe5546c08d970702a0620
-      - 3
+      - 5
     cppd-1::general-health:
       - 20a47026b7e6bfc33b0d69517f72f8c0
-      - 3
+      - 5
     cppd-1::physical-therapy:
       - 3a2ef2a4445e8f2aa3e4306b91634029
-      - 2
+      - 8
     cppd-2__case::daily-check-in:
       - 5a53f1d43b8331474dfa2c602561a04b
-      - 1
+      - 12
     cppd-2__case::demographics:
       - d957d86bad8fe5546c08d970702a0620
-      - 3
+      - 5
     cppd-2__case::general-health:
       - 20a47026b7e6bfc33b0d69517f72f8c0
-      - 3
+      - 5
     cppd-2__control::daily-check-in:
       - 5a53f1d43b8331474dfa2c602561a04b
-      - 1
+      - 12
     cppd-2__control::demographics:
       - d957d86bad8fe5546c08d970702a0620
-      - 3
+      - 5
     cppd-2__control::general-health:
       - 8d8deb8cc9e1925058c82ee1ee932df3
-      - 3
+      - 5
     cramp::bfi-10:
       - d755746e9afdb245d38a81ca548e3eb3
-      - 1
+      - 2
     cramp::daily-check-in:
       - aafb1a81fb0267dc6c880f33eac1ae85
-      - 2
+      - 22
     cramp::demographics:
       - ef63aaa141ec1e686c02924877be987d
-      - 1
+      - 14
     cramp::dona-facebook:
       - feaea3e0d793c69a9a9ae9f5ccecee78
-      - 2
+      - 10
     cramp::dona-whatsapp:
       - e32347bfe2f41af81990cd7804d03f9e
-      - 2
+      - 9
     cramp::dst:
-      - 27b6840b944ff3d6d3a9cb3566fe84ac
-      - 2
+      - ea273e6d138716ef319d1de2b93645e5
+      - 24
     cramp::ema-afternoon:
       - f9d0cd9fcddf4751c91b2130a27b0185
-      - 1
+      - 4
     cramp::ema-evening:
       - ba275b1f18f19b8ef0216e84bfdfb567
-      - 1
+      - 4
     cramp::ema-morning:
       - eea79321dcfe122db730ce55cee6a3df
-      - 1
+      - 4
     cramp::final-check-in:
       - 5d31c4b340f074672faf7f886a44a80c
-      - 1
+      - 4
     cramp::general-health:
       - 856e79695010efdc009488ca95ed4877
-      - 2
+      - 14
     cramp::intro:
       - a8bb9e6b5a32961eaf0ecf13e1e10056
-      - 2
+      - 9
     cramp::menstrual-health:
       - 1b221ab2af1a04654912d292ebc94458
-      - 2
+      - 12
     cramp::menstrual-pain:
       - 989f707678401206a1d8c64881f557c2
-      - 1
+      - 12
     cramp::post-menstruation:
       - 253b6ecdbeb9e262465d3aa70acdc6a0
-      - 1
+      - 4
     cramp::pre-dst:
       - 879baecb1cbbc6f1bb589f5a0525a21c
-      - 1
+      - 4
     cramp::pregnancy:
       - 90e393fa56e7e7f088bae42bed63387a
-      - 1
+      - 14
     cramp::psst:
       - c9d41c284687aa4c2da42601a61212b3
-      - 1
+      - 2
     cramp::rsa:
       - 3e7ce51a0961c06a779233d1315e6da6
-      - 1
+      - 2
     cramp::social:
       - cb3e7830c9d55c0f929c18e0f92e1a4e
-      - 1
+      - 4
     cramp::strain:
       - 9f8688a075682ba30a8068e92eaf2ea1
-      - 1
+      - 3
     digi-ibd-001::begin-next-phase:
       - f2db0d3f2a6cb74dab3a7e185d63a62c
-      - 5
+      - 12
     digi-ibd-001::exit:
       - cb473da28623fc37293af16348546dc6
-      - 1
+      - 4
     digi-ibd-001::patient-global-impression-crohns-change:
       - 9541e7174dd828e2c66aeade4c1805f3
-      - 6
+      - 7
     digi-ibd-001::patient-global-impression-crohns-severity:
       - e8afaac7eca258ccac4912deff396e5d
-      - 7
+      - 8
     digi-ibd-001::patient-global-impression-fatigue-change:
       - 3356d3476c6b8592c1a84e6d66eb42c2
-      - 7
+      - 8
     digi-ibd-001::patient-global-impression-fatigue-severity:
       - 9197150f52f72f67d809403754fcce1c
-      - 7
+      - 9
     digi-ibd-001::patient-global-impression-sleep-disturbance-change:
       - 7ffcd838e9d6c76da50ddf3aa48e75ba
-      - 7
+      - 8
     digi-ibd-001::patient-global-impression-sleep-disturbance-severity:
       - 5838617ec667fded588cc1d4fe98bcdd
-      - 7
+      - 8
     digi-ibd-001::patient-global-impression-uc-change:
       - 5026626d8424ebbf1ae09ba1dce92bff
-      - 6
+      - 7
     digi-ibd-001::patient-global-impression-uc-severity:
       - 5d106838854d40420335eb71234a1611
-      - 7
-    digi-ibd-001::pro-2-crohns:
-      - cddc099211aa5895796c90cf9fbfdd0d
+      - 8
+    digi-ibd-001::pro-3:
+      - 8790c93250d7a5c0a5465cf612a908fb
       - 1
     digi-ibd-001::promis-emotional-distress-anxiety-screening:
       - cd51490136790400a5eb03984ebe6647
-      - 4
+      - 8
     digi-ibd-001::promis-emotional-distress-depression-screening:
       - b9201fe74108d10c2568c3263e787fa4
-      - 4
+      - 8
     digi-ibd-001::promis-fatigue-7a-screening:
       - 16878ba7a059c40c16ff5909af7a6b09
-      - 4
+      - 8
     digi-ibd-001::promis-gi-belly-pain-screening:
       - 6b5c50312c241eb77eaa57a7e994fef1
-      - 5
+      - 6
     digi-ibd-001::promis-gi-diarrhea-screening:
       - ed91b0896eecb90a63bafcab933bd207
-      - 4
+      - 7
     digi-ibd-001::promis-sleep-disturbance-8a-v1.0-screening:
       - 9655fdd747deb468b87b5d7524b937d0
-      - 4
+      - 9
     digi-ibd-001::promis-sleep-related-impairment-screening:
       - 75062677b698fc4bc7cef133cdf1ea91
-      - 4
+      - 8
     digi-ibd-001::schedule-labs-1:
       - d1ee131b0921898b0a361ef7bfe69de7
-      - 1
+      - 5
     digi-ibd-001::schedule-labs-2:
       - c70823a29d7357ce9e102bf33e84cb54
-      - 1
+      - 5
     digi-ibd-001::schedule-labs-3:
       - ba90c4af250f92a730dd6021b5666e56
-      - 1
+      - 5
     digi-ibd-001::sibdq-screening:
       - 78301aac82941f3e0a969a9bcd102cf4
-      - 6
+      - 8
     digi-ibd-001::which-ibd:
       - 47adf4bb6cacb79279848e2fe1852e97
-      - 5
+      - 9
     ibd-forecast::baseline_demographics:
       - 416ded8282400cadab850e795b4855ed
-      - 8
+      - 11
     ibd-forecast::baseline_health_crohn:
       - 17acfbae53ecbea56108fd992039f2f8
-      - 8
+      - 11
     ibd-forecast::baseline_health_pouch:
       - bfd77a7e9ba77baaa702bb28989a1ddd
-      - 4
+      - 8
     ibd-forecast::baseline_health_uc:
       - 1501abc00fe10bce469767675ec1a3e5
-      - 10
+      - 13
     ibd-forecast::bmi_correction:
       - d67b7d121947db7a37481dacf0b104c6
-      - 3
+      - 4
     ibd-forecast::lab_tests:
       - b48571df23a2d22f7b2f5a894333e89c
-      - 6
+      - 9
     ibd-forecast::new_meds:
       - fe1d14dc5205ca05b727ad637feb0794
       - 9
     ibd-forecast::pouch:
       - eb24d57c9b2e623005751e82da2e76b9
-      - 4
+      - 7
     ibd-forecast::pss-4-baseline:
-      - 8b7276f8bfbbfe3d173c6ee650e497b0
-      - 6
+      - 7482130804ac964dd26723d86f7b6ab0
+      - 10
     ibd-forecast::pss-4-bi-weekly:
       - 98a4e800b0a036f8c90fab0983a3329a
-      - 8
+      - 10
+    library::brief:
+      - d88a56f3b96b0015e24db2f8d8cf0aee
+      - 2
     library::cd-risc-10:
       - d2a7b8f426dca48d75b135959c22113a
-      - 6
+      - 10
     library::euro-qol-eq-5d-5l:
       - d8031fb897258c94249b77e2c7b306ac
-      - 2
+      - 10
     library::ipaq:
       - 19c8cf41eec3e57a98fe158cad47e5be
-      - 2
+      - 8
     library::mdhaq-bi-weekly:
       - db1aef9843703a7c96f8f777f4044721
-      - 3
+      - 5
     library::mpq:
       - b68f3bc7a21f381d1e5f710d40f21c53
-      - 2
+      - 10
     library::nih-cpsi:
       - 0ac587c6d79b046892e6f44d1af4f2dc
-      - 2
+      - 9
     library::pcs:
       - cb9a2e1fff8ecf26d5c2cda8de9adcd6
-      - 2
+      - 7
     library::pelvic-floor-distress-inventory-sf20:
       - 8e7f713377557facd4acd60d31a1d58d
-      - 3
+      - 7
     library::pro-2-crohns:
       - ee3a048bc4aab59e7752bcb58df8a9f6
-      - 8
+      - 14
     library::pro-2-uc:
       - 1d0729ff1ebefa309e97c7e5f9efad63
-      - 9
+      - 12
     library::promis-emotional-distress-anxiety:
       - 47d03153979559d94d394f9593263b05
-      - 4
+      - 8
     library::promis-emotional-distress-depression:
       - cbdbfe0508202749d2567c9036fa25b5
-      - 4
+      - 8
     library::promis-fatigue-4a-v1.0:
       - 87345f5794edb01619d14461f6f67270
-      - 2
+      - 6
     library::promis-fatigue-7a:
       - 30b1f5636a1cd5f3e6511de78afdaec3
-      - 4
+      - 8
     library::promis-gi-belly-pain:
       - 2ebdae1ba00e3ca7ac3db978924b131b
-      - 6
+      - 7
     library::promis-gi-diarrhea:
       - f2912b665f1f2f849fd0fb5881939de8
-      - 5
+      - 8
     library::promis-global-mental-health-2a-v1.2:
       - 2c4f6847579f5c3fde6c93feee3b4fe8
-      - 2
+      - 6
     library::promis-pain-interference-6b-v1.0:
       - eef88535b532ac1eb65a2ad9e96a6a48
-      - 5
+      - 10
     library::promis-pain-interference-6b-v1.1:
       - 45137ecddd239b84a35640485791e6d7
-      - 2
+      - 6
     library::promis-physical-function-4a-v1.0:
       - 1ad99aedbf4d20e0753105146ea5a61e
-      - 2
+      - 5
     library::promis-sleep-disturbance-4a-v1.0:
       - 1f51ee51a8027b1e1bae2b86aa460643
-      - 2
+      - 6
     library::promis-sleep-disturbance-8a-v1.0:
       - 05e1487a0e60acb019856e9e8f69b1fe
-      - 6
+      - 10
     library::promis-sleep-related-impairment:
       - a2a8c3e02dc13f0b96af38bfa9df41f6
-      - 4
+      - 8
     library::pseq:
       - aef19ba720a27954fac8882db2b1519e
-      - 2
+      - 3
     library::pss-4-bi-weekly:
       - 99485745818604d42ed6d060b1ee5a2a
-      - 2
+      - 3
     library::rapid3-daily:
       - 9b0f2e82b773c69d761f76f19b5d8a5f
-      - 2
+      - 4
     library::sibdq:
       - a58ca31399f2231f577be66f908ee4ff
-      - 6
+      - 8
     library::werf-ephect:
       - 341169cbb5b60652062dd6efc14a6aaf
-      - 1
-    nof1rl4endo::daily-afternoon-pain-tracking:
-      - 571b2fccfaede3fe9ede52afa0c05702
-      - 1
-    nof1rl4endo::daily-evening-pain-tracking:
-      - 75cd4a828b389922475df7558f164040
-      - 1
-    nof1rl4endo::daily-morning-pain-tracking:
-      - d8b6da7a1816bd30e3500fe9ba63a83c
-      - 1
+      - 7
     nof1rl4endo::demographics:
       - da6dbc9af90ce11373968c47fd16352a
-      - 1
-    nof1rl4endo::general-health-survey:
-      - aa2df6b03f6e3f0d2e91b1c3ab26ab9e
-      - 1
-    nof1rl4endo::health-itues:
-      - 27e7d48d389b5743692f28eecce68633
-      - 1
-    nof1rl4endo::mauq-18:
-      - 214829ece2a6412174fab95eb13650b8
-      - 1
-    nof1rl4endo::other-momentary-and-daily-tracking:
-      - 057d1f5cd6c6560a2abd1c20c5460b19
-      - 1
+      - 2
     nof1rl4endo::painmap:
       - ab919eab18888ac15e3a86f149e23911
-      - 1
-    nof1rl4endo::par-q:
-      - 9d55584f4f7764774a11a1274a37b03a
+      - 2
+    pharme::actions-taken:
+      - 93c1a21e94110cea61c4e7d519b01f6a
+      - 4
+    pharme::arm:
+      - 084502e3ea0a4335a2d023d4762bf804
+      - 6
+    pharme::attitudes:
+      - 4fd6ef4a054dff36f58c62c8a4413d68
+      - 4
+    pharme::begin-next-phase-app:
+      - bd781c92f5fe7a94a355ce106f827117
+      - 2
+    pharme::begin-next-phase-counseling:
+      - 82229ec274d9173e3f47f365e12a998e
+      - 2
+    pharme::comprehension-app:
+      - 34c761513c763f9b6cf1654b5e879eef
+      - 4
+    pharme::comprehension-counseling:
+      - 845c174c7503a4be6a1acacfdffa1817
+      - 4
+    pharme::demographics:
+      - e64a9e7878ee743ac539e36f65566452
+      - 3
+    pharme::factor-adapted:
+      - 7f50b465b4cf406665a76f40508f7a33
+      - 3
+    pharme::knowledge:
+      - 09f6f080afb1e7551e7dc0c283b63895
+      - 5
+    pharme::knowledge-followup:
+      - fc5e74af3379fb9b85917bbf78a719e8
+      - 2
+    pharme::satisfaction-app:
+      - 9b7d1727d67c7c97bd14017b472039c9
+      - 4
+    pharme::satisfaction-counseling:
+      - 6d3044445c3265e1786c0421222d8769
+      - 4
+    pharme::u-mars:
+      - 7c8a66eee2f10b78d62d0030fab8b5e1
+      - 10
+    playground::showcase-h-scale:
+      - 40d898e2c184f44c34ad5425451469aa
+      - 3
+    playground::showcase-image-grid:
+      - 5c9d291d080a4f051b759ecceca12daa
+      - 2
+    playground::showcase-rate:
+      - 5e365453744e6272accae3904a2dda4b
+      - 3
+    playground::showcase-reorderable:
+      - 1c947d92a2a9a4bf93b131ff13ce7b8a
+      - 3
+    playground::showcase-touch-points:
+      - cd0440821f6338a4ec234d35aee145a0
       - 1
     ra-forecast::baseline_demographics:
       - 60e2fba37ab5cbed583b96e98d558d1f
-      - 2
+      - 4
     ra-forecast::baseline_health:
       - bea8dbc27c5ebb32039c146b72f6d085
-      - 4
+      - 13
     ra-forecast::bmi_correction:
       - d67b7d121947db7a37481dacf0b104c6
-      - 3
+      - 4
     ra-forecast::fatigue_scale:
       - ad6206be15ff40fdac139e7c6d68a058
-      - 2
+      - 5
     ra-forecast::lab_tests:
       - c97b1d6a64d4c37bdba95c20f4a60816
-      - 2
+      - 4
     ra-forecast::new_meds:
       - deaf3f0bc5cfcb4e488086da9c97910a
-      - 4
+      - 12
 inactive:
   studies:
     hpi-decode-bp:
       - 8cad57673ec3ed1dc5005820f77867cd
-      - 11
+      - 16
+    operationalizing-warrior-watch:
+      - 268349917636273cb41ff7a21ade0bad
+      - 18
     warrior-shield:
       - 9923ef97911b6e0f2cfe2c72621e01e2
-      - 14
+      - 20
   tasks:
     cramp::ema:
       - d28d0142ade25beb7f4b887789bd3b11
-      - 1
+      - 12
     digi-ibd-001::schedule-labs:
       - ce84559a670d6ee8754f4c3e0ceb3371
-      - 1
+      - 4
     hpi-decode-bp::bp-measurement:
       - 45359e7a6f7b1d7c35a0c05f66f131b0
       - 6
     hpi-decode-bp::calibration-measurement:
       - 24924ac6aa89536c8e78cd8f847dfd1d
-      - 7
+      - 8
     hpi-decode-bp::calibration-video:
       - db533bd95cc8e3619fe20d9bc7916046
       - 3
@@ -387,152 +435,158 @@ inactive:
       - 4
     hpi-decode-bp::demographics:
       - 1a239b29598424eff67fd8f6f7324041
-      - 6
+      - 7
     hpi-decode-bp::intervention-video:
       - 2f8f33236572c611136faba32ab58da1
       - 4
     hpi-decode-bp::intervention-video-always:
       - 18d085aa6781b28db056478925f4b5ed
-      - 4
+      - 5
     hpi-decode-bp::usability:
       - 767d3445ec920dc278d571f63f5536da
-      - 5
+      - 6
     library::bfi-10:
       - a60385bc3fbf7e395437c5cd425f427a
-      - 1
+      - 6
     library::cd-risc-2:
       - 3a4afc2bc2b1eb96e015808078be5c68
-      - 5
+      - 8
     library::dass-21:
       - a90d769bf2c08681b2babc523721639d
-      - 1
+      - 6
     library::fitzpatrick-skin-type:
       - 8e42b95bc46f8dd92daad56bb035b50e
-      - 6
+      - 9
     library::lsns:
       - bd1181b6d0a0dd1f5a3cc0c8a3dcf1d9
-      - 1
+      - 5
     library::mdhaq:
       - a16a4564ac9175e1bbea2acffa7674dc
-      - 3
+      - 5
     library::neuro-qol-positive-affect-and-well-being-item-bank-v1.0:
       - a598654cf93cc3a3024411fb4db22f01
-      - 7
+      - 10
     library::panas-sf:
       - a6e8daf1be24827857a70c86003e8409
-      - 1
+      - 3
     library::phq-4:
       - 0f89ca5424296b7a1c2f5e0285721b83
-      - 7
+      - 10
     library::phq-8:
       - ca8677c011e57f4a7ad02eccfd493954
-      - 5
+      - 8
     library::pro-3:
       - c40db32dfd8808e50a7adfd14e5b6292
-      - 4
+      - 8
     library::promis-gh-qol-2-item:
       - 4d10a34eed0486c83ae919b6cc2cf1de
-      - 5
+      - 8
     library::promis-social-support-2-item:
       - 7588542ed52f5c48427d080ed4a6d1ef
-      - 7
+      - 10
     library::pss-10:
       - 4381e5d93e6bcf05e63d457066971b98
-      - 7
+      - 10
     library::pss-10-weekly:
       - d8f3b9c19823d8753a49226a0e2442da
-      - 1
+      - 4
     library::pss-4:
       - a270e3788d8ed4e249eeabe73918caf4
-      - 7
+      - 10
     library::psst:
       - 931518eae9082de166151d6f92e06a64
-      - 1
+      - 6
     library::rapid3:
       - 61a442e4a05b1626b5fcebeaaa133fbb
-      - 2
+      - 4
     library::rs-14:
       - 09edeaf2118e4019b753261926b21628
-      - 1
+      - 4
     library::rsa:
       - 1b6033fd71276bc4b5b49ca7789388bf
-      - 1
+      - 8
     library::sccai:
       - 33b3921457bcc91e6b98372adf1fd0ab
-      - 5
+      - 7
     library::sei-hs:
       - 095aab0a9c3c5238332f5e6ab0ef1514
-      - 1
+      - 8
     library::sss-8:
       - 300b56b9d361ad6522eeaa9463130e9e
-      - 1
+      - 4
     library::ucls-ls:
       - 88c44addbde87a005d719b570788706a
-      - 1
+      - 5
     library::werf-medical-history:
       - 692f534daf59b40f259ff930f710787a
-      - 1
+      - 5
     library::werf-medication-history:
       - 8904ebae665c14a6f7745ffbfb2e91a3
-      - 1
+      - 8
     library::werf-menstrual-history:
       - 2f4bd3a30cc6680f3423be053b31b8cf
-      - 1
+      - 15
     library::werf-pain:
       - c561d566f138d61a19920bbbe40aa676
-      - 1
+      - 30
     library::werf-personal-information:
       - 1b86fe2f0acb39e068a0b70bc14c3497
-      - 1
+      - 8
     library::werf-pregnancy:
       - 814443f7962e56c0fad8ca862234b084
+      - 5
+    nof1rl4endo::general-health-survey:
+      - 75d0adf479817f012c2c34e1d4bbef42
       - 1
-    nof1rl4endo::daily-tracking:
-      - 1c3332fb7cb6023f7c47ca4f4804ac6e
-      - 1
+    operationalizing-warrior-watch::baseline-demographics:
+      - cafe580575a7cf767101a08941dfd3f1
+      - 2
+    operationalizing-warrior-watch::report-new-information:
+      - 9f53ffcf0eccc5cf3757618464837a45
+      - 2
     warrior-shield::daily-check-in:
       - 1f27ffb3982a88508ee2d1a185c6d506
-      - 5
+      - 7
     warrior-shield::demographics:
       - 115febe6c99eed8f3b286af87cbdbc17
-      - 5
+      - 6
     warrior-shield::devices:
       - bda2bb2ae8551c70e8b5497ee1ab54c3
-      - 8
+      - 9
     warrior-shield::heartmath-satisfaction:
       - 7b785574b6c33cd79cd211e9f0437f39
-      - 5
+      - 6
     warrior-shield::hm-1:
       - 78f28d7f67b8ad450cb1b85f122f4d3e
-      - 5
+      - 6
     warrior-shield::hm-2:
       - ee305f292c5d85d7427f1ada689e95ae
-      - 6
+      - 7
     warrior-shield::hm-2-always:
       - cb371cd3df50864290cd904c47a68f61
-      - 3
+      - 4
     warrior-shield::hm-3:
       - ff8b714cc53c3e48a4522cd0d5c8f89c
-      - 6
+      - 7
     warrior-shield::hm-4:
       - c38097621be573e8b85d583eab3fb456
-      - 6
+      - 7
     warrior-shield::hm-5:
       - ad2c7dcfd925e92436cabf2d3818d333
-      - 6
+      - 7
     warrior-shield::hm-6:
       - d8ebfdd794883150562f41552f44b2df
-      - 6
+      - 7
     warrior-shield::intro:
       - c310566ab233555e02ebc5e32f4e2c75
-      - 5
+      - 6
     warrior-shield::intro-always:
       - eb3a35034511bc5632c4a299598019b7
-      - 4
+      - 5
     warrior-shield::report-new-information:
       - dc26ab679f7dd2c59fd81b2cc4fd23fb
-      - 4
+      - 5
     warrior-shield::start-intervention:
       - ac627316f63830ee395356107f744b4b
-      - 6
+      - 7
 

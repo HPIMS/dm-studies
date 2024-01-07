@@ -471,8 +471,7 @@ sections:
    questions:  
     - key: 2h_exercise_rec
       question: Did you complete your last exercise recommendation?
-      type: SINGLE_CHOICE
-      option: YESNO_CHOIC
+      type: YESNO_CHOICE
     - key: 2h_exercise_rec_feel
       question: if yes- How did you feel after your last exercise recommendation?
       type: SINGLE_CHOICE 
