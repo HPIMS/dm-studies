@@ -15,8 +15,7 @@ sections:
    questions:
     - key: 1c_pain
       question: Since the last time you tracked your pain symptoms today, have you experienced any pain symptoms?
-      type: SINGLE_CHOICE
-      option: YESNO_CHOICE                      
+      type: YESNO_CHOICE                    
     - key: 1c_pain_location
       question: Where is the pain?
       type: MULTIPLE_CHOICE              

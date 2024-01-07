@@ -173,8 +173,7 @@ sections:
    questions:           
     - key: 2d_period
       question: Track your period. Do you have your period today?
-      type: SINGLE_CHOICE
-      option: YESNO_CHOICE
+      type: YESNO_CHOICE
     - key: 2d_period_flow
       question: How is the bleeding/flow?
       type: SINGLE_CHOICE
@@ -249,8 +248,7 @@ sections:
    questions:
     - key: 2e_meds
       question: Did you take any medications today?
-      type: SINGLE_CHOICE
-      option: YESNO_CHOICE
+      type: YESNO_CHOICE
     - key: 2e_meds_list
       question: if you have taken medication today,select all that apply. 
       type: MULTIPLE_CHOICE
@@ -316,8 +314,7 @@ sections:
    questions:
     - key: 2f_exercise
       question: Did you do any physical exercise today other than your recommendation? 
-      type: SINGLE_CHOICE
-      option: YESNO_CHOICE 
+      type: YESNO_CHOICE
     - key: 2f_exercise_list
       question: if you have done any physical exercise today other than your recommendation today,select all that apply.
       type: MULTIPLE_CHOICE
@@ -474,8 +471,7 @@ sections:
    questions:  
     - key: 2h_exercise_rec
       question: Did you complete your last exercise recommendation?
-      type: SINGLE_CHOICE
-      option: YESNO_CHOIC
+      type: YESNO_CHOICE
     - key: 2h_exercise_rec_feel
       question: if yes- How did you feel after your last exercise recommendation?
       type: SINGLE_CHOICE 

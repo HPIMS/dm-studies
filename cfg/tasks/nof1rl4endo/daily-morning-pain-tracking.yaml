@@ -15,8 +15,7 @@ sections:
    questions:
     - key: 1a_pain
       question: Have you experienced any pain since you woke up today?
-      type: SINGLE_CHOICE
-      options: YESNO_CHOICE 
+      type: YESNO_CHOICE
     - key: 1a_pain_location
       question: Where is the pain? Select all body areas where you felt pain since you woke up today.
       type: MULTIPLE_CHOICE
@@ -130,4 +129,3 @@ sections:
         text: Radiating
       - value: piercing
         text: Piercing        
-        
