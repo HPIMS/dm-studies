@@ -56,11 +56,8 @@ tasks:
   - key: knowledge
     rank: 30
 
-  - key: arm
-    rank: 40
-
   - key: begin-next-phase-app
-    rank: 50
+    rank: 40
     triggers:
       - action: SHOW
         condition:
@@ -76,7 +73,7 @@ tasks:
             score: 1
 
   - key: begin-next-phase-counseling
-    rank: 50
+    rank: 40
     triggers:
       - action: SHOW
         condition:
@@ -92,7 +89,7 @@ tasks:
             score: 1
 
   - key: knowledge-followup
-    rank: 60
+    rank: 50
     triggers:
       - action: SHOW
         condition:
@@ -110,7 +107,7 @@ tasks:
               score: 1
 
   - key: comprehension-app
-    rank: 70
+    rank: 60
     triggers:
       - action: SHOW
         condition:
@@ -121,7 +118,7 @@ tasks:
             score: 1
 
   - key: comprehension-counseling
-    rank: 70
+    rank: 60
     triggers:
       - action: SHOW
         condition:
@@ -132,7 +129,7 @@ tasks:
             score: 1
 
   - key: factor-adapted
-    rank: 80
+    rank: 70
     triggers:
       - action: SHOW
         condition:
@@ -150,7 +147,7 @@ tasks:
               score: 1
 
   - key: satisfaction-app
-    rank: 90
+    rank: 80
     triggers:
       - action: SHOW
         condition:
@@ -161,7 +158,7 @@ tasks:
             score: 1
 
   - key: satisfaction-counseling
-    rank: 90
+    rank: 80
     triggers:
       - action: SHOW
         condition:
@@ -172,7 +169,7 @@ tasks:
             score: 1
 
   - key: attitudes
-    rank: 100
+    rank: 90
     triggers:
       - action: SHOW
         condition:
@@ -190,7 +187,7 @@ tasks:
               score: 1
 
   - key: actions-taken
-    rank: 110
+    rank: 100
     triggers:
       - action: SHOW
         condition:
@@ -208,7 +205,7 @@ tasks:
               score: 1
 
   - key: u-mars
-    rank: 120
+    rank: 110
     triggers:
       - action: SHOW
         condition:
