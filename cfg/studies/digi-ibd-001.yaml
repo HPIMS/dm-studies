@@ -52,21 +52,6 @@ tasks:
             score: 0
     rank: 1
 
-  - key: begin-next-phase
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: digi-ibd-001::which-ibd
-            operator: ">"
-            score: 0
-      - action: HIDE
-        condition:
-          - type: SCORE
-            resource: digi-ibd-001::begin-next-phase
-            operator: "="
-            score: 1
-    rank: 999
 
   - key: pro-2-crohns
     triggers:
