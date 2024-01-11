@@ -135,8 +135,7 @@ sections:
                 operator: =
                 value: 'yes'        
       - key: 3_pain_location
-        question: Where do you feel pain 
-        descritpion: Select all that apply
+        question: Where do you feel pain ? Select all that apply
         type: MULTIPLE_CHOICE
         options:
           - value: pelvis
@@ -171,6 +170,7 @@ sections:
                 value: 'yes'
       - key: 3_pain_freq
         question: How often do you feel pain? 
+        type: SINGLE_CHOICE        
         options:
           - value: daily
             text: Daily

@@ -39,7 +39,7 @@ sections:
             text: Strongly disagree  
             score: 1            
       - key: health-itues_2
-        question: I think the mHealth App would improve the quality of life of individuals with chronic pelvic pain disorders (e.g., endometriosis)..
+        question: I think the mHealth App would improve the quality of life of individuals with chronic pelvic pain disorders (e.g., endometriosis).
         type: SINGLE_CHOICE
         options:
           - value: strongly_agree
@@ -157,7 +157,7 @@ sections:
             text: Strongly disagree  
             score: 1           
       - key: health-itues_8
-        question:  I can always remember how to log on to and use the mHealth App. 
+        question: I can always remember how to log on to and use the mHealth App. 
         type: SINGLE_CHOICE        
         options:
           - value: strongly_agree
@@ -175,7 +175,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1                  
-      - key: health-itues_8
+      - key: health-itues_9
         question: I think the mHealth App presents a more equitable process for self-managing my disease-related symptoms.
         type: SINGLE_CHOICE        
         options:
@@ -194,8 +194,8 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1           
-      - key: health-itues_9
-        question:  I am satisfied with the mHealth App for self-managing my disease-related symptoms.
+      - key: health-itues_10
+        question: I am satisfied with the mHealth App for self-managing my disease-related symptoms.
         type: SINGLE_CHOICE        
         options:
           - value: strongly_agree
@@ -213,7 +213,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1            
-      - key: health-itues_10
+      - key: health-itues_11
         question: I self-manage my disease-related symptoms in a timely manner because of the mHealth App.
         type: SINGLE_CHOICE        
         options:
@@ -232,7 +232,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1           
-      - key: health-itues_11
+      - key: health-itues_12
         question: Using the mHealth App increases my ability to self-manage my disease-related symptoms.
         type: SINGLE_CHOICE 
         options:
@@ -251,7 +251,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1                
-      - key: health-itues_12
+      - key: health-itues_13
         question: I am able to self-manage my disease-related symptoms whenever I use the mHealth App.
         type: SINGLE_CHOICE 
         options:
@@ -274,7 +274,7 @@ sections:
     key: perceived_ease_of_use
     title: Perceived ease of use 
     questions:  
-      - key: health-itues_13
+      - key: health-itues_14
         question: I am comfortable with my ability to use the mHealth App.
         type: SINGLE_CHOICE
         options:
@@ -293,7 +293,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1           
-      - key: health-itues_14
+      - key: health-itues_15
         question: Learning to operate the mHealth App is easy for me. 
         type: SINGLE_CHOICE 
         options:
@@ -312,7 +312,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1                      
-      - key: health-itues_15
+      - key: health-itues_16
         question: It is easy for me to become skillful at using the mHealth App.
         type: SINGLE_CHOICE
         options:
@@ -331,7 +331,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1           
-      - key: health-itues_16
+      - key: health-itues_17
         question: I find the mHealth App easy to use.
         type: SINGLE_CHOICE 
         options:
@@ -350,7 +350,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1           
-      - key: health-itues_17
+      - key: health-itues_18
         question:  I can always remember how to log on to and use the mHealth App.
         type: SINGLE_CHOICE
         options:
@@ -373,8 +373,8 @@ sections:
     key: user_control
     title: User Control
     questions:  
-      - key: The mHealth App gives error messages that clearly tell me how to fix problems. 
-        question: health-itues_18
+      - key: health-itues_19  
+        question: The mHealth App gives error messages that clearly tell me how to fix problems.
         type: SINGLE_CHOICE
         options:
           - value: strongly_agree
@@ -392,7 +392,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1           
-      - key: health-itues_19
+      - key: health-itues_20
         question: Whenever I make a mistake using the mHealth App, I recover easily and quickly.
         type: SINGLE_CHOICE 
         options:
@@ -411,7 +411,7 @@ sections:
           - value: strongly_disagree
             text: Strongly disagree  
             score: 1           
-      - key: health-itues_20
+      - key: health-itues_21
         question: The information (such as on-line help, on-screen messages, and other documentation) provided with the mHealth App is clear.  
         type: SINGLE_CHOICE
         options:
