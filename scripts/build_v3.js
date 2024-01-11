@@ -55,7 +55,7 @@ async function processTasks(distDir) {
     task.version = version;
 
     // Write the task JSON
-    await fs.promises.writeFile(
+    fs.writeFileSync(
       path.join(distDir, subdir, `${compositeKey}.json`),
       JSON.stringify({ ...task, key: compositeKey, type: taskType })
     );
@@ -73,15 +73,15 @@ async function processTasks(distDir) {
   await waterfall(executors);
 
   // Write the task index file
-  await fs.promises.writeFile(
+  fs.writeFileSync(
     path.join(distDir, "surveys", "index.json"),
     JSON.stringify(indexes.surveys)
   );
-  await fs.promises.writeFile(
+  fs.writeFileSync(
     path.join(distDir, "multimedia", "index.json"),
     JSON.stringify(indexes.multimedia)
   );
-  await fs.promises.writeFile(
+  fs.writeFileSync(
     path.join(distDir, "interventions", "index.json"),
     JSON.stringify(indexes.interventions)
   );
@@ -149,7 +149,7 @@ async function processStudies(distDir) {
 
     study.tasks = tasks;
 
-    await fs.promises.writeFile(
+    fs.writeFileSync(
       path.join(distDir, "studies", `${studyKey}.json`),
       JSON.stringify(study)
     );
@@ -173,7 +173,7 @@ async function processStudies(distDir) {
 
     // Move the consent to dist
     const consent = await getConsentFile(`${studyKey}.json`);
-    await fs.promises.writeFile(
+    fs.writeFileSync(
       path.join(distDir, "consents", `${studyKey}.json`),
       JSON.stringify(consent)
     );
@@ -182,7 +182,7 @@ async function processStudies(distDir) {
   await waterfall(executors);
 
   // Write the study index file
-  await fs.promises.writeFile(
+  fs.writeFileSync(
     path.join(distDir, "studies", "index.json"),
     JSON.stringify(index)
   );

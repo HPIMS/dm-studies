@@ -105,7 +105,7 @@ sections:
    title: Tracking of Psychological related symptoms
    questions:          
    - key: 2c_feeling
-     question: "How was your mood today? Have you felt... (select all those that apply):"
+     question: "How was your mood today? Have you felt? Select all those that apply:"
      type: MULTIPLE_CHOICE
      options:
       - value: fearful
@@ -165,8 +165,8 @@ sections:
    - key: 2c_feeling_intensity
      question: How intense is the feeling?
      type: Numeric
-     min: 0
-     max: 10 
+     minValue: 0
+     maxValue: 10 
  - type: survey
    key: menstural_symptoms
    title: Tracking of Menstrual status related symptoms
@@ -224,24 +224,24 @@ sections:
         text: Constipation
       - value: blood_clots
         text: Blood clots    
-      - key: 2d_breakthrough_bleed
-        question: Are you experiencing any bleeding or spotting outside of your normal menstrual period (breakthrough bleeding)?
-        type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: menstural_symptoms
-                question: '2d_period'
-                operator: =
-                value: 'no'
-        options:
-          - value: 'no'
-            text: 'No'
-          - value: spotting
-            text: Yes - spotting
-          - value: bleeding
-            text: Yes - bleeding
+    - key: 2d_breakthrough_bleed
+      question: Are you experiencing any bleeding or spotting outside of your normal menstrual period (breakthrough bleeding)?
+      type: SINGLE_CHOICE
+      triggers:
+       - action:
+           type: SHOW
+         condition:
+            - section: menstural_symptoms
+              question: '2d_period'
+              operator: =
+              value: 'no'
+      options:
+        - value: 'no'
+          text: 'No'
+        - value: spotting
+          text: Yes - spotting
+        - value: bleeding
+          text: Yes - bleeding
  - type: survey
    key: medications
    title: Tracking of Medications      
@@ -450,9 +450,9 @@ sections:
         - value: other
           text: Other
           inlineQuestion:
-          key: 2g_impacted_activities_other_description
-          question: Please specify...
-          type: TEXTAREA                                    
+            key: 2g_impacted_activities_other_description
+            question: Please specify...
+            type: TEXTAREA                                    
     - key: 2g_activities_impact
       question: How severe was the impact?
       type: SINGLE_CHOICE 
