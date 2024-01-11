@@ -11,9 +11,8 @@ intro:
   title: Demographics
   description: >-
     In this survey we ask you to answer some questions regarding your ethnical/racial, social and economical background.
-
     Why is completing this survey important?
-    Health and disease is not only about biology. Social and economical factors can play a big role in your health. We want to account for this in our analyses and assess the impact of socioeconomical factors in the development of name: Demographics
+    Health and disease is not only about biology. Social and economical factors can play a big role in your health. We want to account for this in our analyses and assess their impact of socioeconomical factors in the development of dysmenorrhea.
 name: Demographics
 sections:
   - type: survey
@@ -127,8 +126,7 @@ sections:
           - value: no_response
             text: I choose not to answer this question
       - key: income_total
-        question: Which of the following best describes the total annual income of all
-                   members of your household?
+        question: Which of the following best describes the total annual income of all members of your household?                
         type: SINGLE_CHOICE
         options:
           - value: under_50
@@ -207,11 +205,11 @@ sections:
               - section: sdh
                 question: household_size
                 operator: ">="
-                value: 2
-  - key: employment
-    question: What is your employment status?
-    type: SINGLE_CHOICE
-    options:
+                value: 2               
+      - key: employment
+        question: What is your employment status?
+        type: SINGLE_CHOICE
+        options:
           - value: employed
             text: Employed with pay (part-time, full-time, self-employed)
           - value: unable_to_work
@@ -224,15 +222,15 @@ sections:
             text: Unemployed
           - value: retired
             text: Retired
-  - key: unemployed_duration
-    question: How long have you been unemployed?
-    type: SINGLE_CHOICE
-    options:
+      - key: unemployed_duration
+        question: How long have you been unemployed?
+        type: SINGLE_CHOICE
+        options:
           - value: less_than_1_year
             text: Less than 1 year
           - value: more_than_1_year
             text: One or more years
-    triggers:
+        triggers:
           - action:
               type: SHOW
             condition:
@@ -240,3 +238,23 @@ sections:
                 question: employment
                 operator: =
                 value: unemployed
+      - key: state
+        question: In which state do you live in?
+        type: TEXT
+        placeholder: e.g. NY
+      - key: zipcode
+        question: What is your zip code?
+        type: TEXT
+        placeholder: e.g. 10029
+      - key: marital_status
+        question: What is your marital status?
+        type: SINGLE_CHOICE
+        options:
+          - value: single
+            text: Single, never married
+          - value: married
+            text: Married or in a domestic partnership
+          - value: divorce
+            text: Separated or divorced
+          - value: widowed
+            text: Widowed

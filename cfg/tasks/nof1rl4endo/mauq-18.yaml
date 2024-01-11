@@ -6,7 +6,7 @@ score:
   args: {}
 schedule:
   type: PERIOD
-  period: ONCE
+  period: ALWAYS
 timeRequirements:
   time: 2
   timeUnits: minutes
