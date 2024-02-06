@@ -165,9 +165,9 @@ sections:
    - key: 2c_feeling_intensity
      question: How intense is the feeling?
      type: H_SCALE
-     minValue: 0
+     min: 0
      minLabel: None
-     maxValue: 10 
+     max: 10 
      maxLabel: High
  - type: survey
    key: menstural_symptoms
