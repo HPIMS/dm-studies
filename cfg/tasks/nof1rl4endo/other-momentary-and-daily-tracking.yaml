@@ -166,7 +166,9 @@ sections:
      question: How intense is the feeling?
      type: H_SCALE
      minValue: 0
+     minLabel: None
      maxValue: 10 
+     maxLabel: High
  - type: survey
    key: menstural_symptoms
    title: Tracking of Menstrual status related symptoms
