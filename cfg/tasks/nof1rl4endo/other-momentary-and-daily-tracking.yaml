@@ -164,7 +164,7 @@ sections:
         text: Interested 
    - key: 2c_feeling_intensity
      question: How intense is the feeling?
-     type: Numeric
+     type: H_SCALE
      minValue: 0
      maxValue: 10 
  - type: survey
@@ -430,9 +430,9 @@ sections:
             Other physical mobility (e.g., kneeling, jumping, stretching,
             sitting down)
           inlineQuestion:
-          key: 2g_impacted_activities_other_physical_mobility_description
-          question: Please specify...
-          type: TEXTAREA
+            key: 2g_impacted_activities_other_physical_mobility_description
+            question: Please specify...
+            type: TEXTAREA
         - value: sleep
           text: Sleep
         - value: intercourse
