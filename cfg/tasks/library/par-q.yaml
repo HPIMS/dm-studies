@@ -3,7 +3,7 @@ active: true
 scorable: false
 schedule:
   type: PERIOD
-  period: ALWAYS
+  period: ONCE
 timeRequirements:
   time: 3
   timeUnits: minutes
@@ -18,7 +18,7 @@ intro:
     If you are over 69 years of age and you are not used to being very active, check with your doctor. 
     Common sense is your best guide when you answer these questions. 
     Please read the questions carefully and answer each one honestly.
-name: par-q
+name: Physical Activity Readiness
 sections:
   - type: survey
     key: "0"
