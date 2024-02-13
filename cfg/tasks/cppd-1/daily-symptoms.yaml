@@ -1,0 +1,5081 @@
+key: daily-symptoms
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+schedule:
+  type: PERIOD
+  period: DAILY
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Daily Symptoms
+sections:
+  - type: survey
+    key: health_symptoms
+    title: Daily Symptoms
+    description: Track your symptoms for the day.
+    questions:
+      - key: '1'
+        question: 1. Have you experienced any pain today?
+        type: SINGLE_CHOICE
+        options:
+          - value: 'yes'
+            text: 'Yes'
+            score: 1
+          - value: 'no'
+            text: 'No'
+            score: 0
+      - key: 1_sub_1
+        question: 1a. Select all body areas where you felt pain since you woke up today.
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: '1'
+                operator: =
+                value: 'yes'
+        options:
+          - value: face
+            text: Face
+          - value: head
+            text: Head
+          - value: jaw
+            text: Jaw
+          - value: neck
+            text: Neck
+          - value: shoulder
+            text: Shoulder
+          - value: upper_back
+            text: Upper back
+          - value: middle_back
+            text: Middle back
+          - value: lower_back
+            text: Lower back
+          - value: chest_breast
+            text: Chest/breast
+          - value: upper_arm
+            text: Upper arm(s)
+          - value: elbow
+            text: Elbow(s)
+          - value: lower_arm
+            text: Lower arm(s)
+          - value: wrist_hand
+            text: Wrist/hand(s)
+          - value: upper_abdomen
+            text: Upper abdomen
+          - value: lower_abdomen
+            text: Lower abdomen
+          - value: vagina
+            text: Vagina
+          - value: pelvis
+            text: Pelvis
+          - value: rectum
+            text: Rectum
+          - value: hip
+            text: Hip(s)
+          - value: groin
+            text: Groin(s)
+          - value: thighs_upper_leg
+            text: Thighs/upper leg(s)
+          - value: buttock
+            text: Buttock(s)
+          - value: knee
+            text: Knee(s)
+          - value: lower_leg
+            text: Lower leg(s)
+          - value: ankle
+            text: Ankle(s)
+          - value: feet
+            text: Feet
+      - key: 1_sub_2_face
+        question: 1b (part 1). Rate the severity of the face pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: face
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_face
+        question: 1b (part 2). What type of face pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: face
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_head
+        question: 1c (part 1). Rate the severity of the head pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: head
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_head
+        question: 1c (part 2). What type of head pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: head
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_jaw
+        question: 1d (part 1). Rate the severity of the jaw pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: jaw
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_jaw
+        question: 1d (part 2). What type of jaw pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: jaw
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_neck
+        question: 1e (part 1). Rate the severity of the neck pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: neck
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_neck
+        question: 1e (part 2). What type of neck pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: neck
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_shoulder
+        question: 1f (part 1). Rate the severity of the shoulder pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: shoulder
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_shoulder
+        question: 1f (part 2). What type of shoulder pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: shoulder
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_upper_back
+        question: 1g (part 1). Rate the severity of the upper back pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: upper_back
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_upper_back
+        question: 1g (part 2). What type of upper back pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: upper_back
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_middle_back
+        question: 1h (part 1). Rate the severity of the middle back pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: middle_back
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_middle_back
+        question: 1h (part 2). What type of middle back pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: middle_back
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_lower_back
+        question: 1i (part 1). Rate the severity of the lower back pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_back
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_lower_back
+        question: 1i (part 2). What type of lower back pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_back
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_chest_breast
+        question: 1j (part 1). Rate the severity of the chest/breast pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: chest_breast
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_chest_breast
+        question: 1j (part 2). What type of chest/breast pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: chest_breast
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_upper_arm
+        question: 1k (part 1). Rate the severity of the upper arm(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: upper_arm
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_upper_arm
+        question: 1k (part 2). What type of upper arm(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: upper_arm
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_elbow
+        question: 1l (part 1). Rate the severity of the elbow(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: elbow
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_elbow
+        question: 1l (part 2). What type of elbow(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: elbow
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_lower_arm
+        question: 1m (part 1). Rate the severity of the lower arm(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_arm
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_lower_arm
+        question: 1m (part 2). What type of lower arm(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_arm
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_wrist_hand
+        question: 1n (part 1). Rate the severity of the wrist/hand(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: wrist_hand
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_wrist_hand
+        question: 1n (part 2). What type of wrist/hand(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: wrist_hand
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_upper_abdomen
+        question: 1o (part 1). Rate the severity of the upper abdomen pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: upper_abdomen
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_upper_abdomen
+        question: 1o (part 2). What type of upper abdomen pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: upper_abdomen
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_lower_abdomen
+        question: 1p (part 1). Rate the severity of the lower abdomen pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_abdomen
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_lower_abdomen
+        question: 1p (part 2). What type of lower abdomen pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_abdomen
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_vagina
+        question: 1q (part 1). Rate the severity of the vagina pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: vagina
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_vagina
+        question: 1q (part 2). What type of vagina pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: vagina
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_pelvis
+        question: 1r (part 1). Rate the severity of the pelvis pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: pelvis
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_pelvis
+        question: 1r (part 2). What type of pelvis pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: pelvis
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_rectum
+        question: 1s (part 1). Rate the severity of the rectum pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: rectum
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_rectum
+        question: 1s (part 2). What type of rectum pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: rectum
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_hip
+        question: 1t (part 1). Rate the severity of the hip(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: hip
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_hip
+        question: 1t (part 2). What type of hip(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: hip
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_groin
+        question: 1u (part 1). Rate the severity of the groin(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: groin
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_groin
+        question: 1u (part 2). What type of groin(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: groin
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_thighs_upper_leg
+        question: 1v (part 1). Rate the severity of the thighs/upper leg(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: thighs_upper_leg
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_thighs_upper_leg
+        question: >-
+          1v (part 2). What type of thighs/upper leg(s) pain are you
+          experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: thighs_upper_leg
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_buttock
+        question: 1w (part 1). Rate the severity of the buttock(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: buttock
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_buttock
+        question: 1w (part 2). What type of buttock(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: buttock
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_knee
+        question: 1x (part 1). Rate the severity of the knee(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: knee
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_knee
+        question: 1x (part 2). What type of knee(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: knee
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_lower_leg
+        question: 1y (part 1). Rate the severity of the lower leg(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_leg
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_lower_leg
+        question: 1y (part 2). What type of lower leg(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: lower_leg
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_ankle
+        question: 1z (part 1). Rate the severity of the ankle(s) pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: ankle
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_ankle
+        question: 1z (part 2). What type of ankle(s) pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: ankle
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: 1_sub_2_feet
+        question: 1aa (part 1). Rate the severity of the feet pain.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: feet
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 1_sub_3_feet
+        question: 1aa (part 2). What type of feet pain are you experiencing?
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 1_sub_1
+                operator: INCLUDES
+                value: feet
+        options:
+          - value: throbbing
+            text: Throbbing
+          - value: shootingue
+            text: Shooting
+          - value: stabbing
+            text: Stabbing
+          - value: sharp
+            text: Sharp
+          - value: cramping
+            text: Cramping
+          - value: gnawing
+            text: Gnawing
+          - value: hot-burning
+            text: Hot-burning
+          - value: aching
+            text: Aching
+          - value: heavy
+            text: Heavy
+          - value: tender
+            text: Tender
+          - value: splitting
+            text: Splitting
+          - value: tiring_exhausting
+            text: Tiring-exhausting
+          - value: sickening
+            text: Sickening
+          - value: fearful
+            text: Fearful
+          - value: punishing_cruel
+            text: Punishing-cruel
+          - value: pinching
+            text: Pinching
+          - value: tugging
+            text: Tugging
+          - value: dull
+            text: Dull
+          - value: radiating
+            text: Radiating
+          - value: piercing
+            text: Piercing
+      - key: '2'
+        question: 2. Have you experienced any digestive/urinary symptoms today?
+        type: SINGLE_CHOICE
+        options:
+          - value: 'yes'
+            text: 'Yes'
+            score: 1
+          - value: 'no'
+            text: 'No'
+            score: 0
+      - key: 2_sub_1
+        question: 2a. What have you experienced?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: '2'
+                operator: =
+                value: 'yes'
+        options:
+          - value: heartburn
+            text: Heartburn
+          - value: reflux
+            text: Reflux
+          - value: nausea
+            text: Nausea
+          - value: vomiting
+            text: Vomiting
+          - value: indigestion
+            text: Indigestion
+          - value: difficulty_swallowing
+            text: Difficulty swallowing
+          - value: upset_stomach
+            text: Upset stomach
+          - value: belly_pain
+            text: Belly pain
+          - value: bloating
+            text: Bloating
+          - value: gas
+            text: Gas
+          - value: endo_belly
+            text: Endo belly
+          - value: diarrhea
+            text: Loose stools/diarrhea
+          - value: painful_bowel_movement
+            text: Painful bowel movement
+          - value: blood_in_stool
+            text: Blood in stool
+          - value: unable_to_urinate
+            text: Unable to urinate
+          - value: painful_urination
+            text: Painful urination
+          - value: frequent_urination
+            text: Frequent urination
+      - key: 2_sub_2_heartburn
+        question: 2b. Rate the severity of the heartburn symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: heartburn
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_reflux
+        question: 2c. Rate the severity of the reflux symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: reflux
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_nausea
+        question: 2d. Rate the severity of the nausea symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: nausea
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_vomiting
+        question: 2e. Rate the severity of the vomiting symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: vomiting
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_indigestion
+        question: 2f. Rate the severity of the indigestion symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: indigestion
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_difficulty_swallowing
+        question: 2g. Rate the severity of the difficulty swallowing symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: difficulty_swallowing
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_upset_stomach
+        question: 2h. Rate the severity of the upset stomach symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: upset_stomach
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_belly_pain
+        question: 2i. Rate the severity of the belly pain symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: belly_pain
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_bloating
+        question: 2j. Rate the severity of the bloating symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: bloating
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_gas
+        question: 2k. Rate the severity of the gas symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: gas
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_endo_belly
+        question: 2l. Rate the severity of the endo belly symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: endo_belly
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_diarrhea
+        question: 2m. Rate the severity of the loose stools/diarrhea symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: diarrhea
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_painful_bowel_movement
+        question: 2n. Rate the severity of the painful bowel movement symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: painful_bowel_movement
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_blood_in_stool
+        question: 2o. Rate the severity of the blood in stool symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: blood_in_stool
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_unable_to_urinate
+        question: 2p. Rate the severity of the unable to urinate symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: unable_to_urinate
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_painful_urination
+        question: 2q. Rate the severity of the painful urination symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: painful_urination
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 2_sub_2_frequent_urination
+        question: 2r. Rate the severity of the frequent urination symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 2_sub_1
+                operator: INCLUDES
+                value: frequent_urination
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: '3'
+        question: 3. Have you experienced any other symptoms today?
+        type: SINGLE_CHOICE
+        options:
+          - value: 'yes'
+            text: 'Yes'
+            score: 1
+          - value: 'no'
+            text: 'No'
+            score: 0
+      - key: 3_sub_1
+        question: 3a. What are you experiencing?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: '3'
+                operator: =
+                value: 'yes'
+        options:
+          - value: fatigue
+            text: Fatigue
+          - value: headache
+            text: Headache
+          - value: hot_flashes
+            text: Hot flashes
+          - value: fever
+            text: Fever
+          - value: touch_sensitivity
+            text: 'Touch sensitivity (e.g., intolerance to clothing)'
+          - value: itching
+            text: Itching
+          - value: sweating
+            text: Sweating
+          - value: physical_numbness
+            text: Physical numbness
+          - value: jitters
+            text: Jitters
+      - key: 3_sub_2_fatigue
+        question: 3b. Rate the severity of the fatigue symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: fatigue
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_headache
+        question: 3c. Rate the severity of the headache symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: headache
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_hot_flashes
+        question: 3d. Rate the severity of the hot flashes symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: hot_flashes
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_fever
+        question: 3e. Rate the severity of the fever symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: fever
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_touch_sensitivity
+        question: >-
+          3f. Rate the severity of the touch sensitivity (e.g., intolerance to
+          clothing) symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: touch_sensitivity
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_itchy
+        question: 3g. Rate the severity of the itchy symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: itchy
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_sweaty
+        question: 3h. Rate the severity of the sweaty symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: sweaty
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_physical_numbness
+        question: 3i. Rate the severity of the physical numbness symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: physical_numbness
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 3_sub_2_jittery
+        question: 3j. Rate the severity of the jittery symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: 3_sub_1
+                operator: INCLUDES
+                value: jittery
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+  - type: survey
+    key: menstrual_health
+    title: Menstrual Health
+    description: Track your period
+    questions:
+      - key: '4'
+        question: 4. Do you have your period today?
+        type: YESNO_CHOICE
+      - key: 4_sub_1
+        question: 4a. How heavy is the flow?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '4'
+                operator: =
+                value: 'yes'
+        options:
+          - value: spotting
+            text: Spotting
+          - value: light_flow
+            text: Light flow
+          - value: medium_flow
+            text: Medium flow
+          - value: heavy_flow
+            text: Heavy flow
+      - key: 4_sub_2
+        question: 4b. Are you experiencing any period related symptoms?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '4'
+                operator: =
+                value: 'yes'
+        options:
+          - value: dysmenorrhea
+            text: Dysmenorrhea (painful menstruation)
+          - value: bloating
+            text: Bloating
+          - value: cramps
+            text: Cramps
+          - value: breast_tenderness
+            text: Breast tenderness
+          - value: back_pain
+            text: Back pain
+          - value: hot_flashes
+            text: Hot flashes
+          - value: diarrhea
+            text: Diarrhea
+          - value: constipation
+            text: Constipation
+          - value: blood_clots
+            text: Blood clots
+      - key: 4_sub_3
+        question: 4c. Rate the severity of the symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: dysmenorrhea
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: bloating
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: cramps
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: breast_tenderness
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: back_pain
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: hot_flashes
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: diarrhea
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: constipation
+              - section: menstrual_health
+                question: 4_sub_2
+                operator: INCLUDES
+                value: blood_clots
+        options:
+          - value: none
+            text: None
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+          - value: very_severe
+            text: Very severe
+      - key: 9_sub_1_alt
+        question: >-
+          9a. Are you experiencing any bleeding or spotting outside of your
+          normal menstrual period (breakthrough bleeding)?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '4'
+                operator: =
+                value: 'no'
+        options:
+          - value: 'no'
+            text: 'No'
+          - value: spotting
+            text: Yes - spotting
+          - value: bleeding
+            text: Yes - bleeding
+  - type: survey
+    key: mood
+    title: Your Mood
+    description: How was your mood today?
+    questions:
+      - key: '5'
+        question: 5. Have you felt…?
+        description: Select all those that apply.
+        type: MULTIPLE_CHOICE
+        options:
+          - value: fearful
+            text: Fearful
+          - value: nervous
+            text: Nervous
+          - value: worried
+            text: Worried
+          - value: overwhelmed
+            text: Overwhelmed
+          - value: uneasy
+            text: Uneasy
+          - value: helpless
+            text: Helpless
+          - value: depressed
+            text: Depressed
+          - value: hopeless
+            text: Hopeless
+          - value: sad
+            text: Sad
+          - value: lonely
+            text: Lonely
+          - value: isolated
+            text: Isolated
+          - value: restless
+            text: Restless
+          - value: angry
+            text: Angry
+          - value: frustrated
+            text: Frustrated
+          - value: stressed
+            text: Stressed
+          - value: happy
+            text: Happy
+          - value: calm_relaxed
+            text: Calm/relaxed
+          - value: excited
+            text: Excited
+          - value: hopeful
+            text: Hopeful
+          - value: determined
+            text: Determined
+          - value: confident
+            text: Confident
+          - value: strong
+            text: Strong
+          - value: productive
+            text: Productive
+          - value: social
+            text: Social
+          - value: active
+            text: Active
+          - value: attentive
+            text: Attentive
+          - value: interested
+            text: Interested
+      - key: 5_sub_1_fearful
+        question: 2a. How intense is the fearful feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: fearful
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_nervous
+        question: 2b. How intense is the nervous feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: nervous
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_worried
+        question: 2c. How intense is the worried feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: worried
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_overwhelmed
+        question: 2d. How intense is the overwhelmed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: overwhelmed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_uneasy
+        question: 2e. How intense is the uneasy feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: uneasy
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_helpless
+        question: 2f. How intense is the helpless feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: helpless
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_depressed
+        question: 2g. How intense is the depressed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: depressed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_hopeless
+        question: 2h. How intense is the hopeless feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: hopeless
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_sad
+        question: 2i. How intense is the sad feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: sad
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_lonely
+        question: 2j. How intense is the lonely feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: lonely
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_isolated
+        question: 2k. How intense is the isolated feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: isolated
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_restless
+        question: 2l. How intense is the restless feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: restless
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_angry
+        question: 2m. How intense is the angry feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: angry
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_frustrated
+        question: 2n. How intense is the frustrated feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: frustrated
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_stressed
+        question: 2o. How intense is the stressed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: stressed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_happy
+        question: 2p. How intense is the happy feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: happy
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_calm_relaxed
+        question: 2q. How intense is the calm/relaxed feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: calm_relaxed
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_excited
+        question: 2r. How intense is the excited feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: excited
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_hopeful
+        question: 2s. How intense is the hopeful feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: hopeful
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_determined
+        question: 2t. How intense is the determined feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: determined
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_confident
+        question: 2u. How intense is the confident feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: confident
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_strong
+        question: 2v. How intense is the strong feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: strong
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_productive
+        question: 2w. How intense is the productive feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: productive
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_social
+        question: 2x. How intense is the social feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: social
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_active
+        question: 2y. How intense is the active feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: active
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_attentive
+        question: 2z. How intense is the attentive feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: attentive
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+      - key: 5_sub_1_interested
+        question: 2aa. How intense is the interested feeling?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: mood
+                question: '5'
+                operator: INCLUDES
+                value: interested
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+  - type: survey
+    key: sleep
+    title: Sleep Tracking
+    description: ''
+    questions:
+      - key: '6'
+        question: 6. How would you describe your sleep last night?
+        type: SINGLE_CHOICE
+        options:
+          - value: refreshing
+            text: Refreshing
+          - value: difficulty_falling_asleep
+            text: Difficulty falling asleep
+          - value: difficulty_staying_asleep
+            text: Difficulty staying asleep
+      - key: '7'
+        question: 7. Last night my sleep quality was…
+        type: SINGLE_CHOICE
+        options:
+          - value: very_good
+            text: Very Good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+          - value: very_poor
+            text: Very poor
+  - type: survey
+    key: daily_activities
+    title: Activities of Daily Living
+    description: ''
+    questions:
+      - key: '8'
+        question: 8. Were any of your daily activities impacted by your health today?
+        description: 'e.g. Self-care, running errands, working, going up/down stairs, etc.'
+        type: YESNO_CHOICE
+      - key: 8_sub_1
+        question: >-
+          8a. Which activities were difficult to do due to your pain or other
+          symptoms?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: '8'
+                operator: =
+                value: 'yes'
+        options:
+          - value: self_care
+            text: 'Self-care (e.g., washing, dressing, use toilet)'
+          - value: working_studying
+            text: Working or studying
+          - value: chores
+            text: 'Chores (e.g., cleaning, preparing food)'
+          - value: errands
+            text: 'Running errands (e.g., shopping)'
+          - value: walking_about
+            text: Walking about
+          - value: stairs
+            text: Going up/down stairs
+          - value: other_physical_mobility
+            text: >-
+              Other physical mobility (e.g., kneeling, jumping, stretching,
+              sitting down)
+            inlineQuestion:
+              key: 8_sub_1_other_physical_mobility_description
+              question: Please specify...
+              type: TEXTAREA
+          - value: sleep
+            text: Sleep
+          - value: intercourse
+            text: Intercourse
+          - value: cognition
+            text: 'Cognition (e.g., focusing, thinking, planning)'
+          - value: physical_exercise
+            text: Physical exercise
+          - value: commuting
+            text: 'Commuting (e.g., taking public transportation, driving)'
+          - value: social_activities
+            text: >-
+              Social roles and activities (e.g., family, friends, leisure
+              activities)
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: 8_sub_1_other_description
+              question: Please specify...
+              type: TEXTAREA
+      - key: 8_sub_2_self_care
+        question: >-
+          8b. How severe was the effect on self-care (e.g., washing, dressing,
+          use toilet).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: self_care
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_working_studying
+        question: 8c. How severe was the effect on working or studying.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: working_studying
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_chores
+        question: >-
+          8d. How severe was the effect on chores (e.g., cleaning, preparing
+          food).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: chores
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_errands
+        question: '8e. How severe was the effect on running errands (e.g., shopping).'
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: errands
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_walking_about
+        question: 8f. How severe was the effect on walking about.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: walking_about
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_stairs
+        question: 8g. How severe was the effect on going up/down stairs.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: stairs
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_other_physical_mobility
+        question: >-
+          8h. How severe was the effect on other physical mobility (e.g.,
+          kneeling, jumping, stretching, sitting down).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: other_physical_mobility
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_sleep
+        question: 8i. How severe was the effect on sleep.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: sleep
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_intercourse
+        question: 8j. How severe was the effect on intercourse.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: intercourse
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_cognition
+        question: >-
+          8k. How severe was the effect on cognition (e.g., focusing, thinking,
+          planning).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: cognition
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_physical_exercise
+        question: 8l. How severe was the effect on physical exercise.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: physical_exercise
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_commuting
+        question: >-
+          8m. How severe was the effect on commuting (e.g., taking public
+          transportation, driving).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: commuting
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_social_activities
+        question: >-
+          8n. How severe was the effect on social roles and activities (e.g.,
+          family, friends, leisure activities).
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: social_activities
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: 8_sub_2_other
+        question: 8o. How severe was the effect on other.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: daily_activities
+                question: 8_sub_1
+                operator: INCLUDES
+                value: other
+        options:
+          - value: little_difficulty
+            text: Little difficulty
+          - value: some_difficulty
+            text: Some difficulty
+          - value: severe_difficulty
+            text: Severe difficulty
+          - value: unable_to_do
+            text: Unable to do
+      - key: '9'
+        question: 9. How was your day?
+        type: SINGLE_CHOICE
+        options:
+          - value: great
+            text: Great
+          - value: good
+            text: Good
+          - value: managable
+            text: Managable
+          - value: bad
+            text: Bad
+          - value: unbearable
+            text: Unbearable
+      - key: '10'
+        question: '10. Overall, your health today is:'
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+          - value: very_good
+            text: Very Good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+      - key: '11'
+        question: '11. Your quality of day has been:'
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+          - value: very_good
+            text: Very Good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+  - type: survey
+    key: physical_activity_exercise
+    title: Physical Activity and Exercise
+    description: ''
+    questions:
+      - key: '12'
+        question: >-
+          12. Did you engage in exercise (i.e., leisure-time physical activity
+          outside of daily activities including commuting and housework) today?
+        type: YESNO_CHOICE
+      - key: 12_sub_1
+        question: 12a. Which activities did you engage in?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: '12'
+                operator: =
+                value: 'yes'
+        options:
+          - value: cardiovascular
+            text: 'Cardiovascular (e.g., walking, jogging, swimming, etc)'
+          - value: body_weight_strength_training
+            text: Body weight strength training (including calisthenics)
+          - value: weights_strength_training
+            text: 'Strength training with weights (e.g., lifting)'
+          - value: stretching
+            text: Stretching
+          - value: yoga
+            text: Yoga
+          - value: pilates_barre
+            text: Pilates or barre fitness
+          - value: dance
+            text: 'Dance (e.g., ballet, modern, ballroom)'
+          - value: gym_fitness
+            text: 'Gym fitness (e.g., steps, aerobics; TRX)'
+          - value: team_sports
+            text: 'Team sports (e.g., basketball; soccer)'
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: 12_sub_1_other_description
+              question: Please specify...
+              type: TEXTAREA
+      - key: 12_sub_2_cardiovascular
+        question: >-
+          12b (part 1). How long was your cardiovascular (e.g., walking,
+          jogging, swimming, etc) exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: cardiovascular
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_cardiovascular
+        question: >-
+          12b (part 2). How intense was your cardiovascular (e.g., walking,
+          jogging, swimming, etc) exercise session overall (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: cardiovascular
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_cardiovascular
+        question: >-
+          12b (part 3). Did cardiovascular (e.g., walking, jogging, swimming,
+          etc) exercise have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: cardiovascular
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_body_weight_strength_training
+        question: >-
+          12c (part 1). How long was your body weight strength training
+          (including calisthenics) exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: body_weight_strength_training
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_body_weight_strength_training
+        question: >-
+          12c (part 2). How intense was your body weight strength training
+          (including calisthenics) exercise session overall (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: body_weight_strength_training
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_body_weight_strength_training
+        question: >-
+          12c (part 3). Did body weight strength training (including
+          calisthenics) exercise have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: body_weight_strength_training
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_weights_strength_training
+        question: >-
+          12d (part 1). How long was your strength training with weights (e.g.,
+          lifting) exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: weights_strength_training
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_weights_strength_training
+        question: >-
+          12d (part 2). How intense was your strength training with weights
+          (e.g., lifting) exercise session overall (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: weights_strength_training
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_weights_strength_training
+        question: >-
+          12d (part 3). Did strength training with weights (e.g., lifting)
+          exercise have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: weights_strength_training
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_stretching
+        question: 12e (part 1). How long was your stretching exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: stretching
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_stretching
+        question: >-
+          12e (part 2). How intense was your stretching exercise session overall
+          (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: stretching
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_stretching
+        question: >-
+          12e (part 3). Did stretching exercise have any effect on your symptoms
+          today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: stretching
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_yoga
+        question: 12f (part 1). How long was your yoga exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: yoga
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_yoga
+        question: >-
+          12f (part 2). How intense was your yoga exercise session overall
+          (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: yoga
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_yoga
+        question: >-
+          12f (part 3). Did yoga exercise have any effect on your symptoms
+          today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: yoga
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_pilates_barre
+        question: >-
+          12g (part 1). How long was your pilates or barre fitness exercise
+          session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: pilates_barre
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_pilates_barre
+        question: >-
+          12g (part 2). How intense was your pilates or barre fitness exercise
+          session overall (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: pilates_barre
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_pilates_barre
+        question: >-
+          12g (part 3). Did pilates or barre fitness exercise have any effect on
+          your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: pilates_barre
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_dance
+        question: >-
+          12h (part 1). How long was your dance (e.g., ballet, modern, ballroom)
+          exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: dance
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_dance
+        question: >-
+          12h (part 2). How intense was your dance (e.g., ballet, modern,
+          ballroom) exercise session overall (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: dance
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_dance
+        question: >-
+          12h (part 3). Did dance (e.g., ballet, modern, ballroom) exercise have
+          any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: dance
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_gym_fitness
+        question: >-
+          12i (part 1). How long was your gym fitness (e.g., steps, aerobics;
+          trx) exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: gym_fitness
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_gym_fitness
+        question: >-
+          12i (part 2). How intense was your gym fitness (e.g., steps, aerobics;
+          trx) exercise session overall (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: gym_fitness
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_gym_fitness
+        question: >-
+          12i (part 3). Did gym fitness (e.g., steps, aerobics; trx) exercise
+          have any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: gym_fitness
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_team_sports
+        question: >-
+          12j (part 1). How long was your team sports (e.g., basketball; soccer)
+          exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: team_sports
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_team_sports
+        question: >-
+          12j (part 2). How intense was your team sports (e.g., basketball;
+          soccer) exercise session overall (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: team_sports
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_team_sports
+        question: >-
+          12j (part 3). Did team sports (e.g., basketball; soccer) exercise have
+          any effect on your symptoms today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: team_sports
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 12_sub_2_other
+        question: 12k (part 1). How long was your other exercise session?
+        type: DURATION
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: other
+        hours: true
+        minutes: true
+        hoursPlaceholder: Hours
+        minutesPlaceholder: Or minutes
+      - key: 12_sub_3_other
+        question: >-
+          12k (part 2). How intense was your other exercise session overall
+          (i.e., perceived
+                exertion)?
+        description: >-
+          A rating of 6 indicates no or minimal exertion, and 20 indicates
+          maximum possible effort. For example, a rating of 11 would correspond
+          to light intensity activities, and 15 would correspond to hard
+          intensity activities.
+        type: SLIDER
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: other
+        min: 6
+        max: 20
+        step: 1
+      - key: 12_sub_4_other
+        question: >-
+          12k (part 3). Did other exercise have any effect on your symptoms
+          today?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_activity_exercise
+                question: 12_sub_1
+                operator: INCLUDES
+                value: other
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+  - type: survey
+    key: health_symptom_management
+    title: Health and Symptom Self-Management
+    description: ''
+    questions:
+      - key: '13'
+        question: >-
+          13. Did you do  any of the following to manage your health or symptoms
+          today?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        options:
+          - value: heat_therapy
+            text: 'Heat therapy (e.g., heat pack)'
+          - value: cold_therapy
+            text: 'Cold therapy (e.g., ice pack)'
+          - value: tens
+            text: TENS (transcutaneous electrical nerve stimulation)
+          - value: psychotherapy
+            text: 'Psychotherapy (e.g., talk therapy)'
+          - value: acupuncture_massage
+            text: Acupuncture or massage
+          - value: alcohol
+            text: Alcohol
+          - value: resting
+            text: Resting
+          - value: sleeping
+            text: Sleeping
+          - value: meditation_breathing
+            text: Meditation or breathing exercises
+          - value: stretching
+            text: Stretching
+          - value: pelvic_floor_therapy
+            text: Pelvic floor therapy
+          - value: physical_therapy
+            text: Physical therapy
+          - value: cannabinoids
+            text: 'Medical marijuana, CBD oil'
+          - value: herbal_supplements
+            text: Herbal supplements
+            inlineQuestion:
+              key: 13_herbal_supplements_description
+              question: Please specify...
+              type: TEXTAREA
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: 13_other_description
+              question: Please specify...
+              type: TEXTAREA
+      - key: 13_sub_1_heat_therapy
+        question: >-
+          13a. What was the effect of heat therapy (e.g., heat pack) on your
+          health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: heat_therapy
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_cold_therapy
+        question: >-
+          13b. What was the effect of cold therapy (e.g., ice pack) on your
+          health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: cold_therapy
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_tens
+        question: >-
+          13c. What was the effect of tens (transcutaneous electrical nerve
+          stimulation) on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: tens
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_psychotherapy
+        question: >-
+          13d. What was the effect of psychotherapy (e.g., talk therapy) on your
+          health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: psychotherapy
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_acupuncture_massage
+        question: >-
+          13e. What was the effect of acupuncture or massage on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: acupuncture_massage
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_alcohol
+        question: 13f. What was the effect of alcohol on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: alcohol
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_resting
+        question: 13g. What was the effect of resting on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: resting
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_sleeping
+        question: 13h. What was the effect of sleeping on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: sleeping
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_meditation_breathing
+        question: >-
+          13i. What was the effect of meditation or breathing exercises on your
+          health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: meditation_breathing
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_stretching
+        question: 13j. What was the effect of stretching on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: stretching
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_pelvic_floor_therapy
+        question: >-
+          13k. What was the effect of pelvic floor therapy on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: pelvic_floor_therapy
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_physical_therapy
+        question: >-
+          13l. What was the effect of physical therapy on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: physical_therapy
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_cannabinoids
+        question: >-
+          13m. What was the effect of medical marijuana, cbd oil on your health
+          or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: cannabinoids
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_herbal_supplements
+        question: >-
+          13n. What was the effect of herbal supplements on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: herbal_supplements
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: 13_sub_1_other
+        question: 13o. What was the effect of other on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '13'
+                operator: INCLUDES
+                value: other
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect
+          - value: made_worse
+            text: Made symptoms worse
+          - value: unsure
+            text: Unsure
+      - key: '14'
+        question: 14. Did you take any medications today?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        options:
+          - value: prescription_pain_medication
+            text: 'Prescription pain medication (e.g., tramadol; percocet)'
+          - value: otc_pain_medication
+            text: >-
+              Non-prescription/OTC pain medication (NSAIDs; acetaminophen,
+              aspirin)
+          - value: antidepressant
+            text: Antidepressant
+          - value: anxiolytic
+            text: Anxiolytic (anti-anxiety)
+          - value: antimuscarinic
+            text: Antimuscarinic/anti-spasmodic
+          - value: antiemetic
+            text: Antiemetic (nausea)
+          - value: h2_blockers
+            text: 'H2 Blockers (e.g., famotidine, Ranitidine)'
+          - value: ppis
+            text: 'Proton Pump Inhibitors (PPIs) (e.g., Omeprazole, Esomeprazole)'
+          - value: laxatives
+            text: Laxatives
+          - value: antidiarrheal
+            text: Antidiarrheal
+          - value: ibs
+            text: Irritable bowel syndrome medication
+          - value: ibd
+            text: >-
+              Inflammatory bowel disease medication (including ulcerative
+              colitis, crohn's disease)
+          - value: gnrh_analogs
+            text: 'GnRH analogs (e.g., Elagolix, Leuprolide, Nafarelin)'
+          - value: aromatase_inhibitors
+            text: Aromatase Inhibitors
+          - value: progestins
+            text: 'Progestins (e.g., Danazol)'
+          - value: other_hormones
+            text: Other hormone medication
+            inlineQuestion:
+              key: 14_other_hormones_description
+              question: Please specify...
+              type: TEXTAREA
+          - value: oral_contraceptive
+            text: Oral contraceptive pill
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: 14_other_description
+              question: Please specify...
+              type: TEXTAREA
+      - key: 14_sub_1_prescription_pain_medication
+        question: >-
+          14b. What was the effect of prescription pain medication (e.g.,
+          tramadol; percocet) on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: prescription_pain_medication
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_otc_pain_medication
+        question: >-
+          14c. What was the effect of non-prescription/otc pain medication
+          (nsaids; acetaminophen, aspirin) on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: otc_pain_medication
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_antidepressant
+        question: 14d. What was the effect of antidepressant on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: antidepressant
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_anxiolytic
+        question: >-
+          14e. What was the effect of anxiolytic (anti-anxiety) on your health
+          or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: anxiolytic
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_antimuscarinic
+        question: >-
+          14f. What was the effect of antimuscarinic/anti-spasmodic on your
+          health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: antimuscarinic
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_antiemetic
+        question: >-
+          14g. What was the effect of antiemetic (nausea) on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: antiemetic
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_h2_blockers
+        question: >-
+          14h. What was the effect of h2 blockers (e.g., famotidine, ranitidine)
+          on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: h2_blockers
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_ppis
+        question: >-
+          14i. What was the effect of proton pump inhibitors (ppis) (e.g.,
+          omeprazole, esomeprazole) on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: ppis
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_laxatives
+        question: 14j. What was the effect of laxatives on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: laxatives
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_antidiarrheal
+        question: 14k. What was the effect of antidiarrheal on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: antidiarrheal
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_ibs
+        question: >-
+          14l. What was the effect of irritable bowel syndrome medication on
+          your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: ibs
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_ibd
+        question: >-
+          14m. What was the effect of inflammatory bowel disease medication
+          (including ulcerative colitis, crohn's disease) on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: ibd
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_gnrh_analogs
+        question: >-
+          14n. What was the effect of gnrh analogs (e.g., elagolix, leuprolide,
+          nafarelin) on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: gnrh_analogs
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_aromatase_inhibitors
+        question: >-
+          14o. What was the effect of aromatase inhibitors on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: aromatase_inhibitors
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_progestins
+        question: >-
+          14p. What was the effect of progestins (e.g., danazol) on your health
+          or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: progestins
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_other_hormones
+        question: >-
+          14q. What was the effect of other hormone medication on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: other_hormones
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_oral_contraceptive
+        question: >-
+          14r. What was the effect of oral contraceptive pill on your health or
+          symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: oral_contraceptive
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
+      - key: 14_sub_1_other
+        question: 14s. What was the effect of other on your health or symptoms?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptom_management
+                question: '14'
+                operator: INCLUDES
+                value: other
+        options:
+          - value: helped
+            text: Helped
+          - value: no_effect
+            text: No effect/didn't help
+          - value: worsened_symptoms
+            text: Worsened symptoms
+          - value: unsure
+            text: Unsure
