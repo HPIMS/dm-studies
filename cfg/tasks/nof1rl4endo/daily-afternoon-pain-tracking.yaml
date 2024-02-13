@@ -14,10 +14,10 @@ sections:
  - type: survey
    key: afternoon_pain
    title: ""
-   description: Track your pain symptoms.
+   description: ""
    questions:
     - key: 1b_pain
-      question: Have you experienced any pain since you last tracked your pain symptoms?
+      question: [["Text","Have you experienced any pain "],["Underline",["Bold","since you last tracked your symptoms"]],["Text","?"]]
       type: YESNO_CHOICE
     - key: 1b_pain_location
       question: [["Text","On the image below, "],["Underline",["Bold","select all"]],["Text"," areas of the body where you have felt pain "],["Underline",["Bold","since you last tracked your pain symptoms"]], ["Text", "."]]
