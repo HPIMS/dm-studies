@@ -11,10 +11,10 @@ sections:
  - type: survey
    key: morning_pain
    title: ""
-   description: Track your pain symptoms.
+   description: ""
    questions:
     - key: 1a_pain
-      question: Have you experienced any pain since you woke up today?
+      question: [["Text","Have you experienced any pain "],["Underline",["Bold","since you woke up today"]],["Text","?"]]
       type: YESNO_CHOICE
     - key: 1a_pain_location
       question: [["Text","On the image below, "],["Underline",["Bold","select all"]],["Text"," areas of the body where you have felt pain "],["Underline",["Bold","since you woke up today"]], ["Text", "."]]
