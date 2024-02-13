@@ -46,20 +46,71 @@ timeResponsibility:
   timePeriod: daily
 
 tasks:
-  - key: daily-morning-pain-tracking # TODO: MISSING SCHEDULE
+  - key: daily-morning-pain-tracking
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::consent
+                section: Options
+                question: "0"
+                operator: <>
+                value: accept
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::begin-substudy
+                section: responses
+                question: begin
+                operator: =
+                value: yes
     rank: 10
   
-  - key: daily-afternoon-pain-tracking # TODO: MISSING SCHEDULE
+  - key: daily-afternoon-pain-tracking
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: nof1rl4endo::show-daily-afternoon-pain-tracking
+            args: {}
     rank: 10
   
-  - key: daily-evening-pain-tracking # TODO: MISSING SCHEDULE
+  - key: daily-evening-pain-tracking
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: nof1rl4endo::show-daily-evening-pain-tracking
+            args: {}
     rank: 10
   
-  - key: other-momentary-and-daily-tracking  # TODO: MISSING SCHEDULE
+  - key: other-momentary-and-daily-tracking
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::consent
+                section: Options
+                question: "0"
+                operator: <>
+                value: accept
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::begin-substudy
+                section: responses
+                question: begin
+                operator: =
+                value: yes
     rank: 20
-  
-  - key: painmap # TODO: MISSING SCHEDULE
-    rank: 10 # TODO: RANK
 
   - key: demographics
     triggers:
@@ -164,9 +215,51 @@ tasks:
     rank: 130
 
   - key: par-q
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::consent
+                section: Options
+                question: "0"
+                operator: <>
+                value: accept
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::begin-substudy
+                section: responses
+                question: begin
+                operator: =
+                value: yes
     rank: 140
 
   - key: werf-ephect
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::consent
+                section: Options
+                question: "0"
+                operator: <>
+                value: accept
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: nof1rl4endo::begin-substudy
+                section: responses
+                question: begin
+                operator: =
+                value: yes
     rank: 150
 
   - key: promis-global-mental-health-2a-v1.2

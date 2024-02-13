@@ -6,14 +6,15 @@ schedule:
 timeRequirements:
   time: 2
   timeUnits: minutes
-name: Momentary and Daily Tracking of Other Symptoms
+name: Daily Check-in
 sections:
  - type: survey
    key: 2a_gi_symptom_intensity
-   title: Tracking Daily GI/urinary related symptoms
+   title: GI/Urinary Symptoms
    questions:
     - key: 2a_gi_symptoms
-      question: "Have you experienced any digestive/urinary symptoms today? What have you experienced? Select all those that apply:"
+      question: "Have you experienced any digestive/urinary symptoms today? What have you experienced?"
+      description: Select all that apply.
       type: MULTIPLE_CHOICE
       options:
         - value: none
@@ -64,10 +65,11 @@ sections:
           text: Severe                
  - type: survey
    key: other_physical_symptoms
-   title: Tracking of Physical symptoms
+   title: Physical Symptoms
    questions:          
    - key: 2b_phyical_symptoms
-     question: "Have you experienced any other symptoms today? What have you experienced? Select all those that apply:" 
+     question: "Have you experienced any other symptoms today? What have you experienced?"
+     description: Select all that apply. 
      type: MULTIPLE_CHOICE
      options:
       - value: none
@@ -102,10 +104,11 @@ sections:
         text: Severe 
  - type: survey
    key: other_psychological_symptoms
-   title: Tracking of Psychological related symptoms
+   title: Psychological Symptoms
    questions:          
    - key: 2c_feeling
-     question: "How was your mood today? Have you felt? Select all those that apply:"
+     question: "How was your mood today? Have you felt?"
+     description: Select all that apply.
      type: MULTIPLE_CHOICE
      options:
       - value: fearful
@@ -171,7 +174,7 @@ sections:
      maxLabel: High
  - type: survey
    key: menstural_symptoms
-   title: Tracking of Menstrual status related symptoms
+   title: Menstrual Symptoms
    questions:           
     - key: 2d_period
       question: Track your period. Do you have your period today?
@@ -246,13 +249,14 @@ sections:
           text: Yes - bleeding
  - type: survey
    key: medications
-   title: Tracking of Medications      
+   title: Medications      
    questions:
     - key: 2e_meds
       question: Did you take any medications today?
       type: YESNO_CHOICE
     - key: 2e_meds_list
-      question: if you have taken medication today,select all that apply. 
+      question: Which medications have you taken today?
+      description: Select all that apply. 
       type: MULTIPLE_CHOICE
       triggers:
         - action:
@@ -312,13 +316,14 @@ sections:
             type: TEXTAREA  
  - type: survey
    key: exercises
-   title: Tracking of Daily Exercises
+   title: Daily Exercises
    questions:
     - key: 2f_exercise
       question: Did you do any physical exercise today other than your recommendation? 
       type: YESNO_CHOICE
     - key: 2f_exercise_list
-      question: if you have done any physical exercise today other than your recommendation today,select all that apply.
+      question: What physical exercises have you done today other than your recommendation?
+      description: Select all that apply.
       type: MULTIPLE_CHOICE
       triggers:
         - action:
@@ -409,7 +414,7 @@ sections:
           text: Unsure  
  - type: survey
    key: physical_function
-   title: Tracking of Daily Physical function
+   title: Physical Function
    questions:
     - key: 2g_impacted_activities
       question: Were your daily activities impacted by your health today? Which activities were difficult to do due to your pain or other symptoms?
@@ -469,7 +474,7 @@ sections:
           text: Unable to do
  - type: survey
    key: excercise_effect
-   title: Tracking of Daily Exercise effect
+   title: Daily Exercise Effect
    questions:  
     - key: 2h_exercise_rec
       question: Did you complete your last exercise recommendation?
@@ -504,4 +509,3 @@ sections:
         text: Afternoon (12-5pm)
       - value: evening
         text: Evening (after 5pm)                                                    
-
