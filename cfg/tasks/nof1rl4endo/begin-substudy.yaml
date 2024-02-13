@@ -1,0 +1,15 @@
+key: begin-substudy
+scorable: false
+schedule:
+  type: PERIOD
+  period: NEVER
+name: Begin Sub-study
+sections:
+ - type: survey
+   key: responses
+   title: ""
+   description:  ""
+   questions:
+    - key: begin
+      question: Since the last time you tracked your pain symptoms today, have you experienced any pain symptoms?
+      type: YESNO_CHOICE

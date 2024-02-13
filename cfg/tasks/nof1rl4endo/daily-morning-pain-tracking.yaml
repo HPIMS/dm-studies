@@ -6,88 +6,40 @@ schedule:
 timeRequirements:
   time: 2
   timeUnits: minutes
-name: Daily Morning Pain Symptoms
+name: Pain Symptoms
 sections:
  - type: survey
    key: morning_pain
-   title: Daily Morning Pain Symptoms
-   description: Track your Pain symptoms in the Morning
+   title: ""
+   description: Track your pain symptoms.
    questions:
     - key: 1a_pain
       question: Have you experienced any pain since you woke up today?
       type: YESNO_CHOICE
     - key: 1a_pain_location
-      question: Where is the pain? Select all body areas where you felt pain since you woke up today.
-      type: MULTIPLE_CHOICE
-      options:
-      - value: no_pain
-        text: No Pain
-      - value: face
-        text: Face
-      - value: head
-        text: Head
-      - value: jaw
-        text: Jaw
-      - value: neck
-        text: Neck
-      - value: shoulder
-        text: Shoulder
-      - value: upper_back
-        text: Upper back
-      - value: middle_back
-        text: Middle back
-      - value: lower_back
-        text: Lower back
-      - value: chest_breast
-        text: Chest/breast
-      - value: upper_arm
-        text: Upper arm(s)
-      - value: elbow
-        text: Elbow(s)
-      - value: lower_arm
-        text: Lower arm(s)
-      - value: wrist_hand
-        text: Wrist/hand(s)
-      - value: upper_abdomen
-        text: Upper abdomen
-      - value: lower_abdomen
-        text: Lower abdomen
-      - value: vagina
-        text: Vagina
-      - value: pelvis
-        text: Pelvis
-      - value: rectum
-        text: Rectum
-      - value: hip
-        text: Hip(s)
-      - value: groin
-        text: Groin(s)
-      - value: thighs_upper_leg
-        text: Thighs/upper leg(s)
-      - value: buttock
-        text: Buttock(s)
-      - value: knee
-        text: Knee(s)
-      - value: lower_leg
-        text: Lower leg(s)
-      - value: ankle
-        text: Ankle(s)
-      - value: feet
-        text: Feet
-    - key: 1a_pain_intensity
-      question: How severe is/was the pain?
-      type: SINGLE_CHOICE
-      options:
-      - value: mild
-        text: Mild
-      - value: moderate
-        text: Moderate
-      - value: severe
-        text: Severe
+      question: [["Text","On the image below, "],["Underline",["Bold","select all"]],["Text"," areas of the body where you have felt pain "],["Underline",["Bold","since you woke up today"]], ["Text", "."]]
+      type: BODY_PAIN_MAP
+      diagramType: female
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: morning_pain
+              question: 1a_pain
+              operator: =
+              value: 'head'      
     - key: 1a_pain_type
       question: Describe the pain
       type: MULTIPLE_CHOICE
       description: Select all that apply.
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: morning_pain
+              question: 1a_pain
+              operator: =
+              value: 'yes'  
       options:
       - value: throbbing
         text: Throbbing
