@@ -30,7 +30,7 @@ sections:
             - section: morning_pain
               question: 1c_pain
               operator: =
-              value: 'head'      
+              value: 'yes'     
     - key: 1c_pain_type
       question: Describe the pain
       type: MULTIPLE_CHOICE
