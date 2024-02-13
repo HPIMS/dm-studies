@@ -27,7 +27,7 @@ sections:
         - action:
             type: SHOW
           condition:
-            - section: morning_pain
+            - section: evening_pain
               question: 1c_pain
               operator: =
               value: 'yes'     
@@ -39,7 +39,7 @@ sections:
         - action:
             type: SHOW
           condition:
-            - section: morning_pain
+            - section: evening_pain
               question: 1c_pain
               operator: =
               value: 'yes'  
