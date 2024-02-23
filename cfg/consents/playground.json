@@ -29,7 +29,7 @@
     }
   ],
   "verifyEligibility": {
-    "scope": ["Patient.read"],
+    "scope": ["Patient.Read"],
     "verify": ["SINAI_PATIENT", "MIN_AGE_18"]
   },
   "intro": [
