@@ -16,7 +16,8 @@ const showMessage = false;
 const messageType = messageTypes.error;
 
 // Set message text
-const messageText = "";
+const messageText =
+  "The ehive platform is experiencing some outages. If you have any issues please try again in 24 to 48 hours.";
 
 /**
  * CONFIGURATION END
