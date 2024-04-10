@@ -16,8 +16,7 @@ const showMessage = false;
 const messageType = messageTypes.error;
 
 // Set message text
-const messageText =
-  "";
+const messageText = "";
 
 /**
  * CONFIGURATION END
