@@ -29,8 +29,9 @@
     }
   ],
   "verifyEligibility": {
+    "integrationKey": "epic_sinai",
     "scope": ["Patient.Read"],
-    "verify": ["SINAI_PATIENT", "MIN_AGE_18"]
+    "verify": ["MIN_AGE_18"]
   },
   "intro": [
     [
