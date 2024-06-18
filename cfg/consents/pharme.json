@@ -493,7 +493,7 @@
         { "key": "key-2", "text": "Email" },
         { "key": "key-3", "text": "Phone" }
       ],
-      "show": ["0", "=", "accept"],
+      "show": ["key-1", "=", "accept"],
       "required": false
     }
   ],
