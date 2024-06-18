@@ -60,7 +60,7 @@
         { "key": "key-3", "text": "Email" },
         { "key": "key-4", "text": "Phone" }
       ],
-      "show": ["1", "=", "accept"],
+      "show": ["key-2", "=", "accept"],
       "required": false
     }
   ],
