@@ -477,6 +477,7 @@
   ],
   "options": [
     {
+      "key": "key-1",
       "type": "single",
       "title": "Future Contact",
       "summary": "The researchers may wish to use your personal contact information to contact you in the future. Do you give the researchers permission to contact you in the future to request the collection of additional information about you, discuss how your private information, study data and/or samples might be used, or discuss possible participation in another research study?",
@@ -488,7 +489,10 @@
       "type": "grouped",
       "title": "Contact Methods",
       "summary": "Please indicate your preferred method of contact. (Select all that apply)",
-      "items": [{ "text": "Email" }, { "text": "Phone" }],
+      "items": [
+        { "key": "key-2", "text": "Email" },
+        { "key": "key-3", "text": "Phone" }
+      ],
       "show": ["0", "=", "accept"],
       "required": false
     }
