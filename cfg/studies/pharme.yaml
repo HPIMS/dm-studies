@@ -53,6 +53,9 @@ tasks:
       period: ONCE
       gracePeriod: 28 # 4 Weeks
 
+  - key: gse
+    rank: 25
+
   - key: knowledge
     rank: 30
 

@@ -8,7 +8,7 @@ metadata:
   instrument: Subset of self-developed questionnaire by Truong et al., 2020
   version: "1"
   references:
-    - "Truong, T. M., Lipschultz, E., Danahey, K., Schierer, E., Ratain, M. J., & O’Donnell, P. H. (2020). Assessment of Patient Knowledge and Perceptions of Pharmacogenomics Before and After Using a Mock Results Patient Web Portal. Clinical and Translational Science, 13(1), 78–87. https://doi.org/10.1111/cts.12681"
+    - "Truong, T. M., Lipschultz, E., Danahey, K., Schierer, E., Ratain, M. J., & O'Donnell, P. H. (2020). Assessment of Patient Knowledge and Perceptions of Pharmacogenomics Before and After Using a Mock Results Patient Web Portal. Clinical and Translational Science, 13(1), 78–87. https://doi.org/10.1111/cts.12681"
 schedule:
   type: PERIOD
   period: ONCE
@@ -37,13 +37,13 @@ sections:
             text: Genetics
             score: 0
           - value: other_drugs
-            text: Other drugs
+            text: Other medications
             score: 0
           - value: all_of_the_above
             text: All of the above
             score: 1
           - value: i_dont_know
-            text: I don’t know
+            text: I don't know
             score: 0
       - key: '2'
         question: "Your DNA is passed down from:"
@@ -62,7 +62,7 @@ sections:
             text: Neither your mother nor your father
             score: 0
           - value: i_dont_know
-            text: I don’t know
+            text: I don't know
             score: 0
       - key: '3'
         question: "Your DNA contains instructions for:"
@@ -81,14 +81,14 @@ sections:
             text: All of the above
             score: 1
           - value: i_dont_know
-            text: I don’t know
+            text: I don't know
             score: 0
       - key: '4'
-        question: "Pharmacogenetics is the study of:"
+        question: "Pharmacogenomics is the study of:"
         type: SINGLE_CHOICE
         options:
           - value: side_effects
-            text: Drug side effects
+            text: Medication side effects
             score: 0
           - value: medication_response
             text: How your DNA affect your responses to medications
@@ -97,13 +97,13 @@ sections:
             text: How medications can change your DNA
             score: 0
           - value: prescription
-            text: How drugs are prescribed
+            text: How medications are prescribed
             score: 0
           - value: i_dont_know
-            text: I don’t know
+            text: I don't know
             score: 0
       - key: '5'
-        question: "Pharmacogenetic testing can:"
+        question: "Pharmacogenomic testing can:"
         type: SINGLE_CHOICE
         options:
           - value: effective_medication
@@ -119,6 +119,6 @@ sections:
             text: All of the above
             score: 1
           - value: i_dont_know
-            text: I don’t know
+            text: I don't know
             score: 0
 

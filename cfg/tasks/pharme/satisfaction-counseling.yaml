@@ -79,7 +79,7 @@ sections:
             text: Strongly agree
             score: 5
       - key: '4'
-        question: I learned new information about the drugs I am currently taking.
+        question: I learned new information about the medications I am currently taking.
         type: SINGLE_CHOICE
         options:
           - value: strongly_disagree
@@ -98,7 +98,7 @@ sections:
             text: Strongly agree
             score: 5
       - key: '5'
-        question: I learned new information about the drugs I may or may not need to take in the future.
+        question: I learned new information about the medications I may or may not need to take in the future.
         type: SINGLE_CHOICE
         options:
           - value: strongly_disagree

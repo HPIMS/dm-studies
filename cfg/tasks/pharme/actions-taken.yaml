@@ -13,9 +13,6 @@ sections:
     title: ""
     description: "Please select the answer that best represents your response:"
     questions:
-      - key: '1'
-        question: Did you access your PGx results through MyChart?
-        type: YESNO_CHOICE
       - key: '2'
         question: Has your doctor changed your medications based on your PGx test results or discussed plans with you to do so?
         type: YESNO_CHOICE

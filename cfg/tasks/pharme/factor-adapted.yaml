@@ -5,7 +5,7 @@ score:
   args: {}
 metadata:
   author: "Haun et al."
-  instrument: Based on FACToR; adaptions based on Haga et al., 2017 pointed out below; additionally changed "genetic test result" to "PGx test result"
+  instrument: Based on FACToR; adaptions based on Haga et al., 2017 pointed out below; additionally changed "genetic test result" to "PGx test result"; plus 3 self-developed self-efficacy items
   version: "1"
   references:
     - "Li, M., Bennette, C. S., Amendola, L. M., Ragan Hart, M., Heagerty, P., Comstock, B., Tarczy-Hornoch, P., Fullerton, S. M., Regier, D. A., Burke, W., Trinidad, S. B., Jarvik, G. P., Veenstra, D. L., & Patrick, D. L. (2019). The Feelings About genomiC Testing Results (FACToR) Questionnaire: Development and Preliminary Validation. Journal of Genetic Counseling, 28(2), 477–490. https://doi.org/10.1007/s10897-018-0286-9"
@@ -21,7 +21,7 @@ intro:
   description: [
     [
       "BodyLarge",
-      "The following questions ask about how you felt after receiving your pharmacogenetic (PGx) test results."
+      "The following questions ask about how you felt after receiving your pharmacogenomic (PGx) test results."
     ],
     [
       "BodyLarge",
@@ -50,9 +50,71 @@ intro:
     ]
   ]
 name: Feelings About Test Results
-sections: 
+sections:
   - type: survey
     key: group_1
+    title: ""
+    description: "In the past week:"
+    questions:
+      - key: confidence_1
+        question: I feel confident about understanding my PGx results.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: confidence_2
+        question: I feel confident about deciding when to consult a health-care provider regarding medication intake, based on my PGx results.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: confidence_3
+        question: I feel confident about understanding whether I can take medications at standard dose or not, based on my PGx results.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+  - type: survey
+    key: group_2
     title: ""
     description: "In the past week:"
     questions:
@@ -171,7 +233,7 @@ sections:
             text: A great deal
             score: 4
   - type: survey
-    key: group_2
+    key: group_3
     title: ""
     description: "In the past week:"
     questions:
@@ -195,7 +257,7 @@ sections:
             text: A great deal
             score: 4
       - key: factor_8
-        question: How uncertain did you feel about what your PGx test result means for your child(ren) and/or family’s response to medications?
+        question: How uncertain did you feel about what your PGx test result means for your child(ren) and/or family's response to medications?
         type: SINGLE_CHOICE
         options:
           - value: not_at_all
