@@ -217,3 +217,14 @@ tasks:
             resource: pharme::begin-next-phase-app
             operator: "="
             score: 1
+
+  - key: u-mars-counseling
+    rank: 110
+    triggers:
+      - action: SHOW
+        condition:
+          # begin control
+          - type: SCORE
+            resource: pharme::begin-next-phase-counseling
+            operator: "="
+            score: 1

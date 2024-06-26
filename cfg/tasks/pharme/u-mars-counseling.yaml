@@ -1,0 +1,7 @@
+key: u-mars-counseling
+_extends: u-mars
+schedule:
+  type: PERIOD
+  period: ONCE
+  delay: 90
+  delayUnits: DAYS
