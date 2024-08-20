@@ -1,0 +1,296 @@
+key: pfiq-7
+scorable: false
+metadata:
+  author: ""
+  instrument: "PFIQ-7"
+  version: ""
+  references: ["https://www.nppt.com/files/forms/PFIQShortform.pdf"]
+schedule:
+  type: PERIOD
+  period: WEEKLY
+timeRequirements:
+  time: 2
+  timeUnits: minutes
+name: Pelvic Floor Impact
+intro:
+  title: Pelvic Floor Impact
+  description: Some women find that bladder, bowel, or vaginal symptoms affect their activities, relationships, and feelings. For each question, check the response that best describes how much your activities, relationships, or feelings have been affected by your bladder, bowel and vaginal / pelvic symptoms or conditions over the past week.
+sections:
+  - type: survey
+    key: "0"
+    title: ""
+    description: "Over the past week:"
+    questions:
+      - key: 1_prompt
+        type: DISPLAY
+        question: [["Text","1. How do symptoms or conditions in the following usually affect your "],["Underline",["Bold","ability to do household chores"]],["Text"," (cooking, laundry housecleaning)?"]]
+      - key: 1_bladder
+        question: ["Underline","Bladder or Urine"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 1_bowel
+        question: ["Underline","Bowel or Rectum"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 1_vagina
+        question: ["Underline","Vagina or Pelvis"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 2_prompt
+        type: DISPLAY
+        question: [["Text","2. How do symptoms or conditions in the following usually affect your "],["Underline",["Bold","ability to do physical activities"]],["Text"," such as walking, swimming, or other exercise?"]]
+      - key: 2_bladder
+        question: ["Underline","Bladder or Urine"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 2_bowel
+        question: ["Underline","Bowel or Rectum"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 2_vagina
+        question: ["Underline","Vagina or Pelvis"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 3_prompt
+        type: DISPLAY
+        question: [["Text","3. How do symptoms or conditions in the following usually affect your "],["Underline",["Bold","entertainment activities"]],["Text"," such as going to a movie or concert?"]]
+      - key: 3_bladder
+        question: ["Underline","Bladder or Urine"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 3_bowel
+        question: ["Underline","Bowel or Rectum"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 3_vagina
+        question: ["Underline","Vagina or Pelvis"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 4_prompt
+        type: DISPLAY
+        question: [["Text","4. How do symptoms or conditions in the following usually affect your "],["Underline",["Bold","ability to travel by car or bus"]],["Text"," for a distance greater than 30 minutes away from home?"]]
+      - key: 4_bladder
+        question: ["Underline","Bladder or Urine"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 4_bowel
+        question: ["Underline","Bowel or Rectum"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 4_vagina
+        question: ["Underline","Vagina or Pelvis"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 5_prompt
+        type: DISPLAY
+        question: [["Text","5. How do symptoms or conditions in the following usually affect your "],["Underline",["Bold","participating in social activities"]],["Text"," outside your home?"]]
+      - key: 5_bladder
+        question: ["Underline","Bladder or Urine"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 5_bowel
+        question: ["Underline","Bowel or Rectum"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 5_vagina
+        question: ["Underline","Vagina or Pelvis"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit   
+      - key: 6_prompt
+        type: DISPLAY
+        question: [["Text","6. How do symptoms or conditions in the following usually affect your "],["Underline",["Bold","emotional health"]],["Text"," (nervousness, depression, etc.)?"]]
+      - key: 6_bladder
+        question: ["Underline","Bladder or Urine"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 6_bowel
+        question: ["Underline","Bowel or Rectum"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 6_vagina
+        question: ["Underline","Vagina or Pelvis"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 7_prompt
+        type: DISPLAY
+        question: [["Text","7. How do symptoms or conditions in the following usually affect your "],["Underline",["Bold","feeling frustrated"]],["Text","?"]]
+      - key: 7_bladder
+        question: ["Underline","Bladder or Urine"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 7_bowel
+        question: ["Underline","Bowel or Rectum"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
+      - key: 7_vagina
+        question: ["Underline","Vagina or Pelvis"]
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all 
+          - value: somewhat
+            text: Somewhat
+          - value: moderately
+            text: Moderately
+          - value: quite_a_bit
+            text: Quite a bit
