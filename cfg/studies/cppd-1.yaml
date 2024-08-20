@@ -128,4 +128,16 @@ tasks:
       period: WEEKLY
       gracePeriod: 1
       initialGracePeriod: 3
+  - key: pfiq-7
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
+  - key: oswestry-2
+    schedule:
+      type: PERIOD
+      period: WEEKLY
+      gracePeriod: 1
+      initialGracePeriod: 3
   - bladder-irritants
