@@ -25,7 +25,7 @@ sections:
         question: ["Bold","PAIN INTENSITY"]
         type: SINGLE_CHOICE
         options:
-          - value: "_skip_"
+          - value: "n/a"
             text: N/A I did not have low back pain this week
             score: 0
           - value: "a"
@@ -49,18 +49,6 @@ sections:
       - key: "2"
         question: [["Bold","PERSONAL CARE"], ["Text", " (e.g. Washing, Dressing)"]]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: I can look after myself normally without causing extra pain
@@ -83,18 +71,6 @@ sections:
       - key: "3"
         question: ["Bold","LIFTING"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: I can lift heavy weights without extra pain
@@ -117,18 +93,6 @@ sections:
       - key: "4"
         question: ["Bold","WALKING"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: Pain does not prevent me walking any distance
@@ -151,18 +115,6 @@ sections:
       - key: "5"
         question: ["Bold","SITTING"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: I can sit in any chair as long as I like
@@ -185,18 +137,6 @@ sections:
       - key: "6"
         question: ["Bold","STANDING"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: I can stand as long as I want without extra pain
@@ -219,18 +159,6 @@ sections:
       - key: "7"
         question: ["Bold","SLEEPING"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: Pain does not prevent me from sleeping well
@@ -253,18 +181,6 @@ sections:
       - key: "8"
         question: ["Bold","SOCIAL LIFE"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: My social life is normal and gives me no extra pain
@@ -287,18 +203,6 @@ sections:
       - key: "9"
         question: ["Bold","TRAVELLING"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: I can travel anywhere without extra pain
@@ -321,18 +225,6 @@ sections:
       - key: "10"
         question: ["Bold","EMPLOYMENT/ HOMEMAKING"]
         type: SINGLE_CHOICE
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: questions
-                question: '1'
-                operator: IS_SET
-                AND: 
-                  - section: questions
-                    question: '1'
-                    operator: <>
-                    value: _skip_
         options:
           - value: "a"
             text: My normal homemaking/ job activities do not cause pain.
