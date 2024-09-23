@@ -35,6 +35,7 @@
   ],
   "options": [
     {
+      "key": "key-1",
       "type": "single",
       "title": "Future Contact",
       "summary": "The researchers may wish to use your personal contact information to contact you in the future. Do you give the researchers permission to contact you in the future to request the collection of additional information about you, discuss how your private information, study data and/or samples might be used, or discuss possible participation in another research study?",
@@ -43,6 +44,7 @@
       "reject": "No, I do not consent"
     },
     {
+      "key": "key-2",
       "type": "single",
       "title": "Email",
       "summary": "If you consent to future contact, do you agree to being contacted by email?",
@@ -51,6 +53,7 @@
       "reject": "No or N/A"
     },
     {
+      "key": "key-3",
       "type": "single",
       "title": "Phone",
       "summary": "If you consent to future contact, do you agree to being contacted by phone?",
