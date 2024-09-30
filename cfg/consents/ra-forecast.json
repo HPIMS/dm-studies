@@ -312,6 +312,40 @@
               "isCorrect": false
             }
           ]
+        },
+        {
+          "prompt": "When can you withdraw from this study?",
+          "options": [
+            {
+              "text": "When the lead researcher gives you the O.K.",
+              "isCorrect": false
+            },
+            {
+              "text": "When the study is closed for analysis.",
+              "isCorrect": false
+            },
+            {
+              "text": "Any time you wish.",
+              "isCorrect": true
+            },
+            {
+              "text": "Never",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "prompt": "You will be compensated for your participation in this study?",
+          "options": [
+            {
+              "text": "Yes",
+              "isCorrect": false
+            },
+            {
+              "text": "No",
+              "isCorrect": true
+            }
+          ]
         }
       ]
     }

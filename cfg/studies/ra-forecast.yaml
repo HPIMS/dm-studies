@@ -2,7 +2,7 @@ key: ra-forecast
 consentId: ehive-ra-forecast
 
 active: true
-openEnrollment: false
+openEnrollment: true
 visibility: public
 
 irb: STUDY-22-01589
@@ -48,36 +48,15 @@ tasks:
 
   - key: rapid3-daily
     rank: 3
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: ra-forecast::baseline_health
-            operator: ">"
-            score: 0
 
   - key: fatigue_scale
     rank: 4
     schedule:
       type: PERIOD
       period: DAILY
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: ra-forecast::baseline_health
-            operator: ">"
-            score: 0
 
   - key: pss-4-bi-weekly
     rank: 5
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: ra-forecast::baseline_health
-            operator: ">"
-            score: 0
 
   - key: mdhaq-bi-weekly
     rank: 6
@@ -87,40 +66,13 @@ tasks:
       gracePeriod: 2
       delay: 2
       delayUnits: WEEKS
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: ra-forecast::baseline_health
-            operator: ">"
-            score: 0
 
   - key: cd-risc-10
     rank: 7
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: ra-forecast::baseline_health
-            operator: ">"
-            score: 0
   
   - key: lab_tests
     rank: 8
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: ra-forecast::baseline_health
-            operator: ">"
-            score: 0
   
   - key: new_meds
     rank: 9
-    triggers:
-      - action: SHOW
-        condition:
-          - type: COMPLETED
-            resource: ra-forecast::baseline_health
-            operator: ">"
-            score: 0
+
