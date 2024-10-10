@@ -45,6 +45,10 @@ timeResponsibility:
 tasks:
   - key: demographics
     rank: 10
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks
 
   - key: brief
     rank: 20
@@ -55,41 +59,17 @@ tasks:
 
   - key: gse
     rank: 25
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks
 
   - key: knowledge
     rank: 30
-
-  - key: begin-next-phase-app
-    rank: 40
-    triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: pharme::arm
-            operator: "="
-            score: 1 # case
-      - action: HIDE
-        condition:
-          - type: SCORE
-            resource: pharme::begin-next-phase-app
-            operator: "="
-            score: 1
-
-  - key: begin-next-phase-counseling
-    rank: 40
-    triggers:
-      - action: SHOW
-        condition:
-          - type: SCORE
-            resource: pharme::arm
-            operator: "="
-            score: 0 # control
-      - action: HIDE
-        condition:
-          - type: SCORE
-            resource: pharme::begin-next-phase-counseling
-            operator: "="
-            score: 1
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks  
 
   - key: knowledge-followup
     rank: 50
@@ -99,15 +79,23 @@ tasks:
           type: OR
           tasks:
             # begin case
-            - type: SCORE
-              resource: pharme::begin-next-phase-app
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
             # begin control
-            - type: SCORE
-              resource: pharme::begin-next-phase-counseling
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control 
 
   - key: comprehension-app
     rank: 60
@@ -115,10 +103,14 @@ tasks:
       - action: SHOW
         condition:
           # begin case
-          - type: SCORE
-            resource: pharme::begin-next-phase-app
-            operator: "="
-            score: 1
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: case
 
   - key: comprehension-counseling
     rank: 60
@@ -126,10 +118,14 @@ tasks:
       - action: SHOW
         condition:
           # begin control
-          - type: SCORE
-            resource: pharme::begin-next-phase-counseling
-            operator: "="
-            score: 1
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: control
 
   - key: factor-adapted
     rank: 70
@@ -139,15 +135,23 @@ tasks:
           type: OR
           tasks:
             # begin case
-            - type: SCORE
-              resource: pharme::begin-next-phase-app
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
             # begin control
-            - type: SCORE
-              resource: pharme::begin-next-phase-counseling
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control
 
   - key: satisfaction-app
     rank: 80
@@ -155,10 +159,14 @@ tasks:
       - action: SHOW
         condition:
           # begin case
-          - type: SCORE
-            resource: pharme::begin-next-phase-app
-            operator: "="
-            score: 1
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: case
 
   - key: satisfaction-counseling
     rank: 80
@@ -166,10 +174,14 @@ tasks:
       - action: SHOW
         condition:
           # begin control
-          - type: SCORE
-            resource: pharme::begin-next-phase-counseling
-            operator: "="
-            score: 1
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: control
 
   - key: attitudes
     rank: 90
@@ -179,15 +191,23 @@ tasks:
           type: OR
           tasks:
             # begin case
-            - type: SCORE
-              resource: pharme::begin-next-phase-app
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
             # begin control
-            - type: SCORE
-              resource: pharme::begin-next-phase-counseling
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control
 
   - key: actions-taken
     rank: 100
@@ -197,15 +217,23 @@ tasks:
           type: OR
           tasks:
             # begin case
-            - type: SCORE
-              resource: pharme::begin-next-phase-app
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
             # begin control
-            - type: SCORE
-              resource: pharme::begin-next-phase-counseling
-              operator: "="
-              score: 1
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control
 
   - key: u-mars
     rank: 110
@@ -213,10 +241,14 @@ tasks:
       - action: SHOW
         condition:
           # begin case
-          - type: SCORE
-            resource: pharme::begin-next-phase-app
-            operator: "="
-            score: 1
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: case
 
   - key: u-mars-counseling
     rank: 110
@@ -224,7 +256,11 @@ tasks:
       - action: SHOW
         condition:
           # begin control
-          - type: SCORE
-            resource: pharme::begin-next-phase-counseling
-            operator: "="
-            score: 1
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: control
