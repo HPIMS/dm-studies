@@ -5,3 +5,4 @@ schedule:
   period: ONCE
   delay: 90
   delayUnits: DAYS
+  gracePeriod: 28 # Available Day + 6 Grace Days == 1 week available

@@ -13,7 +13,7 @@ metadata:
 schedule:
   type: PERIOD
   period: ONCE
-  gracePeriod: 2 # Available Day + 2 Grace Days == 72 hrs available
+  gracePeriod: 6 # Available Day + 6 Grace Days == 1 week available
 name: Attitudes Towards PGx Testing
 sections:
   - type: survey
