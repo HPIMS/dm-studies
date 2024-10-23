@@ -1,0 +1,44 @@
+key: digi-twin
+consentId: ehive-digi-twin
+
+active: true
+openEnrollment: false
+visibility: public
+
+irb: STUDY-XX-XXXXX
+pi: Zahi A Fayad, PhD
+studyEmail: digitwin@mssm.edu
+
+platform:
+  - ios
+  - android
+
+minVersion: '2.9.0'
+capTo: 1000
+
+name: DigiTwin
+
+shortDescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et est et dolor porta posuere sed nec nisi.
+longDescription: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et est et dolor porta posuere sed nec nisi. Proin mattis leo ut tellus porttitor, sed condimentum odio efficitur. Etiam non finibus risus. Integer nec porta quam. Pellentesque non ex facilisis, finibus sem in, malesuada magna. Aliquam sit amet lacus eu metus ultrices efficitur ut vitae erat. Quisque quis mauris ac ipsum porta tristique nec sed mauris. Phasellus interdum turpis metus, a dapibus neque fringilla vitae. Curabitur ornare volutpat eros id rutrum. Sed dictum metus lacus, sit amet gravida magna consequat a. Nulla facilisi. Integer orci nunc, aliquet et velit sed, elementum viverra neque. Phasellus sit amet interdum orci. Pellentesque ut nisl dui.
+
+notes: []
+
+imageId: study-digi-twin
+animationId: ''
+videoId: ''
+
+timeResponsibility:
+  time: 2
+  timeUnits: minutes
+  timePeriod: daily
+
+tasks:
+  - key: pss-10
+    rank: 10
+
+  - key: phq-8
+    rank: 20
+
+  - key: ipaq
+    rank: 30
+
