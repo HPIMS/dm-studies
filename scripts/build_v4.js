@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const YAML = require("yaml");
+const JSZip = require("jszip");
 
 const log = require("./helpers/log");
 const cleandir = require("./helpers/cleandir");
@@ -17,7 +18,7 @@ const versions = YAML.parse(
   })
 );
 
-async function processTasks(distDir) {
+async function processTasks(buildDir) {
   const tasks = Object.keys(versions.active.tasks);
   const index = [];
 
@@ -73,7 +74,7 @@ async function processTasks(distDir) {
 
     // Write the task JSON
     await fs.promises.writeFile(
-      path.join(distDir, "tasks", `${compositeKey}.json`),
+      path.join(buildDir, "tasks", `${compositeKey}.json`),
       JSON.stringify({ ...task, key: compositeKey, type: taskType })
     );
 
@@ -91,12 +92,12 @@ async function processTasks(distDir) {
 
   // Write the task index file
   await fs.promises.writeFile(
-    path.join(distDir, "tasks", "index.json"),
+    path.join(buildDir, "tasks", "index.json"),
     JSON.stringify(index)
   );
 }
 
-async function processStudies(distDir) {
+async function processStudies(buildDir) {
   const studies = Object.keys(versions.active.studies);
   const index = [];
 
@@ -158,7 +159,7 @@ async function processStudies(distDir) {
     study.tasks = tasks;
 
     await fs.promises.writeFile(
-      path.join(distDir, "studies", `${studyKey}.json`),
+      path.join(buildDir, "studies", `${studyKey}.json`),
       JSON.stringify(study)
     );
 
@@ -182,7 +183,7 @@ async function processStudies(distDir) {
     // Move the consent to dist
     const consent = await getConsentFile(`${studyKey}.json`);
     await fs.promises.writeFile(
-      path.join(distDir, "consents", `${studyKey}.json`),
+      path.join(buildDir, "consents", `${studyKey}.json`),
       JSON.stringify(consent)
     );
   });
@@ -191,20 +192,55 @@ async function processStudies(distDir) {
 
   // Write the study index file
   await fs.promises.writeFile(
-    path.join(distDir, "studies", "index.json"),
+    path.join(buildDir, "studies", "index.json"),
     JSON.stringify(index)
   );
 }
 
 (async function build() {
-  log.info("Building V4 ...");
-  const distDir = path.join(__dirname, "../dist/v4");
-  await mkdir(distDir);
-  cleandir(distDir);
-  await mkdir(path.join(distDir, "consents"));
-  await mkdir(path.join(distDir, "studies"));
-  await mkdir(path.join(distDir, "tasks"));
+  const buildDir = path.join(__dirname, "../dist/study-configuration");
 
-  await processTasks(distDir);
-  await processStudies(distDir);
+  await mkdir(buildDir);
+  cleandir(buildDir);
+  await mkdir(path.join(buildDir, "consents"));
+  await mkdir(path.join(buildDir, "studies"));
+  await mkdir(path.join(buildDir, "tasks"));
+
+  await processTasks(buildDir);
+  await processStudies(buildDir);
+
+  // Create deployment zip
+  const zip = new JSZip();
+  const zipFolder = zip.folder("study-configuration");
+
+  // Add the folder contents to the zip
+  await addFolderToZip(zip, buildDir, zipFolder);
+
+  // Generate the zip file and save it
+  const zipContent = await zip.generateAsync({ type: "nodebuffer" });
+  await fs.promises.writeFile(
+    path.join(__dirname, "../dist/study-configuration.zip"),
+    zipContent
+  );
 })();
+
+// Thanks chatgpt
+async function addFolderToZip(zip, folderPath, zipFolder) {
+  const files = await fs.promises.readdir(folderPath);
+
+  for (const fileName of files) {
+    const filePath = path.join(folderPath, fileName);
+    const stat = await fs.promises.stat(filePath);
+
+    if (stat.isDirectory()) {
+      // Create a folder in the zip
+      const newFolder = zipFolder.folder(fileName);
+      // Recursively add subfolders and files
+      await addFolderToZip(zip, filePath, newFolder);
+    } else {
+      // Read the file content and add it to the zip
+      const fileData = await fs.promises.readFile(filePath);
+      zipFolder.file(fileName, fileData);
+    }
+  }
+}
