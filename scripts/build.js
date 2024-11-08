@@ -165,6 +165,7 @@ async function processStudies(distPath) {
 
     // Build the study index record.
     const indexRec = {
+      key: studyKey,
       studyKey,
       name: study.name,
       shortDescription: study.shortDescription,
