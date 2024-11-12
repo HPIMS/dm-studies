@@ -9,54 +9,90 @@ timeRequirements:
 name: Resilience Test
 intro:
   title: Intro
-  description: [
+  description:
     [
-      "BodyLarge",
-      "In this task we will ask you to perform a short resilience test."
-    ],
-    [
-      "BodyLarge",
       [
-        "Italic",
-        "Why is it important to perform this resilience test?"
-      ]
-    ],
-    [
-      "BodyLarge",
-      "The CRAMP study aims to characterize the relationship between resilience and menstrual pain. This brief cognitive test is a crucial part of our study, since these results will enable us to measure your resilience."
+        "BodyLarge",
+        "In this task we will ask you to perform a short resilience test.",
+      ],
+      [
+        "BodyLarge",
+        ["Italic", "Why is it important to perform this resilience test?"],
+      ],
+      [
+        "BodyLarge",
+        "The CRAMP study aims to characterize the relationship between resilience and menstrual pain. This brief cognitive test is a crucial part of our study, since these results will enable us to measure your resilience.",
+      ],
     ]
-  ]
 outro:
   title: Thank you!
   description: Thank you for completing the resilience test.
 sections:
   - type: document
     key: test_procedure
-    content: [
-      ["H3", ["Underline", "Test Procedure"]],
-      ["BodyLarge", "You will perform a cognitive and verbal test consisting of two different tasks."],
-      ["BodyLarge", "We will use your front camera to record you. The recordings will be used to analyze your resilience."],
-      ["BodyLarge", "For this test, please make sure that you have at least 15 minutes where you will not be disturbed. Please make sure you are in front of a neutral background for video recording."],
-      ["BodyLarge", "Before and after the test, we will ask a few questions."],
-      ["BodyLarge", "If you feel uncomfortable or overstrained, you can cancel this test at any time by closing the app. "]
-    ]
+    content:
+      [
+        ["H3", ["Underline", "Test Procedure"]],
+        [
+          "BodyLarge",
+          "You will perform a cognitive and verbal test consisting of two different tasks.",
+        ],
+        [
+          "BodyLarge",
+          "We will use your front camera to record you. The recordings will be used to analyze your resilience.",
+        ],
+        [
+          "BodyLarge",
+          "For this test, please make sure that you have at least 15 minutes where you will not be disturbed. Please make sure you are in front of a neutral background for video recording.",
+        ],
+        [
+          "BodyLarge",
+          "Before and after the test, we will ask a few questions.",
+        ],
+        [
+          "BodyLarge",
+          "If you feel uncomfortable or overstrained, you can cancel this test at any time by closing the app. ",
+        ],
+      ]
   - type: document
     key: hrv_intro
-    content: [
-      ["H3", ["Underline", "Heart Rate Variability"]],
-      ["BodyLarge", [
-        ["Text", "We want to measure you heart rate variability before and after the tasks. This is a very important measure to assess resilience. Unfortunately Apple does not allow us to start recording heart rate variability whenever we want.  We will therefore ask you to use the "],
-        ["Italic", ["Bold", "Breathe"]],
-        ["Text", " function within the "],
-        ["Italic", ["Bold", "Mindfulness"]],
-        ["Text", " app on your Apple Watch. Activating the breathing app will allow us to record your heart rate variability."]
-      ]],
-      ["BodyLarge", [
-        ["Text", "The breathing task on you apple watch will ask you to inhale and exhale at specific times. Please, "],
-        ["Bold", "DO NOT FOLLOW THE APPLE WATCH INSTRUCTIONS SINCE THIS WILL CAUSE THE RECORDING TO BE USELESS."]
-      ]],
-      ["BodyLarge", "Before you begin, please follow the instructions in the following video to turn off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task."]
-    ]
+    content:
+      [
+        ["H3", ["Underline", "Heart Rate Variability"]],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "We want to measure you heart rate variability before and after the tasks. This is a very important measure to assess resilience. Unfortunately Apple does not allow us to start recording heart rate variability whenever we want.  We will therefore ask you to use the ",
+            ],
+            ["Italic", ["Bold", "Breathe"]],
+            ["Text", " function within the "],
+            ["Italic", ["Bold", "Mindfulness"]],
+            [
+              "Text",
+              " app on your Apple Watch. Activating the breathing app will allow us to record your heart rate variability.",
+            ],
+          ],
+        ],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "The breathing task on you apple watch will ask you to inhale and exhale at specific times. Please, ",
+            ],
+            [
+              "Bold",
+              "DO NOT FOLLOW THE APPLE WATCH INSTRUCTIONS SINCE THIS WILL CAUSE THE RECORDING TO BE USELESS.",
+            ],
+          ],
+        ],
+        [
+          "BodyLarge",
+          "Before you begin, please follow the instructions in the following video to turn off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task.",
+        ],
+      ]
   - type: video
     key: setup-video-1
     videoId: dst-1
@@ -70,13 +106,20 @@ sections:
     resizeMode: contain
   - type: document
     key: haptic-outro
-    content: [
-      ["H3", ["Underline", "Haptic Feedback"]],
-      ["BodyLarge", [
-        ["Text", "If you did not do it already, please deactivate the haptic feedback on your mindfulness app now and press "],
-        ["Bold", "NEXT"]
-      ]],
-    ]
+    content:
+      [
+        ["H3", ["Underline", "Haptic Feedback"]],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "If you did not do it already, please deactivate the haptic feedback on your mindfulness app now and press ",
+            ],
+            ["Bold", "NEXT"],
+          ],
+        ],
+      ]
   - type: video
     key: setup-video-2-pre
     videoId: dst-2
@@ -90,19 +133,32 @@ sections:
     resizeMode: contain
   - type: document
     key: hrv-outro-pre
-    content: [
-      ["H3", ["Underline", "Heart Rate Variability"]],
-      ["BodyLarge", "Did you start the Breathe session as explained in this last video?"],
-      ["BodyLarge", [
-        ["Text", "Press "],
-        ["Bold", "NEXT"],
-        ["Text", " if you did, otherwise please start the Breath session now and wait until it is over to press "],
-        ["Bold", "NEXT"],
-        ["Text", ". Remember "],
-        ["Bold", "NOT"],
-        ["Text", " to follow the inhale/exhale instructions on your Apple Watch."]
-      ]],
-    ]
+    content:
+      [
+        ["H3", ["Underline", "Heart Rate Variability"]],
+        [
+          "BodyLarge",
+          "Did you start the Breathe session as explained in this last video?",
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Text", "Press "],
+            ["Bold", "NEXT"],
+            [
+              "Text",
+              " if you did, otherwise please start the Breath session now and wait until it is over to press ",
+            ],
+            ["Bold", "NEXT"],
+            ["Text", ". Remember "],
+            ["Bold", "NOT"],
+            [
+              "Text",
+              " to follow the inhale/exhale instructions on your Apple Watch.",
+            ],
+          ],
+        ],
+      ]
   - type: survey
     key: mood_happy_pre
     title: ""
@@ -356,22 +412,39 @@ sections:
     required: true
     headerShown: false
     backMode: close
-    doneContent: [
-      ["H2", "Resilience Test Complete!"],
-      ["BodyLarge", [
-        ["Text", "Thank you for completing the resilience test. Press "],
-        ["Bold", "NEXT"],
-        ["Text", " to continue with the post-test breathe session and questionnaire."]
-      ]]
-    ]
-    cancelContent: [
-      ["H2", "Resilience Test Canceled"],
-      ["BodyLarge", [
-        ["Text", "The resilience test has been canceled. Please close this window by pressing the "],
-        ["Bold", "X"],
-        ["Text", " in the upper left corner. You may come back to this task later."]
-      ]]
-    ]
+    doneContent:
+      [
+        ["H2", "Resilience Test Complete!"],
+        [
+          "BodyLarge",
+          [
+            ["Text", "Thank you for completing the resilience test. Press "],
+            ["Bold", "NEXT"],
+            [
+              "Text",
+              " to continue with the post-test breathe session and questionnaire.",
+            ],
+          ],
+        ],
+      ]
+    cancelContent:
+      [
+        ["H2", "Resilience Test Canceled"],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "The resilience test has been canceled. Please close this window by pressing the ",
+            ],
+            ["Bold", "X"],
+            [
+              "Text",
+              " in the upper left corner. You may come back to this task later.",
+            ],
+          ],
+        ],
+      ]
   - type: video
     key: setup-video-2-post
     videoId: dst-2
@@ -385,19 +458,32 @@ sections:
     resizeMode: contain
   - type: document
     key: hrv-outro-post
-    content: [
-      ["H3", ["Underline", "Heart Rate Variability"]],
-      ["BodyLarge", "Did you start the Breathe session as explained in this last video?"],
-      ["BodyLarge", [
-        ["Text", "Press "],
-        ["Bold", "NEXT"],
-        ["Text", " if you did, otherwise please start the Breath session now and wait until it is over to press "],
-        ["Bold", "NEXT"],
-        ["Text", ". Remember "],
-        ["Bold", "NOT"],
-        ["Text", " to follow the inhale/exhale instructions on your Apple Watch."]
-      ]],
-    ]
+    content:
+      [
+        ["H3", ["Underline", "Heart Rate Variability"]],
+        [
+          "BodyLarge",
+          "Did you start the Breathe session as explained in this last video?",
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Text", "Press "],
+            ["Bold", "NEXT"],
+            [
+              "Text",
+              " if you did, otherwise please start the Breath session now and wait until it is over to press ",
+            ],
+            ["Bold", "NEXT"],
+            ["Text", ". Remember "],
+            ["Bold", "NOT"],
+            [
+              "Text",
+              " to follow the inhale/exhale instructions on your Apple Watch.",
+            ],
+          ],
+        ],
+      ]
   - type: survey
     key: mood_happy_post
     title: ""
@@ -646,27 +732,49 @@ sections:
             score: 5
   - type: document
     key: clarification
-    content: [
-      ["H3", ["Underline", "Clarification"]],
-      ["BodyLarge", "Thank you for performing this test."],
-      ["BodyLarge", "We would like to clarify a few things: "],
-      ["UnorderedList", [
-        ["BodyLarge", "The purpose of this test was to induce and anlayse individual stress response only.  "],
-        ["BodyLarge", [
-          ["Text", "It was "],
-          ["Bold", "NOT"],
-          ["Text", " intedend to evaluate your cognitive and verbal performance.     "]
-        ]],
-        ["BodyLarge", "Therefore, the difficulty of the calculation tasks intentionally increased with time to make you fail."],
-        ["BodyLarge", [
-          ["Text", "The comparison with other users was "],
-          ["Bold", "FAKED"],
-          ["Text", " in order to induce social stress."]
-        ]],
-        ["BodyLarge", [
-          ["Text", "The videos have "],
-          ["Bold", "NOT"],
-          ["Text", " been analyzed by any algorithm."]
-        ]]
-      ]]
-    ]
+    content:
+      [
+        ["H3", ["Underline", "Clarification"]],
+        ["BodyLarge", "Thank you for performing this test."],
+        ["BodyLarge", "We would like to clarify a few things: "],
+        [
+          "UnorderedList",
+          [
+            [
+              "BodyLarge",
+              "The purpose of this test was to induce and anlayse individual stress response only.  ",
+            ],
+            [
+              "BodyLarge",
+              [
+                ["Text", "It was "],
+                ["Bold", "NOT"],
+                [
+                  "Text",
+                  " intedend to evaluate your cognitive and verbal performance.     ",
+                ],
+              ],
+            ],
+            [
+              "BodyLarge",
+              "Therefore, the difficulty of the calculation tasks intentionally increased with time to make you fail.",
+            ],
+            [
+              "BodyLarge",
+              [
+                ["Text", "The comparison with other users was "],
+                ["Bold", "FAKED"],
+                ["Text", " in order to induce social stress."],
+              ],
+            ],
+            [
+              "BodyLarge",
+              [
+                ["Text", "The videos have "],
+                ["Bold", "NOT"],
+                ["Text", " been analyzed by any algorithm."],
+              ],
+            ],
+          ],
+        ],
+      ]
