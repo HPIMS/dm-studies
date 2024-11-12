@@ -16,8 +16,8 @@ active:
       - 45b1eb2aa6336ce35d3bc094c27933fa
       - 27
     cramp:
-      - 4c9fb68d93a2472d9bc5e3883ad93acf
-      - 120
+      - af55e11b0e6db634d3b1a66153bbd036
+      - 121
     digi-ibd-001:
       - be5b04cdd09007423d3645945ecc58ac
       - 45
@@ -88,42 +88,21 @@ active:
     cramp::demographics:
       - ef63aaa141ec1e686c02924877be987d
       - 14
-    cramp::dona-facebook:
-      - feaea3e0d793c69a9a9ae9f5ccecee78
-      - 10
-    cramp::dona-whatsapp:
-      - e32347bfe2f41af81990cd7804d03f9e
-      - 9
     cramp::dst:
       - ea273e6d138716ef319d1de2b93645e5
       - 24
-    cramp::ema-afternoon:
-      - f9d0cd9fcddf4751c91b2130a27b0185
-      - 4
-    cramp::ema-evening:
-      - ba275b1f18f19b8ef0216e84bfdfb567
-      - 4
-    cramp::ema-morning:
-      - eea79321dcfe122db730ce55cee6a3df
-      - 4
     cramp::final-check-in:
       - 5d31c4b340f074672faf7f886a44a80c
       - 4
     cramp::general-health:
       - 856e79695010efdc009488ca95ed4877
       - 14
-    cramp::intro:
-      - a8bb9e6b5a32961eaf0ecf13e1e10056
-      - 9
     cramp::menstrual-health:
       - 1b221ab2af1a04654912d292ebc94458
       - 12
     cramp::menstrual-pain:
       - 16f53b65289b6b5f7d6e18ce1d5b6337
       - 13
-    cramp::post-menstruation:
-      - 253b6ecdbeb9e262465d3aa70acdc6a0
-      - 4
     cramp::pre-dst:
       - 879baecb1cbbc6f1bb589f5a0525a21c
       - 4
@@ -136,9 +115,6 @@ active:
     cramp::rsa:
       - 55610ac092389c200ed84a35c8cf5149
       - 3
-    cramp::social:
-      - cb3e7830c9d55c0f929c18e0f92e1a4e
-      - 4
     cramp::strain:
       - 9f8688a075682ba30a8068e92eaf2ea1
       - 3
@@ -448,9 +424,33 @@ inactive:
       - 9923ef97911b6e0f2cfe2c72621e01e2
       - 20
   tasks:
+    cramp::dona-facebook:
+      - feaea3e0d793c69a9a9ae9f5ccecee78
+      - 10
+    cramp::dona-whatsapp:
+      - e32347bfe2f41af81990cd7804d03f9e
+      - 9
     cramp::ema:
       - d28d0142ade25beb7f4b887789bd3b11
       - 12
+    cramp::ema-afternoon:
+      - f9d0cd9fcddf4751c91b2130a27b0185
+      - 4
+    cramp::ema-evening:
+      - ba275b1f18f19b8ef0216e84bfdfb567
+      - 4
+    cramp::ema-morning:
+      - eea79321dcfe122db730ce55cee6a3df
+      - 4
+    cramp::intro:
+      - a8bb9e6b5a32961eaf0ecf13e1e10056
+      - 9
+    cramp::post-menstruation:
+      - 253b6ecdbeb9e262465d3aa70acdc6a0
+      - 4
+    cramp::social:
+      - cb3e7830c9d55c0f929c18e0f92e1a4e
+      - 4
     digi-ibd-001::schedule-labs:
       - ce84559a670d6ee8754f4c3e0ceb3371
       - 4
