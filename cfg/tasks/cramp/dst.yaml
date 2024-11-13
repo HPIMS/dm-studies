@@ -13,7 +13,14 @@ intro:
     [
       [
         "BodyLarge",
-        "In this task we will ask you to perform a short resilience test.",
+        [
+          [
+            "Text",
+            "In this task we will ask you to perform a short resilience test. Please complete this resilience test when you are ",
+          ],
+          ["Underline", ["Bold", "not menstruating"]],
+          ["Text", "."],
+        ],
       ],
       [
         "BodyLarge",
@@ -28,6 +35,45 @@ outro:
   title: Thank you!
   description: Thank you for completing the resilience test.
 sections:
+  - type: survey
+    key: menstruation_check
+    title: ""
+    description: ""
+    questions:
+      - key: currently_menstruating
+        question: Are you currently menstruating?
+        type: YESNO_CHOICE
+        required: true
+      - key: return_later_message
+        type: DISPLAY
+        content:
+          [
+            "Body",
+            "Please return to this task when you are no longer menstruating.",
+          ]
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: "menstruation_check"
+                question: currently_menstruating
+                operator: =
+                value: "yes"
+      - key: next_control
+        question: "__internal_control_field"
+        type: YESNO_CHOICE
+        required: true
+        triggers:
+          - action:
+              type: HIDE
+            condition:
+              # Always hidden.
+              - section: "menstruation_check"
+                question: currently_menstruating
+                operator: IS_SET
+              - section: "menstruation_check"
+                question: currently_menstruating
+                operator: NOT_IS_SET
   - type: document
     key: test_procedure
     content:
