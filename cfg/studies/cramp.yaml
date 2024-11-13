@@ -36,10 +36,6 @@ timeResponsibility:
 tasks:
   - key: daily-check-in
     rank: 0
-    # DEMO SCHEDULE
-    schedule:
-      type: PERIOD
-      period: ALWAYS
 
   - key: demographics
     rank: 10
@@ -108,7 +104,6 @@ tasks:
 
   - key: dst
     rank: 110
-    # TODO: CALCULATION TRIGGER
 
   - key: final-check-in
     rank: 120
