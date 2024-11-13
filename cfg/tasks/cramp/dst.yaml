@@ -80,7 +80,7 @@ sections:
             condition:
               - section: menstruation_check
                 question: currently_menstruating
-                operator: =
+                operator: <>
                 value: "yes"
   - type: document
     key: test_procedure
