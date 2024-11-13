@@ -60,23 +60,14 @@ sections:
                 operator: =
                 value: "yes"
       - key: __internal_control_input
-        question: __internal_control_input
-        type: TEXT
+        question: Can Continue
+        type: CONTROL_FLAG
         required: true
         triggers:
           - action:
-              type: HIDE
-            condition: # Always hidden.
-              - section: menstruation_check
-                question: currently_menstruating
-                operator: IS_SET
-              - section: menstruation_check
-                question: currently_menstruating
-                operator: NOT_IS_SET
-          - action:
               type: SET_VALUE
               payload:
-                value: "1"
+                value: "YES"
             condition:
               - section: menstruation_check
                 question: currently_menstruating
