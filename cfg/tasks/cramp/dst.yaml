@@ -39,6 +39,7 @@ sections:
     key: menstruation_check
     title: ""
     description: ""
+    invalidText: ""
     questions:
       - key: currently_menstruating
         question: Are you currently menstruating?
@@ -67,7 +68,7 @@ sections:
           - action:
               type: SET_VALUE
               payload:
-                value: "YES"
+                value: ""
             condition:
               - section: menstruation_check
                 question: currently_menstruating
@@ -76,7 +77,7 @@ sections:
           - action:
               type: SET_VALUE
               payload:
-                value: ""
+                value: "YES"
             condition:
               - section: menstruation_check
                 question: currently_menstruating
