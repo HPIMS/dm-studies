@@ -81,7 +81,7 @@ sections:
           - action:
               type: SET_VALUE
               payload:
-                value: "YES"
+                value: "yes"
             condition:
               - section: menstruation_check
                 question: currently_menstruating
