@@ -16,10 +16,11 @@ intro:
         [
           [
             "Text",
-            "In this task we will ask you to perform a short resilience test. Please complete this resilience test when you are ",
+            "In this task we will ask you to perform a short resilience test.",
           ],
-          ["Underline", ["Bold", "not menstruating"]],
-          ["Text", "."],
+          ["Bold", " Please complete this resilience test when you are "],
+          ["Italic", ["Bold", "not menstruating"]],
+          ["Bold", "."],
         ],
       ],
       [
@@ -49,8 +50,11 @@ sections:
         type: DISPLAY
         content:
           [
-            "Body",
-            "Wait! Please return to this task when you are no longer menstruating. We appreciate your understanding.",
+            ["H4", "Wait!"],
+            [
+              "BodyLarge",
+              "Please return to this task when you are not menstruating. We appreciate your understanding.",
+            ],
           ]
         triggers:
           - action:
