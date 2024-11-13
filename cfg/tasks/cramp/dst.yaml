@@ -49,31 +49,48 @@ sections:
         content:
           [
             "Body",
-            "Please return to this task when you are no longer menstruating.",
+            "Wait! Please return to this task when you are no longer menstruating. We appreciate your understanding.",
           ]
         triggers:
           - action:
               type: SHOW
             condition:
-              - section: "menstruation_check"
+              - section: menstruation_check
                 question: currently_menstruating
                 operator: =
                 value: "yes"
-      - key: next_control
-        question: "__internal_control_field"
-        type: YESNO_CHOICE
+      - key: __internal_control_input
+        question: __internal_control_input
+        type: TEXT
         required: true
         triggers:
           - action:
               type: HIDE
-            condition:
-              # Always hidden.
-              - section: "menstruation_check"
+            condition: # Always hidden.
+              - section: menstruation_check
                 question: currently_menstruating
                 operator: IS_SET
-              - section: "menstruation_check"
+              - section: menstruation_check
                 question: currently_menstruating
                 operator: NOT_IS_SET
+          - action:
+              type: SET_VALUE
+              payload:
+                value: "1"
+            condition:
+              - section: menstruation_check
+                question: currently_menstruating
+                operator: =
+                value: "yes"
+          - action:
+              type: SET_VALUE
+              payload:
+                value: ""
+            condition:
+              - section: menstruation_check
+                question: currently_menstruating
+                operator: =
+                value: "yes"
   - type: document
     key: test_procedure
     content:
