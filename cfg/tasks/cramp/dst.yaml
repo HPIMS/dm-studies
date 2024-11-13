@@ -76,8 +76,8 @@ sections:
             condition:
               - section: menstruation_check
                 question: currently_menstruating
-                operator: =
-                value: "yes"
+                operator: <>
+                value: "no"
           - action:
               type: SET_VALUE
               payload:
@@ -85,8 +85,8 @@ sections:
             condition:
               - section: menstruation_check
                 question: currently_menstruating
-                operator: <>
-                value: "yes"
+                operator: =
+                value: "no"
   - type: document
     key: test_procedure
     content:
@@ -505,8 +505,8 @@ sections:
         ],
       ]
   - type: video
-    key: setup-video-2-post
-    videoId: dst-2
+    key: setup-video-3
+    videoId: dst-3
     autoplay: true
     beginMuted: true
     controls:
