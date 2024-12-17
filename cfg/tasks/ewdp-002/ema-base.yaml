@@ -13,9 +13,19 @@ sections:
       - key: had-episode
         question: 1. Do you have an eating episode to report since your last entry?
         type: YESNO_CHOICE
+        required: true
       - key: episode-count
         question: 2. On how many separate occasions did you eat?
         type: NUMERIC
+        required: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episodes
+                question: had-episode
+                operator: "="
+                value: "yes"
   - type: survey
     key: episode-1
     title: Episode 1
