@@ -1,5 +1,8 @@
 key: ema
 scorable: false
+schedule:
+  type: PERIOD
+  period: MOMENTARY
 name: Recent Eating Episodes
 sections:
   - type: survey
