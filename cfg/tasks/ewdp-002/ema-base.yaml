@@ -1,0 +1,638 @@
+key: ema-base
+scorable: false
+schedule:
+  type: PERIOD
+  period: MOMENTARY
+name: Recent Eating Episodes
+sections:
+  - type: survey
+    key: episodes
+    title: ""
+    description: ""
+    questions:
+      - key: had-episode
+        question: 1. Do you have an eating episode to report since your last entry?
+        type: YESNO_CHOICE
+      - key: episode-count
+        question: 2. On how many separate occasions did you eat?
+        type: NUMERIC
+  - type: survey
+    key: episode-1
+    title: Episode 1
+    description: Please enter the details for your first eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 1
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-2
+    title: Episode 2
+    description: Please enter the details for your second eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 2
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-3
+    title: Episode 3
+    description: Please enter the details for your third eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 3
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-4
+    title: Episode 4
+    description: Please enter the details for your fourth eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 4
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-5
+    title: Episode 5
+    description: Please enter the details for your fifth eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 5
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-6
+    title: Episode 6
+    description: Please enter the details for your sixth eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 6
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-7
+    title: Episode 7
+    description: Please enter the details for your seventh eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 7
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-8
+    title: Episode 8
+    description: Please enter the details for your eighth eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 8
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-9
+    title: Episode 9
+    description: Please enter the details for your ninth eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 9
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+  - type: survey
+    key: episode-10
+    title: Episode 10
+    description: Please enter the details for your tenth eating episode.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: episodes
+            question: episode-count
+            operator: ">="
+            value: 10
+    questions:
+      - key: episode-date
+        question: 1. What date did you eat?
+        type: DATE
+        defaultToday: true
+      - key: episode-time
+        question: 2. What time did you eat?
+        type: TIME
+      - key: extent-overate
+        question: 3. To what extent to do you feel that you overate?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: excessive-amount
+        question: 4. To what extent do you feel that you ate an excessive amount of food?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: loss-of-control
+        question: 5. While you were eating, to what extent did you feel a sense of loss of control?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-resist
+        question: 6. While you were eating, to what extent did you feel that you could not resist eating?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: could-not-stop
+        question: 7. While you were eating, to what extent did you feel that you could not stop eating once you had started?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: driven
+        question: 8. While you were eating, to what extent did you feel driven or compelled to eat?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
