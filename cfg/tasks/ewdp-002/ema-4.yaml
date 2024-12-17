@@ -1,0 +1,6 @@
+key: ema-4
+schedule:
+  type: PERIOD
+  period: MOMENTARY
+  timeOfDay: [["1700", "1959"]]
+_extends: ema-base
