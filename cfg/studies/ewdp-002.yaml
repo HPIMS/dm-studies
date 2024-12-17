@@ -29,7 +29,43 @@ videoId: ""
 
 tasks:
   - ema-1
-  - ema-2
-  - ema-3
-  - ema-4
-  - ema-5
+  - key: ema-2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: seconds-since-last-completed
+            args:
+              task: ewdp-002::ema-1
+              operator: ">="
+              value: 3600
+  - key: ema-3
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: seconds-since-last-completed
+            args:
+              task: ewdp-002::ema-2
+              operator: ">="
+              value: 3600
+  - key: ema-4
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: seconds-since-last-completed
+            args:
+              task: ewdp-002::ema-3
+              operator: ">="
+              value: 3600
+  - key: ema-5
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: seconds-since-last-completed
+            args:
+              task: ewdp-002::ema-4
+              operator: ">="
+              value: 3600
