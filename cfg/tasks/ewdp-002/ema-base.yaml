@@ -226,7 +226,6 @@ sections:
                 question: episode-day
                 operator: "="
                 value: other
-        required: true
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
