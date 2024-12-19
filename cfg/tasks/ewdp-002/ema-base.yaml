@@ -18,6 +18,7 @@ sections:
         question: 2. On how many separate occasions did you eat?
         type: NUMERIC
         required: true
+        maxValue: 10
         triggers:
           - action:
               type: SHOW
