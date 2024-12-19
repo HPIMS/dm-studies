@@ -39,11 +39,29 @@ sections:
             operator: ">="
             value: 1
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-1
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -103,11 +121,29 @@ sections:
             operator: ">="
             value: 2
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-2
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -167,11 +203,30 @@ sections:
             operator: ">="
             value: 3
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-3
+                question: episode-day
+                operator: "="
+                value: other
+        required: true
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -231,11 +286,29 @@ sections:
             operator: ">="
             value: 4
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-4
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -295,11 +368,29 @@ sections:
             operator: ">="
             value: 5
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-5
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -359,11 +450,29 @@ sections:
             operator: ">="
             value: 6
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-6
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -423,11 +532,29 @@ sections:
             operator: ">="
             value: 7
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-7
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -487,11 +614,29 @@ sections:
             operator: ">="
             value: 8
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-8
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -551,11 +696,29 @@ sections:
             operator: ">="
             value: 9
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-9
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
@@ -615,11 +778,29 @@ sections:
             operator: ">="
             value: 10
     questions:
+      - key: episode-day
+        question: 1. What day did you eat?
+        type: SINGLE_CHOICE
+        options:
+          - value: today
+            text: Today
+          - value: yesterday
+            text: Yesterday
+          - value: other
+            text: Other
+        required: true
       - key: episode-date
-        question: 1. What date did you eat?
+        question: 1a. What date did you eat?
         type: DATE
         required: true
-        defaultToday: true
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: episode-10
+                question: episode-day
+                operator: "="
+                value: other
       - key: episode-time
         question: 2. What time did you eat?
         type: TIME
