@@ -32,12 +32,24 @@ timeResponsibility:
   timeUnits: seconds
   timePeriod: daily
 
-tasks: 
+tasks:
   - showcase-reorderable
   - showcase-h-scale
   - showcase-rate
   - showcase-image-grid
   - showcase-touch-points
+
+  - ema-1
+  - key: ema-2
+    triggers:
+      - action: SHOW
+        condition:
+          - type: CALCULATION
+            fn: seconds-since-last-completed
+            args:
+              task: ewdp-002::ema-1
+              operator: ">="
+              value: 3600
 
 dashboardExclude:
   - ActiveEnergy
