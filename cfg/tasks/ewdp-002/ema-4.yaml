@@ -3,5 +3,8 @@ schedule:
   type: PERIOD
   period: MOMENTARY
   timeOfDay: [["1700", "1959"]]
-  randmizationEdge: none
+  randomize: notification
+  randmizationEdge: leading
+  minLifetime: 1800
+  maxLifetime: 1800
 _extends: ema-base
