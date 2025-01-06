@@ -2,8 +2,6 @@ key: ema-4
 schedule:
   type: PERIOD
   period: MOMENTARY
-  timeOfDay: [["1600", "1859"]]
-  randmizationEdge: leading
-  minLifetime: 1800
-  maxLifetime: 1800
+  timeOfDay: [["1700", "1959"]]
+  randmizationEdge: none
 _extends: ema-base
