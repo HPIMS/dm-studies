@@ -1,0 +1,38 @@
+key: schedule-labs
+scorable: false
+schedule:
+  type: PERIOD
+  period: ALWAYS
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Schedule your blood and stool tests
+sections:
+  - type: document
+    key: doc
+    content:
+      [
+        ["H3", "Time to schedule your blood and stool tests!"],
+        [
+          "BodyLarge",
+          "If you haven't done so already, please schedule your blood and stool tests that are due in 4 days.",
+        ],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "You can schedule your lab tests by clicking on the following link: ",
+            ],
+            ["Hyperlink", "https://www.labcorp.com/patients"],
+          ],
+        ],
+      ]
+  - type: survey
+    key: info
+    title: ""
+    description: ""
+    questions:
+      - key: schedule_labs
+        question: Have you scheduled your lab tests?
+        type: YESNO_CHOICE
