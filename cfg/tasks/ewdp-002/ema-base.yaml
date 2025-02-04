@@ -52,7 +52,7 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: excessive-amount
-        question: 3. To what extent do you feel that you ate an excessive amount of food?
+        question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -80,7 +80,14 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: driven
-        question: 7. While you were eating, to what extent did you feel driven or compelled to eat?
+        question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: distress
+        question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -111,7 +118,7 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: excessive-amount
-        question: 3. To what extent do you feel that you ate an excessive amount of food?
+        question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -139,7 +146,14 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: driven
-        question: 7. While you were eating, to what extent did you feel driven or compelled to eat?
+        question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: distress
+        question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -170,7 +184,7 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: excessive-amount
-        question: 3. To what extent do you feel that you ate an excessive amount of food?
+        question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -198,7 +212,14 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: driven
-        question: 7. While you were eating, to what extent did you feel driven or compelled to eat?
+        question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: distress
+        question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -229,7 +250,7 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: excessive-amount
-        question: 3. To what extent do you feel that you ate an excessive amount of food?
+        question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -257,7 +278,14 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: driven
-        question: 7. While you were eating, to what extent did you feel driven or compelled to eat?
+        question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: distress
+        question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -288,7 +316,7 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: excessive-amount
-        question: 3. To what extent do you feel that you ate an excessive amount of food?
+        question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
@@ -316,7 +344,14 @@ sections:
         max: 3
         maxLabel: (extremely)
       - key: driven
-        question: 7. While you were eating, to what extent did you feel driven or compelled to eat?
+        question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
+        type: H_SCALE
+        min: -3
+        minLabel: (not at all)
+        max: 3
+        maxLabel: (extremely)
+      - key: distress
+        question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
         minLabel: (not at all)
