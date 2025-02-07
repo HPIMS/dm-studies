@@ -1,54 +1,72 @@
 active:
   studies:
+    aims-001:
+      - d346f205d3cca9a691067c9d32d79227
+      - 1
     cppd-1:
-      - c5fc4ce17019b92322a760d2b44c7fac
-      - 7
+      - 51e5c25792d4b0562349adab979415c2
+      - 12
     cppd-2:
       - 23e28ccb00e7cf66e443f665b737e592
       - 5
     cppd-2__case:
-      - 48adb2c9526eea737267dd5b71a98b3a
-      - 7
+      - 9f133cf47f5b6e394173ee3d77ea324f
+      - 10
     cppd-2__control:
-      - 56f24a5266a5872ffcda49fa40dcfc17
-      - 7
+      - 45b1eb2aa6336ce35d3bc094c27933fa
+      - 9
     cramp:
-      - a3406b95befa6754c6f270e57cacc0f0
-      - 5
+      - fa315d77faca8a3cc8e32ccf6b024d03
+      - 9
     digi-ibd-001:
-      - 68bd6855f025a4d670ef88b44f9bb236
-      - 13
+      - 53463b5e869c77b7bb847bb9641a4315
+      - 14
     ibd-forecast:
-      - cf31346687c039cdde3099006a074bb4
-      - 25
+      - 33c43d3254b3f37dfe3f3e47c8daca13
+      - 26
+    ibs-ucla:
+      - cf116952d873fbce6ea2d1059cde0dfc
+      - 2
     ra-forecast:
-      - 87bd0b2728fe9563494d1fabd1621985
-      - 7
+      - 10497e90f4bad0e36db7ceaa768c2f6a
+      - 8
   tasks:
     cppd-1::bladder-irritants:
       - f4e5650a28a76589d6a8b5b1340cb50e
       - 2
+    cppd-1::daily-symptoms:
+      - f98021443a6f764e1a54f50ae3aba44b
+      - 1
+    cppd-1::daily-symptoms-follow-up:
+      - 449479666e5523523c7da3905e6f4d8a
+      - 1
     cppd-1::demographics:
       - d957d86bad8fe5546c08d970702a0620
       - 3
     cppd-1::general-health:
-      - 1b2fadfe0e2a550e290385737b36253b
-      - 2
+      - 58b80de5a98fe2d0be3d3e66b00fe8d4
+      - 4
     cppd-1::physical-therapy:
       - 3a2ef2a4445e8f2aa3e4306b91634029
       - 2
+    cppd-2__case::daily-check-in:
+      - 5a53f1d43b8331474dfa2c602561a04b
+      - 1
     cppd-2__case::demographics:
       - d957d86bad8fe5546c08d970702a0620
       - 3
     cppd-2__case::general-health:
-      - 1b2fadfe0e2a550e290385737b36253b
-      - 2
+      - 58b80de5a98fe2d0be3d3e66b00fe8d4
+      - 4
+    cppd-2__control::daily-check-in:
+      - 5a53f1d43b8331474dfa2c602561a04b
+      - 1
     cppd-2__control::demographics:
       - d957d86bad8fe5546c08d970702a0620
       - 3
     cppd-2__control::general-health:
-      - d574fd17369e368f6ce66f91b80404ba
-      - 2
+      - 8d8deb8cc9e1925058c82ee1ee932df3
+      - 3
     cramp::bfi-10:
       - d755746e9afdb245d38a81ca548e3eb3
       - 1
@@ -80,8 +98,8 @@ active:
       - 5d31c4b340f074672faf7f886a44a80c
       - 1
     cramp::general-health:
-      - 8b9a2533b310696403d358d7c9ee55a6
-      - 1
+      - 856e79695010efdc009488ca95ed4877
+      - 2
     cramp::intro:
       - a8bb9e6b5a32961eaf0ecf13e1e10056
       - 2
@@ -112,9 +130,6 @@ active:
     cramp::strain:
       - 9f8688a075682ba30a8068e92eaf2ea1
       - 1
-    digi-ibd-001::begin-next-phase:
-      - f2db0d3f2a6cb74dab3a7e185d63a62c
-      - 5
     digi-ibd-001::exit:
       - cb473da28623fc37293af16348546dc6
       - 1
@@ -229,12 +244,18 @@ active:
     library::nih-cpsi:
       - 0ac587c6d79b046892e6f44d1af4f2dc
       - 2
+    library::oswestry-2:
+      - 892eca6e384138a5b11d4b3c72192a30
+      - 2
     library::pcs:
       - cb9a2e1fff8ecf26d5c2cda8de9adcd6
       - 2
     library::pelvic-floor-distress-inventory-sf20:
       - 8e7f713377557facd4acd60d31a1d58d
       - 3
+    library::pfiq-7:
+      - eefd6d18c72c49642e63fe5ff62c406a
+      - 1
     library::pro-2-crohns:
       - ee3a048bc4aab59e7752bcb58df8a9f6
       - 8

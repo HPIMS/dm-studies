@@ -1,0 +1,535 @@
+key: daily-check-in
+schedule:
+  type: PERIOD
+  period: DAILY
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Daily Check-in
+sections:
+  - type: survey
+    key: health_symptoms
+    title: Health and Symptoms
+    description: ''
+    questions:
+      - key: '1'
+        question: '1. Today, did you experience any pain related to your CPP condition?'
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        options:
+          - value: abdomen
+            text: Abdomen
+          - value: pelvis
+            text: Pelvis
+          - value: vagina
+            text: Vagina
+          - value: groin
+            text: Groin(s)
+          - value: lower_back
+            text: Lower back
+          - value: hip
+            text: Hip(s)
+          - value: buttocks
+            text: Buttocks
+          - value: thigh
+            text: Thigh(s)
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: 1a_other_description
+              question: Please specify...
+              type: TEXTAREA
+      - key: 1_sub_1
+        question: 1a. Rate the severity of the pain.
+        type: H_SCALE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: abdomen
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: pelvis
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: groin
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: lower_back
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: hip
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: buttocks
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: inner_thigh
+              - section: health_symptoms
+                question: '1'
+                operator: INCLUDES
+                value: other
+        min: 1
+        minLabel: None
+        max: 10
+        maxLabel: Worst imaginable pain
+      - key: '2'
+        question: >-
+          2. Did you have to miss work or school due to your pain symptoms
+          today?
+        type: SINGLE_CHOICE
+        options:
+          - value: 'yes'
+            text: 'Yes'
+          - value: 'no'
+            text: 'No'
+          - value: n/a
+            text: N/A
+      - key: '3'
+        question: >-
+          3. How much did pain interfere with your activities (home, social, or
+          work)?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: a_little_bit
+            text: A little bit
+          - value: somewhat
+            text: Somewhat
+          - value: quite_a_bit
+            text: Quite a bit
+          - value: very_much
+            text: Very much
+      - key: '4'
+        question: '4. Today, did you experience any digestive or urinary symptoms?'
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        options:
+          - value: heartburn
+            text: Heartburn
+          - value: reflux
+            text: Reflux
+          - value: nausea
+            text: Nausea
+          - value: vomiting
+            text: Vomiting
+          - value: indigestion
+            text: Indigestion
+          - value: difficulty_swallowing
+            text: Difficulty swallowing
+          - value: upset_stomach
+            text: Upset stomach
+          - value: belly_pain
+            text: Belly pain
+          - value: bloating
+            text: Bloating
+          - value: gas
+            text: Gas
+          - value: endo_belly
+            text: Endo belly
+          - value: diarrhea
+            text: Loose stools/diarrhea
+          - value: painful_bowel_movement
+            text: Painful bowel movement
+          - value: blood_in_stool
+            text: Blood in stool
+          - value: unable_to_urinate
+            text: Unable to urinate
+          - value: painful_urination
+            text: Painful urination
+          - value: frequent_urination
+            text: Frequent urination
+      - key: 4_sub_1
+        question: 4a. Rate the severity of the symptom.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: heartburn
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: reflux
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: nausea
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: vomiting
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: indigestion
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: difficulty_swallowing
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: upset_stomach
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: belly_pain
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: bloating
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: gas
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: endo_belly
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: diarrhea
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: painful_bowel_movement
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: blood_in_stool
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: unable_to_urinate
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: painful_urination
+              - section: health_symptoms
+                question: '4'
+                operator: INCLUDES
+                value: frequent_urination
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+          - value: very_severe
+            text: Very severe
+  - type: survey
+    key: sleep
+    title: Sleep Tracking
+    description: ''
+    questions:
+      - key: sleep_prompt
+        type: DISPLAY
+        question: How was your sleep last night?
+      - key: '6'
+        question: '6. Refreshing:'
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: a_little_bit
+            text: A little bit
+          - value: somewhat
+            text: Somewhat
+          - value: quite_a_bit
+            text: Quite a bit
+          - value: very_much
+            text: Very much
+      - key: '7'
+        question: '7. Problems with sleep:'
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: a_little_bit
+            text: A little bit
+          - value: somewhat
+            text: Somewhat
+          - value: quite_a_bit
+            text: Quite a bit
+          - value: very_much
+            text: Very much
+      - key: '8'
+        question: '8. Difficulty falling asleep:'
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+          - value: a_little_bit
+            text: A little bit
+          - value: somewhat
+            text: Somewhat
+          - value: quite_a_bit
+            text: Quite a bit
+          - value: very_much
+            text: Very much
+  - type: survey
+    key: menstrual_health
+    title: Menstrual Health
+    description: Track your period
+    questions:
+      - key: '9'
+        question: 9. Do you have your period today?
+        type: YESNO_CHOICE
+      - key: 9_sub_1
+        question: 9a. How heavy is the flow?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '9'
+                operator: =
+                value: 'yes'
+        options:
+          - value: spotting
+            text: Spotting
+          - value: light_flow
+            text: Light flow
+          - value: medium_flow
+            text: Medium flow
+          - value: heavy_flow
+            text: Heavy flow
+      - key: 9_sub_2
+        question: 9b. Are you experiencing any period related symptoms?
+        description: Select all that apply.
+        type: MULTIPLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '9'
+                operator: =
+                value: 'yes'
+        options:
+          - value: dysmenorrhea
+            text: Dysmenorrhea (painful menstruation)
+          - value: bloating
+            text: Bloating
+          - value: cramps
+            text: Cramps
+          - value: breast_tenderness
+            text: Breast tenderness
+          - value: back_pain
+            text: Back pain
+          - value: hot_flashes
+            text: Hot flashes
+          - value: diarrhea
+            text: Diarrhea
+          - value: constipation
+            text: Constipation
+          - value: blood_clots
+            text: Blood clots
+      - key: 9_sub_3
+        question: 9c. Rate the severity of the symptoms.
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: dysmenorrhea
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: bloating
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: cramps
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: breast_tenderness
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: back_pain
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: hot_flashes
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: diarrhea
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: constipation
+              - section: menstrual_health
+                question: 9_sub_2
+                operator: INCLUDES
+                value: blood_clots
+        options:
+          - value: mild
+            text: Mild
+          - value: moderate
+            text: Moderate
+          - value: severe
+            text: Severe
+          - value: very_severe
+            text: Very severe
+      - key: 9_sub_1_alt
+        question: >-
+          9a. Are you experiencing any bleeding or spotting outside of your
+          normal menstrual period (breakthrough bleeding)?
+        type: SINGLE_CHOICE
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: menstrual_health
+                question: '9'
+                operator: =
+                value: 'no'
+        options:
+          - value: 'no'
+            text: 'No'
+          - value: spotting
+            text: Yes - spotting
+          - value: bleeding
+            text: Yes - bleeding
+  - type: survey
+    key: qol
+    title: How was your day?
+    description: Rate how today went.
+    questions:
+      - key: '10'
+        question: '10. Would you say your quality of day is:'
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+          - value: very_good
+            text: Very good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+      - key: '11'
+        question: 11. How would you rate your physical health today?
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+          - value: very_good
+            text: Very good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+      - key: '12'
+        question: >-
+          12. How would you rate your mental health, including your mood and
+          your ability to think?
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+          - value: very_good
+            text: Very good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+      - key: '13'
+        question: >-
+          13. How would you rate your satisfaction with your social activities
+          and relationships?
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+          - value: very_good
+            text: Very good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+      - key: '14'
+        question: >-
+          14. How well were you able to carry out your usual social activities
+          and roles today?
+        description: >-
+          Including activities at home, work and in your community,
+          family/work/friend responsibilities, etc.
+        type: SINGLE_CHOICE
+        options:
+          - value: excellent
+            text: Excellent
+          - value: very_good
+            text: Very good
+          - value: good
+            text: Good
+          - value: fair
+            text: Fair
+          - value: poor
+            text: Poor
+      - key: '15'
+        question: >-
+          15. To what extent were you able to carry out your everyday physical
+          activities today?
+        description: >-
+          Including walking, climbing stairs, carrying groceries, moving items,
+          etc.
+        type: SINGLE_CHOICE
+        options:
+          - value: completely
+            text: Completely
+          - value: mostly
+            text: Mostly
+          - value: moderately
+            text: Moderately
+          - value: a_little
+            text: A little
+          - value: not_at_all
+            text: Not at all
+      - key: '16'
+        question: >-
+          16. How often were you bothered by emotional problems such as feeling
+          anxious, depressed or irritable today?
+        type: SINGLE_CHOICE
+        options:
+          - value: never
+            text: Never
+          - value: rarely
+            text: Rarely
+          - value: sometimes
+            text: Sometimes
+          - value: most_of_the_day
+            text: Most of the day
+          - value: all_day
+            text: All day/Constantly

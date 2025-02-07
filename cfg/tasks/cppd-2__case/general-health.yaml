@@ -72,8 +72,12 @@ sections:
             condition:
               - section: substance
                 question: drink_freq
-                operator: <>
-                value: never
+                operator: IS_SET
+                AND:
+                  - section: substance
+                    question: drink_freq
+                    operator: <>
+                    value: never
       - key: smoke_100
         question: Have you smoked at least 100 cigarettes in your entire life?
         type: YESNO_CHOICE
@@ -97,11 +101,59 @@ sections:
             condition:
               - section: substance
                 question: smoking
-                operator: <>
-                value: no
+                operator: IS_SET
+                AND:
+                  - section: substance
+                    question: smoking
+                    operator: <>
+                    value: no
       - key: coffee_count
         question: On average, how many cups of coffee do you drink per day?
         type: NUMERIC
+  - type: survey
+    key: cpp_diagnosis
+    title: ""
+    description: ""
+    questions:
+      - key: cpp_diagnosis
+        question: What is your underlying diagnosis for the chronic pelvic pain?
+        descritpion: Select all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: endometriosis
+            text: Endometriosis
+          - value: adenomyosis
+            text: Adenomyosis
+          - value: uterine_fibroids
+            text: Uterine fibroids
+          - value: pelvic_congestion_syndrome
+            text: Pelvic congestion syndrome
+          - value: pelvic_floor_tension_myalgia
+            text: Pelvic floor tension myalgia
+          - value: pyriformis_syndrome
+            text: Pyriformis syndrome
+          - value: vaginismus
+            text: Vaginismus
+          - value: myofascial_syndrome
+            text: Myofascial syndrome
+          - value: adhesions
+            text: Adhesions
+          - value: urethral_syndrome
+            text: Urethral syndrome
+          - value: pelvic_floor_relaxation
+            text: Pelvic floor relaxation
+          - value: vulvodynia
+            text: Vulvodynia
+          - value: vulvar_vestibulitis_syndrome
+            text: Vulvar vestibulitis syndrome
+          - value: irritable_bowel_syndrome
+            text: Irritable bowel syndrome
+          - value: other
+            text: Other
+            inlineQuestion:
+              key: cpp_diagnosis_other_description
+              question: "Please specify:"
+              type: TEXTAREA
   - type: survey
     key: pain
     title: ""
