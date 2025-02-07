@@ -1,0 +1,33 @@
+key: actions-taken
+scorable: false
+schedule:
+  type: TIMETABLE
+  timetable: [0, 30, 90]
+  timetableUnits: DAYS
+  gracePeriod: 6 # Available Day + 6 Grace Days == 1 Week available
+  initialGracePeriod: 2 # Available Day + 2 Grace Days == 72 hrs available initially
+name: Actions Taken After PGx Testing
+sections:
+  - type: survey
+    key: actions
+    title: ""
+    description: "Please select the answer that best represents your response:"
+    questions:
+      - key: '2'
+        question: Has your doctor changed your medications based on your PGx test results or discussed plans with you to do so?
+        type: YESNO_CHOICE
+      - key: '3'
+        question: Have you changed your over-the-counter medication based on your PGx test results?
+        type: YESNO_CHOICE
+      - key: '4'
+        question: Have you shared or do you plan to share your PGx test results with your primary care doctor or other doctors involved in your care?
+        type: YESNO_CHOICE
+      - key: '5'
+        question: Have you shared or do you plan to share your test results with your pharmacist?
+        type: YESNO_CHOICE
+      - key: '6'
+        question: Have you shared or do you plan to share your test results with other health care providers (i.e., not doctors or pharmacists) involved in your care?
+        type: YESNO_CHOICE
+      - key: '7'
+        question: Have you shared or do you plan to share your test results with your family?
+        type: YESNO_CHOICE

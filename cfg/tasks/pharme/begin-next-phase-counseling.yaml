@@ -1,0 +1,49 @@
+key: begin-next-phase-counseling
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+schedule:
+  type: PERIOD
+  period: ALWAYS
+name: Stop! Click Here Only When Instructed.
+intro:
+  title: Stop!
+  description:
+    - - H4
+      - >-
+        You should only continue with this task once you have received your
+        results through pharmacist-led counseling.
+    - - BodyLarge
+      - ' '
+    - - H4
+      - - Underline
+        - Begin the next study phase.
+    - - BodyLarge
+      - >-
+        In order to begin the next phase of the study you must have received
+        your results through pharmacist-led counseling. Please continue with
+        this survey once you have completed your counseling session.
+outro:
+  title: Finished
+  description: >-
+    Thank you for sharing. If you have received your results through
+    pharmacist-led counseling, you can begin the next phase of the study. If you
+    have not, this survey will remain on your task list until you are ready to
+    start.
+sections:
+  - type: survey
+    key: '0'
+    title: Stop! Only continue when instructed to do so.
+    description: Answer this question to begin the next phase of the study.
+    questions:
+      - key: reviewed_results
+        question: Have you received your results through pharmacist-led counseling?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes
+            score: 1
+          - value: no
+            text: No
+            score: 0
