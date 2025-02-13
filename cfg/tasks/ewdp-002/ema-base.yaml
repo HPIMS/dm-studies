@@ -27,6 +27,13 @@ sections:
                 question: had-episode
                 operator: "="
                 value: "yes"
+      - key: mood
+        question: How would you rate your mood (the way that you feel) since the last time you ate?
+        type: H_SCALE
+        min: -3
+        minLabel: (extremely negative)
+        max: 3
+        maxLabel: (extremely positive)
   - type: survey
     key: episode-1
     title: Eating Episode 1
@@ -45,54 +52,54 @@ sections:
         type: TIME
         required: true
       - key: extent-overate
-        question: 2. To what extent to do you feel that you overate?
+        question: 2. To what extent to do you feel that you overate compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: excessive-amount
         question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: loss-of-control
         question: 4. While you were eating, to what extent did you feel a sense of loss of control?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: could-not-resist
         question: 5. While you were eating, to what extent did you feel that you could not resist eating?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme resistance)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (could not resist at all)
       - key: could-not-stop
         question: 6. While you were eating, to what extent did you feel that you could not stop eating once you had started?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: driven
         question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (not compelled at all)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme compulsion)
       - key: distress
         question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme comfort)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme distress)
   - type: survey
     key: episode-2
     title: Eating Episode 2
@@ -111,54 +118,54 @@ sections:
         type: TIME
         required: true
       - key: extent-overate
-        question: 2. To what extent to do you feel that you overate?
+        question: 2. To what extent to do you feel that you overate compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: excessive-amount
         question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: loss-of-control
         question: 4. While you were eating, to what extent did you feel a sense of loss of control?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: could-not-resist
         question: 5. While you were eating, to what extent did you feel that you could not resist eating?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme resistance)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (could not resist at all)
       - key: could-not-stop
         question: 6. While you were eating, to what extent did you feel that you could not stop eating once you had started?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: driven
         question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (not compelled at all)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme compulsion)
       - key: distress
         question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme comfort)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme distress)
   - type: survey
     key: episode-3
     title: Eating Episode 3
@@ -177,54 +184,54 @@ sections:
         type: TIME
         required: true
       - key: extent-overate
-        question: 2. To what extent to do you feel that you overate?
+        question: 2. To what extent to do you feel that you overate compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: excessive-amount
         question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: loss-of-control
         question: 4. While you were eating, to what extent did you feel a sense of loss of control?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: could-not-resist
         question: 5. While you were eating, to what extent did you feel that you could not resist eating?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme resistance)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (could not resist at all)
       - key: could-not-stop
         question: 6. While you were eating, to what extent did you feel that you could not stop eating once you had started?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: driven
         question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (not compelled at all)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme compulsion)
       - key: distress
         question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme comfort)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme distress)
   - type: survey
     key: episode-4
     title: Eating Episode 4
@@ -243,54 +250,54 @@ sections:
         type: TIME
         required: true
       - key: extent-overate
-        question: 2. To what extent to do you feel that you overate?
+        question: 2. To what extent to do you feel that you overate compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: excessive-amount
         question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: loss-of-control
         question: 4. While you were eating, to what extent did you feel a sense of loss of control?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: could-not-resist
         question: 5. While you were eating, to what extent did you feel that you could not resist eating?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme resistance)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (could not resist at all)
       - key: could-not-stop
         question: 6. While you were eating, to what extent did you feel that you could not stop eating once you had started?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: driven
         question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (not compelled at all)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme compulsion)
       - key: distress
         question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme comfort)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme distress)
   - type: survey
     key: episode-5
     title: Eating Episode 5
@@ -309,51 +316,51 @@ sections:
         type: TIME
         required: true
       - key: extent-overate
-        question: 2. To what extent to do you feel that you overate?
+        question: 2. To what extent to do you feel that you overate compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: excessive-amount
         question: 3. To what extent do you feel that you ate an excessive amount of food compared to what other people would eat in the same time period?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme restriction)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme overeating)
       - key: loss-of-control
         question: 4. While you were eating, to what extent did you feel a sense of loss of control?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: could-not-resist
         question: 5. While you were eating, to what extent did you feel that you could not resist eating?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme resistance)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (could not resist at all)
       - key: could-not-stop
         question: 6. While you were eating, to what extent did you feel that you could not stop eating once you had started?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (too much control)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme loss of control)
       - key: driven
         question: 7. While you were eating, to what extent did you feel driven or compelled to eat even if you weren't hungry?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (not compelled at all)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme compulsion)
       - key: distress
         question: 8. To what extent did you feel distressed, upset, or embarrassed when you ate?
         type: H_SCALE
         min: -3
-        minLabel: (not at all)
+        minLabel: (extreme comfort)
         max: 3
-        maxLabel: (extremely)
+        maxLabel: (extreme distress)
