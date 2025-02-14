@@ -13,22 +13,37 @@ platform:
   - ios
   - android
 
-minVersion: '2.2'
+minVersion: "2.2"
 capTo: 10000
 
 name: "IBD Forecast"
 
-shortDescription: The IBD Forecast study will help us learn more about how to identify and
+shortDescription:
+  The IBD Forecast study will help us learn more about how to identify and
   predict flares in the hopes of transforming IBD care.
-longDescription: The main goal of the IBD Forecast study is to help us learn how to identify
+longDescription:
+  The main goal of the IBD Forecast study is to help us learn how to identify
   and predict flares in the hopes of transforming IBD care. In the study, we collect data
   from your wearable device and through brief app-based surveys.
+
+dataview:
+  priority: HRV
+  screen:
+    - ActiveEnergy
+    - HR
+    # - HRV
+    - RestingEnergy
+    # - RHR
+    # - Sleep
+    # - SpO2
+    # - Steps
+    # - Tasks
 
 notes: []
 
 imageId: study-ibd-forecast
-animationId: ''
-videoId: ''
+animationId: ""
+videoId: ""
 
 timeResponsibility:
   time: 2
@@ -75,18 +90,18 @@ tasks:
         condition:
           type: OR
           tasks:
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_crohn
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_uc
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_pouch
-            operator: ">"
-            score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_crohn
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_uc
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_pouch
+              operator: ">"
+              score: 0
   - key: new_meds
     rank: 5
     triggers:
@@ -94,18 +109,18 @@ tasks:
         condition:
           type: OR
           tasks:
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_crohn
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_uc
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_pouch
-            operator: ">"
-            score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_crohn
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_uc
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_pouch
+              operator: ">"
+              score: 0
   - key: pro-2-crohns
     rank: 4
     triggers:
@@ -144,18 +159,18 @@ tasks:
         condition:
           type: OR
           tasks:
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_crohn
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_uc
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_pouch
-            operator: ">"
-            score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_crohn
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_uc
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_pouch
+              operator: ">"
+              score: 0
   - key: promis-gi-diarrhea
     rank: 3
     schedule:
@@ -167,18 +182,18 @@ tasks:
         condition:
           type: OR
           tasks:
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_crohn
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_uc
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_pouch
-            operator: ">"
-            score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_crohn
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_uc
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_pouch
+              operator: ">"
+              score: 0
   - key: pss-4-baseline
     rank: 2
     triggers:
@@ -186,18 +201,18 @@ tasks:
         condition:
           type: OR
           tasks:
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_crohn
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_uc
-            operator: ">"
-            score: 0   
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_pouch
-            operator: ">"
-            score: 0   
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_crohn
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_uc
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_pouch
+              operator: ">"
+              score: 0
   - key: pss-4-bi-weekly
     rank: 2
     schedule:
@@ -207,12 +222,12 @@ tasks:
       delay: 2
       delayUnits: WEEKS
     triggers:
-    - action: SHOW
-      condition:
-        - type: SCORE
-          resource: ibd-forecast::pss-4-baseline
-          operator: ">"
-          score: -1
+      - action: SHOW
+        condition:
+          - type: SCORE
+            resource: ibd-forecast::pss-4-baseline
+            operator: ">"
+            score: -1
   - key: cd-risc-10
     rank: 2
     triggers:
@@ -220,15 +235,15 @@ tasks:
         condition:
           type: OR
           tasks:
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_crohn
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_uc
-            operator: ">"
-            score: 0
-          - type: COMPLETED
-            resource: ibd-forecast::baseline_health_pouch
-            operator: ">"
-            score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_crohn
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_uc
+              operator: ">"
+              score: 0
+            - type: COMPLETED
+              resource: ibd-forecast::baseline_health_pouch
+              operator: ">"
+              score: 0
