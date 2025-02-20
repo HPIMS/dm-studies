@@ -1,0 +1,266 @@
+key: pharme
+consentId: ehive-pharme
+
+active: true
+openEnrollment: true
+visibility: private
+
+irb: STUDY-22-01404
+pi: Aniwaa Owusu-Obeng
+studyEmail: ehivepgx@mssm.edu
+
+platform:
+  - ios
+  - android
+minVersion: 2.5
+
+name: PGx App Validation Study
+
+shortDescription: >-
+  Patient Comprehension of Pharmacogenetic (PGx) Test Results Delivered by a
+  Mobile Application vs. Pharmacist-Led Counseling.
+
+longDescription: >-
+  A pharmacogenetic test investigates how your genes affect your response to
+  medications. It determines whether a medication could be an effective
+  treatment or whether it may cause side effects. In this research study, we are
+  testing a mobile app, PharMe, to share PGx results.
+
+
+  The main goal of the study is to compare patients' understanding of their
+  pharmacogenetic (PGx) test results shared through a mobile app vs.
+  pharmacist-led counseling.
+
+notes: []
+
+imageId: study-pharme
+animationId: ''
+videoId: ''
+
+timeResponsibility:
+  time: 10
+  timeUnits: minutes
+  timePeriod: monthly
+  
+tasks:
+  - key: demographics
+    rank: 10
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks
+
+  - key: brief
+    rank: 20
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks
+
+  - key: gse
+    rank: 25
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks
+
+  - key: knowledge
+    rank: 30
+    schedule:
+      type: PERIOD
+      period: ONCE
+      gracePeriod: 28 # 4 Weeks  
+
+  - key: knowledge-followup
+    rank: 50
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            # begin case
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
+            # begin control
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control 
+
+  - key: comprehension-app
+    rank: 60
+    triggers:
+      - action: SHOW
+        condition:
+          # begin case
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: case
+
+  - key: comprehension-counseling
+    rank: 60
+    triggers:
+      - action: SHOW
+        condition:
+          # begin control
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: control
+
+  - key: factor-adapted
+    rank: 70
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            # begin case
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
+            # begin control
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control
+
+  - key: satisfaction-app
+    rank: 80
+    triggers:
+      - action: SHOW
+        condition:
+          # begin case
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: case
+
+  - key: satisfaction-counseling
+    rank: 80
+    triggers:
+      - action: SHOW
+        condition:
+          # begin control
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: control
+
+  - key: attitudes
+    rank: 90
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            # begin case
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
+            # begin control
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control
+
+  - key: actions-taken
+    rank: 100
+    triggers:
+      - action: SHOW
+        condition:
+          type: OR
+          tasks:
+            # begin case
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: case
+            # begin control
+            - type: CALCULATION
+              fn: questionnaire-response-value
+              args:
+                questionnaire: pharme::arm
+                section: '0'
+                question: arm_selection
+                operator: =
+                value: control
+
+  - key: u-mars
+    rank: 110
+    triggers:
+      - action: SHOW
+        condition:
+          # begin case
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: case
+
+  - key: u-mars-counseling
+    rank: 110
+    triggers:
+      - action: SHOW
+        condition:
+          # begin control
+          - type: CALCULATION
+            fn: questionnaire-response-value
+            args:
+              questionnaire: pharme::arm
+              section: '0'
+              question: arm_selection
+              operator: =
+              value: control

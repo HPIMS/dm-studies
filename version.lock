@@ -17,7 +17,7 @@ active:
       - 9
     cramp:
       - fa315d77faca8a3cc8e32ccf6b024d03
-      - 9
+      - 10
     digi-ibd-001:
       - 53463b5e869c77b7bb847bb9641a4315
       - 14
@@ -27,6 +27,9 @@ active:
     ibs-ucla:
       - cf116952d873fbce6ea2d1059cde0dfc
       - 2
+    pharme:
+      - f2a2067d5dd1effdf0e6445d36368c6f
+      - 1
     ra-forecast:
       - 10497e90f4bad0e36db7ceaa768c2f6a
       - 8
@@ -107,8 +110,8 @@ active:
       - 1b221ab2af1a04654912d292ebc94458
       - 2
     cramp::menstrual-pain:
-      - 989f707678401206a1d8c64881f557c2
-      - 1
+      - 16f53b65289b6b5f7d6e18ce1d5b6337
+      - 2
     cramp::post-menstruation:
       - 253b6ecdbeb9e262465d3aa70acdc6a0
       - 1
@@ -122,8 +125,8 @@ active:
       - c9d41c284687aa4c2da42601a61212b3
       - 1
     cramp::rsa:
-      - 3e7ce51a0961c06a779233d1315e6da6
-      - 1
+      - 55610ac092389c200ed84a35c8cf5149
+      - 2
     cramp::social:
       - cb3e7830c9d55c0f929c18e0f92e1a4e
       - 1
@@ -226,6 +229,9 @@ active:
     ibd-forecast::pss-4-bi-weekly:
       - 98a4e800b0a036f8c90fab0983a3329a
       - 8
+    library::brief:
+      - d88a56f3b96b0015e24db2f8d8cf0aee
+      - 1
     library::cd-risc-10:
       - d2a7b8f426dca48d75b135959c22113a
       - 6
@@ -310,6 +316,45 @@ active:
     library::sibdq:
       - a58ca31399f2231f577be66f908ee4ff
       - 6
+    pharme::actions-taken:
+      - 81387e5494b5b53a7fe029230509c1bc
+      - 1
+    pharme::attitudes:
+      - 2aab71187192c484bd590a01838667a1
+      - 1
+    pharme::comprehension-app:
+      - 9e19b685b964e72a2e326d0c8aa0d7a1
+      - 1
+    pharme::comprehension-counseling:
+      - 95a87b9e9abf3dc312c5beb37bacac92
+      - 1
+    pharme::demographics:
+      - e64a9e7878ee743ac539e36f65566452
+      - 1
+    pharme::factor-adapted:
+      - b27f292d26eff918c9f1443431941ea3
+      - 1
+    pharme::gse:
+      - 84ece93bfbea8a0dcc16dbdc40cd40b9
+      - 1
+    pharme::knowledge:
+      - c72e682b16b8a74f4c569b8a614d5565
+      - 1
+    pharme::knowledge-followup:
+      - 71367bd090b6681b583bea630f8b2c7c
+      - 1
+    pharme::satisfaction-app:
+      - 5a3948b5c1c0040940982484c5bb117c
+      - 1
+    pharme::satisfaction-counseling:
+      - ba872422e42e649f20f8bca0e90bb48d
+      - 1
+    pharme::u-mars:
+      - 3e55805b350b3c369880fcf363757aff
+      - 1
+    pharme::u-mars-counseling:
+      - cfa27229efd4575c4050169ac8ca9ed9
+      - 1
     ra-forecast::baseline_demographics:
       - 60e2fba37ab5cbed583b96e98d558d1f
       - 2
@@ -428,8 +473,8 @@ inactive:
       - 09edeaf2118e4019b753261926b21628
       - 1
     library::rsa:
-      - 1b6033fd71276bc4b5b49ca7789388bf
-      - 1
+      - 5d0892b51bbb6105b10015be714b5140
+      - 2
     library::sccai:
       - 33b3921457bcc91e6b98372adf1fd0ab
       - 5
@@ -441,6 +486,12 @@ inactive:
       - 1
     library::ucls-ls:
       - 88c44addbde87a005d719b570788706a
+      - 1
+    pharme::begin-next-phase-app:
+      - bd781c92f5fe7a94a355ce106f827117
+      - 1
+    pharme::begin-next-phase-counseling:
+      - 82229ec274d9173e3f47f365e12a998e
       - 1
     warrior-shield::daily-check-in:
       - 1f27ffb3982a88508ee2d1a185c6d506

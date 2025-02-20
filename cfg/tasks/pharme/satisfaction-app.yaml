@@ -1,0 +1,118 @@
+key: satisfaction-app
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: MSHS
+  instrument: Based on adapted GCSS (Biesecker et al., 2018) and Haga et al., 2017; in general, added fifth "neural" option
+  version: "1"
+  references:
+    - "Biesecker, B. B., Lewis, K. L., Umstead, K. L., Johnston, J. J., Turbitt, E., Fishler, K. P., Patton, J. H., Miller, I. M., Heidlebaugh, A. R., & Biesecker, L. G. (2018). Web Platform vs In-Person Genetic Counselor for Return of Carrier Results From Exome Sequencing: A Randomized Clinical Trial. JAMA Internal Medicine, 178(3), 338–346. https://doi.org/10.1001/jamainternmed.2017.8049"
+    - "Haga, S. B., Moaddeb, J., Mills, R., & Voora, D. (2017). Assessing feasibility of delivering pharmacogenetic testing in a community pharmacy setting. Pharmacogenomics, 18(4), 327–335. https://doi.org/10.2217/pgs-2016-0175"
+schedule:
+  type: PERIOD
+  period: ONCE
+  gracePeriod: 6 # Available Day + 6 Grace Days == 1 week available
+name: Satisfaction with Test Result Communication
+sections:
+  - type: survey
+    key: satisfaction
+    title: ""
+    description: "Please select the answer that best represents your response."
+    questions:
+      - key: '1'
+        question: I feel better about my health after getting my PGx result(s) back.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: '2_app'
+        question: I feel my time spent with the PharMe app was worthwhile.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: '3'
+        question: The result session helped me to process the information about my PGx result(s).
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: '4'
+        question: I learned new information about the medications I am currently taking.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: '5'
+        question: I learned new information about the medications I may or may not need to take in the future.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
