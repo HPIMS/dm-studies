@@ -210,6 +210,9 @@ async function processStudies(distPath) {
   await processTasks(distPath);
   await processStudies(distPath);
 
+  // To keep legacy code working during the transition, copy the output to the old v4 dir.
+  fs.cpSync(distPath, path.join(__dirname, "../dist/v4"), { recursive: true });
+
   // Create deployment zip
   const zip = new JSZip();
   const zipFolder = zip.folder("study-configuration");
