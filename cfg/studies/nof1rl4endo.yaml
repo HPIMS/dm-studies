@@ -45,6 +45,9 @@ timeResponsibility:
   timeUnits: minutes
   timePeriod: daily
 
+dataview:
+  priority: "DisplayValue:study=nof1rl4endo;questionnaire=exercice-recommendation;page=value;question=current;answerField=ValueString"
+
 tasks:
   - key: daily-morning-pain-tracking
     triggers:
