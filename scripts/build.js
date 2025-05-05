@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const YAML = require("yaml");
+const JSZip = require("jszip");
 
 const log = require("./helpers/log");
 const cleandir = require("./helpers/cleandir");
@@ -17,16 +18,17 @@ const versions = YAML.parse(
   })
 );
 
-async function processTasks(distDir) {
+async function processTasks(distPath) {
   const tasks = Object.keys(versions.active.tasks);
-  const indexes = { surveys: [], multimedia: [], interventions: [] };
+  const index = [];
 
   const executors = tasks.map((compositeKey) => async () => {
     const [, groupKey, taskKey] = compositeKey.match(/^(.*?)::(.*)/);
     const [, version] = versions.active.tasks[compositeKey];
     const task = await getTaskFile(groupKey, `${taskKey}.yaml`);
 
-    // in v3 videos and interventions are compiled into their own subdirectories.
+    task.version = version;
+
     const taskType = task.sections.reduce((typ, sec) => {
       if (!typ || sec.type === typ) {
         return sec.type;
@@ -34,29 +36,45 @@ async function processTasks(distDir) {
       return "composite";
     }, undefined);
 
-    if (taskType === "video" || taskType === "intervention") {
-      Object.assign(task, { ...task.sections[0] });
-      delete task.type;
-      delete task.sections;
-    }
+    // Massage the task configuration to be more usable by the client.
+    task.sections = task.sections.map((section) => {
+      if (section.type !== "survey") return section;
 
-    const subdir =
-      taskType === "survey"
-        ? "surveys"
-        : taskType === "video"
-        ? "multimedia"
-        : taskType === "intervention"
-        ? "interventions"
-        : undefined;
-
-    // If the task type isn't valid for this build version, exit.
-    if (!subdir) return;
-
-    task.version = version;
+      // We don't need to do anything special for the section types that
+      // are NOT surveys, so only continue if we have a survey type here.
+      const { key: sectionKey, questions = [], ...sectionRest } = section;
+      return {
+        key: sectionKey,
+        ...sectionRest,
+        questions: questions.map((question) => {
+          const {
+            key: questionKey,
+            question: title,
+            options,
+            ...questionRest
+          } = question;
+          // We add the sectionKey and questionKey directly onto the
+          // config for each question so that the questionnaire component
+          // knows exactly which field it's dealing with.
+          return {
+            sectionKey,
+            questionKey,
+            title,
+            ...questionRest,
+            options:
+              options &&
+              options.map((option) => {
+                const { value: key, text: label, ...optionRest } = option;
+                return { key, label, ...optionRest };
+              }),
+          };
+        }),
+      };
+    });
 
     // Write the task JSON
-    fs.writeFileSync(
-      path.join(distDir, subdir, `${compositeKey}.json`),
+    await fs.promises.writeFile(
+      path.join(distPath, "tasks", `${compositeKey}.json`),
       JSON.stringify({ ...task, key: compositeKey, type: taskType })
     );
 
@@ -67,27 +85,19 @@ async function processTasks(distDir) {
       name: task.name,
       version,
     };
-    indexes[subdir].push(indexRec);
+    index.push(indexRec);
   });
 
   await waterfall(executors);
 
   // Write the task index file
-  fs.writeFileSync(
-    path.join(distDir, "surveys", "index.json"),
-    JSON.stringify(indexes.surveys)
-  );
-  fs.writeFileSync(
-    path.join(distDir, "multimedia", "index.json"),
-    JSON.stringify(indexes.multimedia)
-  );
-  fs.writeFileSync(
-    path.join(distDir, "interventions", "index.json"),
-    JSON.stringify(indexes.interventions)
+  await fs.promises.writeFile(
+    path.join(distPath, "tasks", "index.json"),
+    JSON.stringify(index)
   );
 }
 
-async function processStudies(distDir) {
+async function processStudies(distPath) {
   const studies = Object.keys(versions.active.studies);
   const index = [];
 
@@ -134,7 +144,6 @@ async function processStudies(distDir) {
           name: cfg.name,
           schedule: cfg.schedule,
           timeEstimate: cfg.timeEstimate,
-          taskType,
           version,
         };
         // If we are using an object for the task definition, apply any overrides.
@@ -149,19 +158,20 @@ async function processStudies(distDir) {
 
     study.tasks = tasks;
 
-    fs.writeFileSync(
-      path.join(distDir, "studies", `${studyKey}.json`),
+    await fs.promises.writeFile(
+      path.join(distPath, "studies", `${studyKey}.json`),
       JSON.stringify(study)
     );
 
     // Build the study index record.
     const indexRec = {
+      key: studyKey,
       studyKey,
       name: study.name,
       shortDescription: study.shortDescription,
       visibility: study.visibility,
-      openEnrollment: study.openEnrollment,
       minVersion: study.minVersion,
+      openEnrollment: study.openEnrollment,
       timeResponsibility: study.timeResponsibility,
       imageId: study.imageId,
       version: study.version,
@@ -173,8 +183,8 @@ async function processStudies(distDir) {
 
     // Move the consent to dist
     const consent = await getConsentFile(`${studyKey}.json`);
-    fs.writeFileSync(
-      path.join(distDir, "consents", `${studyKey}.json`),
+    await fs.promises.writeFile(
+      path.join(distPath, "consents", `${studyKey}.json`),
       JSON.stringify(consent)
     );
   });
@@ -182,23 +192,59 @@ async function processStudies(distDir) {
   await waterfall(executors);
 
   // Write the study index file
-  fs.writeFileSync(
-    path.join(distDir, "studies", "index.json"),
+  await fs.promises.writeFile(
+    path.join(distPath, "studies", "index.json"),
     JSON.stringify(index)
   );
 }
 
 (async function build() {
-  log.info("Building V3 ...");
-  const distDir = path.join(__dirname, "../dist/v3");
-  await mkdir(distDir);
-  cleandir(distDir);
-  await mkdir(path.join(distDir, "consents"));
-  await mkdir(path.join(distDir, "studies"));
-  await mkdir(path.join(distDir, "surveys"));
-  await mkdir(path.join(distDir, "interventions"));
-  await mkdir(path.join(distDir, "multimedia"));
+  const distPath = path.join(__dirname, "../dist/study-configuration");
 
-  await processTasks(distDir);
-  await processStudies(distDir);
+  await mkdir(distPath);
+  cleandir(distPath);
+  await mkdir(path.join(distPath, "consents"));
+  await mkdir(path.join(distPath, "studies"));
+  await mkdir(path.join(distPath, "tasks"));
+
+  await processTasks(distPath);
+  await processStudies(distPath);
+
+  // To keep legacy code working during the transition, copy the output to the old v4 dir.
+  fs.cpSync(distPath, path.join(__dirname, "../dist/v4"), { recursive: true });
+
+  // Create deployment zip
+  const zip = new JSZip();
+  const zipFolder = zip.folder("study-configuration");
+
+  // Add the folder contents to the zip
+  await addFolderToZip(zip, distPath, zipFolder);
+
+  // Generate the zip file and save it
+  const zipContent = await zip.generateAsync({ type: "nodebuffer" });
+  await fs.promises.writeFile(
+    path.join(__dirname, "../dist/study-configuration.zip"),
+    zipContent
+  );
 })();
+
+// Thanks chatgpt
+async function addFolderToZip(zip, folderPath, zipFolder) {
+  const files = await fs.promises.readdir(folderPath);
+
+  for (const fileName of files) {
+    const filePath = path.join(folderPath, fileName);
+    const stat = await fs.promises.stat(filePath);
+
+    if (stat.isDirectory()) {
+      // Create a folder in the zip
+      const newFolder = zipFolder.folder(fileName);
+      // Recursively add subfolders and files
+      await addFolderToZip(zip, filePath, newFolder);
+    } else {
+      // Read the file content and add it to the zip
+      const fileData = await fs.promises.readFile(filePath);
+      zipFolder.file(fileName, fileData);
+    }
+  }
+}

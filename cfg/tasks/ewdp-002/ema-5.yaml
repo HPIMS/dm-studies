@@ -1,0 +1,10 @@
+key: ema-5
+schedule:
+  type: PERIOD
+  period: MOMENTARY
+  timeOfDay: [["2000", "2159"]]
+  randomize: notification
+  randmizationEdge: leading
+  minLifetime: 1800
+  maxLifetime: 1800
+_extends: ema-base

@@ -1,29 +1,44 @@
 active:
   studies:
+    aims-001:
+      - d346f205d3cca9a691067c9d32d79227
+      - 1
     cppd-1:
-      - 0a208037703965c73b86f8f821e33cf6
-      - 9
+      - 51e5c25792d4b0562349adab979415c2
+      - 12
     cppd-2:
       - 23e28ccb00e7cf66e443f665b737e592
       - 5
     cppd-2__case:
       - 9f133cf47f5b6e394173ee3d77ea324f
-      - 9
+      - 10
     cppd-2__control:
       - 45b1eb2aa6336ce35d3bc094c27933fa
       - 9
     cramp:
       - fa315d77faca8a3cc8e32ccf6b024d03
-      - 9
+      - 10
     digi-ibd-001:
-      - 68bd6855f025a4d670ef88b44f9bb236
-      - 13
+      - 53463b5e869c77b7bb847bb9641a4315
+      - 14
+    ewdp-001:
+      - 426cda994e8682d1deefebbab95c3bbf
+      - 1
+    ewdp-002:
+      - fed05a2def3e7f105313076206ba9c21
+      - 1
     ibd-forecast:
       - 33c43d3254b3f37dfe3f3e47c8daca13
       - 26
+    ibs-ucla:
+      - cf116952d873fbce6ea2d1059cde0dfc
+      - 2
+    pharme:
+      - f2a2067d5dd1effdf0e6445d36368c6f
+      - 1
     ra-forecast:
-      - 87bd0b2728fe9563494d1fabd1621985
-      - 7
+      - 10497e90f4bad0e36db7ceaa768c2f6a
+      - 8
   tasks:
     cppd-1::bladder-irritants:
       - f4e5650a28a76589d6a8b5b1340cb50e
@@ -38,8 +53,8 @@ active:
       - d957d86bad8fe5546c08d970702a0620
       - 3
     cppd-1::general-health:
-      - 20a47026b7e6bfc33b0d69517f72f8c0
-      - 3
+      - 58b80de5a98fe2d0be3d3e66b00fe8d4
+      - 4
     cppd-1::physical-therapy:
       - 3a2ef2a4445e8f2aa3e4306b91634029
       - 2
@@ -50,8 +65,8 @@ active:
       - d957d86bad8fe5546c08d970702a0620
       - 3
     cppd-2__case::general-health:
-      - 20a47026b7e6bfc33b0d69517f72f8c0
-      - 3
+      - 58b80de5a98fe2d0be3d3e66b00fe8d4
+      - 4
     cppd-2__control::daily-check-in:
       - 5a53f1d43b8331474dfa2c602561a04b
       - 1
@@ -101,8 +116,8 @@ active:
       - 1b221ab2af1a04654912d292ebc94458
       - 2
     cramp::menstrual-pain:
-      - 989f707678401206a1d8c64881f557c2
-      - 1
+      - 16f53b65289b6b5f7d6e18ce1d5b6337
+      - 2
     cramp::post-menstruation:
       - 253b6ecdbeb9e262465d3aa70acdc6a0
       - 1
@@ -116,17 +131,14 @@ active:
       - c9d41c284687aa4c2da42601a61212b3
       - 1
     cramp::rsa:
-      - 3e7ce51a0961c06a779233d1315e6da6
-      - 1
+      - 55610ac092389c200ed84a35c8cf5149
+      - 2
     cramp::social:
       - cb3e7830c9d55c0f929c18e0f92e1a4e
       - 1
     cramp::strain:
       - 9f8688a075682ba30a8068e92eaf2ea1
       - 1
-    digi-ibd-001::begin-next-phase:
-      - f2db0d3f2a6cb74dab3a7e185d63a62c
-      - 5
     digi-ibd-001::exit:
       - cb473da28623fc37293af16348546dc6
       - 1
@@ -193,6 +205,21 @@ active:
     digi-ibd-001::which-ibd:
       - 47adf4bb6cacb79279848e2fe1852e97
       - 5
+    ewdp-002::ema-1:
+      - cb3ce15f5324cf50b9f7291c99ca9646
+      - 1
+    ewdp-002::ema-2:
+      - c126eb09e00f5a823607c6fbfc0681df
+      - 1
+    ewdp-002::ema-3:
+      - d1cc272327e5e728e13e589a9b054801
+      - 1
+    ewdp-002::ema-4:
+      - 825b109699edadc9a5b7297a8ff6e840
+      - 1
+    ewdp-002::ema-5:
+      - 76a6a7074c8c0be5454a88d964805bac
+      - 1
     ibd-forecast::baseline_demographics:
       - 416ded8282400cadab850e795b4855ed
       - 8
@@ -223,6 +250,9 @@ active:
     ibd-forecast::pss-4-bi-weekly:
       - 98a4e800b0a036f8c90fab0983a3329a
       - 8
+    library::brief:
+      - d88a56f3b96b0015e24db2f8d8cf0aee
+      - 1
     library::cd-risc-10:
       - d2a7b8f426dca48d75b135959c22113a
       - 6
@@ -241,12 +271,18 @@ active:
     library::nih-cpsi:
       - 0ac587c6d79b046892e6f44d1af4f2dc
       - 2
+    library::oswestry-2:
+      - 892eca6e384138a5b11d4b3c72192a30
+      - 2
     library::pcs:
       - cb9a2e1fff8ecf26d5c2cda8de9adcd6
       - 2
     library::pelvic-floor-distress-inventory-sf20:
       - 8e7f713377557facd4acd60d31a1d58d
       - 3
+    library::pfiq-7:
+      - eefd6d18c72c49642e63fe5ff62c406a
+      - 1
     library::pro-2-crohns:
       - ee3a048bc4aab59e7752bcb58df8a9f6
       - 8
@@ -301,6 +337,45 @@ active:
     library::sibdq:
       - a58ca31399f2231f577be66f908ee4ff
       - 6
+    pharme::actions-taken:
+      - 81387e5494b5b53a7fe029230509c1bc
+      - 1
+    pharme::attitudes:
+      - 2aab71187192c484bd590a01838667a1
+      - 1
+    pharme::comprehension-app:
+      - 9e19b685b964e72a2e326d0c8aa0d7a1
+      - 1
+    pharme::comprehension-counseling:
+      - 95a87b9e9abf3dc312c5beb37bacac92
+      - 1
+    pharme::demographics:
+      - e64a9e7878ee743ac539e36f65566452
+      - 1
+    pharme::factor-adapted:
+      - b27f292d26eff918c9f1443431941ea3
+      - 1
+    pharme::gse:
+      - 84ece93bfbea8a0dcc16dbdc40cd40b9
+      - 1
+    pharme::knowledge:
+      - c72e682b16b8a74f4c569b8a614d5565
+      - 1
+    pharme::knowledge-followup:
+      - 71367bd090b6681b583bea630f8b2c7c
+      - 1
+    pharme::satisfaction-app:
+      - 5a3948b5c1c0040940982484c5bb117c
+      - 1
+    pharme::satisfaction-counseling:
+      - ba872422e42e649f20f8bca0e90bb48d
+      - 1
+    pharme::u-mars:
+      - 3e55805b350b3c369880fcf363757aff
+      - 1
+    pharme::u-mars-counseling:
+      - cfa27229efd4575c4050169ac8ca9ed9
+      - 1
     ra-forecast::baseline_demographics:
       - 60e2fba37ab5cbed583b96e98d558d1f
       - 2
@@ -333,6 +408,9 @@ inactive:
       - 1
     digi-ibd-001::schedule-labs:
       - ce84559a670d6ee8754f4c3e0ceb3371
+      - 1
+    ewdp-002::ema-base:
+      - 35032a386349c85cec8c817b4dac1661
       - 1
     hpi-decode-bp::bp-measurement:
       - 45359e7a6f7b1d7c35a0c05f66f131b0
@@ -419,8 +497,8 @@ inactive:
       - 09edeaf2118e4019b753261926b21628
       - 1
     library::rsa:
-      - 1b6033fd71276bc4b5b49ca7789388bf
-      - 1
+      - 5d0892b51bbb6105b10015be714b5140
+      - 2
     library::sccai:
       - 33b3921457bcc91e6b98372adf1fd0ab
       - 5
@@ -432,6 +510,12 @@ inactive:
       - 1
     library::ucls-ls:
       - 88c44addbde87a005d719b570788706a
+      - 1
+    pharme::begin-next-phase-app:
+      - bd781c92f5fe7a94a355ce106f827117
+      - 1
+    pharme::begin-next-phase-counseling:
+      - 82229ec274d9173e3f47f365e12a998e
       - 1
     warrior-shield::daily-check-in:
       - 1f27ffb3982a88508ee2d1a185c6d506

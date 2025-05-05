@@ -1,0 +1,126 @@
+key: comprehension-app
+scorable: false
+schedule:
+  type: TIMETABLE
+  timetable: [0, 30, 90]
+  timetableUnits: DAYS
+  gracePeriod: 6 # Available Day + 6 Grace Days == 1 Week available
+  initialGracePeriod: 2 # Available Day + 2 Grace Days == 72 hrs available initially
+name: Test Result Comprehension
+sections: 
+  - type: survey
+    key: group_1
+    title: Overall Comprehension
+    description: "Please select the answer that best represents your response. For questions regarding your personal test results, feel free to refer to the PharMe app."
+    questions:
+      - key: subjective_app
+        question: The information conveyed in the PharMe app was easy to understand
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+          - value: disagree
+            text: Disagree
+          - value: agree
+            text: Agree
+          - value: strongly_agree
+            text: Strongly agree
+      - key: objective_1
+        question: To find out whether a medication is right for you, should your doctor also consider additional factors, not only your genetics?
+        type: SINGLE_CHOICE
+        options:
+          - value: yes
+            text: Yes, additional factors and my genetics should be considered
+          - value: no
+            text: No, only my genetics should be considered
+      - key: objective_2_app
+        question: Based on your PGx test results from the PharMe app; should you consult your care provider before making changes to your medication?
+        type: SINGLE_CHOICE
+        options:
+          - value: no
+            text: No, I should use this information to immediately change my treatment on my own
+          - value: yes
+            text: Yes, I should to consult a care provider first before changing anything on my own
+      - key: objective_3
+        question: Which of the following genes is not included in your PGx test results?
+        type: SINGLE_CHOICE
+        options:
+          - value: CYP2C19
+            text: CYP2C19
+          - value: CYP2C9
+            text: CYP2C9
+          - value: SLCO1B1
+            text: SLCO1B1
+          - value: MTHFR
+            text: MTHFR
+          - value: DPYD
+            text: DPYD
+  - type: survey
+    key: group_2
+    title: Comprehension of Specific Results
+    description: ""
+    questions:
+      - key: objective_4
+        question: "As best as you can, please select your phenotype for CYP2C9:"
+        type: SINGLE_CHOICE
+        options:
+          - value: normal
+            text: Normal metabolizer
+          - value: intermediate
+            text: Intermediate metabolizer
+          - value: poor
+            text: Poor metabolizer
+          - value: Indeterminate
+            text: indeterminate
+          - value: not_tested
+            text: Not tested
+      - key: objective_5
+        question: According to your PGx test result, if you ever needed to take the medication ibuprofen, could you take it at standard dosage?
+        type: YESNO_CHOICE
+      - key: objective_6
+        question: "As best as you can, please select your phenotype for SLCO1B1:"
+        type: SINGLE_CHOICE
+        options:
+          - value: increased
+            text: Increased function
+          - value: normal
+            text: Normal function
+          - value: decreased
+            text: Decreased function
+          - value: poor
+            text: Poor function
+          - value: indeterminate
+            text: Indeterminate
+          - value: not_tested
+            text: Not tested
+      - key: objective_7
+        question: According to your PGx test result, if you ever needed to take the medication simvastatin, could you take it at standard dosage?
+        type: YESNO_CHOICE
+      - key: objective_8
+        question: "As best as you can, please select your phenotype for CYP2C19:"
+        type: SINGLE_CHOICE
+        options:
+          - value: ultrarapid
+            text: Ultrarapid metabolizer
+          - value: rapid
+            text: Rapid metabolizer
+          - value: normal
+            text: Normal metabolizer
+          - value: intermediate
+            text: Intermediate metabolizer
+          - value: likely_intermediate
+            text: Likely intermediate metabolizer
+          - value: poor
+            text: Poor metabolizer
+          - value: likely_poor
+            text: Likely poor metabolizer
+          - value: indeterminate
+            text: Indeterminate
+          - value: not_tested
+            text: Not tested
+      - key: objective_9
+        question: According to your PGx test result, if you ever needed to take the medication citalopram, could you take it at standard dosage?
+        type: YESNO_CHOICE
+      - key: objective_10
+        question: According to your PGx test result, if you ever needed to take the medication clopidogrel, could you take it at standard dosage?
+        type: YESNO_CHOICE

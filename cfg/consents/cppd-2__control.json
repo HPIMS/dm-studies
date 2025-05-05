@@ -1,5 +1,5 @@
 {
-  "key": "ehive-cppd-2__control",
+  "key": "cppd-2__control",
   "title": "CPP Tracker",
   "timeEstimate": { "time": 15, "timeUnits": "minutes" },
   "contact": {
@@ -7,7 +7,7 @@
     "email": "ehivecpp@mssm.edu"
   },
   "dates": {
-    "effectiveAt": "2023-10-06T00:00:00.000Z",
+    "effectiveAt": "2024-04-08T00:00:00.000Z",
     "effectiveUntil": "2025-09-05T23:59:59.0Z"
   },
   "intro": [
@@ -50,6 +50,7 @@
   },
   "options": [
     {
+      "key": "key-1",
       "type": "single",
       "title": "Future Contact",
       "summary": "The researchers may wish to use your personal contact information to contact you in the future. Do you give the researchers permission to contact you in the future to request the collection of additional information about you, discuss how your private information, study data and/or samples might be used, or discuss possible participation in another research study?",
@@ -58,6 +59,7 @@
       "reject": "No, I do not consent"
     },
     {
+      "key": "key-2",
       "type": "single",
       "title": "Email",
       "summary": "If you consent to future contact, do you agree to being contacted by email?",
@@ -66,6 +68,7 @@
       "reject": "No or N/A"
     },
     {
+      "key": "key-3",
       "type": "single",
       "title": "Phone",
       "summary": "If you consent to future contact, do you agree to being contacted by phone?",
@@ -91,7 +94,7 @@
       "BodyLarge",
       [
         ["Italic", "Form Version Date: "],
-        ["Text", "September 13, 2023"]
+        ["Text", "March 15, 2024"]
       ]
     ],
     [
@@ -303,7 +306,7 @@
         ["H3", "COSTS OR PAYMENTS THAT MAY RESULT FROM PARTICIPATION"],
         [
           "BodyLarge",
-          "Being in this study will not cost you anything extra. If you agree to take part in this study, you will be paid up to $100 for your time and effort. You will receive $15 for each 2-week period of data collection and another $10 for the final week of data collection (total study duration is 13 weeks). If you withdraw before completing the study, payments will be pro-rated to include only completed periods. Payment will be in the form of an electronic gift card sent to your email."
+          "Being in this study will not cost you anything extra. If you agree to take part in this study, you will be paid up to $120 for your time and effort. You will receive $15 for each 2-week period of data collection, $10 for the final week of data collection (total study duration is 13 weeks) and another $20 if you are at least 80% compliant with study tasks. If you withdraw before completing the study, payments will be pro-rated to include only completed periods. Payment will be in the form of an electronic gift card sent to your email."
         ],
         [
           "BodyLarge",
@@ -392,7 +395,7 @@
         ],
         [
           "BodyLarge",
-          "If you decide you don’t want your data to be used for research anymore, you can contact the researcher and ask to have your data withdrawn or labeled so that they will not to be used in additional projects or shared. If your data has already been shared with researchers, those researchers will be asked to stop using them. However, if any data has already been shared without your identity or a linking code, it won’t be possible to retrieve them. Data that has already been used will not be affected by your decision. If your data has already been deposited in an external repository, the study team will request that your data be removed."
+          "If you decide you don't want your data to be used for research anymore, you can contact the researcher and ask to have your data withdrawn or labeled so that they will not to be used in additional projects or shared. If your data has already been shared with researchers, those researchers will be asked to stop using them. However, if any data has already been shared without your identity or a linking code, it won't be possible to retrieve them. Data that has already been used will not be affected by your decision. If your data has already been deposited in an external repository, the study team will request that your data be removed."
         ],
         [
           "BodyLarge",

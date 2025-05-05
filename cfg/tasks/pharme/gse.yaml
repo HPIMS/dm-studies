@@ -1,0 +1,187 @@
+key: gse
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: Schwarzer & Jerusalem, 1995
+  instrument: General Self-Efficacy Scale
+  version: "1"
+  references:
+    - "Schwarzer, R., & Jerusalem, M. (1995). Generalized Self-Efficacy scale. In J. Weinman, S. Wright, & M. Johnston, Measures in health psychology: A user's portfolio. Causal and Control Beliefs (pp. 35-37). NFER-NELSON."
+schedule:
+  type: PERIOD
+  period: ONCE
+  gracePeriod: 28 # 4 Weeks
+name: Self-Efficacy
+sections:
+  - type: survey
+    key: group_1
+    title: ""
+    description: ""
+    questions:
+      - key: gse_1
+        question: I can always manage to solve difficult problems if I try hard enough.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_2
+        question: If someone opposes me, I can find the means and ways to get what I want.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_3
+        question: It is easy for me to stick to my aims and accomplish my goals.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_4
+        question: I am confident that I could deal efficiently with unexpected events.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_5
+        question: Thanks to my resourcefulness, I know how to handle unforeseen situations.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+  - type: survey
+    key: group_2
+    title: ""
+    description: ""
+    questions:
+      - key: gse_6
+        question: I can solve most problems if I invest the necessary effort.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_7
+        question: I can remain calm when facing difficulties because I can rely on my coping abilities.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_8
+        question: When I am confronted with a problem, I can usually find several solutions.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_9
+        question: If I am in trouble, I can usually think of a solution.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4
+      - key: gse_10
+        question: I can usually handle whatever comes my way.
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all_true
+            text: Not at all true
+            score: 1
+          - value: hardly_true
+            text: Hardly true
+            score: 2
+          - value: moderately_true
+            text: Moderately true
+            score: 3
+          - value: exactly_true
+            text: Exactly true
+            score: 4

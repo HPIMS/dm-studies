@@ -1,5 +1,5 @@
 {
-  "key": "ehive-cppd-1",
+  "key": "cppd-1",
   "title": "d²prom PT",
   "timeEstimate": { "time": 15, "timeUnits": "minutes" },
   "contact": {
@@ -7,7 +7,7 @@
     "email": "ehivecpp@mssm.edu"
   },
   "dates": {
-    "effectiveAt": "2023-10-06T00:00:00.000Z",
+    "effectiveAt": "2024-08-13T00:00:00.000Z",
     "effectiveUntil": "2025-09-05T23:59:59.0Z"
   },
   "intro": [
@@ -35,6 +35,7 @@
   ],
   "options": [
     {
+      "key": "key-1",
       "type": "single",
       "title": "Future Contact",
       "summary": "The researchers may wish to use your personal contact information to contact you in the future. Do you give the researchers permission to contact you in the future to request the collection of additional information about you, discuss how your private information, study data and/or samples might be used, or discuss possible participation in another research study?",
@@ -43,6 +44,7 @@
       "reject": "No, I do not consent"
     },
     {
+      "key": "key-2",
       "type": "single",
       "title": "Email",
       "summary": "If you consent to future contact, do you agree to being contacted by email?",
@@ -51,6 +53,7 @@
       "reject": "No or N/A"
     },
     {
+      "key": "key-3",
       "type": "single",
       "title": "Phone",
       "summary": "If you consent to future contact, do you agree to being contacted by phone?",
@@ -76,7 +79,7 @@
       "BodyLarge",
       [
         ["Italic", "Form Version Date: "],
-        ["Text", "September 13, 2023"]
+        ["Text", "August 2, 2024"]
       ]
     ],
     [
@@ -168,7 +171,7 @@
             ],
             [
               "BodyLarge",
-              "Meet with our research coordinator (virtually) upon enrollment for them to orient you to the ehive app and the activity tracker for the study. The orientation meeting is anticipated to take approximately 40 minutes and you will have a chance to ask any questions you might have to our coordinator. The time frame for your involvement in the study thereafter is 5-10 minutes per day."
+              "Meet with our research coordinator (virtually) upon enrollment for them to orient you to the ehive app and the activity tracker for the study. The orientation meeting is anticipated to take approximately 40 minutes and you will have a chance to ask any questions you might have to our coordinator. The time frame for your involvement in the study thereafter is 10-15 minutes per day."
             ]
           ]
         ],
@@ -235,7 +238,7 @@
             ],
             [
               "BodyLarge",
-              "These tracking activities can take approximately 10 minutes a day."
+              "These tracking activities can take approximately 15 minutes a day."
             ],
             [
               "BodyLarge",
@@ -368,7 +371,7 @@
         ],
         [
           "BodyLarge",
-          "If you decide you don’t want your data to be used for research anymore, you can contact the researcher and ask to have your data withdrawn or labeled so that they will not to be used in additional projects or shared. If your data has already been shared with researchers, those researchers will be asked to stop using them. However, if any data has already been shared without your identity or a linking code, it won’t be possible to retrieve them. Data that has already been used will not be affected by your decision. If your data has already been deposited in an external repository, the study team will request that your data be removed."
+          "If you decide you don't want your data to be used for research anymore, you can contact the researcher and ask to have your data withdrawn or labeled so that they will not to be used in additional projects or shared. If your data has already been shared with researchers, those researchers will be asked to stop using them. However, if any data has already been shared without your identity or a linking code, it won't be possible to retrieve them. Data that has already been used will not be affected by your decision. If your data has already been deposited in an external repository, the study team will request that your data be removed."
         ],
         [
           "BodyLarge",
@@ -483,7 +486,7 @@
         ],
         [
           "BodyLarge",
-          "We will combine data from ehive, Phendo, the Fitbit activity tracker and your PT provider's assessments to conduct our data analyses."
+          "We will combine data from ehive, the Fitbit activity tracker and your PT provider's assessments to conduct our data analyses."
         ],
         ["BodyLarge", ["Underline", "Why is your PHI being used?"]],
         [

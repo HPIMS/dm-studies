@@ -1,5 +1,5 @@
 {
-  "key": "ehive-digi-ibd-001",
+  "key": "digi-ibd-001",
   "title": "Digital Signatures of Drug Response and Disease State Transitions in Inflammatory Bowel Disease",
   "timeEstimate": { "time": 15, "timeUnits": "minutes" },
   "contact": {
@@ -10,8 +10,8 @@
     "phone": "(212) 241-8100"
   },
   "dates": {
-    "effectiveAt": "2023-05-16T00:00:00.000Z",
-    "effectiveUntil": "2024-03-19T23:59:59.0Z"
+    "effectiveAt": "2024-03-12T00:00:00.000Z",
+    "effectiveUntil": "2025-03-11T23:59:59.0Z"
   },
   "intro": [
     [
@@ -31,6 +31,7 @@
   ],
   "options": [
     {
+      "key": "key-1",
       "type": "single",
       "title": "Genetic and protein testing.",
       "summary": "- If you consent for genetic testing as part of this study the samples will be stored as long as deemed useful for research purposes. All samples will be kept secure and only include your study identification number.\n\n- Genetic testing results will not be shared with you. The research will not include whole genome sequencing or sequencing all your genes.\n\nDo you agree to have your blood collected for genetic and protein testing? These stored samples may be used for future research.",
@@ -55,7 +56,7 @@
       "BodyLarge",
       [
         ["Italic", "Form Version Date: "],
-        ["Text", "16Mar2023"]
+        ["Text", "23Feb2024"]
       ]
     ],
     ["H3", "STUDY INFORMATION"],
@@ -322,7 +323,7 @@
     ],
     [
       "BodyLarge",
-      "Any samples that have already been collected may still be used for future use, however no new samples will be collected. If your data and/or samples have already been shared with researchers, those researchers will be asked to stop using them. However, if any data and/or samples have already been shared without your identity or a linking code, it won’t be possible to retrieve them. Data and/or samples that have already been used will not be affected by your decision. If your data and/or samples have already been deposited in an external repository, the study team will request that your data and/or samples be removed."
+      "Any samples that have already been collected may still be used for future use, however no new samples will be collected. If your data and/or samples have already been shared with researchers, those researchers will be asked to stop using them. However, if any data and/or samples have already been shared without your identity or a linking code, it won't be possible to retrieve them. Data and/or samples that have already been used will not be affected by your decision. If your data and/or samples have already been deposited in an external repository, the study team will request that your data and/or samples be removed."
     ],
     [
       "BodyLarge",
@@ -360,21 +361,18 @@
     ["H3", "DISCLOSURE OF FINANCIAL INTERESTS"],
     [
       "BodyLarge",
-      [
-        [
-          "Text",
-          "Researchers sometimes get paid for consulting or doing work for companies that produce drugs, biologics or medical devices. If you have questions regarding industry relationships, you are encouraged to talk to the Lead Researcher or visit our website at "
-        ],
-        ["Hyperlink", "http://icahn.mssm.edu/"],
-        [
-          "Text",
-          " where Mount Sinai publicly discloses the industry relationships of our faculty."
-        ]
-      ]
+      "Dr. Bruce Sands (a Researcher in this study) is a paid consultant for Janssen, the study sponsor. In addition, Dr. Sands is a paid consultant for other companies that research and develop therapies or tools used in the treatment of Inflammatory Bowel Disease."
     ],
     [
       "BodyLarge",
-      "Dr. Bruce Sands (a co-investigator in this study) receives financial compensation as a consultant for Janssen, the study sponsor. Dr. Sands also receives financial compensation from other companies that research and develop therapies used in the treatment of Inflammatory Bowel Disease."
+      [
+        [
+          "Text",
+          "If you have questions regarding paid relationships that your physician/researcher may have with industry, you are encouraged to talk with your physician/researcher, or check for industry relationships posted on individual faculty pages on our website at "
+        ],
+        ["Hyperlink", "http://icahn.mssm.edu/"],
+        ["Text", "."]
+      ]
     ],
     ["H3", "MAINTAINING CONFIDENTIALITY – HIPAA AUTHORIZATION"],
     [

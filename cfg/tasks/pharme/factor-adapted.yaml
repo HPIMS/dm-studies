@@ -1,0 +1,353 @@
+key: factor-adapted
+scorable: true
+score:
+  fn: sum-score
+  args: {}
+metadata:
+  author: "Haun et al."
+  instrument: Based on FACToR; adaptions based on Haga et al., 2017 pointed out below; additionally changed "genetic test result" to "PGx test result"; plus 3 self-developed self-efficacy items
+  version: "1"
+  references:
+    - "Li, M., Bennette, C. S., Amendola, L. M., Ragan Hart, M., Heagerty, P., Comstock, B., Tarczy-Hornoch, P., Fullerton, S. M., Regier, D. A., Burke, W., Trinidad, S. B., Jarvik, G. P., Veenstra, D. L., & Patrick, D. L. (2019). The Feelings About genomiC Testing Results (FACToR) Questionnaire: Development and Preliminary Validation. Journal of Genetic Counseling, 28(2), 477–490. https://doi.org/10.1007/s10897-018-0286-9"
+    - "Haga, S. B., Moaddeb, J., Mills, R., & Voora, D. (2017). Assessing feasibility of delivering pharmacogenetic testing in a community pharmacy setting. Pharmacogenomics, 18(4), 327–335. https://doi.org/10.2217/pgs-2016-0175"
+schedule:
+  type: TIMETABLE
+  timetable: [0, 30, 90]
+  timetableUnits: DAYS
+  gracePeriod: 6 # Available Day + 6 Grace Days == 1 Week available
+  initialGracePeriod: 2 # Available Day + 2 Grace Days == 72 hrs available initially
+intro:
+  title: Feelings About Test Results
+  description: [
+    [
+      "BodyLarge",
+      "The following questions ask about how you felt after receiving your pharmacogenomic (PGx) test results."
+    ],
+    [
+      "BodyLarge",
+      [
+        [
+          "Text",
+          "Please indicate how much you had each specific feeling in the past week by selecting one answer for each question: "
+        ],
+        [
+          "Italic",
+          "not at all, a little, somewhat, a good deal, "
+        ],
+        [
+          "Text",
+          "or"
+        ],
+        [
+          "Italic",
+          " a great deal"
+        ],
+        [
+          "Text",
+          "."
+        ]
+      ]
+    ]
+  ]
+name: Feelings About Test Results
+sections:
+  - type: survey
+    key: group_1
+    title: ""
+    description: "In the past week:"
+    questions:
+      - key: confidence_1
+        question: I feel confident about understanding my PGx results.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: confidence_2
+        question: I feel confident about deciding when to consult a health-care provider regarding medication intake, based on my PGx results.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+      - key: confidence_3
+        question: I feel confident about understanding whether I can take medications at standard dose or not, based on my PGx results.
+        type: SINGLE_CHOICE
+        options:
+          - value: strongly_disagree
+            text: Strongly disagree
+            score: 1
+          - value: disagree
+            text: Disagree
+            score: 2
+          - value: neutral
+            text: Neutral
+            score: 3
+          - value: agree
+            text: Agree
+            score: 4
+          - value: strongly_agree
+            text: Strongly agree
+            score: 5
+  - type: survey
+    key: group_2
+    title: ""
+    description: "In the past week:"
+    questions:
+      - key: factor_1
+        question: How upset did you feel about your PGx test result?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
+      - key: factor_2
+        question: How happy did you feel about your PGx test result?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 4
+          - value: a_little
+            text: A little
+            score: 3
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 1
+          - value: a_great_deal
+            text: A great deal
+            score: 0
+      - key: factor_3
+        question: How anxious or nervous did you feel about your PGx test result?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
+      - key: factor_4
+        question: How relieved did you feel about your PGx test result?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 4
+          - value: a_little
+            text: A little
+            score: 3
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 1
+          - value: a_great_deal
+            text: A great deal
+            score: 0
+      - key: factor_5
+        question: How sad did you feel about your PGx test result?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
+      - key: factor_6
+        question: How frustrated did you feel that there are only PGx recommendations for about 100 medications (out of thousands of existing medications)?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
+  - type: survey
+    key: group_3
+    title: ""
+    description: "In the past week:"
+    questions:
+      - key: factor_7
+        question: How uncertain did you feel about what your PGx test result means for you?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
+      - key: factor_8
+        question: How uncertain did you feel about what your PGx test result means for your child(ren) and/or family's response to medications?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
+      - key: factor_9
+        question: How much did you feel that you understood clearly your choices for prevention or early detection of side effects?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 4
+          - value: a_little
+            text: A little
+            score: 3
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 1
+          - value: a_great_deal
+            text: A great deal
+            score: 0
+      - key: factor_10
+        question: How concerned did you feel that your PGx test result would affect your health insurance status?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
+      - key: factor_11
+        question: How helpful was the information you received from your PGx test result in planning for the future?
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 4
+          - value: a_little
+            text: A little
+            score: 3
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 1
+          - value: a_great_deal
+            text: A great deal
+            score: 0
+      - key: factor_12
+        question: How concerned did you feel that your PGx test result would affect your employment status? 
+        type: SINGLE_CHOICE
+        options:
+          - value: not_at_all
+            text: Not at all
+            score: 0
+          - value: a_little
+            text: A little
+            score: 1
+          - value: somewhat
+            text: Somewhat
+            score: 2
+          - value: a_good_deal
+            text: A good deal
+            score: 3
+          - value: a_great_deal
+            text: A great deal
+            score: 4
