@@ -21,9 +21,6 @@ active:
     digi-ibd-001:
       - be5b04cdd09007423d3645945ecc58ac
       - 45
-    digi-twin:
-      - b7023fb3b2fbbc32e3976c6db36fcc8d
-      - 2
     ewdp-001:
       - 426cda994e8682d1deefebbab95c3bbf
       - 2
@@ -271,9 +268,6 @@ active:
     library::pfiq-7:
       - eefd6d18c72c49642e63fe5ff62c406a
       - 1
-    library::phq-8:
-      - ca8677c011e57f4a7ad02eccfd493954
-      - 8
     library::pro-2-crohns:
       - ee3a048bc4aab59e7752bcb58df8a9f6
       - 14
@@ -322,9 +316,6 @@ active:
     library::pseq:
       - aef19ba720a27954fac8882db2b1519e
       - 3
-    library::pss-10:
-      - 4381e5d93e6bcf05e63d457066971b98
-      - 10
     library::pss-4-bi-weekly:
       - 99485745818604d42ed6d060b1ee5a2a
       - 3
@@ -538,6 +529,9 @@ inactive:
     library::phq-4:
       - 0f89ca5424296b7a1c2f5e0285721b83
       - 10
+    library::phq-8:
+      - ca8677c011e57f4a7ad02eccfd493954
+      - 8
     library::pro-3:
       - c40db32dfd8808e50a7adfd14e5b6292
       - 8
@@ -546,6 +540,9 @@ inactive:
       - 8
     library::promis-social-support-2-item:
       - 7588542ed52f5c48427d080ed4a6d1ef
+      - 10
+    library::pss-10:
+      - 4381e5d93e6bcf05e63d457066971b98
       - 10
     library::pss-10-weekly:
       - d8f3b9c19823d8753a49226a0e2442da
