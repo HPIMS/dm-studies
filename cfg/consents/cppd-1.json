@@ -1,14 +1,17 @@
 {
   "key": "cppd-1",
   "title": "d²prom PT",
-  "timeEstimate": { "time": 15, "timeUnits": "minutes" },
+  "timeEstimate": {
+    "time": 15,
+    "timeUnits": "minutes"
+  },
   "contact": {
     "pi": "Ipek Ensari",
     "email": "ehivecpp@mssm.edu"
   },
   "dates": {
-    "effectiveAt": "2024-08-13T00:00:00.000Z",
-    "effectiveUntil": "2025-09-05T23:59:59.0Z"
+    "effectiveAt": "2025-07-10T00:00:00.000Z",
+    "effectiveUntil": "2026-07-09T23:59:59.0Z"
   },
   "intro": [
     [
@@ -67,29 +70,50 @@
       "H3",
       "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION"
     ],
-    ["Display", "Icahn School of Medicine at Mount Sinai"],
+    [
+      "Display",
+      "Icahn School of Medicine at Mount Sinai"
+    ],
     [
       "BodyLarge",
       [
-        ["Italic", "Study ID#: "],
-        ["Text", "STUDY-22-01002"]
+        [
+          "Italic",
+          "Study ID#: "
+        ],
+        [
+          "Text",
+          "STUDY-22-01002"
+        ]
       ]
     ],
     [
       "BodyLarge",
       [
-        ["Italic", "Form Version Date: "],
-        ["Text", "August 2, 2024"]
+        [
+          "Italic",
+          "Form Version Date: "
+        ],
+        [
+          "Text",
+          "August 2, 2024"
+        ]
       ]
     ],
     [
       "Section",
       [
-        ["H3", "STUDY INFORMATION"],
+        [
+          "H3",
+          "STUDY INFORMATION"
+        ],
         [
           "BodyLarge",
           [
-            ["Italic", "Study Title: "],
+            [
+              "Italic",
+              "Study Title: "
+            ],
             [
               "Text",
               "mHealth measures for routine outcome monitoring in chronic pelvic pain"
@@ -99,14 +123,23 @@
         [
           "BodyLarge",
           [
-            ["Italic", "Principal Investigator (Lead Researcher): "],
-            ["Text", "Ipek Ensari, PhD"]
+            [
+              "Italic",
+              "Principal Investigator (Lead Researcher): "
+            ],
+            [
+              "Text",
+              "Ipek Ensari, PhD"
+            ]
           ]
         ],
         [
           "BodyLarge",
           [
-            ["Italic", "Physical Address: "],
+            [
+              "Italic",
+              "Physical Address: "
+            ],
             [
               "Text",
               "Icahn School of Medicine at Mount Sinai, 1468 Madison Ave, Annenberg Building, 11th Floor, New York, NY 10029"
@@ -116,7 +149,10 @@
         [
           "BodyLarge",
           [
-            ["Italic", "Mailing Address: "],
+            [
+              "Italic",
+              "Mailing Address: "
+            ],
             [
               "Text",
               "Hasso Plattner Institute for Digital Health at Mount Sinai, 1 Gustave L. Levy Place, 11-02A, NY, NY 10029"
@@ -126,8 +162,14 @@
         [
           "BodyLarge",
           [
-            ["Italic", "Email: "],
-            ["Email", "ehivecpp@mssm.edu"]
+            [
+              "Italic",
+              "Email: "
+            ],
+            [
+              "Email",
+              "ehivecpp@mssm.edu"
+            ]
           ]
         ]
       ]
@@ -135,7 +177,10 @@
     [
       "Section",
       [
-        ["H3", "SUMMARY OF THIS RESEARCH STUDY"],
+        [
+          "H3",
+          "SUMMARY OF THIS RESEARCH STUDY"
+        ],
         [
           "BodyLarge",
           "This document explains a research study you might be interested in joining.  Participation in the study is voluntary. You can agree to join or not. Your decision will not limit your ability to receive care at Mount Sinai. You should only agree to take part if you understand the study and if all of your questions about the research study are answered. If you do join the study, the research team must share any new information with you that may change your mind about taking part."
@@ -148,7 +193,6 @@
           "BodyLarge",
           "The purpose of this research study is to collect information from patients diagnosed with CPP through a mobile health (mHealth) application, ehive. The data will be used to identify factors that can help suggest if a treatment is working (e.g., Does physical therapy help reduce pain?). The study also aims to develop surveys to track CPP pain and quality of life. This will help CPP patients manage their condition and help clinicians make more informed treatment decisions."
         ],
-
         [
           "BodyLarge",
           "If you choose to participate in this study, you will be asked to:"
@@ -156,7 +200,10 @@
         [
           "UnorderedList",
           [
-            ["BodyLarge", "Download a research study app, ehive"],
+            [
+              "BodyLarge",
+              "Download a research study app, ehive"
+            ],
             [
               "BodyLarge",
               "Use ehive to self-track your daily symptoms, well-being, self-management techniques, and brief details about your physical therapy (PT) exercises"
@@ -196,7 +243,10 @@
     [
       "Section",
       [
-        ["H3", "STUDY PARTICIPATION"],
+        [
+          "H3",
+          "STUDY PARTICIPATION"
+        ],
         [
           "BodyLarge",
           "You may qualify to take part in this research study because 1) you are beginning physical therapy (PT) with a physiotherapist for your CPP symptoms, 2) you are a woman between the ages of 18 and 64, 3) you have been diagnosed with CPP by a clinician, and 4) you have experienced CPP symptoms (other than menstruation related pain) for at least 6 months. You should not participate in this study if you are currently pregnant, or given birth in the past 6 months, or if you have any other major illnesses (e.g., active cancer, acute coronary syndromes)."
@@ -210,7 +260,10 @@
     [
       "Section",
       [
-        ["H3", "DESCRIPTION OF WHAT IS INVOLVED"],
+        [
+          "H3",
+          "DESCRIPTION OF WHAT IS INVOLVED"
+        ],
         [
           "BodyLarge",
           "If you agree to take part in this research study, here is what may be involved:"
@@ -225,7 +278,13 @@
                   "Text",
                   "You will be asked to download a research smartphone App (ehive) to track your "
                 ],
-                ["Underline", ["Italic", "daily"]],
+                [
+                  "Underline",
+                  [
+                    "Italic",
+                    "daily"
+                  ]
+                ],
                 [
                   "Text",
                   " physical and mood symptoms, well-being, PT exercises, and self-management habits. You will also be asked about your medication use for CPP."
@@ -259,7 +318,10 @@
     [
       "Section",
       [
-        ["H3", "USE OF YOUR DATA"],
+        [
+          "H3",
+          "USE OF YOUR DATA"
+        ],
         [
           "BodyLarge",
           "In addition to being used to complete this research study, your personal information (such as, name, address, date of birth, social security number), and study data, may also be used and shared for additional (future) research. Before anything is shared, all of your identifying personal information will be removed, and it will be replaced with a code. Researchers are not planning on giving you the details of any of this future research nor the results. That means that a research project might be done that you would not consent to if provided with the details of that research project. If you do not want any future research to be done with your data, even with your identity removed, please do not sign this consent form or take part in the study."
@@ -269,7 +331,10 @@
     [
       "Section",
       [
-        ["H3", "YOUR RESPONSIBILITIES IF YOU TAKE PART IN THIS RESEARCH"],
+        [
+          "H3",
+          "YOUR RESPONSIBILITIES IF YOU TAKE PART IN THIS RESEARCH"
+        ],
         [
           "BodyLarge",
           "If you decide to take part in this research study, you will be responsible for the following things: 1) have access to a smartphone and wi-fi to be able to download the ehive App, 2) wear a 24-hour activity tracker for the duration of the study, 3) track your symptoms, self-management (e.g., medications, exercise, meditation), and any PT exercises you complete between your PT visits every day, and 4) respond to brief questionnaires once a week on the ehive app using your smartphone."
@@ -279,7 +344,10 @@
     [
       "Section",
       [
-        ["H3", "COSTS OR PAYMENTS THAT MAY RESULT FROM PARTICIPATION"],
+        [
+          "H3",
+          "COSTS OR PAYMENTS THAT MAY RESULT FROM PARTICIPATION"
+        ],
         [
           "BodyLarge",
           "Being in this study will not cost you anything extra. If you agree to take part in this study, you will be paid up to $150 for your time and effort. You will receive $25 for each 2-week period of data collection (total study duration is 12 weeks). If you withdraw before completing the study, payments will be pro-rated to include only completed periods. Payment will be in the form of an electronic gift card sent to your email."
@@ -293,7 +361,10 @@
     [
       "Section",
       [
-        ["H3", "POSSIBLE BENEFITS"],
+        [
+          "H3",
+          "POSSIBLE BENEFITS"
+        ],
         [
           "BodyLarge",
           "This study is not designed to benefit you personally. Through the self-tracking activities, you might learn new information about the individual patterns of your disease and health. Findings from this study may help us understand how to best utilize patient-tracked data to define treatment outcomes. Possible benefits to others in the future include reduced participant burden through development of effective outcome monitoring measures that have applicability across a wide range of settings."
@@ -303,7 +374,10 @@
     [
       "Section",
       [
-        ["H3", "POSSIBLE RISKS AND DISCOMFORTS"],
+        [
+          "H3",
+          "POSSIBLE RISKS AND DISCOMFORTS"
+        ],
         [
           "BodyLarge",
           "The study involves no more than minimal risk. The possible risks related to participating in the study include:"
@@ -326,7 +400,10 @@
     [
       "Section",
       [
-        ["H3", "OTHER OPTIONS TO CONSIDER"],
+        [
+          "H3",
+          "OTHER OPTIONS TO CONSIDER"
+        ],
         [
           "BodyLarge",
           "You may decide not to take part in this research study. If you decide not to take part, this will not affect the clinical care you receive at Mount Sinai. The choice is totally up to you."
@@ -336,7 +413,10 @@
     [
       "Section",
       [
-        ["H3", "IN CASE OF INJURY DURING THIS RESEARCH STUDY"],
+        [
+          "H3",
+          "IN CASE OF INJURY DURING THIS RESEARCH STUDY"
+        ],
         [
           "BodyLarge",
           "If you believe that being in this research study has harmed you, you should contact the Lead Researcher. Their contact information is listed at the beginning of this consent form."
@@ -346,7 +426,10 @@
     [
       "Section",
       [
-        ["H3", "ENDING PARTICIPATION IN THE RESEARCH STUDY"],
+        [
+          "H3",
+          "ENDING PARTICIPATION IN THE RESEARCH STUDY"
+        ],
         [
           "BodyLarge",
           "You may stop taking part in this study at any time.  No matter what you choose, your care and benefits through Mount Sinai will not be negatively impacted."
@@ -362,7 +445,10 @@
               "Text",
               "You may also withdraw your permission for the researchers to use and share any of your protected information for research, but "
             ],
-            ["Underline", "you must do so in writing"],
+            [
+              "Underline",
+              "you must do so in writing"
+            ],
             [
               "Text",
               " to the Lead Researcher at the address on the first page. Even if you withdraw your permission, the Lead Researcher may still use the information that was already collected if that information is necessary to complete the research study. Your health information may still be used or shared after you withdraw your authorization if you have an adverse event (a bad effect) from taking part in the research study."
@@ -376,7 +462,10 @@
         [
           "BodyLarge",
           [
-            ["Underline", "Withdrawal without your consent"],
+            [
+              "Underline",
+              "Withdrawal without your consent"
+            ],
             [
               "Text",
               ": The Lead Researcher, the funder or Mount Sinai may stop your involvement in this research study at any time without your consent. This may be because the research study is being stopped, the instructions of the research team have not been followed, the Lead Researcher believes it is in your best interest, or for any other reason. If data and/or samples have been stored as part of the research study, they too can be destroyed without your consent."
@@ -388,7 +477,10 @@
     [
       "Section",
       [
-        ["H3", "CONTACT INFORMATION"],
+        [
+          "H3",
+          "CONTACT INFORMATION"
+        ],
         [
           "BodyLarge",
           [
@@ -396,8 +488,14 @@
               "Text",
               "If you have any questions, concerns or complaints at any time about this research, or you think the research has harmed you, please contact the office of the research team and/or the Lead Researcher at "
             ],
-            ["Email", "ehivecpp@mssm.edu"],
-            ["Text", "."]
+            [
+              "Email",
+              "ehivecpp@mssm.edu"
+            ],
+            [
+              "Text",
+              "."
+            ]
           ]
         ]
       ]
@@ -405,7 +503,10 @@
     [
       "Section",
       [
-        ["H3", "DISCLOSURE OF FINANCIAL INTERESTS"],
+        [
+          "H3",
+          "DISCLOSURE OF FINANCIAL INTERESTS"
+        ],
         [
           "BodyLarge",
           [
@@ -413,7 +514,10 @@
               "Text",
               "Researchers sometimes get paid for consulting or doing work for companies that produce drugs, biologics or medical devices. If you have questions regarding industry relationships, you are encouraged to talk to the Lead Researcher or visit our website at "
             ],
-            ["Hyperlink", "http://icahn.mssm.edu/"],
+            [
+              "Hyperlink",
+              "http://icahn.mssm.edu/"
+            ],
             [
               "Text",
               " where Mount Sinai publicly discloses the industry relationships of our faculty."
@@ -425,16 +529,25 @@
     [
       "Section",
       [
-        ["H3", "MAINTAINING CONFIDENTIALITY – HIPAA AUTHORIZATION"],
+        [
+          "H3",
+          "MAINTAINING CONFIDENTIALITY – HIPAA AUTHORIZATION"
+        ],
         [
           "BodyLarge",
           "As part of this study, some of your private and/or protected health information will be obtained, used, and shared with your permission. There is a Federal Health Insurance Portability and Accountability Act (HIPAA) that makes sure this is done correctly and safely."
         ],
         [
           "BodyLarge",
-          ["Underline", "What is protected health information (PHI)?"]
+          [
+            "Underline",
+            "What is protected health information (PHI)?"
+          ]
         ],
-        ["BodyLarge", "PHI is the combination of two things:"],
+        [
+          "BodyLarge",
+          "PHI is the combination of two things:"
+        ],
         [
           "OrderedList",
           [
@@ -488,14 +601,23 @@
           "BodyLarge",
           "We will combine data from ehive, the Fitbit activity tracker and your PT provider's assessments to conduct our data analyses."
         ],
-        ["BodyLarge", ["Underline", "Why is your PHI being used?"]],
+        [
+          "BodyLarge",
+          [
+            "Underline",
+            "Why is your PHI being used?"
+          ]
+        ],
         [
           "BodyLarge",
           "Researchers need the information that identifies you so they can contact you during the study. They need your health information and the results of any tests and procedures being collected as part of this study to answer the questions posed in the study. The purpose of the study is discussed earlier in this consent form. Before researchers analyze the data, they remove any information that would let others know who you are or that you took part in the study. If researchers publish or present study results at scientific meetings, lectures, or other events, their presentations would not include any information that would let others know who you are, unless you give separate permission to do so."
         ],
         [
           "BodyLarge",
-          ["Underline", "Who, outside Mount Sinai, might receive your PHI?"]
+          [
+            "Underline",
+            "Who, outside Mount Sinai, might receive your PHI?"
+          ]
         ],
         [
           "BodyLarge",
@@ -533,10 +655,12 @@
           "BodyLarge",
           "Your authorization for use of your PHI for this specific study does not expire."
         ],
-
         [
           "BodyLarge",
-          ["Underline", "Will you be able to access your records?"]
+          [
+            "Underline",
+            "Will you be able to access your records?"
+          ]
         ],
         [
           "BodyLarge",
@@ -562,7 +686,13 @@
             ]
           ]
         ],
-        ["BodyLarge", ["Underline", "Can you change your mind?"]],
+        [
+          "BodyLarge",
+          [
+            "Underline",
+            "Can you change your mind?"
+          ]
+        ],
         [
           "BodyLarge",
           [
@@ -570,7 +700,10 @@
               "Text",
               "If you decide to stop being in the study, please contact the Lead Researcher or the research staff. The research team may ask you whether they can continue to collect information from your medical record. You will also have to decide if you wish to limit the continued use of the information collected during the study. Under US privacy laws you may also withdraw your permission for the researchers to use and share any of your protected information for research, but "
             ],
-            ["Underline", "you must do so in writing"],
+            [
+              "Underline",
+              "you must do so in writing"
+            ],
             [
               "Text",
               " to the Lead Researcher at the address on the first page."
@@ -594,7 +727,13 @@
     [
       "Section",
       [
-        ["H4", ["Underline", "Notice Concerning HIV-Related Information"]],
+        [
+          "H4",
+          [
+            "Underline",
+            "Notice Concerning HIV-Related Information"
+          ]
+        ],
         [
           "BodyLarge",
           [
@@ -602,9 +741,18 @@
               "Text",
               "If you are authorizing the release of HIV-related information, you should be aware that the recipient(s) is (are) prohibited from re-disclosing any HIV-related information without your authorization unless permitted to do so under federal or state law. You also have a right to request a list of people who may receive or use your HIV-related information without authorization. If you experience discrimination because of the release or disclosure of HIV-related information, you may contact the New York State Division of Human Rights at "
             ],
-            ["Telephone", "(888) 392-3644"],
-            ["Text", " or the New York City Commission on Human Rights at "],
-            ["Telephone", "(212) 306-5070"],
+            [
+              "Telephone",
+              "(888) 392-3644"
+            ],
+            [
+              "Text",
+              " or the New York City Commission on Human Rights at "
+            ],
+            [
+              "Telephone",
+              "(212) 306-5070"
+            ],
             [
               "Text",
               " These agencies are responsible for protecting your rights."
@@ -616,7 +764,13 @@
     [
       "Section",
       [
-        ["H4", ["Underline", "Certificate of Confidentiality"]],
+        [
+          "H4",
+          [
+            "Underline",
+            "Certificate of Confidentiality"
+          ]
+        ],
         [
           "BodyLarge",
           "To further protect your privacy, the researchers have obtained a Certificate of Confidentiality from the Department of Health and Human Services. This is intended to ensure that your identity as a participant in this research study will not have to be disclosed as a result from a subpoena, for the purpose of identifying you in any federal, state, or local civil, criminal, administrative, legislative, or other proceedings other than to the FDA or OHRP as identified above."
@@ -630,7 +784,10 @@
     [
       "Section",
       [
-        ["H4", "How the Institutional Review Board (IRB) can help you"],
+        [
+          "H4",
+          "How the Institutional Review Board (IRB) can help you"
+        ],
         [
           "BodyLarge",
           [
@@ -638,7 +795,10 @@
               "Text",
               "This research has been reviewed and approved by an Institutional Review Board (IRB). You may reach a representative of the Mount Sinai Program for Protection of Human Subjects at telephone number "
             ],
-            ["Telephone", "(212) 824-8200"],
+            [
+              "Telephone",
+              "(212) 824-8200"
+            ],
             [
               "Text",
               " during regular work hours (Monday-Friday, 9am-5pm, excluding holidays) for any of the reasons listed below. This office will direct your call to the right person within the Mount Sinai Health System:"
@@ -652,7 +812,10 @@
               "BodyLarge",
               "Your questions, concerns, or complaints are not being answered by the research team."
             ],
-            ["BodyLarge", "You cannot reach the research team."],
+            [
+              "BodyLarge",
+              "You cannot reach the research team."
+            ],
             [
               "BodyLarge",
               "You are not comfortable talking to the research team."
