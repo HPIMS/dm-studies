@@ -1151,7 +1151,7 @@ sections:
             type: SHOW
           condition:
             - section: activities
-              question: other_water_switch
+              question: other_sports_switch
               operator: =
               value: "yes"
     - key: other_sports_able
