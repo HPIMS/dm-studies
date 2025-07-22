@@ -1,0 +1,1375 @@
+key: intake
+scorable: false
+schedule:
+  type: PERIOD
+  period: ONCE
+timeRequirements:
+  time: 5
+  timeUnits: minutes
+name: Physical Activity Intake Questionnaire
+sections:
+ - type: survey
+   key: activities
+   title: Common Activity Modalities and Intensities
+   description: [["Body",["Bold","Instructions"]],["Body","This questionnaire asks about your physical ability and comfort level whilst engaging in various physical activity modalities."],["Body","For each activity listed below, please indicate:"],["UnorderedList",[["Body",[["Bold","Ability/Comfort:"],["Text"," Do you experience any physical difficulty?"]]],["Body",[["Bold","Access/Resources:"],["Text"," Do you have access to the necessary facilities or equipment?"]]],["Body",[["Bold","Preferred Intensity:"],["Text"," What intensity would you prefer for this activity?"]]]]]]
+   questions:
+    - key: walking_able
+      question: [["Bold", "Walking:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: walking_access
+      question: [["Bold", "Walking:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: walking_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: walking_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: walking_able
+              operator: =
+              value: much_difficulty
+    - key: walking_intensity
+      question: [["Bold", "Walking:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: walking_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: walking_access
+              operator: =
+              value: "P"
+
+    - key: running_able
+      question: [["Bold", "Jogging/Running:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: running_access
+      question: [["Bold", "Jogging/Running:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: running_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: running_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: running_able
+              operator: =
+              value: much_difficulty
+    - key: running_intensity
+      question: [["Bold", "Jogging/Running:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: running_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: running_access
+              operator: =
+              value: "P"
+
+    - key: cycling_outdoor_able
+      question: [["Bold", "Cycling (Outdoor):"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: cycling_outdoor_access
+      question: [["Bold", "Cycling (Outdoor):"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: cycling_outdoor_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: cycling_outdoor_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: cycling_outdoor_able
+              operator: =
+              value: much_difficulty
+    - key: cycling_outdoor_intensity
+      question: [["Bold", "Cycling (Outdoor):"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: cycling_outdoor_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: cycling_outdoor_access
+              operator: =
+              value: "P"
+
+    - key: cycling_indoor_able
+      question: [["Bold", "Cycling (Indoor):"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: cycling_indoor_access
+      question: [["Bold", "Cycling (Indoor):"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: cycling_indoor_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: cycling_indoor_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: cycling_indoor_able
+              operator: =
+              value: much_difficulty
+    - key: cycling_indoor_intensity
+      question: [["Bold", "Cycling (Indoor):"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: cycling_indoor_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: cycling_indoor_access
+              operator: =
+              value: "P"
+
+    - key: swimming_able
+      question: [["Bold", "Swimming:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: swimming_access
+      question: [["Bold", "Swimming:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: swimming_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: swimming_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: swimming_able
+              operator: =
+              value: much_difficulty
+    - key: swimming_intensity
+      question: [["Bold", "Swimming:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: swimming_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: swimming_access
+              operator: =
+              value: "P"
+
+    - key: other_water_switch
+      question: [["Bold", "Other water-based fitness:"], ["Text", " Are there any other water-based fitness activities you would like to specify?"]]
+      type: YESNO_CHOICE
+    - key: other_water_specify
+      question: [["Bold", "Other water-based fitness:"], ["Text", " Please specify which activity."]]
+      type: TEXT
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_water_switch
+              operator: =
+              value: "yes"
+    - key: other_water_able
+      question: [["Bold", "Other water-based fitness:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_water_switch
+              operator: =
+              value: "yes"
+    - key: other_water_access
+      question: [["Bold", "Other water-based fitness:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_water_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: other_water_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: other_water_able
+              operator: =
+              value: much_difficulty
+    - key: other_water_intensity
+      question: [["Bold", "Other water-based fitness:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_water_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: other_water_access
+              operator: =
+              value: "P"
+
+    - key: rowing_indoor_able
+      question: [["Bold", "Rowing (Indoor):"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: rowing_indoor_access
+      question: [["Bold", "Rowing (Indoor):"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: rowing_indoor_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: rowing_indoor_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: rowing_indoor_able
+              operator: =
+              value: much_difficulty
+    - key: rowing_indoor_intensity
+      question: [["Bold", "Rowing (Indoor):"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: rowing_indoor_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: rowing_indoor_access
+              operator: =
+              value: "P"
+
+    - key: group_fitness_class_able
+      question: [["Bold", "Group Fitness Class (aerobic/strength/multi-modal):"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: group_fitness_class_access
+      question: [["Bold", "Group Fitness Class (aerobic/strength/multi-modal):"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: group_fitness_class_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: group_fitness_class_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: group_fitness_class_able
+              operator: =
+              value: much_difficulty
+    - key: group_fitness_class_intensity
+      question: [["Bold", "Group Fitness Class (aerobic/strength/multi-modal):"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: group_fitness_class_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: group_fitness_class_access
+              operator: =
+              value: "P"
+
+    - key: resistance_training_weights_able
+      question: [["Bold", "Resistance Training (Weights):"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: resistance_training_weights_access
+      question: [["Bold", "Resistance Training (Weights):"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: resistance_training_weights_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: resistance_training_weights_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: resistance_training_weights_able
+              operator: =
+              value: much_difficulty
+    - key: resistance_training_weights_intensity
+      question: [["Bold", "Resistance Training (Weights):"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: resistance_training_weights_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: resistance_training_weights_access
+              operator: =
+              value: "P"
+
+    - key: resistance_training_bodyweight_able
+      question: [["Bold", "Resistance Training (Bodyweight):"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: resistance_training_bodyweight_access
+      question: [["Bold", "Resistance Training (Bodyweight):"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: resistance_training_bodyweight_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: resistance_training_bodyweight_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: resistance_training_bodyweight_able
+              operator: =
+              value: much_difficulty
+    - key: resistance_training_bodyweight_intensity
+      question: [["Bold", "Resistance Training (Bodyweight):"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: resistance_training_bodyweight_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: resistance_training_bodyweight_access
+              operator: =
+              value: "P"
+
+    - key: calisthenics_able
+      question: [["Bold", "Calisthenics:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: calisthenics_access
+      question: [["Bold", "Calisthenics:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: calisthenics_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: calisthenics_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: calisthenics_able
+              operator: =
+              value: much_difficulty
+    - key: calisthenics_intensity
+      question: [["Bold", "Calisthenics:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: calisthenics_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: calisthenics_access
+              operator: =
+              value: "P"
+
+    - key: yoga_able
+      question: [["Bold", "Yoga:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: yoga_access
+      question: [["Bold", "Yoga:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: yoga_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: yoga_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: yoga_able
+              operator: =
+              value: much_difficulty
+    - key: yoga_intensity
+      question: [["Bold", "Yoga:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: yoga_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: yoga_access
+              operator: =
+              value: "P"
+
+    - key: pilates_able
+      question: [["Bold", "Pilates:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: pilates_access
+      question: [["Bold", "Pilates:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: pilates_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: pilates_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: pilates_able
+              operator: =
+              value: much_difficulty
+    - key: pilates_intensity
+      question: [["Bold", "Pilates:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: pilates_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: pilates_access
+              operator: =
+              value: "P"
+
+    - key: dance_able
+      question: [["Bold", "Dance:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: dance_access
+      question: [["Bold", "Dance:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: dance_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: dance_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: dance_able
+              operator: =
+              value: much_difficulty
+    - key: dance_intensity
+      question: [["Bold", "Dance:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: dance_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: dance_access
+              operator: =
+              value: "P"
+
+    - key: hiking_able
+      question: [["Bold", "Hiking:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: hiking_access
+      question: [["Bold", "Hiking:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: hiking_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: hiking_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: hiking_able
+              operator: =
+              value: much_difficulty
+    - key: hiking_intensity
+      question: [["Bold", "Hiking:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: hiking_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: hiking_access
+              operator: =
+              value: "P"
+
+    - key: tennis_able
+      question: [["Bold", "Tennis:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: tennis_access
+      question: [["Bold", "Tennis:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: tennis_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: tennis_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: tennis_able
+              operator: =
+              value: much_difficulty
+    - key: tennis_intensity
+      question: [["Bold", "Tennis:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: tennis_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: tennis_access
+              operator: =
+              value: "P"
+
+    - key: stretching_able
+      question: [["Bold", "Stretching/Flexibility Routines:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+    - key: stretching_access
+      question: [["Bold", "Stretching/Flexibility Routines:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: stretching_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: stretching_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: stretching_able
+              operator: =
+              value: much_difficulty
+    - key: stretching_intensity
+      question: [["Bold", "Stretching/Flexibility Routines:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: stretching_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: stretching_access
+              operator: =
+              value: "P"
+
+    - key: other_sports_switch
+      question: [["Bold", "Other Sports:"], ["Text", " Are there any other sports you would like to specify?"]]
+      type: YESNO_CHOICE
+    - key: other_sports_specify
+      question: [["Bold", "Other sports:"], ["Text", " Please specify which activity."]]
+      type: TEXT
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_water_switch
+              operator: =
+              value: "yes"
+    - key: other_sports_able
+      question: [["Bold", "Other Sports:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_sports_switch
+              operator: =
+              value: "yes"
+    - key: other_sports_access
+      question: [["Bold", "Other Sports:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_sports_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: other_sports_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: other_sports_able
+              operator: =
+              value: much_difficulty
+    - key: other_sports_intensity
+      question: [["Bold", "Other Sports:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_sports_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: other_sports_access
+              operator: =
+              value: "P"
+
+    - key: other_modality_switch
+      question: [["Bold", "Other Modality:"], ["Text", " Are there any other modalities you would like to specify?"]]
+      type: YESNO_CHOICE
+    - key: other_modality_specify
+      question: [["Bold", "Other Modality:"], ["Text", " Please specify which activity."]]
+      type: TEXT
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_modality_switch
+              operator: =
+              value: "yes"
+    - key: other_modality_able
+      question: [["Bold", "Other Modality:"], ["Text", " Do you experience any physical difficulty with this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "no_difficulty"
+          text: "No difficulty" 
+        - value: "some_difficulty"
+          text: "Some difficulty"
+        - value: "much_difficulty"
+          text: "Much difficulty"
+        - value: "unable_to_do"
+          text: Unable to do
+        - value: "never"
+          text: I have never done OR do not do this activity
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_modality_switch
+              operator: =
+              value: "yes"
+    - key: other_modality_access
+      question: [["Bold", "Other Modality:"], ["Text", " Do you have access to the necessary facilities or equipment?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "Y"
+          text: "Yes" 
+        - value: "N"
+          text: "No"
+        - value: "P"
+          text: Partial
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_modality_able
+              operator: =
+              value: no_difficulty
+            - section: activities
+              question: other_modality_able
+              operator: =
+              value: some_difficulty
+            - section: activities
+              question: other_modality_able
+              operator: =
+              value: much_difficulty
+    - key: other_modality_intensity
+      question: [["Bold", "Other Modality:"], ["Text", " What intensity would you prefer for this activity?"]]
+      type: SINGLE_CHOICE
+      options:
+        - value: "L"
+          text: "Low" 
+        - value: "M"
+          text: "Moderate"
+        - value: "V"
+          text: Vigorous
+        - value: "NA"
+          text: Not Applicable
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: activities
+              question: other_modality_access
+              operator: =
+              value: "Y"
+            - section: activities
+              question: other_modality_access
+              operator: =
+              value: "P"
+ - type: survey
+   key: additional
+   title: Additional Assessment 
+   description: ""
+   questions:
+      - key: barriers
+        question: [["Bold", "Barriers to Physical Activity: "], ["Text", " What prevents you from being more active?"]]
+        type: MULTIPLE_CHOICE
+        description: Select all that apply.
+        options:
+          - value: a
+            text: Time constraints
+          - value: b
+            text: Lack of motivation
+          - value: c
+            text: Physical limitations/pain
+          - value: d
+            text: Lack of facilities/equipment
+          - value: e
+            text: Cost
+          - value: f
+            text: Safety concerns
+          - value: g
+            text: Other
+            inlineQuestion:
+              key: barriers_g_description
+              question: Please specify...
+              type: TEXTAREA
+
+      - key: preferred_environment
+        question: "Preferred Exercise Environment"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Home
+          - value: b
+            text: Gym/Fitness Center
+          - value: c
+            text: Outdoors
+          - value: d
+            text: Community Center
+          - value: e
+            text: Other
+            inlineQuestion:
+              key: preferred_environment_e_description
+              question: Please specify...
+              type: TEXTAREA
+
+      - key: preferred_environment
+        question: "Social Preferences"
+        type: SINGLE_CHOICE
+        options:
+          - value: a
+            text: Prefer to exercise alone
+          - value: b
+            text: Prefer group activities
+          - value: c
+            text: No preference
+
+

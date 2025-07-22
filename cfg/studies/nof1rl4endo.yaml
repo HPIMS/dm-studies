@@ -49,15 +49,19 @@ dataview:
   priority: "DisplayValue:study=nof1rl4endo;questionnaire=exercice-recommendation;page=value;question=current;answerField=ValueString"
 
 tasks:
+  - key: intake
+    rank: 0
+  
   - key: daily-morning-pain-tracking
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 10
-  
+
   - key: daily-afternoon-pain-tracking
     triggers:
       - action: SHOW
@@ -80,27 +84,30 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 20
 
   - key: demographics
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 100
 
   - key: general-health-survey
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 110
 
   - key: pseq
@@ -110,9 +117,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 120
 
   - key: ipaq
@@ -122,27 +130,30 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 130
 
   - key: par-q
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 140
 
   - key: werf-ephect
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 150
 
   - key: promis-global-mental-health-2a-v1.2
@@ -154,9 +165,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 160
 
   - key: promis-pain-interference-6b-v1.0
@@ -168,9 +180,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 170
 
   - key: promis-physical-function-4a-v1.0
@@ -181,9 +194,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 180
 
   - key: promis-fatigue-4a-v1.0
@@ -194,9 +208,10 @@ tasks:
     triggers:
       - action: SHOW
         condition:
-          - type: CALCULATION
-            fn: nof1rl4endo::has-started
-            args: {}
+          - type: COMPLETED
+            resource: nof1rl4endo::intake
+            operator: ">"
+            score: 0
     rank: 190
   
   - key: health-itues
