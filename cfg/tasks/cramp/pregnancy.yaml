@@ -74,17 +74,6 @@ sections:
                 question: pregnancy
                 operator: =
                 value: yes
-      - key: preg_legal
-        question: How many abortions have you had?
-        type: NUMERIC
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: pregnancy
-                question: pregnancy
-                operator: =
-                value: yes
       - key: preg_last
         question: When did your last pregnancy end?
         type: DATE
