@@ -67,50 +67,85 @@ sections:
         options:
           - value: cramps_abdomen
             text: Abdominal cramps (pain that comes and goes)
-            inlineQuestion:
-              key: cramps_severity
-              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
-              type: NUMERIC
-              minValue: 0
-              maxValue: 10
           - value: dull_abdomen
             text: Dull abdominal pain or discomfort (pain that mostly stays)
-            inlineQuestion:
-              key: dull_severity
-              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
-              type: NUMERIC
-              minValue: 0
-              maxValue: 10
           - value: upper_legs
             text: Upper legs
-            inlineQuestion:
-              key: upper_legs_severity
-              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
-              type: NUMERIC
-              minValue: 0
-              maxValue: 10
           - value: lower_back
             text: Lower Back
-            inlineQuestion:
-              key: lower_back_severity
-              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
-              type: NUMERIC
-              minValue: 0
-              maxValue: 10
           - value: aches_everywehre
-            text: Aches all over  
-            inlineQuestion:
-              key: aches_severity
-              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
-              type: NUMERIC
-              minValue: 0
-              maxValue: 10         
+            text: Aches all over       
           - value: other
             text: Other
             inlineQuestion:
               key: menses_pain_location_other_description
               question: "Please specify:"
               type: TEXTAREA
+      - key: cramps_abdomen_severity
+        question: Think about the past 6 months. Before or during your period, how severe were abdominal cramps usually from 0 (not present) to 10 (extreemly severe)? 
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
+              - section: pain-1
+                question: menses_pain_location
+                operator: =
+                value: cramps_abdomen
+      - key: dull_abdomen_severity
+        question: Think about the past 6 months. Before or during your period, how severe was dull abdominal pain or discomfort usually from 0 (not present) to 10 (extreemly severe)? 
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
+              - section: pain-1
+                question: menses_pain_location
+                operator: =
+                value: dull_abdomen
+      - key: upper_legs_severity
+        question: Think about the past 6 months. Before or during your period, how severe was upper leg pain or discomfort usually from 0 (not present) to 10 (extreemly severe)? 
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
+              - section: pain-1
+                question: menses_pain_location
+                operator: =
+                value: upper_legs
+      - key: lower_back_severity
+        question: Think about the past 6 months. Before or during your period, how severe was lower back pain or discomfort usually from 0 (not present) to 10 (extreemly severe)? 
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
+              - section: pain-1
+                question: menses_pain_location
+                operator: =
+                value: lower_back
+      - key: aches_everywehre_severity
+        question: Think about the past 6 months. Before or during your period, how severe aches all over the body usually from 0 (not present) to 10 (extreemly severe)? 
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+        triggers:
+          - action: 
+              type: SHOW
+            condition:
+              - section: pain-1
+                question: menses_pain_location
+                operator: =
+                value: aches_everywehre
       - key: menses_pain_start
         question: When you experience menstrual pain, when does it usually start?
         type: SINGLE_CHOICE
