@@ -36,18 +36,6 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: menses_pain_freq
-        question: How frequently do you have pain during menstruation?
-        type: SINGLE_CHOICE
-        options:
-          - value: few
-            text: Only few of your periods are painful
-          - value: less_than_half
-            text: Less than half of your periods are painful
-          - value: more_than_half
-            text: More than half of your periods are painful
-          - value: most
-            text: Most of your periods are painful
       - key: menses_pain_overall
         question: "Usually, during menstruation you experience:"
         type: SINGLE_CHOICE
@@ -60,17 +48,63 @@ sections:
             text: Moderate pain
           - value: severe
             text: Severe pain
+      - key: menses_pain_freq
+        question: How frequently do you have pain during menstruation?
+        type: SINGLE_CHOICE
+        options:
+          - value: few
+            text: Only few of your periods are painful
+          - value: less_than_half
+            text: Less than half of your periods are painful
+          - value: more_than_half
+            text: More than half of your periods are painful
+          - value: most
+            text: Most of your periods are painful
       - key: menses_pain_location
         question: Usually, during menstruation, where do you feel pain?
         descritpion: Select all that apply
         type: MULTIPLE_CHOICE
         options:
-          - value: lower_back
-            text: Lower back
-          - value: lower_belly
-            text: Lower belly
+          - value: cramps_abdomen
+            text: Abdominal cramps (pain that comes and goes)
+            inlineQuestion:
+              key: cramps_severity
+              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
+              type: NUMERIC
+              minValue: 0
+              maxValue: 10
+          - value: dull_abdomen
+            text: Dull abdominal pain or discomfort (pain that mostly stays)
+            inlineQuestion:
+              key: dull_severity
+              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
+              type: NUMERIC
+              minValue: 0
+              maxValue: 10
           - value: upper_legs
             text: Upper legs
+            inlineQuestion:
+              key: upper_legs_severity
+              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
+              type: NUMERIC
+              minValue: 0
+              maxValue: 10
+          - value: lower_back
+            text: Lower Back
+            inlineQuestion:
+              key: lower_back_severity
+              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
+              type: NUMERIC
+              minValue: 0
+              maxValue: 10
+          - value: aches_everywehre
+            text: Aches all over  
+            inlineQuestion:
+              key: aches_severity
+              question: "Please rate the pain from 0 (not present) to 10 (extreemly severe)"
+              type: NUMERIC
+              minValue: 0
+              maxValue: 10         
           - value: other
             text: Other
             inlineQuestion:
@@ -154,6 +188,24 @@ sections:
                 question: menses_pain_meds
                 operator: =
                 value: often_required
+      - key: other_pain
+        question: "Beyond menstrual pain, do you experience pain (check all that apply):"
+        type: MULTIPLE_CHOICE
+        options:
+          - value: ovulation
+            text: At ovulation (mid-cycle)
+          - value: before_menses
+            text: pain (not cramps) before the period
+          - value: dyspareunia
+            text: Deep pain with intercourse
+          - value: groin_lift
+            text: Pain in groin lifting
+          - value: burning_sex
+            text: Burning vaginal pain after sex
+          - value: pain_urination
+            text: Pain with urination
+          - value: pain_sitting
+            text: Pain with sitting
   - type: survey
     key: worst_period
     title: ""
@@ -953,3 +1005,6 @@ sections:
             text: Urinary tract infection
           - value: diagnosis_19
             text: Other infections of the reproductive tract
+
+
+

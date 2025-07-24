@@ -41,6 +41,11 @@ tasks:
 
   - key: menstrual-pain
     rank: 30
+    schedule:
+      type: PERIOD
+      period: ONCE
+      delay: 1
+      delayUnits: DAYS
 
   - key: psst
     rank: 40
