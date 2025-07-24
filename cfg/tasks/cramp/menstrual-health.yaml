@@ -178,7 +178,12 @@ sections:
         minValue: 0
         maxValue: 10
       - key: diarrhea_rating
-        question: Diarrhea
+        question: Diarrhea (soft stools)
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: constipation_rating
+        question: Constipation (hard stools)
         type: NUMERIC
         minValue: 0
         maxValue: 10

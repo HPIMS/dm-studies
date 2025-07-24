@@ -290,11 +290,13 @@ sections:
         description: Select all that apply
         options:
           - value: diarrhea
-            text: Diarrhea
+            text: Diarrhea (soft stools)
           - value: nausea
-            text: Nausea/Vomiting
+            text: Nausea
+          - value: vomiting
+            text: Vomiting
           - value: constipation
-            text: Constipation
+            text: Constipation (hard stools)
           - value: fatigue
             text: Fatigue
           - value: dizziness
