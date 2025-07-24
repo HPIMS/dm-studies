@@ -113,111 +113,6 @@ sections:
           "If you feel uncomfortable or overstrained, you can cancel this test at any time by closing the app. ",
         ],
       ]
-  - type: document
-    key: hrv_intro
-    content:
-      [
-        ["H3", ["Underline", "Heart Rate Variability"]],
-        [
-          "BodyLarge",
-          [
-            [
-              "Text",
-              "We want to measure you heart rate variability before and after the tasks. This is a very important measure to assess resilience. Unfortunately Apple does not allow us to start recording heart rate variability whenever we want.  We will therefore ask you to use the ",
-            ],
-            ["Italic", ["Bold", "Breathe"]],
-            ["Text", " function within the "],
-            ["Italic", ["Bold", "Mindfulness"]],
-            [
-              "Text",
-              " app on your Apple Watch. Activating the breathing app will allow us to record your heart rate variability.",
-            ],
-          ],
-        ],
-        [
-          "BodyLarge",
-          [
-            [
-              "Text",
-              "The breathing task on you apple watch will ask you to inhale and exhale at specific times. Please, ",
-            ],
-            [
-              "Bold",
-              "DO NOT FOLLOW THE APPLE WATCH INSTRUCTIONS SINCE THIS WILL CAUSE THE RECORDING TO BE USELESS.",
-            ],
-          ],
-        ],
-        [
-          "BodyLarge",
-          "Before you begin, please follow the instructions in the following video to turn off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task.",
-        ],
-      ]
-  - type: video
-    key: setup-video-1
-    videoId: dst-1
-    autoplay: true
-    beginMuted: true
-    controls:
-      - PlayPause
-      - MuteUnmute
-      - Rewind
-      - Forward
-    resizeMode: contain
-  - type: document
-    key: haptic-outro
-    content:
-      [
-        ["H3", ["Underline", "Haptic Feedback"]],
-        [
-          "BodyLarge",
-          [
-            [
-              "Text",
-              "If you did not do it already, please deactivate the haptic feedback on your mindfulness app now and press ",
-            ],
-            ["Bold", "NEXT"],
-          ],
-        ],
-      ]
-  - type: video
-    key: setup-video-2-pre
-    videoId: dst-2
-    autoplay: true
-    beginMuted: true
-    controls:
-      - PlayPause
-      - MuteUnmute
-      - Rewind
-      - Forward
-    resizeMode: contain
-  - type: document
-    key: hrv-outro-pre
-    content:
-      [
-        ["H3", ["Underline", "Heart Rate Variability"]],
-        [
-          "BodyLarge",
-          "Did you start the 5-min Breathe session as explained in this last video?",
-        ],
-        [
-          "BodyLarge",
-          [
-            ["Text", "Press "],
-            ["Bold", "NEXT"],
-            [
-              "Text",
-              " if you did, otherwise please start the Breath session now and press",
-            ],
-            ["Bold", "NEXT"],
-            ["Text", ". Remember "],
-            ["Bold", "NOT"],
-            [
-              "Text",
-              " to follow the THE INHALE/EXHALE INSTRUCTIONS displayed on your Apple watch.",
-            ],
-          ],
-        ],
-      ]
   - type: survey
     key: mood_happy_pre
     title: ""
@@ -464,6 +359,111 @@ sections:
           - value: extreme
             text: Extremely
             score: 5
+  - type: document
+    key: hrv_intro
+    content:
+      [
+        ["H3", ["Underline", "Heart Rate Variability"]],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "We want to measure you heart rate variability before and after the tasks. This is a very important measure to assess resilience. Unfortunately Apple does not allow us to start recording heart rate variability whenever we want.  We will therefore ask you to use the ",
+            ],
+            ["Italic", ["Bold", "Breathe"]],
+            ["Text", " function within the "],
+            ["Italic", ["Bold", "Mindfulness"]],
+            [
+              "Text",
+              " app on your Apple Watch. Activating the breathing app will allow us to record your heart rate variability.",
+            ],
+          ],
+        ],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "The breathing task on you apple watch will ask you to inhale and exhale at specific times. Please, ",
+            ],
+            [
+              "Bold",
+              "DO NOT FOLLOW THE APPLE WATCH INSTRUCTIONS SINCE THIS WILL CAUSE THE RECORDING TO BE USELESS.",
+            ],
+          ],
+        ],
+        [
+          "BodyLarge",
+          "Before you begin, please follow the instructions in the following video to turn off the haptic feedback (vibrations) in your Mindfulness app.  You can turn them back on after you completed this task.",
+        ],
+      ]
+  - type: video
+    key: setup-video-1
+    videoId: dst-1
+    autoplay: true
+    beginMuted: true
+    controls:
+      - PlayPause
+      - MuteUnmute
+      - Rewind
+      - Forward
+    resizeMode: contain
+  - type: document
+    key: haptic-outro
+    content:
+      [
+        ["H3", ["Underline", "Haptic Feedback"]],
+        [
+          "BodyLarge",
+          [
+            [
+              "Text",
+              "If you did not do it already, please deactivate the haptic feedback on your mindfulness app now and press ",
+            ],
+            ["Bold", "NEXT"],
+          ],
+        ],
+      ]
+  - type: video
+    key: setup-video-2-pre
+    videoId: dst-2
+    autoplay: true
+    beginMuted: true
+    controls:
+      - PlayPause
+      - MuteUnmute
+      - Rewind
+      - Forward
+    resizeMode: contain
+  - type: document
+    key: hrv-outro-pre
+    content:
+      [
+        ["H3", ["Underline", "Heart Rate Variability"]],
+        [
+          "BodyLarge",
+          "Did you start the 5-min Breathe session as explained in this last video?",
+        ],
+        [
+          "BodyLarge",
+          [
+            ["Text", "Press "],
+            ["Bold", "NEXT"],
+            [
+              "Text",
+              " if you did, otherwise please start the Breath session now and press",
+            ],
+            ["Bold", "NEXT"],
+            ["Text", ". Remember "],
+            ["Bold", "NOT"],
+            [
+              "Text",
+              " to follow the THE INHALE/EXHALE INSTRUCTIONS displayed on your Apple watch.",
+            ],
+          ],
+        ],
+      ]
   - type: web
     key: web_dst
     pathname: /publix/1/start
