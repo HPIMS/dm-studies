@@ -128,57 +128,6 @@ sections:
         type: NUMERIC
         minValue: 1
         maxValue: 20
-      - key: household_members
-        question: Describe the individual(s) with whom you live.
-        description: Select all that apply
-        type: MULTIPLE_CHOICE
-        options:
-          - value: spouse
-            text: Husband or wife
-          - value: biological_child
-            text: Biological son or daughter
-          - value: adopted_child
-            text: Adopted son or daughter
-          - value: step_child
-            text: Stepson or stepdaughter
-          - value: sibling
-            text: Brother or sister
-          - value: parent
-            text: Father or mother
-          - value: step_parent
-            text: Stepfather or stepmother
-          - value: grandchild
-            text: Grandchild
-          - value: grandparent
-            text: Grandparent
-          - value: in_law_parent
-            text: Parent-in-law
-          - value: in_law_child
-            text: Son-in-law or daughter-in-law
-          - value: other_relative
-            text: Other relative
-          - value: roomer
-            text: Roomer or boarder
-          - value: roomate
-            text: Housemate or roommate
-          - value: partner
-            text: Unmarried partner
-          - value: foster_child
-            text: Foster child
-          - value: facility
-            text: Other patient/resident in care facility
-          - value: attendent
-            text: Personal care attendant
-          - value: other_non_relative
-            text: Other non-relative
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: sdh
-                question: household_size
-                operator: ">"
-                value: 1
       - key: employment
         question: What is your employment status?
         type: SINGLE_CHOICE
