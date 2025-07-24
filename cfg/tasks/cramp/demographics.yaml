@@ -42,33 +42,31 @@ sections:
       - key: age
         question: When is your birthday?
         type: DATE
-      - key: ethnicity
-        question: What is your ethnicity?
-        type: SINGLE_CHOICE
-        options:
-          - value: hispanic_or_latino
-            text: Hispanic or Latino
-          - value: not_hispanic_or_latino
-            text: Not Hispanic or Latino
-          - value: unknown
-            text: Unknown
-      - key: race
-        question: What is your race?
+      - key: race_ethnicity
+        question: What is your race and/or ethnicity?
         description: Select all that apply
         type: MULTIPLE_CHOICE
         options:
-          - value: american
+          - value: aian
             text: American Indian or Alaska Native
           - value: asian
             text: Asian
+          - value: hispanic
+            text: Hispanic or Latino
+          - value: mesa
+            text: Middle Eastern or Norther African
           - value: black
-            text: Black, African-American
-          - value: hawaiian
+            text: Black or African-American
+          - value: nhopi
             text: Native Hawaiian or Other Pacific Islander
           - value: white
             text: White
           - value: unknown
-            text: Unknown
+            text: None of these fully describe me
+      - key: race_ethnicity_details
+        question: If you'd like, please provide additional detail about your racial or ethnic background
+        description: For example: Chinese, Indian, Puerto Rican, Nigerian, Navajo, Ashkenazi Jewish, etc.
+        type: TEXT
       - key: education
         question: What is your highest level of education?
         type: SINGLE_CHOICE
@@ -76,15 +74,11 @@ sections:
           - value: no_diploma
             text: No high school diploma
           - value: high_school
-            text: High school graduate
-          - value: ged
-            text: GED or equivalent
+            text: High school graduate or GED
           - value: some_college
             text: Some college/No degree
           - value: college_degree
             text: College degree or higher
-          - value: occupational
-            text: Occupational, technical, or vocational program
       - key: income
         question: What is your current annual income?
         type: SINGLE_CHOICE
@@ -237,11 +231,3 @@ sections:
             text: Separated or divorced
           - value: widowed
             text: Widowed
-      - key: fb_messenger
-        question: Do you regularly use Facebook Messenger?
-        description: At the conclusion of this study you will have the OPTION to upload ANONYMIZED data regarding your social interactions on Facebook Messenger. 
-        type: YESNO_CHOICE
-      - key: whatsapp
-        question: Do you regularly use WhatsApp?
-        description: At the conclusion of this study you will have the OPTION to upload ANONYMIZED data regarding your social interactions on WhatsApp. 
-        type: YESNO_CHOICE
