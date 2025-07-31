@@ -36,14 +36,14 @@ sections:
     title: ""
     description: ""
     questions:
-      - key: age_menses
+      - key: menarche
         question: At what age did you have your first menstrual cycle?
         type: AGE
         modes:
           - unit: y
             min: 0
             max: 99
-      - key: cycle_average_days
+      - key: cycle_length
         question: On average, how many days separate the first day of your menstrual
           cycle with the first day of the following menstrual cycle?
         type: AGE
@@ -52,7 +52,7 @@ sections:
             min: 0
             max: 40
         required: true
-      - key: period_days
+      - key: menstrual_length
         question: On average, how many days do you bleed during your menstrual cycle?
         type: AGE
         modes:
@@ -68,12 +68,10 @@ sections:
         question: How would you rate your usual menstrual flow?
         type: SINGLE_CHOICE
         options:
-          - value: scant
-            text: Scant amount
           - value: light
             text: Light amount
-          - value: moderate
-            text: Moderate amount
+          - value: normal
+            text: Normal amount
           - value: heavy
             text: Heavy amount
       - key: spotting
@@ -100,7 +98,113 @@ sections:
                 question: spotting
                 operator: =
                 value: yes
+      - key: spotting_timing_every
+        question: When do you usually have spotting?
+        type: SINGLE_CHOICE
+        options:
+          - value: early
+            text: soon after your period ends
+          - value: mid
+            text: midway between periods
+          - value: late
+            text: just before your period starts
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: health
+                question: spotting_freq
+                operator: =
+                value: every
+              - section: health
+                question: spotting_freq
+                operator: =
+                value: most              
       - key: menses_pain
         question: Have you ever felt pain during your menstruation?
         type: YESNO_CHOICE
         required: true
+      - key: menstrual_product
+        question: What type of menstrual product do you usually use?
+        description: Check all that apply
+        type: MULTIPLE_CHOICE
+        options:
+          - value: pads
+            text: Pads
+          - value: cup
+            text: Menstrual Cup
+          - value: tampon
+            text: Tampons
+          - value: panties
+            text: Period Underwear
+  - type: survey
+    key: dysmenorrhea_subphenotype
+    title: ""
+    description: Think about the past 6 months. Before or during your period, rate how severe each of this symptoms usually was - from 0 (not present) to 10 (extreemly severe)
+    questions:
+      - key: abdominal_cramps_rating
+        question: Abdominal cramps
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: dull_pain_rating
+        question: Dull abdominal pain or discomfort
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: lower_back_rating
+        question: Lower back pain
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: headache_rating
+        question: Headache or migraine
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: aches_rating
+        question: Aches all over the Body
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: bloating_rating
+        question: Bloating
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: nauea_rating
+        question: Nausea
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: diarrhea_rating
+        question: Diarrhea (soft stools)
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: constipation_rating
+        question: Constipation (hard stools)
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: more_bowel_rating
+        question: More bowel movements
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: less_bowel_rating
+        question: Less bowel movements
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: upper_thigh_rating
+        question: Pain in upper thigh
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+      - key: vomiting_rating
+        question: Vomiting
+        type: NUMERIC
+        minValue: 0
+        maxValue: 10
+  

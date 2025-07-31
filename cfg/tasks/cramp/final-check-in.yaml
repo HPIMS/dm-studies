@@ -30,8 +30,7 @@ sections:
     description: ""
     questions:
       - key: pain
-        question: How would you rate the overall pain you felt during this menstrual
-          cycle with respect to your usual menstrual cycle?
+        question: How would you rate the overall pain you felt during the last menstrual cycle with respect to your usual menstrual cycle?
         type: SINGLE_CHOICE
         options:
           - value: more_painful
@@ -46,8 +45,20 @@ sections:
         descritpion: Select all that apply
         type: MULTIPLE_CHOICE
         options:
+          - value: abdominal_cramps
+            text: Abdominal cramps
+          - value: dull_pain
+            text: Dull abdominal pain or discomfort
+          - value: pain_full_bladder
+            text: Pain when the bladder was full
           - value: diarrhea
-            text: Diarrhea
+            text: Diarrhea (soft stools)
+          - value: constipation
+            text: Constipation (hard stools)
+          - value: more_bowel_movements
+            text: More bowel movements than usual
+          - value: less_bowel_movements
+            text: Less bowel movements than usual
           - value: nausea
             text: Nausea
           - value: vomiting
@@ -66,8 +77,20 @@ sections:
         descritpion: Select all that apply
         type: MULTIPLE_CHOICE
         options:
+          - value: abdominal_cramps
+            text: Abdominal cramps
+          - value: dull_pain
+            text: Dull abdominal pain or discomfort
+          - value: pain_full_bladder
+            text: Pain when the bladder was full
           - value: diarrhea
-            text: Diarrhea
+            text: Diarrhea (soft stools)
+          - value: constipation
+            text: Constipation (hard stools)
+          - value: more_bowel_movements
+            text: More bowel movements than usual
+          - value: less_bowel_movements
+            text: Less bowel movements than usual
           - value: nausea
             text: Nausea
           - value: vomiting

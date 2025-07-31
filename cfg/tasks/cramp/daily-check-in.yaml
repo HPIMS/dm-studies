@@ -50,12 +50,10 @@ sections:
         question: How would you rate your menstrual flow?
         type: SINGLE_CHOICE
         options:
-          - value: scant
-            text: Scant amount
           - value: light
             text: Light amount
-          - value: moderate
-            text: Moderate amount
+          - value: normal
+            text: Normal amount
           - value: heavy
             text: Heavy amount
         triggers:
@@ -66,6 +64,25 @@ sections:
                 question: menses_today
                 operator: =
                 value: yes
+      - key: menses_today_flow
+        question: How would you rate your menstrual flow?
+        type: SINGLE_CHOICE
+        options:
+          - value: light
+            text: Light amount
+          - value: normal
+            text: Normal amount
+          - value: heavy
+            text: Heavy amount
+        triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: bleeding
+                question: menses_today
+                operator: =
+                value: yes
+      
   - type: survey
     key: pain_1
     title: ""
@@ -85,36 +102,100 @@ sections:
         maxLabel: The worst pain you can imagine
   - type: survey
     key: pain_2
-    title: "Pain Continued"
-    description: ""
+    title: "Today's Symptoms"
+    description: "Rate the severity of the following symtoms from 0 (not present) to 10 (extremely severe)"
     questions:
-      - key: pain_location_today
-        question: If you experienced pain, where was the pain located?
-        descritpion: Select all that apply
-        type: MULTIPLE_CHOICE
-        options:
-          - value: lower_belly
-            text: Lower belly
-          - value: lower_back
-            text: Lower back
-          - value: upper_thighs
-            text: Upper thighs
-          - value: stomach
-            text: Stomach / upper abdomen
-          - value: upper_back
-            text: Upper back, neck, or shoulders
-          - value: lower_legs
-            text: Lower legs
-          - value: arms
-            text: Arms
-          - value: head
-            text: Head
-          - value: other
-            text: Other
-            inlineQuestion:
-              key: pain_location_today_other_description
-              question: "Please specify:"
-              type: TEXTAREA
+      - key: abdominal_cramps
+        question: Abdominal cramps
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: dull_pain
+        question: Dull abdominal pain or discomfort
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: pain_full_bladder
+        question: Pain when the bladder was full
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: diarrhea
+        question: Diarrhea (soft stools)
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: constipation
+        question: Constipation (hard stools)
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: more_bowel_movements
+        question: More bowel movements than usual
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: less_bowel_movements
+        question: Less bowel movements than usual
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: nausea
+        question: Nausea
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: vomiting
+        question: Vomiting
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: fatigue
+        question: Fatigue
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: lightheadedness
+        question: Lightheadedness
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: fever
+        question: Fever
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
+      - key: headache
+        question: Headache
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
   - type: survey
     key: medications
     title: Today's Medications
@@ -279,28 +360,6 @@ sections:
                 question: skip_today_other
                 operator: =
                 value: yes
-  - type: survey
-    key: symptoms
-    title: Today's Symptoms
-    description: ""
-    questions:
-      - key: symptoms_today
-        question: Did you have any of the following today?
-        type: MULTIPLE_CHOICE
-        description: Select all that apply
-        options:
-          - value: diarrhea
-            text: Diarrhea
-          - value: nausea
-            text: Nausea/Vomiting
-          - value: constipation
-            text: Constipation
-          - value: fatigue
-            text: Fatigue
-          - value: dizziness
-            text: Dizziness
-          - value: headache
-            text: Headache
       - key: illness_today
         question: Did you get sick today (e.g. Flu)?
         type: YESNO_CHOICE
@@ -315,3 +374,73 @@ sections:
                 question: illness_today
                 operator: =
                 value: yes
+  - type: survey
+    key: bleeding_amount
+    title: Menstrual Bleeding Amount
+    description: In this task, you will be asked to estimate how many tampons, pads, or other menstrual products you used today. Please look at the example images below showing tampons and pads with different levels of blood saturation. Take a moment to familiarize yourself with these reference images. You do not need to match them exactly—just pick the closest level for each product you used.
+    triggers:
+      - action:
+          type: SHOW
+        condition:
+          - section: bleeding
+            question: menses_today
+            operator: =
+            value: yes
+    questions:
+      - key: light_pad
+        type: NUMERIC
+        question: How many pads did you soak ligthly today?
+      - key: medium_pads
+        type: NUMERIC
+        question: How many pads did you soak moderately today?
+      - key: full_pads
+        type: NUMERIC
+        question: How many pads did you soak fully today?
+      - key: pad_size
+        type: MULTIPLE_CHOICE
+        question: What sizes of pads did you use today?
+        options:
+          - value: pantyliners
+            text: pantyliners
+          - value: regular
+            text: regular pads
+          - value: long
+            text: long or maxi pads
+          - value: overnight
+            text: overnight pads
+          - value: extralong
+            text: extra-long, ultra overnight or maternity pads
+      - key: light_tampon
+        type: NUMERIC
+        question: How many tampons did you soak ligthly today?
+      - key: moderate_tampon
+        type: NUMERIC
+        question: How many tampons did you soak ligthly today?
+      - key: full_tampons
+        type: NUMERIC
+        question: How many tampons did you soak ligthly today?
+      - key: tampon_size
+        type: MULTIPLE_CHOICE
+        question: What sizes of tampons did you use today?
+        options:
+          - value: light
+            text: light 
+          - value: regular
+            text: regular 
+          - value: super
+            text: super
+          - value: super plus 
+            text: super plus
+          - value: ultra
+            text: ultra
+      - key: large_clots
+        type: NUMERIC
+        question: How many large clots (larger than a quarter coin) did you pass today?
+      - key: small_clots
+        type: NUMERIC
+        question: How many small clots (as large as a dime coin) did you pass today? 
+      - key: overflow
+        type: NUMERIC
+        question: How many times did you bleed through your pad, tampon, or clothing today?
+
+

@@ -1,9 +1,12 @@
 {
   "key": "cramp",
   "title": "CRAMP: Characterizing Resilience and Menstrual Pain",
-  "timeEstimate": { "time": 15, "timeUnits": "minutes" },
+  "timeEstimate": {
+    "time": 15,
+    "timeUnits": "minutes"
+  },
   "contact": {
-    "pi": "Erwin Bottinger, MD",
+    "pi": "Eugenia Alleva, MD",
     "email": "ehivecramp@mssm.edu",
     "physicalAddress": "Icahn School of Medicine at Mount Sinai, 1468 Madison Ave, Annenberg building, 11th floor, New York, NY 10229",
     "mailingAddress": "Hasso Plattner Institute for Digital Health at Mount Sinai, 1 Gustave L. Levy Place, NY, NY 10029"
@@ -17,7 +20,7 @@
       "Section",
       [
         "BodyLarge",
-        "We are inviting you to participate in the CRAMP Study. The main goal of the study is to understand how stress resilience impacts menstruation related pain, also known as dysmenorrhea. We will also evaluate the effect of social network and social interaction on the intensity of menstrual pain. The study collects data from surveys, audio and video recordings during an app-based task, and from your iPhone and Apple watch."
+        "We are inviting you to participate in the CRAMP Study. The main goal of the study is to understand how stress resilience impacts menstruation related pain, also known as dysmenorrhea. The study collects data from surveys, audio and video recordings during an app-based task, and from your iPhone and Apple watch."
       ]
     ],
     [
@@ -35,7 +38,6 @@
       ]
     ]
   ],
-
   "eligibility": [
     {
       "type": "yesno",
@@ -86,7 +88,6 @@
       "ineligibleText": "You must not currently have had surgery within the apst 3 months"
     }
   ],
-
   "walkthrough": [
     {
       "key": "1",
@@ -104,22 +105,31 @@
             [
               "UnorderedList",
               [
-                ["BodyLarge", "Download the ehive app on your iPhone"],
-                ["BodyLarge", "Complete an eligibility questionnaire on ehive"],
-                ["BodyLarge", "Complete the consent process on ehive"],
+                [
+                  "BodyLarge",
+                  "Download the ehive app on your iPhone"
+                ],
+                [
+                  "BodyLarge",
+                  "Complete an eligibility questionnaire on ehive"
+                ],
+                [
+                  "BodyLarge",
+                  "Complete the consent process on ehive"
+                ],
                 [
                   "BodyLarge",
                   "Connect your wearable device like Apple watch to ehive"
                 ],
                 [
                   "BodyLarge",
-                  "Participate in a resilience test 14 to 7 days before the beginning of your menstrual cycle. The test will involve audio and video recording."
+                  "Participate in a resilience test. The test will involve audio and video recording."
                 ]
               ]
             ],
             [
               "BodyLarge",
-              "Registering for the study and completing the tasks should take about 15-30 minutes. You can stop and restart where you left off at any time. On Day 1 of your participation, you will complete surveys about your health including details on your menstrual cycle. You will complete surveys and a resilience test 14-7 days before the beginning of your menstrual cycle. This will take about 15 minutes. From the day after the resilience test, you will be asked to complete surveys 3 times a day for 1 complete menstrual cycle length (number of days from first day of one period to the first day of the next). The daily tasks will take approximately 15 minutes of your time."
+              "Registering for the study and completing the tasks should take about 15-30 minutes. You can stop and restart where you left off at any time. The study lasts 50 days. On Day 1 of your participation, you will complete surveys about your demographic and menstrual health. Moreover, if you are not currently menstruating, you will be asked to complete a resilience test, which will last 15 minutes. Additional surveys about your general and reproductive health, as well as your stress, mood, personality, stress resilience and past stress experiences will become available across the following week. These will generally take 5-10 minutes to complete, and can be completed anytime during the study. Moreover, you will complete brief daily surveys across the whole study duration (of 50 days) that last around 5-10 minutes. At the end of the study, you will be asked to complete a final survey lasting around 5 minutes."
             ]
           ]
         },
@@ -155,14 +165,17 @@
             ],
             [
               "BodyLarge",
-              "You will be asked to link your electronic health record data to the study however this is not required. You will also be asked to share your social interaction data from WhatsApp and Facebook Messenger. This is also optional. WhatsApp and Facebook Messenger data will not contain information regarding the content of your messages. We will collect audio and video recording during the resilience test from your iPhone front camera and microphone."
+              "You will be asked to share menstruation-related data from your Apple Health app. This will include the information you collected on Apple Health regarding your past menstrual cycles, including days of menstrual flow, irregular, infrequent or prolonged menstrual cycles, intermenstrual spotting and use of contraceptives, as applicable. You will also be asked to link your electronic health record data to the study however this is not required.      We will collect audio and video recording during the resilience test from your iPhone front camera and microphone."
             ],
-            ["BodyLarge", "Learn more about how data is gathered and used."]
+            [
+              "BodyLarge",
+              "Learn more about how data is gathered and used."
+            ]
           ],
           "long": [
             [
               "BodyLarge",
-              "This study can gather sensor data from your iPhone and Apple Watch with your permission, as well as data regarding your location and use of messages and phone calls. Location data will NOT include any information regarding specific addresses, but will include information regarding visit time, location type and distance from home. We will NOT access your personal contacts, other applications, text messages, personal photos or websites visited. By signing this consent, you are giving permission to use your iPhone and Apple Watch data, the survey data you provide, and any electronic health record data you choose to link to the study. You are also giving permission for other researchers to access your data without identifiers, for future unrestricted research. This would be in a coded fashion, where your identifiers are masked and replaced with a unique code."
+              "This study can gather sensor data from your iPhone and Apple Watch with your permission, including physical activity, sleep, heart rate, oxygen saturation and temperature information. By signing this consent, you are giving permission to use your iPhone and Apple Watch data, the survey data you provide, and any electronic health record data you choose to link to the study. You are also giving permission for other researchers to access your data without identifiers, for future unrestricted research. This would be in a coded fashion, where your identifiers are masked and replaced with a unique code."
             ]
           ]
         }
@@ -218,7 +231,7 @@
               "isCorrect": false
             },
             {
-              "text": "Understand if stress resilience and social interaction affects symptoms of menstruation related pain",
+              "text": "Understand if stress resilience affects symptoms of menstruation related pain",
               "isCorrect": true
             },
             {
@@ -259,7 +272,10 @@
           "title": "Potential Benefits",
           "icon": "test-tube",
           "short": [
-            ["BodyLarge", "This study may not benefit participants or society."]
+            [
+              "BodyLarge",
+              "This study may not benefit participants or society."
+            ]
           ],
           "long": [
             [
@@ -281,7 +297,7 @@
           "long": [
             [
               "BodyLarge",
-              "There are procedures in place to minimize this risk. It is also possible that the application's presence on your phone, the alerts or the reminders may be observed by someone other than you. Information regarding the locations you visited includes location type (home, work, school, gym, other) and approximate times in which you visited each location as well as distance from home. Through this information one could infer your daily routine. However, all measures are in place to protect your data privacy and we will not perform analysis isolatedly on your specific routine pattern.  Information on how we store your data may be found in the privacy section. You may incur standard data charges when using our app, depending on your service carrier."
+              "There are procedures in place to minimize this risk. It is also possible that the application's presence on your phone, the alerts or the reminders may be observed by someone other than you. Information on how we store your data may be found in the privacy section. You may incur standard data charges when using our app, depending on your service carrier."
             ]
           ]
         }
@@ -485,7 +501,6 @@
       ]
     }
   ],
-
   "options": [
     {
       "key": "key-1",
@@ -501,12 +516,28 @@
       "title": "Contact Methods",
       "summary": "Please indicate your preferred method of contact. (Select all that apply)",
       "items": [
-        { "key": "key-2", "text": "Email" },
-        { "key": "key-3", "text": "Phone" },
-        { "key": "key-4", "text": "Letter" },
-        { "key": "key-5", "text": "Text" }
+        {
+          "key": "key-2",
+          "text": "Email"
+        },
+        {
+          "key": "key-3",
+          "text": "Phone"
+        },
+        {
+          "key": "key-4",
+          "text": "Letter"
+        },
+        {
+          "key": "key-5",
+          "text": "Text"
+        }
       ],
-      "show": ["key-1", "=", "accept"],
+      "show": [
+        "key-1",
+        "=",
+        "accept"
+      ],
       "required": false
     }
   ],
@@ -515,27 +546,51 @@
       "H3",
       "THE MOUNT SINAI HEALTH SYSTEM CONSENT FORM TO VOLUNTEER IN A RESEARCH STUDY AND AUTHORIZATION FOR USE AND DISCLOSURE OF MEDICAL INFORMATION "
     ],
-    ["Display", "Icahn School of Medicine at Mount Sinai"],
+    [
+      "Display",
+      "Icahn School of Medicine at Mount Sinai"
+    ],
     [
       "BodyLarge",
       [
-        ["Italic", "Study ID"],
-        ["Text", ": STUDY-22-01145 "]
+        [
+          "Italic",
+          "Study ID"
+        ],
+        [
+          "Text",
+          ": STUDY-22-01145 "
+        ]
       ]
     ],
     [
       "BodyLarge",
       [
-        ["Italic", "Form Version Date"],
-        ["Text", ": February 06, 2023 "]
+        [
+          "Italic",
+          "Form Version Date"
+        ],
+        [
+          "Text",
+          ": July 24, 2025 "
+        ]
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "STUDY INFORMATION"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "STUDY INFORMATION"
+    ],
     [
       "BodyLarge",
       [
-        ["Bold", "Study Title: "],
+        [
+          "Bold",
+          "Study Title: "
+        ],
         [
           "Text",
           "CRAMP Study - Characterizing Resilience and Menstrual Pain Study "
@@ -545,21 +600,36 @@
     [
       "BodyLarge",
       [
-        ["Bold", "Study site(s): "],
-        ["Text", "Icahn School of Medicine at Mount Sinai "]
+        [
+          "Bold",
+          "Study site(s): "
+        ],
+        [
+          "Text",
+          "Icahn School of Medicine at Mount Sinai "
+        ]
       ]
     ],
     [
       "BodyLarge",
       [
-        ["Bold", "Principal Investigator (Lead Researcher): "],
-        ["Text", "Erwin Bottinger, MD "]
+        [
+          "Bold",
+          "Principal Investigator (Lead Researcher): "
+        ],
+        [
+          "Text",
+          "Eugenia Alleva, MD "
+        ]
       ]
     ],
     [
       "BodyLarge",
       [
-        ["Bold", "Physical Address: "],
+        [
+          "Bold",
+          "Physical Address: "
+        ],
         [
           "Text",
           "Icahn School of Medicine at Mount Sinai, 1468 Madison Ave, Annenberg building, 11th floor, New York, NY 10229 "
@@ -569,7 +639,10 @@
     [
       "BodyLarge",
       [
-        ["Bold", "Mailing Address: "],
+        [
+          "Bold",
+          "Mailing Address: "
+        ],
         [
           "Text",
           "Hasso Plattner Institute for Digital Health at Mount Sinai, 1 Gustave L. Levy Place, NY, NY 10029 "
@@ -579,13 +652,28 @@
     [
       "BodyLarge",
       [
-        ["Bold", "Email: "],
-        ["Email", "ehivecramp@mssm.edu"],
-        ["Text", " "]
+        [
+          "Bold",
+          "Email: "
+        ],
+        [
+          "Email",
+          "ehivecramp@mssm.edu"
+        ],
+        [
+          "Text",
+          " "
+        ]
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "SUMMARY OF THIS RESEARCH STUDY "],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "SUMMARY OF THIS RESEARCH STUDY "
+    ],
     [
       "BodyLarge",
       "This document explains a research study you might be interested in joining. Participation in the study is voluntary. You can agree to join or not. Your decision will not limit your ability to receive care at Mount Sinai. You should only agree to take part if you understand the study and if all of your questions about the research study are answered. If you do join the study, the research team must share any new information with you that may change your mind about taking part. "
@@ -596,11 +684,11 @@
     ],
     [
       "BodyLarge",
-      "Dysmenorrhea is also known to increase feelings of stress. People have different levels of stress resilience, that is their ability to stand up to and bounce back from stressful experiences. The purpose of this research study is to understand the relationship between the level of menstrual symptoms, specifically dysmenorrhea and stress resilience. We will also study the effect of social networks and social interactions on resilience to stress. "
+      "Dysmenorrhea is also known to increase feelings of stress. People have different levels of stress resilience, that is their ability to stand up to and bounce back from stressful experiences. The purpose of this research study is to understand the relationship between the level of menstrual symptoms, specifically dysmenorrhea and stress resilience."
     ],
     [
       "BodyLarge",
-      "If you choose to participate, you will be asked to download the study app (ehive) and complete surveys on your iPhone. A resilience test, involving audio and video recording, will be administered on ehive 14 to 7 days before the beginning of your menstruation. We will follow your health for an entire menstrual cycle length with surveys about your mood, stress, pain, and menstrual symptoms. We will ask you to share data from your iPhone and Apple watch. You must own an iPhone and Apple watch to participate in this study. A portion of Mount Sinai Participants who own an iPhone, but no wearable device, may be provided with an Apple Watch for the duration of the study per availability. "
+      "If you choose to participate, you will be asked to download the study app (ehive) and complete surveys on your iPhone. A resilience test, involving audio and video recording, will be administered. We will follow your health for 50 days with surveys about your mood, stress, pain, and menstrual symptoms. We will ask you to share data from your iPhone and Apple watch. You must own an iPhone and Apple watch to participate in this study. A portion of Mount Sinai Participants who own an iPhone, but no wearable device, may be provided with an Apple Watch for the duration of the study per availability."
     ],
     [
       "BodyLarge",
@@ -610,15 +698,21 @@
       "BodyLarge",
       "If you are interested in learning more about this study, please continue to read below. "
     ],
-    ["Text", "\n"],
-    ["H3", "STUDY PARTICIPATION"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "STUDY PARTICIPATION"
+    ],
     [
       "BodyLarge",
       "You may qualify to take part in this research study because 1) you are a healthy female 18 – 40 years of age 2) with a regular menstrual cycle length (first day of one period to the first day of the next) between 21 and 40 days. 3) You own an Apple iPhone. You should not participate in this study if you are pregnant or lactating, taking hormonal contraception now or in the past 3 months, had surgery in the past 3 months or have a current acute illness (e.g., cold, cough) "
     ],
     [
       "BodyLarge",
-      "Your participation in this research study is expected to last until data from one full menstrual cycle length is collected. "
+      "Your participation in this research study is expected to last 50 days. "
     ],
     [
       "BodyLarge",
@@ -628,8 +722,14 @@
       "BodyLarge",
       "Funds for conducting this research study are provided by Hasso Plattner Institute at Mount Sinai. "
     ],
-    ["Text", "\n"],
-    ["H3", "DESCRIPTION OF WHAT IS INVOLVED "],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "DESCRIPTION OF WHAT IS INVOLVED "
+    ],
     [
       "BodyLarge",
       "This study is remote, meaning there are no in person study visits required. If you agree to take part in this research study, here is what may be involved: "
@@ -645,15 +745,21 @@
           "BodyLarge",
           "You will complete an eligibility questionnaire on ehive "
         ],
-        ["BodyLarge", "You will complete the consent process on ehive "],
+        [
+          "BodyLarge",
+          "You will complete the consent process on ehive "
+        ],
         [
           "BodyLarge",
           "You will be asked to link your wearable device (like Apple watch) with the ehive app "
         ],
-        ["BodyLarge", "You will complete questionnaires and surveys "],
         [
           "BodyLarge",
-          "You will complete a resilience test 14 to 7 days before the beginning of your menstrual cycle. The test will involve audio and video recordings."
+          "You will complete questionnaires and surveys "
+        ],
+        [
+          "BodyLarge",
+          "You will complete a resilience test. The test will involve audio and video recordings."
         ]
       ]
     ],
@@ -661,12 +767,18 @@
       "BodyLarge",
       "You will receive notifications and reminders through the study app to complete surveys. These can be turned off by disabling App notifications. If there are any issues obtaining the data from your surveys or the ehive app, a research coordinator may reach out to you to assist in troubleshooting the issue. Since this study is completely remote, research coordinators may reach out to you to check in on how the study is going. This may occur once a week or not at all. "
     ],
-    ["H4", "Screening and enrollment"],
+    [
+      "H4",
+      "Screening and enrollment"
+    ],
     [
       "BodyLarge",
-      "On study day 1, you will download the ehive app and complete an eligibility questionnaire to ensure you qualify to participate in this study. The questionnaire will ask about your demographic information, and medical history. If you are eligible, you will complete the consent process on the app and electronically sign the document to enroll. The study team contact information is in the contacts section of the app. You can pause the consent process at any time and contact the study team for additional information. The signed consent document will be available on the app to view and download. "
+      "On study day 1, you will download the ehive app and complete an eligibility questionnaire to ensure you qualify to participate in this study. The questionnaire will ask about your demographic information, and medical history. If you are eligible, you will complete the consent process on the app and electronically sign the document to enroll. The study team contact information is in the contacts section of the app. You can pause the consent process at any time and contact the study team for additional information. The signed consent document will be accessible in the consent section of the app, where you can view, download, or print it anytime during your participation. You may also request a copy of the signed form to be emailed to you by the study team."
     ],
-    ["H4", "Sharing health records (optional) "],
+    [
+      "H4",
+      "Sharing health records (optional) "
+    ],
     [
       "BodyLarge",
       "At enrollment, you will be asked to share your medical records with the ehive study app. If you accept, we will prompt you to connect your electronic health record from your healthcare provider to your Apple Health App and share this information with ehive. This is optional. You can choose not to share your medical records and still participate in this study. You can choose to stop or start sharing your records anytime during the study. The data we collect includes past diagnoses, medical and surgical procedures, and current medications. "
@@ -679,89 +791,58 @@
       "BodyLarge",
       "At enrollment you will be asked to share your past menstrual cycle data you recorded within the Apple Health app with ehive. This is optional. You can choose not to share your menstrual cycle data and still participate in this study. You can choose to stop or start sharing your menstrual data anytime during the study. The data we collect includes past menstrual flow days, information on flow intensity, irregular, prolonged or infrequent menstrual cycles; and days with use of contraceptives, if these were logged by you on the Apple Health app. "
     ],
-    ["H4", "Day 1 Study assessments"],
     [
-      "BodyLarge",
-      "On study day 1, you will complete surveys on the ehive app about your demographic information, and health history. You will also be asked to provide information about your menstrual cycle length and current menstrual cycle day. Starting from the 1st day of the study, questionnaires about your personality, stress events in your lifetime, stress resilience, social network and loneliness, and social exclusion will become available in ehive. You have a choice to complete these questionnaires when it is more convenient to you. "
-    ],
-    ["H4", "Smartphone and Wearable device"],
-    [
-      "BodyLarge",
-      "We will collect the following information from your iPhone (iPhone will not be provided by the study): number of screen unlocks, number of screen wakes, duration of social media app usage, duration of music app usage, number of messages, phone calls and unique contacts with whom you interacted, smartphone keyboard usage statistics including number of words written with a specific sentiment, and information regarding significant locations you visited. Information regarding significant locations includes approximate time of arrival and departure, location type determined by Apple's algorithm out of five possible categories (home, work, school, gym, other), and distance of location from home. Location information will not include any address or GPS location information. Information regarding location will only be collected if Apple's algorithm identifies that location to be frequently visited by you as part of your daily routine. No information that may identify you or your contacts will be collected or stored. "
+      "H4",
+      "Day 1 Study assessments"
     ],
     [
       "BodyLarge",
-      "You will be asked to link your Apple watch with the ehive app to share data with the study team. The following information will be collected from your device: Heart rate, heart rate variability, activity, oxygenation (depending upon model) and sleep duration and pattern. A portion of Mount Sinai Participants who own an iPhone but not an Apple Watch, may be provided with an Apple Watch for the duration of the study per availability. If you are not a Mount Sinai participant, you must own an Apple watch to participate."
-    ],
-    ["H4", "Pre-resilience test survey"],
-    [
-      "BodyLarge",
-      "The day before you will be prompted to perform the resilience test, we will ask you to answer a brief questionnaire regarding stress, depression, anxiety, and symptom burden in the last seven days. "
-    ],
-    ["H4", "Resilience test"],
-    [
-      "BodyLarge",
-      "14 to 7 days before the beginning of your menstrual cycle, the ehive app will prompt you to complete a resilience test. The session will include cognitive and verbal performance test consisting of two tasks. In one task, you will be asked to perform simple math calculations. In the other task, you will be asked to do brief presentations simulating a job interview. The test will take about 15 mins to complete. Audio and video recording will be collected from the front microphone and camera on your iPhone during the test. This will be used to analyze your resilience to stress. The perceived stress from this test will not go beyond the stress in daily life like school exams. If you feel uncomfortable or overstrained, you can cancel the test at any time by closing the browser. "
-    ],
-    ["H4", "Daily surveys"],
-    [
-      "BodyLarge",
-      "Starting the day after the resilience test, every day for one full menstrual cycle length (number of days between first day of one period to the first day of the next), you will complete surveys on the ehive app 3 times a day at 9 am, 12 pm and 8 pm. The surveys will ask about your mood, pain, and stress. An additional daily symptoms survey asking about your menstrual symptoms will be included at the 8 pm survey. "
-    ],
-    ["H4", "Post-menstruation survey"],
-    [
-      "BodyLarge",
-      "The first day without bleeding after your menstruation, we will ask you to answer a short questionnaire regarding the stress, depression, anxiety, symptom burden and interference of pain with your daily life activities you experienced over the last seven days."
-    ],
-    ["H4", "WhatsApp and Facebook data sharing (optional)"],
-    [
-      "BodyLarge",
-      "On the last day of the study, you have an option to share your WhatsApp and Facebook Messenger meta-data through our anonymizing platform called Dona. Dona locally removes all personal identifying information from the messaging data and just collects the number of words used in your messages, the timestamps, and replaces sender and receiver names with fake names to protect your privacy. No information regarding the content of the message is retrieved. The data will be used to gather information on your social interaction. "
-    ],
-    ["H4", "Returning study results"],
-    [
-      "BodyLarge",
-      "At the end of your study participation, you will receive a report of your data including: "
+      "On study day 1, you will complete surveys on the ehive app about your demographic information, and health history. You will also be asked to provide information about your menstrual cycle length and current menstrual cycle day. Starting from the 1st day of the study, questionnaires about your personality, stress events in your lifetime, stress resilience will become available in ehive. You have a choice to complete these questionnaires when it is more convenient to you."
     ],
     [
-      "UnorderedList",
-      [
-        [
-          "BodyLarge",
-          "Graph of your mood, pain and stress across your menstrual cycle "
-        ],
-        ["BodyLarge", "Your average pain, stress and mood levels "],
-        [
-          "BodyLarge",
-          "The maximum and minimum pain, stress and mood levels during your menstrual cycle "
-        ],
-        ["BodyLarge", "Your stress response to the resilience test "],
-        [
-          "BodyLarge",
-          "Change in your heart rate (HR) and heart rate variability (HRV) upon stress induction "
-        ],
-        [
-          "BodyLarge",
-          "Your average HRV and HR across pain, stress and mood levels "
-        ],
-        [
-          "BodyLarge",
-          "Graph of your social interactions and their change across the menstrual cycle and across mood, stress and pain levels "
-        ]
-      ]
+      "H4",
+      "Smartphone and Wearable device"
     ],
     [
       "BodyLarge",
-      "This report does not represent a medical report. The report will only serve as a description of the data you provided through surveys and collected from your wearable device. "
+      "You will be asked to link your Apple watch with the ehive app to share data with the study team. The following information will be collected from your device: Heart rate, heart rate variability, photoplethysmography (heart rate) data, physical activity, oxygenation (depending upon model), sleep duration and pattern, body temperature. A portion of Mount Sinai Participants who own an iPhone but not an Apple Watch, may be provided with an Apple Watch for the duration of the study per availability. If you are not a Mount Sinai participant, you must own an Apple watch to participate. "
     ],
-    ["Text", "\n"],
-    ["H3", "USE OF YOUR DATA AND/OR SAMPLES "],
+    [
+      "H4",
+      "Resilience test"
+    ],
+    [
+      "BodyLarge",
+      "After completing all baseline surveys, the ehive app will prompt you to complete a resilience test. The session will include cognitive and verbal performance test consisting of two tasks. In one task, you will be asked to perform simple math calculations. In the other task, you will be asked to do brief presentations simulating a job interview. The test will take about 15 mins to complete. Audio and video recording will be collected from the front microphone and camera on your iPhone during the test. This will be used to analyze your resilience to stress. The perceived stress from this test will not go beyond the stress in daily life like school exams. If you feel uncomfortable or overstrained, you can cancel the test at any time by closing the browser.  "
+    ],
+    [
+      "H4",
+      "Daily surveys"
+    ],
+    [
+      "BodyLarge",
+      "Throughout the duration of the study (50 days), you will complete one short survey about your mood, pain, and stress and menstrual symptoms at 8 pm."
+    ],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "USE OF YOUR DATA AND/OR SAMPLES "
+    ],
     [
       "BodyLarge",
       "In addition to being used to complete this research study, your personal information (such as, name, address, date of birth, social security number), study data, and samples (blood, tissue, urine, saliva, or any other body matter.) may also be used and shared for additional (future) research. Before anything is shared, all of your identifying personal information will be removed and it will be replaced with a code. Researchers are not planning on giving you the details of any of this future research nor the results. That means that a research project might be done that you would not consent to if provided with the details of that research project. If you do not want any future research to be done with your data and/or samples, even with your identity removed, please do not sign this consent form or take part in the study. "
     ],
-    ["Text", "\n"],
-    ["H3", "YOUR RESPONSIBILITIES IF YOU TAKE PART IN THIS RESEARCH"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "YOUR RESPONSIBILITIES IF YOU TAKE PART IN THIS RESEARCH"
+    ],
     [
       "BodyLarge",
       "If you decide to take part in this research study, you will be responsible for the following things: Downloading the ehive app, connecting wearable devices, completing the resilience test involving audio and video recordings, and answering survey questions. "
@@ -773,30 +854,76 @@
           "Text",
           "If you are a Mount Sinai Participant with an iPhone but no Apple watch, email the study team at "
         ],
-        ["Email", "ehivecramp@mssm.edu"],
+        [
+          "Email",
+          "ehivecramp@mssm.edu"
+        ],
         [
           "Text",
           " to request a device. You will receive a return label to ship the Apple watch back at the end of your participation."
         ]
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "COSTS OR PAYMENTS THAT MAY RESULT FROM PARTICIPATION"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "COSTS OR PAYMENTS THAT MAY RESULT FROM PARTICIPATION"
+    ],
     [
       "BodyLarge",
       [
         "Italic",
-        "You will not be paid for taking part in this study. Being in this study will not cost you anything extra. "
+        "Being in this study will not cost you anything extra. If you agree to take part in this study, you will be paid up to $100 for your time and effort. You will receive:"
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "POSSIBLE BENEFITS "],
+    [
+      "UnorderedList",
+      [
+        [
+          "BodyLarge",
+          "$15 for completing all baseline surveys"
+        ],
+        [
+          "BodyLarge",
+          "$25 for completing the resilience test"
+        ],
+        [
+          "BodyLarge",
+          "$25 for completing 2 or more daily surveys during your menstrual flow"
+        ],
+        [
+          "BodyLarge",
+          "$35 after completing the final study survey and having answered to at least 25 surveys"
+        ]
+      ]
+    ],
+    [
+      "BodyLarge",
+      "If you withdraw before completing the study, payments will be pro-rated to include only completed periods. Payment will be in the form of an electronic gift card sent to your email."
+    ],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "POSSIBLE BENEFITS "
+    ],
     [
       "BodyLarge",
       "This study is not designed to benefit you personally. However, the data generated from this study will be used to support development of stress resilience interventions to improve symptoms in patients with dysmenorrhea (menstruation related pain)."
     ],
-    ["Text", "\n"],
-    ["H3", "POSSIBLE RISKS AND DISCOMFORTS"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "POSSIBLE RISKS AND DISCOMFORTS"
+    ],
     [
       "BodyLarge",
       "The study involves no more than minimal risk. The possible risks related to participating in the study include: "
@@ -810,9 +937,8 @@
         ],
         [
           "BodyLarge",
-          "Information regarding significant locations visited by you might be used to identify your routine mobility pattern. However, no information regarding specific addresses or specific location types beyond those categories provided by Apple (i.e. home, work, school, gym, other) will be collected. We will not perform single analysis on your specific location data. "
+          "The resilience test may be uncomfortable. "
         ],
-        ["BodyLarge", "The resilience test may be uncomfortable. "],
         [
           "BodyLarge",
           "Some survey questions may be uncomfortable. You have an option to skip any task/question. "
@@ -831,20 +957,38 @@
         ]
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "OTHER OPTIONS TO CONSIDER"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "OTHER OPTIONS TO CONSIDER"
+    ],
     [
       "BodyLarge",
       "You may decide not to take part in this research study. If you decide not to take part, this will not affect the clinical care you receive at Mount Sinai. The choice is totally up to you. "
     ],
-    ["Text", "\n"],
-    ["H3", "IN CASE OF INJURY DURING THIS RESEARCH STUDY"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "IN CASE OF INJURY DURING THIS RESEARCH STUDY"
+    ],
     [
       "BodyLarge",
       "If you believe that being in this research study has harmed you, you should contact the Lead Researcher. Their contact information is listed at the beginning of this consent form. "
     ],
-    ["Text", "\n"],
-    ["H3", "ENDING PARTICIPATION IN THE RESEARCH STUDY"],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "ENDING PARTICIPATION IN THE RESEARCH STUDY"
+    ],
     [
       "BodyLarge",
       "You may stop taking part in this study at any time. No matter what you choose, your care and benefits through Mount Sinai will not be negatively impacted. "
@@ -860,7 +1004,10 @@
           "Text",
           "You may also withdraw your permission for the researchers to use and share any of your protected information for research, but "
         ],
-        ["Underline", "you must do so in writing"],
+        [
+          "Underline",
+          "you must do so in writing"
+        ],
         [
           "Text",
           " to the Lead Researcher at the address on the first page. Even if you withdraw your permission, the Lead Researcher may still use the information that was already collected if that information is necessary to complete the research study. Your health information may still be used or shared after you withdraw your authorization if you have an adverse event (a bad effect) from taking part in the research study. "
@@ -878,15 +1025,24 @@
     [
       "BodyLarge",
       [
-        ["Underline", "Withdrawal without your consent"],
+        [
+          "Underline",
+          "Withdrawal without your consent"
+        ],
         [
           "Text",
           ": The Lead Researcher, the funder or Mount Sinai may stop your involvement in this research study at any time without your consent. This may be because the research study is being stopped, the instructions of the research team have not been followed, the Lead Researcher believes it is in your best interest, or for any other reason. If data and/or samples have been stored as part of the research study, they too can be destroyed without your consent. "
         ]
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "CONTACT INFORMATION "],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "CONTACT INFORMATION "
+    ],
     [
       "BodyLarge",
       [
@@ -894,12 +1050,24 @@
           "Text",
           "If you have any questions, concerns or complaints at any time about this research, or you think the research has harmed you, please contact the office of the research team and/or the Lead Researcher at "
         ],
-        ["Email", "ehivecramp@mssm.edu"],
-        ["Text", "."]
+        [
+          "Email",
+          "ehivecramp@mssm.edu"
+        ],
+        [
+          "Text",
+          "."
+        ]
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "DISCLOSURE OF FINANCIAL INTERESTS "],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "DISCLOSURE OF FINANCIAL INTERESTS "
+    ],
     [
       "BodyLarge",
       [
@@ -907,21 +1075,39 @@
           "Text",
           "Researchers sometimes get paid for consulting or doing work for companies that produce drugs, biologics or medical devices. If you have questions regarding industry relationships, you are encouraged to talk to the Lead Researcher or visit our website at "
         ],
-        ["Hyperlink", "http://icahn.mssm.edu/"],
+        [
+          "Hyperlink",
+          "http://icahn.mssm.edu/"
+        ],
         [
           "Text",
           " where Mount Sinai publicly discloses the industry relationships of our faculty. "
         ]
       ]
     ],
-    ["Text", "\n"],
-    ["H3", "MAINTAINING CONFIDENTIALITY – HIPAA AUTHORIZATION "],
+    [
+      "Text",
+      "\n"
+    ],
+    [
+      "H3",
+      "MAINTAINING CONFIDENTIALITY – HIPAA AUTHORIZATION "
+    ],
     [
       "BodyLarge",
       "As part of this study, some of your private and/or protected health information will be obtained, used, and shared with your permission. There is a Federal Health Insurance Portability and Accountability Act (HIPAA) that makes sure this is done correctly and safely. "
     ],
-    ["BodyLarge", ["Underline", "What is protected health information (PHI)?"]],
-    ["BodyLarge", "PHI is the combination of two things:"],
+    [
+      "BodyLarge",
+      [
+        "Underline",
+        "What is protected health information (PHI)?"
+      ]
+    ],
+    [
+      "BodyLarge",
+      "PHI is the combination of two things:"
+    ],
     [
       "BodyLarge",
       "1. PHI contains information that identifies you. It will be used to contact you and link you to your health information, like name, date of birth, medical record number, and address. "
@@ -966,14 +1152,23 @@
           "BodyLarge",
           "Asking survey questions through the ehive app and collecting data from your wearable devices."
         ],
-        ["BodyLarge", "Audio and video recordings during the resilience test. "]
+        [
+          "BodyLarge",
+          "Audio and video recordings during the resilience test. "
+        ]
       ]
     ],
     [
       "BodyLarge",
       [
-        ["Underline", "Why is your PHI being used?"],
-        ["Text", "\n"],
+        [
+          "Underline",
+          "Why is your PHI being used?"
+        ],
+        [
+          "Text",
+          "\n"
+        ],
         [
           "Text",
           "Researchers need the information that identifies you so they can contact you during the study. They need your health information and the results of any tests and procedures being collected as part of this study to answer the questions posed in the study. The purpose of the study is discussed earlier in this consent form. Before researchers analyze the data, they remove any information that would let others know who you are or that you took part in the study. If researchers publish or present study results at scientific meetings, lectures, or other events, their presentations would not include any information that would let others know who you are, unless you give separate permission to do so. "
@@ -983,8 +1178,14 @@
     [
       "BodyLarge",
       [
-        ["Underline", "Who, outside Mount Sinai, might receive your PHI?"],
-        ["Text", "\n"],
+        [
+          "Underline",
+          "Who, outside Mount Sinai, might receive your PHI?"
+        ],
+        [
+          "Text",
+          "\n"
+        ],
         [
           "Text",
           "As part of the study, the Lead Researcher, research team and others in the Mount Sinai workforce may disclose your PHI, including the results of the research study tests and procedures, to the following people or organizations: (It is possible that there may be changes to the list during this research study; you may request an up-to-date list at any time by contacting the Lead Researcher.) "
@@ -1022,7 +1223,10 @@
           "Underline",
           "For how long will Mount Sinai be able to use or disclose your PHI?"
         ],
-        ["Text", "\n"],
+        [
+          "Text",
+          "\n"
+        ],
         [
           "Text",
           "Your authorization for use of your PHI for this specific study does not expire. "
@@ -1032,8 +1236,14 @@
     [
       "BodyLarge",
       [
-        ["Underline", "Will you be able to access your records?"],
-        ["Text", "\n"],
+        [
+          "Underline",
+          "Will you be able to access your records?"
+        ],
+        [
+          "Text",
+          "\n"
+        ],
         [
           "Text",
           "During your participation in this study, you will have access to your medical record and any study information that is part of that record. The research team is not required to release research information to you that is not part of your medical record. "
@@ -1047,7 +1257,10 @@
           "Underline",
           "Do you need to give the researchers permission to obtain, use or share your PHI?"
         ],
-        ["Text", "\n"],
+        [
+          "Text",
+          "\n"
+        ],
         [
           "Text",
           "NO! If you decide not to let the research team obtain, use or share your PHI, you should not sign this form, and you will not be allowed to volunteer in the research study. "
@@ -1061,19 +1274,34 @@
     [
       "BodyLarge",
       [
-        ["Underline", "Can you change your mind?"],
-        ["Text", "\n"],
+        [
+          "Underline",
+          "Can you change your mind?"
+        ],
+        [
+          "Text",
+          "\n"
+        ],
         [
           "Text",
           "If you decide to stop being in the study, please contact the Lead Researcher or the research staff."
         ],
-        ["Text", "\n"],
+        [
+          "Text",
+          "\n"
+        ],
         [
           "Text",
           " The research team may ask you whether they can continue to collect information from your medical record. You will also have to decide if you wish to limit the continued use of the information collected during the study. Under US privacy laws you may also withdraw your permission for the researchers to use and share any of your protected information for research, "
         ],
-        ["Underline", "but you must do so in writing"],
-        ["Text", " to the Lead Researcher at the address on the first page. "]
+        [
+          "Underline",
+          "but you must do so in writing"
+        ],
+        [
+          "Text",
+          " to the Lead Researcher at the address on the first page. "
+        ]
       ]
     ],
     [
@@ -1088,7 +1316,13 @@
       "BodyLarge",
       "If researchers are reviewing your medical records or asking questions about your medical history or conditions, it is possible that they may learn information related to your HIV status. If that is the case, the following information concerns you. If researchers are not reviewing your medical records or asking questions about your medical history or conditions, then you may ignore the following section. "
     ],
-    ["H4", ["Underline", "Notice Concerning HIV-Related Information"]],
+    [
+      "H4",
+      [
+        "Underline",
+        "Notice Concerning HIV-Related Information"
+      ]
+    ],
     [
       "BodyLarge",
       [
@@ -1096,9 +1330,18 @@
           "Text",
           "If you are authorizing the release of HIV-related information, you should be aware that the recipient(s) is (are) prohibited from re-disclosing any HIV-related information without your authorization unless permitted to do so under federal or state law. You also have a right to request a list of people who may receive or use your HIV-related information without authorization. If you experience discrimination because of the release or disclosure of HIV-related information, you may contact the New York State Division of Human Rights at "
         ],
-        ["Telephone", "(888) 392-3644"],
-        ["Text", " or the New York City Commission on Human Rights at "],
-        ["Telephone", "(212) 306-5070"],
+        [
+          "Telephone",
+          "(888) 392-3644"
+        ],
+        [
+          "Text",
+          " or the New York City Commission on Human Rights at "
+        ],
+        [
+          "Telephone",
+          "(212) 306-5070"
+        ],
         [
           "Text",
           ". These agencies are responsible for protecting your rights. "
@@ -1108,7 +1351,10 @@
     [
       "BodyLarge",
       [
-        ["Underline", "Certificate of Confidentiality"],
+        [
+          "Underline",
+          "Certificate of Confidentiality"
+        ],
         [
           "Text",
           ": To further protect your privacy, the researchers have obtained a Certificate of Confidentiality from the Department of Health and Human Services. This is intended to ensure that your identity as a participant in this research study will not have to be disclosed as a result from a subpoena, for the purpose of identifying you in any federal, state, or local civil, criminal, administrative, legislative, or other proceedings other than to the FDA or OHRP as identified above. "
@@ -1119,7 +1365,10 @@
       "BodyLarge",
       "The research staff will not share any of your personal information, study data and/or samples with anyone who is not a member of the research team, including any family members or friends, other than those identified above. However, you should know that if it is learned that you or someone else is threatened with serious harm, such as a child or an elderly person being abused, the research team may notify the appropriate authorities if necessary to protect you or others. A Certificate of Confidentiality does not prevent you or a member of your family from voluntarily releasing information about yourself or your involvement in this research. This means that you and your family must also actively protect your own privacy. If an insurer or employer learns about your research participation, and you agree that they can have your research information, then the researchers may not use the Certificate of Confidentiality to keep this information from them. "
     ],
-    ["H4", "How the Institutional Review Board (IRB) can help you"],
+    [
+      "H4",
+      "How the Institutional Review Board (IRB) can help you"
+    ],
     [
       "BodyLarge",
       [
@@ -1127,7 +1376,10 @@
           "Text",
           "This research has been reviewed and approved by an Institutional Review Board (IRB). You may reach a representative of the Mount Sinai Program for Protection of Human Subjects at telephone number "
         ],
-        ["Telephone", "(212) 824-8200"],
+        [
+          "Telephone",
+          "(212) 824-8200"
+        ],
         [
           "Text",
           " during regular work hours (Monday-Friday, 9am-5pm, excluding holidays) for any of the reasons listed below. This office will direct your call to the right person within the Mount Sinai Health System: "
@@ -1141,8 +1393,14 @@
           "BodyLarge",
           "Your questions, concerns, or complaints are not being answered by the research team. "
         ],
-        ["BodyLarge", "You cannot reach the research team. "],
-        ["BodyLarge", "You are not comfortable talking to the research team. "],
+        [
+          "BodyLarge",
+          "You cannot reach the research team. "
+        ],
+        [
+          "BodyLarge",
+          "You are not comfortable talking to the research team. "
+        ],
         [
           "BodyLarge",
           "You have questions about your rights as a research participant. "
