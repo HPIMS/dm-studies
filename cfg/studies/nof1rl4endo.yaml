@@ -46,7 +46,7 @@ timeResponsibility:
   timePeriod: daily
 
 dataview:
-  priority: "DisplayValue:study=nof1rl4endo;questionnaire=exercice-recommendation;page=value;question=current;answerField=ValueString"
+  priority: "DisplayValue:study=nof1rl4endo;questionnaire=nof1rl4endo::exercise-recommendation;page=value;question=current;answerField=ValueString"
 
 tasks:
   - key: intake
