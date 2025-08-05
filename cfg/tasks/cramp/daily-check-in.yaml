@@ -387,6 +387,9 @@ sections:
             operator: =
             value: yes
     questions:
+      - key: pbca_image
+        content: ['Image', 'CRAMP-daily-sanitary-ref.png']
+        type: DISPLAY
       - key: light_pad
         type: NUMERIC
         question: How many pads did you soak ligthly today?
