@@ -4,7 +4,8 @@ schedule:
   type: PERIOD
   period: DAILY
   timeOfDay:
-     - - "1800"
+    #  - - "1800"
+     - - "0001"
        - "2359"
 timeRequirements:
   time: 5
@@ -46,24 +47,6 @@ sections:
         question: Did you have menstrual bleeding today?
         type: YESNO_CHOICE
         required: true
-      - key: menses_today_flow
-        question: How would you rate your menstrual flow?
-        type: SINGLE_CHOICE
-        options:
-          - value: light
-            text: Light amount
-          - value: normal
-            text: Normal amount
-          - value: heavy
-            text: Heavy amount
-        triggers:
-          - action:
-              type: SHOW
-            condition:
-              - section: bleeding
-                question: menses_today
-                operator: =
-                value: yes
       - key: menses_today_flow
         question: How would you rate your menstrual flow?
         type: SINGLE_CHOICE
