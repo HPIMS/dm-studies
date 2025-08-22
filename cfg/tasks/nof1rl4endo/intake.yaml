@@ -170,6 +170,11 @@ sections:
               question: other_other_switch
               operator: =
               value: "yes"
+
+    - key: _other_input_hidden_by_keyboard_bug_fix
+      type: DISPLAY
+      content: ["H2","\n\n\n\n\n\n\n\n\n\n\n\n\n\n"]
+
  - type: survey
    key: equipment
    title: Required Equipment
@@ -385,7 +390,7 @@ sections:
       question: [["Bold","Hiking"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
-    - key: sports_hiking_equipment
+    - key: sports_tennis_equipment
       question: [["Bold","Tennis"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
