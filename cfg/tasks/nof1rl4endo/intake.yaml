@@ -579,7 +579,7 @@ sections:
             type: SHOW
           condition:
             - section: able
-              question: sports_other_switch
+              question: water_other_switch
               operator: =
               value: "yes"              
 
