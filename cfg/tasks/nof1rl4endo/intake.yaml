@@ -173,7 +173,7 @@ sections:
 
     - key: _other_input_hidden_by_keyboard_bug_fix
       type: DISPLAY
-      content: ["H2","\n\n\n\n\n\n\n\n\n\n\n\n\n\n"]
+      content: ["H2","\n\n\n\n\n\n\n\n"]
 
  - type: survey
    key: equipment
@@ -183,7 +183,7 @@ sections:
     - key: _equipment_intro
       type: DISPLAY
       question: [["Text","2. Now consider any equipment or facility that might be required for the activities you selected earlier. Do you currently have the equipment and facilities needed to do these activities? "]]
-      content: [["Body", ["Italic", "Select all that apply"]]]
+      content: [["Body", ["Italic", "Select all that apply"]], ["Body", You will have an opportunity to discuss your responses with your team afterwards"]]
 
     - key: _aerobic_activites_equipment_intro
       type: DISPLAY
@@ -191,7 +191,7 @@ sections:
 
     - key: _aerobic_activites_none_selected
       type: DISPLAY
-      content: ["Body", ["Italic","None Selected"]]
+      content: ["H3", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -237,38 +237,110 @@ sections:
       question: [["Bold","Walking"],["Text"," "],["Italic","(indoors, e.g., on a treadmill)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_walking_indoors_able
+              operator: =
+              value: true  
     - key: aerobic_walking_outdoors_equipment
       question: [["Bold","Walking"],["Text"," "],["Italic","(outdoors)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_walking_outdoors_able
+              operator: =
+              value: true  
     - key: aerobic_running_indoors_equipment
       question: [["Bold","Jogging or Running"],["Text"," "],["Italic","(indoors, e.g., on a treadmill)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_running_indoors_able
+              operator: =
+              value: true
     - key: aerobic_running_outdoors_equipment
       question: [["Bold","Jogging or Running"],["Text"," "],["Italic","(outdoors)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_running_outdoors_able
+              operator: =
+              value: true
     - key: aerobic_cycling_indoors_equipment
       question: [["Bold","Cycling"],["Text"," "],["Italic","(indoors, e.g., on a stationary bike)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_cycling_indoors_able
+              operator: =
+              value: true
     - key: aerobic_cycling_outdoors_equipment
       question: [["Bold","Cycling"],["Text"," "],["Italic","(outdoors)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_cycling_outdoors_able
+              operator: =
+              value: true
     - key: aerobic_swimming_equipment
       question: [["Bold","Swimming"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_swimming_able
+              operator: =
+              value: true
     - key: aerobic_rowing_equipment
       question: [["Bold","Rowing"],["Text"," "],["Italic","(indoors)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_rowing_able
+              operator: =
+              value: true
     - key: aerobic_group_classes_equipment
       question: [["Bold","Group Fitness Classes"],["Text"," "],["Italic","(aerobic/strength/multi-modal)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: aerobic_group_classes_able
+              operator: =
+              value: true
 
     - key: _strength_activites_equipment_intro
       type: DISPLAY
@@ -276,7 +348,7 @@ sections:
 
     - key: _strength_activites_none_selected
       type: DISPLAY
-      content: ["Body", ["Italic","None Selected"]]
+      content: ["H3", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -298,21 +370,46 @@ sections:
       question: [["Bold","Resistance Training"],["Text"," "],["Italic","(weights)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: strength_weights_able
+              operator: =
+              value: true
     - key: strength_bodyweight_equipment
       question: [["Bold","Resistance Training"],["Text"," "],["Italic","(bodyweight)"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: strength_bodyweight_able
+              operator: =
+              value: true
     - key: strength_calisthenics_equipment
       question: [["Bold","Calisthenics"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: strength_calisthenics_able
+              operator: =
+              value: true
 
     - key: _flexibility_activites_equipment_intro
       type: DISPLAY
       content: ["H2","Stretching / Flexibility Activities"]
 
     - key: _flexibility_activites_none_selected
-      content: ["Body", ["Italic","None Selected"]]
+      type: DISPLAY
+      content: ["H3", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -334,21 +431,46 @@ sections:
       question: [["Bold","Yoga"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: flexibility_yoga_able
+              operator: =
+              value: true
     - key: flexibility_pilates_equipment
       question: [["Bold","Pilates"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: flexibility_pilates_able
+              operator: =
+              value: true
     - key: flexibility_stretching_equipment
       question: [["Bold","Stretching/Flexibility Routines"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: flexibility_stretching_able
+              operator: =
+              value: true
 
     - key: _dance_activites_equiment_intro
       type: DISPLAY
       content: ["H2","Dance Activities:"]
 
     - key: _dance_activites_none_selected
-      content: ["Body", ["Italic","None Selected"]]
+      type: DISPLAY
+      content: ["H3", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -362,13 +484,22 @@ sections:
       question: [["Bold","Dance"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: dance_dance_able
+              operator: =
+              value: true
 
     - key: _sports_activites_equipment_intro
       type: DISPLAY
       content: ["H2","Sports:"]
 
     - key: _sports_activites_none_selected
-      content: ["Body", ["Italic","None Selected"]]
+      type: DISPLAY
+      content: ["H3", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -390,10 +521,26 @@ sections:
       question: [["Bold","Hiking"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: sports_hiking_able
+              operator: =
+              value: true
     - key: sports_tennis_equipment
       question: [["Bold","Tennis"]]
       type: CHECKBOX
       boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: sports_tennis_able
+              operator: =
+              value: true
     - key: sports_other_equipment
       question: [["Bold","Other sports"],["Text"," "],["Italic","(as specified)"]]
       type: CHECKBOX
@@ -412,7 +559,8 @@ sections:
       content: ["H2","Water-Based Fitness:"]
 
     - key: _water_activites_none_selected
-      content: ["Body", ["Italic","None Selected"]]
+      type: DISPLAY
+      content: ["H3", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -440,7 +588,8 @@ sections:
       content: ["H2","Other:"]
 
     - key: _other_activites_none_selected
-      content: ["Body", ["Italic","None Selected"]]
+      type: DISPLAY
+      content: ["H3", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
