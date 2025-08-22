@@ -8,10 +8,14 @@ timeRequirements:
   timeUnits: minutes
 name: Physical Activity Intake Questionnaire
 sections:
- - type: survey
-   key: able
+ - type: intro
+   key: intro
    title: Common Activity Modalities and Intensities
    description: ["Body",[["Text","This questionnaire asks about different types of physical activities and exercises. For each type, we’ll "],["Bold","first"],["Text"," ask if you are able to do the activity without any significant difficulty, and "],["Bold","second"],["Text",", if you have the right space or equipment. Examples are provided for clarity."]]]
+ - type: survey
+   key: able
+   title: Physical Ability
+   description: ""
    questions:
     - key: _able_intro
       type: DISPLAY
@@ -168,7 +172,7 @@ sections:
               value: "yes"
  - type: survey
    key: equipment
-   title: ""
+   title: Required Equipment
    description: ""
    questions:
     - key: _equipment_intro
