@@ -15,7 +15,7 @@ sections:
    questions:
     - key: _activites_intro
       type: DISPLAY
-      question: [["Text","1. Which of these activities could you do "], ["Bold","without"], ["Text"," significant physical limitation "],["Text","?\n"],["Italic","(Examples of limitations: chronic injury, joint pain, mobility restriction)"]]
+      question: [["Text","1. Which of these activities could you do "], ["Bold","without"], ["Text"," significant physical limitation "],["Italic","(Examples of limitations: chronic injury, joint pain, mobility restriction)"]]
       content: [["Body",["Italic","Select all activities that apply."]],["Body",[["Text","Ignore whether you currently have access to the needed space or equipment."],["Text","\n\n"],["Text","Skip any activity you have never done and would not be able to do at all. You will have an opportunity to discuss your responses with your team afterwards"]]]]
 
     - key: _aerobic_activites_intro
@@ -55,6 +55,19 @@ sections:
       type: CHECKBOX
       boxLabel: I can do this activity
     - key: aerobic_group_classes
-      question: [["Bold","Group Fitness Classes"],["Text"," "],["Italic","(aerobic/strength/multi-modal)\n\nExamples"], ["Text", " Zumba, aerobics, spin, HIIT classes."]]
+      question: [["Bold","Group Fitness Classes"],["Text"," "],["Italic","(aerobic/strength/multi-modal)"],["Text","\n\n"],["Body", [["Italic", "Examples: "],["Text", "Zumba, aerobics, spin, HIIT classes."]]]]
+      type: CHECKBOX
+      boxLabel: I can do this activity
+
+    - key: _strength_activites_intro
+      type: DISPLAY
+      content: ["H4","Strength / Resistance Activities:"]
+
+    - key: strength_weights
+      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(weights)"],["Text","\n\n"],["Body", [["Italic", "Examples: "],["Text", "Using dumbbells, barbells, resistance machines, or resistance bands to build strength."]]]]
+      type: CHECKBOX
+      boxLabel: I can do this activity
+    - key: strength_bodyweight
+      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(bodyweight)"],["Text","\n\n"],["Body", [["Italic", "Examples: "],["Text", "Exercises using only your own body weight for resistance, such as push-ups, squats, lunges, planks."]]]]
       type: CHECKBOX
       boxLabel: I can do this activity
