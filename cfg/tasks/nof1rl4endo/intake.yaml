@@ -191,7 +191,7 @@ sections:
 
     - key: _aerobic_activites_none_selected
       type: DISPLAY
-      content: ["H3", ["Italic","None Selected"]]
+      content: ["Body", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -348,7 +348,7 @@ sections:
 
     - key: _strength_activites_none_selected
       type: DISPLAY
-      content: ["H3", ["Italic","None Selected"]]
+      content: ["Body", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -409,7 +409,7 @@ sections:
 
     - key: _flexibility_activites_none_selected
       type: DISPLAY
-      content: ["H3", ["Italic","None Selected"]]
+      content: ["Body", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -470,7 +470,7 @@ sections:
 
     - key: _dance_activites_none_selected
       type: DISPLAY
-      content: ["H3", ["Italic","None Selected"]]
+      content: ["Body", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -499,7 +499,7 @@ sections:
 
     - key: _sports_activites_none_selected
       type: DISPLAY
-      content: ["H3", ["Italic","None Selected"]]
+      content: ["Body", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -560,7 +560,7 @@ sections:
 
     - key: _water_activites_none_selected
       type: DISPLAY
-      content: ["H3", ["Italic","None Selected"]]
+      content: ["Body", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
@@ -589,7 +589,7 @@ sections:
 
     - key: _other_activites_none_selected
       type: DISPLAY
-      content: ["H3", ["Italic","None Selected"]]
+      content: ["Body", ["Italic","None Selected"]]
       triggers:
         - action:
             type: HIDE
