@@ -9,65 +9,447 @@ timeRequirements:
 name: Physical Activity Intake Questionnaire
 sections:
  - type: survey
-   key: activities
+   key: able
    title: Common Activity Modalities and Intensities
-   description: ["Body",[["Text","This questionnaire asks about different types of physical activities and exercises. For each type, we’ll "],["Bold","first"],["Text"," ask if you have any physical difficulties with it, and "],["Bold","second"],["Text",", if you have the right space or equipment. Examples are provided for clarity."]]]
+   description: ["Body",[["Text","This questionnaire asks about different types of physical activities and exercises. For each type, we’ll "],["Bold","first"],["Text"," ask if you are able to do the activity without any significant difficulty, and "],["Bold","second"],["Text",", if you have the right space or equipment. Examples are provided for clarity."]]]
    questions:
-    - key: _activites_intro
+    - key: _able_intro
       type: DISPLAY
       question: [["Text","1. Which of these activities could you do "], ["Bold","without"], ["Text"," significant physical limitation "],["Italic","(Examples of limitations: chronic injury, joint pain, mobility restriction)"]]
       content: [["Body",["Italic","Select all activities that apply."]],["Body",[["Text","Ignore whether you currently have access to the needed space or equipment."],["Text","\n\n"],["Text","Skip any activity you have never done and would not be able to do at all. You will have an opportunity to discuss your responses with your team afterwards"]]]]
 
-    - key: _aerobic_activites_intro
+    - key: _aerobic_activites_able_intro
       type: DISPLAY
-      content: ["H4","Aerobic Activities:"]
+      content: ["H2","Aerobic Activities:"]
 
-    - key: aerobic_walking_indoors
+    - key: aerobic_walking_indoors_able
       question: [["Bold","Walking"],["Text"," "],["Italic","(indoors, e.g., on a treadmill)"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_walking_outdoors
+      boxLabel: I can physically do this activity
+    - key: aerobic_walking_outdoors_able
       question: [["Bold","Walking"],["Text"," "],["Italic","(outdoors)"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_running_indoors
+      boxLabel: I can physically do this activity
+    - key: aerobic_running_indoors_able
       question: [["Bold","Jogging or Running"],["Text"," "],["Italic","(indoors, e.g., on a treadmill)"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_running_outdoors
+      boxLabel: I can physically do this activity
+    - key: aerobic_running_outdoors_able
       question: [["Bold","Jogging or Running"],["Text"," "],["Italic","(outdoors)"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_cycling_indoors
+      boxLabel: I can physically do this activity
+    - key: aerobic_cycling_indoors_able
       question: [["Bold","Cycling"],["Text"," "],["Italic","(indoors, e.g., on a stationary bike)"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_cycling_outdoors
+      boxLabel: I can physically do this activity
+    - key: aerobic_cycling_outdoors_able
       question: [["Bold","Cycling"],["Text"," "],["Italic","(outdoors)"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_swimming
+      boxLabel: I can physically do this activity
+    - key: aerobic_swimming_able
       question: [["Bold","Swimming"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_rowing
+      boxLabel: I can physically do this activity
+    - key: aerobic_rowing_able
       question: [["Bold","Rowing"],["Text"," "],["Italic","(indoors)"]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: aerobic_group_classes
-      question: [["Bold","Group Fitness Classes"],["Text"," "],["Italic","(aerobic/strength/multi-modal)"],["Text","\n\n"],["Body", [["Italic", "Examples: "],["Text", "Zumba, aerobics, spin, HIIT classes."]]]]
+      boxLabel: I can physically do this activity
+    - key: aerobic_group_classes_able
+      question: [["Bold","Group Fitness Classes"],["Text"," "],["Italic","(aerobic/strength/multi-modal)"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Zumba, aerobics, spin, HIIT classes."]]]]
       type: CHECKBOX
-      boxLabel: I can do this activity
+      boxLabel: I can physically do this activity
 
-    - key: _strength_activites_intro
+    - key: _strength_activites_able_intro
       type: DISPLAY
-      content: ["H4","Strength / Resistance Activities:"]
+      content: [["H2","Strength / Resistance Activities:"],["Body","These build muscle strength using weights, body weight, or resistance."]]
 
-    - key: strength_weights
-      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(weights)"],["Text","\n\n"],["Body", [["Italic", "Examples: "],["Text", "Using dumbbells, barbells, resistance machines, or resistance bands to build strength."]]]]
+    - key: strength_weights_able
+      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(weights)"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Using dumbbells, barbells, resistance machines, or resistance bands to build strength."]]]]
       type: CHECKBOX
-      boxLabel: I can do this activity
-    - key: strength_bodyweight
-      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(bodyweight)"],["Text","\n\n"],["Body", [["Italic", "Examples: "],["Text", "Exercises using only your own body weight for resistance, such as push-ups, squats, lunges, planks."]]]]
+      boxLabel: I can physically do this activity
+    - key: strength_bodyweight_able
+      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(bodyweight)"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Exercises using only your own body weight for resistance, such as push-ups, squats, lunges, planks."]]]]
       type: CHECKBOX
-      boxLabel: I can do this activity
+      boxLabel: I can physically do this activity
+    - key: strength_calisthenics_able
+      question: [["Bold","Calisthenics"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Bodyweight exercises like push-ups, pull-ups, squats, lunges, dips, typically performed using minimal equipment. Sometimes grouped with \"bodyweight resistance training.\""]]]]
+      type: CHECKBOX
+      boxLabel: I can physically do this activity
+      
+    - key: _flexibility_activites_able_intro
+      type: DISPLAY
+      content: [["H2","Stretching / Flexibility Activities:"],["Body","These focus on improving your range of motion, flexibility, and joint health."]]
+
+    - key: flexibility_yoga_able
+      question: [["Bold","Yoga"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Yoga can include poses on a mat, gentle stretching, relaxation exercises. Some styles use props like blocks or straps."]]]]
+      type: CHECKBOX
+      boxLabel: I can physically do this activity
+    - key: flexibility_pilates_able
+      question: [["Bold","Pilates"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Pilates includes exercises done on a mat or with small resistance equipment (e.g., bands, light weights)."]]]]
+      type: CHECKBOX
+      boxLabel: I can physically do this activity
+    - key: flexibility_stretching_able
+      question: [["Bold","Stretching/Flexibility Routines"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Routines designed to stretch muscles and improve flexibility, can be dynamic or static."]]]]
+      type: CHECKBOX
+      boxLabel: I can physically do this activity
+
+    - key: _dance_activites_able_intro
+      type: DISPLAY
+      content: ["H2","Dance Activities:"]
+  
+    - key: dance_dance_able
+      question: [["Bold","Dance"],["Text","\n\n"],["Body", [["Italic", "Description/Examples: "],["Text", "Any style of dance (e.g., ballroom, hip-hop, jazz, online dance fitness videos)."]]]]
+      type: CHECKBOX
+      boxLabel: I can physically do this activity
+
+    - key: _sports_activites_able_intro
+      type: DISPLAY
+      content: [["H2","Sports:"],["Body","Skill-based or recreational activities, usually requiring specific facilities/equipment."]]
+  
+    - key: sports_hiking_able
+      question: [["Bold","Hiking"]]
+      type: CHECKBOX
+      boxLabel: I can physically do this activity
+    - key: sports_tennis_able
+      question: [["Bold","Tennis"]]
+      type: CHECKBOX
+      boxLabel: I can physically do this activity
+    - key: sports_other_switch
+      question: [["Bold", "Other Sports:"], ["Text", " Are there any other sports that you are able to do that you would like to specify (e.g. soccer, basketball, etc.)?"]]
+      type: YESNO_CHOICE
+    - key: sports_other_specify
+      question: [["Bold", "Other sports:"], ["Text", " Please specify which sport."]]
+      type: TEXT
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: sports_other_switch
+              operator: =
+              value: "yes"
+
+    - key: _water_activites_able_intro
+      type: DISPLAY
+      content: [["H2","Water-Based Fitness:"],["Body","Activities primarily performed in water."]]
+    
+    - key: water_other_switch
+      question: [["Bold", "Other water-based fitness:"], ["Text", " Are there any other water-based fitness activities that you are able to do that you would like to specify (Water aerobics, paddleboarding, aqua jogging)?"]]
+      type: YESNO_CHOICE
+    - key: water_other_specify
+      question: [["Bold", "Other water-based fitness:"], ["Text", " Please specify which activity."]]
+      type: TEXT
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: water_other_switch
+              operator: =
+              value: "yes"
+
+    - key: _other_activites_able_intro
+      type: DISPLAY
+      content: ["H2","Other:"]
+
+    - key: other_other_switch
+      question: [["Bold", "Other activities:"], ["Text", " Are there any other fitness activities that you are able to do that you would like to specify?"]]
+      type: YESNO_CHOICE
+    - key: other_other_specify
+      question: [["Bold", "Other activities:"], ["Text", " Please specify which activity."]]
+      type: TEXT
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: other_other_switch
+              operator: =
+              value: "yes"
+ - type: survey
+   key: equipment
+   title: ""
+   description: ""
+   questions:
+    - key: _equipment_intro
+      type: DISPLAY
+      question: [["Text","2. Now consider any equipment or facility that might be required for the activities you selected earlier. Do you currently have the equipment and facilities needed to do these activities? "]]
+      content: [["Body", ["Italic", "Select all that apply"]]]
+
+    - key: _aerobic_activites_equipment_intro
+      type: DISPLAY
+      content: ["H2","Aerobic Activities:"]
+
+    - key: _aerobic_activites_none_selected
+      type: DISPLAY
+      content: ["Body", ["Italic","None Selected"]]
+      triggers:
+        - action:
+            type: HIDE
+          condition:
+            - section: able
+              question: aerobic_walking_indoors_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_walking_outdoors_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_running_indoors_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_running_outdoors_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_cycling_indoors_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_cycling_outdoors_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_swimming_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_rowing_able
+              operator: =
+              value: true
+            - section: able
+              question: aerobic_group_classes_able
+              operator: =
+              value: true
+
+    - key: aerobic_walking_indoors_equipment
+      question: [["Bold","Walking"],["Text"," "],["Italic","(indoors, e.g., on a treadmill)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_walking_outdoors_equipment
+      question: [["Bold","Walking"],["Text"," "],["Italic","(outdoors)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_running_indoors_equipment
+      question: [["Bold","Jogging or Running"],["Text"," "],["Italic","(indoors, e.g., on a treadmill)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_running_outdoors_equipment
+      question: [["Bold","Jogging or Running"],["Text"," "],["Italic","(outdoors)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_cycling_indoors_equipment
+      question: [["Bold","Cycling"],["Text"," "],["Italic","(indoors, e.g., on a stationary bike)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_cycling_outdoors_equipment
+      question: [["Bold","Cycling"],["Text"," "],["Italic","(outdoors)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_swimming_equipment
+      question: [["Bold","Swimming"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_rowing_equipment
+      question: [["Bold","Rowing"],["Text"," "],["Italic","(indoors)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: aerobic_group_classes_equipment
+      question: [["Bold","Group Fitness Classes"],["Text"," "],["Italic","(aerobic/strength/multi-modal)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+
+    - key: _strength_activites_equipment_intro
+      type: DISPLAY
+      content: ["H2","Strength / Resistance Activities:"]
+
+    - key: _strength_activites_none_selected
+      type: DISPLAY
+      content: ["Body", ["Italic","None Selected"]]
+      triggers:
+        - action:
+            type: HIDE
+          condition:
+            - section: able
+              question: strength_weights_able
+              operator: =
+              value: true
+            - section: able
+              question: strength_bodyweight_able
+              operator: =
+              value: true
+            - section: able
+              question: strength_calisthenics_able
+              operator: =
+              value: true
+
+    - key: strength_weights_equipment
+      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(weights)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: strength_bodyweight_equipment
+      question: [["Bold","Resistance Training"],["Text"," "],["Italic","(bodyweight)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: strength_calisthenics_equipment
+      question: [["Bold","Calisthenics"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+
+    - key: _flexibility_activites_equipment_intro
+      type: DISPLAY
+      content: ["H2","Stretching / Flexibility Activities"]
+
+    - key: _flexibility_activites_none_selected
+      content: ["Body", ["Italic","None Selected"]]
+      triggers:
+        - action:
+            type: HIDE
+          condition:
+            - section: able
+              question: flexibility_yoga_able
+              operator: =
+              value: true
+            - section: able
+              question: flexibility_pilates_able
+              operator: =
+              value: true
+            - section: able
+              question: flexibility_stretching_able
+              operator: =
+              value: true
+
+    - key: flexibility_yoga_equipment
+      question: [["Bold","Yoga"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: flexibility_pilates_equipment
+      question: [["Bold","Pilates"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: flexibility_stretching_equipment
+      question: [["Bold","Stretching/Flexibility Routines"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+
+    - key: _dance_activites_equiment_intro
+      type: DISPLAY
+      content: ["H2","Dance Activities:"]
+
+    - key: _dance_activites_none_selected
+      content: ["Body", ["Italic","None Selected"]]
+      triggers:
+        - action:
+            type: HIDE
+          condition:
+            - section: able
+              question: dance_dance_able
+              operator: =
+              value: true
+  
+    - key: dance_dance_equipment
+      question: [["Bold","Dance"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+
+    - key: _sports_activites_equipment_intro
+      type: DISPLAY
+      content: ["H2","Sports:"]
+
+    - key: _sports_activites_none_selected
+      content: ["Body", ["Italic","None Selected"]]
+      triggers:
+        - action:
+            type: HIDE
+          condition:
+            - section: able
+              question: sports_hiking_able
+              operator: =
+              value: true
+            - section: able
+              question: sports_tennis_able
+              operator: =
+              value: true
+            - section: able
+              question: sports_other_switch
+              operator: =
+              value: "yes"
+  
+    - key: sports_hiking_equipment
+      question: [["Bold","Hiking"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: sports_hiking_equipment
+      question: [["Bold","Tennis"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+    - key: sports_other_equipment
+      question: [["Bold","Other sports"],["Text"," "],["Italic","(as specified)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: sports_other_switch
+              operator: =
+              value: "yes"
+
+    - key: _water_activites_equipment_intro
+      type: DISPLAY
+      content: ["H2","Water-Based Fitness:"]
+
+    - key: _water_activites_none_selected
+      content: ["Body", ["Italic","None Selected"]]
+      triggers:
+        - action:
+            type: HIDE
+          condition:
+            - section: able
+              question: water_other_switch
+              operator: =
+              value: "yes"
+  
+    - key: water_other_equipment
+      question: [["Bold","Other water-based fitness"],["Text"," "],["Italic","(as specified)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: sports_other_switch
+              operator: =
+              value: "yes"              
+
+    - key: _other_activites_equipment_intro
+      type: DISPLAY
+      content: ["H2","Other:"]
+
+    - key: _other_activites_none_selected
+      content: ["Body", ["Italic","None Selected"]]
+      triggers:
+        - action:
+            type: HIDE
+          condition:
+            - section: able
+              question: other_other_switch
+              operator: =
+              value: "yes"
+  
+    - key: other_other_equipment
+      question: [["Bold","Other activities"],["Text"," "],["Italic","(as specified)"]]
+      type: CHECKBOX
+      boxLabel: I have the necessary equipment or facilities
+      triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: able
+              question: other_other_switch
+              operator: =
+              value: "yes"              
