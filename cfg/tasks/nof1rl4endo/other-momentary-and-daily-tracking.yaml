@@ -95,22 +95,36 @@ sections:
    - key: 2b_physical_symptom_intensity
      question: How severe was the symptom?
      type: SINGLE_CHOICE
+     triggers:
+        - action:
+            type: SHOW
+          condition:
+            - section: other_physical_symptoms
+              question: 2b_phyical_symptoms
+              operator: IS_SET
+              AND:
+                - section: other_physical_symptoms
+                  question: 2b_phyical_symptoms
+                  operator: NOT_INCLDUES
+                  value: none
      options:
-      - value: mild
-        text: Mild
-      - value: moderate
-        text: Moderate
-      - value: severe
-        text: Severe 
+        - value: mild
+          text: Mild
+        - value: moderate
+          text: Moderate
+        - value: severe
+          text: Severe
  - type: survey
    key: other_psychological_symptoms
    title: Psychological Symptoms
    questions:          
    - key: 2c_feeling
-     question: "How was your mood today? Have you felt?"
+     question: "How was your mood today? Have you experienced any of the following?"
      description: Select all that apply.
      type: MULTIPLE_CHOICE
      options:
+      - value: neutral
+        text: Neutral
       - value: fearful
         text: Fearful
       - value: nervous
@@ -420,6 +434,8 @@ sections:
       question: Were your daily activities impacted by your health today? Which activities were difficult to do due to your pain or other symptoms?
       type: MULTIPLE_CHOICE
       options:
+        - value: none
+          text: None
         - value: self_care
           text: 'Self-care (e.g., washing, dressing, use toilet)'
         - value: working_studying
@@ -462,7 +478,19 @@ sections:
             type: TEXTAREA                                    
     - key: 2g_activities_impact
       question: How severe was the impact?
-      type: SINGLE_CHOICE 
+      type: SINGLE_CHOICE
+      triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: physical_function
+                question: 2g_impacted_activities
+                operator: IS_SET
+                AND:
+                  - section: physical_function
+                    question: 2g_impacted_activities
+                    operator: NOT_INCLDUES
+                    value: none
       options:
         - value: little_difficulty
           text: Little difficulty
