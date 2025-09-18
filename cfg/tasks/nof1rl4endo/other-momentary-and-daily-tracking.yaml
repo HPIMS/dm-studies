@@ -540,7 +540,7 @@ sections:
           type: TEXTAREA
     - key: 2h_exercise_rec_future
       question: Would you like to be recommended this exercise in the future?
-      type: YESNO_CHOICE
+      type: SINGLE_CHOICE
       triggers:
           - action:
               type: SHOW
@@ -549,6 +549,11 @@ sections:
                 question: 2h_exercise_rec
                 operator: =
                 value: "no"
+      options:
+        - value: "yes"
+          text: Yes, it is okay to recommend this exercise again
+        - value: "no"
+          text: No, do not recommend this exercise again (this will remove the exercise from your list of possible exercise recommendations)
     - key: 2h_exercise_rec_feel
       question: How did you feel after your last exercise recommendation?
       type: SINGLE_CHOICE 
