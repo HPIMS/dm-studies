@@ -507,9 +507,59 @@ sections:
     - key: 2h_exercise_rec
       question: Did you complete your last exercise recommendation?
       type: YESNO_CHOICE
+    - key: 2h_exercise_rec_no_reason
+      question: What is your reason for not completing your last exercise recommendation?
+      description: Select all that apply
+      type: MULTIPLE_CHOICE 
+      triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: excercise_effect
+                question: 2h_exercise_rec
+                operator: =
+                value: "no"
+      options:
+      - value: time
+        text: I did not have enough time (e.g., due to work or other responsibilities)
+      - value: pain
+        text: I had too much pain or other symptom flare-up
+      - value: tired
+        text: I was too tired
+      - value: dislike
+        text: I did not like the recommendation
+      - value: forgot
+        text: I forgot
+      - value: environmental
+        text: Environmental or external reasons (e.g., weather, travel, limited access)
+      - value: other
+        text: Other reason
+        inlineQuestion:
+          key: 2h_exercise_rec_no_reason_other_description
+          question: Please specify...
+          type: TEXTAREA
+    - key: 2h_exercise_rec_future
+      question: Would you like to be recommended this exercise in the future?
+      type: YESNO_CHOICE
+      triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: excercise_effect
+                question: 2h_exercise_rec
+                operator: =
+                value: "no"
     - key: 2h_exercise_rec_feel
-      question: if yes- How did you feel after your last exercise recommendation?
+      question: How did you feel after your last exercise recommendation?
       type: SINGLE_CHOICE 
+      triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: excercise_effect
+                question: 2h_exercise_rec
+                operator: =
+                value: "yes"
       options:
       - value: felt_better_overall
         text: Felt better overall
@@ -518,8 +568,16 @@ sections:
       - value: felt_the_same_afterward
         text: felt the same afterward             
     - key: 2h_exercise_rec_impact
-      question: if yes - How did the exercise impact your pain symptoms?
+      question: How did the exercise impact your pain symptoms?
       type: SINGLE_CHOICE
+      triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: excercise_effect
+                question: 2h_exercise_rec
+                operator: =
+                value: "yes"
       options:
       - value: reduced_pain
         text: Improved/Reduced pain
@@ -529,11 +587,19 @@ sections:
         text: No Effect on pain or unsure              
     - key: 2h_exer_rec_time
       question: Approximately, what time of the day did you complete your recommended exercise
-      type: SINGLE_CHOICE 
+      type: SINGLE_CHOICE
+      triggers:
+          - action:
+              type: SHOW
+            condition:
+              - section: excercise_effect
+                question: 2h_exercise_rec
+                operator: =
+                value: "yes"
       options:               
       - value: morning
         text: Morning (before noon)
       - value: afternoon
         text: Afternoon (12-5pm)
       - value: evening
-        text: Evening (after 5pm)                                                    
+        text: Evening (after 5pm)
