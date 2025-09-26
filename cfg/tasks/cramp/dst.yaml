@@ -114,56 +114,31 @@ sections:
         ],
       ]
   - type: survey
-    key: mood_happy_pre
-    title: ""
-    description: ""
+    key: pre_mood_stress
+    title: "Mood and Stress"
+    description: "Please think about your current mood and stress levels"
     questions:
-      - key: vas
-        question: Your mood (happiness)
-        type: V_SCALE
-        hideHeader: true
+      - key: stress_pre
+        question: Please think about your stress right now. Rate your stress on a scale from 0 to 10, where 0 is no stress and 10 is the worst stress imaginable.
+        type: H_SCALE
         min: 0
-        max: 100
-        category: mood (happiness)
-        ask: Please think about your mood (happiness) right now.
-        scaleExplanation: 0 is unhappy, 100 is happy.
-        prompt: Rate your mood (happiness).
-        minLabel: Unhappy
-        maxLabel: Happy
-  - type: survey
-    key: mood_calm_pre
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your mood (calmness)
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: mood (calmness)
-        ask: Please think about your mood (calmness) right now.
-        scaleExplanation: 0 is excited, 100 is calm.
-        prompt: Rate your mood (calmness).
-        minLabel: Excited
-        maxLabel: Calm
-  - type: survey
-    key: stress_pre
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your stress
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: stress
-        ask: Please think about your stress right now.
-        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
-        prompt: Rate your stress.
         minLabel: No stress
+        max: 10
         maxLabel: The worst stress imaginable
+      - key: mood_happy_pre
+        question: Please think about your happiness right now. Rate your happiness on a scale from 0 to 10, where 0 is unhappy and 10 is happy.
+        type: H_SCALE
+        min: 0
+        minLabel: Unhappy
+        max: 10
+        maxLabel: Happy
+      - key: mood_calm_pre
+        question: Please think about your calmness right now. Rate your calmness on a scale from 0 to 10, where 0 is calm and 10 is excited.
+        type: H_SCALE
+        min: 0
+        minLabel: Calm
+        max: 10
+        maxLabel: Excited
   - type: survey
     key: panas-10-pre
     title: ""
@@ -544,56 +519,31 @@ sections:
         ],
       ]
   - type: survey
-    key: mood_happy_post
-    title: ""
-    description: ""
+    key: post_mood_stress
+    title: "Mood and Stress"
+    description: "Please think about your current mood and stress levels"
     questions:
-      - key: vas
-        question: Your mood (happiness)
-        type: V_SCALE
-        hideHeader: true
+      - key: stress_post
+        question: Please think about your stress right now. Rate your stress on a scale from 0 to 10, where 0 is no stress and 10 is the worst stress imaginable.
+        type: H_SCALE
         min: 0
-        max: 100
-        category: mood (happiness)
-        ask: Please think about your mood (happiness) right now.
-        scaleExplanation: 0 is unhappy, 100 is happy.
-        prompt: Rate your mood (happiness).
-        minLabel: Unhappy
-        maxLabel: Happy
-  - type: survey
-    key: mood_calm_post
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your mood (calmness)
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: mood (calmness)
-        ask: Please think about your mood (calmness) right now.
-        scaleExplanation: 0 is excited, 100 is calm.
-        prompt: Rate your mood (calmness).
-        minLabel: Excited
-        maxLabel: Calm
-  - type: survey
-    key: stress_post
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your stress
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: stress
-        ask: Please think about your stress right now.
-        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
-        prompt: Rate your stress.
         minLabel: No stress
+        max: 10
         maxLabel: The worst stress imaginable
+      - key: mood_happy_post
+        question: Please think about your happiness right now. Rate your happiness on a scale from 0 to 10, where 0 is unhappy and 10 is happy.
+        type: H_SCALE
+        min: 0
+        minLabel: Unhappy
+        max: 10
+        maxLabel: Happy
+      - key: mood_calm_post
+        question: Please think about your calmness right now. Rate your calmness on a scale from 0 to 10, where 0 is calm and 10 is excited.
+        type: H_SCALE
+        min: 0
+        minLabel: Calm
+        max: 10
+        maxLabel: Excited
   - type: survey
     key: panas-10-post
     title: ""
