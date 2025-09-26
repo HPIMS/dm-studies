@@ -315,7 +315,7 @@ sections:
   - type: survey
     key: bleeding_amount
     title: Menstrual Bleeding Amount
-    description: In this task, you will be asked to estimate how many tampons, pads, or other menstrual products you used today. Please look at the example images below showing tampons and pads with different levels of blood saturation. Take a moment to familiarize yourself with these reference images. You do not need to match them exactly—just pick the closest level for each product you used.
+    description: In this task, you will be asked to estimate how many tampons, pads, or other menstrual products you used today. Please look at the example images below showing tampons and pads with different levels of blood soaking. Take a moment to familiarize yourself with these reference images. You do not need to match them exactly—just pick the closest level for each product you used.
     triggers:
       - action:
           type: SHOW
