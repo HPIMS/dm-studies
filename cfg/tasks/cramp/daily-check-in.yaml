@@ -65,26 +65,49 @@ sections:
                 question: menses_today
                 operator: =
                 value: yes
-      
+
   - type: survey
-    key: pain_1
-    title: ""
-    description: ""
+    key: general_questions
+    title: Pain, Stress, Mood and Productivity
+    description: "Please rate the following questions about your pain, stress, mood and productivity today."
     questions:
-      - key: vas
-        question: Your pain today
-        type: V_SCALE
-        hideHeader: true
+      - key: pain_daily
+        question: Please think about your pain today. From 0 (no pain) to 10 (the worst pain you can imagine), how would you rate your pain today?
+        type: H_SCALE
         min: 0
-        max: 100
-        category: Pain
-        ask: Please think about your pain today.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Rate the pain intensity.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst pain you can imagine
+      - key: happiness_daily
+        question: Please think about your overall happiness today. From 0 (unhappy) to 10 (happy), how would you rate your happiness today?
+        type: H_SCALE
+        min: 0
+        minLabel: Unhappy
+        max: 10
+        maxLabel: Happy       
+      - key: calmness_daily
+        question: Please think about your overall calmness today. From 0 (calm) to 10 (excited), how would you rate your calmenss today?
+        type: H_SCALE
+        min: 0
+        minLabel: Calm
+        max: 10
+        maxLabel: Excited    
+      - key: stress_daily
+        question: Please think about your overall stress today. From 0 (no stress) to 10 (worst stress imaginable), how would you rate your stress today?
+        type: H_SCALE
+        min: 0
+        minLabel: No stress
+        max: 10
+        maxLabel: The worst stress imaginable       
+      - key: productivity_daily
+        question: Please think about your overall productivity today. From 0 (not productive) to 10 (highly productive), how would you rate your productivity today?
+        type: H_SCALE
+        min: 0
+        minLabel: Not productive
+        max: 10
+        maxLabel: Highly productive   
   - type: survey
-    key: pain_2
+    key: menstrual_symptoms
     title: "Today's Symptoms"
     description: "Rate the severity of the following symtoms from 0 (not present) to 10 (extremely severe)"
     questions:
@@ -241,74 +264,6 @@ sections:
                 question: pain_meds_today
                 operator: =
                 value: yes
-  - type: survey
-    key: mood_1
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your mood (happiness)
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: mood (happiness)
-        ask: Please think about your overall mood (happiness) today.
-        scaleExplanation: 0 is unhappy, 100 is happy.
-        prompt: Rate your mood (happiness).
-        minLabel: Unhappy
-        maxLabel: Happy
-  - type: survey
-    key: mood_2
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your mood (calmness)
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: mood (calmness)
-        ask: Please think about your overall (calmness) mood today.
-        scaleExplanation: 0 is excited, 100 is calm.
-        prompt: Rate your mood (calmness).
-        minLabel: Excited
-        maxLabel: Calm
-  - type: survey
-    key: stress
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your stress
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: stress
-        ask: Please think about your overall stress today.
-        scaleExplanation: 0 is no stress, 100 is the worst stress imaginable.
-        prompt: Rate your stress.
-        minLabel: No stress
-        maxLabel: The worst stress imaginable
-  - type: survey
-    key: productivity
-    title: ""
-    description: ""
-    questions:
-      - key: vas
-        question: Your productivity
-        type: V_SCALE
-        hideHeader: true
-        min: 0
-        max: 100
-        category: stress
-        ask: Please think about your overall work/school productivity today.
-        scaleExplanation: 0 is not productive, 100 is highly productive.
-        prompt: Rate your productivity.
-        minLabel: Not productive
-        maxLabel: Highly productive
   - type: survey
     key: activity
     title: Today's Activity
