@@ -501,7 +501,7 @@ sections:
         - value: unable_to_do
           text: Unable to do
  - type: survey
-   key: excercise_effect
+   key: exercise_effect
    title: Daily Exercise Effect
    questions:  
     - key: 2h_exercise_rec
@@ -515,7 +515,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: excercise_effect
+              - section: exercise_effect
                 question: 2h_exercise_rec
                 operator: =
                 value: "no"
@@ -545,7 +545,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: excercise_effect
+              - section: exercise_effect
                 question: 2h_exercise_rec
                 operator: =
                 value: "no"
@@ -561,7 +561,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: excercise_effect
+              - section: exercise_effect
                 question: 2h_exercise_rec
                 operator: =
                 value: "yes"
@@ -579,7 +579,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: excercise_effect
+              - section: exercise_effect
                 question: 2h_exercise_rec
                 operator: =
                 value: "yes"
@@ -597,7 +597,7 @@ sections:
           - action:
               type: SHOW
             condition:
-              - section: excercise_effect
+              - section: exercise_effect
                 question: 2h_exercise_rec
                 operator: =
                 value: "yes"
