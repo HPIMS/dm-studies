@@ -83,68 +83,78 @@ sections:
               type: TEXTAREA
       - key: cramps_abdomen_severity
         question: Think about the past 6 months. Before or during your period, how severe were abdominal cramps usually from 0 (not present) to 10 (extreemly severe)? 
-        type: NUMERIC
-        minValue: 0
-        maxValue: 10
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
         triggers:
           - action: 
               type: SHOW
             condition:
               - section: pain-1
                 question: menses_pain_location
-                operator: =
+                operator: INCLUDES
                 value: cramps_abdomen
       - key: dull_abdomen_severity
         question: Think about the past 6 months. Before or during your period, how severe was dull abdominal pain or discomfort usually from 0 (not present) to 10 (extreemly severe)? 
-        type: NUMERIC
-        minValue: 0
-        maxValue: 10
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
         triggers:
           - action: 
               type: SHOW
             condition:
               - section: pain-1
                 question: menses_pain_location
-                operator: =
+                operator:INCLUDES
                 value: dull_abdomen
       - key: upper_legs_severity
         question: Think about the past 6 months. Before or during your period, how severe was upper leg pain or discomfort usually from 0 (not present) to 10 (extreemly severe)? 
-        type: NUMERIC
-        minValue: 0
-        maxValue: 10
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
         triggers:
           - action: 
               type: SHOW
             condition:
               - section: pain-1
                 question: menses_pain_location
-                operator: =
+                operator: INCLUDES
                 value: upper_legs
       - key: lower_back_severity
         question: Think about the past 6 months. Before or during your period, how severe was lower back pain or discomfort usually from 0 (not present) to 10 (extreemly severe)? 
-        type: NUMERIC
-        minValue: 0
-        maxValue: 10
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
         triggers:
           - action: 
               type: SHOW
             condition:
               - section: pain-1
                 question: menses_pain_location
-                operator: =
+                operator: INCLUDES
                 value: lower_back
       - key: aches_everywehre_severity
         question: Think about the past 6 months. Before or during your period, how severe aches all over the body usually from 0 (not present) to 10 (extreemly severe)? 
-        type: NUMERIC
-        minValue: 0
-        maxValue: 10
+        type: H_SCALE
+        min: 0
+        minLabel: Not Present
+        max: 10
+        maxLabel: Extremely Severe
         triggers:
           - action: 
               type: SHOW
             condition:
               - section: pain-1
                 question: menses_pain_location
-                operator: =
+                operator: INCLUDES
                 value: aches_everywehre
       - key: menses_pain_start
         question: When you experience menstrual pain, when does it usually start?
@@ -244,73 +254,38 @@ sections:
           - value: pain_full_bladder
             text: Pain when the bladder was full
   - type: survey
-    key: worst_period
+    key: pain_vas
     title: ""
     description: ""
     questions:
       - key: menses_pain_scale_worst
-        question: Your worst menstrual pain
-        type: V_SCALE
-        hideHeader: true
+        question: Please, think about the most painful menstruation you have experienced. Rate the severity of your most painful menstruation from 0 to 10, where 10 is the worst pain imaginable.
+        type: H_SCALE
         min: 0
-        max: 100
-        category: menstrual pain
-        ask: Please think about the most painful menstruation you have experienced.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Rate the pain intensity.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
-  - type: survey
-    key: best_period
-    title: ""
-    description: ""
-    questions:
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Pain Imaginable
       - key: menses_pain_scale_best
-        question: Your least painful menstruation
-        type: V_SCALE
-        hideHeader: true
+        question: Please, think about the least painful menstruation you have experienced. Rate the severity of your least painful menstruation from 0 to 10, where 10 is the worst pain imaginable.
+        type: H_SCALE
         min: 0
-        max: 100
-        category: menstrual pain
-        ask: Please think about the least painful menstruation you have experienced.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Rate the pain intensity.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
-  - type: survey
-    key: average_period
-    title: ""
-    description: ""
-    questions:
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Pain Imaginable
       - key: menses_pain_scale_average
-        question: Your usual menstrual pain
-        type: V_SCALE
-        hideHeader: true
+        question: Please, think about usual menstural pain. Rate the severity of your usual menstruation from 0 to 10, where 10 is the worst pain imaginable.
+        type: H_SCALE
         min: 0
-        max: 100
-        category: menstrual pain
-        ask: Please think about your usual menstural pain.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Rate the pain intensity.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
-  - type: survey
-    key: last_period
-    title: ""
-    description: ""
-    questions:
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Pain Imaginable
       - key: menses_pain_scale_last
-        question: Your most recent menstrual pain
-        type: V_SCALE
-        hideHeader: true
+        question: Please, think about last menstural pain. Rate the severity of your last menstruation from 0 to 10, where 10 is the worst pain imaginable.
+        type: H_SCALE
         min: 0
-        max: 100
-        category: menstrual pain
-        ask: Please think about your most recent menstrual pain.
-        scaleExplanation: 0 is no pain, 100 is worst pain you can imagine.
-        prompt: Rate the pain intensity.
-        minLabel: No pain
-        maxLabel: The worst pain you can imagine
+        minLabel: No Pain
+        max: 10
+        maxLabel: Worst Pain Imaginable
   - type: survey
     key: pcs
     title: ""
