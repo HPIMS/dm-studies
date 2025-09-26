@@ -19,3 +19,267 @@ intro:
       "The CRAMP study aims at characterizing the relationship between resilience to stress and menstrual pain. Resilience is the ability to bounce back from a stressful situation. We ask you to answer this validated survey that was specifically developed by scientists to assess your resilience. Together with the daily stress assessments and the digital resilience test, these answers will give us insight in the relationship between pain and stress."
     ]
   ]
+
+
+sections:
+  - type: survey
+    key: perception_of_self
+    title: Personal strength/Perception of self
+    description: Please complete the following survey by selecting a number on the scale, considering that 4 is neutral.
+    questions:
+      - key: rsa_1
+        question: When something unforeseen happens
+        type: H_SCALE
+        min: 1
+        minLabel: I always find a solution
+        max: 7
+        maxLabel: I often feel bewildered
+      - key: rsa_2
+        question: My personal problems
+        type: H_SCALE
+        min: 1
+        minLabel: Are unsolvable
+        max: 7
+        maxLabel: I know how to solve
+      - key: rsa_3
+        question: My abilities
+        type: H_SCALE
+        min: 1
+        minLabel: I strongly believe in
+        max: 7
+        maxLabel: I am uncertain about
+      - key: rsa_4
+        question: My judgements and decisions
+        type: H_SCALE
+        min: 1
+        minLabel: I often doubt
+        max: 7
+        maxLabel: I trust completely  
+      - key: rsa_5
+        question: In difficult periods I have a tendency to
+        type: H_SCALE
+        min: 1
+        minLabel: View everything gloomy
+        max: 7
+        maxLabel: Find something good that help me thrive
+      - key: rsa_6
+        question: Events in my life that I cannot influence
+        type: H_SCALE
+        min: 1
+        minLabel: I manage to come to terms with
+        max: 7
+        maxLabel: Are a constant source of worry/concern
+  - type: survey
+    key: perception_of_future
+    title: Personal strength/Perception of future
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
+      - key: rsa_7
+        question: My plans for the future are
+        type: H_SCALE
+        min: 1
+        minLabel: Difficult to accomplish
+        max: 7
+        maxLabel: Possible to accomplish
+      - key: rsa_8
+        question: My future goals
+        type: H_SCALE
+        min: 1
+        minLabel: I know how to accomplish
+        max: 7
+        maxLabel: I am unsure how to accomplish
+      - key: rsa_9
+        question: I feel that my future looks
+        type: H_SCALE
+        min: 1
+        minLabel: Very promising
+        max: 7
+        maxLabel: Uncertain
+      - key: rsa_10
+        question: My goals for the future are
+        type: H_SCALE
+        min: 1
+        minLabel: Unclear
+        max: 7
+        maxLabel: Well thought through
+  - type: survey
+    key: structured_style
+    title: Structured style
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
+      - key: rsa_11
+        question: I am at my best when I
+        type: H_SCALE
+        min: 1
+        minLabel: Have a clear goal to strive for
+        max: 7
+        maxLabel: Can take one day at a time
+      - key: rsa_12
+        question: When I start on new things/projects
+        type: H_SCALE
+        min: 1
+        minLabel: I rarely plan ahead, just get on with it
+        max: 7
+        maxLabel: I prefer to have a thorough plan
+      - key: rsa_13
+        question: I am good at
+        type: H_SCALE
+        min: 1
+        minLabel: Organizing my time
+        max: 7
+        maxLabel: Wasting my time
+      - key: rsa_14
+        question: Rules and regular routines
+        type: H_SCALE
+        min: 1
+        minLabel: Are absent in my everyday life
+        max: 7
+        maxLabel: Simplify my everyday life
+  - type: survey
+    key: social_competence
+    title: Social competence
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
+      - key: rsa_15
+        question: I enjoy being
+        type: H_SCALE
+        min: 1
+        minLabel: Together with other people
+        max: 7
+        maxLabel: By myself
+      - key: rsa_16
+        question: To be flexible in social settings
+        type: H_SCALE
+        min: 1
+        minLabel: Is not important to me
+        max: 7
+        maxLabel: Is really important to me
+      - key: rsa_17
+        question: New friendships are something
+        type: H_SCALE
+        min: 1
+        minLabel: I make easily
+        max: 7
+        maxLabel: I have difficulty making
+      - key: rsa_18
+        question: Meeting new people is
+        type: H_SCALE
+        min: 1
+        minLabel: Difficult for me
+        max: 7
+        maxLabel: Something I am good at
+      - key: rsa_19
+        question: When I am with others
+        type: H_SCALE
+        min: 1
+        minLabel: I easily laugh
+        max: 7
+        maxLabel: I seldom laugh
+      - key: rsa_20
+        question: For me, thinking of good topics for conversation is
+        type: H_SCALE
+        min: 1
+        minLabel: Difficult
+        max: 7
+        maxLabel: Easy
+  - type: survey
+    key: family_cohesion
+    title: Family cohesion
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
+      - key: rsa_21
+        question: My family’s understanding of what is important in life is
+        type: H_SCALE
+        min: 1
+        minLabel: Quite different than mine
+        max: 7
+        maxLabel: Very similar to mine
+      - key: rsa_22
+        question: I feel
+        type: H_SCALE
+        min: 1
+        minLabel: Very happy with my family
+        max: 7
+        maxLabel: Very unhappy with my family
+      - key: rsa_23
+        question: My family is characterized by
+        type: H_SCALE
+        min: 1
+        minLabel: Disconnect
+        max: 7
+        maxLabel: Healthy Coherence
+      - key: rsa_24
+        question: In difficult periods my family
+        type: H_SCALE
+        min: 1
+        minLabel: Keeps a positive outlook on the future
+        max: 7
+        maxLabel: Views the future as gloomy
+      - key: rsa_25
+        question: Facing other people, our family acts
+        type: H_SCALE
+        min: 1
+        minLabel: Unsupportive of one another
+        max: 7
+        maxLabel: Loyal towards one another
+      - key: rsa_26
+        question: In my family we like to
+        type: H_SCALE
+        min: 1
+        minLabel: Do things on our own
+        max: 7
+        maxLabel: Do things together
+  - type: survey
+    key: social_resources
+    title: Social resources
+    description: Please complete the following survey by selecting a number on the scale
+    questions:
+      - key: rsa_27
+        question: I can discuss personal issues with
+        type: H_SCALE
+        min: 1
+        minLabel: No one
+        max: 7
+        maxLabel: Friends/family-members
+      - key: rsa_28
+        question: Those who are good at encouraging me are
+        type: H_SCALE
+        min: 1
+        minLabel: Some close friends/family members
+        max: 7
+        maxLabel: Nowhere
+      - key: rsa_29
+        question: The bonds among my friends is
+        type: H_SCALE
+        min: 1
+        minLabel: Weak
+        max: 7
+        maxLabel: Strong
+      - key: rsa_30
+        question: When a family member experiences a crisis/emergency
+        type: H_SCALE
+        min: 1
+        minLabel: I am informed right away
+        max: 7
+        maxLabel: It takes quite a while before I am told
+      - key: rsa_31
+        question: I get support from
+        type: H_SCALE
+        min: 1
+        minLabel: Friends/family members
+        max: 7
+        maxLabel: No one
+      - key: rsa_32
+        question: When needed, I have
+        type: H_SCALE
+        min: 1
+        minLabel: No one who can help me
+        max: 7
+        maxLabel: Always someone who can help me
+      - key: rsa_33
+        question: My close friends/family members
+        type: H_SCALE
+        min: 1
+        minLabel: Appreciate my qualities
+        max: 7
+        maxLabel: Dislike my qualities
