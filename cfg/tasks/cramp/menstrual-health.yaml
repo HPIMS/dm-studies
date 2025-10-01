@@ -60,7 +60,7 @@ sections:
             min: 0
             max: 40
         required: true
-      -key: cycle_regular
+      - key: cycle_regular
         question: How predictable is your menstruation? Choose the option that best
           describes your menstrual cycle.
         type: SINGLE_CHOICE
@@ -73,7 +73,6 @@ sections:
               a few days)
           - value: irregular
             text: Irregular (I cannot predict the start date of my period)
-        type: YESNO_CHOICE
         required: true
       - key: last_period
         question: When was the start of your last period?
