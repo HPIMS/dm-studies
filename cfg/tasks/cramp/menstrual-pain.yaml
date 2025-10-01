@@ -109,7 +109,7 @@ sections:
             condition:
               - section: pain-1
                 question: menses_pain_location
-                operator:INCLUDES
+                operator: INCLUDES
                 value: dull_abdomen
       - key: upper_legs_severity
         question: Think about the past 6 months. Before or during your period, how severe was upper leg pain or discomfort usually from 0 (not present) to 10 (extreemly severe)? 
